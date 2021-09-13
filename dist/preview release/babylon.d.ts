@@ -679,6 +679,16 @@ declare module BABYLON {
          * Text width.
          */
         readonly width: number;
+        /**
+         * distance (in pixels) parallel to the baseline from the alignment point given by the CanvasRenderingContext2D.textAlign
+         * property to the left side of the bounding rectangle of the given text
+         */
+        readonly actualBoundingBoxLeft: number;
+        /**
+         * distance (in pixels) parallel to the baseline from the alignment point given by the CanvasRenderingContext2D.textAlign
+         * property to the right side of the bounding rectangle of the given text
+         */
+        readonly actualBoundingBoxRight: number;
     }
     /**
      * Class used to abstract canvas rendering
@@ -5630,7 +5640,37 @@ declare module BABYLON {
         /**
          * String
          */
-        String = 5
+        String = 5,
+        /**
+         * Button
+         */
+        Button = 6,
+        /**
+         * Options
+         */
+        Options = 7,
+        /**
+         * Tab
+         */
+        Tab = 8
+    }
+    /**
+     * Interface used to define custom inspectable options in "Options" mode.
+     * This interface is used by the inspector to display the list of options
+     */
+    export interface IInspectableOptions {
+        /**
+         * Defines the visible part of the option
+         */
+        label: string;
+        /**
+         * Defines the value part of the option (returned through the callback)
+         */
+        value: number | string;
+        /**
+         * Defines if the option should be selected or not
+         */
+        selected?: boolean;
     }
     /**
      * Interface used to define custom inspectable properties.
@@ -5662,6 +5702,14 @@ declare module BABYLON {
          * Gets the setp to use when using in "slider" mode
          */
         step?: number;
+        /**
+         * Gets the callback function when using "Button" mode
+         */
+        callback?: () => void;
+        /**
+         * Gets the list of options when using "Option" mode
+         */
+        options?: [];
     }
 }
 declare module BABYLON {
@@ -5920,8 +5968,9 @@ declare module BABYLON {
          * @param onError callback called if there was an error during the loading process (defaults to null)
          * @param extensions defines the suffixes add to the picture name in case six images are in use like _px.jpg...
          * @param delayLoad defines if the texture should be loaded now (false by default)
+         * @param files defines the six files to load for the different faces in that order: px, py, pz, nx, ny, nz
          */
-        updateURL(url: string, forcedExtension?: string, onLoad?: Nullable<() => void>, prefiltered?: boolean, onError?: Nullable<(message?: string, exception?: any) => void>, extensions?: Nullable<string[]>, delayLoad?: boolean): void;
+        updateURL(url: string, forcedExtension?: string, onLoad?: Nullable<() => void>, prefiltered?: boolean, onError?: Nullable<(message?: string, exception?: any) => void>, extensions?: Nullable<string[]>, delayLoad?: boolean, files?: Nullable<string[]>): void;
         /**
          * Delays loading of the cube texture
          * @param forcedExtension defines the extension to use
@@ -10370,6 +10419,11 @@ declare module BABYLON {
          */
         setTriggerParameter(value: any): void;
         /**
+         * Internal only - Returns if the current condition allows to run the action
+         * @hidden
+         */
+        _evaluateConditionForCurrentFrame(): boolean;
+        /**
          * Internal only - executes current action event
          * @hidden
          */
@@ -10878,12 +10932,17 @@ declare module BABYLON {
          */
         children: Action[];
         /**
+         * defines if the children actions conditions should be check before execution
+         */
+        enableChildrenConditions: boolean;
+        /**
          * Instantiate the action
          * @param triggerOptions defines the trigger options
          * @param children defines the list of aggregated animations to run
          * @param condition defines the trigger related conditions
+         * @param enableChildrenConditions defines if the children actions conditions should be check before execution
          */
-        constructor(triggerOptions: any, children: Action[], condition?: Condition);
+        constructor(triggerOptions: any, children: Action[], condition?: Condition, enableChildrenConditions?: boolean);
         /** @hidden */
         _prepare(): void;
         /**
@@ -17560,9 +17619,9 @@ declare module BABYLON {
          * Documentation : https://doc.babylonjs.com/babylon101/shadows
          * @param mapSize The size of the texture what stores the shadows. Example : 1024.
          * @param light The light object generating the shadows.
-         * @param usefulFloatFirst By default the generator will try to use half float textures but if you need precision (for self shadowing for instance), you can use this option to enforce full float texture.
+         * @param usefullFloatFirst By default the generator will try to use half float textures but if you need precision (for self shadowing for instance), you can use this option to enforce full float texture.
          */
-        constructor(mapSize: number, light: IShadowLight, usefulFloatFirst?: boolean);
+        constructor(mapSize: number, light: IShadowLight, usefullFloatFirst?: boolean);
         protected _initializeGenerator(): void;
         protected _createTargetRenderTexture(): void;
         protected _initializeShadowMap(): void;
@@ -22343,6 +22402,7 @@ declare module BABYLON {
          */
         _allowCameraRotation: boolean;
         private _currentActiveButton;
+        private _usingSafari;
         /**
          * Manage the mouse inputs to control the movement of a free camera.
          * @see https://doc.babylonjs.com/how_to/customizing_camera_inputs
@@ -26196,6 +26256,7 @@ declare module BABYLON {
         loopMode?: number | undefined;
         /**Specifies if blending should be enabled */
         enableBlending?: boolean | undefined;
+        private static _UniqueIdGenerator;
         /**
          * Use matrix interpolation instead of using direct key value when animating matrices
          */
@@ -26204,6 +26265,10 @@ declare module BABYLON {
          * When matrix interpolation is enabled, this boolean forces the system to use Matrix.DecomposeLerp instead of Matrix.Lerp. Interpolation is more precise but slower
          */
         static AllowMatrixDecomposeForInterpolation: boolean;
+        /**
+         * Gets or sets the unique id of the animation (the uniqueness is solely among other animations)
+         */
+        uniqueId: number;
         /** Define the Url to load snippets */
         static SnippetUrl: string;
         /** Snippet ID if the animation was created from the snippet server */
@@ -33875,8 +33940,9 @@ declare module BABYLON {
         set position(newPosition: Vector3);
         /**
          * return true if a pivot has been set
+         * @returns true if a pivot matrix is used
          */
-        get usePivotMatrix(): boolean;
+        isUsingPivotMatrix(): boolean;
         /**
           * Gets or sets the rotation property : a Vector3 defining the rotation value in radians around each local axis X, Y, Z  (default is (0.0, 0.0, 0.0)).
           * If rotation quaternion is set, this Vector3 will be ignored and copy from the quaternion
@@ -48631,6 +48697,7 @@ declare module BABYLON {
          */
         protected _buttonsPressed: number;
         private _currentActiveButton;
+        private _usingSafari;
         /**
          * Defines the buttons associated with the input to handle camera move.
          */
@@ -50450,6 +50517,10 @@ declare module BABYLON {
          */
         set referenceSpace(newReferenceSpace: XRReferenceSpace);
         /**
+         * The mode for the managed XR session
+         */
+        get sessionMode(): XRSessionMode;
+        /**
          * Disposes of the session manager
          * This should be called explicitly by the dev, if required.
          */
@@ -50669,6 +50740,10 @@ declare module BABYLON {
          * The name of the eye tracking feature
          */
         static readonly EYE_TRACKING: string;
+        /**
+         * The name of the walking locomotion feature
+         */
+        static readonly WALKING_LOCOMOTION: string;
     }
     /**
      * Defining the constructor of a feature. Used to register the modules.
@@ -50865,6 +50940,61 @@ declare module BABYLON {
          * @param _xrFrame the current frame
          */
         protected abstract _onXRFrame(_xrFrame: XRFrame): void;
+    }
+}
+declare module BABYLON {
+    /**
+     * The WebXR Eye Tracking feature grabs eye data from the device and provides it in an easy-access format.
+     * Currently only enabled for BabylonNative applications.
+     */
+    export class WebXREyeTracking extends WebXRAbstractFeature {
+        private _latestEyeSpace;
+        private _gazeRay;
+        /**
+         * The module's name
+         */
+        static readonly Name: string;
+        /**
+         * The (Babylon) version of this module.
+         * This is an integer representing the implementation version.
+         * This number does not correspond to the WebXR specs version
+         */
+        static readonly Version: number;
+        /**
+         * This observable will notify registered observers when eye tracking starts
+         */
+        readonly onEyeTrackingStartedObservable: Observable<Ray>;
+        /**
+         * This observable will notify registered observers when eye tracking ends
+         */
+        readonly onEyeTrackingEndedObservable: Observable<void>;
+        /**
+         * This observable will notify registered observers on each frame that has valid tracking
+         */
+        readonly onEyeTrackingFrameUpdateObservable: Observable<Ray>;
+        /**
+         * Creates a new instance of the XR eye tracking feature.
+         * @param _xrSessionManager An instance of WebXRSessionManager.
+         */
+        constructor(_xrSessionManager: WebXRSessionManager);
+        /**
+         * Dispose this feature and all of the resources attached.
+         */
+        dispose(): void;
+        /**
+         * Returns whether the gaze data is valid or not
+         * @returns true if the data is valid
+         */
+        get isEyeGazeValid(): boolean;
+        /**
+         * Get a reference to the gaze ray. This data is valid while eye tracking persists, and will be set to null when gaze data is no longer available
+         * @returns a reference to the gaze ray if it exists and is valid, returns null otherwise.
+         */
+        getEyeGaze(): Nullable<Ray>;
+        protected _onXRFrame(frame: XRFrame): void;
+        private _eyeTrackingStartListener;
+        private _eyeTrackingEndListener;
+        private _init;
     }
 }
 declare module BABYLON {
@@ -53586,15 +53716,53 @@ declare module BABYLON {
         HAND_ROTATION = 1
     }
     /**
+     * Orientations for the hand zones and for the attached node
+     */
+    export enum HandConstraintVisibility {
+        /**
+         * Constraint is always visible
+         */
+        ALWAYS_VISIBLE = 0,
+        /**
+         * Constraint is only visible when the palm is up
+         */
+        PALM_UP = 1,
+        /**
+         * Constraint is only visible when the user is looking at the constraint.
+         * Uses XR Eye Tracking if enabled/available, otherwise uses camera direction
+         */
+        GAZE_FOCUS = 2,
+        /**
+         * Constraint is only visible when the palm is up and the user is looking at it
+         */
+        PALM_AND_GAZE = 3
+    }
+    /**
      * Hand constraint behavior that makes the attached `TransformNode` follow hands in XR experiences.
      * @since 5.0.0
      */
     export class HandConstraintBehavior implements Behavior<TransformNode> {
         private _scene;
         private _node;
+        private _eyeTracking;
         private _handTracking;
         private _sceneRenderObserver;
         private _zoneAxis;
+        /**
+         * Sets the HandConstraintVisibility level for the hand constraint
+         */
+        handConstraintVisibility: HandConstraintVisibility;
+        /**
+         * A number from 0.0 to 1.0, marking how restricted the direction the palm faces is for the attached node to be enabled.
+         * A 1 means the palm must be directly facing the user before the node is enabled, a 0 means it is always enabled.
+         * Used with HandConstraintVisibility.PALM_UP
+         */
+        palmUpStrictness: number;
+        /**
+         * The radius in meters around the center of the hand that the user must gaze inside for the attached node to be enabled and appear.
+         * Used with HandConstraintVisibility.GAZE_FOCUS
+         */
+        gazeProximityRadius: number;
         /**
          * Offset distance from the hand in meters
          */
@@ -53612,7 +53780,7 @@ declare module BABYLON {
          */
         nodeOrientationMode: HandConstraintOrientation;
         /**
-         * Set the hand this behavior should follow. If set to "none", it will follow any visible hand (prioritising the right one).
+         * Set the hand this behavior should follow. If set to "none", it will follow any visible hand (prioritising the left one).
          */
         handedness: XRHandedness;
         /**
@@ -53626,6 +53794,10 @@ declare module BABYLON {
         constructor();
         /** gets or sets behavior's name */
         get name(): string;
+        /** Enable the behavior */
+        enable(): void;
+        /** Disable the behavior */
+        disable(): void;
         private _getHandPose;
         /**
          * Initializes the hand constraint behavior
@@ -53636,6 +53808,7 @@ declare module BABYLON {
          * @param node defines the node to attach the behavior to
          */
         attach(node: TransformNode): void;
+        private _setVisibility;
         /**
          * Detaches the behavior from the `TransformNode`
          */
@@ -53731,6 +53904,8 @@ declare module BABYLON {
          * Force the controller to update the bones
          */
         update(): void;
+        private static _SetAbsoluteRotation;
+        private static _IsTransformNode;
     }
 }
 declare module BABYLON {
@@ -60076,7 +60251,7 @@ declare module BABYLON {
 declare module BABYLON {
     /**
      * Class used to render a debug view of the frustum for a directional light
-     * @see https://playground.babylonjs.com/#7EFGSG#3
+     * @see https://playground.babylonjs.com/#7EFGSG#4
      * @since 5.0.0
      */
     export class DirectionalLightFrustumViewer {
@@ -60927,6 +61102,8 @@ declare module BABYLON {
         clearBeforeCopy?: boolean;
         /** Indicates if the view is enabled (true by default) */
         enabled: boolean;
+        /** Defines a custom function to handle canvas size changes. (the canvas to render into is provided to the callback) */
+        customResize?: (canvas: HTMLCanvasElement) => void;
     }
         interface Engine {
             /**
@@ -64591,6 +64768,13 @@ declare module BABYLON {
          */
         constructor(gizmoLayer?: UtilityLayerRenderer);
         private _light;
+        /**
+         * Override attachedNode because lightgizmo only support attached mesh
+         * It will return the attached mesh (if any) and setting an attached node will log
+         * a warning
+         */
+        get attachedNode(): Nullable<Node>;
+        set attachedNode(value: Nullable<Node>);
         /**
          * The light that the gizmo is attached to
          */
@@ -68375,6 +68559,7 @@ declare module BABYLON {
      */
     export class KhronosTextureContainer2 {
         private static _WorkerPoolPromise?;
+        private static _NoWorkerPromise?;
         private static _Initialized;
         private static _Ktx2Decoder;
         /**
@@ -86866,57 +87051,82 @@ declare module BABYLON {
 }
 declare module BABYLON {
     /**
-     * The WebXR Eye Tracking feature grabs eye data from the device and provides it in an easy-access format.
-     * Currently only enabled for BabylonNative applications.
+     * Options for the walking locomotion feature.
      */
-    export class WebXREyeTracking extends WebXRAbstractFeature {
-        private _latestEyeSpace;
-        private _gazeRay;
+    export interface IWebXRWalkingLocomotionOptions {
         /**
-         * The module's name
+         * The target to be moved by walking locomotion. This should be the transform node
+         * which is the root of the XR space (i.e., the WebXRCamera's parent node). However,
+         * for simple cases and legacy purposes, articulating the WebXRCamera itself is also
+         * supported as a deprecated feature.
          */
-        static readonly Name: string;
+        locomotionTarget: WebXRCamera | TransformNode;
+    }
+    /**
+     * A module that will enable VR locomotion by detecting when the user walks in place.
+     */
+    export class WebXRWalkingLocomotion extends WebXRAbstractFeature {
+        /**
+         * The module's name.
+         */
+        static get Name(): string;
         /**
          * The (Babylon) version of this module.
          * This is an integer representing the implementation version.
-         * This number does not correspond to the WebXR specs version
+         * This number has no external basis.
          */
-        static readonly Version: number;
+        static get Version(): number;
+        private _sessionManager;
+        private _up;
+        private _forward;
+        private _position;
+        private _movement;
+        private _walker;
+        private _locomotionTarget;
+        private _isLocomotionTargetWebXRCamera;
         /**
-         * This observable will notify registered observers when eye tracking starts
+         * The target to be articulated by walking locomotion.
+         * When the walking locomotion feature detects walking in place, this element's
+         * X and Z coordinates will be modified to reflect locomotion. This target should
+         * be either the XR space's origin (i.e., the parent node of the WebXRCamera) or
+         * the WebXRCamera itself. Note that the WebXRCamera path will modify the position
+         * of the WebXRCamera directly and is thus discouraged.
          */
-        readonly onEyeTrackingStartedObservable: Observable<Ray>;
+        get locomotionTarget(): WebXRCamera | TransformNode;
         /**
-         * This observable will notify registered observers when eye tracking ends
+         * The target to be articulated by walking locomotion.
+         * When the walking locomotion feature detects walking in place, this element's
+         * X and Z coordinates will be modified to reflect locomotion. This target should
+         * be either the XR space's origin (i.e., the parent node of the WebXRCamera) or
+         * the WebXRCamera itself. Note that the WebXRCamera path will modify the position
+         * of the WebXRCamera directly and is thus discouraged.
          */
-        readonly onEyeTrackingEndedObservable: Observable<void>;
+        set locomotionTarget(locomotionTarget: WebXRCamera | TransformNode);
         /**
-         * This observable will notify registered observers on each frame that has valid tracking
+         * Construct a new Walking Locomotion feature.
+         * @param sessionManager manager for the current XR session
+         * @param options creation options, prominently including the vector target for locomotion
          */
-        readonly onEyeTrackingFrameUpdateObservable: Observable<Ray>;
+        constructor(sessionManager: WebXRSessionManager, options: IWebXRWalkingLocomotionOptions);
         /**
-         * Creates a new instance of the XR eye tracking feature.
-         * @param _xrSessionManager An instance of WebXRSessionManager.
+         * Checks whether this feature is compatible with the current WebXR session.
+         * Walking locomotion is only compatible with "immersive-vr" sessions.
+         * @returns true if compatible, false otherwise
          */
-        constructor(_xrSessionManager: WebXRSessionManager);
+        isCompatible(): boolean;
         /**
-         * Dispose this feature and all of the resources attached.
+         * Attaches the feature.
+         * Typically called automatically by the features manager.
+         * @returns true if attach succeeded, false otherwise
          */
-        dispose(): void;
+        attach(): boolean;
         /**
-         * Returns whether the gaze data is valid or not
-         * @returns true if the data is valid
+         * Detaches the feature.
+         * Typically called automatically by the features manager.
+         * @returns true if detach succeeded, false otherwise
          */
-        get isEyeGazeValid(): boolean;
-        /**
-         * Get a reference to the gaze ray. This data is valid while eye tracking persists, and will be set to null when gaze data is no longer available
-         * @returns a reference to the gaze ray if it exists and is valid, returns null otherwise.
-         */
-        getEyeGaze(): Nullable<Ray>;
+        detach(): boolean;
         protected _onXRFrame(frame: XRFrame): void;
-        private _eyeTrackingStartListener;
-        private _eyeTrackingEndListener;
-        private _init;
     }
 }
 declare module BABYLON {
