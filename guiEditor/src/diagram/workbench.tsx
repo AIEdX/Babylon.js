@@ -281,6 +281,11 @@ export class WorkbenchComponent extends React.Component<IWorkbenchComponentProps
         this.globalState.onSelectionChangedObservable.notifyObservers(null);
         await this.globalState.guiTexture.parseFromSnippetAsync(snippedId);
         this.loadToEditor();
+        if (this.props.globalState.customLoad) {
+            this.props.globalState.customLoad.action(this.globalState.guiTexture.snippetId).catch((err) => {
+                alert("Unable to load your GUI");
+            });
+        }
     }
 
     loadToEditor() {
@@ -559,8 +564,7 @@ export class WorkbenchComponent extends React.Component<IWorkbenchComponentProps
 
     onDown(evt: React.PointerEvent<HTMLElement>) {
         this._rootContainer.current?.setPointerCapture(evt.pointerId);
-
-        if (!this._isOverGUINode) {
+        if (!this._isOverGUINode && !evt.button) {
             this.props.globalState.onSelectionChangedObservable.notifyObservers(null);
         }
 

@@ -1146,6 +1146,8 @@ declare module BABYLON {
         static readonly TEXTUREFORMAT_DEPTH32_FLOAT: number;
         /** Depth 16 bits */
         static readonly TEXTUREFORMAT_DEPTH16: number;
+        /** Depth 24 bits */
+        static readonly TEXTUREFORMAT_DEPTH24: number;
         /** Compressed BC7 */
         static readonly TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM: number;
         /** Compressed BC6 unsigned float */
@@ -7388,6 +7390,8 @@ declare module BABYLON {
         get endpoints(): NodeMaterialConnectionPoint[];
         /** Gets a boolean indicating if that output point is connected to at least one input */
         get hasEndpoints(): boolean;
+        /** Gets a boolean indicating that this connection has a path to the vertex output*/
+        get isDirectlyConnectedToVertexOutput(): boolean;
         /** Gets a boolean indicating that this connection will be used in the vertex shader */
         get isConnectedInVertexShader(): boolean;
         /** Gets a boolean indicating that this connection will be used in the fragment shader */
@@ -7471,6 +7475,73 @@ declare module BABYLON {
 }
 declare module BABYLON {
     /**
+     * Defines a connection point to be used for points with a custom object type
+     */
+    export class NodeMaterialConnectionPointCustomObject<T extends NodeMaterialBlock> extends NodeMaterialConnectionPoint {
+        private _blockType;
+        private _blockName;
+        private _nameForCheking?;
+        /**
+         * Creates a new connection point
+         * @param name defines the connection point name
+         * @param ownerBlock defines the block hosting this connection point
+         * @param direction defines the direction of the connection point
+         */
+        constructor(name: string, ownerBlock: NodeMaterialBlock, direction: NodeMaterialConnectionPointDirection, _blockType: new (...args: any[]) => T, _blockName: string, _nameForCheking?: string | undefined);
+        /**
+         * Gets a number indicating if the current point can be connected to another point
+         * @param connectionPoint defines the other connection point
+         * @returns a number defining the compatibility state
+         */
+        checkCompatibilityState(connectionPoint: NodeMaterialConnectionPoint): NodeMaterialConnectionPointCompatibilityStates;
+        /**
+         * Creates a block suitable to be used as an input for this input point.
+         * If null is returned, a block based on the point type will be created.
+         * @returns The returned string parameter is the name of the output point of NodeMaterialBlock (first parameter of the returned array) that can be connected to the input
+         */
+        createCustomInputBlock(): Nullable<[NodeMaterialBlock, string]>;
+    }
+}
+declare module BABYLON {
+    /**
+     * Block used to provide an image for a TextureBlock
+     */
+    export class ImageSourceBlock extends NodeMaterialBlock {
+        private _samplerName;
+        protected _texture: Nullable<Texture>;
+        /**
+         * Gets or sets the texture associated with the node
+         */
+        get texture(): Nullable<Texture>;
+        set texture(texture: Nullable<Texture>);
+        /**
+         * Gets the sampler name associated with this image source
+         */
+        get samplerName(): string;
+        /**
+         * Creates a new ImageSourceBlock
+         * @param name defines the block name
+         */
+        constructor(name: string);
+        bind(effect: Effect, nodeMaterial: NodeMaterial, mesh?: Mesh): void;
+        isReady(): boolean;
+        /**
+         * Gets the current class name
+         * @returns the class name
+         */
+        getClassName(): string;
+        /**
+         * Gets the output component
+         */
+        get source(): NodeMaterialConnectionPoint;
+        protected _buildBlock(state: NodeMaterialBuildState): this;
+        protected _dumpPropertiesCode(): string;
+        serialize(): any;
+        _deserialize(serializationObject: any, scene: Scene, rootUrl: string): void;
+    }
+}
+declare module BABYLON {
+    /**
      * Block used to read a texture from a sampler
      */
     export class TextureBlock extends NodeMaterialBlock {
@@ -7485,6 +7556,7 @@ declare module BABYLON {
         private _mainUVName;
         private _mainUVDefineName;
         private _fragmentOnly;
+        private _imageSource;
         protected _texture: Nullable<Texture>;
         /**
          * Gets or sets the texture associated with the node
@@ -7495,6 +7567,10 @@ declare module BABYLON {
          * Gets the sampler name associated with this texture
          */
         get samplerName(): string;
+        /**
+         * Gets a boolean indicating that this block is linked to an ImageSourceBlock
+         */
+        get hasImageSource(): boolean;
         /**
          * Gets or sets a boolean indicating if content needs to be converted to gamma space
          */
@@ -7521,6 +7597,10 @@ declare module BABYLON {
          * Gets the uv input component
          */
         get uv(): NodeMaterialConnectionPoint;
+        /**
+         * Gets the source input component
+         */
+        get source(): NodeMaterialConnectionPoint;
         /**
          * Gets the rgba output component
          */
@@ -7702,35 +7782,6 @@ declare module BABYLON {
         protected _dumpPropertiesCode(): string;
         serialize(): any;
         _deserialize(serializationObject: any, scene: Scene, rootUrl: string): void;
-    }
-}
-declare module BABYLON {
-    /**
-     * Defines a connection point to be used for points with a custom object type
-     */
-    export class NodeMaterialConnectionPointCustomObject<T extends NodeMaterialBlock> extends NodeMaterialConnectionPoint {
-        private _blockType;
-        private _blockName;
-        private _nameForCheking?;
-        /**
-         * Creates a new connection point
-         * @param name defines the connection point name
-         * @param ownerBlock defines the block hosting this connection point
-         * @param direction defines the direction of the connection point
-         */
-        constructor(name: string, ownerBlock: NodeMaterialBlock, direction: NodeMaterialConnectionPointDirection, _blockType: new (...args: any[]) => T, _blockName: string, _nameForCheking?: string | undefined);
-        /**
-         * Gets a number indicating if the current point can be connected to another point
-         * @param connectionPoint defines the other connection point
-         * @returns a number defining the compatibility state
-         */
-        checkCompatibilityState(connectionPoint: NodeMaterialConnectionPoint): NodeMaterialConnectionPointCompatibilityStates;
-        /**
-         * Creates a block suitable to be used as an input for this input point.
-         * If null is returned, a block based on the point type will be created.
-         * @returns The returned string parameter is the name of the output point of NodeMaterialBlock (first parameter of the returned array) that can be connected to the input
-         */
-        createCustomInputBlock(): Nullable<[NodeMaterialBlock, string]>;
     }
 }
 declare module BABYLON {
@@ -13149,6 +13200,10 @@ declare module BABYLON {
          */
         spriteCellHeight: number;
         /**
+         * If using a spritesheet (isAnimationSheetEnabled), defines wether the sprite animation is looping
+         */
+        spriteCellLoop: boolean;
+        /**
          * This allows the system to random pick the start cell ID between startSpriteCellID and endSpriteCellID
          */
         spriteRandomStartCell: boolean;
@@ -14115,6 +14170,8 @@ declare module BABYLON {
         _initialStartSpriteCellID: number;
         /** @hidden */
         _initialEndSpriteCellID: number;
+        /** @hidden */
+        _initialSpriteCellLoop: boolean;
         /** @hidden */
         _currentColorGradient: Nullable<ColorGradient>;
         /** @hidden */
@@ -15254,6 +15311,10 @@ declare module BABYLON {
          * If using a spritesheet (isAnimationSheetEnabled) defines the last sprite cell to display
          */
         endSpriteCellID: number;
+        /**
+         * If using a spritesheet (isAnimationSheetEnabled), defines wether the sprite animation is looping
+         */
+        spriteCellLoop: boolean;
         /**
          * If using a spritesheet (isAnimationSheetEnabled), defines the sprite cell width to use
          */
@@ -17949,6 +18010,10 @@ declare module BABYLON {
          */
         generateDepthTexture?: boolean;
         /**
+         * Define depth texture format to use
+         */
+        depthTextureFormat?: number;
+        /**
          * Define the number of desired draw buffers
          */
         textureCount?: number;
@@ -19313,9 +19378,13 @@ declare module BABYLON {
          */
         pointSize: number;
         /**
-         * Stores the z offset value
+         * Stores the z offset Factor value
          */
         zOffset: number;
+        /**
+         * Stores the z offset Unit value
+         */
+        zOffsetUnit: number;
         get wireframe(): boolean;
         /**
          * Sets the state of wireframe mode
@@ -20352,7 +20421,7 @@ declare module BABYLON {
         /**
          * Input blocks
          */
-        textureBlocks: (TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock)[];
+        textureBlocks: (ImageSourceBlock | TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock)[];
         /**
          * Bindable blocks (Blocks that need to set data to the effect)
          */
@@ -20773,6 +20842,8 @@ declare module BABYLON {
          * @param defines defines the material defines to update
          */
         replaceRepeatableContent(vertexShaderState: NodeMaterialBuildState, fragmentShaderState: NodeMaterialBuildState, mesh: AbstractMesh, defines: NodeMaterialDefines): void;
+        /** Gets a boolean indicating that the code of this block will be promoted to vertex shader even if connected to fragment output */
+        get willBeGeneratedIntoVertexShaderFromFragmentShader(): boolean;
         /**
          * Checks if the block is ready
          * @param mesh defines the mesh to be rendered
@@ -21654,7 +21725,7 @@ declare module BABYLON {
          * Gets the list of texture blocks
          * @returns an array of texture blocks
          */
-        getTextureBlocks(): (TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock)[];
+        getTextureBlocks(): (TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock | ImageSourceBlock)[];
         /**
          * Specifies if the material uses a texture
          * @param texture defines the texture to check against the material
@@ -23546,7 +23617,7 @@ declare module BABYLON {
 declare module BABYLON {
     /**
      * Renders to multiple views with a single draw call
-     * @see https://www.khronos.org/registry/webgl/extensions/WEBGL_multiview/
+     * @see https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/
      */
     export class MultiviewRenderTarget extends RenderTargetTexture {
         /**
@@ -25958,6 +26029,7 @@ declare module BABYLON {
         private _speedRatio;
         private _weight;
         private _syncRoot;
+        private _frameToSyncFromJump;
         /**
          * Gets or sets a boolean indicating if the animatable must be disposed and removed at the end of the animation.
          * This will only apply for non looping animation (default is true)
@@ -33623,6 +33695,10 @@ declare module BABYLON {
          */
         get onEnabledStateChangedObservable(): Observable<boolean>;
         /**
+         * An event triggered when the node is cloned
+         */
+        get onClonedObservable(): Observable<Node>;
+        /**
          * Creates a new Node
          * @param name the name and id to be given to this node
          * @param scene the scene this node will be added to
@@ -34102,7 +34178,7 @@ declare module BABYLON {
         /**
          * Sets the Vector3 "result" as the rotated Vector3 "localAxis" in the same rotation than the mesh.
          * localAxis is expressed in the mesh local space.
-         * result is computed in the Wordl space from the mesh World matrix.
+         * result is computed in the World space from the mesh World matrix.
          * @param localAxis axis to rotate
          * @param result the resulting transformnode
          * @returns this TransformNode.
@@ -39210,6 +39286,7 @@ declare module BABYLON {
         protected _cull: Nullable<boolean>;
         protected _cullFace: Nullable<number>;
         protected _zOffset: number;
+        protected _zOffsetUnit: number;
         protected _frontFace: Nullable<number>;
         /**
          * Initializes the state.
@@ -39218,6 +39295,8 @@ declare module BABYLON {
         get isDirty(): boolean;
         get zOffset(): number;
         set zOffset(value: number);
+        get zOffsetUnit(): number;
+        set zOffsetUnit(value: number);
         get cullFace(): Nullable<number>;
         set cullFace(value: Nullable<number>);
         get cull(): Nullable<boolean>;
@@ -40297,18 +40376,29 @@ declare module BABYLON {
          * @param reverseSide defines if culling must be reversed (CCW if false, CW if true)
          * @param cullBackFaces true to cull back faces, false to cull front faces (if culling is enabled)
          * @param stencil stencil states to set
+         * @param zOffsetUnit defines the value to apply to zOffsetUnit (0 by default)
          */
-        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean, cullBackFaces?: boolean, stencil?: IStencilState): void;
+        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean, cullBackFaces?: boolean, stencil?: IStencilState, zOffsetUnit?: number): void;
         /**
-         * Set the z offset to apply to current rendering
+         * Set the z offset Factor to apply to current rendering
          * @param value defines the offset to apply
          */
         setZOffset(value: number): void;
         /**
-         * Gets the current value of the zOffset
-         * @returns the current zOffset state
+         * Gets the current value of the zOffset Factor
+         * @returns the current zOffset Factor state
          */
         getZOffset(): number;
+        /**
+         * Set the z offset Unit to apply to current rendering
+         * @param value defines the offset to apply
+         */
+        setZOffsetUnit(value: number): void;
+        /**
+         * Gets the current value of the zOffset Unit
+         * @returns the current zOffset Unit state
+         */
+        getZOffsetUnit(): number;
         /** @hidden */
         _bindUnboundFramebuffer(framebuffer: Nullable<WebGLFramebuffer>): void;
         /** @hidden */
@@ -43505,37 +43595,40 @@ declare module BABYLON {
          * @param fileName defines the filename to download. If present, the result will automatically be downloaded
          * @param invertY true to invert the picture in the Y dimension
          * @param toArrayBuffer true to convert the data to an ArrayBuffer (encoded as `mimeType`) instead of a base64 string
+         * @param quality defines the quality of the result
          */
-        static DumpData(width: number, height: number, data: ArrayBufferView, successCallback?: (data: string | ArrayBuffer) => void, mimeType?: string, fileName?: string, invertY?: boolean, toArrayBuffer?: boolean): void;
+        static DumpData(width: number, height: number, data: ArrayBufferView, successCallback?: (data: string | ArrayBuffer) => void, mimeType?: string, fileName?: string, invertY?: boolean, toArrayBuffer?: boolean, quality?: number): void;
         /**
          * Dumps an array buffer
          * @param width defines the rendering width
          * @param height defines the rendering height
          * @param data the data array
-         * @param successCallback defines the callback triggered once the data are available
          * @param mimeType defines the mime type of the result
          * @param fileName defines the filename to download. If present, the result will automatically be downloaded
          * @param invertY true to invert the picture in the Y dimension
          * @param toArrayBuffer true to convert the data to an ArrayBuffer (encoded as `mimeType`) instead of a base64 string
+         * @param quality defines the quality of the result
          * @return a promise that resolve to the final data
          */
-        static DumpDataAsync(width: number, height: number, data: ArrayBufferView, mimeType?: string, fileName?: string, invertY?: boolean, toArrayBuffer?: boolean): Promise<string | ArrayBuffer>;
+        static DumpDataAsync(width: number, height: number, data: ArrayBufferView, mimeType?: string, fileName?: string, invertY?: boolean, toArrayBuffer?: boolean, quality?: number): Promise<string | ArrayBuffer>;
         /**
          * Converts the canvas data to blob.
          * This acts as a polyfill for browsers not supporting the to blob function.
          * @param canvas Defines the canvas to extract the data from
          * @param successCallback Defines the callback triggered once the data are available
          * @param mimeType Defines the mime type of the result
+         * @param quality defines the quality of the result
          */
-        static ToBlob(canvas: HTMLCanvasElement, successCallback: (blob: Nullable<Blob>) => void, mimeType?: string): void;
+        static ToBlob(canvas: HTMLCanvasElement, successCallback: (blob: Nullable<Blob>) => void, mimeType?: string, quality?: number): void;
         /**
          * Encodes the canvas data to base 64 or automatically download the result if filename is defined
          * @param successCallback defines the callback triggered once the data are available
          * @param mimeType defines the mime type of the result
          * @param fileName defines he filename to download. If present, the result will automatically be downloaded
          * @param canvas canvas to get the data from. If not provided, use the default screenshot canvas
+         * @param quality defines the quality of the result
          */
-        static EncodeScreenshotCanvasData(successCallback?: (data: string) => void, mimeType?: string, fileName?: string, canvas?: HTMLCanvasElement): void;
+        static EncodeScreenshotCanvasData(successCallback?: (data: string) => void, mimeType?: string, fileName?: string, canvas?: HTMLCanvasElement, quality?: number): void;
         /**
          * Downloads a blob in the browser
          * @param blob defines the blob to download
@@ -51454,6 +51547,7 @@ declare module BABYLON {
         private static _GetPluginForDirectLoad;
         private static _GetPluginForFilename;
         private static _GetDirectLoad;
+        private static _FormatErrorMessage;
         private static _LoadData;
         private static _GetFileInfo;
         /**
@@ -52531,6 +52625,15 @@ declare module BABYLON {
             customRigMappings?: {
                 right: XRHandMeshRigMapping;
                 left: XRHandMeshRigMapping;
+            };
+            /**
+             * Override the colors of the hand meshes.
+             */
+            customColors?: {
+                base?: Color3;
+                fresnel?: Color3;
+                fingerColor?: Color3;
+                tipFresnel?: Color3;
             };
         };
     }
@@ -60548,12 +60651,15 @@ declare module BABYLON {
         enableEffect(effect: Nullable<Effect | DrawWrapper>): void;
         /**
          * Set various states to the webGL context
-         * @param culling defines backface culling state
+         * @param culling defines culling state: true to enable culling, false to disable it
          * @param zOffset defines the value to apply to zOffset (0 by default)
          * @param force defines if states must be applied even if cache is up to date
          * @param reverseSide defines if culling must be reversed (CCW if false, CW if true)
+         * @param cullBackFaces true to cull back faces, false to cull front faces (if culling is enabled)
+         * @param stencil stencil states to set
+         * @param zOffsetUnit defines the value to apply to zOffsetUnit (0 by default)
          */
-        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean): void;
+        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean, cullBackFaces?: boolean, stencil?: IStencilState, zOffsetUnit?: number): void;
         /**
          * Set the value of an uniform to an array of int32
          * @param uniform defines the webGL uniform location where to store the value
@@ -62199,7 +62305,8 @@ declare module BABYLON {
         setCullFace(cullFace: number): void;
         setClampDepth(clampDepth: boolean): void;
         resetDepthCullingState(): void;
-        setDepthCullingState(cullEnabled: boolean, frontFace: number, cullFace: number, zOffset: number, depthTestEnabled: boolean, depthWriteEnabled: boolean, depthCompare: Nullable<number>): void;
+        setDepthCullingState(cullEnabled: boolean, frontFace: number, cullFace: number, zOffset: number, zOffsetUnit: number, depthTestEnabled: boolean, depthWriteEnabled: boolean, depthCompare: Nullable<number>): void;
+        setDepthBias(depthBias: number): void;
         setDepthBiasSlopeScale(depthBiasSlopeScale: number): void;
         setColorFormat(format: GPUTextureFormat): void;
         setMRTAttachments(attachments: number[], textureArray: InternalTexture[]): void;
@@ -62310,6 +62417,8 @@ declare module BABYLON {
         constructor(cache: WebGPUCacheRenderPipeline);
         get zOffset(): number;
         set zOffset(value: number);
+        get zOffsetUnit(): number;
+        set zOffsetUnit(value: number);
         get cullFace(): Nullable<number>;
         set cullFace(value: Nullable<number>);
         get cull(): Nullable<boolean>;
@@ -63196,15 +63305,16 @@ declare module BABYLON {
         setDitheringState(value: boolean): void;
         setRasterizerState(value: boolean): void;
         /**
-         * Set various states to the context
+         * Set various states to the webGL context
          * @param culling defines culling state: true to enable culling, false to disable it
          * @param zOffset defines the value to apply to zOffset (0 by default)
          * @param force defines if states must be applied even if cache is up to date
          * @param reverseSide defines if culling must be reversed (CCW if false, CW if true)
          * @param cullBackFaces true to cull back faces, false to cull front faces (if culling is enabled)
          * @param stencil stencil states to set
+         * @param zOffsetUnit defines the value to apply to zOffsetUnit (0 by default)
          */
-        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean, cullBackFaces?: boolean, stencil?: IStencilState): void;
+        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean, cullBackFaces?: boolean, stencil?: IStencilState, zOffsetUnit?: number): void;
         private _draw;
         /**
          * Draw a list of indexed primitives
@@ -63505,11 +63615,15 @@ declare module BABYLON {
     /**
      * Raw texture data and descriptor sufficient for WebGL texture upload
      */
-    export interface EnvironmentTextureInfo {
+    export type EnvironmentTextureInfo = EnvironmentTextureInfoV1 | EnvironmentTextureInfoV2;
+    /**
+     * v1 of EnvironmentTextureInfo
+     */
+    interface EnvironmentTextureInfoV1 {
         /**
          * Version of the environment map
          */
-        version: number;
+        version: 1;
         /**
          * Width of image
          */
@@ -63522,6 +63636,31 @@ declare module BABYLON {
          * Specular information stored in the file.
          */
         specular: any;
+    }
+    /**
+     * v2 of EnvironmentTextureInfo
+     */
+    interface EnvironmentTextureInfoV2 {
+        /**
+         * Version of the environment map
+         */
+        version: 2;
+        /**
+         * Width of image
+         */
+        width: number;
+        /**
+         * Irradiance information stored in the file.
+         */
+        irradiance: any;
+        /**
+         * Specular information stored in the file.
+         */
+        specular: any;
+        /**
+         * The mime type used to encode the image data.
+         */
+        imageType: string;
     }
     /**
      * Defines One Image in the file. It requires only the position in the file
@@ -63556,6 +63695,19 @@ declare module BABYLON {
         lodGenerationScale: number;
     }
     /**
+     * Options for creating environment textures
+     */
+    export interface CreateEnvTextureOptions {
+        /**
+         * The mime type of encoded images.
+         */
+        imageType?: string;
+        /**
+         * the image quality of encoded WebP images.
+         */
+        imageQuality?: number;
+    }
+    /**
      * Sets of helpers addressing the serialization and deserialization of environment texture
      * stored in a BabylonJS env file.
      * Those files are usually stored as .env files.
@@ -63568,15 +63720,25 @@ declare module BABYLON {
         /**
          * Gets the environment info from an env file.
          * @param data The array buffer containing the .env bytes.
-         * @returns the environment file info (the json header) if successfully parsed.
+         * @returns the environment file info (the json header) if successfully parsed, normalized to the latest supported version.
          */
-        static GetEnvInfo(data: ArrayBufferView): Nullable<EnvironmentTextureInfo>;
+        static GetEnvInfo(data: ArrayBufferView): Nullable<EnvironmentTextureInfoV2>;
+        /**
+         * Normalizes any supported version of the environment file info to the latest version
+         * @param info environment file info on any supported version
+         * @returns environment file info in the latest supported version
+         * @private
+         */
+        private static normalizeEnvInfo;
         /**
          * Creates an environment texture from a loaded cube texture.
          * @param texture defines the cube texture to convert in env file
+         * @param options options for the conversion process
+         * @param options.imageType the mime type for the encoded images, with support for "image/png" (default) and "image/webp"
+         * @param options.imageQuality the image quality of encoded WebP images.
          * @return a promise containing the environment data if successful.
          */
-        static CreateEnvTextureAsync(texture: BaseTexture): Promise<ArrayBuffer>;
+        static CreateEnvTextureAsync(texture: BaseTexture, options?: CreateEnvTextureOptions): Promise<ArrayBuffer>;
         /**
          * Creates a JSON representation of the spherical data.
          * @param texture defines the texture containing the polynomials
@@ -63603,9 +63765,10 @@ declare module BABYLON {
          * Uploads the levels of image data to the GPU.
          * @param texture defines the internal texture to upload to
          * @param imageData defines the array buffer views of image data [mipmap][face]
+         * @param imageType the mime type of the image data
          * @returns a promise
          */
-        static UploadLevelsAsync(texture: InternalTexture, imageData: ArrayBufferView[][]): Promise<void>;
+        static UploadLevelsAsync(texture: InternalTexture, imageData: ArrayBufferView[][], imageType?: string): Promise<void>;
         /**
          * Uploads spherical polynomials information to the texture.
          * @param texture defines the texture we are trying to upload the information to
@@ -63734,22 +63897,32 @@ declare module BABYLON {
         getRenderWidth(useScreen?: boolean): number;
         getRenderHeight(useScreen?: boolean): number;
         setViewport(viewport: IViewportLike, requiredWidth?: number, requiredHeight?: number): void;
-        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean, cullBackFaces?: boolean, stencil?: IStencilState): void;
+        setState(culling: boolean, zOffset?: number, force?: boolean, reverseSide?: boolean, cullBackFaces?: boolean, stencil?: IStencilState, zOffsetUnit?: number): void;
         /**
          * Gets the client rect of native canvas.  Needed for InputManager.
          * @returns a client rectangle
          */
         getInputElementClientRect(): Nullable<DOMRect>;
         /**
-         * Set the z offset to apply to current rendering
+         * Set the z offset Factor to apply to current rendering
          * @param value defines the offset to apply
          */
         setZOffset(value: number): void;
         /**
-         * Gets the current value of the zOffset
-         * @returns the current zOffset state
+         * Gets the current value of the zOffset Factor
+         * @returns the current zOffset Factor state
          */
         getZOffset(): number;
+        /**
+         * Set the z offset Unit to apply to current rendering
+         * @param value defines the offset to apply
+         */
+        setZOffsetUnit(value: number): void;
+        /**
+         * Gets the current value of the zOffset Unit
+         * @returns the current zOffset Unit state
+         */
+        getZOffsetUnit(): number;
         /**
          * Enable or disable depth buffering
          * @param enable defines the state to set
@@ -83337,9 +83510,13 @@ declare module BABYLON {
          */
         scene: Scene;
         /**
-         * Defines a zOffset to prevent zFighting between the overlay and the mesh.
+         * Defines a zOffset default Factor to prevent zFighting between the overlay and the mesh.
          */
         zOffset: number;
+        /**
+         * Defines a zOffset default Unit to prevent zFighting between the overlay and the mesh.
+         */
+        zOffsetUnit: number;
         private _engine;
         private _savedDepthWrite;
         private _nameForDrawWrapper;
