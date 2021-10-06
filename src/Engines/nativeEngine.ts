@@ -11,7 +11,7 @@ import { Effect } from "../Materials/effect";
 import { DataBuffer } from '../Buffers/dataBuffer';
 import { Tools } from "../Misc/tools";
 import { Observer } from "../Misc/observable";
-import { EnvironmentTextureTools, EnvironmentTextureSpecularInfoV1 } from "../Misc/environmentTextureTools";
+import { EnvironmentTextureSpecularInfoV1, CreateImageDataArrayBufferViews, GetEnvInfo, UploadEnvSpherical } from "../Misc/environmentTextureTools";
 import { Scene } from "../scene";
 import { RenderTargetCreationOptions } from "../Materials/Textures/renderTargetCreationOptions";
 import { IPipelineContext } from './IPipelineContext';
@@ -1288,8 +1288,8 @@ export class NativeEngine extends Engine {
         this._native.setViewPort(viewport.x, viewport.y, viewport.width, viewport.height);
     }
 
-    public setState(culling: boolean, zOffset: number = 0, force?: boolean, reverseSide = false, cullBackFaces?: boolean, stencil?: IStencilState, zOffsetUnit: number = 0): void {
-        // TODO. zOffsetUnit
+    public setState(culling: boolean, zOffset: number = 0, force?: boolean, reverseSide = false, cullBackFaces?: boolean, stencil?: IStencilState, zOffsetUnits: number = 0): void {
+        // TODO. zOffsetUnits
         this._native.setState(culling, zOffset, this.cullBackFaces ?? cullBackFaces ?? true, reverseSide);
     }
 
@@ -1330,22 +1330,22 @@ export class NativeEngine extends Engine {
     }
 
     /**
-     * Set the z offset Unit to apply to current rendering
+     * Set the z offset Units to apply to current rendering
      * @param value defines the offset to apply
      */
-    public setZOffsetUnit(value: number): void {
+    public setZOffsetUnits(value: number): void {
         // TODO.
-        this._depthCullingState.zOffsetUnit = this.useReverseDepthBuffer ? -value : value;
+        this._depthCullingState.zOffsetUnits = this.useReverseDepthBuffer ? -value : value;
     }
 
     /**
-     * Gets the current value of the zOffset Unit
-     * @returns the current zOffset Unit state
+     * Gets the current value of the zOffset Units
+     * @returns the current zOffset Units state
      */
-    public getZOffsetUnit(): number {
+    public getZOffsetUnits(): number {
         // TODO.
-        const zOffsetUnit = this._depthCullingState.zOffsetUnit;
-        return this.useReverseDepthBuffer ? -zOffsetUnit : zOffsetUnit;
+        const zOffsetUnits = this._depthCullingState.zOffsetUnits;
+        return this.useReverseDepthBuffer ? -zOffsetUnits : zOffsetUnits;
     }
 
     /**
@@ -2009,6 +2009,7 @@ export class NativeEngine extends Engine {
         texture.generateMipMaps = !noMipmap;
         texture.samplingMode = samplingMode;
         texture.invertY = invertY;
+        texture._useSRGBBuffer = this._getUseSRGBBuffer(useSRGBBuffer, noMipmap);
 
         if (!this.doNotHandleContextLost) {
             // Keep a link to the buffer only if we plan to handle context lost
@@ -2063,7 +2064,6 @@ export class NativeEngine extends Engine {
                 const underlyingResource = texture._hardwareTexture.underlyingResource;
 
                 this._native.loadTexture(underlyingResource, data, !noMipmap, invertY, useSRGBBuffer, () => {
-                    texture._useSRGBBuffer = useSRGBBuffer && this._caps.supportSRGBBuffers;
                     texture.baseWidth = this._native.getTextureWidth(underlyingResource);
                     texture.baseHeight = this._native.getTextureHeight(underlyingResource);
                     texture.width = texture.baseWidth;
@@ -2213,11 +2213,11 @@ export class NativeEngine extends Engine {
         // TODO: use texture loader to load env files?
         if (extension === ".env") {
             const onloaddata = (data: ArrayBufferView) => {
-                var info = EnvironmentTextureTools.GetEnvInfo(data)!;
+                var info = GetEnvInfo(data)!;
                 texture.width = info.width;
                 texture.height = info.width;
 
-                EnvironmentTextureTools.UploadEnvSpherical(texture, info);
+                UploadEnvSpherical(texture, info);
 
                 let specularInfo = info.specular as EnvironmentTextureSpecularInfoV1;
                 if (!specularInfo) {
@@ -2225,7 +2225,7 @@ export class NativeEngine extends Engine {
                 }
 
                 texture._lodGenerationScale = specularInfo.lodGenerationScale;
-                const imageData = EnvironmentTextureTools.CreateImageDataArrayBufferViews(data, info);
+                const imageData = CreateImageDataArrayBufferViews(data, info);
 
                 texture.format = Constants.TEXTUREFORMAT_RGBA;
                 texture.type = Constants.TEXTURETYPE_UNSIGNED_INT;

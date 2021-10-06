@@ -29,7 +29,7 @@ declare module BABYLON {
         /** Returns a Promise that resolves after the specfied time */
         static WaitForSeconds: (seconds: number) => Promise<void>;
         /** Post a safe message to top parent window */
-        static PostWindowMessage(msg: any, targetOrigin: string, transfer?: Transferable[]): void;
+        static PostWindowMessage(msg: BABYLON.IWindowMessage, targetOrigin: string, transfer?: Transferable[]): void;
         /** Register handler that is triggered when then engine has been resized (engine.html) */
         static OnEngineResizeObservable: Observable<Engine>;
         /** Register handler that is triggered when the scene has been loaded (engine.html) */
@@ -232,6 +232,7 @@ declare module BABYLON {
         static CloneAbstractMesh(container: BABYLON.AssetContainer, nodeName: string, cloneName: string): BABYLON.AbstractMesh;
         /** Creates an instance of the specified mesh asset into the scene. (Mesh Instance) */
         static CreateInstancedMesh(container: BABYLON.AssetContainer, meshName: string, instanceName: string): BABYLON.InstancedMesh;
+        /** Clones the specfied transform node from scene. */
         /** Registers a script componment with the scene manager. */
         static RegisterScriptComponent(instance: BABYLON.ScriptComponent, alias: string, validate?: boolean): void;
         /** Destroys a script component instance. */
@@ -1121,6 +1122,14 @@ declare module BABYLON {
         static UseArrowKeyRotation: boolean;
     }
     /**
+     * Window Message Interface
+     */
+    interface IWindowMessage {
+        source: string;
+        command: string;
+        [key: string]: any;
+    }
+    /**
      * Unity Export Interfaces
      */
     interface IUnityTransform {
@@ -1839,7 +1848,6 @@ declare class CVTOOLS_unity_metadata implements BABYLON.GLTF2.IGLTFLoaderExtensi
     setupLoader(): void;
     /** @hidden */
     startParsing(): void;
-    /** @hidden */
     /** @hidden */
     loadSceneAsync(context: string, scene: BABYLON.GLTF2.IScene): BABYLON.Nullable<Promise<void>>;
     private loadSceneExAsync;

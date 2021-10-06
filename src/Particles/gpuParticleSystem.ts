@@ -24,17 +24,14 @@ import { DataBuffer } from "../Buffers/dataBuffer";
 import { DrawWrapper } from "../Materials/drawWrapper";
 import { UniformBufferEffectCommonAccessor } from "../Materials/uniformBufferEffectCommonAccessor";
 import { IGPUParticleSystemPlatform } from "./IGPUParticleSystemPlatform";
-import { _TypeStore } from "../Misc/typeStore";
 
 declare type Scene = import("../scene").Scene;
 declare type Engine = import("../Engines/engine").Engine;
 declare type AbstractMesh = import("../Meshes/abstractMesh").AbstractMesh;
 
-import "../Shaders/gpuUpdateParticles.fragment";
-import "../Shaders/gpuUpdateParticles.vertex";
-import "../Shaders/gpuUpdateParticles.compute";
 import "../Shaders/gpuRenderParticles.fragment";
 import "../Shaders/gpuRenderParticles.vertex";
+import { GetClass } from "../Misc/typeStore";
 
 /**
  * This represents a GPU particle system in Babylon
@@ -765,15 +762,15 @@ export class GPUParticleSystem extends BaseParticleSystem implements IDisposable
         }
 
         if (this._engine.getCaps().supportComputeShaders) {
-            if (_TypeStore.RegisteredTypes["BABYLON.ComputeShaderParticleSystem"] === undefined) {
+            if (!GetClass("BABYLON.ComputeShaderParticleSystem")) {
                 throw new Error("The ComputeShaderParticleSystem class is not available! Make sure you have imported it.");
             }
-            this._platform = new (_TypeStore.RegisteredTypes["BABYLON.ComputeShaderParticleSystem"] as any)(this, this._engine);
+            this._platform = new (GetClass("BABYLON.ComputeShaderParticleSystem") as any)(this, this._engine);
         } else {
-            if (_TypeStore.RegisteredTypes["BABYLON.WebGL2ParticleSystem"] === undefined) {
+            if (!GetClass("BABYLON.WebGL2ParticleSystem")) {
                 throw new Error("The WebGL2ParticleSystem class is not available! Make sure you have imported it.");
             }
-            this._platform = new (_TypeStore.RegisteredTypes["BABYLON.WebGL2ParticleSystem"] as any)(this, this._engine);
+            this._platform = new (GetClass("BABYLON.WebGL2ParticleSystem") as any)(this, this._engine);
         }
 
         this._customWrappers = { 0: new DrawWrapper(this._engine) };
@@ -818,6 +815,7 @@ export class GPUParticleSystem extends BaseParticleSystem implements IDisposable
             d.push(Math.random());
         }
         this._randomTexture = new RawTexture(new Float32Array(d), maxTextureSize, 1, Constants.TEXTUREFORMAT_RGBA, sceneOrEngine, false, false, Constants.TEXTURE_NEAREST_SAMPLINGMODE, Constants.TEXTURETYPE_FLOAT);
+        this._randomTexture.name = "GPUParticleSystem_random1";
         this._randomTexture.wrapU = Constants.TEXTURE_WRAP_ADDRESSMODE;
         this._randomTexture.wrapV = Constants.TEXTURE_WRAP_ADDRESSMODE;
 
@@ -829,6 +827,7 @@ export class GPUParticleSystem extends BaseParticleSystem implements IDisposable
             d.push(Math.random());
         }
         this._randomTexture2 = new RawTexture(new Float32Array(d), maxTextureSize, 1, Constants.TEXTUREFORMAT_RGBA, sceneOrEngine, false, false, Constants.TEXTURE_NEAREST_SAMPLINGMODE, Constants.TEXTURETYPE_FLOAT);
+        this._randomTexture2.name = "GPUParticleSystem_random2";
         this._randomTexture2.wrapU = Constants.TEXTURE_WRAP_ADDRESSMODE;
         this._randomTexture2.wrapV = Constants.TEXTURE_WRAP_ADDRESSMODE;
 
@@ -1551,6 +1550,7 @@ export class GPUParticleSystem extends BaseParticleSystem implements IDisposable
         this._updateBuffer.setFloat("currentCount", this._currentActiveCount);
         this._updateBuffer.setFloat("timeDelta", this._timeDelta);
         this._updateBuffer.setFloat("stopFactor", this._stopped ? 0 : 1);
+        this._updateBuffer.setInt("randomTextureSize", this._randomTextureSize);
         this._updateBuffer.setFloat2("lifeTime", this.minLifeTime, this.maxLifeTime);
         this._updateBuffer.setFloat2("emitPower", this.minEmitPower, this.maxEmitPower);
         if (!this._colorGradientsTexture) {

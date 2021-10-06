@@ -1,7 +1,7 @@
 import { Nullable, FloatArray, IndicesArray, DeepImmutable } from "../types";
 import { Matrix, Vector3, Vector2, Vector4, TmpVectors } from "../Maths/math.vector";
 import { VertexBuffer } from "../Buffers/buffer";
-import { _DevTools } from '../Misc/devTools';
+import { _WarnImport } from '../Misc/devTools';
 import { Color4, Color3 } from '../Maths/math.color';
 import { Logger } from '../Misc/logger';
 import { nativeOverride } from '../Misc/decorators';
@@ -10,6 +10,7 @@ declare type Geometry = import("../Meshes/geometry").Geometry;
 declare type Mesh = import("../Meshes/mesh").Mesh;
 
 import { ICreateCapsuleOptions } from "./Builders/capsuleBuilder";
+declare type PolyhedronData= import("./geodesicMesh").PolyhedronData;
 
 /**
  * Define an interface for all classes that will get and set the data on vertices
@@ -810,7 +811,7 @@ export class VertexData {
      * @returns the VertexData of the ribbon
      */
     public static CreateRibbon(options: { pathArray: Vector3[][], closeArray?: boolean, closePath?: boolean, offset?: number, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4, invertUV?: boolean, uvs?: Vector2[], colors?: Color4[] }): VertexData {
-        throw _DevTools.WarnImport("ribbonBuilder");
+        throw _WarnImport("ribbonBuilder");
     }
 
     /**
@@ -828,7 +829,7 @@ export class VertexData {
      * @returns the VertexData of the box
      */
     public static CreateBox(options: { size?: number, width?: number, height?: number, depth?: number, faceUV?: Vector4[], faceColors?: Color4[], sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("boxBuilder");
+        throw _WarnImport("boxBuilder");
     }
 
     /**
@@ -841,7 +842,7 @@ export class VertexData {
      * @returns the VertexData of the box
      */
     public static CreateTiledBox(options: { pattern?: number, width?: number, height?: number, depth?: number, tileSize?: number, tileWidth?: number, tileHeight?: number, alignHorizontal?: number, alignVertical?: number, faceUV?: Vector4[], faceColors?: Color4[], sideOrientation?: number }): VertexData {
-        throw _DevTools.WarnImport("tiledBoxBuilder");
+        throw _WarnImport("tiledBoxBuilder");
     }
 
     /**
@@ -857,7 +858,7 @@ export class VertexData {
      * @returns the VertexData of the tiled plane
      */
     public static CreateTiledPlane(options: { pattern?: number, tileSize?: number, tileWidth?: number, tileHeight?: number, size?: number, width?: number, height?: number, alignHorizontal?: number, alignVertical?: number, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("tiledPlaneBuilder");
+        throw _WarnImport("tiledPlaneBuilder");
     }
 
     /**
@@ -876,7 +877,7 @@ export class VertexData {
      * @returns the VertexData of the ellipsoid
      */
     public static CreateSphere(options: { segments?: number, diameter?: number, diameterX?: number, diameterY?: number, diameterZ?: number, arc?: number, slice?: number, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("sphereBuilder");
+        throw _WarnImport("sphereBuilder");
     }
 
     /**
@@ -899,7 +900,7 @@ export class VertexData {
      * @returns the VertexData of the cylinder, cone or prism
      */
     public static CreateCylinder(options: { height?: number, diameterTop?: number, diameterBottom?: number, diameter?: number, tessellation?: number, subdivisions?: number, arc?: number, faceColors?: Color4[], faceUV?: Vector4[], hasRings?: boolean, enclose?: boolean, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("cylinderBuilder");
+        throw _WarnImport("cylinderBuilder");
     }
 
     /**
@@ -914,7 +915,7 @@ export class VertexData {
      * @returns the VertexData of the torus
      */
     public static CreateTorus(options: { diameter?: number, thickness?: number, tessellation?: number, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("torusBuilder");
+        throw _WarnImport("torusBuilder");
     }
 
     /**
@@ -925,7 +926,7 @@ export class VertexData {
      * @returns the VertexData of the LineSystem
      */
     public static CreateLineSystem(options: { lines: Vector3[][], colors?: Nullable<Color4[][]> }): VertexData {
-        throw _DevTools.WarnImport("linesBuilder");
+        throw _WarnImport("linesBuilder");
     }
 
     /**
@@ -938,7 +939,7 @@ export class VertexData {
      * @returns the VertexData for the DashedLines
      */
     public static CreateDashedLines(options: { points: Vector3[], dashSize?: number, gapSize?: number, dashNb?: number }): VertexData {
-        throw _DevTools.WarnImport("linesBuilder");
+        throw _WarnImport("linesBuilder");
     }
 
     /**
@@ -950,7 +951,7 @@ export class VertexData {
      * @returns the VertexData of the Ground
      */
     public static CreateGround(options: { width?: number, height?: number, subdivisions?: number, subdivisionsX?: number, subdivisionsY?: number }): VertexData {
-        throw _DevTools.WarnImport("groundBuilder");
+        throw _WarnImport("groundBuilder");
     }
 
     /**
@@ -965,7 +966,7 @@ export class VertexData {
      * @returns the VertexData of the TiledGround
      */
     public static CreateTiledGround(options: { xmin: number, zmin: number, xmax: number, zmax: number, subdivisions?: { w: number; h: number; }, precision?: { w: number; h: number; } }): VertexData {
-        throw _DevTools.WarnImport("groundBuilder");
+        throw _WarnImport("groundBuilder");
     }
 
     /**
@@ -984,7 +985,7 @@ export class VertexData {
      * @returns the VertexData of the Ground designed from a heightmap
      */
     public static CreateGroundFromHeightMap(options: { width: number, height: number, subdivisions: number, minHeight: number, maxHeight: number, colorFilter: Color3, buffer: Uint8Array, bufferWidth: number, bufferHeight: number, alphaFilter: number }): VertexData {
-        throw _DevTools.WarnImport("groundBuilder");
+        throw _WarnImport("groundBuilder");
     }
 
     /**
@@ -999,7 +1000,7 @@ export class VertexData {
      * @returns the VertexData of the box
      */
     public static CreatePlane(options: { size?: number, width?: number, height?: number, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("planeBuilder");
+        throw _WarnImport("planeBuilder");
     }
 
     /**
@@ -1014,7 +1015,7 @@ export class VertexData {
      * @returns the VertexData of the box
      */
     public static CreateDisc(options: { radius?: number, tessellation?: number, arc?: number, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("discBuilder");
+        throw _WarnImport("discBuilder");
     }
 
     /**
@@ -1030,7 +1031,7 @@ export class VertexData {
      * @returns the VertexData of the Polygon
      */
     public static CreatePolygon(polygon: Mesh, sideOrientation: number, fUV?: Vector4[], fColors?: Color4[], frontUVs?: Vector4, backUVs?: Vector4, wrap?: boolean): VertexData {
-        throw _DevTools.WarnImport("polygonBuilder");
+        throw _WarnImport("polygonBuilder");
     }
 
     /**
@@ -1048,7 +1049,7 @@ export class VertexData {
      * @returns the VertexData of the IcoSphere
      */
     public static CreateIcoSphere(options: { radius?: number, radiusX?: number, radiusY?: number, radiusZ?: number, flat?: boolean, subdivisions?: number, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("icoSphereBuilder");
+        throw _WarnImport("icoSphereBuilder");
     }
 
     // inspired from // http://stemkoski.github.io/Three.js/Polyhedra.html
@@ -1073,7 +1074,64 @@ export class VertexData {
      * @returns the VertexData of the Polyhedron
      */
     public static CreatePolyhedron(options: { type?: number, size?: number, sizeX?: number, sizeY?: number, sizeZ?: number, custom?: any, faceUV?: Vector4[], faceColors?: Color4[], flat?: boolean, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("polyhedronBuilder");
+        throw _WarnImport("polyhedronBuilder");
+    }
+
+    /**
+     * Creates the VertexData for a Geodesic Polyhedron
+     * @param options an object used to set the following optional parameters for the polyhedron, required but can be empty
+     * * m number of horizontal steps along an isogrid
+     * * n number of angled steps along an isogrid
+     * * size the size of the Geodesic, optional default 1
+     * * sizeX allows stretching in the x direction, optional, default size
+     * * sizeY allows stretching in the y direction, optional, default size
+     * * sizeZ allows stretching in the z direction, optional, default size
+     * * faceUV an array of Vector4 elements used to set different images to the top, rings and bottom respectively
+     * * faceColors an array of Color3 elements used to set different colors to the top, rings and bottom respectively
+     * * flat when true creates a flat shaded mesh, optional, default true
+     * * subdivisions increasing the subdivisions increases the number of faces, optional, default 4
+     * * sideOrientation optional and takes the values : Mesh.FRONTSIDE (default), Mesh.BACKSIDE or Mesh.DOUBLESIDE
+     * * frontUvs only usable when you create a double-sided mesh, used to choose what parts of the texture image to crop and apply on the front side, optional, default vector4 (0, 0, 1, 1)
+     * * backUVs only usable when you create a double-sided mesh, used to choose what parts of the texture image to crop and apply on the back side, optional, default vector4 (0, 0, 1, 1)
+     * @returns the VertexData of the Polyhedron
+     */
+     public static CreateGeodesic(options: { m?: number, n?: number, size?: number, sizeX?: number, sizeY?: number, sizeZ?: number, faceUV?: Vector4[], faceColors?: Color4[], flat?: boolean, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
+        throw _WarnImport("geoBuilder");
+    }
+
+    /**
+     * Creates the Mesh for a Goldberg Polyhedron
+     * @param name defines the name of the mesh
+     * @param options an object used to set the following optional parameters for the polyhedron, required but can be empty
+     * * m number of horizontal steps along an isogrid
+     * * n number of angled steps along an isogrid
+     * * size the size of the Goldberg, optional default 1
+     * * sizeX allows stretching in the x direction, optional, default size
+     * * sizeY allows stretching in the y direction, optional, default size
+     * * sizeZ allows stretching in the z direction, optional, default size
+     * * faceUV an array of Vector4 elements used to set different images to the top, rings and bottom respectively
+     * * faceColors an array of Color3 elements used to set different colors to the top, rings and bottom respectively
+     * * subdivisions increasing the subdivisions increases the number of faces, optional, default 4
+     * * sideOrientation optional and takes the values : Mesh.FRONTSIDE (default), Mesh.BACKSIDE or Mesh.DOUBLESIDE
+     * * frontUvs only usable when you create a double-sided mesh, used to choose what parts of the texture image to crop and apply on the front side, optional, default vector4 (0, 0, 1, 1)
+     * * backUVs only usable when you create a double-sided mesh, used to choose what parts of the texture image to crop and apply on the back side, optional, default vector4 (0, 0, 1, 1)
+     * @param goldBergData polyhedronData defining the Goldberg polyhedron
+     * @returns GoldbergSphere mesh
+     */
+     public static CreateGoldberg(
+        options: {
+            m?: number;
+            n?: number;
+            size?: number;
+            sizeX?: number;
+            sizeY?: number;
+            sizeZ?: number;
+            updatable?: boolean;
+            sideOrientation?: number;
+        },
+        goldBergData: PolyhedronData
+    ): VertexData {
+        throw _WarnImport("MeshBuilder");
     }
 
     //
@@ -1090,7 +1148,7 @@ export class VertexData {
         radius: 0.25,
         capSubdivisions: 6
     }): VertexData {
-        throw _DevTools.WarnImport("capsuleBuilder");
+        throw _WarnImport("capsuleBuilder");
     }
 
     // based on http://code.google.com/p/away3d/source/browse/trunk/fp10/Away3D/src/away3d/primitives/TorusKnot.as?spec=svn2473&r=2473
@@ -1109,7 +1167,7 @@ export class VertexData {
      * @returns the VertexData of the Torus Knot
      */
     public static CreateTorusKnot(options: { radius?: number, tube?: number, radialSegments?: number, tubularSegments?: number, p?: number, q?: number, sideOrientation?: number, frontUVs?: Vector4, backUVs?: Vector4 }): VertexData {
-        throw _DevTools.WarnImport("torusKnotBuilder");
+        throw _WarnImport("torusKnotBuilder");
     }
 
     // Tools
