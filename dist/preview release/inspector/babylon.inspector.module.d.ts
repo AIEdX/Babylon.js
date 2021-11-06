@@ -971,7 +971,7 @@ declare module "babylonjs-inspector/sharedUiComponents/lines/color3LineComponent
     import * as React from "react";
     import { Observable } from "babylonjs/Misc/observable";
     import { PropertyChangedEvent } from "babylonjs-inspector/sharedUiComponents/propertyChangedEvent";
-    import { Color3 } from 'babylonjs/Maths/math.color';
+    import { Color3, Color4 } from 'babylonjs/Maths/math.color';
     import { LockObject } from "babylonjs-inspector/sharedUiComponents/tabs/propertyGrids/lockObject";
     export interface IColor3LineComponentProps {
         label: string;
@@ -982,25 +982,31 @@ declare module "babylonjs-inspector/sharedUiComponents/lines/color3LineComponent
         icon?: string;
         lockObject?: LockObject;
         iconLabel?: string;
+        onValueChange?: (value: string) => void;
     }
     export class Color3LineComponent extends React.Component<IColor3LineComponentProps, {
         isExpanded: boolean;
-        color: Color3;
+        color: Color3 | Color4;
+        colorText: string;
     }> {
         private _localChange;
         constructor(props: IColor3LineComponentProps);
+        private convertToColor3;
         shouldComponentUpdate(nextProps: IColor3LineComponentProps, nextState: {
-            color: Color3;
+            color: Color3 | Color4;
+            colorText: string;
         }): boolean;
-        setPropertyValue(newColor: Color3): void;
+        setPropertyValue(newColor: Color3 | Color4, newColorText: string): void;
         onChange(newValue: string): void;
         switchExpandState(): void;
-        raiseOnPropertyChanged(previousValue: Color3): void;
+        raiseOnPropertyChanged(previousValue: Color3 | Color4): void;
         updateStateR(value: number): void;
         updateStateG(value: number): void;
         updateStateB(value: number): void;
         copyToClipboard(): void;
         convert(colorString: string): void;
+        private _colorStringSaved;
+        private _colorPickerOpen;
         private _colorString;
         render(): JSX.Element;
     }
@@ -1890,6 +1896,8 @@ declare module "babylonjs-inspector/components/actionTabs/tabs/propertyGrids/ani
         componentWillUnmount(): void;
         onCurrentFrameChange(value: number): void;
         onChangeFromOrTo(): void;
+        getSnapshotBeforeUpdate(): null;
+        componentDidUpdate(): void;
         render(): JSX.Element;
     }
 }
@@ -2186,8 +2194,7 @@ declare module "babylonjs-inspector/components/actionTabs/tabs/propertyGrids/mat
         private _originalTexture;
         /** This is a hidden texture which is only responsible for holding the actual texture memory in the original engine */
         private _target;
-        /** The internal texture representation of the original texture */
-        private _originalInternalTexture;
+        private _originalTextureProperties;
         /** Keeps track of whether we have modified the texture */
         private _didEdit;
         private _plane;
@@ -5798,25 +5805,31 @@ declare module INSPECTOR {
         icon?: string;
         lockObject?: LockObject;
         iconLabel?: string;
+        onValueChange?: (value: string) => void;
     }
     export class Color3LineComponent extends React.Component<IColor3LineComponentProps, {
         isExpanded: boolean;
-        color: BABYLON.Color3;
+        color: BABYLON.Color3 | BABYLON.Color4;
+        colorText: string;
     }> {
         private _localChange;
         constructor(props: IColor3LineComponentProps);
+        private convertToColor3;
         shouldComponentUpdate(nextProps: IColor3LineComponentProps, nextState: {
-            color: BABYLON.Color3;
+            color: BABYLON.Color3 | BABYLON.Color4;
+            colorText: string;
         }): boolean;
-        setPropertyValue(newColor: BABYLON.Color3): void;
+        setPropertyValue(newColor: BABYLON.Color3 | BABYLON.Color4, newColorText: string): void;
         onChange(newValue: string): void;
         switchExpandState(): void;
-        raiseOnPropertyChanged(previousValue: BABYLON.Color3): void;
+        raiseOnPropertyChanged(previousValue: BABYLON.Color3 | BABYLON.Color4): void;
         updateStateR(value: number): void;
         updateStateG(value: number): void;
         updateStateB(value: number): void;
         copyToClipboard(): void;
         convert(colorString: string): void;
+        private _colorStringSaved;
+        private _colorPickerOpen;
         private _colorString;
         render(): JSX.Element;
     }
@@ -6602,6 +6615,8 @@ declare module INSPECTOR {
         componentWillUnmount(): void;
         onCurrentFrameChange(value: number): void;
         onChangeFromOrTo(): void;
+        getSnapshotBeforeUpdate(): null;
+        componentDidUpdate(): void;
         render(): JSX.Element;
     }
 }
@@ -6850,8 +6865,7 @@ declare module INSPECTOR {
         private _originalTexture;
         /** This is a hidden texture which is only responsible for holding the actual texture memory in the original engine */
         private _target;
-        /** The internal texture representation of the original texture */
-        private _originalInternalTexture;
+        private _originalTextureProperties;
         /** Keeps track of whether we have modified the texture */
         private _didEdit;
         private _plane;

@@ -183,14 +183,14 @@ export class ThinEngine {
      */
     // Not mixed with Version for tooling purpose.
     public static get NpmPackage(): string {
-        return "babylonjs@5.0.0-alpha.57";
+        return "babylonjs@5.0.0-alpha.60";
     }
 
     /**
      * Returns the current version of the framework
      */
     public static get Version(): string {
-        return "5.0.0-alpha.57";
+        return "5.0.0-alpha.60";
     }
 
     /**
@@ -458,6 +458,10 @@ export class ThinEngine {
     protected _boundTexturesCache: { [key: string]: Nullable<InternalTexture> } = {};
     protected _currentEffect: Nullable<Effect>;
     /** @hidden */
+    public _currentDrawContext: IDrawContext;
+    /** @hidden */
+    public _currentMaterialContext: IMaterialContext;
+    /** @hidden */
     protected _currentProgram: Nullable<WebGLProgram>;
     protected _compiledEffects: { [key: string]: Effect } = {};
     private _vertexAttribArraysEnabled: boolean[] = [];
@@ -470,6 +474,7 @@ export class ThinEngine {
     protected _cachedIndexBuffer: Nullable<DataBuffer>;
     /** @hidden */
     protected _cachedEffectForVertexBuffers: Nullable<Effect>;
+
     /** @hidden */
     public _currentRenderTarget: Nullable<RenderTargetWrapper>;
     private _uintIndicesCurrentlySet = false;
@@ -1276,6 +1281,8 @@ export class ThinEngine {
             needsInvertingBitmap: true,
             useUBOBindingCache: true,
             needShaderCodeInlining: false,
+            needToAlwaysBindUniformBuffers: false,
+            supportRenderPasses: false,
             _collectUbosUpdatedInFrame: false,
         };
     }
@@ -3449,9 +3456,11 @@ export class ThinEngine {
      * @hidden
      * @param size defines the size of the texture
      * @param options defines the options used to create the texture
+     * @param delayGPUTextureCreation true to delay the texture creation the first time it is really needed. false to create it right away
+     * @param source source type of the texture
      * @returns a new render target texture stored in an InternalTexture
      */
-     public _createInternalTexture(size: TextureSize, options: boolean | InternalTextureCreationOptions): InternalTexture {
+     public _createInternalTexture(size: TextureSize, options: boolean | InternalTextureCreationOptions, delayGPUTextureCreation = true, source = InternalTextureSource.Unknown): InternalTexture {
         const fullOptions: InternalTextureCreationOptions = {};
 
         if (options !== undefined && typeof options === "object") {
@@ -3475,11 +3484,11 @@ export class ThinEngine {
         }
         if (fullOptions.type === Constants.TEXTURETYPE_FLOAT && !this._caps.textureFloat) {
             fullOptions.type = Constants.TEXTURETYPE_UNSIGNED_INT;
-            Logger.Warn("Float textures are not supported. Render target forced to TEXTURETYPE_UNSIGNED_BYTE type");
+            Logger.Warn("Float textures are not supported. Type forced to TEXTURETYPE_UNSIGNED_BYTE");
         }
 
         const gl = this._gl;
-        const texture = new InternalTexture(this, InternalTextureSource.Unknown);
+        const texture = new InternalTexture(this, source);
         const width = (<{ width: number; height: number; layers?: number }>size).width || <number>size;
         const height = (<{ width: number; height: number; layers?: number }>size).height || <number>size;
         const layers = (<{ width: number; height: number; layers?: number }>size).layers || 0;
@@ -5256,39 +5265,4 @@ export class ThinEngine {
         return document;
     }
 
-    /**
-     * Get Font size information
-     * @param font font name
-     * @return an object containing ascent, height and descent
-     */
-    public getFontOffset(font: string): { ascent: number, height: number, descent: number } {
-        var text = document.createElement("span");
-        text.innerHTML = "Hg";
-        text.setAttribute('style', `font: ${font} !important`);
-
-        var block = document.createElement("div");
-        block.style.display = "inline-block";
-        block.style.width = "1px";
-        block.style.height = "0px";
-        block.style.verticalAlign = "bottom";
-
-        var div = document.createElement("div");
-        div.style.whiteSpace = "nowrap";
-        div.appendChild(text);
-        div.appendChild(block);
-
-        document.body.appendChild(div);
-
-        var fontAscent = 0;
-        var fontHeight = 0;
-        try {
-            fontHeight = block.getBoundingClientRect().top - text.getBoundingClientRect().top;
-            block.style.verticalAlign = "baseline";
-            fontAscent = block.getBoundingClientRect().top - text.getBoundingClientRect().top;
-        } finally {
-            document.body.removeChild(div);
-        }
-        var result = { ascent: fontAscent, height: fontHeight, descent: fontHeight - fontAscent };
-        return result;
-    }
 }
