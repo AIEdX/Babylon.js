@@ -2191,6 +2191,8 @@ export class Scene extends AbstractScene implements IAnimatable, IClipPlanesHold
      */
     public setSceneUniformBuffer(ubo: UniformBuffer): void {
         this._sceneUbo = ubo;
+        this._viewUpdateFlag = -1;
+        this._projectionUpdateFlag = -1;
     }
 
     /**
@@ -2813,6 +2815,21 @@ export class Scene extends AbstractScene implements IAnimatable, IClipPlanesHold
     public getTextureByUniqueId(uniqueId: number): Nullable<BaseTexture> {
         for (var index = 0; index < this.textures.length; index++) {
             if (this.textures[index].uniqueId === uniqueId) {
+                return this.textures[index];
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Gets a texture using its name
+     * @param name defines the texture's name
+     * @return the texture or null if none found.
+     */
+     public getTextureByName(name: string): Nullable<BaseTexture> {
+        for (var index = 0; index < this.textures.length; index++) {
+            if (this.textures[index].name === name) {
                 return this.textures[index];
             }
         }

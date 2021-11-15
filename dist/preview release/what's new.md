@@ -17,6 +17,7 @@
 
 ### General
 
+- Added `getTextureByName` to `Scene` ([BlakeOne](https://github.com/BlakeOne))
 - Added `getControlsByType` to `AdvancedDynamicTexture` ([BlakeOne](https://github.com/BlakeOne))
 - Added `zoomToMouseLocation` on `ArcRotateCamera` ([lovettchris](https://github.com/lovettchris))
 - Added static CenterToRef for vectors 2/3/4 ([aWeirdo](https://github.com/aWeirdo))
@@ -110,6 +111,7 @@
 
 ### Meshes
 
+- Added default options parameter to Create functions. ([BlakeOne](https://github.com/BlakeOne))
 - `LineMesh` now allows assigning custom material via `material` setter. ([FullStackForger](https://github.com/FullStackForger)
 - `InstancedMesh` can now be sorted from back to front before rendering if the material is transparent ([Popov72](https://github.com/Popov72))
 - Add option to decompose the `newWorldMatrix` when passed into `TransformNode.freezeWorldMatrix`. ([bghgary](https://github.com/bghgary))
@@ -124,6 +126,7 @@
 - Added support for the material stencil properties ([Popov72](https://github.com/Popov72))
 - Added space + LMB panning to texture inspector to improve accessibility ([darraghjburke](https://github.com/darraghjburke))
 - Add support to export .env environment textures using WebP ([simonihmig](https://github.com/simonihmig))
+- ACE usability improvements and addition of new Step Tangent interpolation. ([carolhmj](https://github.com/carolhmj))
 
 ### Playground
 
@@ -160,6 +163,7 @@
 
 ### Behaviors
 
+- Added `onTargetFramingAnimationEndObservable` to `FramingBehavior` ([BlakeOne](https://github.com/BlakeOne))
 - Added `FollowBehavior`, a behavior that makes the assigned mesh hover around a camera, while facing it ([CraigFeldspar](https://github.com/CraigFeldspar))
 - Added `SurfaceMagnetismBehavior`, a behavior that makes the assigned mesh stick on surfaces of other meshes ([CraigFeldspar](https://github.com/CraigFeldspar))
 - Added `DefaultBehavior`, a behavior that will be common to several 3D GUI controls, orchestrating `SixDoFDragBehavior`, `FollowBehavior` and `SurfaceMagnetismBehavior` ([CraigFeldspar](https://github.com/CraigFeldspar))
@@ -227,6 +231,7 @@
 
 ### Serializers
 
+- Serialize and parse isEnabled property for lights and cameras  ([andreasplesch](https://github.com/andreasplesch))
 - Added the `exportUnusedUVs` property to the `IExportOptions` interface that will prevent any unused vertex uv attributes from being stripped during the glTF export. ([ericbroberic](https://github.com/ericbroberic))
 - glTF serializer now supports `KHR_materials_clearcoat` ([drigax](https://github.com/drigax))
 - Fixed bug where characters that didn't fit into a single UTF-16 code point were not correctly encoded in .glb exports ([darraghjburke](https://github.com/darraghjburke))
@@ -335,6 +340,7 @@
 
 ## Breaking changes
 
+- When a seven character hex string is passed to `Color4.FromHexString`, the alpha component will default to 1 instead of defaulting all components (r, g, b, and a) to 0. ([BlakeOne](https://github.com/BlakeOne))
 - [List of breaking changes introduced by our compatibility with WebGPU](https://doc.babylonjs.com/advanced_topics/webGPU/webGPUBreakingChanges)
   - [ReadPixels and ProceduralTexture.getContent are now async](https://doc.babylonjs.com/advanced_topics/webGPU/webGPUBreakingChanges#readpixels-is-now-asynchronous)
   - [Shader support differences](https://doc.babylonjs.com/advanced_topics/webGPU/webGPUBreakingChanges#shader-code-differences)
