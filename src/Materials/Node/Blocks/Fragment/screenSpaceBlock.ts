@@ -1,12 +1,12 @@
-import { NodeMaterialBlock } from '../nodeMaterialBlock';
-import { NodeMaterialBlockConnectionPointTypes } from '../Enums/nodeMaterialBlockConnectionPointTypes';
-import { NodeMaterialBuildState } from '../nodeMaterialBuildState';
-import { NodeMaterialBlockTargets } from '../Enums/nodeMaterialBlockTargets';
-import { NodeMaterialConnectionPoint } from '../nodeMaterialBlockConnectionPoint';
-import { RegisterClass } from '../../../Misc/typeStore';
-import { NodeMaterial } from '../nodeMaterial';
-import { NodeMaterialSystemValues } from '../Enums/nodeMaterialSystemValues';
-import { InputBlock } from './Input/inputBlock';
+import { NodeMaterialBlock } from '../../nodeMaterialBlock';
+import { NodeMaterialBlockConnectionPointTypes } from '../../Enums/nodeMaterialBlockConnectionPointTypes';
+import { NodeMaterialBuildState } from '../../nodeMaterialBuildState';
+import { NodeMaterialBlockTargets } from '../../Enums/nodeMaterialBlockTargets';
+import { NodeMaterialConnectionPoint } from '../../nodeMaterialBlockConnectionPoint';
+import { RegisterClass } from '../../../../Misc/typeStore';
+import { NodeMaterial } from '../../nodeMaterial';
+import { NodeMaterialSystemValues } from '../../Enums/nodeMaterialSystemValues';
+import { InputBlock } from '../Input/inputBlock';
 
 /**
  * Block used to transform a vector3 or a vector4 into screen space
@@ -17,17 +17,14 @@ export class ScreenSpaceBlock extends NodeMaterialBlock {
      * @param name defines the block name
      */
     public constructor(name: string) {
-        super(name, NodeMaterialBlockTargets.Neutral);
+        super(name, NodeMaterialBlockTargets.Fragment);
 
-        this.target = NodeMaterialBlockTargets.Vertex;
-
-        this.registerInput("vector", NodeMaterialBlockConnectionPointTypes.AutoDetect);
+        this.registerInput("vector", NodeMaterialBlockConnectionPointTypes.Vector3);
         this.registerInput("worldViewProjection", NodeMaterialBlockConnectionPointTypes.Matrix);
         this.registerOutput("output", NodeMaterialBlockConnectionPointTypes.Vector2);
         this.registerOutput("x", NodeMaterialBlockConnectionPointTypes.Float);
         this.registerOutput("y", NodeMaterialBlockConnectionPointTypes.Float);
 
-        this.inputs[0].acceptedConnectionPointTypes.push(NodeMaterialBlockConnectionPointTypes.Vector3);
         this.inputs[0].acceptedConnectionPointTypes.push(NodeMaterialBlockConnectionPointTypes.Vector4);
     }
 

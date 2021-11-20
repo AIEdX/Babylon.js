@@ -97,9 +97,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ({
 
 /***/ "../../node_modules/tslib/tslib.es6.js":
-/*!***********************************************************!*\
-  !*** C:/Repos/Babylon.js/node_modules/tslib/tslib.es6.js ***!
-  \***********************************************************/
+/*!*************************************************************!*\
+  !*** E:/Babylon/Babylon.js/node_modules/tslib/tslib.es6.js ***!
+  \*************************************************************/
 /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __spreadArray, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -527,6 +527,7 @@ var CellMaterialDefines = /** @class */ (function (_super) {
         _this.CELLBASIC = true;
         _this.DEPTHPREPASS = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -1423,6 +1424,7 @@ var FireMaterialDefines = /** @class */ (function (_super) {
         _this.NUM_BONE_INFLUENCERS = 0;
         _this.INSTANCES = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -1859,6 +1861,7 @@ var FurMaterialDefines = /** @class */ (function (_super) {
         _this.INSTANCES = false;
         _this.HIGHLEVEL = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -2435,6 +2438,7 @@ var GradientMaterialDefines = /** @class */ (function (_super) {
         _this.BonesPerMesh = 0;
         _this.INSTANCES = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -2768,6 +2772,7 @@ var GridMaterialDefines = /** @class */ (function (_super) {
         _this.INSTANCES = false;
         _this.THIN_INSTANCES = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -3273,6 +3278,7 @@ var LavaMaterialDefines = /** @class */ (function (_super) {
         _this.INSTANCES = false;
         _this.UNLIT = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -3782,6 +3788,7 @@ var MixMaterialDefines = /** @class */ (function (_super) {
         _this.INSTANCES = false;
         _this.MIXMAP2 = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -4406,6 +4413,7 @@ var NormalMaterialDefines = /** @class */ (function (_super) {
         _this.INSTANCES = false;
         _this.LIGHTING = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -4783,6 +4791,7 @@ var ShadowOnlyMaterialDefines = /** @class */ (function (_super) {
         _this.BonesPerMesh = 0;
         _this.INSTANCES = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -5135,6 +5144,7 @@ var SimpleMaterialDefines = /** @class */ (function (_super) {
         _this.BonesPerMesh = 0;
         _this.INSTANCES = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -5494,6 +5504,7 @@ var SkyMaterialDefines = /** @class */ (function (_super) {
         _this.VERTEXCOLOR = false;
         _this.VERTEXALPHA = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -5949,6 +5960,7 @@ var TerrainMaterialDefines = /** @class */ (function (_super) {
         _this.BonesPerMesh = 0;
         _this.INSTANCES = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -6396,6 +6408,7 @@ var TriPlanarMaterialDefines = /** @class */ (function (_super) {
         _this.BonesPerMesh = 0;
         _this.INSTANCES = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }
@@ -6986,6 +6999,7 @@ var WaterMaterialDefines = /** @class */ (function (_super) {
         _this.SAMPLER3DGREENDEPTH = false;
         _this.SAMPLER3DBGRMAP = false;
         _this.IMAGEPROCESSINGPOSTPROCESS = false;
+        _this.SKIPFINALCOLORCLAMP = false;
         _this.rebuild();
         return _this;
     }

@@ -83,12 +83,14 @@ import { SceneDepthBlock } from 'babylonjs/Materials/Node/Blocks/Dual/sceneDepth
 import { ImageSourceBlock } from 'babylonjs/Materials/Node/Blocks/Dual/imageSourceBlock';
 import { CloudBlock } from 'babylonjs/Materials/Node/Blocks/cloudBlock';
 import { VoronoiNoiseBlock } from 'babylonjs/Materials/Node/Blocks/voronoiNoiseBlock';
-import { ScreenSpaceBlock } from 'babylonjs/Materials/Node/Blocks/screenSpaceBlock';
+import { ScreenSpaceBlock } from 'babylonjs/Materials/Node/Blocks/Fragment/screenSpaceBlock';
+import { TwirlBlock } from 'babylonjs/Materials/Node/Blocks/Fragment/twirlBlock';
 
 export class BlockTools {
     public static GetBlockFromString(data: string, scene: Scene, nodeMaterial: NodeMaterial) {
         switch (data) {
-
+            case "TwirlBlock":
+                return new TwirlBlock("Twirl");
             case "VoronoiNoiseBlock":
                 return new VoronoiNoiseBlock("VoronoiNoise");
             case "ScreenSpaceBlock":
