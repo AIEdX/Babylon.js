@@ -47434,9 +47434,9 @@ var BottomBarComponent = /** @class */ (function (_super) {
             // New clip length is greater than current clip length: add a key frame at the new clip length location with the same value as the previous frame
             _this.props.context.clipLength = newClipLength;
             _this.props.context.onMoveToFrameRequired.notifyObservers(newClipLength);
-            var keyAlreadyExists = _this._getKeyAtFrame(newClipLength) !== null;
+            var keyAlreadyExists = _this.props.context.getKeyAtAnyFrameIndex(newClipLength) !== null;
             if (!keyAlreadyExists) {
-                _this.props.context.onNewKeyPointRequired.notifyObservers();
+                _this.props.context.onCreateOrUpdateKeyPointRequired.notifyObservers();
             }
             _this.setState({ clipLength: newClipLength.toFixed(0) });
         });
@@ -47444,9 +47444,9 @@ var BottomBarComponent = /** @class */ (function (_super) {
             // New clip length is smaller than current clip length: move the playing range to the new clip length
             _this.props.context.clipLength = newClipLength;
             _this.props.context.onMoveToFrameRequired.notifyObservers(newClipLength);
-            var keyAlreadyExists = _this._getKeyAtFrame(newClipLength) !== null;
+            var keyAlreadyExists = _this.props.context.getKeyAtAnyFrameIndex(newClipLength) !== null;
             if (!keyAlreadyExists) {
-                _this.props.context.onNewKeyPointRequired.notifyObservers();
+                _this.props.context.onCreateOrUpdateKeyPointRequired.notifyObservers();
             }
             _this.props.context.toKey = Math.min(_this.props.context.toKey, _this.props.context.clipLength);
             _this.props.context.onRangeUpdated.notifyObservers();
@@ -47463,16 +47463,6 @@ var BottomBarComponent = /** @class */ (function (_super) {
             this.props.context.onClipLengthDecreased.notifyObservers(newClipLength);
         }
         this.setState({ clipLength: newClipLength.toFixed(0) });
-    };
-    BottomBarComponent.prototype._getKeyAtFrame = function (frameNumber) {
-        var keys = this.props.context.activeAnimations[0].getKeys();
-        for (var _i = 0, keys_1 = keys; _i < keys_1.length; _i++) {
-            var key = keys_1[_i];
-            if (Math.floor(frameNumber - key.frame) === 0) {
-                return key;
-            }
-        }
-        return null;
     };
     BottomBarComponent.prototype.componentWillUnmount = function () {
         if (this._onAnimationsLoadedObserver) {
@@ -47791,7 +47781,7 @@ var Context = /** @class */ (function () {
         this.onValueSet = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
         this.onValueManuallyEntered = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
         this.onFrameRequired = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onNewKeyPointRequired = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
+        this.onCreateOrUpdateKeyPointRequired = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
         this.onFlattenTangentRequired = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
         this.onLinearTangentRequired = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
         this.onBreakTangentRequired = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
@@ -47976,6 +47966,31 @@ var Context = /** @class */ (function () {
             nextKey = this.toKey;
         }
         return nextKey;
+    };
+    /**
+     * If any current active animation has a key at the received frameNumber,
+     * return the index of the animation in the active animation array, and
+     * the index of the frame on the animation.
+     */
+    Context.prototype.getKeyAtAnyFrameIndex = function (frameNumber) {
+        if (!this.animations || !this.animations.length || !this.activeAnimations || !this.activeAnimations.length) {
+            return null;
+        }
+        var animIdx = 0;
+        for (var _i = 0, _a = this.activeAnimations; _i < _a.length; _i++) {
+            var animation = _a[_i];
+            var keys = animation.getKeys();
+            var idx = 0;
+            for (var _b = 0, keys_3 = keys; _b < keys_3.length; _b++) {
+                var key = keys_3[_b];
+                if (Math.floor(frameNumber - key.frame) === 0) {
+                    return { animationIndex: animIdx, keyIndex: idx };
+                }
+                idx++;
+            }
+            animIdx++;
+        }
+        return null;
     };
     return Context;
 }());
@@ -48691,8 +48706,8 @@ var GraphComponent = /** @class */ (function (_super) {
             }
             _this.props.context.onActiveAnimationChanged.notifyObservers();
         });
-        // New keypoint
-        _this.props.context.onNewKeyPointRequired.add(function () {
+        // Create or Update keypoint
+        _this.props.context.onCreateOrUpdateKeyPointRequired.add(function () {
             if (_this.props.context.activeAnimations.length === 0) {
                 return;
             }
@@ -48726,44 +48741,56 @@ var GraphComponent = /** @class */ (function (_super) {
                 }
                 var leftKey = keys[indexToAdd];
                 var rightKey = keys[indexToAdd + 1];
-                var newKey = {
-                    frame: currentFrame,
-                    value: value,
-                };
-                if (leftKey.outTangent !== undefined && rightKey.inTangent !== undefined) {
-                    var derivative = null;
-                    var invFrameDelta = 1.0 / (rightKey.frame - leftKey.frame);
-                    var cutTime = (currentFrame - leftKey.frame) * invFrameDelta;
-                    switch (currentAnimation.dataType) {
-                        case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_FLOAT: {
-                            derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Scalar"].Hermite1stDerivative(leftKey.value * invFrameDelta, leftKey.outTangent, rightKey.value * invFrameDelta, rightKey.inTangent, cutTime);
-                            break;
-                        }
-                        case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_VECTOR2: {
-                            derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Vector2"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
-                            break;
-                        }
-                        case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_VECTOR3: {
-                            derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Vector3"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
-                            break;
-                        }
-                        case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_QUATERNION: {
-                            derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Quaternion"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
-                            break;
-                        }
-                        case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_COLOR3:
-                            derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Color3"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
-                            break;
-                        case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_COLOR4:
-                            derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Color4"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
-                            break;
-                    }
-                    if (derivative !== null) {
-                        newKey.inTangent = derivative;
-                        newKey.outTangent = derivative.clone ? derivative.clone() : derivative;
-                    }
+                if (Math.floor(currentFrame - (leftKey === null || leftKey === void 0 ? void 0 : leftKey.frame)) === 0) {
+                    // Key already exists, update it
+                    leftKey.value = value;
                 }
-                keys.splice(indexToAdd + 1, 0, newKey);
+                else if (Math.floor(rightKey.frame - currentFrame) === 0) {
+                    // Key already exists, update it
+                    rightKey.value = value;
+                }
+                else {
+                    // Key doesn't exist, create it (same operations) as
+                    // the new key listener
+                    var newKey = {
+                        frame: currentFrame,
+                        value: value,
+                    };
+                    if (leftKey.outTangent !== undefined && rightKey.inTangent !== undefined) {
+                        var derivative = null;
+                        var invFrameDelta = 1.0 / (rightKey.frame - leftKey.frame);
+                        var cutTime = (currentFrame - leftKey.frame) * invFrameDelta;
+                        switch (currentAnimation.dataType) {
+                            case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_FLOAT: {
+                                derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Scalar"].Hermite1stDerivative(leftKey.value * invFrameDelta, leftKey.outTangent, rightKey.value * invFrameDelta, rightKey.inTangent, cutTime);
+                                break;
+                            }
+                            case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_VECTOR2: {
+                                derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Vector2"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
+                                break;
+                            }
+                            case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_VECTOR3: {
+                                derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Vector3"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
+                                break;
+                            }
+                            case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_QUATERNION: {
+                                derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Quaternion"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
+                                break;
+                            }
+                            case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_COLOR3:
+                                derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Color3"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
+                                break;
+                            case babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Animation"].ANIMATIONTYPE_COLOR4:
+                                derivative = babylonjs_Animations_animation__WEBPACK_IMPORTED_MODULE_2__["Color4"].Hermite1stDerivative(leftKey.value.scale(invFrameDelta), leftKey.outTangent, rightKey.value.scale(invFrameDelta), rightKey.inTangent, cutTime);
+                                break;
+                        }
+                        if (derivative !== null) {
+                            newKey.inTangent = derivative;
+                            newKey.outTangent = derivative.clone ? derivative.clone() : derivative;
+                        }
+                    }
+                    keys.splice(indexToAdd + 1, 0, newKey);
+                }
                 currentAnimation.setKeys(keys);
             }
             _this._evaluateKeys(false, false);
@@ -51443,7 +51470,7 @@ var TopBarComponent = /** @class */ (function (_super) {
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "top-bar-parent-name" }, this.props.context.title),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_controls_textInputComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputComponent"], { className: hasActiveAnimations && this.state.editControlsVisible ? "" : "disabled", isNumber: true, value: this.state.keyFrameValue, tooltip: "Frame", id: "key-frame", onValueAsNumberChanged: function (newValue) { return _this.props.context.onFrameManuallyEntered.notifyObservers(newValue); }, globalState: this.props.globalState, context: this.props.context }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_controls_textInputComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputComponent"], { className: hasActiveAnimations && this.state.editControlsVisible ? "" : "disabled", isNumber: true, value: this.state.keyValue, tooltip: "Value", id: "key-value", onValueAsNumberChanged: function (newValue) { return _this.props.context.onValueManuallyEntered.notifyObservers(newValue); }, globalState: this.props.globalState, context: this.props.context }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_controls_actionButtonComponent__WEBPACK_IMPORTED_MODULE_2__["ActionButtonComponent"], { className: hasActiveAnimations ? "" : "disabled", tooltip: "New key", id: "new-key", globalState: this.props.globalState, context: this.props.context, icon: newKeyIcon, onClick: function () { return _this.props.context.onNewKeyPointRequired.notifyObservers(); } }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_controls_actionButtonComponent__WEBPACK_IMPORTED_MODULE_2__["ActionButtonComponent"], { className: hasActiveAnimations ? "" : "disabled", tooltip: "New key", id: "new-key", globalState: this.props.globalState, context: this.props.context, icon: newKeyIcon, onClick: function () { return _this.props.context.onCreateOrUpdateKeyPointRequired.notifyObservers(); } }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_controls_actionButtonComponent__WEBPACK_IMPORTED_MODULE_2__["ActionButtonComponent"], { tooltip: "Frame canvas", id: "frame-canvas", globalState: this.props.globalState, context: this.props.context, icon: frameIcon, onClick: function () { return _this.props.context.onFrameRequired.notifyObservers(); } }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_controls_actionButtonComponent__WEBPACK_IMPORTED_MODULE_2__["ActionButtonComponent"], { className: this.props.context.activeKeyPoints && this.props.context.activeKeyPoints.length > 0 ? "" : "disabled", tooltip: "Flatten tangent", id: "flatten-tangent", globalState: this.props.globalState, context: this.props.context, icon: flatTangentIcon, onClick: function () { return _this.props.context.onFlattenTangentRequired.notifyObservers(); } }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_controls_actionButtonComponent__WEBPACK_IMPORTED_MODULE_2__["ActionButtonComponent"], { className: this.props.context.activeKeyPoints && this.props.context.activeKeyPoints.length > 0 ? "" : "disabled", tooltip: "Linear tangent", id: "linear-tangent", globalState: this.props.globalState, context: this.props.context, icon: linearTangentIcon, onClick: function () { return _this.props.context.onLinearTangentRequired.notifyObservers(); } }),
@@ -59672,6 +59699,8 @@ var GlobalState = /** @class */ (function () {
         this.lightGizmos = [];
         // Camera gizmos
         this.cameraGizmos = [];
+        this.onSceneExplorerClosedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onActionTabsClosedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
     }
     Object.defineProperty(GlobalState.prototype, "onlyUseEulers", {
         get: function () {
@@ -63188,7 +63217,7 @@ var TreeItemLabelComponent = /** @class */ (function (_super) {
     };
     TreeItemLabelComponent.prototype.render = function () {
         var _this = this;
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "title", onClick: function () { return _this.onClick(); } },
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "title", title: this.props.label, onClick: function () { return _this.onClick(); } },
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "titleIcon" },
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], { icon: this.props.icon, color: this.props.color })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "titleText" }, this.props.label || "no name")));
@@ -63524,6 +63553,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sceneExplorer_sceneExplorerComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/sceneExplorer/sceneExplorerComponent */ "./components/sceneExplorer/sceneExplorerComponent.tsx");
 /* harmony import */ var _components_embedHost_embedHostComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/embedHost/embedHostComponent */ "./components/embedHost/embedHostComponent.tsx");
 /* harmony import */ var _components_globalState__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/globalState */ "./components/globalState.ts");
+/* harmony import */ var _components_popupComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/popupComponent */ "./components/popupComponent.tsx");
+
 
 
 
@@ -63634,6 +63665,7 @@ var Inspector = /** @class */ (function () {
                     if (options.popup) {
                         _this._SceneExplorerWindow.close();
                     }
+                    _this._GlobalState.onSceneExplorerClosedObservable.notifyObservers();
                 },
             });
             react_dom__WEBPACK_IMPORTED_MODULE_2__["render"](sceneExplorerElement, this._SceneExplorerHost);
@@ -63681,6 +63713,7 @@ var Inspector = /** @class */ (function () {
                     if (options.popup) {
                         _this._ActionTabsWindow.close();
                     }
+                    _this._GlobalState.onActionTabsClosedObservable.notifyObservers();
                 },
                 initialTab: options.initialTab,
             });
@@ -63730,6 +63763,8 @@ var Inspector = /** @class */ (function () {
                     if (options.popup) {
                         _this._EmbedHostWindow.close();
                     }
+                    _this._GlobalState.onSceneExplorerClosedObservable.notifyObservers();
+                    _this._GlobalState.onActionTabsClosedObservable.notifyObservers();
                 },
                 initialTab: options.initialTab,
             });
@@ -63800,6 +63835,7 @@ var Inspector = /** @class */ (function () {
         }
     };
     Inspector.Show = function (scene, userOptions) {
+        var _this = this;
         var options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({ original: true, popup: false, overlay: false, showExplorer: true, showInspector: true, embedMode: false, enableClose: true, handleResize: true, enablePopup: true }, userOptions);
         // Prepare state
         if (!this._GlobalState.onPropertyChangedObservable) {
@@ -63820,6 +63856,8 @@ var Inspector = /** @class */ (function () {
         if (options.embedMode && options.showExplorer && options.showInspector) {
             if (options.popup) {
                 this._CreateEmbedHost(scene, options, this._CreatePopup("INSPECTOR", "_EmbedHostWindow"), Inspector.OnSelectionChangeObservable);
+                this._EmbedHostWindow.addEventListener("beforeunload", function () { return _this._GlobalState.onSceneExplorerClosedObservable.notifyObservers(); });
+                this._EmbedHostWindow.addEventListener("beforeunload", function () { return _this._GlobalState.onActionTabsClosedObservable.notifyObservers(); });
             }
             else {
                 if (!rootElement) {
@@ -63850,12 +63888,14 @@ var Inspector = /** @class */ (function () {
                     this._SceneExplorerHost.style.width = "0";
                 }
                 this._CreateSceneExplorer(scene, options, this._CreatePopup("SCENE EXPLORER", "_SceneExplorerWindow"));
+                this._SceneExplorerWindow.addEventListener("beforeunload", function () { return _this._GlobalState.onSceneExplorerClosedObservable.notifyObservers(); });
             }
             if (options.showInspector) {
                 if (this._ActionTabsHost) {
                     this._ActionTabsHost.style.width = "0";
                 }
                 this._CreateActionTabs(scene, options, this._CreatePopup("INSPECTOR", "_ActionTabsWindow"));
+                this._ActionTabsWindow.addEventListener("beforeunload", function () { return _this._GlobalState.onActionTabsClosedObservable.notifyObservers(); });
             }
         }
         else {
@@ -63955,6 +63995,7 @@ var Inspector = /** @class */ (function () {
             react_dom__WEBPACK_IMPORTED_MODULE_2__["unmountComponentAtNode"](this._ActionTabsHost);
             this._RemoveElementFromDOM(this._ActionTabsHost);
             this._ActionTabsHost = null;
+            this._GlobalState.onActionTabsClosedObservable.notifyObservers();
         }
         if (this._SceneExplorerHost) {
             react_dom__WEBPACK_IMPORTED_MODULE_2__["unmountComponentAtNode"](this._SceneExplorerHost);
@@ -63962,6 +64003,7 @@ var Inspector = /** @class */ (function () {
                 this._SceneExplorerHost.parentElement.removeChild(this._SceneExplorerHost);
             }
             this._SceneExplorerHost = null;
+            this._GlobalState.onSceneExplorerClosedObservable.notifyObservers();
         }
         if (this._EmbedHost) {
             react_dom__WEBPACK_IMPORTED_MODULE_2__["unmountComponentAtNode"](this._EmbedHost);
@@ -63969,12 +64011,44 @@ var Inspector = /** @class */ (function () {
                 this._EmbedHost.parentElement.removeChild(this._EmbedHost);
             }
             this._EmbedHost = null;
+            this._GlobalState.onActionTabsClosedObservable.notifyObservers();
+            this._GlobalState.onSceneExplorerClosedObservable.notifyObservers();
         }
         Inspector._OpenedPane = 0;
         this._Cleanup();
         if (!this._GlobalState.onPluginActivatedObserver) {
             babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_3__["SceneLoader"].OnPluginActivatedObservable.remove(this._GlobalState.onPluginActivatedObserver);
             this._GlobalState.onPluginActivatedObserver = null;
+        }
+    };
+    Inspector._CreatePersistentPopup = function (config, hostElement) {
+        var _this = this;
+        if (this._PersistentPopupHost) {
+            this._ClosePersistentPopup();
+        }
+        this._PersistentPopupHost = hostElement.ownerDocument.createElement("div");
+        var popupElement = react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_components_popupComponent__WEBPACK_IMPORTED_MODULE_8__["PopupComponent"], config.props, config.children);
+        react_dom__WEBPACK_IMPORTED_MODULE_2__["render"](popupElement, this._PersistentPopupHost);
+        if (config.closeWhenSceneExplorerCloses) {
+            this._OnSceneExplorerClosedObserver = this._GlobalState.onSceneExplorerClosedObservable.add(function () { return _this._ClosePersistentPopup(); });
+        }
+        if (config.closeWhenActionTabsCloses) {
+            this._OnActionTabsClosedObserver = this._GlobalState.onActionTabsClosedObservable.add(function () { return _this._ClosePersistentPopup(); });
+        }
+    };
+    Inspector._ClosePersistentPopup = function () {
+        if (this._PersistentPopupHost) {
+            react_dom__WEBPACK_IMPORTED_MODULE_2__["unmountComponentAtNode"](this._PersistentPopupHost);
+            this._PersistentPopupHost.remove();
+            this._PersistentPopupHost = null;
+        }
+        if (this._OnSceneExplorerClosedObserver) {
+            this._GlobalState.onSceneExplorerClosedObservable.remove(this._OnSceneExplorerClosedObserver);
+            this._OnSceneExplorerClosedObserver = null;
+        }
+        if (this._OnActionTabsClosedObserver) {
+            this._GlobalState.onActionTabsClosedObservable.remove(this._OnActionTabsClosedObserver);
+            this._OnActionTabsClosedObserver = null;
         }
     };
     Inspector._OpenedPane = 0;

@@ -54952,11 +54952,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var BlockTools = /** @class */ (function () {
     function BlockTools() {
     }
     BlockTools.GetBlockFromString = function (data, scene, nodeMaterial) {
         switch (data) {
+            case "TwirlBlock":
+                return new babylonjs_Materials_Node_Blocks_Fragment_discardBlock__WEBPACK_IMPORTED_MODULE_0__["TwirlBlock"]("Twirl");
             case "VoronoiNoiseBlock":
                 return new babylonjs_Materials_Node_Blocks_Fragment_discardBlock__WEBPACK_IMPORTED_MODULE_0__["VoronoiNoiseBlock"]("VoronoiNoise");
             case "ScreenSpaceBlock":
@@ -55656,6 +55659,10 @@ var NodeListComponent = /** @class */ (function (_super) {
         if (frameJson) {
             _this._customFrameList = JSON.parse(frameJson);
         }
+        var blockJson = localStorage.getItem("Custom-Block-List");
+        if (blockJson) {
+            _this._customBlockList = JSON.parse(blockJson);
+        }
         _this._onResetRequiredObserver = _this.props.globalState.onResetRequiredObservable.add(function () {
             _this.forceUpdate();
         });
@@ -55707,15 +55714,60 @@ var NodeListComponent = /** @class */ (function (_super) {
             this.forceUpdate();
         }
     };
+    NodeListComponent.prototype.loadCustomBlock = function (file) {
+        var _this = this;
+        babylonjs_Materials_Node_Enums_nodeMaterialModes__WEBPACK_IMPORTED_MODULE_4__["Tools"].ReadFile(file, function (data) { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+            var decoder, blockData, blockName, blockToolTip, blockJson, blockList;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                decoder = new TextDecoder("utf-8");
+                blockData = JSON.parse(decoder.decode(data));
+                blockName = (blockData.name || "") + "CustomBlock";
+                blockToolTip = blockData.comments || "";
+                try {
+                    localStorage.setItem(blockName, JSON.stringify(blockData));
+                }
+                catch (error) {
+                    this.props.globalState.onErrorMessageDialogRequiredObservable.notifyObservers("Error Saving Block");
+                    return [2 /*return*/];
+                }
+                blockJson = localStorage.getItem("Custom-Block-List");
+                blockList = {};
+                if (blockJson) {
+                    blockList = JSON.parse(blockJson);
+                }
+                blockList[blockName] = blockToolTip;
+                localStorage.setItem("Custom-Block-List", JSON.stringify(blockList));
+                this._customBlockList = blockList;
+                this.forceUpdate();
+                return [2 /*return*/];
+            });
+        }); }, undefined, true);
+    };
+    NodeListComponent.prototype.removeCustomBlock = function (value) {
+        var blockJson = localStorage.getItem("Custom-Block-List");
+        if (blockJson) {
+            var blockList = JSON.parse(blockJson);
+            delete blockList[value];
+            localStorage.removeItem(value);
+            localStorage.setItem("Custom-Block-List", JSON.stringify(blockList));
+            this._customBlockList = blockList;
+            this.forceUpdate();
+        }
+    };
     NodeListComponent.prototype.render = function () {
         var _this = this;
         var customFrameNames = [];
         for (var frame in this._customFrameList) {
             customFrameNames.push(frame);
         }
+        var customBlockNames = [];
+        for (var block in this._customBlockList) {
+            customBlockNames.push(block);
+        }
         // Block types used to create the menu from
         var allBlocks = {
             Custom_Frames: customFrameNames,
+            Custom_Blocks: customBlockNames,
             Animation: ["BonesBlock", "MorphTargetsBlock"],
             Color_Management: ["ReplaceColorBlock", "PosterizeBlock", "GradientBlock", "DesaturateBlock"],
             Conversion_Blocks: ["ColorMergerBlock", "ColorSplitterBlock", "VectorMergerBlock", "VectorSplitterBlock"],
@@ -55783,6 +55835,7 @@ var NodeListComponent = /** @class */ (function (_super) {
                 "Rotate2dBlock",
                 "TransformBlock",
                 "ScreenSpaceBlock",
+                "TwirlBlock"
             ],
             Matrices: [
                 "Matrix",
@@ -55879,11 +55932,20 @@ var NodeListComponent = /** @class */ (function (_super) {
                 if (key === "Custom_Frames") {
                     return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedComponents_draggableLineWithButtonComponent__WEBPACK_IMPORTED_MODULE_5__["DraggableLineWithButtonComponent"], { key: block, data: block, tooltip: _this._customFrameList[block] || "", iconImage: deleteButton, iconTitle: "Delete", onIconClick: function (value) { return _this.removeItem(value); } }));
                 }
+                else if (key === "Custom_Blocks") {
+                    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedComponents_draggableLineWithButtonComponent__WEBPACK_IMPORTED_MODULE_5__["DraggableLineWithButtonComponent"], { key: block, data: block, tooltip: _this._customBlockList[block] || "", iconImage: deleteButton, iconTitle: "Delete", onIconClick: function (value) { return _this.removeCustomBlock(value); }, lenSuffixToRemove: 11 }));
+                }
                 return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedComponents_draggableLineComponent__WEBPACK_IMPORTED_MODULE_3__["DraggableLineComponent"], { key: block, data: block, tooltip: NodeListComponent._Tooltips[block] || "" });
             });
             if (key === "Custom_Frames") {
                 var line = (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedComponents_lineWithFileButtonComponent__WEBPACK_IMPORTED_MODULE_6__["LineWithFileButtonComponent"], { key: "add...", title: "Add Custom Frame", closed: false, label: "Add...", uploadName: "custom-frame-upload", iconImage: addButton, accept: ".json", onIconClick: function (file) {
                         _this.loadCustomFrame(file);
+                    } }));
+                blockList.push(line);
+            }
+            else if (key === "Custom_Blocks") {
+                var line = (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedComponents_lineWithFileButtonComponent__WEBPACK_IMPORTED_MODULE_6__["LineWithFileButtonComponent"], { key: "add...", title: "Add Custom Block", closed: false, label: "Add...", uploadName: "custom-block-upload", iconImage: addButton, accept: ".json", onIconClick: function (file) {
+                        _this.loadCustomBlock(file);
                     } }));
                 blockList.push(line);
             }
@@ -56040,6 +56102,7 @@ var NodeListComponent = /** @class */ (function (_super) {
         CloudBlock: "Generate Fractal Brownian Motion Clouds",
         VoronoiNoiseBlock: "Generate Voronoi Noise",
         ScreenSpaceBlock: "Convert a Vector3 or a Vector4 into screen space",
+        TwirlBlock: "Apply a twirl rotation"
     };
     return NodeListComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -63665,6 +63728,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 __webpack_require__(/*! ./main.scss */ "./main.scss");
 var GraphEditor = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(GraphEditor, _super);
@@ -64253,7 +64317,20 @@ var GraphEditor = /** @class */ (function (_super) {
         var _this = this;
         var data = event.dataTransfer.getData("babylonjs-material-node");
         var newNode;
-        if (data.indexOf("Custom") > -1) {
+        var customBlockData;
+        if (data.indexOf("CustomBlock") > -1) {
+            var storageData = localStorage.getItem(data);
+            if (!storageData) {
+                this.props.globalState.onErrorMessageDialogRequiredObservable.notifyObservers("Error loading custom block");
+                return;
+            }
+            customBlockData = JSON.parse(storageData);
+            if (!customBlockData) {
+                this.props.globalState.onErrorMessageDialogRequiredObservable.notifyObservers("Error parsing custom block");
+                return;
+            }
+        }
+        else if (data.indexOf("Custom") > -1) {
             var storageData = localStorage.getItem(data);
             if (storageData) {
                 var frameData = JSON.parse(storageData);
@@ -64279,7 +64356,14 @@ var GraphEditor = /** @class */ (function (_super) {
             newNode = this.addValueNode(data);
         }
         else {
-            var block_1 = _blockTools__WEBPACK_IMPORTED_MODULE_8__["BlockTools"].GetBlockFromString(data, this.props.globalState.nodeMaterial.getScene(), this.props.globalState.nodeMaterial);
+            var block_1;
+            if (customBlockData) {
+                block_1 = new babylonjs_Misc_dataStorage__WEBPACK_IMPORTED_MODULE_6__["CustomBlock"]("");
+                block_1.options = customBlockData;
+            }
+            else {
+                block_1 = _blockTools__WEBPACK_IMPORTED_MODULE_8__["BlockTools"].GetBlockFromString(data, this.props.globalState.nodeMaterial.getScene(), this.props.globalState.nodeMaterial);
+            }
             if (block_1.isUnique) {
                 var className = block_1.getClassName();
                 for (var _b = 0, _c = this._blocks; _b < _c.length; _b++) {
@@ -65194,10 +65278,11 @@ var DraggableLineWithButtonComponent = /** @class */ (function (_super) {
     }
     DraggableLineWithButtonComponent.prototype.render = function () {
         var _this = this;
+        var _a;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "draggableLine withButton", title: this.props.tooltip, draggable: true, onDragStart: function (event) {
                 event.dataTransfer.setData("babylonjs-material-node", _this.props.data);
             } },
-            this.props.data.substr(0, this.props.data.length - 6),
+            this.props.data.substr(0, this.props.data.length - ((_a = this.props.lenSuffixToRemove) !== null && _a !== void 0 ? _a : 6)),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "icon", onClick: function () {
                     _this.props.onIconClick(_this.props.data);
                 }, title: this.props.iconTitle },
