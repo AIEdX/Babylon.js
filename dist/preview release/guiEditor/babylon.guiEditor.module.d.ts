@@ -702,7 +702,6 @@ declare module "babylonjs-gui-editor/diagram/workbench" {
         private _constraintDirection;
         private _forcePanning;
         private _forceZooming;
-        private _forceMoving;
         private _forceSelecting;
         private _outlines;
         private _panning;
@@ -718,16 +717,23 @@ declare module "babylonjs-gui-editor/diagram/workbench" {
         private _engine;
         private _liveRenderObserver;
         private _guiRenderObserver;
+        private _mainSelection;
+        private _selectionDepth;
+        private _doubleClick;
+        private _lockMainSelection;
         get globalState(): GlobalState;
         get nodes(): Control[];
         get selectedGuiNodes(): Control[];
+        private _getParentWithDepth;
+        private _getMaxParent;
         constructor(props: IWorkbenchComponentProps);
+        determineMouseSelection(selection: Nullable<Control>): void;
         keyEvent: (evt: KeyboardEvent) => void;
         private updateHitTest;
         private updateHitTestForSelection;
         private setCameraRadius;
-        private copyToClipboard;
-        private pasteFromClipboard;
+        copyToClipboard(): void;
+        pasteFromClipboard(): void;
         CopyGUIControl(original: Control): void;
         private selectAllGUI;
         blurEvent: () => void;
@@ -739,6 +745,7 @@ declare module "babylonjs-gui-editor/diagram/workbench" {
         resizeGuiTexture(newvalue: Vector2): void;
         findNodeFromGuiElement(guiControl: Control): Control;
         appendBlock(guiElement: Control): Control;
+        private _isMainSelectionParent;
         createNewGuiNode(guiControl: Control): Control;
         private parent;
         private _convertToPixels;
@@ -980,6 +987,7 @@ declare module "babylonjs-gui-editor/sharedUiComponents/lines/floatLineComponent
         onEnter?: (newValue: number) => void;
         icon?: string;
         iconLabel?: string;
+        defaultValue?: number;
     }
     export class FloatLineComponent extends React.Component<IFloatLineComponentProps, {
         value: string;
@@ -1052,6 +1060,7 @@ declare module "babylonjs-gui-editor/sharedUiComponents/lines/textInputLineCompo
         iconLabel?: string;
         noUnderline?: boolean;
         numbersOnly?: boolean;
+        delayInput?: boolean;
     }
     export class TextInputLineComponent extends React.Component<ITextInputLineComponentProps, {
         value: string;
@@ -1271,10 +1280,10 @@ declare module "babylonjs-gui-editor/components/propertyTab/propertyGrids/gui/co
     export class CommonControlPropertyGridComponent extends React.Component<ICommonControlPropertyGridComponentProps> {
         private _width;
         private _height;
-        private _responsive;
         constructor(props: ICommonControlPropertyGridComponentProps);
         private _updateAlignment;
         private _checkAndUpdateValues;
+        private _markChildrenAsDirty;
         render(): JSX.Element;
     }
 }
@@ -1935,7 +1944,6 @@ declare module "babylonjs-gui-editor/components/commandBarComponent" {
         private _panning;
         private _zooming;
         private _selecting;
-        private _moving;
         private _outlines;
         constructor(props: ICommandBarComponentProps);
         private updateNodeOutline;
@@ -1958,6 +1966,7 @@ declare module "babylonjs-gui-editor/workbenchEditor" {
         private _rightWidth;
         private _toolBarIconSize;
         private _popUpWindow;
+        private _draggedItem;
         componentDidMount(): void;
         constructor(props: IGraphEditorProps);
         showWaitScreen(): void;
@@ -3535,7 +3544,6 @@ declare module GUIEDITOR {
         private _constraintDirection;
         private _forcePanning;
         private _forceZooming;
-        private _forceMoving;
         private _forceSelecting;
         private _outlines;
         private _panning;
@@ -3551,16 +3559,23 @@ declare module GUIEDITOR {
         private _engine;
         private _liveRenderObserver;
         private _guiRenderObserver;
+        private _mainSelection;
+        private _selectionDepth;
+        private _doubleClick;
+        private _lockMainSelection;
         get globalState(): GlobalState;
         get nodes(): Control[];
         get selectedGuiNodes(): Control[];
+        private _getParentWithDepth;
+        private _getMaxParent;
         constructor(props: IWorkbenchComponentProps);
+        determineMouseSelection(selection: BABYLON.Nullable<Control>): void;
         keyEvent: (evt: KeyboardEvent) => void;
         private updateHitTest;
         private updateHitTestForSelection;
         private setCameraRadius;
-        private copyToClipboard;
-        private pasteFromClipboard;
+        copyToClipboard(): void;
+        pasteFromClipboard(): void;
         CopyGUIControl(original: Control): void;
         private selectAllGUI;
         blurEvent: () => void;
@@ -3572,6 +3587,7 @@ declare module GUIEDITOR {
         resizeGuiTexture(newvalue: BABYLON.Vector2): void;
         findNodeFromGuiElement(guiControl: Control): Control;
         appendBlock(guiElement: Control): Control;
+        private _isMainSelectionParent;
         createNewGuiNode(guiControl: Control): Control;
         private parent;
         private _convertToPixels;
@@ -3792,6 +3808,7 @@ declare module GUIEDITOR {
         onEnter?: (newValue: number) => void;
         icon?: string;
         iconLabel?: string;
+        defaultValue?: number;
     }
     export class FloatLineComponent extends React.Component<IFloatLineComponentProps, {
         value: string;
@@ -3856,6 +3873,7 @@ declare module GUIEDITOR {
         iconLabel?: string;
         noUnderline?: boolean;
         numbersOnly?: boolean;
+        delayInput?: boolean;
     }
     export class TextInputLineComponent extends React.Component<ITextInputLineComponentProps, {
         value: string;
@@ -4057,10 +4075,10 @@ declare module GUIEDITOR {
     export class CommonControlPropertyGridComponent extends React.Component<ICommonControlPropertyGridComponentProps> {
         private _width;
         private _height;
-        private _responsive;
         constructor(props: ICommonControlPropertyGridComponentProps);
         private _updateAlignment;
         private _checkAndUpdateValues;
+        private _markChildrenAsDirty;
         render(): JSX.Element;
     }
 }
@@ -4574,7 +4592,6 @@ declare module GUIEDITOR {
         private _panning;
         private _zooming;
         private _selecting;
-        private _moving;
         private _outlines;
         constructor(props: ICommandBarComponentProps);
         private updateNodeOutline;
@@ -4595,6 +4612,7 @@ declare module GUIEDITOR {
         private _rightWidth;
         private _toolBarIconSize;
         private _popUpWindow;
+        private _draggedItem;
         componentDidMount(): void;
         constructor(props: IGraphEditorProps);
         showWaitScreen(): void;
