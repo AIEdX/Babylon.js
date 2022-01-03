@@ -10,6 +10,7 @@
 - Added GUI Editor to easily build GUI controls ([msDestiny14](https://github.com/msDestiny14))
 - Added support for Order Independent Transparency on simple scenes. `scene.useOrderIndependentTransparency = true` now makes transparent meshes shade correctly when stacked onto each other. ([CraigFeldspar](https://github.com/CraigFeldspar))
 - Added vertex animation textures with `BakedVertexAnimationManager` ([brunobg](https://github.com/brunobg), [Popov72](https://github.com/Popov72), [raggar](https://github.com/raggar))
+- Added `MaterialPluginManager` ([brunobg](https://github.com/brunobg), [Popov72](https://github.com/Popov72))
 
 ## Updates
 
@@ -170,6 +171,7 @@
 - Introduced a new opt-in property to `Gui3DManager`, `useRealisticScaling`, that will automatically scale 3D GUI components like buttons to MRTK standards for better sizing in XR experiences. ([rickfromwork](https://github.com/rickfromwork))
 - Added support for full screen UI and rig cameras ([#11544](https://github.com/BabylonJS/Babylon.js/issues/11544)) ([RaananW](https://github.com/RaananW))
 - Added ValueAndUnit change observable and Grid to listen for changes ([brianzinn](https://github.com/brianzinn))
+- Added `closeShape` and `closePath` as extra options parameters in `ExtrudeShape` and `ExtrudeShapeCustom` ([JohnK](https://github.com/BabylonJSGuide))
 
 ### Behaviors
 
@@ -219,6 +221,7 @@
 - Allow customizing the selection and laser point meshes of the pointer selection feature ([#11487](https://github.com/BabylonJS/Babylon.js/issues/11487)) ([RaananW](https://github.com/RaananW))
 - Add the `WebXRLayers` feature to support rendering to an `XRProjectionLayer` ([#10588](https://github.com/BabylonJS/Babylon.js/issues/10588)) ([rgerd](https://github.com/rgerd))
 - Introduced a new opt-in property to `Gui3DManager`, `useRealisticScaling`, that will automatically scale 3D GUI components like buttons to MRTK standards for better sizing in XR experiences. ([rickfromwork](https://github.com/rickfromwork))
+- Add `NativeXRPlugin` and `NativeXRFrame` to improve XR performance on BabylonNative ([rgerd](https://github.com/rgerd))
 
 ### Gizmos
 
@@ -251,6 +254,9 @@
 
 ## Bugs
 
+- Fix serialization and parsing of `textBlock` and `image` for `Button` class ([BlakeOne](https://github.com/BlakeOne))
+- Fix for `AdvancedTimer` ignoring `timeout` option ([BlakeOne](https://github.com/BlakeOne))
+- Fix issue when `AssetContainer` is added to `Scene` multiple times ([BlakeOne](https://github.com/BlakeOne))
 - Fix issue when `ParticleSystem` is disposed before `_subEmitters` is created ([BlakeOne](https://github.com/BlakeOne))
 - Fix incorrect GUI.TextBlock width when resizeToFit is true & fontStyle is italic ([Kalkut](https://github.com/Kalkut))
 - Fix CubeTexture extension detection when rootUrl has a query string ([civa86](https://github.com/civa86))
@@ -355,6 +361,7 @@
 - Fix issue with setParent and meshes with a pivot ([RaananW](https://github.com/RaananW))
 - Fix Button3D, HolographicButton, TouchHolographicButton and HolographicSlate content when scene is right-handed ([carolhmj](https://github.com/carolhmj))
 - Fix get attachedNode always return null for `PositionGizmo` ([jtcheng](https://github.com/jtcheng))
+- Fix Screen Space Reflections for right-handed scenes ([carolhmj](https://github.com/carolhmj))
 
 ## Breaking changes
 
