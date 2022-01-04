@@ -124,6 +124,7 @@
 
 ### Inspector
 
+- Added support for parsing files saved from ACE to `Animation.ParseFromFileAsync` ([BlakeOne](https://github.com/BlakeOne))
 - Increased float precision to 4 ([msDestiny14](https://github.com/msDestiny14))
 - Added support for sounds in the inspector ([Deltakosh](https://github.com/deltakosh))
 - Added a debug option to show the frustum of a directional light ([Popov72](https://github.com/Popov72))
@@ -362,6 +363,7 @@
 - Fix Button3D, HolographicButton, TouchHolographicButton and HolographicSlate content when scene is right-handed ([carolhmj](https://github.com/carolhmj))
 - Fix get attachedNode always return null for `PositionGizmo` ([jtcheng](https://github.com/jtcheng))
 - Fix Screen Space Reflections for right-handed scenes ([carolhmj](https://github.com/carolhmj))
+- Fix FreeCameraTouchInput roation when moving ([m1911star](https://github.com/m1911star))
 
 ## Breaking changes
 
