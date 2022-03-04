@@ -16,7 +16,7 @@ import { Matrix2D, Vector2WithInfo } from "../math2D";
 import { RegisterClass } from "babylonjs/Misc/typeStore";
 import { SerializationHelper, serialize } from "babylonjs/Misc/decorators";
 import { ICanvasRenderingContext } from "babylonjs/Engines/ICanvas";
-import { Engine } from "babylonjs/Engines/engine";
+import { EngineStore } from "babylonjs/Engines/engineStore";
 
 /**
  * Root class used for all 2D controls
@@ -1122,8 +1122,24 @@ export class Control {
 
         this._isEnabled = value;
         this._markAsDirty();
+        // if this control or any of it's descendants are under a pointer, we need to fire a pointerOut event
+        const recursivelyFirePointerOut = (control: Control) => {
+            if (!control.host) {
+                return;
+            }
+            for (const pointer in control.host._lastControlOver) {
+                if (control === this.host._lastControlOver[pointer]) {
+                    control._onPointerOut(control, null, true);
+                    delete control.host._lastControlOver[pointer];
+                }
+            }
+            if ((control as Container).children !== undefined) {
+                (control as Container).children.forEach(recursivelyFirePointerOut);
+            }
+        };
+        recursivelyFirePointerOut(this);
     }
-    /** Gets or sets background color of control if it's disabled */
+    /** Gets or sets background color of control if it's disabled. Only applies to Button class. */
     @serialize()
     public get disabledColor(): string {
         return this._disabledColor;
@@ -1137,7 +1153,7 @@ export class Control {
         this._disabledColor = value;
         this._markAsDirty();
     }
-    /** Gets or sets front color of control if it's disabled */
+    /** Gets or sets front color of control if it's disabled. Only applies to Checkbox class. */
     @serialize()
     public get disabledColorItem(): string {
         return this._disabledColorItem;
@@ -1197,6 +1213,21 @@ export class Control {
         }
 
         return this.parent.getAscendantOfClass(className);
+    }
+
+    /**
+     * Mark control element as dirty
+     * @param force force non visible elements to be marked too
+     */
+    public markAsDirty(force: false): void {
+        this._markAsDirty(force);
+    }
+
+    /**
+     * Mark the element and its children as dirty
+     */
+    public markAllAsDirty(): void {
+        this._markAllAsDirty();
     }
 
     /** @hidden */
@@ -1386,11 +1417,9 @@ export class Control {
         let oldLeft = this._left.getValue(this._host);
         let oldTop = this._top.getValue(this._host);
 
-        if (this._currentMeasure.width === 0 && this._currentMeasure.height === 0) {
-            let parentMeasure = this.parent?._currentMeasure;
-            if (parentMeasure) {
-                this._processMeasures(parentMeasure, this._host.getContext());
-            }
+        let parentMeasure = this.parent?._currentMeasure;
+        if (parentMeasure) {
+            this._processMeasures(parentMeasure, this._host.getContext());
         }
 
         var newLeft = projectedPosition.x + this._linkOffsetX.getValue(this._host) - this._currentMeasure.width / 2;
@@ -1438,22 +1467,22 @@ export class Control {
     }
 
     /** @hidden */
-    public _intersectsRect(rect: Measure) {
-        // Rotate the control's current measure into local space and check if it intersects the passed in rectangle
-        this._currentMeasure.transformToRef(this._transformMatrix, this._tmpMeasureA);
-        if (this._tmpMeasureA.left >= rect.left + rect.width) {
+    public _intersectsRect(rect: Measure, context?: ICanvasRenderingContext) {
+        // make sure we are transformed correctly before checking intersections. no-op if nothing is dirty.
+        this._transform(context);
+        if (this._evaluatedMeasure.left >= rect.left + rect.width) {
             return false;
         }
 
-        if (this._tmpMeasureA.top >= rect.top + rect.height) {
+        if (this._evaluatedMeasure.top >= rect.top + rect.height) {
             return false;
         }
 
-        if (this._tmpMeasureA.left + this._tmpMeasureA.width <= rect.left) {
+        if (this._evaluatedMeasure.left + this._evaluatedMeasure.width <= rect.left) {
             return false;
         }
 
-        if (this._tmpMeasureA.top + this._tmpMeasureA.height <= rect.top) {
+        if (this._evaluatedMeasure.top + this._evaluatedMeasure.height <= rect.top) {
             return false;
         }
 
@@ -1509,6 +1538,7 @@ export class Control {
         }
 
         this._isDirty = true;
+        this._markMatrixAsDirty();
 
         // Redraw only this rectangle
         if (this._host) {
@@ -1564,6 +1594,7 @@ export class Control {
             Matrix2D.ComposeToRef(-offsetX, -offsetY, this._rotation, this._scaleX, this._scaleY, this.parent ? this.parent._transformMatrix : null, this._transformMatrix);
 
             this._transformMatrix.invertToRef(this._invertTransformMatrix);
+            this._currentMeasure.transformToRef(this._transformMatrix, this._evaluatedMeasure);
         }
     }
 
@@ -1976,7 +2007,7 @@ export class Control {
     }
 
     /** @hidden */
-    public _processPicking(x: number, y: number, pi: PointerInfoBase, type: number, pointerId: number, buttonIndex: number, deltaX?: number, deltaY?: number): boolean {
+    public _processPicking(x: number, y: number, pi: Nullable<PointerInfoBase>, type: number, pointerId: number, buttonIndex: number, deltaX?: number, deltaY?: number): boolean {
         if (!this._isEnabled) {
             return false;
         }
@@ -1994,7 +2025,7 @@ export class Control {
     }
 
     /** @hidden */
-    public _onPointerMove(target: Control, coordinates: Vector2, pointerId: number, pi: PointerInfoBase): void {
+    public _onPointerMove(target: Control, coordinates: Vector2, pointerId: number, pi: Nullable<PointerInfoBase>): void {
         var canNotify: boolean = this.onPointerMoveObservable.notifyObservers(coordinates, -1, target, this, pi);
 
         if (canNotify && this.parent != null) {
@@ -2003,7 +2034,7 @@ export class Control {
     }
 
     /** @hidden */
-    public _onPointerEnter(target: Control, pi: PointerInfoBase): boolean {
+    public _onPointerEnter(target: Control, pi: Nullable<PointerInfoBase>): boolean {
         if (!this._isEnabled) {
             return false;
         }
@@ -2045,7 +2076,7 @@ export class Control {
     }
 
     /** @hidden */
-    public _onPointerDown(target: Control, coordinates: Vector2, pointerId: number, buttonIndex: number, pi: PointerInfoBase): boolean {
+    public _onPointerDown(target: Control, coordinates: Vector2, pointerId: number, buttonIndex: number, pi: Nullable<PointerInfoBase>): boolean {
         // Prevent pointerout to lose control context.
         // Event redundancy is checked inside the function.
         this._onPointerEnter(this, pi);
@@ -2068,7 +2099,7 @@ export class Control {
     }
 
     /** @hidden */
-    public _onPointerUp(target: Control, coordinates: Vector2, pointerId: number, buttonIndex: number, notifyClick: boolean, pi?: PointerInfoBase): void {
+    public _onPointerUp(target: Control, coordinates: Vector2, pointerId: number, buttonIndex: number, notifyClick: boolean, pi?: Nullable<PointerInfoBase>): void {
         if (!this._isEnabled) {
             return;
         }
@@ -2114,7 +2145,7 @@ export class Control {
     public _onCanvasBlur(): void { }
 
     /** @hidden */
-    public _processObservables(type: number, x: number, y: number, pi: PointerInfoBase, pointerId: number, buttonIndex: number, deltaX?: number, deltaY?: number): boolean {
+    public _processObservables(type: number, x: number, y: number, pi: Nullable<PointerInfoBase>, pointerId: number, buttonIndex: number, deltaX?: number, deltaY?: number): boolean {
         if (!this._isEnabled) {
             return false;
         }
@@ -2295,7 +2326,7 @@ export class Control {
             return Control._FontHeightSizes[font];
         }
 
-        const engine = Engine.LastCreatedEngine;
+        const engine = EngineStore.LastCreatedEngine;
         if (!engine) {
             throw new Error("Invalid engine. Unable to create a canvas.");
         }

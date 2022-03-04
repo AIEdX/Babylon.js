@@ -170,6 +170,7 @@ export class PBRMaterialDefines extends MaterialDefines
 
     public INSTANCES = false;
     public THIN_INSTANCES = false;
+    public INSTANCESCOLOR = false;
 
     public PREPASS = false;
     public PREPASS_IRRADIANCE = false;
@@ -887,7 +888,7 @@ export abstract class PBRBaseMaterial extends PushMaterial {
      * @param name The material name
      * @param scene The scene the material will be use in.
      */
-    constructor(name: string, scene: Scene) {
+    constructor(name: string, scene?: Scene) {
         super(name, scene);
 
         this.brdf = new PBRBRDFConfiguration(this);
@@ -913,7 +914,7 @@ export abstract class PBRBaseMaterial extends PushMaterial {
             return this._renderTargets;
         };
 
-        this._environmentBRDFTexture = GetEnvironmentBRDFTexture(scene);
+        this._environmentBRDFTexture = GetEnvironmentBRDFTexture(this.getScene());
         this.prePassConfiguration = new PrePassConfiguration();
     }
 
@@ -1359,6 +1360,7 @@ export abstract class PBRBaseMaterial extends PushMaterial {
         this._eventInfo.defines = defines;
         this._eventInfo.uniforms = uniforms;
         this._eventInfo.samplers = samplers;
+        this._eventInfo.uniformBuffersNames = uniformBuffers;
         this._eventInfo.customCode = undefined;
         this._callbackPluginEventGeneric(MaterialPluginEvent.PrepareEffect, this._eventInfo);
 

@@ -1,26 +1,29 @@
-import { AbstractMesh } from "babylonjs/Meshes/abstractMesh";
-import { Scene } from "babylonjs/scene";
-import { TransformNode } from "babylonjs/Meshes/transformNode";
-import { CreateBox } from "babylonjs/Meshes/Builders/boxBuilder";
-import { Mesh } from "babylonjs/Meshes/mesh";
-import { FluentMaterial } from "../materials/fluent/fluentMaterial";
-import { TouchHolographicButton } from "./touchHolographicButton";
-import { Nullable } from "babylonjs/types";
-import { Observer } from "babylonjs/Misc/observable";
-import { Matrix, Quaternion, Vector2, Vector3 } from "babylonjs/Maths/math.vector";
-import { Control3D } from "./control3D";
 import { ContentDisplay3D } from "./contentDisplay3D";
+import { Control3D } from "./control3D";
+import { TouchHolographicButton } from "./touchHolographicButton";
 import { AdvancedDynamicTexture } from "../../2D/advancedDynamicTexture";
-import { Image } from "../../2D/controls/image";
-import { SlateGizmo } from "../gizmos/slateGizmo";
+import { Control } from "../../2D/controls/control";
+import { TextBlock, TextWrapping } from "../../2D/controls/textBlock";
 import { DefaultBehavior } from "../behaviors/defaultBehavior";
-import { Viewport } from "babylonjs/Maths/math.viewport";
-import { PointerDragBehavior } from "babylonjs/Behaviors/Meshes/pointerDragBehavior";
-import { Scalar } from "babylonjs/Maths/math.scalar";
-import { Texture } from "babylonjs/Materials/Textures/texture";
+import { SlateGizmo } from "../gizmos/slateGizmo";
+import { FluentMaterial } from "../materials/fluent/fluentMaterial";
 import { FluentBackplateMaterial } from "../materials/fluentBackplate/fluentBackplateMaterial";
-import { DomManagement } from "babylonjs/Misc/domManagement";
+import { PointerDragBehavior } from "babylonjs/Behaviors/Meshes/pointerDragBehavior";
+import { Texture } from "babylonjs/Materials/Textures/texture";
 import { Vector4 } from "babylonjs/Maths/math";
+import { Epsilon } from "babylonjs/Maths/math.constants";
+import { Scalar } from "babylonjs/Maths/math.scalar";
+import { Matrix, Quaternion, Vector2, Vector3 } from "babylonjs/Maths/math.vector";
+import { Viewport } from "babylonjs/Maths/math.viewport";
+import { AbstractMesh } from "babylonjs/Meshes/abstractMesh";
+import { CreateBox } from "babylonjs/Meshes/Builders/boxBuilder";
+import { CreatePlane } from "babylonjs/Meshes/Builders/planeBuilder";
+import { TransformNode } from "babylonjs/Meshes/transformNode";
+import { Mesh } from "babylonjs/Meshes/mesh";
+import { VertexData } from "babylonjs/Meshes/mesh.vertexData";
+import { Observer } from "babylonjs/Misc/observable";
+import { Scene } from "babylonjs/scene";
+import { Nullable } from "babylonjs/types";
 
 /**
  * Class used to create a holographic slate
@@ -40,41 +43,29 @@ export class HolographicSlate extends ContentDisplay3D {
      */
     public static FOLLOW_ICON_FILENAME: string = "IconFollowMe.png";
 
-    /**
-     * Dimensions of the slate
-     */
-    public dimensions = new Vector3(21.875, 12.5, 0.001);
+    private static DEFAULT_TEXT_RESOLUTION_Y = 102.4;
 
     /**
-     * Minimum dimensions of the slate
+     * Margin between title bar and contentplate
      */
-    public minDimensions = new Vector3(15.625, 6.25, 0.001);
-
-    /**
-     * Default dimensions of the slate
-     */
-    public readonly defaultDimensions = this.dimensions.clone();
-
-    /**
-     * Dimensions of the backplate
-     */
-    public backplateDimensions = new Vector3(21.875, 0.625, 0.001);
-
-    /**
-     * Margin between backplate and contentplate
-     */
-    public backPlateMargin = 0.005;
+    public titleBarMargin = 0.005;
 
     /**
      * Origin in local coordinates (top left corner)
      */
     public origin = new Vector3(0, 0, 0);
 
-    private _backPlateMaterial: FluentBackplateMaterial;
+    private _dimensions = new Vector2(21.875, 12.5);
+    private _titleBarHeight = 0.625;
+
+    private _titleBarMaterial: FluentBackplateMaterial;
+    private _backMaterial: FluentBackplateMaterial;
     private _contentMaterial: FluentMaterial;
     private _pickedPointObserver: Nullable<Observer<Nullable<Vector3>>>;
     private _positionChangedObserver: Nullable<Observer<{ position: Vector3 }>>;
-    private _imageUrl: string;
+
+    private _titleText = "";
+    private _titleTextComponent: TextBlock;
 
     private _contentViewport: Viewport;
     private _contentDragBehavior: PointerDragBehavior;
@@ -90,39 +81,86 @@ export class HolographicSlate extends ContentDisplay3D {
     /** @hidden */
     public _gizmo: SlateGizmo;
 
-    protected _backPlate: Mesh;
+    protected _titleBar: Mesh;
+    protected _titleBarTitle: Mesh;
     protected _contentPlate: Mesh;
-    protected _followButton: TouchHolographicButton;
+    protected _backPlate: Mesh;
+    /** @hidden */
+    public _followButton: TouchHolographicButton;
     protected _closeButton: TouchHolographicButton;
     protected _contentScaleRatio = 1;
 
     /**
-     * Rendering ground id of all the mesh in the button
+     * 2D dimensions of the slate
      */
-    public set renderingGroupId(id: number) {
-        this._backPlate.renderingGroupId = id;
-        this._contentPlate.renderingGroupId = id;
+    public get dimensions() {
+        return this._dimensions;
     }
-    public get renderingGroupId(): number {
-        return this._backPlate.renderingGroupId;
+    public set dimensions(value) {
+        //clamp, respecting ratios
+        let scale = 1.0;
+        if (value.x < this.minDimensions.x || value.y < this.minDimensions.y) {
+            const newRatio = value.x / value.y;
+            const minRatio = this.minDimensions.x / this.minDimensions.y;
+            if (minRatio > newRatio) {
+                // We just need to make sure the x-val is greater than the min
+                scale = this.minDimensions.x / value.x;
+            }
+            else {
+                // We just need to make sure the y-val is greater than the min
+                scale = this.minDimensions.y / value.y;
+            }
+        }
+
+        this._dimensions.copyFrom(value).scaleInPlace(scale);
+        this._updatePivot();
+        this._positionElements();
     }
 
     /**
-     * Gets or sets the image url for the button
+     * Minimum dimensions of the slate
      */
-    public get imageUrl(): string {
-        return this._imageUrl;
+    public minDimensions = new Vector2(15.625, 6.25);
+
+    /**
+     * Default dimensions of the slate
+     */
+    public readonly defaultDimensions = this._dimensions.clone();
+
+    /**
+     * Height of the title bar component
+     */
+    public get titleBarHeight() {
+        return this._titleBarHeight;
+    }
+    public set titleBarHeight(value) {
+        this._titleBarHeight = value;
     }
 
-    public set imageUrl(value: string) {
-        if (this._imageUrl === value) {
-            return;
-        }
+    /**
+     * Rendering ground id of all the meshes
+     */
+    public set renderingGroupId(id: number) {
+        this._titleBar.renderingGroupId = id;
+        this._titleBarTitle.renderingGroupId = id;
+        this._contentPlate.renderingGroupId = id;
+        this._backPlate.renderingGroupId = id;
+    }
+    public get renderingGroupId(): number {
+        return this._titleBar.renderingGroupId;
+    }
 
-        this._imageUrl = value;
-        this._rebuildContent();
-        this._resetContentPositionAndZoom();
-        this._applyContentViewport();
+    /**
+     * The title text displayed at the top of the slate
+     */
+    public set title(title: string) {
+        this._titleText = title;
+        if (this._titleTextComponent) {
+            this._titleTextComponent.text = title;
+        }
+    }
+    public get title() {
+        return this._titleText;
     }
 
     /**
@@ -133,6 +171,7 @@ export class HolographicSlate extends ContentDisplay3D {
         super(name);
 
         this._followButton = new TouchHolographicButton("followButton" + this.name);
+        this._followButton.isToggleButton = true;
         this._closeButton = new TouchHolographicButton("closeButton" + this.name);
 
         this._contentViewport = new Viewport(0, 0, 1, 1);
@@ -148,21 +187,10 @@ export class HolographicSlate extends ContentDisplay3D {
      */
     protected _applyFacade(facadeTexture: AdvancedDynamicTexture) {
         this._contentMaterial.albedoTexture = facadeTexture;
-    }
+        this._resetContentPositionAndZoom();
+        this._applyContentViewport();
 
-    private _rebuildContent(): void {
-        this._disposeFacadeTexture();
-
-        if (DomManagement.IsDocumentAvailable() && !!document.createElement) {
-            if (this._imageUrl) {
-                let image = new Image();
-                image.source = this._imageUrl;
-
-                if (this._contentPlate) {
-                    this.content = image;
-                }
-            }
-        }
+        facadeTexture.attachToMesh(this._contentPlate, true);
     }
 
     private _addControl(control: Control3D): void {
@@ -180,51 +208,60 @@ export class HolographicSlate extends ContentDisplay3D {
      * @hidden
      */
     public _positionElements() {
-        const followButtonMesh = this._followButton.mesh;
-        const closeButtonMesh = this._closeButton.mesh;
-        const backPlate = this._backPlate;
+        const followButton = this._followButton;
+        const closeButton = this._closeButton;
+        const titleBar = this._titleBar;
+        const titleBarTitle = this._titleBarTitle;
         const contentPlate = this._contentPlate;
+        const backPlate = this._backPlate;
 
-        if (followButtonMesh && closeButtonMesh && backPlate) {
-            // World size of a button with 1 scaling
-            const buttonBaseSize = 1;
-
-            // Buttons take full backPlate on Y axis
-            const backPlateYScale = this.backplateDimensions.y / buttonBaseSize;
-
-            closeButtonMesh.scaling.setAll(backPlateYScale);
-            followButtonMesh.scaling.setAll(backPlateYScale);
-            closeButtonMesh.position
+        if (followButton && closeButton && titleBar) {
+            closeButton.scaling.setAll(this.titleBarHeight);
+            followButton.scaling.setAll(this.titleBarHeight);
+            closeButton.position
                 .copyFromFloats(
-                    this.backplateDimensions.x - backPlateYScale / 2,
-                    -this.backplateDimensions.y / 2,
-                    (-this.backplateDimensions.z / 2) * (this._host.scene.useRightHandedSystem ? -1 : 1)
+                    this.dimensions.x - this.titleBarHeight / 2,
+                    -this.titleBarHeight / 2,
+                    0
                 )
                 .addInPlace(this.origin);
-            followButtonMesh.position
+            followButton.position
                 .copyFromFloats(
-                    this.backplateDimensions.x - (3 * backPlateYScale) / 2,
-                    -this.backplateDimensions.y / 2,
-                    (-this.backplateDimensions.z / 2) * (this._host.scene.useRightHandedSystem ? -1 : 1)
+                    this.dimensions.x - (3 * this.titleBarHeight) / 2,
+                    -this.titleBarHeight / 2,
+                    0
                 )
                 .addInPlace(this.origin);
 
-            const contentPlateHeight = this.dimensions.y - this.backplateDimensions.y - this.backPlateMargin;
-            backPlate.scaling.copyFrom(this.backplateDimensions);
-            contentPlate.scaling.copyFromFloats(this.dimensions.x, contentPlateHeight, this.dimensions.z);
-            backPlate.position.copyFromFloats(this.backplateDimensions.x / 2, -(this.backplateDimensions.y / 2), 0).addInPlace(this.origin);
-            contentPlate.position.copyFromFloats(this.dimensions.x / 2, -(this.backplateDimensions.y + this.backPlateMargin + contentPlateHeight / 2), 0).addInPlace(this.origin);
+            const contentPlateHeight = this.dimensions.y - this.titleBarHeight - this.titleBarMargin;
+            const rightHandScene = contentPlate.getScene().useRightHandedSystem;
+
+            titleBar.scaling.set(this.dimensions.x, this.titleBarHeight, Epsilon);
+            titleBarTitle.scaling.set(this.dimensions.x - (2 * this.titleBarHeight), this.titleBarHeight, Epsilon);
+            contentPlate.scaling.copyFromFloats(this.dimensions.x, contentPlateHeight, Epsilon);
+            backPlate.scaling.copyFromFloats(this.dimensions.x, contentPlateHeight, Epsilon);
+
+            titleBar.position.copyFromFloats(this.dimensions.x / 2, -(this.titleBarHeight / 2), 0).addInPlace(this.origin);
+            titleBarTitle.position.copyFromFloats((this.dimensions.x / 2) - this.titleBarHeight, -(this.titleBarHeight / 2), rightHandScene ? Epsilon : -Epsilon).addInPlace(this.origin);
+            contentPlate.position.copyFromFloats(this.dimensions.x / 2, -(this.titleBarHeight + this.titleBarMargin + contentPlateHeight / 2), 0).addInPlace(this.origin);
+            backPlate.position.copyFromFloats(this.dimensions.x / 2, -(this.titleBarHeight + this.titleBarMargin + contentPlateHeight / 2), rightHandScene ? -Epsilon : Epsilon).addInPlace(this.origin);
+
+            // Update the title's AdvancedDynamicTexture scale to avoid visual stretching
+            this._titleTextComponent.host.scaleTo(HolographicSlate.DEFAULT_TEXT_RESOLUTION_Y * titleBarTitle.scaling.x / titleBarTitle.scaling.y, HolographicSlate.DEFAULT_TEXT_RESOLUTION_Y);
 
             const aspectRatio = this.dimensions.x / contentPlateHeight;
             this._contentViewport.width = this._contentScaleRatio;
             this._contentViewport.height = this._contentScaleRatio / aspectRatio;
 
             this._applyContentViewport();
+            if (this._gizmo) {
+                this._gizmo.updateBoundingBox();
+            }
         }
     }
 
     private _applyContentViewport() {
-        if (this._contentPlate.material && (this._contentPlate.material as FluentMaterial).albedoTexture) {
+        if (this._contentPlate?.material && (this._contentPlate.material as FluentMaterial).albedoTexture) {
             const tex = (this._contentPlate.material as FluentMaterial).albedoTexture as Texture;
             tex.uScale = this._contentScaleRatio;
             tex.vScale = (this._contentScaleRatio / this._contentViewport.width) * this._contentViewport.height;
@@ -248,9 +285,8 @@ export class HolographicSlate extends ContentDisplay3D {
         }
 
         // Update pivot point so it is at the center of geometry
-        const center = this.dimensions.scale(0.5);
         // As origin is topleft corner in 2D, dimensions are calculated towards bottom right corner, thus y axis is downwards
-        center.y *= -1;
+        const center = new Vector3(this.dimensions.x * 0.5, -this.dimensions.y * 0.5, Epsilon);
         center.addInPlace(this.origin);
         center.z = 0;
 
@@ -264,27 +300,47 @@ export class HolographicSlate extends ContentDisplay3D {
 
     // Mesh association
     protected _createNode(scene: Scene): TransformNode {
-        const node = new Mesh("slate" + this.name, scene);
+        const node = new Mesh("slate_" + this.name, scene);
 
-        this._backPlate = CreateBox("backPlate" + this.name, { size: 1 }, scene);
-        const faceUV = new Array(6).fill(new Vector4(0, 0, 1, 1));
+        this._titleBar = CreateBox("titleBar_" + this.name, { size: 1 }, scene);
+        this._titleBarTitle = CreatePlane("titleText_" + this.name, { size: 1 }, scene);
+        this._titleBarTitle.parent = node;
+        this._titleBarTitle.isPickable = false;
+
+        var adt = AdvancedDynamicTexture.CreateForMesh(this._titleBarTitle);
+        this._titleTextComponent = new TextBlock("titleText_" + this.name, this._titleText);
+        this._titleTextComponent.textWrapping = TextWrapping.Ellipsis;
+        this._titleTextComponent.textHorizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
+        this._titleTextComponent.color = "white";
+        this._titleTextComponent.fontSize = HolographicSlate.DEFAULT_TEXT_RESOLUTION_Y / 2;
+        this._titleTextComponent.paddingLeft = HolographicSlate.DEFAULT_TEXT_RESOLUTION_Y / 4;
+        adt.addControl(this._titleTextComponent);
+
         if (scene.useRightHandedSystem) {
-            faceUV[0].copyFromFloats(0, 1, 1, 0);
+            const faceUV = new Vector4(0, 0, 1, 1);
+            this._contentPlate = CreatePlane("contentPlate_" + this.name, { size: 1, sideOrientation: VertexData.BACKSIDE, frontUVs: faceUV }, scene);
+            this._backPlate = CreatePlane("backPlate_" + this.name, { size: 1, sideOrientation: VertexData.FRONTSIDE }, scene);
         }
-        this._contentPlate = CreateBox("contentPlate" + this.name, { size: 1, faceUV }, scene);
+        else {
+            const faceUV = new Vector4(0, 0, 1, 1);
+            this._contentPlate = CreatePlane("contentPlate_" + this.name, { size: 1, sideOrientation: VertexData.FRONTSIDE, frontUVs: faceUV }, scene);
+            this._backPlate = CreatePlane("backPlate_" + this.name, { size: 1, sideOrientation: VertexData.BACKSIDE }, scene);
+        }
 
-        this._backPlate.parent = node;
-        this._backPlate.isNearGrabbable = true;
+        this._titleBar.parent = node;
+        this._titleBar.isNearGrabbable = true;
         this._contentPlate.parent = node;
+        this._backPlate.parent = node;
         this._attachContentPlateBehavior();
 
         this._addControl(this._followButton);
         this._addControl(this._closeButton);
 
-        const followButtonMesh = this._followButton.mesh!;
-        const closeButtonMesh = this._closeButton.mesh!;
-        followButtonMesh.parent = node;
-        closeButtonMesh.parent = node;
+        const followButton = this._followButton;
+        const closeButton = this._closeButton;
+
+        followButton.node!.parent = node;
+        closeButton.node!.parent = node;
 
         this._positionElements();
 
@@ -294,8 +350,8 @@ export class HolographicSlate extends ContentDisplay3D {
         this._followButton.isBackplateVisible = false;
         this._closeButton.isBackplateVisible = false;
 
-        this._followButton.onPointerClickObservable.add(() => {
-            this._defaultBehavior.followBehaviorEnabled = !this._defaultBehavior.followBehaviorEnabled;
+        this._followButton.onToggleObservable.add((isToggled) => {
+            this._defaultBehavior.followBehaviorEnabled = isToggled;
             if (this._defaultBehavior.followBehaviorEnabled) {
                 this._defaultBehavior.followBehavior.recenter();
             }
@@ -333,8 +389,8 @@ export class HolographicSlate extends ContentDisplay3D {
             worldMatrix = this.node.computeWorldMatrix(true);
 
             origin.copyFrom(event.dragPlanePoint);
-            worldDimensions.copyFrom(this.dimensions);
-            worldDimensions.y -= this.backplateDimensions.y + this.backPlateMargin;
+            worldDimensions.set(this.dimensions.x, this.dimensions.y, Epsilon);
+            worldDimensions.y -= this.titleBarHeight + this.titleBarMargin;
             Vector3.TransformNormalToRef(worldDimensions, worldMatrix, worldDimensions);
             upWorld.copyFromFloats(0, 1, 0);
             Vector3.TransformNormalToRef(upWorld, worldMatrix, upWorld);
@@ -361,24 +417,21 @@ export class HolographicSlate extends ContentDisplay3D {
 
     protected _affectMaterial(mesh: AbstractMesh) {
         // TODO share materials
-        this._backPlateMaterial = new FluentBackplateMaterial(`${this.name} plateMaterial`, mesh.getScene());
+        this._titleBarMaterial = new FluentBackplateMaterial(`${this.name} plateMaterial`, mesh.getScene());
 
-        this._pickedPointObserver = this._host.onPickedPointChangedObservable.add((pickedPoint) => {
-            // if (pickedPoint) {
-            //     this._backPlateMaterial. = pickedPoint;
-            //     this._backPlateMaterial.hoverColor.a = 1.0;
-            // } else {
-            //     this._backPlateMaterial.hoverColor.a = 0;
-            // }
-        });
-
-        this._contentMaterial = new FluentMaterial(this.name + "contentMaterial", mesh.getScene());
+        this._contentMaterial = new FluentMaterial(`${this.name} contentMaterial`, mesh.getScene());
         this._contentMaterial.renderBorders = true;
 
-        this._backPlate.material = this._backPlateMaterial;
-        this._contentPlate.material = this._contentMaterial;
+        this._backMaterial = new FluentBackplateMaterial(`${this.name} backPlate`, mesh.getScene());
+        this._backMaterial.lineWidth = Epsilon;
+        this._backMaterial.radius = 0.005;
+        this._backMaterial.backFaceCulling = true;
 
-        this._rebuildContent();
+        this._titleBar.material = this._titleBarMaterial;
+        this._contentPlate.material = this._contentMaterial;
+        this._backPlate.material = this._backMaterial;
+
+        this._resetContent();
         this._applyContentViewport();
     }
 
@@ -388,20 +441,24 @@ export class HolographicSlate extends ContentDisplay3D {
         this._gizmo = new SlateGizmo(this._host.utilityLayer!);
         this._gizmo.attachedSlate = this;
         this._defaultBehavior = new DefaultBehavior();
-        this._defaultBehavior.attach(this.node as Mesh, [this._backPlate]);
+        this._defaultBehavior.attach(this.node as Mesh, [this._titleBar]);
+        this._defaultBehavior.sixDofDragBehavior.onDragStartObservable.add(() => {
+            this._followButton.isToggled = false;
+        });
 
         this._positionChangedObserver = this._defaultBehavior.sixDofDragBehavior.onPositionChangedObservable.add(() => {
             this._gizmo.updateBoundingBox();
         });
 
         this._updatePivot();
-        this.resetDefaultAspectAndPose();
+        this.resetDefaultAspectAndPose(false);
     }
 
     /**
      * Resets the aspect and pose of the slate so it is right in front of the active camera, facing towards it.
+     * @param resetAspect Should the slate's dimensions/aspect ratio be reset as well
      */
-    public resetDefaultAspectAndPose() {
+    public resetDefaultAspectAndPose(resetAspect: boolean = true) {
         if (!this._host || !this._host.utilityLayer || !this.node) {
             return;
         }
@@ -410,12 +467,15 @@ export class HolographicSlate extends ContentDisplay3D {
         if (camera) {
             const worldMatrix = camera.getWorldMatrix();
             const backward = Vector3.TransformNormal(Vector3.Backward(scene.useRightHandedSystem), worldMatrix);
-            this.dimensions.copyFrom(this.defaultDimensions);
             this.origin.setAll(0);
             this._gizmo.updateBoundingBox();
             const pivot = this.node.getAbsolutePivotPoint();
             this.node.position.copyFrom(camera.position).subtractInPlace(backward).subtractInPlace(pivot);
             this.node.rotationQuaternion = Quaternion.FromLookDirectionLH(backward, new Vector3(0, 1, 0));
+
+            if (resetAspect) {
+                this.dimensions = this.defaultDimensions;
+            }
         }
     }
 
@@ -424,11 +484,13 @@ export class HolographicSlate extends ContentDisplay3D {
      */
     public dispose() {
         super.dispose();
-        this._backPlateMaterial.dispose();
+        this._titleBarMaterial.dispose();
         this._contentMaterial.dispose();
 
-        this._backPlate.dispose();
+        this._titleBar.dispose();
+        this._titleBarTitle.dispose();
         this._contentPlate.dispose();
+        this._backPlate.dispose();
 
         this._followButton.dispose();
         this._closeButton.dispose();

@@ -496,12 +496,16 @@ export class Container extends Control {
     }
 
     /** @hidden */
-    public _processPicking(x: number, y: number, pi: PointerInfoBase, type: number, pointerId: number, buttonIndex: number, deltaX?: number, deltaY?: number): boolean {
+    public _processPicking(x: number, y: number, pi: Nullable<PointerInfoBase>, type: number, pointerId: number, buttonIndex: number, deltaX?: number, deltaY?: number): boolean {
         if (!this._isEnabled || !this.isVisible || this.notRenderable) {
             return false;
         }
 
-        if (!super.contains(x, y)) {
+        // checks if the picking position is within the container
+        const contains = super.contains(x, y);
+
+        // if clipChildren is off, we should still pass picking events to children even if we don't contain the pointer
+        if (!contains && this.clipChildren) {
             return false;
         }
 
@@ -514,6 +518,10 @@ export class Container extends Control {
                 }
                 return true;
             }
+        }
+
+        if (!contains) {
+            return false;
         }
 
         if (!this.isHitTestVisible) {

@@ -60,3 +60,5 @@ export * from "./domManagement";
 export * from "./computePressure";
 export * from "./PerformanceViewer/index";
 export * from "./coroutine";
+export * from "./guid";
+export * from "./error";

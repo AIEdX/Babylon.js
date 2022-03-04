@@ -63,6 +63,7 @@ export class SliderLineComponent extends React.Component<ISliderLineComponentPro
     }
 
     onChange(newValueString: any) {
+        if (newValueString === "—") return;
         this._localChange = true;
         let newValue = parseFloat(newValueString);
 
@@ -136,7 +137,8 @@ export class SliderLineComponent extends React.Component<ISliderLineComponentPro
                         var changed = this.prepareDataToRead(this.state.value);
                         this.onChange(changed);
                     }}
-                ></FloatLineComponent>
+                    onPropertyChangedObservable={this.props.onPropertyChangedObservable}
+                />
                 <div className="slider">
                     <input
                         className="range"

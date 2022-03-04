@@ -99,6 +99,7 @@ export class StandardMaterialDefines extends MaterialDefines
     public BONES_VELOCITY_ENABLED = false;
     public INSTANCES = false;
     public THIN_INSTANCES = false;
+    public INSTANCESCOLOR = false;
     public GLOSSINESS = false;
     public ROUGHNESS = false;
     public EMISSIVEASILLUMINATION = false;
@@ -750,7 +751,7 @@ export class StandardMaterial extends PushMaterial {
      * @param name Define the name of the material in the scene
      * @param scene Define the scene the material belong to
      */
-    constructor(name: string, scene: Scene) {
+    constructor(name: string, scene?: Scene) {
         super(name, scene);
 
         this.detailMap = new DetailMapConfiguration(this);
@@ -1247,6 +1248,10 @@ export class StandardMaterial extends PushMaterial {
                 attribs.push(VertexBuffer.ColorKind);
             }
 
+            if (defines.INSTANCESCOLOR) {
+                attribs.push(VertexBuffer.ColorInstanceKind);
+            }
+
             MaterialHelper.PrepareAttributesForBones(attribs, mesh, defines, fallbacks);
             MaterialHelper.PrepareAttributesForInstances(attribs, defines);
             MaterialHelper.PrepareAttributesForMorphTargets(attribs, mesh, defines);
@@ -1277,6 +1282,7 @@ export class StandardMaterial extends PushMaterial {
             this._eventInfo.defines = defines;
             this._eventInfo.uniforms = uniforms;
             this._eventInfo.samplers = samplers;
+            this._eventInfo.uniformBuffersNames = uniformBuffers;
             this._eventInfo.customCode = undefined;
             this._callbackPluginEventGeneric(MaterialPluginEvent.PrepareEffect, this._eventInfo);
 
@@ -1858,18 +1864,6 @@ export class StandardMaterial extends PushMaterial {
         this.stencil.copyTo(result.stencil);
 
         return result;
-    }
-
-    /**
-     * Serializes this material in a JSON representation
-     * @returns the serialized material object
-     */
-    public serialize(): any {
-        const serializationObject = SerializationHelper.Serialize(this);
-
-        serializationObject.stencil = this.stencil.serialize();
-
-        return serializationObject;
     }
 
     /**

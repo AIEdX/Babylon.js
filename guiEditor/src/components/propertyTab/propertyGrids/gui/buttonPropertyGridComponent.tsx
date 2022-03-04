@@ -5,18 +5,18 @@ import { CommonControlPropertyGridComponent } from "../gui/commonControlProperty
 import { LockObject } from "../../../../sharedUiComponents/tabs/propertyGrids/lockObject";
 import { Rectangle } from "babylonjs-gui/2D/controls/rectangle";
 import { FloatLineComponent } from "../../../../sharedUiComponents/lines/floatLineComponent";
-import { CheckBoxLineComponent } from "../../../../sharedUiComponents/lines/checkBoxLineComponent";
 import { TextLineComponent } from "../../../../sharedUiComponents/lines/textLineComponent";
 import { CommandButtonComponent } from "../../../commandButtonComponent";
+import { makeTargetsProxy } from "../../../../sharedUiComponents/lines/targetsProxy";
+import { ContainerPropertyGridComponent } from "./containerPropertyGridComponent";
 
 const conerRadiusIcon: string = require("../../../../sharedUiComponents/imgs/conerRadiusIcon.svg");
-const clipContentsIcon: string = require("../../../../sharedUiComponents/imgs/clipContentsIcon.svg");
 const strokeWeightIcon: string = require("../../../../sharedUiComponents/imgs/strokeWeightIcon.svg");
 const addImageButtonIcon: string = require("../../../../sharedUiComponents/imgs/addImageButtonIcon.svg");
 const addTextButtonIcon: string = require("../../../../sharedUiComponents/imgs/addTextButtonIcon.svg");
 
 interface IButtonPropertyGridComponentProps {
-    rectangle: Rectangle;
+    rectangles: Rectangle[];
     lockObject: LockObject;
     onPropertyChangedObservable?: Observable<PropertyChangedEvent>;
     onAddComponent: (newComponent: string) => void;
@@ -28,41 +28,34 @@ export class ButtonPropertyGridComponent extends React.Component<IButtonProperty
     }
 
     render() {
-        const rectangle = this.props.rectangle;
+        const {rectangles, lockObject, onPropertyChangedObservable, onAddComponent} = this.props;
 
         return (
             <div className="pane">
-                <CommonControlPropertyGridComponent lockObject={this.props.lockObject} control={rectangle} onPropertyChangedObservable={this.props.onPropertyChangedObservable} />
+                <CommonControlPropertyGridComponent lockObject={lockObject} controls={rectangles} onPropertyChangedObservable={onPropertyChangedObservable} />
                 <hr />
                 <TextLineComponent label="RECTANGLE" value=" " color="grey"></TextLineComponent>
-                <CheckBoxLineComponent
-                    label="CLIP CONTENT"
-                    iconLabel="Clip Content"
-                    icon={clipContentsIcon}
-                    target={rectangle}
-                    propertyName="clipChildren"
-                    onPropertyChangedObservable={this.props.onPropertyChangedObservable}
-                />
                 <div className="ge-divider">
                     <FloatLineComponent
                         iconLabel="Stroke Weight"
                         icon={strokeWeightIcon}
-                        lockObject={this.props.lockObject}
+                        lockObject={lockObject}
                         label=""
-                        target={rectangle}
+                        target={makeTargetsProxy(rectangles, onPropertyChangedObservable)}
                         propertyName="thickness"
-                        onPropertyChangedObservable={this.props.onPropertyChangedObservable}
+                        onPropertyChangedObservable={onPropertyChangedObservable}
                     />
                     <FloatLineComponent
                         iconLabel="Corner Radius"
                         icon={conerRadiusIcon}
-                        lockObject={this.props.lockObject}
+                        lockObject={lockObject}
                         label=""
-                        target={rectangle}
+                        target={makeTargetsProxy(rectangles, onPropertyChangedObservable)}
                         propertyName="cornerRadius"
-                        onPropertyChangedObservable={this.props.onPropertyChangedObservable}
+                        onPropertyChangedObservable={onPropertyChangedObservable}
                     />
                 </div>
+                <ContainerPropertyGridComponent containers={rectangles} onPropertyChangedObservable={onPropertyChangedObservable}/>
                 <hr />
                 <TextLineComponent label="BUTTON" value=" " color="grey"></TextLineComponent>
                 <div className="ge-divider">
@@ -72,7 +65,7 @@ export class ButtonPropertyGridComponent extends React.Component<IButtonProperty
                         shortcut=""
                         isActive={false}
                         onClick={() => {
-                            this.props.onAddComponent("Text");
+                            onAddComponent("Text");
                         }}
                     />
                     <CommandButtonComponent
@@ -81,7 +74,7 @@ export class ButtonPropertyGridComponent extends React.Component<IButtonProperty
                         shortcut=""
                         isActive={false}
                         onClick={() => {
-                            this.props.onAddComponent("ButtonImage");
+                            onAddComponent("ButtonImage");
                         }}
                     />
                 </div>

@@ -196,7 +196,7 @@ var MTLFileLoader = /** @class */ (function () {
         }
         //Split the lines from the file
         var lines = data.split('\n');
-        //Space char
+        // whitespace char ie: [ \t\r\n\f]
         var delimiter_pattern = /\s+/;
         //Array with RGB colors
         var color;
@@ -294,7 +294,17 @@ var MTLFileLoader = /** @class */ (function () {
             }
             else if (key === "map_bump" && material) {
                 //The bump texture
-                material.bumpTexture = MTLFileLoader._getTexture(rootUrl, value, scene);
+                var values = value.split(delimiter_pattern);
+                var bumpMultiplierIndex = values.indexOf('-bm');
+                var bumpMultiplier = null;
+                if (bumpMultiplierIndex >= 0) {
+                    bumpMultiplier = values[bumpMultiplierIndex + 1];
+                    values.splice(bumpMultiplierIndex, 2); // remove
+                }
+                material.bumpTexture = MTLFileLoader._getTexture(rootUrl, values.join(' '), scene);
+                if (material.bumpTexture && bumpMultiplier !== null) {
+                    material.bumpTexture.level = parseFloat(bumpMultiplier);
+                }
             }
             else if (key === "map_d" && material) {
                 // The dissolve of the material
@@ -639,7 +649,7 @@ var OBJFileLoader = /** @class */ (function () {
                         resolve();
                     }
                     catch (e) {
-                        babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_0__["Tools"].Warn("Error processing MTL file: '" + fileToLoad + "'");
+                        babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_0__["Tools"].Warn("Error processing MTL file: '".concat(fileToLoad, "'"));
                         if (_this._loadingOptions.materialLoadingFailsSilently) {
                             resolve();
                         }
@@ -648,7 +658,7 @@ var OBJFileLoader = /** @class */ (function () {
                         }
                     }
                 }, function (pathOfFile, exception) {
-                    babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_0__["Tools"].Warn("Error downloading MTL file: '" + fileToLoad + "'");
+                    babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_0__["Tools"].Warn("Error downloading MTL file: '".concat(fileToLoad, "'"));
                     if (_this._loadingOptions.materialLoadingFailsSilently) {
                         resolve();
                     }

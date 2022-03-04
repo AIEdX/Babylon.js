@@ -8,7 +8,8 @@ import { AbstractMesh } from "../Meshes/abstractMesh";
 import { TransformNode } from "../Meshes/transformNode";
 import { Logger } from "../Misc/logger";
 import { _WarnImport } from "../Misc/devTools";
-import { ISoundOptions } from './Interfaces/ISoundOptions';
+import { ISoundOptions } from "./Interfaces/ISoundOptions";
+import { EngineStore } from "../Engines/engineStore";
 
 /**
  * Defines a sound that can be played in the application.
@@ -61,11 +62,6 @@ export class Sound {
      */
     public isPaused: boolean = false;
     /**
-     * Does this sound enables spatial sound.
-     * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
-     */
-    public spatialSound: boolean = false;
-    /**
      * Define the reference distance the sound should be heard perfectly.
      * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
      */
@@ -115,6 +111,24 @@ export class Sound {
         return currentTime;
     }
 
+    /**
+     * Does this sound enables spatial sound.
+     * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
+     */
+    public get spatialSound(): boolean {
+        return this._spatialSound;
+    }
+    /**
+     * Does this sound enables spatial sound.
+     * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
+     */
+    public set spatialSound(newValue: boolean) {
+        this._spatialSound = newValue;
+        if (this._spatialSound && Engine.audioEngine?.canUseWebAudio && Engine.audioEngine.audioContext) {
+            this._createSpatialParameters();
+        }
+    }
+    private _spatialSound: boolean = false;
     private _panningModel: string = "equalpower";
     private _playbackRate: number = 1;
     private _streaming: boolean = false;
@@ -161,8 +175,12 @@ export class Sound {
      * @param readyToPlayCallback Provide a callback function if you'd like to load your code once the sound is ready to be played
      * @param options Objects to provide with the current available options: autoplay, loop, volume, spatialSound, maxDistance, rolloffFactor, refDistance, distanceModel, panningModel, streaming
      */
-    constructor(name: string, urlOrArrayBuffer: any, scene: Scene, readyToPlayCallback: Nullable<() => void> = null, options?: ISoundOptions) {
+    constructor(name: string, urlOrArrayBuffer: any, scene?: Nullable<Scene>, readyToPlayCallback: Nullable<() => void> = null, options?: ISoundOptions) {
         this.name = name;
+        scene = scene || EngineStore.LastCreatedScene;
+        if (!scene) {
+            return;
+        }
         this._scene = scene;
         Sound._SceneComponentInitialization(scene);
 
@@ -182,7 +200,7 @@ export class Sound {
             if (options.volume !== undefined) {
                 this._volume = options.volume;
             }
-            this.spatialSound = options.spatialSound ?? false;
+            this._spatialSound = options.spatialSound ?? false;
             this.maxDistance = options.maxDistance ?? 100;
             this.useCustomAttenuation = options.useCustomAttenuation ?? false;
             this.rolloffFactor = options.rolloffFactor || 1;
@@ -199,7 +217,7 @@ export class Sound {
             this._soundGain!.gain.value = this._volume;
             this._inputAudioNode = this._soundGain;
             this._outputAudioNode = this._soundGain;
-            if (this.spatialSound) {
+            if (this._spatialSound) {
                 this._createSpatialParameters();
             }
             this._scene.mainSoundTrack.addSound(this);
@@ -214,11 +232,9 @@ export class Sound {
                         this._urlType = "ArrayBuffer";
                     } else if (urlOrArrayBuffer instanceof HTMLMediaElement) {
                         this._urlType = "MediaElement";
-                    }
-                    else if (urlOrArrayBuffer instanceof MediaStream) {
+                    } else if (urlOrArrayBuffer instanceof MediaStream) {
                         this._urlType = "MediaStream";
-                    }
-                    else if (Array.isArray(urlOrArrayBuffer)) {
+                    } else if (Array.isArray(urlOrArrayBuffer)) {
                         this._urlType = "Array";
                     }
 
@@ -273,6 +289,7 @@ export class Sound {
                                     (url.indexOf(".ogg", url.length - 4) !== -1 && Engine.audioEngine.isOGGsupported) ||
                                     url.indexOf(".wav", url.length - 4) !== -1 ||
                                     url.indexOf(".m4a", url.length - 4) !== -1 ||
+                                    url.indexOf(".mp4", url.length - 4) !== -1 ||
                                     url.indexOf("blob:") !== -1;
                                 if (codecSupportedFound) {
                                     // Loading sound
@@ -469,6 +486,7 @@ export class Sound {
             this._playbackRate = options.playbackRate ?? this._playbackRate;
             this._length = options.length ?? undefined;
             this._offset = options.offset ?? undefined;
+            this.setVolume(options.volume ?? this._volume);
             this._updateSpatialParameters();
             if (this.isPlaying) {
                 if (this._streaming && this._htmlAudioElement) {
@@ -499,7 +517,7 @@ export class Sound {
             if (this._scene.headphone) {
                 this._panningModel = "HRTF";
             }
-            this._soundPanner = Engine.audioEngine.audioContext.createPanner();
+            this._soundPanner = this._soundPanner ?? Engine.audioEngine.audioContext.createPanner();
             if (this._soundPanner && this._outputAudioNode) {
                 this._updateSpatialParameters();
                 this._soundPanner.connect(this._outputAudioNode);
@@ -509,7 +527,7 @@ export class Sound {
     }
 
     private _updateSpatialParameters() {
-        if (this.spatialSound && this._soundPanner) {
+        if (this._spatialSound && this._soundPanner) {
             if (this.useCustomAttenuation) {
                 // Tricks to disable in a way embedded Web Audio attenuation
                 this._soundPanner.distanceModel = "linear";
@@ -548,7 +566,7 @@ export class Sound {
     }
 
     private _switchPanningModel() {
-        if (Engine.audioEngine?.canUseWebAudio && this.spatialSound && this._soundPanner) {
+        if (Engine.audioEngine?.canUseWebAudio && this._spatialSound && this._soundPanner) {
             this._soundPanner.panningModel = this._panningModel as any;
         }
     }
@@ -607,7 +625,7 @@ export class Sound {
             }
 
             this._coneInnerAngle = value;
-            if (Engine.audioEngine?.canUseWebAudio && this.spatialSound && this._soundPanner) {
+            if (Engine.audioEngine?.canUseWebAudio && this._spatialSound && this._soundPanner) {
                 this._soundPanner.coneInnerAngle = this._coneInnerAngle;
             }
         }
@@ -631,7 +649,7 @@ export class Sound {
             }
 
             this._coneOuterAngle = value;
-            if (Engine.audioEngine?.canUseWebAudio && this.spatialSound && this._soundPanner) {
+            if (Engine.audioEngine?.canUseWebAudio && this._spatialSound && this._soundPanner) {
                 this._soundPanner.coneOuterAngle = this._coneOuterAngle;
             }
         }
@@ -647,8 +665,10 @@ export class Sound {
         }
         this._position.copyFrom(newPosition);
 
-        if (Engine.audioEngine?.canUseWebAudio && this.spatialSound && this._soundPanner && !isNaN(this._position.x) && !isNaN(this._position.y) && !isNaN(this._position.z)) {
-            this._soundPanner.setPosition(this._position.x, this._position.y, this._position.z);
+        if (Engine.audioEngine?.canUseWebAudio && this._spatialSound && this._soundPanner && !isNaN(this._position.x) && !isNaN(this._position.y) && !isNaN(this._position.z)) {
+            this._soundPanner.positionX.value = this._position.x;
+            this._soundPanner.positionY.value = this._position.y;
+            this._soundPanner.positionZ.value = this._position.z;
         }
     }
 
@@ -672,7 +692,9 @@ export class Sound {
         var mat = this._connectedTransformNode.getWorldMatrix();
         var direction = Vector3.TransformNormal(this._localDirection, mat);
         direction.normalize();
-        this._soundPanner.setOrientation(direction.x, direction.y, direction.z);
+        this._soundPanner.orientationX.value = direction.x;
+        this._soundPanner.orientationY.value = direction.y;
+        this._soundPanner.orientationZ.value = direction.z;
     }
 
     /** @hidden */
@@ -707,9 +729,11 @@ export class Sound {
                 }
                 var startTime = time ? Engine.audioEngine?.audioContext.currentTime + time : Engine.audioEngine?.audioContext.currentTime;
                 if (!this._soundSource || !this._streamingSource) {
-                    if (this.spatialSound && this._soundPanner) {
+                    if (this._spatialSound && this._soundPanner) {
                         if (!isNaN(this._position.x) && !isNaN(this._position.y) && !isNaN(this._position.z)) {
-                            this._soundPanner.setPosition(this._position.x, this._position.y, this._position.z);
+                            this._soundPanner.positionX.value = this._position.x;
+                            this._soundPanner.positionY.value = this._position.y;
+                            this._soundPanner.positionZ.value = this._position.z;
                         }
                         if (this._isDirectional) {
                             this._soundPanner.coneInnerAngle = this._coneInnerAngle;
@@ -862,7 +886,7 @@ export class Sound {
                 this._soundSource.stop(stopTime);
                 if (stopTime === undefined) {
                     this.isPlaying = false;
-                    this._soundSource.onended = () => void (0);
+                    this._soundSource.onended = () => void 0;
                 } else {
                     this._soundSource.onended = () => {
                         this.isPlaying = false;
@@ -947,8 +971,8 @@ export class Sound {
             this._registerFunc = null;
         }
         this._connectedTransformNode = transformNode;
-        if (!this.spatialSound) {
-            this.spatialSound = true;
+        if (!this._spatialSound) {
+            this._spatialSound = true;
             this._createSpatialParameters();
             if (this.isPlaying && this.loop) {
                 this.stop();
@@ -1007,7 +1031,7 @@ export class Sound {
                 autoplay: this.autoplay,
                 loop: this.loop,
                 volume: this._volume,
-                spatialSound: this.spatialSound,
+                spatialSound: this._spatialSound,
                 maxDistance: this.maxDistance,
                 useCustomAttenuation: this.useCustomAttenuation,
                 rolloffFactor: this.rolloffFactor,
@@ -1066,7 +1090,7 @@ export class Sound {
             autoplay: this.autoplay,
             loop: this.loop,
             volume: this._volume,
-            spatialSound: this.spatialSound,
+            spatialSound: this._spatialSound,
             maxDistance: this.maxDistance,
             rolloffFactor: this.rolloffFactor,
             refDistance: this.refDistance,
@@ -1077,7 +1101,7 @@ export class Sound {
             metadata: this.metadata,
         };
 
-        if (this.spatialSound) {
+        if (this._spatialSound) {
             if (this._connectedTransformNode) {
                 serializationObject.connectedMeshId = this._connectedTransformNode.id;
             }

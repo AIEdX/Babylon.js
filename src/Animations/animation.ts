@@ -65,7 +65,7 @@ export class Animation {
     /**
      * Stores the easing function of the animation
      */
-    private _easingFunction: IEasingFunction;
+    private _easingFunction: Nullable<IEasingFunction> = null;
 
     /**
      * @hidden Internal use only
@@ -669,7 +669,7 @@ export class Animation {
      * Gets the easing function of the animation
      * @returns Easing function of the animation
      */
-    public getEasingFunction(): IEasingFunction {
+    public getEasingFunction(): Nullable<IEasingFunction> {
         return this._easingFunction;
     }
 
@@ -677,7 +677,7 @@ export class Animation {
      * Sets the easing function of the animation
      * @param easingFunction A custom mathematical formula for animation
      */
-    public setEasingFunction(easingFunction: IEasingFunction): void {
+    public setEasingFunction(easingFunction: Nullable<IEasingFunction>): void {
         this._easingFunction = easingFunction;
     }
 
@@ -733,7 +733,7 @@ export class Animation {
      * Interpolates a Vector3 linearly
      * @param startValue Start value of the animation curve
      * @param endValue End value of the animation curve
-     * @param gradient Scalar amount to interpolate
+     * @param gradient Scalar amount to interpolate (value between 0 and 1)
      * @returns Interpolated scalar value
      */
     public vector3InterpolateFunction(startValue: Vector3, endValue: Vector3, gradient: number): Vector3 {
@@ -746,7 +746,7 @@ export class Animation {
      * @param outTangent End tangent of the animation
      * @param endValue End value of the animation curve
      * @param inTangent Start tangent of the animation curve
-     * @param gradient Scalar amount to interpolate
+     * @param gradient Scalar amount to interpolate (value between 0 and 1)
      * @returns InterpolatedVector3 value
      */
     public vector3InterpolateFunctionWithTangents(startValue: Vector3, outTangent: Vector3, endValue: Vector3, inTangent: Vector3, gradient: number): Vector3 {
@@ -757,7 +757,7 @@ export class Animation {
      * Interpolates a Vector2 linearly
      * @param startValue Start value of the animation curve
      * @param endValue End value of the animation curve
-     * @param gradient Scalar amount to interpolate
+     * @param gradient Scalar amount to interpolate (value between 0 and 1)
      * @returns Interpolated Vector2 value
      */
     public vector2InterpolateFunction(startValue: Vector2, endValue: Vector2, gradient: number): Vector2 {
@@ -770,7 +770,7 @@ export class Animation {
      * @param outTangent End tangent of the animation
      * @param endValue End value of the animation curve
      * @param inTangent Start tangent of the animation curve
-     * @param gradient Scalar amount to interpolate
+     * @param gradient Scalar amount to interpolate (value between 0 and 1)
      * @returns Interpolated Vector2 value
      */
     public vector2InterpolateFunctionWithTangents(startValue: Vector2, outTangent: Vector2, endValue: Vector2, inTangent: Vector2, gradient: number): Vector2 {
@@ -905,7 +905,7 @@ export class Animation {
 
                 // check for easingFunction and correction of gradient
                 let easingFunction = this.getEasingFunction();
-                if (easingFunction != null) {
+                if (easingFunction !== null) {
                     gradient = easingFunction.ease(gradient);
                 }
 

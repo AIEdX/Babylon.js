@@ -7,12 +7,13 @@ import { StackPanel } from "babylonjs-gui/2D/controls/stackPanel";
 import { CheckBoxLineComponent } from "../../../../sharedUiComponents/lines/checkBoxLineComponent";
 import { TextLineComponent } from "../../../../sharedUiComponents/lines/textLineComponent";
 import { FloatLineComponent } from "../../../../sharedUiComponents/lines/floatLineComponent";
+import { makeTargetsProxy } from "../../../../sharedUiComponents/lines/targetsProxy";
+import { ContainerPropertyGridComponent } from "./containerPropertyGridComponent";
 
 const verticalMarginIcon: string = require("../../../../sharedUiComponents/imgs/verticalMarginIcon.svg");
-const clipContentsIcon: string = require("../../../../sharedUiComponents/imgs/clipContentsIcon.svg");
 
 interface IStackPanelPropertyGridComponentProps {
-    stackPanel: StackPanel;
+    stackPanels: StackPanel[];
     lockObject: LockObject;
     onPropertyChangedObservable?: Observable<PropertyChangedEvent>;
 }
@@ -23,39 +24,33 @@ export class StackPanelPropertyGridComponent extends React.Component<IStackPanel
     }
 
     render() {
-        const stackPanel = this.props.stackPanel;
+        const {stackPanels, lockObject, onPropertyChangedObservable} = this.props;
 
         return (
             <div className="pane">
-                <CommonControlPropertyGridComponent lockObject={this.props.lockObject} control={stackPanel} onPropertyChangedObservable={this.props.onPropertyChangedObservable} />
+                <CommonControlPropertyGridComponent lockObject={lockObject} controls={stackPanels} onPropertyChangedObservable={onPropertyChangedObservable} />
                 <hr />
                 <TextLineComponent label="STACKPANEL" value=" " color="grey"></TextLineComponent>
-                <CheckBoxLineComponent
-                    iconLabel={"Clip children"}
-                    icon={clipContentsIcon}
-                    label="CLIP CHILDREN"
-                    target={stackPanel}
-                    propertyName="clipChildren"
-                    onPropertyChangedObservable={this.props.onPropertyChangedObservable}
-                />
+                <ContainerPropertyGridComponent containers={stackPanels} onPropertyChangedObservable={onPropertyChangedObservable}/>
+
                 <CheckBoxLineComponent
                     iconLabel={"Vertical"}
                     icon={verticalMarginIcon}
                     label="VERTICAL"
-                    target={stackPanel}
+                    target={makeTargetsProxy(stackPanels, onPropertyChangedObservable)}
                     propertyName="isVertical"
-                    onPropertyChangedObservable={this.props.onPropertyChangedObservable}
+                    onPropertyChangedObservable={onPropertyChangedObservable}
                 />
                 <FloatLineComponent
-                    lockObject={this.props.lockObject}
+                    lockObject={lockObject}
                     label=""
                     icon={verticalMarginIcon}
                     iconLabel="spacing"
-                    target={stackPanel}
+                    target={makeTargetsProxy(stackPanels, onPropertyChangedObservable)}
                     propertyName="spacing"
                     defaultValue={0}
-                    onPropertyChangedObservable={this.props.onPropertyChangedObservable}
-                    onChange={() => stackPanel._markAsDirty()}
+                    onPropertyChangedObservable={onPropertyChangedObservable}
+                    onChange={() => stackPanels.forEach(panel => panel._markAsDirty())}
                 />
             </div>
         );

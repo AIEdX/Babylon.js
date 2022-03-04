@@ -13,11 +13,11 @@ import { RegisterClass } from '../../../../Misc/typeStore';
 import { Texture } from '../../../Textures/texture';
 import { Scene } from '../../../../scene';
 import { NodeMaterialModes } from '../../Enums/nodeMaterialModes';
-import { Engine } from "../../../../Engines/engine";
 import { Constants } from '../../../../Engines/constants';
 import "../../../../Shaders/ShadersInclude/helperFunctions";
 import { ImageSourceBlock } from './imageSourceBlock';
 import { NodeMaterialConnectionPointCustomObject } from '../../nodeMaterialConnectionPointCustomObject';
+import { EngineStore } from '../../../../Engines/engineStore';
 
 /**
  * Block used to read a texture from a sampler
@@ -52,7 +52,7 @@ export class TextureBlock extends NodeMaterialBlock {
             return;
         }
 
-        const scene = texture?.getScene() ?? Engine.LastCreatedScene;
+        const scene = texture?.getScene() ?? EngineStore.LastCreatedScene;
 
         if (!texture && scene) {
             scene.markAllMaterialsAsDirty(Constants.MATERIAL_TextureDirtyFlag, (mat) => {
@@ -86,15 +86,47 @@ export class TextureBlock extends NodeMaterialBlock {
         return !!this._imageSource;
     }
 
+    private _convertToGammaSpace = false;
     /**
      * Gets or sets a boolean indicating if content needs to be converted to gamma space
      */
-    public convertToGammaSpace = false;
+    public set convertToGammaSpace(value: boolean) {
+        if (value === this._convertToGammaSpace) {
+            return;
+        }
 
+        this._convertToGammaSpace = value;
+        if (this.texture) {
+            const scene = this.texture.getScene() ?? EngineStore.LastCreatedScene;
+            scene?.markAllMaterialsAsDirty(Constants.MATERIAL_TextureDirtyFlag, (mat) => {
+                return mat.hasTexture(this.texture!);
+            });
+        }
+    }
+    public get convertToGammaSpace(): boolean {
+        return this._convertToGammaSpace;
+    }
+
+    private _convertToLinearSpace = false;
     /**
      * Gets or sets a boolean indicating if content needs to be converted to linear space
      */
-    public convertToLinearSpace = false;
+    public set convertToLinearSpace(value: boolean) {
+        if (value === this._convertToLinearSpace) {
+            return;
+        }
+
+        this._convertToLinearSpace = value;
+        if (this.texture) {
+            const scene = this.texture.getScene() ?? EngineStore.LastCreatedScene;
+            scene?.markAllMaterialsAsDirty(Constants.MATERIAL_TextureDirtyFlag, (mat) => {
+                return mat.hasTexture(this.texture!);
+            });
+        }
+    }
+    public get convertToLinearSpace(): boolean {
+        return this._convertToLinearSpace;
+    }
 
     /**
      * Gets or sets a boolean indicating if multiplication of texture with level should be disabled

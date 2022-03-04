@@ -148,6 +148,7 @@ async function evaluate(test, resultCanvas, result, renderImage, waitRing, done)
 
     if (!dontReportTestOutcome) {
         var renderB64 = saveRenderImage(renderData, canvas);
+        // BABYLON.Tools.EncodeScreenshotCanvasData(undefined, "image/png", test.referenceImage, canvas)
         renderImage.src = renderB64;
     }
 
@@ -531,7 +532,7 @@ function init(_engineName, useReverseDepthBuffer, useNonCompatibilityMode) {
             engine.initAsync(glslangOptions, twgslOptions).then(() => resolve());
         });
     } else {
-        engine = new BABYLON.Engine(canvas, false, { useHighPrecisionFloats: true, disableWebGL2Support: engineName === "webgl1" ? true : false });
+        engine = new BABYLON.Engine(canvas, false, { useHighPrecisionFloats: true, disableWebGL2Support: engineName === "webgl1" ? true : false, forceSRGBBufferSupportState: true });
         engine.enableOfflineSupport = false;
         engine.setDitheringState(false);
         engine.useReverseDepthBuffer = forceUseReverseDepthBuffer;

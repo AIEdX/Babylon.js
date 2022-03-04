@@ -160,9 +160,14 @@ export class AmmoJSPlugin implements IPhysicsEnginePlugin {
     public onCreateCustomShape: (impostor: PhysicsImpostor) => any;
 
     /**
-     * The create custom mesh impostor handler function to support building custom mesh impostor vertex data (Ex: Ammo.btSmoothTriangleMesh)
+     * The create custom mesh impostor handler function to support building custom mesh impostor vertex data
      */
      public onCreateCustomMeshImpostor: (impostor: PhysicsImpostor) => any;
+
+    /**
+     * The create custom convex hull impostor handler function to support building custom convex hull impostor vertex data
+     */
+     public onCreateCustomConvexHullImpostor: (impostor: PhysicsImpostor) => any;
 
     // Ammo's contactTest and contactPairTest take a callback that runs synchronously, wrap them so that they are easier to consume
     private _isImpostorInContact(impostor: PhysicsImpostor) {
@@ -384,14 +389,12 @@ export class AmmoJSPlugin implements IPhysicsEnginePlugin {
             var worldPoint = this._tmpAmmoVectorA;
             var impulse = this._tmpAmmoVectorB;
 
-            worldPoint.setValue(contactPoint.x, contactPoint.y, contactPoint.z);
-
             // Convert contactPoint relative to center of mass
             if (impostor.object && impostor.object.getWorldMatrix) {
                 var localTranslation = impostor.object.getWorldMatrix().getTranslation();
-                worldPoint.x -= localTranslation.x;
-                worldPoint.y -= localTranslation.y;
-                worldPoint.z -= localTranslation.z;
+                worldPoint.setValue(contactPoint.x - localTranslation.x, contactPoint.y - localTranslation.y, contactPoint.z - localTranslation.z);
+            } else {
+                worldPoint.setValue(contactPoint.x, contactPoint.y, contactPoint.z);
             }
 
             impulse.setValue(force.x, force.y, force.z);
@@ -1022,14 +1025,18 @@ export class AmmoJSPlugin implements IPhysicsEnginePlugin {
                 }
             // Otherwise create convexHullImpostor
             case PhysicsImpostor.ConvexHullImpostor:
-                var convexMesh = new this.bjsAMMO.btConvexHullShape();
-                var triangeCount = this._addHullVerts(convexMesh, object, object);
-                if (triangeCount == 0) {
-                    // Cleanup Unused Convex Hull Shape
-                    impostor._pluginData.toDispose.push(convexMesh);
-                    returnValue = new this.bjsAMMO.btCompoundShape();
+                if (this.onCreateCustomConvexHullImpostor) {
+                    returnValue = this.onCreateCustomConvexHullImpostor(impostor);
                 } else {
-                    returnValue = convexMesh;
+                    var convexMesh = new this.bjsAMMO.btConvexHullShape();
+                    var triangeCount = this._addHullVerts(convexMesh, object, object);
+                    if (triangeCount == 0) {
+                        // Cleanup Unused Convex Hull Shape
+                        impostor._pluginData.toDispose.push(convexMesh);
+                        returnValue = new this.bjsAMMO.btCompoundShape();
+                    } else {
+                        returnValue = convexMesh;
+                    }
                 }
                 break;
             case PhysicsImpostor.NoImpostor:

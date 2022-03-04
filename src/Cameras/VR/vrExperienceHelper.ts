@@ -37,6 +37,7 @@ import { WebXRState } from '../../XR/webXRTypes';
 import { CreateCylinder } from "../../Meshes/Builders/cylinderBuilder";
 import { CreateTorus } from "../../Meshes/Builders/torusBuilder";
 import { CreateGround } from "../../Meshes/Builders/groundBuilder";
+import { IPointerEvent } from "../../Events/deviceInputEvents";
 
 /**
  * Options to modify the vr teleportation behavior.
@@ -333,6 +334,7 @@ export class OnAfterEnteringVRObservableEvent {
 /**
  * Helps to quickly add VR support to an existing scene.
  * See https://doc.babylonjs.com/divingDeeper/cameras/webVRHelper
+ * @deprecated
  */
 export class VRExperienceHelper {
     private _scene: Scene;
@@ -984,7 +986,7 @@ export class VRExperienceHelper {
         // Allow clicking in the vrDeviceOrientationCamera
         scene.onPointerObservable.add((e) => {
             if (this._interactionsEnabled) {
-                if (scene.activeCamera === this.vrDeviceOrientationCamera && (e.event as PointerEvent).pointerType === "mouse") {
+                if (scene.activeCamera === this.vrDeviceOrientationCamera && (e.event as IPointerEvent).pointerType === "mouse") {
                     if (e.type === PointerEventTypes.POINTERDOWN) {
                         this._cameraGazer._selectionPointerDown();
                     } else if (e.type === PointerEventTypes.POINTERUP) {

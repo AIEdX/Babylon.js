@@ -15,7 +15,9 @@ export enum DeviceType {
     /** Xbox */
     Xbox = 5,
     /** Switch Controller */
-    Switch = 6
+    Switch = 6,
+    /** PS5 DualSense */
+    DualSense = 7,
 }
 
 // Device Enums
@@ -23,8 +25,34 @@ export enum DeviceType {
  * Enum for All Pointers (Touch/Mouse)
  */
 export enum PointerInput {
-    /** Horizontal Axis */
+    /** Horizontal Axis (Not used in events/observables; only in polling) */
     Horizontal = 0,
+    /** Vertical Axis (Not used in events/observables; only in polling) */
+    Vertical = 1,
+    /** Left Click or Touch */
+    LeftClick = 2,
+    /** Middle Click */
+    MiddleClick = 3,
+    /** Right Click */
+    RightClick = 4,
+    /** Browser Back */
+    BrowserBack = 5,
+    /** Browser Forward */
+    BrowserForward = 6,
+    /** Mouse Wheel X */
+    MouseWheelX = 7,
+    /** Mouse Wheel Y */
+    MouseWheelY = 8,
+    /** Mouse Wheel Z */
+    MouseWheelZ = 9,
+    /** Used in events/observables to identify if x/y changes occurred */
+    Move = 12,
+}
+
+/** @hidden */
+export enum NativePointerInput {
+    /** Horizontal Axis */
+    Horizontal = PointerInput.Horizontal,
     /** Vertical Axis */
     Vertical = 1,
     /** Left Click or Touch */
@@ -71,6 +99,56 @@ export enum DualShockInput {
     R2 = 7,
     /** Share */
     Share = 8,
+    /** Options */
+    Options = 9,
+    /** L3 */
+    L3 = 10,
+    /** R3 */
+    R3 = 11,
+    /** DPadUp */
+    DPadUp = 12,
+    /** DPadDown */
+    DPadDown = 13,
+    /** DPadLeft */
+    DPadLeft = 14,
+    /** DRight */
+    DPadRight = 15,
+    /** Home */
+    Home = 16,
+    /** TouchPad */
+    TouchPad = 17,
+    /** LStickXAxis */
+    LStickXAxis = 18,
+    /** LStickYAxis */
+    LStickYAxis = 19,
+    /** RStickXAxis */
+    RStickXAxis = 20,
+    /** RStickYAxis */
+    RStickYAxis = 21
+}
+
+/**
+ * Enum for Dual Sense Gamepad
+ */
+ export enum DualSenseInput {
+    /** Cross */
+    Cross = 0,
+    /** Circle */
+    Circle = 1,
+    /** Square */
+    Square = 2,
+    /** Triangle */
+    Triangle = 3,
+    /** L1 */
+    L1 = 4,
+    /** R1 */
+    R1 = 5,
+    /** L2 */
+    L2 = 6,
+    /** R2 */
+    R2 = 7,
+    /** Create */
+    Create  = 8,
     /** Options */
     Options = 9,
     /** L3 */

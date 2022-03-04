@@ -100,4 +100,8 @@ export interface EngineCapabilities {
     supportComputeShaders: boolean;
     /** Defines if sRGB texture formats are supported */
     supportSRGBBuffers: boolean;
+    /** Defines if transform feedbacks are supported */
+    supportTransformFeedbacks: boolean;
+    /** Defines if texture max level are supported */
+    textureMaxLevel: boolean;
 }

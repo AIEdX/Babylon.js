@@ -149,6 +149,8 @@ export class NullEngine extends Engine {
             canUseGLVertexID: false,
             supportComputeShaders: false,
             supportSRGBBuffers: false,
+            supportTransformFeedbacks: false,
+            textureMaxLevel: false
         };
 
         this._features = {

@@ -7,11 +7,12 @@
 - Added support for ConditionalBlock for NodeMaterial ([Deltakosh](https://github.com/deltakosh))
 - Improved performance when using the shadow / cascacaded shadow generator ([Popov72](https://github.com/Popov72))
 - Add support for up to 6 uv sets in the standard, PBR and node materials ([Popov72](https://github.com/Popov72))
-- Added GUI Editor to easily build GUI controls ([msDestiny14](https://github.com/msDestiny14))
+- Added GUI Editor to easily build GUI controls ([msDestiny14](https://github.com/msDestiny14)) ([darraghjburke](https://github.com/darraghjburke))
 - Added support for Order Independent Transparency on simple scenes. `scene.useOrderIndependentTransparency = true` now makes transparent meshes shade correctly when stacked onto each other. ([CraigFeldspar](https://github.com/CraigFeldspar))
 - Added vertex animation textures with `BakedVertexAnimationManager` ([brunobg](https://github.com/brunobg), [Popov72](https://github.com/Popov72), [raggar](https://github.com/raggar))
 - Added `MaterialPluginManager` ([brunobg](https://github.com/brunobg), [Popov72](https://github.com/Popov72))
 - Official support of WebGPU ([Popov72](https://github.com/Popov72))
+- Added Performance Profiler to allow tracking of Performance metrics ([carolhmj](https://github.com/carolhmj))
 
 ## Updates
 
@@ -29,11 +30,12 @@
 - Added ability to enable/disable `ArcRotateCamera` zoom on multiTouch event ([NicolasBuecher](https://github.com/NicolasBuecher))
 - Moving button to shared uI folder.([msDestiny14](https://github.com/msDestiny14))
 - Added `collisionRetryCount` to improved collision detection ([CedricGuillemet](https://github.com/CedricGuillemet))
+- Added color/instance color differenciation in shaders for thin instances ([CedricGuillemet](https://github.com/CedricGuillemet))
 - Added sleepBody support for ammojs ([CedricGuillemet](https://github.com/CedricGuillemet)
 - Moved sharedUI component to shared UI folder. ([msDestiny14](https://github.com/msDestiny14))
 - Added `encapsulate` and `encapsulateBoundingInfo` methods to `BoundingInfo`. ([Tolo789](https://github.com/Tolo789))
 - Added `onLoadObservable` to the `TextureDome` class(es) ([RaananW](https://github.com/RaananW))
-- Modified `InputManager` to use `DeviceInputSystem` ([PolygonalSun](https://github.com/PolygonalSun))
+- Modified `InputManager` to use `DeviceSourceManager` ([PolygonalSun](https://github.com/PolygonalSun))
 - Added a [helper class](https://doc.babylonjs.com/typedoc/classes/babylon.debug.directionallightfrustumviewer) to display the frustum of a directional light ([Popov72](https://github.com/Popov72))
 - Improved collision detection performance ([ottoville](https://github.com/ottoville/))
 - Added new helper functions for `Quaternion.FromLookDirection` and `Matrix.LookDirection` ([Alex-MSFT](https://github.com/Alex-MSFT))
@@ -46,6 +48,7 @@
 - Spelling of function/variables `xxxByID` renamed to `xxxById` to be consistent over the project. Old `xxxByID` reamain as deprecated that forward to the corresponding `xxxById` ([barroij](https://github.com/barroij))
 - Added new reflector tool that enable remote inspection of scenes. ([bghgary](https://github.com/bghgary))
 - Update `createPickingRay` and `createPickingRayToRef` matrix parameter to be nullable. ([jlivak](https://github.com/jlivak))
+- Improved scene picking precision with huge values in world matrices when `Mesh.EnableDistantPicking` flag is true ([CedricGuillemet](https://github.com/CedricGuillemet)
 - Added `applyVerticalCorrection` and `projectionPlaneTilt` to perspective cameras to correct perspective projections ([CraigFeldspar](https://github.com/CraigFeldspar))
 - Support rotation keys in universal camera ([Sebavan](https://github.com/sebavan))
 - Added flag to allow users to swap between rotation and movement for single touch on FreeCameraTouchInput ([PolygonalSun](https://github.com/PolygonalSun))
@@ -64,6 +67,13 @@
 - Added resetLastInteractionTime() to the auto rotate behavior ([RaananW](https://github.com/RaananW))
 - Update `addContainerTask` and `addMeshTask` signatures on `AssetsManager` to allow receiving a File as the sceneFilename argument. ([carolhmj](https://github.com/carolhmj))
 - Added `onCreateCustomMeshImpostor` handler for creating custom mesh impostors to support Ammo.btSmoothTriangleMesh. ([MackeyK24](https://github.com/MackeyK24))
+- Added `onCreateCustomMeshImpostor` handler for creating mesh impostors with custom vertex data. ([MackeyK24](https://github.com/MackeyK24))
+- Added `onCreateCustomConvexHullImpostor` handler for creating convex hull imposters with custom vertex data. ([MackeyK24](https://github.com/MackeyK24))
+- Modified touch in `WebDeviceInputSystem` to no longer delete touch points after pointer up. ([PolygonalSun](https://github.com/PolygonalSun))
+- Added support for DualSense controllers to DeviceInputSystem. ([PolygonalSun](https://github.com/PolygonalSun))
+- Added `getCreationOptions` on `ThinEngine`. ([carolhmj](https://github.com/carolhmj))
+- Added `CompatibilityOptions.UseOpenGLOrientationForUV` to define if the system should use OpenGL convention for UVs when creating geometry or loading .babylon files (false by default) ([Deltakosh](https://github.com/deltakosh))
+- Added RuntimeError and errorCodes for runtime errors. ([jp833](https://github.com/jp833))
 
 ### Engine
 
@@ -74,6 +84,7 @@
 - Added `IAudioEngineOptions` interface to provide the audio engine with a pre-defined Audio Context and audio destination node. ([Vandy](https://github.com/svanderbeck11))
 - Added support for cannon-es method `world.removeBody()`. Falls back to cannon method `remove()`. ([Faber](https://https://github.com/Faber-smythe))
 - Added support for ZOffset Unit as we currently only supported factor. ([Sebavan](https://github.com/sebavan/)
+- Added the option to force the state of sRGB Buffer support ([RaananW](https://github.com/RaananW))
 
 ### Loaders
 
@@ -87,13 +98,16 @@
 - Added support for more uv sets to glTF loader. ([bghgary](https://github.com/bghgary))
 - Added support for `KHR_materials_volume` for glTF loader. ([MiiBond](https://github.com/MiiBond/))
 - Added support for custom timeout in `WebRequest`. ([jamidwyer](https://github.com/jamidwyer/))
-- Improved support for `MSFT_lod`, now LOD levels are loaded and accurately displayed according to screen coverage ([CraigFeldspar](https://github.com/CraigFeldspar))
 - Added support for direct loading [base64 data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) for all loader ([CoPrez](https://github.com/CoPrez))
 - Added `DO_NOT_ALTER_FILE_COORDINATES` flag to STL loader ([AlbertoPa](https://github.com/AlbertoPa))
 - Added support for pure geometry files to OBJ loader ([Deltakosh](https://github.com/deltakosh))
 - Added an observable for when loader state changed. ([bghgary](https://github.com/bghgary))
 - Fixed an issue where errors for loading certain assets (e.g. <20-byte GLBs) are not catchable. ([bghgary](https://github.com/bghgary))
 - Added support for `KHR_materials_emissive_strength` for glTF loader. ([sebavan](https://github.com/sebavan))
+- Added support for normalized attributes ([#11685](https://github.com/BabylonJS/Babylon.js/issues/11685)) ([RaananW](https://github.com/RaananW))
+- Added fallback error logging on mesh loading tasks if no error handler is defined. ([carolhmj](https://github.com/carolhmj))
+- Updated the glTF loader to place the skinned mesh as a sibling of the skeleton root node instead of using `skeleton.overrideMesh`. ([bghgary](https://github.com/bghgary))
+- Added support for `--bm` bump multiplier to OBJ loader ([brianzinn](https://github.com/brianzinn))
 
 ### Navigation
 
@@ -119,12 +133,15 @@
 
 ### Meshes
 
+- Added public version of `AbstractMesh` function _getPositionData. ([BlakeOne](https://github.com/BlakeOne))
 - Added default options parameter to Create functions. ([BlakeOne](https://github.com/BlakeOne))
 - `LineMesh` now allows assigning custom material via `material` setter. ([FullStackForger](https://github.com/FullStackForger)
 - `InstancedMesh` can now be sorted from back to front before rendering if the material is transparent ([Popov72](https://github.com/Popov72))
 - Add option to decompose the `newWorldMatrix` when passed into `TransformNode.freezeWorldMatrix`. ([bghgary](https://github.com/bghgary))
 - Added `mesh.onMeshReadyObservable` to get notified when a mesh is ready ([RaananW](https://github.com/RaananW))
 - Added support for morph targets to the mesh `BoundingInfo` refresh. ([EricBeetsOfficial-Opuscope](https://github.com/EricBeetsOfficial-Opuscope))
+- Added support for screen coverage in addition to distance for LOds. ([CraigFeldspar](https://github.com/CraigFeldspar))
+- Decreased memory usage and improved performance of `Mesh.MergeMeshes`. ([ryantrem](https://github.com/ryantrem))
 
 ### Inspector
 
@@ -139,13 +156,20 @@
 - When user hits the "New Key" button on ACE but a key already exists on that frame, update existing frame's values instead of creating a new one. ([carolhmj](https://github.com/carolhmj))
 - Added live connection to GUI editor ([darraghjburke](https://github.com/darraghjburke))
 - Add `getAlphaFromRGB` checkbox on Texture view ([carolhmj](https://github.com/carolhmj))
+- Make sure popups are closed when page refreshes ([RaananW](https://github.com/RaananW))
 
 ### Playground
 
+- Start render loop before creating scene to make stopping it more convenient ([BlakeOne](https://github.com/BlakeOne))
 - Added tooltips for menubar buttons ([darraghjburke](https://github.com/darraghjburke))
+- Fixed squiggles not working for deprecated members ([sailro](https://github.com/sailro))
+- Removed legacy code for formatting deprecated members display ([sailro](https://github.com/sailro))
+- Fixed deprecated members info display ([sailro](https://github.com/sailro))
+- Added support for experimental/beta members ([sailro](https://github.com/sailro))
 
 ### NME
 
+- Added a `MaterialAlpha` block to read material's alpha value ([Deltakosh](https://github.com/Deltakosh))
 - Added a `CloudBLock` block to create noise based cloud data ([Deltakosh](https://github.com/Deltakosh))
 - Updated the VectorMerger and ColorMerger blocks to support swizzling ([Deltakosh](https://github.com/Deltakosh))
 - Added a `ImageSource` block to factorize access to texture data ([Deltakosh](https://github.com/Deltakosh))
@@ -155,6 +179,8 @@
 - Added support for parallax / parallax occlusion to the `PerturbNormal` block ([Popov72](https://github.com/Popov72))
 - Added a `SceneDepth` block to access the scene depth buffer ([Popov72](https://github.com/Popov72))
 - Added support for custom blocks ([BlakeOne](https://github.com/BlakeOne), [Popov72](https://github.com/Popov72))
+- Added a `ClipPlanes` block to support scene clip planes ([Popov72](https://github.com/Popov72))
+- Added `ElbowBlock` to let users control the graph organization ([Deltakosh](https://github.com/Deltakosh))
 
 ### GUI
 
@@ -178,6 +204,7 @@
 - Added support for full screen UI and rig cameras ([#11544](https://github.com/BabylonJS/Babylon.js/issues/11544)) ([RaananW](https://github.com/RaananW))
 - Added ValueAndUnit change observable and Grid to listen for changes ([brianzinn](https://github.com/brianzinn))
 - Added `closeShape` and `closePath` as extra options parameters in `ExtrudeShape` and `ExtrudeShapeCustom` ([JohnK](https://github.com/BabylonJSGuide))
+- Added `markAsDirty` and `markAllAsDirty` public functions on `Control` ([carolhmj](https://github.com/carolhmj))
 
 ### Behaviors
 
@@ -230,6 +257,7 @@
 - Introduced a new opt-in property to `Gui3DManager`, `useRealisticScaling`, that will automatically scale 3D GUI components like buttons to MRTK standards for better sizing in XR experiences. ([rickfromwork](https://github.com/rickfromwork))
 - Add `NativeXRPlugin` and `NativeXRFrame` to improve XR performance on BabylonNative ([rgerd](https://github.com/rgerd))
 - Reset XR Camera's orientation when entering an AR session for consistent experience ([RaananW](https://github.com/RaananW))
+- Enable multiview rendering to `XRProjectionLayer` with texture type "texture-array" ([#10767](https://github.com/BabylonJS/Babylon.js/issues/10767)) ([rgerd](https://github.com/rgerd))
 
 ### Gizmos
 
@@ -240,6 +268,7 @@
 - Added constructor parameters to allow turning off `updateScale` on RotationGizmo ([jekelija](https://github.com/jekelija))
 - Dispose `_dragPlane` when detaching in `PointerDragBehavior` ([CedricGuillemet](https://github.com/CedricGuillemet))
 - Log warning when trying to attach a node to a `LightGizmo` ([CedricGuillemet](https://github.com/CedricGuillemet))
+- Inspector autopicking is in sync with `GimoManager` autopicking ([CedricGuillemet](https://github.com/CedricGuillemet))
 - Fixed wrong matrix with nodes having pivot point ([CedricGuillemet](https://github.com/CedricGuillemet))
 - `validateDrag` support added to `AxisDragGizmo` ([CedricGuillemet](https://github.com/CedricGuillemet))
 - Gizmos that have draggable components now support near interactions via `WebXRNearInteraction` ([rickfromwork](https://github.com/rickfromwork))
@@ -259,9 +288,13 @@
 - Added the `exportUnusedUVs` property to the `IExportOptions` interface that will prevent any unused vertex uv attributes from being stripped during the glTF export. ([ericbroberic](https://github.com/ericbroberic))
 - glTF serializer now supports `KHR_materials_clearcoat` ([drigax](https://github.com/drigax))
 - Fixed bug where characters that didn't fit into a single UTF-16 code point were not correctly encoded in .glb exports ([darraghjburke](https://github.com/darraghjburke))
+- Serialize and parse now use unique IDs for materials, so duplicate names won't cause problems. Still supports parsing id for back compat ([darraghjburke](https://github.com/darraghjburke))
+- glTF exporter now supports camera export ([daoshengmu](https://github.com/daoshengmu))
 
 ## Bugs
 
+- Fix `WaterMaterial`’s constructor to use `this.getScene()` instead of `scene` parameter ([BlakeOne](https://github.com/BlakeOne))
+- Add missing param `point` to the callback function's type for the methods `registerOnPhysicsCollide` and `unregisterOnPhysicsCollide` of the `PhysicsImpostor` class. ([BlakeOne](https://github.com/BlakeOne))
 - Fix serialization and parsing of `textBlock` and `image` for `Button` class ([BlakeOne](https://github.com/BlakeOne))
 - Fix for `AdvancedTimer` ignoring `timeout` option ([BlakeOne](https://github.com/BlakeOne))
 - Fix issue when `AssetContainer` is added to `Scene` multiple times ([BlakeOne](https://github.com/BlakeOne))
@@ -315,6 +348,7 @@
 - Fix for GUI renderAtIdealSize ([msDestiny14](https://github.com/msDestiny14))
 - Fix the strength input parameter of the NME `PerturbNormal` block that was handled as a 1/strength value ([Popov72](https://github.com/Popov72))
 - Fix an issue with audio engine not being garbage-collected when engine is disposed ([RaananW](https://github.com/RaananW))
+- Fix deprecated audio methods setPosition/setOrientation with new position/orientation values ([CedricGuillemet](https://github.com/CedricGuillemet))
 - Fix the NME `NormalBlend` block ([Popov72](https://github.com/Popov72))
 - Fix Compatibility with NPM 7 ([Sebavan](https://github.com/sebavan))
 - Fix for cloning meshes for 3D GUIs ([msDestiny14](https://github.com/msDestiny14))
@@ -371,8 +405,15 @@
 - Fix Button3D, HolographicButton, TouchHolographicButton and HolographicSlate content when scene is right-handed ([carolhmj](https://github.com/carolhmj))
 - Fix get attachedNode always return null for `PositionGizmo` ([jtcheng](https://github.com/jtcheng))
 - Fix Screen Space Reflections for right-handed scenes ([carolhmj](https://github.com/carolhmj))
-- Fix FreeCameraTouchInput roation when moving ([m1911star](https://github.com/m1911star))
 - Fix camera collisions for right-handed scenes ([carolhmj](https://github.com/carolhmj))
+- Add a null check when setting `imageSrc` on HolographicSlate([carolhmj](https://github.com/carolhmj))
+- Fix issue with physics impostors'unique ID not set correctly if an impostor was disposed ([RaananW](https://github.com/RaananW))
+- Fix memory leak and incorrect data copy in KTX2 ([bghgary](https://github.com/bghgary))
+- Fix keypoint selection in ACE ([carolhmj](https://github.com/carolhmj))
+- Fix keypoint drag in ACE ([carolhmj](https://github.com/carolhmj))
+- Fix spherical harmonics computation ([Meakk](https://github.com/Meakk))
+- Fix KTX and DDS loading with baked mipmaps ([Meakk](https://github.com/Meakk))
+- Fix text rendering speed when `TextWrapping.Ellipsis` is used ([carolhmj](https://github.com/carolhmj))
 
 ## Breaking changes
 
@@ -385,6 +426,7 @@
 - `Mesh.createInstance` no longer make a unique `Geometry` for the Mesh so updating one `Geometry` can affect more meshes than before. Use `Mesh.makeUniqueGeometry` for old behaviour. ([breakin](https://github.com/breakin))
 - Ammo.js needs to be initialized before creating the plugin with `await Ammo();` since Ammo introduced an async init in their library. ([sebavan](https://github.com/sebavan))
 - Recast.js needs to be initialized before creating the plugin with `await Recast();` since Recast introduced an async init in their library. ([CedricGuillemet](https://github.com/CedricGuillemet))
+- Custom shaders using instancing must use `instanceColor` instead of `color` so mesh vertex colors can be used with instancing. ([CedricGuillemet](https://github.com/CedricGuillemet))
 - Fixed spelling of `EventState.initialize` ([seritools](https://github.com/seritools))
 - `SkeletonViewer` is now enabled by default ([Deltakosh](https://github.com/deltakosh))
 - `BindEyePosition` has been moved from `Material` to `Scene` to avoid a circular dependency problem and is now a non-static method (`bindEyePosition`) ([Popov72](https://github.com/Popov72))
@@ -399,4 +441,12 @@
 - Rework of the inner working of render targets. Those are mostly internal changes. From the end user standpoint, the most visible change is that the `PostProcess` class is now dealing with `RenderTargetWrapper` instead of `InternalTexture` objects. So, if you are directly updating the `inputTexture` property with a render target texture that you previously rendered, you will need to pass a `RenderTargetWrapper` instead of an `InternalTexture`: you will get it by doing `rtt.renderTarget`, where `rtt` is the instance of your `RenderTargetTexture`. ([Popov72](https://github.com/Popov72))
 - `ShaderMaterial` is now storing the effect on submeshes by default. It may be a breaking change in some special cases where one creates a `ShaderMaterial` not to be used as the material property of a mesh but instead to handle it "by hand" by calling `ShaderMaterial.isReady` / `ShaderMaterial.bind` directly. If you are doing that, you may want to pass `false` as the 5th parameter of the `ShaderMaterial` constructor to disable storing the effect on submeshes.
 - The `glTFLoader.rootBabylonMesh` getter now has a nullable return type (glTF files without mesh data) ([simonihmig](https://github.com/simonihmig))
-
+- When updating the `m` array of the `Matrix` class directly, you must call `markAsUpdated()` explicitly or the matrix changes may not take effect ([Popov72](https://github.com/Popov72), [Deltakosh](https://github.com/deltakosh), [bghgary](https://github.com/bghgary), [Sebavan](https://github.com/sebavan))
+- Loading glTF assets with skins now places skinned meshes as siblings of the corresponding skeleton root nodes instead of using `skeleton.overrideMesh`. ([bghgary](https://github.com/bghgary))
+- The `overrideMesh` of the `Skeleton` class has been removed. ([bghgary](https://github.com/bghgary))
+- Cloning a mesh now copies skeletons. ([bghgary](https://github.com/bghgary))
+- Cloning and creating instances of a mesh now refreshes the bounding box applying skins and morph targets. ([bghgary](https://github.com/bghgary))
+- `KeyboardInfoPre.skipOnPointerObservable` is now correctly renamed to `KeyboardInfoPre.skipOnKeyboardObservable`. ([bghgary](https://github.com/bghgary))
+- GLTF Animations are loaded at 60 FPS by default. ([carolhmj](https://github.com/carolhmj))
+- `currentState` and `previousState` have been removed from use in `onInputChangedObservable` in the `DeviceSourceManager` ([PolygonalSun](https://github.com/PolygonalSun))
+- `PointerInput` movement enums are no longer being used in any movement event handling in the `DeviceInputSystem` and `InputManager` ([PolygonalSun](https://github.com/PolygonalSun))

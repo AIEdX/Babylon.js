@@ -59,6 +59,7 @@ export class GUIEditor {
         globalState.customSave = options.customSave;
         globalState.customLoad = options.customLoad;
         globalState.hostWindow = hostElement.ownerDocument!.defaultView!;
+        globalState.registerEventListeners();
 
         const graphEditor = React.createElement(WorkbenchEditor, {
             globalState: globalState,
@@ -68,7 +69,6 @@ export class GUIEditor {
         // create the middle workbench canvas
         if (!globalState.guiTexture) {
             globalState.workbench.createGUICanvas();
-            globalState.guiGizmo.createBaseGizmo();
             if (options.currentSnippetToken) {
                 try {
                     await globalState.workbench.loadFromSnippet(options.currentSnippetToken);

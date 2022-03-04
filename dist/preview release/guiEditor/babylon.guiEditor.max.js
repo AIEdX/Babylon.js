@@ -97,9 +97,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ({
 
 /***/ "../../node_modules/@fortawesome/fontawesome-svg-core/index.es.js":
-/*!****************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/@fortawesome/fontawesome-svg-core/index.es.js ***!
-  \****************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/@fortawesome/fontawesome-svg-core/index.es.js ***!
+  \***************************************************************************************************************/
 /*! exports provided: icon, noAuto, config, toHtml, layer, text, counter, library, dom, parse, findIconDefinition */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -117,7 +117,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parse", function() { return parse; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findIconDefinition", function() { return findIconDefinition; });
 /*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 function _typeof(obj) {
@@ -314,7 +314,7 @@ var STYLE_TO_PREFIX = {
   'kit': 'fak'
 };
 var LAYERS_TEXT_CLASSNAME = 'fa-layers-text';
-var FONT_FAMILY_PATTERN = /Font Awesome ([5 ]*)(Solid|Regular|Light|Duotone|Brands|Free|Pro|Kit).*/; // TODO: do we need to handle font-weight for kit SVG pseudo-elements?
+var FONT_FAMILY_PATTERN = /Font Awesome ([5 ]*)(Solid|Regular|Light|Duotone|Brands|Free|Pro|Kit).*/i; // TODO: do we need to handle font-weight for kit SVG pseudo-elements?
 
 var FONT_WEIGHT_TO_PREFIX = {
   '900': 'fas',
@@ -1214,7 +1214,7 @@ var p = config.measurePerformance && PERFORMANCE && PERFORMANCE.mark && PERFORMA
   mark: noop$1,
   measure: noop$1
 };
-var preamble = "FA \"5.15.3\"";
+var preamble = "FA \"5.15.4\"";
 
 var begin = function begin(name) {
   p.mark("".concat(preamble, " ").concat(name, " begins"));
@@ -2557,10 +2557,10 @@ var autoReplace = function autoReplace() {
 /***/ }),
 
 /***/ "../../node_modules/@fortawesome/free-solid-svg-icons/index.es.js":
-/*!****************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/@fortawesome/free-solid-svg-icons/index.es.js ***!
-  \****************************************************************************************/
-/*! exports provided: fas, prefix, faAd, faAddressBook, faAddressCard, faAdjust, faAirFreshener, faAlignCenter, faAlignJustify, faAlignLeft, faAlignRight, faAllergies, faAmbulance, faAmericanSignLanguageInterpreting, faAnchor, faAngleDoubleDown, faAngleDoubleLeft, faAngleDoubleRight, faAngleDoubleUp, faAngleDown, faAngleLeft, faAngleRight, faAngleUp, faAngry, faAnkh, faAppleAlt, faArchive, faArchway, faArrowAltCircleDown, faArrowAltCircleLeft, faArrowAltCircleRight, faArrowAltCircleUp, faArrowCircleDown, faArrowCircleLeft, faArrowCircleRight, faArrowCircleUp, faArrowDown, faArrowLeft, faArrowRight, faArrowUp, faArrowsAlt, faArrowsAltH, faArrowsAltV, faAssistiveListeningSystems, faAsterisk, faAt, faAtlas, faAtom, faAudioDescription, faAward, faBaby, faBabyCarriage, faBackspace, faBackward, faBacon, faBacteria, faBacterium, faBahai, faBalanceScale, faBalanceScaleLeft, faBalanceScaleRight, faBan, faBandAid, faBarcode, faBars, faBaseballBall, faBasketballBall, faBath, faBatteryEmpty, faBatteryFull, faBatteryHalf, faBatteryQuarter, faBatteryThreeQuarters, faBed, faBeer, faBell, faBellSlash, faBezierCurve, faBible, faBicycle, faBiking, faBinoculars, faBiohazard, faBirthdayCake, faBlender, faBlenderPhone, faBlind, faBlog, faBold, faBolt, faBomb, faBone, faBong, faBook, faBookDead, faBookMedical, faBookOpen, faBookReader, faBookmark, faBorderAll, faBorderNone, faBorderStyle, faBowlingBall, faBox, faBoxOpen, faBoxTissue, faBoxes, faBraille, faBrain, faBreadSlice, faBriefcase, faBriefcaseMedical, faBroadcastTower, faBroom, faBrush, faBug, faBuilding, faBullhorn, faBullseye, faBurn, faBus, faBusAlt, faBusinessTime, faCalculator, faCalendar, faCalendarAlt, faCalendarCheck, faCalendarDay, faCalendarMinus, faCalendarPlus, faCalendarTimes, faCalendarWeek, faCamera, faCameraRetro, faCampground, faCandyCane, faCannabis, faCapsules, faCar, faCarAlt, faCarBattery, faCarCrash, faCarSide, faCaravan, faCaretDown, faCaretLeft, faCaretRight, faCaretSquareDown, faCaretSquareLeft, faCaretSquareRight, faCaretSquareUp, faCaretUp, faCarrot, faCartArrowDown, faCartPlus, faCashRegister, faCat, faCertificate, faChair, faChalkboard, faChalkboardTeacher, faChargingStation, faChartArea, faChartBar, faChartLine, faChartPie, faCheck, faCheckCircle, faCheckDouble, faCheckSquare, faCheese, faChess, faChessBishop, faChessBoard, faChessKing, faChessKnight, faChessPawn, faChessQueen, faChessRook, faChevronCircleDown, faChevronCircleLeft, faChevronCircleRight, faChevronCircleUp, faChevronDown, faChevronLeft, faChevronRight, faChevronUp, faChild, faChurch, faCircle, faCircleNotch, faCity, faClinicMedical, faClipboard, faClipboardCheck, faClipboardList, faClock, faClone, faClosedCaptioning, faCloud, faCloudDownloadAlt, faCloudMeatball, faCloudMoon, faCloudMoonRain, faCloudRain, faCloudShowersHeavy, faCloudSun, faCloudSunRain, faCloudUploadAlt, faCocktail, faCode, faCodeBranch, faCoffee, faCog, faCogs, faCoins, faColumns, faComment, faCommentAlt, faCommentDollar, faCommentDots, faCommentMedical, faCommentSlash, faComments, faCommentsDollar, faCompactDisc, faCompass, faCompress, faCompressAlt, faCompressArrowsAlt, faConciergeBell, faCookie, faCookieBite, faCopy, faCopyright, faCouch, faCreditCard, faCrop, faCropAlt, faCross, faCrosshairs, faCrow, faCrown, faCrutch, faCube, faCubes, faCut, faDatabase, faDeaf, faDemocrat, faDesktop, faDharmachakra, faDiagnoses, faDice, faDiceD20, faDiceD6, faDiceFive, faDiceFour, faDiceOne, faDiceSix, faDiceThree, faDiceTwo, faDigitalTachograph, faDirections, faDisease, faDivide, faDizzy, faDna, faDog, faDollarSign, faDolly, faDollyFlatbed, faDonate, faDoorClosed, faDoorOpen, faDotCircle, faDove, faDownload, faDraftingCompass, faDragon, faDrawPolygon, faDrum, faDrumSteelpan, faDrumstickBite, faDumbbell, faDumpster, faDumpsterFire, faDungeon, faEdit, faEgg, faEject, faEllipsisH, faEllipsisV, faEnvelope, faEnvelopeOpen, faEnvelopeOpenText, faEnvelopeSquare, faEquals, faEraser, faEthernet, faEuroSign, faExchangeAlt, faExclamation, faExclamationCircle, faExclamationTriangle, faExpand, faExpandAlt, faExpandArrowsAlt, faExternalLinkAlt, faExternalLinkSquareAlt, faEye, faEyeDropper, faEyeSlash, faFan, faFastBackward, faFastForward, faFaucet, faFax, faFeather, faFeatherAlt, faFemale, faFighterJet, faFile, faFileAlt, faFileArchive, faFileAudio, faFileCode, faFileContract, faFileCsv, faFileDownload, faFileExcel, faFileExport, faFileImage, faFileImport, faFileInvoice, faFileInvoiceDollar, faFileMedical, faFileMedicalAlt, faFilePdf, faFilePowerpoint, faFilePrescription, faFileSignature, faFileUpload, faFileVideo, faFileWord, faFill, faFillDrip, faFilm, faFilter, faFingerprint, faFire, faFireAlt, faFireExtinguisher, faFirstAid, faFish, faFistRaised, faFlag, faFlagCheckered, faFlagUsa, faFlask, faFlushed, faFolder, faFolderMinus, faFolderOpen, faFolderPlus, faFont, faFontAwesomeLogoFull, faFootballBall, faForward, faFrog, faFrown, faFrownOpen, faFunnelDollar, faFutbol, faGamepad, faGasPump, faGavel, faGem, faGenderless, faGhost, faGift, faGifts, faGlassCheers, faGlassMartini, faGlassMartiniAlt, faGlassWhiskey, faGlasses, faGlobe, faGlobeAfrica, faGlobeAmericas, faGlobeAsia, faGlobeEurope, faGolfBall, faGopuram, faGraduationCap, faGreaterThan, faGreaterThanEqual, faGrimace, faGrin, faGrinAlt, faGrinBeam, faGrinBeamSweat, faGrinHearts, faGrinSquint, faGrinSquintTears, faGrinStars, faGrinTears, faGrinTongue, faGrinTongueSquint, faGrinTongueWink, faGrinWink, faGripHorizontal, faGripLines, faGripLinesVertical, faGripVertical, faGuitar, faHSquare, faHamburger, faHammer, faHamsa, faHandHolding, faHandHoldingHeart, faHandHoldingMedical, faHandHoldingUsd, faHandHoldingWater, faHandLizard, faHandMiddleFinger, faHandPaper, faHandPeace, faHandPointDown, faHandPointLeft, faHandPointRight, faHandPointUp, faHandPointer, faHandRock, faHandScissors, faHandSparkles, faHandSpock, faHands, faHandsHelping, faHandsWash, faHandshake, faHandshakeAltSlash, faHandshakeSlash, faHanukiah, faHardHat, faHashtag, faHatCowboy, faHatCowboySide, faHatWizard, faHdd, faHeadSideCough, faHeadSideCoughSlash, faHeadSideMask, faHeadSideVirus, faHeading, faHeadphones, faHeadphonesAlt, faHeadset, faHeart, faHeartBroken, faHeartbeat, faHelicopter, faHighlighter, faHiking, faHippo, faHistory, faHockeyPuck, faHollyBerry, faHome, faHorse, faHorseHead, faHospital, faHospitalAlt, faHospitalSymbol, faHospitalUser, faHotTub, faHotdog, faHotel, faHourglass, faHourglassEnd, faHourglassHalf, faHourglassStart, faHouseDamage, faHouseUser, faHryvnia, faICursor, faIceCream, faIcicles, faIcons, faIdBadge, faIdCard, faIdCardAlt, faIgloo, faImage, faImages, faInbox, faIndent, faIndustry, faInfinity, faInfo, faInfoCircle, faItalic, faJedi, faJoint, faJournalWhills, faKaaba, faKey, faKeyboard, faKhanda, faKiss, faKissBeam, faKissWinkHeart, faKiwiBird, faLandmark, faLanguage, faLaptop, faLaptopCode, faLaptopHouse, faLaptopMedical, faLaugh, faLaughBeam, faLaughSquint, faLaughWink, faLayerGroup, faLeaf, faLemon, faLessThan, faLessThanEqual, faLevelDownAlt, faLevelUpAlt, faLifeRing, faLightbulb, faLink, faLiraSign, faList, faListAlt, faListOl, faListUl, faLocationArrow, faLock, faLockOpen, faLongArrowAltDown, faLongArrowAltLeft, faLongArrowAltRight, faLongArrowAltUp, faLowVision, faLuggageCart, faLungs, faLungsVirus, faMagic, faMagnet, faMailBulk, faMale, faMap, faMapMarked, faMapMarkedAlt, faMapMarker, faMapMarkerAlt, faMapPin, faMapSigns, faMarker, faMars, faMarsDouble, faMarsStroke, faMarsStrokeH, faMarsStrokeV, faMask, faMedal, faMedkit, faMeh, faMehBlank, faMehRollingEyes, faMemory, faMenorah, faMercury, faMeteor, faMicrochip, faMicrophone, faMicrophoneAlt, faMicrophoneAltSlash, faMicrophoneSlash, faMicroscope, faMinus, faMinusCircle, faMinusSquare, faMitten, faMobile, faMobileAlt, faMoneyBill, faMoneyBillAlt, faMoneyBillWave, faMoneyBillWaveAlt, faMoneyCheck, faMoneyCheckAlt, faMonument, faMoon, faMortarPestle, faMosque, faMotorcycle, faMountain, faMouse, faMousePointer, faMugHot, faMusic, faNetworkWired, faNeuter, faNewspaper, faNotEqual, faNotesMedical, faObjectGroup, faObjectUngroup, faOilCan, faOm, faOtter, faOutdent, faPager, faPaintBrush, faPaintRoller, faPalette, faPallet, faPaperPlane, faPaperclip, faParachuteBox, faParagraph, faParking, faPassport, faPastafarianism, faPaste, faPause, faPauseCircle, faPaw, faPeace, faPen, faPenAlt, faPenFancy, faPenNib, faPenSquare, faPencilAlt, faPencilRuler, faPeopleArrows, faPeopleCarry, faPepperHot, faPercent, faPercentage, faPersonBooth, faPhone, faPhoneAlt, faPhoneSlash, faPhoneSquare, faPhoneSquareAlt, faPhoneVolume, faPhotoVideo, faPiggyBank, faPills, faPizzaSlice, faPlaceOfWorship, faPlane, faPlaneArrival, faPlaneDeparture, faPlaneSlash, faPlay, faPlayCircle, faPlug, faPlus, faPlusCircle, faPlusSquare, faPodcast, faPoll, faPollH, faPoo, faPooStorm, faPoop, faPortrait, faPoundSign, faPowerOff, faPray, faPrayingHands, faPrescription, faPrescriptionBottle, faPrescriptionBottleAlt, faPrint, faProcedures, faProjectDiagram, faPumpMedical, faPumpSoap, faPuzzlePiece, faQrcode, faQuestion, faQuestionCircle, faQuidditch, faQuoteLeft, faQuoteRight, faQuran, faRadiation, faRadiationAlt, faRainbow, faRandom, faReceipt, faRecordVinyl, faRecycle, faRedo, faRedoAlt, faRegistered, faRemoveFormat, faReply, faReplyAll, faRepublican, faRestroom, faRetweet, faRibbon, faRing, faRoad, faRobot, faRocket, faRoute, faRss, faRssSquare, faRubleSign, faRuler, faRulerCombined, faRulerHorizontal, faRulerVertical, faRunning, faRupeeSign, faSadCry, faSadTear, faSatellite, faSatelliteDish, faSave, faSchool, faScrewdriver, faScroll, faSdCard, faSearch, faSearchDollar, faSearchLocation, faSearchMinus, faSearchPlus, faSeedling, faServer, faShapes, faShare, faShareAlt, faShareAltSquare, faShareSquare, faShekelSign, faShieldAlt, faShieldVirus, faShip, faShippingFast, faShoePrints, faShoppingBag, faShoppingBasket, faShoppingCart, faShower, faShuttleVan, faSign, faSignInAlt, faSignLanguage, faSignOutAlt, faSignal, faSignature, faSimCard, faSink, faSitemap, faSkating, faSkiing, faSkiingNordic, faSkull, faSkullCrossbones, faSlash, faSleigh, faSlidersH, faSmile, faSmileBeam, faSmileWink, faSmog, faSmoking, faSmokingBan, faSms, faSnowboarding, faSnowflake, faSnowman, faSnowplow, faSoap, faSocks, faSolarPanel, faSort, faSortAlphaDown, faSortAlphaDownAlt, faSortAlphaUp, faSortAlphaUpAlt, faSortAmountDown, faSortAmountDownAlt, faSortAmountUp, faSortAmountUpAlt, faSortDown, faSortNumericDown, faSortNumericDownAlt, faSortNumericUp, faSortNumericUpAlt, faSortUp, faSpa, faSpaceShuttle, faSpellCheck, faSpider, faSpinner, faSplotch, faSprayCan, faSquare, faSquareFull, faSquareRootAlt, faStamp, faStar, faStarAndCrescent, faStarHalf, faStarHalfAlt, faStarOfDavid, faStarOfLife, faStepBackward, faStepForward, faStethoscope, faStickyNote, faStop, faStopCircle, faStopwatch, faStopwatch20, faStore, faStoreAlt, faStoreAltSlash, faStoreSlash, faStream, faStreetView, faStrikethrough, faStroopwafel, faSubscript, faSubway, faSuitcase, faSuitcaseRolling, faSun, faSuperscript, faSurprise, faSwatchbook, faSwimmer, faSwimmingPool, faSynagogue, faSync, faSyncAlt, faSyringe, faTable, faTableTennis, faTablet, faTabletAlt, faTablets, faTachometerAlt, faTag, faTags, faTape, faTasks, faTaxi, faTeeth, faTeethOpen, faTemperatureHigh, faTemperatureLow, faTenge, faTerminal, faTextHeight, faTextWidth, faTh, faThLarge, faThList, faTheaterMasks, faThermometer, faThermometerEmpty, faThermometerFull, faThermometerHalf, faThermometerQuarter, faThermometerThreeQuarters, faThumbsDown, faThumbsUp, faThumbtack, faTicketAlt, faTimes, faTimesCircle, faTint, faTintSlash, faTired, faToggleOff, faToggleOn, faToilet, faToiletPaper, faToiletPaperSlash, faToolbox, faTools, faTooth, faTorah, faToriiGate, faTractor, faTrademark, faTrafficLight, faTrailer, faTrain, faTram, faTransgender, faTransgenderAlt, faTrash, faTrashAlt, faTrashRestore, faTrashRestoreAlt, faTree, faTrophy, faTruck, faTruckLoading, faTruckMonster, faTruckMoving, faTruckPickup, faTshirt, faTty, faTv, faUmbrella, faUmbrellaBeach, faUnderline, faUndo, faUndoAlt, faUniversalAccess, faUniversity, faUnlink, faUnlock, faUnlockAlt, faUpload, faUser, faUserAlt, faUserAltSlash, faUserAstronaut, faUserCheck, faUserCircle, faUserClock, faUserCog, faUserEdit, faUserFriends, faUserGraduate, faUserInjured, faUserLock, faUserMd, faUserMinus, faUserNinja, faUserNurse, faUserPlus, faUserSecret, faUserShield, faUserSlash, faUserTag, faUserTie, faUserTimes, faUsers, faUsersCog, faUsersSlash, faUtensilSpoon, faUtensils, faVectorSquare, faVenus, faVenusDouble, faVenusMars, faVial, faVials, faVideo, faVideoSlash, faVihara, faVirus, faVirusSlash, faViruses, faVoicemail, faVolleyballBall, faVolumeDown, faVolumeMute, faVolumeOff, faVolumeUp, faVoteYea, faVrCardboard, faWalking, faWallet, faWarehouse, faWater, faWaveSquare, faWeight, faWeightHanging, faWheelchair, faWifi, faWind, faWindowClose, faWindowMaximize, faWindowMinimize, faWindowRestore, faWineBottle, faWineGlass, faWineGlassAlt, faWonSign, faWrench, faXRay, faYenSign, faYinYang */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/@fortawesome/free-solid-svg-icons/index.es.js ***!
+  \***************************************************************************************************************/
+/*! exports provided: fas, prefix, faAd, faAddressBook, faAddressCard, faAdjust, faAirFreshener, faAlignCenter, faAlignJustify, faAlignLeft, faAlignRight, faAllergies, faAmbulance, faAmericanSignLanguageInterpreting, faAnchor, faAngleDoubleDown, faAngleDoubleLeft, faAngleDoubleRight, faAngleDoubleUp, faAngleDown, faAngleLeft, faAngleRight, faAngleUp, faAngry, faAnkh, faAppleAlt, faArchive, faArchway, faArrowAltCircleDown, faArrowAltCircleLeft, faArrowAltCircleRight, faArrowAltCircleUp, faArrowCircleDown, faArrowCircleLeft, faArrowCircleRight, faArrowCircleUp, faArrowDown, faArrowLeft, faArrowRight, faArrowUp, faArrowsAlt, faArrowsAltH, faArrowsAltV, faAssistiveListeningSystems, faAsterisk, faAt, faAtlas, faAtom, faAudioDescription, faAward, faBaby, faBabyCarriage, faBackspace, faBackward, faBacon, faBacteria, faBacterium, faBahai, faBalanceScale, faBalanceScaleLeft, faBalanceScaleRight, faBan, faBandAid, faBarcode, faBars, faBaseballBall, faBasketballBall, faBath, faBatteryEmpty, faBatteryFull, faBatteryHalf, faBatteryQuarter, faBatteryThreeQuarters, faBed, faBeer, faBell, faBellSlash, faBezierCurve, faBible, faBicycle, faBiking, faBinoculars, faBiohazard, faBirthdayCake, faBlender, faBlenderPhone, faBlind, faBlog, faBold, faBolt, faBomb, faBone, faBong, faBook, faBookDead, faBookMedical, faBookOpen, faBookReader, faBookmark, faBorderAll, faBorderNone, faBorderStyle, faBowlingBall, faBox, faBoxOpen, faBoxTissue, faBoxes, faBraille, faBrain, faBreadSlice, faBriefcase, faBriefcaseMedical, faBroadcastTower, faBroom, faBrush, faBug, faBuilding, faBullhorn, faBullseye, faBurn, faBus, faBusAlt, faBusinessTime, faCalculator, faCalendar, faCalendarAlt, faCalendarCheck, faCalendarDay, faCalendarMinus, faCalendarPlus, faCalendarTimes, faCalendarWeek, faCamera, faCameraRetro, faCampground, faCandyCane, faCannabis, faCapsules, faCar, faCarAlt, faCarBattery, faCarCrash, faCarSide, faCaravan, faCaretDown, faCaretLeft, faCaretRight, faCaretSquareDown, faCaretSquareLeft, faCaretSquareRight, faCaretSquareUp, faCaretUp, faCarrot, faCartArrowDown, faCartPlus, faCashRegister, faCat, faCertificate, faChair, faChalkboard, faChalkboardTeacher, faChargingStation, faChartArea, faChartBar, faChartLine, faChartPie, faCheck, faCheckCircle, faCheckDouble, faCheckSquare, faCheese, faChess, faChessBishop, faChessBoard, faChessKing, faChessKnight, faChessPawn, faChessQueen, faChessRook, faChevronCircleDown, faChevronCircleLeft, faChevronCircleRight, faChevronCircleUp, faChevronDown, faChevronLeft, faChevronRight, faChevronUp, faChild, faChurch, faCircle, faCircleNotch, faCity, faClinicMedical, faClipboard, faClipboardCheck, faClipboardList, faClock, faClone, faClosedCaptioning, faCloud, faCloudDownloadAlt, faCloudMeatball, faCloudMoon, faCloudMoonRain, faCloudRain, faCloudShowersHeavy, faCloudSun, faCloudSunRain, faCloudUploadAlt, faCocktail, faCode, faCodeBranch, faCoffee, faCog, faCogs, faCoins, faColumns, faComment, faCommentAlt, faCommentDollar, faCommentDots, faCommentMedical, faCommentSlash, faComments, faCommentsDollar, faCompactDisc, faCompass, faCompress, faCompressAlt, faCompressArrowsAlt, faConciergeBell, faCookie, faCookieBite, faCopy, faCopyright, faCouch, faCreditCard, faCrop, faCropAlt, faCross, faCrosshairs, faCrow, faCrown, faCrutch, faCube, faCubes, faCut, faDatabase, faDeaf, faDemocrat, faDesktop, faDharmachakra, faDiagnoses, faDice, faDiceD20, faDiceD6, faDiceFive, faDiceFour, faDiceOne, faDiceSix, faDiceThree, faDiceTwo, faDigitalTachograph, faDirections, faDisease, faDivide, faDizzy, faDna, faDog, faDollarSign, faDolly, faDollyFlatbed, faDonate, faDoorClosed, faDoorOpen, faDotCircle, faDove, faDownload, faDraftingCompass, faDragon, faDrawPolygon, faDrum, faDrumSteelpan, faDrumstickBite, faDumbbell, faDumpster, faDumpsterFire, faDungeon, faEdit, faEgg, faEject, faEllipsisH, faEllipsisV, faEnvelope, faEnvelopeOpen, faEnvelopeOpenText, faEnvelopeSquare, faEquals, faEraser, faEthernet, faEuroSign, faExchangeAlt, faExclamation, faExclamationCircle, faExclamationTriangle, faExpand, faExpandAlt, faExpandArrowsAlt, faExternalLinkAlt, faExternalLinkSquareAlt, faEye, faEyeDropper, faEyeSlash, faFan, faFastBackward, faFastForward, faFaucet, faFax, faFeather, faFeatherAlt, faFemale, faFighterJet, faFile, faFileAlt, faFileArchive, faFileAudio, faFileCode, faFileContract, faFileCsv, faFileDownload, faFileExcel, faFileExport, faFileImage, faFileImport, faFileInvoice, faFileInvoiceDollar, faFileMedical, faFileMedicalAlt, faFilePdf, faFilePowerpoint, faFilePrescription, faFileSignature, faFileUpload, faFileVideo, faFileWord, faFill, faFillDrip, faFilm, faFilter, faFingerprint, faFire, faFireAlt, faFireExtinguisher, faFirstAid, faFish, faFistRaised, faFlag, faFlagCheckered, faFlagUsa, faFlask, faFlushed, faFolder, faFolderMinus, faFolderOpen, faFolderPlus, faFont, faFontAwesomeLogoFull, faFootballBall, faForward, faFrog, faFrown, faFrownOpen, faFunnelDollar, faFutbol, faGamepad, faGasPump, faGavel, faGem, faGenderless, faGhost, faGift, faGifts, faGlassCheers, faGlassMartini, faGlassMartiniAlt, faGlassWhiskey, faGlasses, faGlobe, faGlobeAfrica, faGlobeAmericas, faGlobeAsia, faGlobeEurope, faGolfBall, faGopuram, faGraduationCap, faGreaterThan, faGreaterThanEqual, faGrimace, faGrin, faGrinAlt, faGrinBeam, faGrinBeamSweat, faGrinHearts, faGrinSquint, faGrinSquintTears, faGrinStars, faGrinTears, faGrinTongue, faGrinTongueSquint, faGrinTongueWink, faGrinWink, faGripHorizontal, faGripLines, faGripLinesVertical, faGripVertical, faGuitar, faHSquare, faHamburger, faHammer, faHamsa, faHandHolding, faHandHoldingHeart, faHandHoldingMedical, faHandHoldingUsd, faHandHoldingWater, faHandLizard, faHandMiddleFinger, faHandPaper, faHandPeace, faHandPointDown, faHandPointLeft, faHandPointRight, faHandPointUp, faHandPointer, faHandRock, faHandScissors, faHandSparkles, faHandSpock, faHands, faHandsHelping, faHandsWash, faHandshake, faHandshakeAltSlash, faHandshakeSlash, faHanukiah, faHardHat, faHashtag, faHatCowboy, faHatCowboySide, faHatWizard, faHdd, faHeadSideCough, faHeadSideCoughSlash, faHeadSideMask, faHeadSideVirus, faHeading, faHeadphones, faHeadphonesAlt, faHeadset, faHeart, faHeartBroken, faHeartbeat, faHelicopter, faHighlighter, faHiking, faHippo, faHistory, faHockeyPuck, faHollyBerry, faHome, faHorse, faHorseHead, faHospital, faHospitalAlt, faHospitalSymbol, faHospitalUser, faHotTub, faHotdog, faHotel, faHourglass, faHourglassEnd, faHourglassHalf, faHourglassStart, faHouseDamage, faHouseUser, faHryvnia, faICursor, faIceCream, faIcicles, faIcons, faIdBadge, faIdCard, faIdCardAlt, faIgloo, faImage, faImages, faInbox, faIndent, faIndustry, faInfinity, faInfo, faInfoCircle, faItalic, faJedi, faJoint, faJournalWhills, faKaaba, faKey, faKeyboard, faKhanda, faKiss, faKissBeam, faKissWinkHeart, faKiwiBird, faLandmark, faLanguage, faLaptop, faLaptopCode, faLaptopHouse, faLaptopMedical, faLaugh, faLaughBeam, faLaughSquint, faLaughWink, faLayerGroup, faLeaf, faLemon, faLessThan, faLessThanEqual, faLevelDownAlt, faLevelUpAlt, faLifeRing, faLightbulb, faLink, faLiraSign, faList, faListAlt, faListOl, faListUl, faLocationArrow, faLock, faLockOpen, faLongArrowAltDown, faLongArrowAltLeft, faLongArrowAltRight, faLongArrowAltUp, faLowVision, faLuggageCart, faLungs, faLungsVirus, faMagic, faMagnet, faMailBulk, faMale, faMap, faMapMarked, faMapMarkedAlt, faMapMarker, faMapMarkerAlt, faMapPin, faMapSigns, faMarker, faMars, faMarsDouble, faMarsStroke, faMarsStrokeH, faMarsStrokeV, faMask, faMedal, faMedkit, faMeh, faMehBlank, faMehRollingEyes, faMemory, faMenorah, faMercury, faMeteor, faMicrochip, faMicrophone, faMicrophoneAlt, faMicrophoneAltSlash, faMicrophoneSlash, faMicroscope, faMinus, faMinusCircle, faMinusSquare, faMitten, faMobile, faMobileAlt, faMoneyBill, faMoneyBillAlt, faMoneyBillWave, faMoneyBillWaveAlt, faMoneyCheck, faMoneyCheckAlt, faMonument, faMoon, faMortarPestle, faMosque, faMotorcycle, faMountain, faMouse, faMousePointer, faMugHot, faMusic, faNetworkWired, faNeuter, faNewspaper, faNotEqual, faNotesMedical, faObjectGroup, faObjectUngroup, faOilCan, faOm, faOtter, faOutdent, faPager, faPaintBrush, faPaintRoller, faPalette, faPallet, faPaperPlane, faPaperclip, faParachuteBox, faParagraph, faParking, faPassport, faPastafarianism, faPaste, faPause, faPauseCircle, faPaw, faPeace, faPen, faPenAlt, faPenFancy, faPenNib, faPenSquare, faPencilAlt, faPencilRuler, faPeopleArrows, faPeopleCarry, faPepperHot, faPercent, faPercentage, faPersonBooth, faPhone, faPhoneAlt, faPhoneSlash, faPhoneSquare, faPhoneSquareAlt, faPhoneVolume, faPhotoVideo, faPiggyBank, faPills, faPizzaSlice, faPlaceOfWorship, faPlane, faPlaneArrival, faPlaneDeparture, faPlaneSlash, faPlay, faPlayCircle, faPlug, faPlus, faPlusCircle, faPlusSquare, faPodcast, faPoll, faPollH, faPoo, faPooStorm, faPoop, faPortrait, faPoundSign, faPowerOff, faPray, faPrayingHands, faPrescription, faPrescriptionBottle, faPrescriptionBottleAlt, faPrint, faProcedures, faProjectDiagram, faPumpMedical, faPumpSoap, faPuzzlePiece, faQrcode, faQuestion, faQuestionCircle, faQuidditch, faQuoteLeft, faQuoteRight, faQuran, faRadiation, faRadiationAlt, faRainbow, faRandom, faReceipt, faRecordVinyl, faRecycle, faRedo, faRedoAlt, faRegistered, faRemoveFormat, faReply, faReplyAll, faRepublican, faRestroom, faRetweet, faRibbon, faRing, faRoad, faRobot, faRocket, faRoute, faRss, faRssSquare, faRubleSign, faRuler, faRulerCombined, faRulerHorizontal, faRulerVertical, faRunning, faRupeeSign, faSadCry, faSadTear, faSatellite, faSatelliteDish, faSave, faSchool, faScrewdriver, faScroll, faSdCard, faSearch, faSearchDollar, faSearchLocation, faSearchMinus, faSearchPlus, faSeedling, faServer, faShapes, faShare, faShareAlt, faShareAltSquare, faShareSquare, faShekelSign, faShieldAlt, faShieldVirus, faShip, faShippingFast, faShoePrints, faShoppingBag, faShoppingBasket, faShoppingCart, faShower, faShuttleVan, faSign, faSignInAlt, faSignLanguage, faSignOutAlt, faSignal, faSignature, faSimCard, faSink, faSitemap, faSkating, faSkiing, faSkiingNordic, faSkull, faSkullCrossbones, faSlash, faSleigh, faSlidersH, faSmile, faSmileBeam, faSmileWink, faSmog, faSmoking, faSmokingBan, faSms, faSnowboarding, faSnowflake, faSnowman, faSnowplow, faSoap, faSocks, faSolarPanel, faSort, faSortAlphaDown, faSortAlphaDownAlt, faSortAlphaUp, faSortAlphaUpAlt, faSortAmountDown, faSortAmountDownAlt, faSortAmountUp, faSortAmountUpAlt, faSortDown, faSortNumericDown, faSortNumericDownAlt, faSortNumericUp, faSortNumericUpAlt, faSortUp, faSpa, faSpaceShuttle, faSpellCheck, faSpider, faSpinner, faSplotch, faSprayCan, faSquare, faSquareFull, faSquareRootAlt, faStamp, faStar, faStarAndCrescent, faStarHalf, faStarHalfAlt, faStarOfDavid, faStarOfLife, faStepBackward, faStepForward, faStethoscope, faStickyNote, faStop, faStopCircle, faStopwatch, faStopwatch20, faStore, faStoreAlt, faStoreAltSlash, faStoreSlash, faStream, faStreetView, faStrikethrough, faStroopwafel, faSubscript, faSubway, faSuitcase, faSuitcaseRolling, faSun, faSuperscript, faSurprise, faSwatchbook, faSwimmer, faSwimmingPool, faSynagogue, faSync, faSyncAlt, faSyringe, faTable, faTableTennis, faTablet, faTabletAlt, faTablets, faTachometerAlt, faTag, faTags, faTape, faTasks, faTaxi, faTeeth, faTeethOpen, faTemperatureHigh, faTemperatureLow, faTenge, faTerminal, faTextHeight, faTextWidth, faTh, faThLarge, faThList, faTheaterMasks, faThermometer, faThermometerEmpty, faThermometerFull, faThermometerHalf, faThermometerQuarter, faThermometerThreeQuarters, faThumbsDown, faThumbsUp, faThumbtack, faTicketAlt, faTimes, faTimesCircle, faTint, faTintSlash, faTired, faToggleOff, faToggleOn, faToilet, faToiletPaper, faToiletPaperSlash, faToolbox, faTools, faTooth, faTorah, faToriiGate, faTractor, faTrademark, faTrafficLight, faTrailer, faTrain, faTram, faTransgender, faTransgenderAlt, faTrash, faTrashAlt, faTrashRestore, faTrashRestoreAlt, faTree, faTrophy, faTruck, faTruckLoading, faTruckMonster, faTruckMoving, faTruckPickup, faTshirt, faTty, faTv, faUmbrella, faUmbrellaBeach, faUnderline, faUndo, faUndoAlt, faUniversalAccess, faUniversity, faUnlink, faUnlock, faUnlockAlt, faUpload, faUser, faUserAlt, faUserAltSlash, faUserAstronaut, faUserCheck, faUserCircle, faUserClock, faUserCog, faUserEdit, faUserFriends, faUserGraduate, faUserInjured, faUserLock, faUserMd, faUserMinus, faUserNinja, faUserNurse, faUserPlus, faUserSecret, faUserShield, faUserSlash, faUserTag, faUserTie, faUserTimes, faUsers, faUsersCog, faUsersSlash, faUtensilSpoon, faUtensils, faVectorSquare, faVenus, faVenusDouble, faVenusMars, faVest, faVestPatches, faVial, faVials, faVideo, faVideoSlash, faVihara, faVirus, faVirusSlash, faViruses, faVoicemail, faVolleyballBall, faVolumeDown, faVolumeMute, faVolumeOff, faVolumeUp, faVoteYea, faVrCardboard, faWalking, faWallet, faWarehouse, faWater, faWaveSquare, faWeight, faWeightHanging, faWheelchair, faWifi, faWind, faWindowClose, faWindowMaximize, faWindowMinimize, faWindowRestore, faWineBottle, faWineGlass, faWineGlassAlt, faWonSign, faWrench, faXRay, faYenSign, faYinYang */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3529,6 +3529,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faVenus", function() { return faVenus; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faVenusDouble", function() { return faVenusDouble; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faVenusMars", function() { return faVenusMars; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faVest", function() { return faVest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faVestPatches", function() { return faVestPatches; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faVial", function() { return faVial; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faVials", function() { return faVials; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faVideo", function() { return faVideo; });
@@ -3567,6 +3569,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faXRay", function() { return faXRay; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faYenSign", function() { return faYenSign; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "faYinYang", function() { return faYinYang; });
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 var prefix = "fas";
 var faAd = {
   prefix: 'fas',
@@ -3591,7 +3597,7 @@ var faAdjust = {
 var faAirFreshener = {
   prefix: 'fas',
   iconName: 'air-freshener',
-  icon: [384, 512, [], "f5d0", "M378.94 321.41L284.7 224h49.22c15.3 0 23.66-16.6 13.86-27.53L234.45 69.96c3.43-6.61 5.55-14 5.55-21.96 0-26.51-21.49-48-48-48s-48 21.49-48 48c0 7.96 2.12 15.35 5.55 21.96L36.22 196.47C26.42 207.4 34.78 224 50.08 224H99.3L5.06 321.41C-6.69 333.56 3.34 352 21.7 352H160v32H48c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h288c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16H224v-32h138.3c18.36 0 28.39-18.44 16.64-30.59zM192 31.98c8.85 0 16.02 7.17 16.02 16.02 0 8.84-7.17 16.02-16.02 16.02S175.98 56.84 175.98 48c0-8.85 7.17-16.02 16.02-16.02zM304 432v32H80v-32h224z"]
+  icon: [512, 512, [], "f5d0", "M224 160H96C43 160 0 203 0 256V480C0 497.625 14.375 512 32 512H288C305.625 512 320 497.625 320 480V256C320 203 277 160 224 160ZM160 416C115.875 416 80 380.125 80 336S115.875 256 160 256S240 291.875 240 336S204.125 416 160 416ZM224 32C224 14.375 209.625 0 192 0H128C110.375 0 96 14.375 96 32V128H224V32ZM381.781 51.578C383 50.969 384 49.359 384 48C384 46.625 383 45.031 381.781 44.422L352 32L339.562 2.219C338.969 1 337.375 0 336 0S333.031 1 332.406 2.219L320 32L290.219 44.422C289 45.031 288 46.625 288 48C288 49.359 289 50.969 290.219 51.578L320 64L332.406 93.781C333.031 95 334.625 96 336 96S338.969 95 339.562 93.781L352 64L381.781 51.578ZM448 64L460.406 93.781C461.031 95 462.625 96 464 96S466.969 95 467.562 93.781L480 64L509.781 51.578C511 50.969 512 49.359 512 48C512 46.625 511 45.031 509.781 44.422L480 32L467.562 2.219C466.969 1 465.375 0 464 0S461.031 1 460.406 2.219L448 32L418.219 44.422C417 45.031 416 46.625 416 48C416 49.359 417 50.969 418.219 51.578L448 64ZM480 224L467.562 194.219C466.969 193 465.375 192 464 192S461.031 193 460.406 194.219L448 224L418.219 236.422C417 237.031 416 238.625 416 240C416 241.359 417 242.969 418.219 243.578L448 256L460.406 285.781C461.031 287 462.625 288 464 288S466.969 287 467.562 285.781L480 256L509.781 243.578C511 242.969 512 241.359 512 240C512 238.625 511 237.031 509.781 236.422L480 224ZM445.781 147.578C447 146.969 448 145.359 448 144C448 142.625 447 141.031 445.781 140.422L416 128L403.562 98.219C402.969 97 401.375 96 400 96S397.031 97 396.406 98.219L384 128L354.219 140.422C353 141.031 352 142.625 352 144C352 145.359 353 146.969 354.219 147.578L384 160L396.406 189.781C397.031 191 398.625 192 400 192S402.969 191 403.562 189.781L416 160L445.781 147.578Z"]
 };
 var faAlignCenter = {
   prefix: 'fas',
@@ -3836,12 +3842,12 @@ var faBacon = {
 var faBacteria = {
   prefix: 'fas',
   iconName: 'bacteria',
-  icon: [640, 512, [], "f959", "M272.35,226.4A17.71,17.71,0,0,0,281.46,203l-4-9.08a121.29,121.29,0,0,1,12.36-3.08A83.34,83.34,0,0,0,323.57,177l10,9a17.76,17.76,0,1,0,23.92-26.27l-9.72-8.76a83.12,83.12,0,0,0,11.65-48.18l11.85-3.51a17.73,17.73,0,1,0-10.15-34l-11.34,3.36a84,84,0,0,0-36.38-35.57l2.84-10.85a17.8,17.8,0,0,0-34.47-8.93l-2.82,10.78a83.25,83.25,0,0,0-16.74,1.1C250.83,27,240,30.22,229.1,33.39l-3.38-9.46a17.8,17.8,0,0,0-33.56,11.89l3.49,9.8a286.74,286.74,0,0,0-43.94,23.57l-6.32-8.43a17.9,17.9,0,0,0-24.94-3.6A17.69,17.69,0,0,0,116.84,82l6.45,8.61a286.59,286.59,0,0,0-34.95,35.33l-8.82-6.42a17.84,17.84,0,0,0-24.89,3.86,17.66,17.66,0,0,0,3.88,24.77l8.88,6.47a286.6,286.6,0,0,0-23,43.91l-10.48-3.59a17.73,17.73,0,1,0-11.59,33.52L32.67,232c-2.79,10-5.79,19.84-7.52,30.22a83.16,83.16,0,0,0-.82,19l-11.58,3.43a17.73,17.73,0,1,0,10.13,34l11.27-3.33a83.51,83.51,0,0,0,36.39,35.43l-2.88,11.06a17.81,17.81,0,0,0,34.48,8.92l2.87-11c1,0,2.07.26,3.1.26a83.39,83.39,0,0,0,45.65-13.88l8.59,8.8a17.77,17.77,0,0,0,25.56-24.7l-9.14-9.37a83.41,83.41,0,0,0,12.08-31.05,119.08,119.08,0,0,1,3.87-15.53l9,4.22a17.74,17.74,0,1,0,15.15-32.09l-8.8-4.11c.67-1,1.2-2.08,1.9-3.05a119.89,119.89,0,0,1,7.87-9.41,121.73,121.73,0,0,1,11.65-11.4,119.49,119.49,0,0,1,9.94-7.82c1.12-.77,2.32-1.42,3.47-2.15l3.92,8.85a17.86,17.86,0,0,0,16.32,10.58A18.14,18.14,0,0,0,272.35,226.4ZM128,256a32,32,0,1,1,32-32A32,32,0,0,1,128,256Zm80-96a16,16,0,1,1,16-16A16,16,0,0,1,208,160Zm431.26,45.3a17.79,17.79,0,0,0-17.06-12.69,17.55,17.55,0,0,0-5.08.74l-11.27,3.33a83.61,83.61,0,0,0-36.39-35.43l2.88-11.06a17.81,17.81,0,0,0-34.48-8.91l-2.87,11c-1,0-2.07-.26-3.1-.26a83.32,83.32,0,0,0-45.65,13.89l-8.59-8.81a17.77,17.77,0,0,0-25.56,24.7l9.14,9.37a83.28,83.28,0,0,0-12.08,31.06,119.34,119.34,0,0,1-3.87,15.52l-9-4.22a17.74,17.74,0,1,0-15.15,32.09l8.8,4.11c-.67,1-1.2,2.08-1.89,3.05a117.71,117.71,0,0,1-7.94,9.47,119,119,0,0,1-11.57,11.33,121.59,121.59,0,0,1-10,7.83c-1.12.77-2.32,1.42-3.47,2.15l-3.92-8.85a17.86,17.86,0,0,0-16.32-10.58,18.14,18.14,0,0,0-7.18,1.5A17.71,17.71,0,0,0,358.54,309l4,9.08a118.71,118.71,0,0,1-12.36,3.08,83.34,83.34,0,0,0-33.77,13.9l-10-9a17.77,17.77,0,1,0-23.92,26.28l9.72,8.75a83.12,83.12,0,0,0-11.65,48.18l-11.86,3.51a17.73,17.73,0,1,0,10.16,34l11.34-3.36A84,84,0,0,0,326.61,479l-2.84,10.85a17.8,17.8,0,0,0,34.47,8.93L361.06,488a83.3,83.3,0,0,0,16.74-1.1c11.37-1.89,22.24-5.07,33.1-8.24l3.38,9.46a17.8,17.8,0,0,0,33.56-11.89l-3.49-9.79a287.66,287.66,0,0,0,43.94-23.58l6.32,8.43a17.88,17.88,0,0,0,24.93,3.6A17.67,17.67,0,0,0,523.16,430l-6.45-8.61a287.37,287.37,0,0,0,34.95-35.34l8.82,6.42a17.76,17.76,0,1,0,21-28.63l-8.88-6.46a287.17,287.17,0,0,0,23-43.92l10.48,3.59a17.73,17.73,0,1,0,11.59-33.52L607.33,280c2.79-10,5.79-19.84,7.52-30.21a83.27,83.27,0,0,0,.82-19.05l11.58-3.43A17.7,17.7,0,0,0,639.26,205.3ZM416,416a32,32,0,1,1,32-32A32,32,0,0,1,416,416Z"]
+  icon: [640, 512, [], "e059", "M272.35,226.4A17.71,17.71,0,0,0,281.46,203l-4-9.08a121.29,121.29,0,0,1,12.36-3.08A83.34,83.34,0,0,0,323.57,177l10,9a17.76,17.76,0,1,0,23.92-26.27l-9.72-8.76a83.12,83.12,0,0,0,11.65-48.18l11.85-3.51a17.73,17.73,0,1,0-10.15-34l-11.34,3.36a84,84,0,0,0-36.38-35.57l2.84-10.85a17.8,17.8,0,0,0-34.47-8.93l-2.82,10.78a83.25,83.25,0,0,0-16.74,1.1C250.83,27,240,30.22,229.1,33.39l-3.38-9.46a17.8,17.8,0,0,0-33.56,11.89l3.49,9.8a286.74,286.74,0,0,0-43.94,23.57l-6.32-8.43a17.9,17.9,0,0,0-24.94-3.6A17.69,17.69,0,0,0,116.84,82l6.45,8.61a286.59,286.59,0,0,0-34.95,35.33l-8.82-6.42a17.84,17.84,0,0,0-24.89,3.86,17.66,17.66,0,0,0,3.88,24.77l8.88,6.47a286.6,286.6,0,0,0-23,43.91l-10.48-3.59a17.73,17.73,0,1,0-11.59,33.52L32.67,232c-2.79,10-5.79,19.84-7.52,30.22a83.16,83.16,0,0,0-.82,19l-11.58,3.43a17.73,17.73,0,1,0,10.13,34l11.27-3.33a83.51,83.51,0,0,0,36.39,35.43l-2.88,11.06a17.81,17.81,0,0,0,34.48,8.92l2.87-11c1,0,2.07.26,3.1.26a83.39,83.39,0,0,0,45.65-13.88l8.59,8.8a17.77,17.77,0,0,0,25.56-24.7l-9.14-9.37a83.41,83.41,0,0,0,12.08-31.05,119.08,119.08,0,0,1,3.87-15.53l9,4.22a17.74,17.74,0,1,0,15.15-32.09l-8.8-4.11c.67-1,1.2-2.08,1.9-3.05a119.89,119.89,0,0,1,7.87-9.41,121.73,121.73,0,0,1,11.65-11.4,119.49,119.49,0,0,1,9.94-7.82c1.12-.77,2.32-1.42,3.47-2.15l3.92,8.85a17.86,17.86,0,0,0,16.32,10.58A18.14,18.14,0,0,0,272.35,226.4ZM128,256a32,32,0,1,1,32-32A32,32,0,0,1,128,256Zm80-96a16,16,0,1,1,16-16A16,16,0,0,1,208,160Zm431.26,45.3a17.79,17.79,0,0,0-17.06-12.69,17.55,17.55,0,0,0-5.08.74l-11.27,3.33a83.61,83.61,0,0,0-36.39-35.43l2.88-11.06a17.81,17.81,0,0,0-34.48-8.91l-2.87,11c-1,0-2.07-.26-3.1-.26a83.32,83.32,0,0,0-45.65,13.89l-8.59-8.81a17.77,17.77,0,0,0-25.56,24.7l9.14,9.37a83.28,83.28,0,0,0-12.08,31.06,119.34,119.34,0,0,1-3.87,15.52l-9-4.22a17.74,17.74,0,1,0-15.15,32.09l8.8,4.11c-.67,1-1.2,2.08-1.89,3.05a117.71,117.71,0,0,1-7.94,9.47,119,119,0,0,1-11.57,11.33,121.59,121.59,0,0,1-10,7.83c-1.12.77-2.32,1.42-3.47,2.15l-3.92-8.85a17.86,17.86,0,0,0-16.32-10.58,18.14,18.14,0,0,0-7.18,1.5A17.71,17.71,0,0,0,358.54,309l4,9.08a118.71,118.71,0,0,1-12.36,3.08,83.34,83.34,0,0,0-33.77,13.9l-10-9a17.77,17.77,0,1,0-23.92,26.28l9.72,8.75a83.12,83.12,0,0,0-11.65,48.18l-11.86,3.51a17.73,17.73,0,1,0,10.16,34l11.34-3.36A84,84,0,0,0,326.61,479l-2.84,10.85a17.8,17.8,0,0,0,34.47,8.93L361.06,488a83.3,83.3,0,0,0,16.74-1.1c11.37-1.89,22.24-5.07,33.1-8.24l3.38,9.46a17.8,17.8,0,0,0,33.56-11.89l-3.49-9.79a287.66,287.66,0,0,0,43.94-23.58l6.32,8.43a17.88,17.88,0,0,0,24.93,3.6A17.67,17.67,0,0,0,523.16,430l-6.45-8.61a287.37,287.37,0,0,0,34.95-35.34l8.82,6.42a17.76,17.76,0,1,0,21-28.63l-8.88-6.46a287.17,287.17,0,0,0,23-43.92l10.48,3.59a17.73,17.73,0,1,0,11.59-33.52L607.33,280c2.79-10,5.79-19.84,7.52-30.21a83.27,83.27,0,0,0,.82-19.05l11.58-3.43A17.7,17.7,0,0,0,639.26,205.3ZM416,416a32,32,0,1,1,32-32A32,32,0,0,1,416,416Z"]
 };
 var faBacterium = {
   prefix: 'fas',
   iconName: 'bacterium',
-  icon: [512, 512, [], "f95a", "M511,102.93A23.76,23.76,0,0,0,481.47,87l-15.12,4.48a111.85,111.85,0,0,0-48.5-47.42l3.79-14.47a23.74,23.74,0,0,0-46-11.91l-3.76,14.37a111.94,111.94,0,0,0-22.33,1.47,386.74,386.74,0,0,0-44.33,10.41l-4.3-12a23.74,23.74,0,0,0-44.75,15.85l4.3,12.05a383.4,383.4,0,0,0-58.69,31.83l-8-10.63a23.85,23.85,0,0,0-33.24-4.8,23.57,23.57,0,0,0-4.83,33.09l8,10.63a386.14,386.14,0,0,0-46.7,47.44l-11-8a23.68,23.68,0,1,0-28,38.17l11.09,8.06a383.45,383.45,0,0,0-30.92,58.75l-12.93-4.43a23.65,23.65,0,1,0-15.47,44.69l13,4.48a385.81,385.81,0,0,0-9.3,40.53A111.58,111.58,0,0,0,32.44,375L17,379.56a23.64,23.64,0,0,0,13.51,45.31l15-4.44a111.49,111.49,0,0,0,48.53,47.24l-3.85,14.75a23.66,23.66,0,0,0,17,28.83,24.7,24.7,0,0,0,6,.75,23.73,23.73,0,0,0,23-17.7L140,479.67c1.37.05,2.77.35,4.13.35A111.22,111.22,0,0,0,205,461.5l11.45,11.74a23.7,23.7,0,0,0,34.08-32.93l-12.19-12.5a111,111,0,0,0,16.11-41.4,158.69,158.69,0,0,1,5.16-20.71l12,5.64a23.66,23.66,0,1,0,20.19-42.79l-11.72-5.49c.89-1.32,1.59-2.77,2.52-4.06a157.86,157.86,0,0,1,10.46-12.49,159.5,159.5,0,0,1,15.59-15.28,162.18,162.18,0,0,1,13.23-10.4c1.5-1,3.1-1.89,4.63-2.87l5.23,11.8a23.74,23.74,0,0,0,43.48-19.08l-5.36-12.11a158.87,158.87,0,0,1,16.49-4.1,111,111,0,0,0,45-18.54l13.33,12a23.69,23.69,0,1,0,31.88-35l-12.94-11.67A110.83,110.83,0,0,0,479.21,137L495,132.32A23.61,23.61,0,0,0,511,102.93ZM160,368a48,48,0,1,1,48-48A48,48,0,0,1,160,368Zm80-136a24,24,0,1,1,24-24A24,24,0,0,1,240,232Z"]
+  icon: [512, 512, [], "e05a", "M511,102.93A23.76,23.76,0,0,0,481.47,87l-15.12,4.48a111.85,111.85,0,0,0-48.5-47.42l3.79-14.47a23.74,23.74,0,0,0-46-11.91l-3.76,14.37a111.94,111.94,0,0,0-22.33,1.47,386.74,386.74,0,0,0-44.33,10.41l-4.3-12a23.74,23.74,0,0,0-44.75,15.85l4.3,12.05a383.4,383.4,0,0,0-58.69,31.83l-8-10.63a23.85,23.85,0,0,0-33.24-4.8,23.57,23.57,0,0,0-4.83,33.09l8,10.63a386.14,386.14,0,0,0-46.7,47.44l-11-8a23.68,23.68,0,1,0-28,38.17l11.09,8.06a383.45,383.45,0,0,0-30.92,58.75l-12.93-4.43a23.65,23.65,0,1,0-15.47,44.69l13,4.48a385.81,385.81,0,0,0-9.3,40.53A111.58,111.58,0,0,0,32.44,375L17,379.56a23.64,23.64,0,0,0,13.51,45.31l15-4.44a111.49,111.49,0,0,0,48.53,47.24l-3.85,14.75a23.66,23.66,0,0,0,17,28.83,24.7,24.7,0,0,0,6,.75,23.73,23.73,0,0,0,23-17.7L140,479.67c1.37.05,2.77.35,4.13.35A111.22,111.22,0,0,0,205,461.5l11.45,11.74a23.7,23.7,0,0,0,34.08-32.93l-12.19-12.5a111,111,0,0,0,16.11-41.4,158.69,158.69,0,0,1,5.16-20.71l12,5.64a23.66,23.66,0,1,0,20.19-42.79l-11.72-5.49c.89-1.32,1.59-2.77,2.52-4.06a157.86,157.86,0,0,1,10.46-12.49,159.5,159.5,0,0,1,15.59-15.28,162.18,162.18,0,0,1,13.23-10.4c1.5-1,3.1-1.89,4.63-2.87l5.23,11.8a23.74,23.74,0,0,0,43.48-19.08l-5.36-12.11a158.87,158.87,0,0,1,16.49-4.1,111,111,0,0,0,45-18.54l13.33,12a23.69,23.69,0,1,0,31.88-35l-12.94-11.67A110.83,110.83,0,0,0,479.21,137L495,132.32A23.61,23.61,0,0,0,511,102.93ZM160,368a48,48,0,1,1,48-48A48,48,0,0,1,160,368Zm80-136a24,24,0,1,1,24-24A24,24,0,0,1,240,232Z"]
 };
 var faBahai = {
   prefix: 'fas',
@@ -4086,7 +4092,7 @@ var faBoxOpen = {
 var faBoxTissue = {
   prefix: 'fas',
   iconName: 'box-tissue',
-  icon: [512, 512, [], "f95b", "M383.88,287.82l64-192H338.47a70.2,70.2,0,0,1-66.59-48,70.21,70.21,0,0,0-66.6-48H63.88l64,288Zm-384,192a32,32,0,0,0,32,32h448a32,32,0,0,0,32-32v-64H-.12Zm480-256H438.94l-21.33,64h14.27a16,16,0,0,1,0,32h-352a16,16,0,1,1,0-32H95.09l-14.22-64h-49a32,32,0,0,0-32,32v128h512v-128A32,32,0,0,0,479.88,223.82Z"]
+  icon: [512, 512, [], "e05b", "M383.88,287.82l64-192H338.47a70.2,70.2,0,0,1-66.59-48,70.21,70.21,0,0,0-66.6-48H63.88l64,288Zm-384,192a32,32,0,0,0,32,32h448a32,32,0,0,0,32-32v-64H-.12Zm480-256H438.94l-21.33,64h14.27a16,16,0,0,1,0,32h-352a16,16,0,1,1,0-32H95.09l-14.22-64h-49a32,32,0,0,0-32,32v128h512v-128A32,32,0,0,0,479.88,223.82Z"]
 };
 var faBoxes = {
   prefix: 'fas',
@@ -5141,7 +5147,7 @@ var faFastForward = {
 var faFaucet = {
   prefix: 'fas',
   iconName: 'faucet',
-  icon: [512, 512, [], "f905", "M352,256H313.39c-15.71-13.44-35.46-23.07-57.39-28V180.44l-32-3.38-32,3.38V228c-21.93,5-41.68,14.6-57.39,28H16A16,16,0,0,0,0,272v96a16,16,0,0,0,16,16h92.79C129.38,421.73,173,448,224,448s94.62-26.27,115.21-64H352a32,32,0,0,1,32,32,32,32,0,0,0,32,32h64a32,32,0,0,0,32-32A160,160,0,0,0,352,256ZM81.59,159.91l142.41-15,142.41,15c9.42,1,17.59-6.81,17.59-16.8V112.89c0-10-8.17-17.8-17.59-16.81L256,107.74V80a16,16,0,0,0-16-16H208a16,16,0,0,0-16,16v27.74L81.59,96.08C72.17,95.09,64,102.9,64,112.89v30.22C64,153.1,72.17,160.91,81.59,159.91Z"]
+  icon: [512, 512, [], "e005", "M352,256H313.39c-15.71-13.44-35.46-23.07-57.39-28V180.44l-32-3.38-32,3.38V228c-21.93,5-41.68,14.6-57.39,28H16A16,16,0,0,0,0,272v96a16,16,0,0,0,16,16h92.79C129.38,421.73,173,448,224,448s94.62-26.27,115.21-64H352a32,32,0,0,1,32,32,32,32,0,0,0,32,32h64a32,32,0,0,0,32-32A160,160,0,0,0,352,256ZM81.59,159.91l142.41-15,142.41,15c9.42,1,17.59-6.81,17.59-16.8V112.89c0-10-8.17-17.8-17.59-16.81L256,107.74V80a16,16,0,0,0-16-16H208a16,16,0,0,0-16,16v27.74L81.59,96.08C72.17,95.09,64,102.9,64,112.89v30.22C64,153.1,72.17,160.91,81.59,159.91Z"]
 };
 var faFax = {
   prefix: 'fas',
@@ -5671,7 +5677,7 @@ var faHandHoldingHeart = {
 var faHandHoldingMedical = {
   prefix: 'fas',
   iconName: 'hand-holding-medical',
-  icon: [576, 512, [], "f95c", "M159.88,175.82h64v64a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-64h64a16,16,0,0,0,16-16v-64a16,16,0,0,0-16-16h-64v-64a16,16,0,0,0-16-16h-64a16,16,0,0,0-16,16v64h-64a16,16,0,0,0-16,16v64A16,16,0,0,0,159.88,175.82ZM568.07,336.13a39.91,39.91,0,0,0-55.93-8.47L392.47,415.84H271.86a16,16,0,0,1,0-32H350.1c16,0,30.75-10.87,33.37-26.61a32.06,32.06,0,0,0-31.62-37.38h-160a117.7,117.7,0,0,0-74.12,26.25l-46.5,37.74H15.87a16.11,16.11,0,0,0-16,16v96a16.11,16.11,0,0,0,16,16h347a104.8,104.8,0,0,0,61.7-20.27L559.6,392A40,40,0,0,0,568.07,336.13Z"]
+  icon: [576, 512, [], "e05c", "M159.88,175.82h64v64a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16v-64h64a16,16,0,0,0,16-16v-64a16,16,0,0,0-16-16h-64v-64a16,16,0,0,0-16-16h-64a16,16,0,0,0-16,16v64h-64a16,16,0,0,0-16,16v64A16,16,0,0,0,159.88,175.82ZM568.07,336.13a39.91,39.91,0,0,0-55.93-8.47L392.47,415.84H271.86a16,16,0,0,1,0-32H350.1c16,0,30.75-10.87,33.37-26.61a32.06,32.06,0,0,0-31.62-37.38h-160a117.7,117.7,0,0,0-74.12,26.25l-46.5,37.74H15.87a16.11,16.11,0,0,0-16,16v96a16.11,16.11,0,0,0,16,16h347a104.8,104.8,0,0,0,61.7-20.27L559.6,392A40,40,0,0,0,568.07,336.13Z"]
 };
 var faHandHoldingUsd = {
   prefix: 'fas',
@@ -5741,7 +5747,7 @@ var faHandScissors = {
 var faHandSparkles = {
   prefix: 'fas',
   iconName: 'hand-sparkles',
-  icon: [640, 512, [], "f95d", "M106.66,170.64l.09,0,49.55-20.65a7.32,7.32,0,0,0,3.68-6h0a7.29,7.29,0,0,0-3.68-6l-49.57-20.67-.07,0L86,67.68a6.66,6.66,0,0,0-11.92,0l-20.7,49.63-.05,0L3.7,138A7.29,7.29,0,0,0,0,144H0a7.32,7.32,0,0,0,3.68,6L53.27,170.6l.07,0L74,220.26a6.65,6.65,0,0,0,11.92,0l20.69-49.62ZM471.38,467.41l-1-.42-1-.5a38.67,38.67,0,0,1,0-69.14l1-.49,1-.43,37.49-15.63,15.63-37.48.41-1,.47-.95c3.85-7.74,10.58-13.63,18.35-17.34,0-1.33.25-2.69.27-4V144a32,32,0,0,0-64,0v72a8,8,0,0,1-8,8H456a8,8,0,0,1-8-8V64a32,32,0,0,0-64,0V216a8,8,0,0,1-8,8H360a8,8,0,0,1-8-8V32a32,32,0,0,0-64,0V216a8,8,0,0,1-8,8H264a8,8,0,0,1-8-8V64a32,32,0,0,0-64,0v241l-23.59-32.49a40,40,0,0,0-64.71,47.09L229.3,492.21A48.07,48.07,0,0,0,268.09,512H465.7c19.24,0,35.65-11.73,43.24-28.79l-.07-.17ZM349.79,339.52,320,351.93l-12.42,29.78a4,4,0,0,1-7.15,0L288,351.93l-29.79-12.41a4,4,0,0,1,0-7.16L288,319.94l12.42-29.78a4,4,0,0,1,7.15,0L320,319.94l29.79,12.42a4,4,0,0,1,0,7.16ZM640,431.91a7.28,7.28,0,0,0-3.68-6l-49.57-20.67-.07,0L566,355.63a6.66,6.66,0,0,0-11.92,0l-20.7,49.63-.05,0L483.7,426a7.28,7.28,0,0,0-3.68,6h0a7.29,7.29,0,0,0,3.68,5.95l49.57,20.67.07,0L554,508.21a6.65,6.65,0,0,0,11.92,0l20.69-49.62h0l.09,0,49.55-20.66a7.29,7.29,0,0,0,3.68-5.95h0Z"]
+  icon: [640, 512, [], "e05d", "M106.66,170.64l.09,0,49.55-20.65a7.32,7.32,0,0,0,3.68-6h0a7.29,7.29,0,0,0-3.68-6l-49.57-20.67-.07,0L86,67.68a6.66,6.66,0,0,0-11.92,0l-20.7,49.63-.05,0L3.7,138A7.29,7.29,0,0,0,0,144H0a7.32,7.32,0,0,0,3.68,6L53.27,170.6l.07,0L74,220.26a6.65,6.65,0,0,0,11.92,0l20.69-49.62ZM471.38,467.41l-1-.42-1-.5a38.67,38.67,0,0,1,0-69.14l1-.49,1-.43,37.49-15.63,15.63-37.48.41-1,.47-.95c3.85-7.74,10.58-13.63,18.35-17.34,0-1.33.25-2.69.27-4V144a32,32,0,0,0-64,0v72a8,8,0,0,1-8,8H456a8,8,0,0,1-8-8V64a32,32,0,0,0-64,0V216a8,8,0,0,1-8,8H360a8,8,0,0,1-8-8V32a32,32,0,0,0-64,0V216a8,8,0,0,1-8,8H264a8,8,0,0,1-8-8V64a32,32,0,0,0-64,0v241l-23.59-32.49a40,40,0,0,0-64.71,47.09L229.3,492.21A48.07,48.07,0,0,0,268.09,512H465.7c19.24,0,35.65-11.73,43.24-28.79l-.07-.17ZM349.79,339.52,320,351.93l-12.42,29.78a4,4,0,0,1-7.15,0L288,351.93l-29.79-12.41a4,4,0,0,1,0-7.16L288,319.94l12.42-29.78a4,4,0,0,1,7.15,0L320,319.94l29.79,12.42a4,4,0,0,1,0,7.16ZM640,431.91a7.28,7.28,0,0,0-3.68-6l-49.57-20.67-.07,0L566,355.63a6.66,6.66,0,0,0-11.92,0l-20.7,49.63-.05,0L483.7,426a7.28,7.28,0,0,0-3.68,6h0a7.29,7.29,0,0,0,3.68,5.95l49.57,20.67.07,0L554,508.21a6.65,6.65,0,0,0,11.92,0l20.69-49.62h0l.09,0,49.55-20.66a7.29,7.29,0,0,0,3.68-5.95h0Z"]
 };
 var faHandSpock = {
   prefix: 'fas',
@@ -5761,7 +5767,7 @@ var faHandsHelping = {
 var faHandsWash = {
   prefix: 'fas',
   iconName: 'hands-wash',
-  icon: [576, 512, [], "f95e", "M496,224a48,48,0,1,0-48-48A48,48,0,0,0,496,224ZM311.47,178.45A56.77,56.77,0,0,1,328,176a56,56,0,0,1,19,3.49l15.35-48.61A24,24,0,0,0,342,99.74c-11.53-1.35-22.21,6.44-25.71,17.51l-20.9,66.17ZM93.65,386.33c.8-.19,1.54-.54,2.35-.71V359.93a156,156,0,0,1,107.06-148l73.7-22.76L310.92,81.05a24,24,0,0,0-20.33-31.11c-11.53-1.34-22.22,6.45-25.72,17.52L231.42,173.88a8,8,0,0,1-15.26-4.83L259.53,31.26A24,24,0,0,0,239.2.15C227.67-1.19,217,6.6,213.49,17.66L165.56,169.37a8,8,0,1,1-15.26-4.82l38.56-122a24,24,0,0,0-20.33-31.11C157,10,146.32,17.83,142.82,28.9l-60,189.85L80.76,168.7A24,24,0,0,0,56.9,144.55c-13.23-.05-24.72,10.54-24.9,23.86V281.14A123.69,123.69,0,0,0,93.65,386.33ZM519.1,336H360a8,8,0,0,1,0-16H488a24,24,0,0,0,23.54-28.76C509.35,279.84,498.71,272,487.1,272H288l47.09-17.06a24,24,0,0,0-14.18-45.88L213.19,242.31A123.88,123.88,0,0,0,128,360v25.65a79.78,79.78,0,0,1,58,108.63A118.9,118.9,0,0,0,248,512H456a24,24,0,0,0,23.54-28.76C477.35,471.84,466.71,464,455.1,464H360a8,8,0,0,1,0-16H488a24,24,0,0,0,23.54-28.76C509.35,407.84,498.71,400,487.1,400H360a8,8,0,0,1,0-16H520a24,24,0,0,0,23.54-28.76C541.35,343.84,530.71,336,519.1,336ZM416,64a32,32,0,1,0-32-32A32,32,0,0,0,416,64ZM112,416a48,48,0,1,0,48,48A48,48,0,0,0,112,416Z"]
+  icon: [576, 512, [], "e05e", "M496,224a48,48,0,1,0-48-48A48,48,0,0,0,496,224ZM311.47,178.45A56.77,56.77,0,0,1,328,176a56,56,0,0,1,19,3.49l15.35-48.61A24,24,0,0,0,342,99.74c-11.53-1.35-22.21,6.44-25.71,17.51l-20.9,66.17ZM93.65,386.33c.8-.19,1.54-.54,2.35-.71V359.93a156,156,0,0,1,107.06-148l73.7-22.76L310.92,81.05a24,24,0,0,0-20.33-31.11c-11.53-1.34-22.22,6.45-25.72,17.52L231.42,173.88a8,8,0,0,1-15.26-4.83L259.53,31.26A24,24,0,0,0,239.2.15C227.67-1.19,217,6.6,213.49,17.66L165.56,169.37a8,8,0,1,1-15.26-4.82l38.56-122a24,24,0,0,0-20.33-31.11C157,10,146.32,17.83,142.82,28.9l-60,189.85L80.76,168.7A24,24,0,0,0,56.9,144.55c-13.23-.05-24.72,10.54-24.9,23.86V281.14A123.69,123.69,0,0,0,93.65,386.33ZM519.1,336H360a8,8,0,0,1,0-16H488a24,24,0,0,0,23.54-28.76C509.35,279.84,498.71,272,487.1,272H288l47.09-17.06a24,24,0,0,0-14.18-45.88L213.19,242.31A123.88,123.88,0,0,0,128,360v25.65a79.78,79.78,0,0,1,58,108.63A118.9,118.9,0,0,0,248,512H456a24,24,0,0,0,23.54-28.76C477.35,471.84,466.71,464,455.1,464H360a8,8,0,0,1,0-16H488a24,24,0,0,0,23.54-28.76C509.35,407.84,498.71,400,487.1,400H360a8,8,0,0,1,0-16H520a24,24,0,0,0,23.54-28.76C541.35,343.84,530.71,336,519.1,336ZM416,64a32,32,0,1,0-32-32A32,32,0,0,0,416,64ZM112,416a48,48,0,1,0,48,48A48,48,0,0,0,112,416Z"]
 };
 var faHandshake = {
   prefix: 'fas',
@@ -5771,12 +5777,12 @@ var faHandshake = {
 var faHandshakeAltSlash = {
   prefix: 'fas',
   iconName: 'handshake-alt-slash',
-  icon: [640, 512, [], "f95f", "M358.59,195.6,504.2,313.8a63.4,63.4,0,0,1,22.21,37.91H624a16.05,16.05,0,0,0,16-16V143.91A16,16,0,0,0,624,128H512L457.41,73.41A32,32,0,0,0,434.8,64H348.91a32,32,0,0,0-21.61,8.41l-88.12,80.68-25.69-19.85L289.09,64H205.3a32,32,0,0,0-22.6,9.41l-20.34,20.3L45.47,3.38A16,16,0,0,0,23,6.19L3.38,31.46A16,16,0,0,0,6.19,53.91L594.54,508.63A16,16,0,0,0,617,505.82l19.64-25.27a16,16,0,0,0-2.81-22.45L303.4,202.72l32.69-29.92,27-24.7a16,16,0,0,1,21.61,23.61ZM16,128A16.05,16.05,0,0,0,0,144V335.91a16,16,0,0,0,16,16H146.3l90.5,81.89a64,64,0,0,0,90-9.3l.2-.2,17.91,15.5a37.16,37.16,0,0,0,52.29-5.39l8.8-10.82L23.56,128Z"]
+  icon: [640, 512, [], "e05f", "M358.59,195.6,504.2,313.8a63.4,63.4,0,0,1,22.21,37.91H624a16.05,16.05,0,0,0,16-16V143.91A16,16,0,0,0,624,128H512L457.41,73.41A32,32,0,0,0,434.8,64H348.91a32,32,0,0,0-21.61,8.41l-88.12,80.68-25.69-19.85L289.09,64H205.3a32,32,0,0,0-22.6,9.41l-20.34,20.3L45.47,3.38A16,16,0,0,0,23,6.19L3.38,31.46A16,16,0,0,0,6.19,53.91L594.54,508.63A16,16,0,0,0,617,505.82l19.64-25.27a16,16,0,0,0-2.81-22.45L303.4,202.72l32.69-29.92,27-24.7a16,16,0,0,1,21.61,23.61ZM16,128A16.05,16.05,0,0,0,0,144V335.91a16,16,0,0,0,16,16H146.3l90.5,81.89a64,64,0,0,0,90-9.3l.2-.2,17.91,15.5a37.16,37.16,0,0,0,52.29-5.39l8.8-10.82L23.56,128Z"]
 };
 var faHandshakeSlash = {
   prefix: 'fas',
   iconName: 'handshake-slash',
-  icon: [640, 512, [], "f960", "M0,128.21V384H64a32,32,0,0,0,32-32V184L23.83,128.21ZM48,320.1a16,16,0,1,1-16,16A16,16,0,0,1,48,320.1Zm80,31.81h18.3l90.5,81.89a64,64,0,0,0,90-9.3l.2-.2,17.91,15.5a37.16,37.16,0,0,0,52.29-5.39l8.8-10.82L128,208.72Zm416-223.7V352.1a32,32,0,0,0,32,32h64V128.21ZM592,352.1a16,16,0,1,1,16-16A16,16,0,0,1,592,352.1ZM303.33,202.67l59.58-54.57a16,16,0,0,1,21.59,23.61L358.41,195.6,504,313.8a73.08,73.08,0,0,1,7.91,7.7V128L457.3,73.41A31.76,31.76,0,0,0,434.7,64H348.8a31.93,31.93,0,0,0-21.6,8.41l-88.07,80.64-25.64-19.81L289.09,64H205.3a32,32,0,0,0-22.6,9.41L162.36,93.72,45.47,3.38A16,16,0,0,0,23,6.19L3.38,31.46A16,16,0,0,0,6.19,53.91L594.53,508.63A16,16,0,0,0,617,505.82l19.65-25.27a16,16,0,0,0-2.82-22.45Z"]
+  icon: [640, 512, [], "e060", "M0,128.21V384H64a32,32,0,0,0,32-32V184L23.83,128.21ZM48,320.1a16,16,0,1,1-16,16A16,16,0,0,1,48,320.1Zm80,31.81h18.3l90.5,81.89a64,64,0,0,0,90-9.3l.2-.2,17.91,15.5a37.16,37.16,0,0,0,52.29-5.39l8.8-10.82L128,208.72Zm416-223.7V352.1a32,32,0,0,0,32,32h64V128.21ZM592,352.1a16,16,0,1,1,16-16A16,16,0,0,1,592,352.1ZM303.33,202.67l59.58-54.57a16,16,0,0,1,21.59,23.61L358.41,195.6,504,313.8a73.08,73.08,0,0,1,7.91,7.7V128L457.3,73.41A31.76,31.76,0,0,0,434.7,64H348.8a31.93,31.93,0,0,0-21.6,8.41l-88.07,80.64-25.64-19.81L289.09,64H205.3a32,32,0,0,0-22.6,9.41L162.36,93.72,45.47,3.38A16,16,0,0,0,23,6.19L3.38,31.46A16,16,0,0,0,6.19,53.91L594.53,508.63A16,16,0,0,0,617,505.82l19.65-25.27a16,16,0,0,0-2.82-22.45Z"]
 };
 var faHanukiah = {
   prefix: 'fas',
@@ -5816,22 +5822,22 @@ var faHdd = {
 var faHeadSideCough = {
   prefix: 'fas',
   iconName: 'head-side-cough',
-  icon: [640, 512, [], "f961", "M616,304a24,24,0,1,0-24-24A24,24,0,0,0,616,304ZM552,416a24,24,0,1,0,24,24A24,24,0,0,0,552,416Zm-64-56a24,24,0,1,0,24,24A24,24,0,0,0,488,360ZM616,464a24,24,0,1,0,24,24A24,24,0,0,0,616,464Zm0-104a24,24,0,1,0,24,24A24,24,0,0,0,616,360Zm-64-40a24,24,0,1,0,24,24A24,24,0,0,0,552,320Zm-74.78-45c-21-47.12-48.5-151.75-73.12-186.75A208.13,208.13,0,0,0,234.1,0H192C86,0,0,86,0,192c0,56.75,24.75,107.62,64,142.88V512H288V480h64a64,64,0,0,0,64-64H320a32,32,0,0,1,0-64h96V320h32A32,32,0,0,0,477.22,275ZM288,224a32,32,0,1,1,32-32A32.07,32.07,0,0,1,288,224Z"]
+  icon: [640, 512, [], "e061", "M616,304a24,24,0,1,0-24-24A24,24,0,0,0,616,304ZM552,416a24,24,0,1,0,24,24A24,24,0,0,0,552,416Zm-64-56a24,24,0,1,0,24,24A24,24,0,0,0,488,360ZM616,464a24,24,0,1,0,24,24A24,24,0,0,0,616,464Zm0-104a24,24,0,1,0,24,24A24,24,0,0,0,616,360Zm-64-40a24,24,0,1,0,24,24A24,24,0,0,0,552,320Zm-74.78-45c-21-47.12-48.5-151.75-73.12-186.75A208.13,208.13,0,0,0,234.1,0H192C86,0,0,86,0,192c0,56.75,24.75,107.62,64,142.88V512H288V480h64a64,64,0,0,0,64-64H320a32,32,0,0,1,0-64h96V320h32A32,32,0,0,0,477.22,275ZM288,224a32,32,0,1,1,32-32A32.07,32.07,0,0,1,288,224Z"]
 };
 var faHeadSideCoughSlash = {
   prefix: 'fas',
   iconName: 'head-side-cough-slash',
-  icon: [640, 512, [], "f962", "M454.11,319.21c19.56-3.81,31.62-25,23.11-44.21-21-47.12-48.5-151.75-73.12-186.75A208.13,208.13,0,0,0,234.1,0H192A190.64,190.64,0,0,0,84.18,33.3L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.46A16,16,0,0,0,6.18,53.91L594.53,508.63A16,16,0,0,0,617,505.82l19.64-25.27a16,16,0,0,0-2.81-22.45ZM313.39,210.45,263.61,172c5.88-7.14,14.43-12,24.36-12a32.06,32.06,0,0,1,32,32C320,199,317.24,205.17,313.39,210.45ZM616,304a24,24,0,1,0-24-24A24,24,0,0,0,616,304Zm-64,64a24,24,0,1,0-24-24A24,24,0,0,0,552,368ZM288,384a32,32,0,0,1,32-32h19.54L20.73,105.59A190.86,190.86,0,0,0,0,192c0,56.75,24.75,107.62,64,142.88V512H288V480h64a64,64,0,0,0,64-64H320A32,32,0,0,1,288,384Zm328-24a24,24,0,1,0,24,24A24,24,0,0,0,616,360Z"]
+  icon: [640, 512, [], "e062", "M454.11,319.21c19.56-3.81,31.62-25,23.11-44.21-21-47.12-48.5-151.75-73.12-186.75A208.13,208.13,0,0,0,234.1,0H192A190.64,190.64,0,0,0,84.18,33.3L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.46A16,16,0,0,0,6.18,53.91L594.53,508.63A16,16,0,0,0,617,505.82l19.64-25.27a16,16,0,0,0-2.81-22.45ZM313.39,210.45,263.61,172c5.88-7.14,14.43-12,24.36-12a32.06,32.06,0,0,1,32,32C320,199,317.24,205.17,313.39,210.45ZM616,304a24,24,0,1,0-24-24A24,24,0,0,0,616,304Zm-64,64a24,24,0,1,0-24-24A24,24,0,0,0,552,368ZM288,384a32,32,0,0,1,32-32h19.54L20.73,105.59A190.86,190.86,0,0,0,0,192c0,56.75,24.75,107.62,64,142.88V512H288V480h64a64,64,0,0,0,64-64H320A32,32,0,0,1,288,384Zm328-24a24,24,0,1,0,24,24A24,24,0,0,0,616,360Z"]
 };
 var faHeadSideMask = {
   prefix: 'fas',
   iconName: 'head-side-mask',
-  icon: [512, 512, [], "f963", "M.15,184.42C-2.17,244.21,23,298.06,64,334.88V512H224V316.51L3.67,156.25A182.28,182.28,0,0,0,.15,184.42ZM509.22,275c-21-47.12-48.5-151.75-73.12-186.75A208.11,208.11,0,0,0,266.11,0H200C117,0,42.48,50.57,13.25,123.65L239.21,288H511.76A31.35,31.35,0,0,0,509.22,275ZM320,224a32,32,0,1,1,32-32A32.07,32.07,0,0,1,320,224Zm16,144H496l16-48H256V512H401.88a64,64,0,0,0,60.71-43.76L464,464H336a16,16,0,0,1,0-32H474.67l10.67-32H336a16,16,0,0,1,0-32Z"]
+  icon: [512, 512, [], "e063", "M.15,184.42C-2.17,244.21,23,298.06,64,334.88V512H224V316.51L3.67,156.25A182.28,182.28,0,0,0,.15,184.42ZM509.22,275c-21-47.12-48.5-151.75-73.12-186.75A208.11,208.11,0,0,0,266.11,0H200C117,0,42.48,50.57,13.25,123.65L239.21,288H511.76A31.35,31.35,0,0,0,509.22,275ZM320,224a32,32,0,1,1,32-32A32.07,32.07,0,0,1,320,224Zm16,144H496l16-48H256V512H401.88a64,64,0,0,0,60.71-43.76L464,464H336a16,16,0,0,1,0-32H474.67l10.67-32H336a16,16,0,0,1,0-32Z"]
 };
 var faHeadSideVirus = {
   prefix: 'fas',
   iconName: 'head-side-virus',
-  icon: [512, 512, [], "f964", "M272,240a16,16,0,1,0,16,16A16,16,0,0,0,272,240Zm-64-64a16,16,0,1,0,16,16A16,16,0,0,0,208,176Zm301.2,99c-20.93-47.12-48.43-151.73-73.07-186.75A207.9,207.9,0,0,0,266.09,0H192C86,0,0,86,0,192A191.23,191.23,0,0,0,64,334.81V512H320V448h64a64,64,0,0,0,64-64V320H480A32,32,0,0,0,509.2,275ZM368,240H355.88c-28.51,0-42.79,34.47-22.63,54.63l8.58,8.57a16,16,0,1,1-22.63,22.63l-8.57-8.58C290.47,297.09,256,311.37,256,339.88V352a16,16,0,0,1-32,0V339.88c0-28.51-34.47-42.79-54.63-22.63l-8.57,8.58a16,16,0,0,1-22.63-22.63l8.58-8.57c20.16-20.16,5.88-54.63-22.63-54.63H112a16,16,0,0,1,0-32h12.12c28.51,0,42.79-34.47,22.63-54.63l-8.58-8.57a16,16,0,0,1,22.63-22.63l8.57,8.58c20.16,20.16,54.63,5.88,54.63-22.63V96a16,16,0,0,1,32,0v12.12c0,28.51,34.47,42.79,54.63,22.63l8.57-8.58a16,16,0,0,1,22.63,22.63l-8.58,8.57C313.09,173.53,327.37,208,355.88,208H368a16,16,0,0,1,0,32Z"]
+  icon: [512, 512, [], "e064", "M272,240a16,16,0,1,0,16,16A16,16,0,0,0,272,240Zm-64-64a16,16,0,1,0,16,16A16,16,0,0,0,208,176Zm301.2,99c-20.93-47.12-48.43-151.73-73.07-186.75A207.9,207.9,0,0,0,266.09,0H192C86,0,0,86,0,192A191.23,191.23,0,0,0,64,334.81V512H320V448h64a64,64,0,0,0,64-64V320H480A32,32,0,0,0,509.2,275ZM368,240H355.88c-28.51,0-42.79,34.47-22.63,54.63l8.58,8.57a16,16,0,1,1-22.63,22.63l-8.57-8.58C290.47,297.09,256,311.37,256,339.88V352a16,16,0,0,1-32,0V339.88c0-28.51-34.47-42.79-54.63-22.63l-8.57,8.58a16,16,0,0,1-22.63-22.63l8.58-8.57c20.16-20.16,5.88-54.63-22.63-54.63H112a16,16,0,0,1,0-32h12.12c28.51,0,42.79-34.47,22.63-54.63l-8.58-8.57a16,16,0,0,1,22.63-22.63l8.57,8.58c20.16,20.16,54.63,5.88,54.63-22.63V96a16,16,0,0,1,32,0v12.12c0,28.51,34.47,42.79,54.63,22.63l8.57-8.58a16,16,0,0,1,22.63,22.63l-8.58,8.57C313.09,173.53,327.37,208,355.88,208H368a16,16,0,0,1,0,32Z"]
 };
 var faHeading = {
   prefix: 'fas',
@@ -5981,7 +5987,7 @@ var faHouseDamage = {
 var faHouseUser = {
   prefix: 'fas',
   iconName: 'house-user',
-  icon: [576, 512, [], "f965", "M570.69,236.27,512,184.44V48a16,16,0,0,0-16-16H432a16,16,0,0,0-16,16V99.67L314.78,10.3C308.5,4.61,296.53,0,288,0s-20.46,4.61-26.74,10.3l-256,226A18.27,18.27,0,0,0,0,248.2a18.64,18.64,0,0,0,4.09,10.71L25.5,282.7a21.14,21.14,0,0,0,12,5.3,21.67,21.67,0,0,0,10.69-4.11l15.9-14V480a32,32,0,0,0,32,32H480a32,32,0,0,0,32-32V269.88l15.91,14A21.94,21.94,0,0,0,538.63,288a20.89,20.89,0,0,0,11.87-5.31l21.41-23.81A21.64,21.64,0,0,0,576,248.19,21,21,0,0,0,570.69,236.27ZM288,176a64,64,0,1,1-64,64A64,64,0,0,1,288,176ZM400,448H176a16,16,0,0,1-16-16,96,96,0,0,1,96-96h64a96,96,0,0,1,96,96A16,16,0,0,1,400,448Z"]
+  icon: [576, 512, [], "e065", "M570.69,236.27,512,184.44V48a16,16,0,0,0-16-16H432a16,16,0,0,0-16,16V99.67L314.78,10.3C308.5,4.61,296.53,0,288,0s-20.46,4.61-26.74,10.3l-256,226A18.27,18.27,0,0,0,0,248.2a18.64,18.64,0,0,0,4.09,10.71L25.5,282.7a21.14,21.14,0,0,0,12,5.3,21.67,21.67,0,0,0,10.69-4.11l15.9-14V480a32,32,0,0,0,32,32H480a32,32,0,0,0,32-32V269.88l15.91,14A21.94,21.94,0,0,0,538.63,288a20.89,20.89,0,0,0,11.87-5.31l21.41-23.81A21.64,21.64,0,0,0,576,248.19,21,21,0,0,0,570.69,236.27ZM288,176a64,64,0,1,1-64,64A64,64,0,0,1,288,176ZM400,448H176a16,16,0,0,1-16-16,96,96,0,0,1,96-96h64a96,96,0,0,1,96,96A16,16,0,0,1,400,448Z"]
 };
 var faHryvnia = {
   prefix: 'fas',
@@ -6151,7 +6157,7 @@ var faLaptopCode = {
 var faLaptopHouse = {
   prefix: 'fas',
   iconName: 'laptop-house',
-  icon: [640, 512, [], "f966", "M272,288H208a16,16,0,0,1-16-16V208a16,16,0,0,1,16-16h64a16,16,0,0,1,16,16v37.12C299.11,232.24,315,224,332.8,224H469.74l6.65-7.53A16.51,16.51,0,0,0,480,207a16.31,16.31,0,0,0-4.75-10.61L416,144V48a16,16,0,0,0-16-16H368a16,16,0,0,0-16,16V87.3L263.5,8.92C258,4,247.45,0,240.05,0s-17.93,4-23.47,8.92L4.78,196.42A16.15,16.15,0,0,0,0,207a16.4,16.4,0,0,0,3.55,9.39L22.34,237.7A16.22,16.22,0,0,0,33,242.48,16.51,16.51,0,0,0,42.34,239L64,219.88V384a32,32,0,0,0,32,32H272ZM629.33,448H592V288c0-17.67-12.89-32-28.8-32H332.8c-15.91,0-28.8,14.33-28.8,32V448H266.67A10.67,10.67,0,0,0,256,458.67v10.66A42.82,42.82,0,0,0,298.6,512H597.4A42.82,42.82,0,0,0,640,469.33V458.67A10.67,10.67,0,0,0,629.33,448ZM544,448H352V304H544Z"]
+  icon: [640, 512, [], "e066", "M272,288H208a16,16,0,0,1-16-16V208a16,16,0,0,1,16-16h64a16,16,0,0,1,16,16v37.12C299.11,232.24,315,224,332.8,224H469.74l6.65-7.53A16.51,16.51,0,0,0,480,207a16.31,16.31,0,0,0-4.75-10.61L416,144V48a16,16,0,0,0-16-16H368a16,16,0,0,0-16,16V87.3L263.5,8.92C258,4,247.45,0,240.05,0s-17.93,4-23.47,8.92L4.78,196.42A16.15,16.15,0,0,0,0,207a16.4,16.4,0,0,0,3.55,9.39L22.34,237.7A16.22,16.22,0,0,0,33,242.48,16.51,16.51,0,0,0,42.34,239L64,219.88V384a32,32,0,0,0,32,32H272ZM629.33,448H592V288c0-17.67-12.89-32-28.8-32H332.8c-15.91,0-28.8,14.33-28.8,32V448H266.67A10.67,10.67,0,0,0,256,458.67v10.66A42.82,42.82,0,0,0,298.6,512H597.4A42.82,42.82,0,0,0,640,469.33V458.67A10.67,10.67,0,0,0,629.33,448ZM544,448H352V304H544Z"]
 };
 var faLaptopMedical = {
   prefix: 'fas',
@@ -6306,7 +6312,7 @@ var faLungs = {
 var faLungsVirus = {
   prefix: 'fas',
   iconName: 'lungs-virus',
-  icon: [640, 512, [], "f967", "M344,150.68V16A16,16,0,0,0,328,0H312a16,16,0,0,0-16,16V150.68a46.45,46.45,0,0,1,48,0ZM195.54,444.46a48.06,48.06,0,0,1,0-67.88l8.58-8.58H192a48,48,0,0,1,0-96h12.12l-8.58-8.57a48,48,0,0,1,60.46-74V161.75C256,125.38,224.62,96,186,96c-44,0-58,28.5-80.12,63.13a819.52,819.52,0,0,0-102,231A113.16,113.16,0,0,0,0,419.75C0,481,62.5,525.26,125.25,508.38l59.5-15.87a98.51,98.51,0,0,0,52.5-34.75,46.49,46.49,0,0,1-41.71-13.3Zm226.29-22.63a16,16,0,0,0,0-22.62l-8.58-8.58C393.09,370.47,407.37,336,435.88,336H448a16,16,0,0,0,0-32H435.88c-28.51,0-42.79-34.47-22.63-54.62l8.58-8.58a16,16,0,0,0-22.63-22.63l-8.57,8.58C370.47,246.91,336,232.63,336,204.12V192a16,16,0,0,0-32,0v12.12c0,28.51-34.47,42.79-54.63,22.63l-8.57-8.58a16,16,0,0,0-22.63,22.63l8.58,8.58c20.16,20.15,5.88,54.62-22.63,54.62H192a16,16,0,0,0,0,32h12.12c28.51,0,42.79,34.47,22.63,54.63l-8.58,8.58a16,16,0,1,0,22.63,22.62l8.57-8.57C269.53,393.1,304,407.38,304,435.88V448a16,16,0,0,0,32,0V435.88c0-28.5,34.47-42.78,54.63-22.62l8.57,8.57a16,16,0,0,0,22.63,0ZM288,304a16,16,0,1,1,16-16A16,16,0,0,1,288,304Zm64,64a16,16,0,1,1,16-16A16,16,0,0,1,352,368Zm284.12,22.13a819.52,819.52,0,0,0-102-231C512,124.5,498,96,454,96c-38.62,0-70,29.38-70,65.75v27.72a48,48,0,0,1,60.46,74L435.88,272H448a48,48,0,0,1,0,96H435.88l8.58,8.58a47.7,47.7,0,0,1-41.71,81.18,98.51,98.51,0,0,0,52.5,34.75l59.5,15.87C577.5,525.26,640,481,640,419.75A113.16,113.16,0,0,0,636.12,390.13Z"]
+  icon: [640, 512, [], "e067", "M344,150.68V16A16,16,0,0,0,328,0H312a16,16,0,0,0-16,16V150.68a46.45,46.45,0,0,1,48,0ZM195.54,444.46a48.06,48.06,0,0,1,0-67.88l8.58-8.58H192a48,48,0,0,1,0-96h12.12l-8.58-8.57a48,48,0,0,1,60.46-74V161.75C256,125.38,224.62,96,186,96c-44,0-58,28.5-80.12,63.13a819.52,819.52,0,0,0-102,231A113.16,113.16,0,0,0,0,419.75C0,481,62.5,525.26,125.25,508.38l59.5-15.87a98.51,98.51,0,0,0,52.5-34.75,46.49,46.49,0,0,1-41.71-13.3Zm226.29-22.63a16,16,0,0,0,0-22.62l-8.58-8.58C393.09,370.47,407.37,336,435.88,336H448a16,16,0,0,0,0-32H435.88c-28.51,0-42.79-34.47-22.63-54.62l8.58-8.58a16,16,0,0,0-22.63-22.63l-8.57,8.58C370.47,246.91,336,232.63,336,204.12V192a16,16,0,0,0-32,0v12.12c0,28.51-34.47,42.79-54.63,22.63l-8.57-8.58a16,16,0,0,0-22.63,22.63l8.58,8.58c20.16,20.15,5.88,54.62-22.63,54.62H192a16,16,0,0,0,0,32h12.12c28.51,0,42.79,34.47,22.63,54.63l-8.58,8.58a16,16,0,1,0,22.63,22.62l8.57-8.57C269.53,393.1,304,407.38,304,435.88V448a16,16,0,0,0,32,0V435.88c0-28.5,34.47-42.78,54.63-22.62l8.57,8.57a16,16,0,0,0,22.63,0ZM288,304a16,16,0,1,1,16-16A16,16,0,0,1,288,304Zm64,64a16,16,0,1,1,16-16A16,16,0,0,1,352,368Zm284.12,22.13a819.52,819.52,0,0,0-102-231C512,124.5,498,96,454,96c-38.62,0-70,29.38-70,65.75v27.72a48,48,0,0,1,60.46,74L435.88,272H448a48,48,0,0,1,0,96H435.88l8.58,8.58a47.7,47.7,0,0,1-41.71,81.18,98.51,98.51,0,0,0,52.5,34.75l59.5,15.87C577.5,525.26,640,481,640,419.75A113.16,113.16,0,0,0,636.12,390.13Z"]
 };
 var faMagic = {
   prefix: 'fas',
@@ -6761,7 +6767,7 @@ var faPencilRuler = {
 var faPeopleArrows = {
   prefix: 'fas',
   iconName: 'people-arrows',
-  icon: [576, 512, [], "f968", "M96,128A64,64,0,1,0,32,64,64,64,0,0,0,96,128Zm0,176.08a44.11,44.11,0,0,1,13.64-32L181.77,204c1.65-1.55,3.77-2.31,5.61-3.57A63.91,63.91,0,0,0,128,160H64A64,64,0,0,0,0,224v96a32,32,0,0,0,32,32V480a32,32,0,0,0,32,32h64a32,32,0,0,0,32-32V383.61l-50.36-47.53A44.08,44.08,0,0,1,96,304.08ZM480,128a64,64,0,1,0-64-64A64,64,0,0,0,480,128Zm32,32H448a63.91,63.91,0,0,0-59.38,40.42c1.84,1.27,4,2,5.62,3.59l72.12,68.06a44.37,44.37,0,0,1,0,64L416,383.62V480a32,32,0,0,0,32,32h64a32,32,0,0,0,32-32V352a32,32,0,0,0,32-32V224A64,64,0,0,0,512,160ZM444.4,295.34l-72.12-68.06A12,12,0,0,0,352,236v36H224V236a12,12,0,0,0-20.28-8.73L131.6,295.34a12.4,12.4,0,0,0,0,17.47l72.12,68.07A12,12,0,0,0,224,372.14V336H352v36.14a12,12,0,0,0,20.28,8.74l72.12-68.07A12.4,12.4,0,0,0,444.4,295.34Z"]
+  icon: [576, 512, [], "e068", "M96,128A64,64,0,1,0,32,64,64,64,0,0,0,96,128Zm0,176.08a44.11,44.11,0,0,1,13.64-32L181.77,204c1.65-1.55,3.77-2.31,5.61-3.57A63.91,63.91,0,0,0,128,160H64A64,64,0,0,0,0,224v96a32,32,0,0,0,32,32V480a32,32,0,0,0,32,32h64a32,32,0,0,0,32-32V383.61l-50.36-47.53A44.08,44.08,0,0,1,96,304.08ZM480,128a64,64,0,1,0-64-64A64,64,0,0,0,480,128Zm32,32H448a63.91,63.91,0,0,0-59.38,40.42c1.84,1.27,4,2,5.62,3.59l72.12,68.06a44.37,44.37,0,0,1,0,64L416,383.62V480a32,32,0,0,0,32,32h64a32,32,0,0,0,32-32V352a32,32,0,0,0,32-32V224A64,64,0,0,0,512,160ZM444.4,295.34l-72.12-68.06A12,12,0,0,0,352,236v36H224V236a12,12,0,0,0-20.28-8.73L131.6,295.34a12.4,12.4,0,0,0,0,17.47l72.12,68.07A12,12,0,0,0,224,372.14V336H352v36.14a12,12,0,0,0,20.28,8.74l72.12-68.07A12.4,12.4,0,0,0,444.4,295.34Z"]
 };
 var faPeopleCarry = {
   prefix: 'fas',
@@ -6861,7 +6867,7 @@ var faPlaneDeparture = {
 var faPlaneSlash = {
   prefix: 'fas',
   iconName: 'plane-slash',
-  icon: [640, 512, [], "f969", "M32.48,147.88,64,256,32.48,364.13A16,16,0,0,0,48,384H88a16,16,0,0,0,12.8-6.41L144,320H246.85l-49,171.59A16,16,0,0,0,213.2,512h65.5a16,16,0,0,0,13.89-8.06l66.6-116.54L34.35,136.34A15.47,15.47,0,0,0,32.48,147.88ZM633.82,458.09,455.14,320H512c35.34,0,96-28.66,96-64s-60.66-64-96-64H397.7L292.61,8.06C290.06,3.61,283.84,0,278.71,0H213.2a16,16,0,0,0-15.38,20.39l36.94,129.29L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.45A16,16,0,0,0,6.18,53.91L594.54,508.63A16,16,0,0,0,617,505.81l19.64-25.26A16,16,0,0,0,633.82,458.09Z"]
+  icon: [640, 512, [], "e069", "M32.48,147.88,64,256,32.48,364.13A16,16,0,0,0,48,384H88a16,16,0,0,0,12.8-6.41L144,320H246.85l-49,171.59A16,16,0,0,0,213.2,512h65.5a16,16,0,0,0,13.89-8.06l66.6-116.54L34.35,136.34A15.47,15.47,0,0,0,32.48,147.88ZM633.82,458.09,455.14,320H512c35.34,0,96-28.66,96-64s-60.66-64-96-64H397.7L292.61,8.06C290.06,3.61,283.84,0,278.71,0H213.2a16,16,0,0,0-15.38,20.39l36.94,129.29L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.45A16,16,0,0,0,6.18,53.91L594.54,508.63A16,16,0,0,0,617,505.81l19.64-25.26A16,16,0,0,0,633.82,458.09Z"]
 };
 var faPlay = {
   prefix: 'fas',
@@ -6981,12 +6987,12 @@ var faProjectDiagram = {
 var faPumpMedical = {
   prefix: 'fas',
   iconName: 'pump-medical',
-  icon: [384, 512, [], "f96a", "M235.51,159.82H84.24A64,64,0,0,0,20.51,218L.14,442a64,64,0,0,0,63.74,69.8h192A64,64,0,0,0,319.61,442L299.24,218A64,64,0,0,0,235.51,159.82Zm4.37,173.33a13.35,13.35,0,0,1-13.34,13.34h-40v40a13.33,13.33,0,0,1-13.33,13.33H146.54a13.33,13.33,0,0,1-13.33-13.33v-40h-40a13.34,13.34,0,0,1-13.33-13.34V306.49a13.33,13.33,0,0,1,13.33-13.34h40v-40a13.33,13.33,0,0,1,13.33-13.33h26.67a13.33,13.33,0,0,1,13.33,13.33v40h40a13.34,13.34,0,0,1,13.34,13.34ZM379.19,93.88,335.87,50.56a64,64,0,0,0-45.24-18.74H223.88a32,32,0,0,0-32-32h-64a32,32,0,0,0-32,32v96h128v-32h66.75l43.31,43.31a16,16,0,0,0,22.63,0l22.62-22.62A16,16,0,0,0,379.19,93.88Z"]
+  icon: [384, 512, [], "e06a", "M235.51,159.82H84.24A64,64,0,0,0,20.51,218L.14,442a64,64,0,0,0,63.74,69.8h192A64,64,0,0,0,319.61,442L299.24,218A64,64,0,0,0,235.51,159.82Zm4.37,173.33a13.35,13.35,0,0,1-13.34,13.34h-40v40a13.33,13.33,0,0,1-13.33,13.33H146.54a13.33,13.33,0,0,1-13.33-13.33v-40h-40a13.34,13.34,0,0,1-13.33-13.34V306.49a13.33,13.33,0,0,1,13.33-13.34h40v-40a13.33,13.33,0,0,1,13.33-13.33h26.67a13.33,13.33,0,0,1,13.33,13.33v40h40a13.34,13.34,0,0,1,13.34,13.34ZM379.19,93.88,335.87,50.56a64,64,0,0,0-45.24-18.74H223.88a32,32,0,0,0-32-32h-64a32,32,0,0,0-32,32v96h128v-32h66.75l43.31,43.31a16,16,0,0,0,22.63,0l22.62-22.62A16,16,0,0,0,379.19,93.88Z"]
 };
 var faPumpSoap = {
   prefix: 'fas',
   iconName: 'pump-soap',
-  icon: [384, 512, [], "f96b", "M235.63,160H84.37a64,64,0,0,0-63.74,58.21L.27,442.21A64,64,0,0,0,64,512H256a64,64,0,0,0,63.74-69.79l-20.36-224A64,64,0,0,0,235.63,160ZM160,416c-33.12,0-60-26.33-60-58.75,0-25,35.7-75.47,52-97.27A10,10,0,0,1,168,260c16.33,21.8,52,72.27,52,97.27C220,389.67,193.12,416,160,416ZM379.31,94.06,336,50.74A64,64,0,0,0,290.75,32H224A32,32,0,0,0,192,0H128A32,32,0,0,0,96,32v96H224V96h66.75l43.31,43.31a16,16,0,0,0,22.63,0l22.62-22.62A16,16,0,0,0,379.31,94.06Z"]
+  icon: [384, 512, [], "e06b", "M235.63,160H84.37a64,64,0,0,0-63.74,58.21L.27,442.21A64,64,0,0,0,64,512H256a64,64,0,0,0,63.74-69.79l-20.36-224A64,64,0,0,0,235.63,160ZM160,416c-33.12,0-60-26.33-60-58.75,0-25,35.7-75.47,52-97.27A10,10,0,0,1,168,260c16.33,21.8,52,72.27,52,97.27C220,389.67,193.12,416,160,416ZM379.31,94.06,336,50.74A64,64,0,0,0,290.75,32H224A32,32,0,0,0,192,0H128A32,32,0,0,0,96,32v96H224V96h66.75l43.31,43.31a16,16,0,0,0,22.63,0l22.62-22.62A16,16,0,0,0,379.31,94.06Z"]
 };
 var faPuzzlePiece = {
   prefix: 'fas',
@@ -7301,7 +7307,7 @@ var faShieldAlt = {
 var faShieldVirus = {
   prefix: 'fas',
   iconName: 'shield-virus',
-  icon: [512, 512, [], "f96c", "M224,192a16,16,0,1,0,16,16A16,16,0,0,0,224,192ZM466.5,83.68l-192-80A57.4,57.4,0,0,0,256.05,0a57.4,57.4,0,0,0-18.46,3.67l-192,80A47.93,47.93,0,0,0,16,128C16,326.5,130.5,463.72,237.5,508.32a48.09,48.09,0,0,0,36.91,0C360.09,472.61,496,349.3,496,128A48,48,0,0,0,466.5,83.68ZM384,256H371.88c-28.51,0-42.79,34.47-22.63,54.63l8.58,8.57a16,16,0,1,1-22.63,22.63l-8.57-8.58C306.47,313.09,272,327.37,272,355.88V368a16,16,0,0,1-32,0V355.88c0-28.51-34.47-42.79-54.63-22.63l-8.57,8.58a16,16,0,0,1-22.63-22.63l8.58-8.57c20.16-20.16,5.88-54.63-22.63-54.63H128a16,16,0,0,1,0-32h12.12c28.51,0,42.79-34.47,22.63-54.63l-8.58-8.57a16,16,0,0,1,22.63-22.63l8.57,8.58c20.16,20.16,54.63,5.88,54.63-22.63V112a16,16,0,0,1,32,0v12.12c0,28.51,34.47,42.79,54.63,22.63l8.57-8.58a16,16,0,0,1,22.63,22.63l-8.58,8.57C329.09,189.53,343.37,224,371.88,224H384a16,16,0,0,1,0,32Zm-96,0a16,16,0,1,0,16,16A16,16,0,0,0,288,256Z"]
+  icon: [512, 512, [], "e06c", "M224,192a16,16,0,1,0,16,16A16,16,0,0,0,224,192ZM466.5,83.68l-192-80A57.4,57.4,0,0,0,256.05,0a57.4,57.4,0,0,0-18.46,3.67l-192,80A47.93,47.93,0,0,0,16,128C16,326.5,130.5,463.72,237.5,508.32a48.09,48.09,0,0,0,36.91,0C360.09,472.61,496,349.3,496,128A48,48,0,0,0,466.5,83.68ZM384,256H371.88c-28.51,0-42.79,34.47-22.63,54.63l8.58,8.57a16,16,0,1,1-22.63,22.63l-8.57-8.58C306.47,313.09,272,327.37,272,355.88V368a16,16,0,0,1-32,0V355.88c0-28.51-34.47-42.79-54.63-22.63l-8.57,8.58a16,16,0,0,1-22.63-22.63l8.58-8.57c20.16-20.16,5.88-54.63-22.63-54.63H128a16,16,0,0,1,0-32h12.12c28.51,0,42.79-34.47,22.63-54.63l-8.58-8.57a16,16,0,0,1,22.63-22.63l8.57,8.58c20.16,20.16,54.63,5.88,54.63-22.63V112a16,16,0,0,1,32,0v12.12c0,28.51,34.47,42.79,54.63,22.63l8.57-8.58a16,16,0,0,1,22.63,22.63l-8.58,8.57C329.09,189.53,343.37,224,371.88,224H384a16,16,0,0,1,0,32Zm-96,0a16,16,0,1,0,16,16A16,16,0,0,0,288,256Z"]
 };
 var faShip = {
   prefix: 'fas',
@@ -7381,7 +7387,7 @@ var faSimCard = {
 var faSink = {
   prefix: 'fas',
   iconName: 'sink',
-  icon: [512, 512, [], "f96d", "M32,416a96,96,0,0,0,96,96H384a96,96,0,0,0,96-96V384H32ZM496,288H400V256h64a16,16,0,0,0,16-16V224a16,16,0,0,0-16-16H384a32,32,0,0,0-32,32v48H288V96a32,32,0,0,1,64,0v16a16,16,0,0,0,16,16h32a16,16,0,0,0,16-16V96A96.16,96.16,0,0,0,300.87,1.86C255.29,10.71,224,53.36,224,99.79V288H160V240a32,32,0,0,0-32-32H48a16,16,0,0,0-16,16v16a16,16,0,0,0,16,16h64v32H16A16,16,0,0,0,0,304v32a16,16,0,0,0,16,16H496a16,16,0,0,0,16-16V304A16,16,0,0,0,496,288Z"]
+  icon: [512, 512, [], "e06d", "M32,416a96,96,0,0,0,96,96H384a96,96,0,0,0,96-96V384H32ZM496,288H400V256h64a16,16,0,0,0,16-16V224a16,16,0,0,0-16-16H384a32,32,0,0,0-32,32v48H288V96a32,32,0,0,1,64,0v16a16,16,0,0,0,16,16h32a16,16,0,0,0,16-16V96A96.16,96.16,0,0,0,300.87,1.86C255.29,10.71,224,53.36,224,99.79V288H160V240a32,32,0,0,0-32-32H48a16,16,0,0,0-16,16v16a16,16,0,0,0,16,16h64v32H16A16,16,0,0,0,0,304v32a16,16,0,0,0,16,16H496a16,16,0,0,0,16-16V304A16,16,0,0,0,496,288Z"]
 };
 var faSitemap = {
   prefix: 'fas',
@@ -7486,7 +7492,7 @@ var faSnowplow = {
 var faSoap = {
   prefix: 'fas',
   iconName: 'soap',
-  icon: [512, 512, [], "f96e", "M416,192a95.42,95.42,0,0,1-30.94,70.21A95.8,95.8,0,0,1,352,448H160a96,96,0,0,1,0-192h88.91A95.3,95.3,0,0,1,224,192H96A96,96,0,0,0,0,288V416a96,96,0,0,0,96,96H416a96,96,0,0,0,96-96V288A96,96,0,0,0,416,192Zm-96,64a64,64,0,1,0-64-64A64,64,0,0,0,320,256ZM208,96a48,48,0,1,0-48-48A48,48,0,0,0,208,96ZM384,64a32,32,0,1,0-32-32A32,32,0,0,0,384,64ZM160,288a64,64,0,0,0,0,128H352a64,64,0,0,0,0-128Z"]
+  icon: [512, 512, [], "e06e", "M416,192a95.42,95.42,0,0,1-30.94,70.21A95.8,95.8,0,0,1,352,448H160a96,96,0,0,1,0-192h88.91A95.3,95.3,0,0,1,224,192H96A96,96,0,0,0,0,288V416a96,96,0,0,0,96,96H416a96,96,0,0,0,96-96V288A96,96,0,0,0,416,192Zm-96,64a64,64,0,1,0-64-64A64,64,0,0,0,320,256ZM208,96a48,48,0,1,0-48-48A48,48,0,0,0,208,96ZM384,64a32,32,0,1,0-32-32A32,32,0,0,0,384,64ZM160,288a64,64,0,0,0,0,128H352a64,64,0,0,0,0-128Z"]
 };
 var faSocks = {
   prefix: 'fas',
@@ -7696,7 +7702,7 @@ var faStopwatch = {
 var faStopwatch20 = {
   prefix: 'fas',
   iconName: 'stopwatch-20',
-  icon: [448, 512, [], "f96f", "M398.5,190.91l.59-.61,26.59-26.58a16,16,0,0,0,0-22.63L403,118.41a16,16,0,0,0-22.63,0l-24.68,24.68A206.68,206.68,0,0,0,256,98.5V64h32a16,16,0,0,0,16-16V16A16,16,0,0,0,288,0H160a16.05,16.05,0,0,0-16,16V48a16.05,16.05,0,0,0,16,16h32V98.5A207.92,207.92,0,0,0,16.09,297.57C12.64,411.5,106.76,510.22,220.72,512,337.13,513.77,432,420,432,304A206,206,0,0,0,398.5,190.91ZM204.37,377.55a8.2,8.2,0,0,1,8.32,8.07v22.31a8.2,8.2,0,0,1-8.32,8.07H121.52a16.46,16.46,0,0,1-16.61-17.62c2.78-35.22,14.67-57.41,38.45-91.37,20.42-29.19,27.1-37.32,27.1-62.34,0-16.92-1.79-24.27-12.21-24.27-9.39,0-12.69,7.4-12.69,22.68v5.23a8.2,8.2,0,0,1-8.33,8.07h-24.9a8.2,8.2,0,0,1-8.33-8.07v-4.07c0-27.3,8.48-60.24,56.43-60.24,43,0,55.57,25.85,55.57,61,0,35.58-12.44,51.21-34.35,81.31-11.56,15-24.61,35.57-26.41,51.2ZM344,352.32c0,35.16-12.3,63.68-57.23,63.68C243.19,416,232,386.48,232,352.55V247.22c0-40.73,19.58-63.22,56.2-63.22C325,184,344,206.64,344,245.3ZM287.87,221.73c-9.41,0-13.23,7.5-13.23,20V357.68c0,13.11,3.59,20.59,13.23,20.59s13-8,13-21.27V241.06C300.89,229.79,297.88,221.73,287.87,221.73Z"]
+  icon: [448, 512, [], "e06f", "M398.5,190.91l.59-.61,26.59-26.58a16,16,0,0,0,0-22.63L403,118.41a16,16,0,0,0-22.63,0l-24.68,24.68A206.68,206.68,0,0,0,256,98.5V64h32a16,16,0,0,0,16-16V16A16,16,0,0,0,288,0H160a16.05,16.05,0,0,0-16,16V48a16.05,16.05,0,0,0,16,16h32V98.5A207.92,207.92,0,0,0,16.09,297.57C12.64,411.5,106.76,510.22,220.72,512,337.13,513.77,432,420,432,304A206,206,0,0,0,398.5,190.91ZM204.37,377.55a8.2,8.2,0,0,1,8.32,8.07v22.31a8.2,8.2,0,0,1-8.32,8.07H121.52a16.46,16.46,0,0,1-16.61-17.62c2.78-35.22,14.67-57.41,38.45-91.37,20.42-29.19,27.1-37.32,27.1-62.34,0-16.92-1.79-24.27-12.21-24.27-9.39,0-12.69,7.4-12.69,22.68v5.23a8.2,8.2,0,0,1-8.33,8.07h-24.9a8.2,8.2,0,0,1-8.33-8.07v-4.07c0-27.3,8.48-60.24,56.43-60.24,43,0,55.57,25.85,55.57,61,0,35.58-12.44,51.21-34.35,81.31-11.56,15-24.61,35.57-26.41,51.2ZM344,352.32c0,35.16-12.3,63.68-57.23,63.68C243.19,416,232,386.48,232,352.55V247.22c0-40.73,19.58-63.22,56.2-63.22C325,184,344,206.64,344,245.3ZM287.87,221.73c-9.41,0-13.23,7.5-13.23,20V357.68c0,13.11,3.59,20.59,13.23,20.59s13-8,13-21.27V241.06C300.89,229.79,297.88,221.73,287.87,221.73Z"]
 };
 var faStore = {
   prefix: 'fas',
@@ -7711,12 +7717,12 @@ var faStoreAlt = {
 var faStoreAltSlash = {
   prefix: 'fas',
   iconName: 'store-alt-slash',
-  icon: [640, 512, [], "f970", "M17.89,123.62,5.51,142.2c-14.2,21.3,1,49.8,26.59,49.8h74.26ZM576,413.42V224H512V364L384,265V224H330.92l-41.4-32H608c25.5,0,40.7-28.5,26.59-49.8l-85.29-128A32.18,32.18,0,0,0,522.6,0H117.42A31.87,31.87,0,0,0,90.81,14.2l-10.66,16L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.46A16,16,0,0,0,6.18,53.91L594.53,508.63A16,16,0,0,0,617,505.81l19.64-25.26a16,16,0,0,0-2.81-22.45ZM320,384H128V224H64V480a32,32,0,0,0,32,32H352a32,32,0,0,0,32-32V406.59l-64-49.47Z"]
+  icon: [640, 512, [], "e070", "M17.89,123.62,5.51,142.2c-14.2,21.3,1,49.8,26.59,49.8h74.26ZM576,413.42V224H512V364L384,265V224H330.92l-41.4-32H608c25.5,0,40.7-28.5,26.59-49.8l-85.29-128A32.18,32.18,0,0,0,522.6,0H117.42A31.87,31.87,0,0,0,90.81,14.2l-10.66,16L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.46A16,16,0,0,0,6.18,53.91L594.53,508.63A16,16,0,0,0,617,505.81l19.64-25.26a16,16,0,0,0-2.81-22.45ZM320,384H128V224H64V480a32,32,0,0,0,32,32H352a32,32,0,0,0,32-32V406.59l-64-49.47Z"]
 };
 var faStoreSlash = {
   prefix: 'fas',
   iconName: 'store-slash',
-  icon: [640, 512, [], "f971", "M121.51,384V284.2a119.43,119.43,0,0,1-28,3.8,123.46,123.46,0,0,1-17.1-1.2,114.88,114.88,0,0,1-15.58-3.6V480c0,17.7,13.59,32,30.4,32H505.75L348.42,384Zm-28-128.09c25.1,0,47.29-10.72,64-27.24L24,120.05c-30.52,53.39-2.45,126.53,56.49,135A95.68,95.68,0,0,0,93.48,255.91ZM602.13,458.09,547.2,413.41V283.2a93.5,93.5,0,0,1-15.57,3.6,127.31,127.31,0,0,1-17.29,1.2,114.89,114.89,0,0,1-28-3.8v79.68L348.52,251.77a88.06,88.06,0,0,0,25.41,4.14c28.11,0,53-13,70.11-33.11,17.19,20.11,42.08,33.11,70.11,33.11a94.31,94.31,0,0,0,13-.91c59.66-8.41,88-82.8,56.06-136.4L521.55,15A30.1,30.1,0,0,0,495.81,0H112A30.11,30.11,0,0,0,86.27,15L76.88,30.78,43.19,3.38A14.68,14.68,0,0,0,21.86,6.19L3.2,31.45A16.58,16.58,0,0,0,5.87,53.91L564.81,508.63a14.69,14.69,0,0,0,21.33-2.82l18.66-25.26A16.58,16.58,0,0,0,602.13,458.09Z"]
+  icon: [640, 512, [], "e071", "M121.51,384V284.2a119.43,119.43,0,0,1-28,3.8,123.46,123.46,0,0,1-17.1-1.2,114.88,114.88,0,0,1-15.58-3.6V480c0,17.7,13.59,32,30.4,32H505.75L348.42,384Zm-28-128.09c25.1,0,47.29-10.72,64-27.24L24,120.05c-30.52,53.39-2.45,126.53,56.49,135A95.68,95.68,0,0,0,93.48,255.91ZM602.13,458.09,547.2,413.41V283.2a93.5,93.5,0,0,1-15.57,3.6,127.31,127.31,0,0,1-17.29,1.2,114.89,114.89,0,0,1-28-3.8v79.68L348.52,251.77a88.06,88.06,0,0,0,25.41,4.14c28.11,0,53-13,70.11-33.11,17.19,20.11,42.08,33.11,70.11,33.11a94.31,94.31,0,0,0,13-.91c59.66-8.41,88-82.8,56.06-136.4L521.55,15A30.1,30.1,0,0,0,495.81,0H112A30.11,30.11,0,0,0,86.27,15L76.88,30.78,43.19,3.38A14.68,14.68,0,0,0,21.86,6.19L3.2,31.45A16.58,16.58,0,0,0,5.87,53.91L564.81,508.63a14.69,14.69,0,0,0,21.33-2.82l18.66-25.26A16.58,16.58,0,0,0,602.13,458.09Z"]
 };
 var faStream = {
   prefix: 'fas',
@@ -8021,7 +8027,7 @@ var faToiletPaper = {
 var faToiletPaperSlash = {
   prefix: 'fas',
   iconName: 'toilet-paper-slash',
-  icon: [640, 512, [], "f972", "M64,192V364.13c0,41.12-9.75,62.75-31.12,126.87A16,16,0,0,0,48,512H328.86a31.87,31.87,0,0,0,30.38-21.87c9.31-27.83,18-53.35,22.18-85.55l-316-244.25C64.53,170.66,64,181.19,64,192ZM633.82,458.09l-102-78.81C575.28,360.91,608,284.32,608,192,608,86,565,0,512,0s-96,86-96,192c0,42,7,80.4,18.43,112L384,265V192c0-83.62,23.63-153.5,60.5-192H160c-23.33,0-44.63,16.83-61.26,44.53L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.45A16,16,0,0,0,6.18,53.91L594.54,508.63A16,16,0,0,0,617,505.81l19.64-25.26A16,16,0,0,0,633.82,458.09ZM512,256c-17.63,0-32-28.62-32-64s14.37-64,32-64,32,28.63,32,64S529.62,256,512,256Z"]
+  icon: [640, 512, [], "e072", "M64,192V364.13c0,41.12-9.75,62.75-31.12,126.87A16,16,0,0,0,48,512H328.86a31.87,31.87,0,0,0,30.38-21.87c9.31-27.83,18-53.35,22.18-85.55l-316-244.25C64.53,170.66,64,181.19,64,192ZM633.82,458.09l-102-78.81C575.28,360.91,608,284.32,608,192,608,86,565,0,512,0s-96,86-96,192c0,42,7,80.4,18.43,112L384,265V192c0-83.62,23.63-153.5,60.5-192H160c-23.33,0-44.63,16.83-61.26,44.53L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.45A16,16,0,0,0,6.18,53.91L594.54,508.63A16,16,0,0,0,617,505.81l19.64-25.26A16,16,0,0,0,633.82,458.09ZM512,256c-17.63,0-32-28.62-32-64s14.37-64,32-64,32,28.63,32,64S529.62,256,512,256Z"]
 };
 var faToolbox = {
   prefix: 'fas',
@@ -8066,7 +8072,7 @@ var faTrafficLight = {
 var faTrailer = {
   prefix: 'fas',
   iconName: 'trailer',
-  icon: [640, 512, [], "f941", "M624,320H544V80a16,16,0,0,0-16-16H16A16,16,0,0,0,0,80V368a16,16,0,0,0,16,16H65.61c7.83-54.21,54-96,110.39-96s102.56,41.79,110.39,96H624a16,16,0,0,0,16-16V336A16,16,0,0,0,624,320ZM96,243.68a176.29,176.29,0,0,0-32,20.71V136a8,8,0,0,1,8-8H88a8,8,0,0,1,8,8Zm96-18.54c-5.31-.49-10.57-1.14-16-1.14s-10.69.65-16,1.14V136a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8Zm96,39.25a176.29,176.29,0,0,0-32-20.71V136a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8ZM384,320H352V136a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8Zm96,0H448V136a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8Zm-304,0a80,80,0,1,0,80,80A80,80,0,0,0,176,320Zm0,112a32,32,0,1,1,32-32A32,32,0,0,1,176,432Z"]
+  icon: [640, 512, [], "e041", "M624,320H544V80a16,16,0,0,0-16-16H16A16,16,0,0,0,0,80V368a16,16,0,0,0,16,16H65.61c7.83-54.21,54-96,110.39-96s102.56,41.79,110.39,96H624a16,16,0,0,0,16-16V336A16,16,0,0,0,624,320ZM96,243.68a176.29,176.29,0,0,0-32,20.71V136a8,8,0,0,1,8-8H88a8,8,0,0,1,8,8Zm96-18.54c-5.31-.49-10.57-1.14-16-1.14s-10.69.65-16,1.14V136a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8Zm96,39.25a176.29,176.29,0,0,0-32-20.71V136a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8ZM384,320H352V136a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8Zm96,0H448V136a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8Zm-304,0a80,80,0,1,0,80,80A80,80,0,0,0,176,320Zm0,112a32,32,0,1,1,32-32A32,32,0,0,1,176,432Z"]
 };
 var faTrain = {
   prefix: 'fas',
@@ -8346,7 +8352,7 @@ var faUsersCog = {
 var faUsersSlash = {
   prefix: 'fas',
   iconName: 'users-slash',
-  icon: [640, 512, [], "f973", "M132.65,212.32,36.21,137.78A63.4,63.4,0,0,0,32,160a63.84,63.84,0,0,0,100.65,52.32Zm40.44,62.28A63.79,63.79,0,0,0,128,256H64A64.06,64.06,0,0,0,0,320v32a32,32,0,0,0,32,32H97.91A146.62,146.62,0,0,1,173.09,274.6ZM544,224a64,64,0,1,0-64-64A64.06,64.06,0,0,0,544,224ZM500.56,355.11a114.24,114.24,0,0,0-84.47-65.28L361,247.23c41.46-16.3,71-55.92,71-103.23A111.93,111.93,0,0,0,320,32c-57.14,0-103.69,42.83-110.6,98.08L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.46A16,16,0,0,0,6.18,53.91L594.53,508.63A16,16,0,0,0,617,505.82l19.64-25.27a16,16,0,0,0-2.81-22.45ZM128,403.21V432a48,48,0,0,0,48,48H464a47.45,47.45,0,0,0,12.57-1.87L232,289.13C173.74,294.83,128,343.42,128,403.21ZM576,256H512a63.79,63.79,0,0,0-45.09,18.6A146.29,146.29,0,0,1,542,384h66a32,32,0,0,0,32-32V320A64.06,64.06,0,0,0,576,256Z"]
+  icon: [640, 512, [], "e073", "M132.65,212.32,36.21,137.78A63.4,63.4,0,0,0,32,160a63.84,63.84,0,0,0,100.65,52.32Zm40.44,62.28A63.79,63.79,0,0,0,128,256H64A64.06,64.06,0,0,0,0,320v32a32,32,0,0,0,32,32H97.91A146.62,146.62,0,0,1,173.09,274.6ZM544,224a64,64,0,1,0-64-64A64.06,64.06,0,0,0,544,224ZM500.56,355.11a114.24,114.24,0,0,0-84.47-65.28L361,247.23c41.46-16.3,71-55.92,71-103.23A111.93,111.93,0,0,0,320,32c-57.14,0-103.69,42.83-110.6,98.08L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.46A16,16,0,0,0,6.18,53.91L594.53,508.63A16,16,0,0,0,617,505.82l19.64-25.27a16,16,0,0,0-2.81-22.45ZM128,403.21V432a48,48,0,0,0,48,48H464a47.45,47.45,0,0,0,12.57-1.87L232,289.13C173.74,294.83,128,343.42,128,403.21ZM576,256H512a63.79,63.79,0,0,0-45.09,18.6A146.29,146.29,0,0,1,542,384h66a32,32,0,0,0,32-32V320A64.06,64.06,0,0,0,576,256Z"]
 };
 var faUtensilSpoon = {
   prefix: 'fas',
@@ -8378,6 +8384,16 @@ var faVenusMars = {
   iconName: 'venus-mars',
   icon: [576, 512, [], "f228", "M564 0h-79c-10.7 0-16 12.9-8.5 20.5l16.9 16.9-48.7 48.7C422.5 72.1 396.2 64 368 64c-33.7 0-64.6 11.6-89.2 30.9 14 16.7 25 36 32.1 57.1 14.5-14.8 34.7-24 57.1-24 44.1 0 80 35.9 80 80s-35.9 80-80 80c-22.3 0-42.6-9.2-57.1-24-7.1 21.1-18 40.4-32.1 57.1 24.5 19.4 55.5 30.9 89.2 30.9 79.5 0 144-64.5 144-144 0-28.2-8.1-54.5-22.1-76.7l48.7-48.7 16.9 16.9c2.4 2.4 5.4 3.5 8.4 3.5 6.2 0 12.1-4.8 12.1-12V12c0-6.6-5.4-12-12-12zM144 64C64.5 64 0 128.5 0 208c0 68.5 47.9 125.9 112 140.4V400H76c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h36v36c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-36h36c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-36v-51.6c64.1-14.6 112-71.9 112-140.4 0-79.5-64.5-144-144-144zm0 224c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"]
 };
+var faVest = {
+  prefix: 'fas',
+  iconName: 'vest',
+  icon: [448, 512, [], "e085", "M437.252,239.877,384,160V32A32,32,0,0,0,352,0H320a24.021,24.021,0,0,0-13.312,4.031l-25,16.672a103.794,103.794,0,0,1-115.376,0l-25-16.672A24.021,24.021,0,0,0,128,0H96A32,32,0,0,0,64,32V160L10.748,239.877A64,64,0,0,0,0,275.377V480a32,32,0,0,0,32,32H192V288a31.987,31.987,0,0,1,1.643-10.119L207.135,237.4,150.188,66.564A151.518,151.518,0,0,0,224,86.234a151.55,151.55,0,0,0,73.812-19.672L224,288V512H416a32,32,0,0,0,32-32V275.377A64,64,0,0,0,437.252,239.877ZM131.312,371.312l-48,48a16,16,0,0,1-22.624-22.624l48-48a16,16,0,0,1,22.624,22.624Zm256,48a15.992,15.992,0,0,1-22.624,0l-48-48a16,16,0,0,1,22.624-22.624l48,48A15.993,15.993,0,0,1,387.312,419.312Z"]
+};
+var faVestPatches = {
+  prefix: 'fas',
+  iconName: 'vest-patches',
+  icon: [448, 512, [], "e086", "M437.252,239.877,384,160V32A32,32,0,0,0,352,0H320a23.982,23.982,0,0,0-13.312,4.031l-25,16.672a103.794,103.794,0,0,1-115.376,0l-25-16.672A23.982,23.982,0,0,0,128,0H96A32,32,0,0,0,64,32V160L10.748,239.877A64,64,0,0,0,0,275.377V480a32,32,0,0,0,32,32H192V288a31.987,31.987,0,0,1,1.643-10.119L207.135,237.4,150.188,66.561A151.579,151.579,0,0,0,224,86.234a151.565,151.565,0,0,0,73.811-19.668L224,288V512H416a32,32,0,0,0,32-32V275.377A64,64,0,0,0,437.252,239.877ZM63.5,272.484a12.01,12.01,0,0,1,17-16.968l15.5,15.5,15.5-15.5a12.01,12.01,0,0,1,17,16.968L112.984,288,128.5,303.516a12.01,12.01,0,0,1-17,16.968L96,304.984l-15.5,15.5a12.01,12.01,0,0,1-17-16.968L79.016,288ZM96,456a40,40,0,1,1,40-40A40,40,0,0,1,96,456ZM359.227,335.785,310.7,336a6.671,6.671,0,0,1-6.7-6.7l.215-48.574A24.987,24.987,0,0,1,331.43,256.1c12.789,1.162,22.129,12.619,22.056,25.419l-.037,5.057,5.051-.037c12.826-.035,24.236,9.275,25.4,22.076A24.948,24.948,0,0,1,359.227,335.785Z"]
+};
 var faVial = {
   prefix: 'fas',
   iconName: 'vial',
@@ -8406,17 +8422,17 @@ var faVihara = {
 var faVirus = {
   prefix: 'fas',
   iconName: 'virus',
-  icon: [512, 512, [], "f974", "M483.55,227.55H462c-50.68,0-76.07-61.27-40.23-97.11L437,115.19A28.44,28.44,0,0,0,396.8,75L381.56,90.22c-35.84,35.83-97.11,10.45-97.11-40.23V28.44a28.45,28.45,0,0,0-56.9,0V50c0,50.68-61.27,76.06-97.11,40.23L115.2,75A28.44,28.44,0,0,0,75,115.19l15.25,15.25c35.84,35.84,10.45,97.11-40.23,97.11H28.45a28.45,28.45,0,1,0,0,56.89H50c50.68,0,76.07,61.28,40.23,97.12L75,396.8A28.45,28.45,0,0,0,115.2,437l15.24-15.25c35.84-35.84,97.11-10.45,97.11,40.23v21.54a28.45,28.45,0,0,0,56.9,0V462c0-50.68,61.27-76.07,97.11-40.23L396.8,437A28.45,28.45,0,0,0,437,396.8l-15.25-15.24c-35.84-35.84-10.45-97.12,40.23-97.12h21.54a28.45,28.45,0,1,0,0-56.89ZM224,272a48,48,0,1,1,48-48A48,48,0,0,1,224,272Zm80,56a24,24,0,1,1,24-24A24,24,0,0,1,304,328Z"]
+  icon: [512, 512, [], "e074", "M483.55,227.55H462c-50.68,0-76.07-61.27-40.23-97.11L437,115.19A28.44,28.44,0,0,0,396.8,75L381.56,90.22c-35.84,35.83-97.11,10.45-97.11-40.23V28.44a28.45,28.45,0,0,0-56.9,0V50c0,50.68-61.27,76.06-97.11,40.23L115.2,75A28.44,28.44,0,0,0,75,115.19l15.25,15.25c35.84,35.84,10.45,97.11-40.23,97.11H28.45a28.45,28.45,0,1,0,0,56.89H50c50.68,0,76.07,61.28,40.23,97.12L75,396.8A28.45,28.45,0,0,0,115.2,437l15.24-15.25c35.84-35.84,97.11-10.45,97.11,40.23v21.54a28.45,28.45,0,0,0,56.9,0V462c0-50.68,61.27-76.07,97.11-40.23L396.8,437A28.45,28.45,0,0,0,437,396.8l-15.25-15.24c-35.84-35.84-10.45-97.12,40.23-97.12h21.54a28.45,28.45,0,1,0,0-56.89ZM224,272a48,48,0,1,1,48-48A48,48,0,0,1,224,272Zm80,56a24,24,0,1,1,24-24A24,24,0,0,1,304,328Z"]
 };
 var faVirusSlash = {
   prefix: 'fas',
   iconName: 'virus-slash',
-  icon: [640, 512, [], "f975", "M114,227.56H92.44a28.44,28.44,0,0,0,0,56.88H114c50.68,0,76.06,61.28,40.23,97.12L139,396.81A28.44,28.44,0,1,0,179.19,437l15.25-15.25c35.84-35.84,97.11-10.45,97.11,40.23v21.54a28.45,28.45,0,0,0,56.9,0V462c0-26.61,17-45.91,38.22-53.37l-244.5-189A55.58,55.58,0,0,1,114,227.56ZM633.82,458.09,470.62,332c4.17-25.39,24.91-47.52,55.39-47.52h21.55a28.44,28.44,0,1,0,0-56.88H526c-50.68,0-76.06-61.28-40.23-97.12L501,115.19A28.44,28.44,0,0,0,460.81,75L445.56,90.22c-35.84,35.84-97.11,10.46-97.11-40.23V28.45a28.45,28.45,0,0,0-56.9,0V50c0,50.69-61.27,76.07-97.11,40.23L179.19,75A28.43,28.43,0,0,0,139,75c-.13.14-.15.32-.28.46L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.45A16,16,0,0,0,6.18,53.91L594.54,508.63A16,16,0,0,0,617,505.81l19.64-25.26A16,16,0,0,0,633.82,458.09ZM335.43,227.48l-62.87-48.59A46.55,46.55,0,0,1,288,176a48,48,0,0,1,48,48C336,225.22,335.52,226.29,335.43,227.48Z"]
+  icon: [640, 512, [], "e075", "M114,227.6H92.4C76.7,227.6,64,240.3,64,256s12.7,28.4,28.4,28.4H114c50.7,0,76.1,61.3,40.2,97.1L139,396.8 c-11.5,10.7-12.2,28.7-1.6,40.2s28.7,12.2,40.2,1.6c0.5-0.5,1.1-1,1.6-1.6l15.2-15.2c35.8-35.8,97.1-10.5,97.1,40.2v21.5 c0,15.7,12.8,28.4,28.5,28.4c15.7,0,28.4-12.7,28.4-28.4V462c0-26.6,17-45.9,38.2-53.4l-244.5-189 C133.7,224.7,123.9,227.5,114,227.6z M617,505.8l19.6-25.3c5.4-7,4.2-17-2.8-22.5L470.6,332c4.2-25.4,24.9-47.5,55.4-47.5h21.5 c15.7,0,28.4-12.7,28.4-28.4s-12.7-28.4-28.4-28.4H526c-50.7,0-76.1-61.3-40.2-97.1l15.2-15.3c10.7-11.5,10-29.5-1.6-40.2 c-10.9-10.1-27.7-10.1-38.6,0l-15.2,15.2c-35.8,35.8-97.1,10.5-97.1-40.2V28.5C348.4,12.7,335.7,0,320,0 c-15.7,0-28.4,12.7-28.4,28.4V50c0,50.7-61.3,76.1-97.1,40.2L179.2,75c-11.1-11.1-29.4-10.6-40.5,0.5L45.5,3.4 c-7-5.4-17-4.2-22.5,2.8L3.4,31.5c-5.4,7-4.2,17,2.8,22.5l588.4,454.7C601.5,514.1,611.6,512.8,617,505.8z M335.4,227.5l-62.9-48.6 c4.9-1.8,10.2-2.8,15.4-2.9c26.5,0,48,21.5,48,48C336,225.2,335.5,226.3,335.4,227.5z"]
 };
 var faViruses = {
   prefix: 'fas',
   iconName: 'viruses',
-  icon: [640, 512, [], "f976", "M624,352H611.88c-28.51,0-42.79-34.47-22.63-54.63l8.58-8.57a16,16,0,1,0-22.63-22.63l-8.57,8.58C546.47,294.91,512,280.63,512,252.12V240a16,16,0,0,0-32,0v12.12c0,28.51-34.47,42.79-54.63,22.63l-8.57-8.58a16,16,0,0,0-22.63,22.63l8.58,8.57c20.16,20.16,5.88,54.63-22.63,54.63H368a16,16,0,0,0,0,32h12.12c28.51,0,42.79,34.47,22.63,54.63l-8.58,8.57a16,16,0,1,0,22.63,22.63l8.57-8.58c20.16-20.16,54.63-5.88,54.63,22.63V496a16,16,0,0,0,32,0V483.88c0-28.51,34.47-42.79,54.63-22.63l8.57,8.58a16,16,0,1,0,22.63-22.63l-8.58-8.57C569.09,418.47,583.37,384,611.88,384H624a16,16,0,0,0,0-32ZM480,384a32,32,0,1,1,32-32A32,32,0,0,1,480,384ZM346.51,213.33h16.16a21.33,21.33,0,0,0,0-42.66H346.51c-38,0-57.05-46-30.17-72.84l11.43-11.44A21.33,21.33,0,0,0,297.6,56.23L286.17,67.66c-26.88,26.88-72.84,7.85-72.84-30.17V21.33a21.33,21.33,0,0,0-42.66,0V37.49c0,38-46,57.05-72.84,30.17L86.4,56.23A21.33,21.33,0,0,0,56.23,86.39L67.66,97.83c26.88,26.88,7.85,72.84-30.17,72.84H21.33a21.33,21.33,0,0,0,0,42.66H37.49c38,0,57.05,46,30.17,72.84L56.23,297.6A21.33,21.33,0,1,0,86.4,327.77l11.43-11.43c26.88-26.88,72.84-7.85,72.84,30.17v16.16a21.33,21.33,0,0,0,42.66,0V346.51c0-38,46-57.05,72.84-30.17l11.43,11.43a21.33,21.33,0,0,0,30.17-30.17l-11.43-11.43C289.46,259.29,308.49,213.33,346.51,213.33ZM160,192a32,32,0,1,1,32-32A32,32,0,0,1,160,192Zm80,32a16,16,0,1,1,16-16A16,16,0,0,1,240,224Z"]
+  icon: [640, 512, [], "e076", "M624,352H611.88c-28.51,0-42.79-34.47-22.63-54.63l8.58-8.57a16,16,0,1,0-22.63-22.63l-8.57,8.58C546.47,294.91,512,280.63,512,252.12V240a16,16,0,0,0-32,0v12.12c0,28.51-34.47,42.79-54.63,22.63l-8.57-8.58a16,16,0,0,0-22.63,22.63l8.58,8.57c20.16,20.16,5.88,54.63-22.63,54.63H368a16,16,0,0,0,0,32h12.12c28.51,0,42.79,34.47,22.63,54.63l-8.58,8.57a16,16,0,1,0,22.63,22.63l8.57-8.58c20.16-20.16,54.63-5.88,54.63,22.63V496a16,16,0,0,0,32,0V483.88c0-28.51,34.47-42.79,54.63-22.63l8.57,8.58a16,16,0,1,0,22.63-22.63l-8.58-8.57C569.09,418.47,583.37,384,611.88,384H624a16,16,0,0,0,0-32ZM480,384a32,32,0,1,1,32-32A32,32,0,0,1,480,384ZM346.51,213.33h16.16a21.33,21.33,0,0,0,0-42.66H346.51c-38,0-57.05-46-30.17-72.84l11.43-11.44A21.33,21.33,0,0,0,297.6,56.23L286.17,67.66c-26.88,26.88-72.84,7.85-72.84-30.17V21.33a21.33,21.33,0,0,0-42.66,0V37.49c0,38-46,57.05-72.84,30.17L86.4,56.23A21.33,21.33,0,0,0,56.23,86.39L67.66,97.83c26.88,26.88,7.85,72.84-30.17,72.84H21.33a21.33,21.33,0,0,0,0,42.66H37.49c38,0,57.05,46,30.17,72.84L56.23,297.6A21.33,21.33,0,1,0,86.4,327.77l11.43-11.43c26.88-26.88,72.84-7.85,72.84,30.17v16.16a21.33,21.33,0,0,0,42.66,0V346.51c0-38,46-57.05,72.84-30.17l11.43,11.43a21.33,21.33,0,0,0,30.17-30.17l-11.43-11.43C289.46,259.29,308.49,213.33,346.51,213.33ZM160,192a32,32,0,1,1,32-32A32,32,0,0,1,160,192Zm80,32a16,16,0,1,1,16-16A16,16,0,0,1,240,224Z"]
 };
 var faVoicemail = {
   prefix: 'fas',
@@ -9531,6 +9547,8 @@ var _iconsCache = {
   faVenus: faVenus,
   faVenusDouble: faVenusDouble,
   faVenusMars: faVenusMars,
+  faVest: faVest,
+  faVestPatches: faVestPatches,
   faVial: faVial,
   faVials: faVials,
   faVideo: faVideo,
@@ -9577,9 +9595,9 @@ var _iconsCache = {
 /***/ }),
 
 /***/ "../../node_modules/@fortawesome/react-fontawesome/index.es.js":
-/*!*************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/@fortawesome/react-fontawesome/index.es.js ***!
-  \*************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/@fortawesome/react-fontawesome/index.es.js ***!
+  \************************************************************************************************************/
 /*! exports provided: FontAwesomeIcon */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -9853,6 +9871,12 @@ function log () {
 }
 
 function normalizeIconArgs(icon) {
+  // this has everything that it needs to be rendered which means it was probably imported
+  // directly from an icon svg package
+  if (icon && _typeof(icon) === 'object' && icon.prefix && icon.iconName && icon.icon) {
+    return icon;
+  }
+
   if (_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["parse"].icon) {
     return _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["parse"].icon(icon);
   } // if the icon is null, there's nothing to do
@@ -9863,7 +9887,7 @@ function normalizeIconArgs(icon) {
   } // if the icon is an object and has a prefix and an icon name, return it
 
 
-  if (_typeof(icon) === 'object' && icon.prefix && icon.iconName) {
+  if (icon && _typeof(icon) === 'object' && icon.prefix && icon.iconName) {
     return icon;
   } // if it's an array with length of two
 
@@ -9980,9 +10004,9 @@ var convertCurry = convert.bind(null, react__WEBPACK_IMPORTED_MODULE_2___default
 /***/ }),
 
 /***/ "../../node_modules/classnames/index.js":
-/*!**************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/classnames/index.js ***!
-  \**************************************************************/
+/*!*************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/classnames/index.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10048,153 +10072,209 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./components/log/log.scss":
-/*!******************************************************************************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/css-loader/dist/cjs.js!E:/Babylon/Babylon.js/node_modules/sass-loader/dist/cjs.js!./components/log/log.scss ***!
-  \******************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/cjs.js!C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/sass-loader/dist/cjs.js!./components/log/log.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-exports.push([module.i, "#log-console {\n  background: #333333;\n  height: 120px;\n  box-sizing: border-box;\n  margin: 0;\n  padding: 10px;\n  width: 100%;\n  overflow: hidden;\n  overflow-y: auto; }\n  #log-console .log {\n    color: white;\n    font-size: 14px;\n    font-family: 'Courier New', Courier, monospace; }\n    #log-console .log.error {\n      color: red; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#log-console {\n  background: #333333;\n  height: 120px;\n  box-sizing: border-box;\n  margin: 0;\n  padding: 10px;\n  width: 100%;\n  overflow: hidden;\n  overflow-y: auto; }\n  #log-console .log {\n    color: white;\n    font-size: 14px;\n    font-family: 'Courier New', Courier, monospace; }\n    #log-console .log.error {\n      color: red; }\n", "",{"version":3,"sources":["webpack://./components/log/log.scss"],"names":[],"mappings":"AAAA;EACI,mBAAmB;EACnB,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,aAAa;EACb,WAAW;EACX,gBAAgB;EAChB,gBAAgB,EAAA;EARpB;IAWQ,YAAY;IACZ,eAAe;IACf,8CAA8C,EAAA;IAbtD;MAgBY,UAAS,EAAA","sourcesContent":["#log-console {\r\n    background: #333333;\r\n    height: 120px;\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 10px;\r\n    width: 100%; \r\n    overflow: hidden;\r\n    overflow-y: auto;\r\n\r\n    .log {\r\n        color: white;\r\n        font-size: 14px;\r\n        font-family: 'Courier New', Courier, monospace;\r\n\r\n        &.error {\r\n            color:red;\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
-module.exports = exports;
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./components/propertyTab/propertyTab.scss":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/css-loader/dist/cjs.js!E:/Babylon/Babylon.js/node_modules/sass-loader/dist/cjs.js!./components/propertyTab/propertyTab.scss ***!
-  \**********************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/cjs.js!C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/sass-loader/dist/cjs.js!./components/propertyTab/propertyTab.scss ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-exports.push([module.i, ":root {\n  --backgroundGrey: #aaaaaa;\n  --spacingHeight: 30px; }\n\nhr.ge {\n  border: 1px solid #d0cece; }\n\n#ge-propertyTab {\n  user-select: none;\n  color: black;\n  background: #e2e2e2;\n  font-family: \"acumin-pro-condensed\"; }\n  #ge-propertyTab #header {\n    height: 30px;\n    font-size: 16px;\n    color: white;\n    background: white;\n    grid-row: 1;\n    text-align: center;\n    display: grid;\n    grid-template-columns: 30px 1fr;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #ge-propertyTab #header #logo {\n      position: relative;\n      background: white;\n      grid-column: 1;\n      width: 32px;\n      height: 32px;\n      left: 0;\n      display: flex;\n      align-self: center;\n      justify-self: center; }\n    #ge-propertyTab #header #title {\n      background: white;\n      color: black;\n      grid-column: 2;\n      display: grid;\n      align-items: center;\n      text-align: center; }\n  #ge-propertyTab .range {\n    -webkit-appearance: none;\n    width: 120px;\n    height: 2px;\n    background: black;\n    border-radius: 5px;\n    outline: none;\n    opacity: 0.7;\n    -webkit-transition: .2s;\n    transition: opacity .2s; }\n  #ge-propertyTab .range:hover {\n    opacity: 1; }\n  #ge-propertyTab .range::-webkit-slider-thumb {\n    -webkit-appearance: none;\n    appearance: none;\n    width: 14px;\n    height: 14px;\n    border-radius: 50%;\n    background: #e2e2e2;\n    border: solid;\n    border-width: thin;\n    cursor: pointer; }\n  #ge-propertyTab .range::-moz-range-thumb {\n    width: 14px;\n    height: 14px;\n    border-radius: 50%;\n    background: black;\n    cursor: pointer; }\n  #ge-propertyTab input[type=\"color\"] {\n    -webkit-appearance: none;\n    border: 1px solid rgba(255, 255, 255, 0.5);\n    padding: 0;\n    width: 30px;\n    height: 20px; }\n  #ge-propertyTab input[type=\"color\"]::-webkit-color-swatch-wrapper {\n    padding: 0; }\n  #ge-propertyTab input[type=\"color\"]::-webkit-color-swatch {\n    border: none; }\n  #ge-propertyTab .sliderLine {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-rows: 100%;\n    grid-template-columns: auto auto auto 1fr; }\n    #ge-propertyTab .sliderLine .label {\n      grid-column: 2;\n      display: flex;\n      align-items: center;\n      min-width: 15px; }\n    #ge-propertyTab .sliderLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .sliderLine .slider {\n      grid-column: 4;\n      grid-row: 1;\n      margin-right: 5px;\n      width: 90%;\n      display: flex;\n      align-items: center;\n      padding-left: 5px; }\n    #ge-propertyTab .sliderLine .floatLine {\n      grid-column: 3;\n      padding-left: 15px; }\n      #ge-propertyTab .sliderLine .floatLine .label {\n        grid-column: 1;\n        display: none;\n        align-items: center; }\n      #ge-propertyTab .sliderLine .floatLine .short {\n        grid-column: 1;\n        display: flex;\n        align-items: center; }\n        #ge-propertyTab .sliderLine .floatLine .short input {\n          width: 40px;\n          background-color: transparent;\n          outline-color: transparent;\n          border-left: transparent;\n          border-right: transparent;\n          border-top: transparent;\n          outline-width: 0px; }\n        #ge-propertyTab .sliderLine .floatLine .short input::-webkit-outer-spin-button,\n        #ge-propertyTab .sliderLine .floatLine .short input::-webkit-inner-spin-button {\n          -webkit-appearance: none;\n          margin: 0; }\n        #ge-propertyTab .sliderLine .floatLine .short input[type=number] {\n          -moz-appearance: textfield; }\n  #ge-propertyTab .ge-divider {\n    display: grid;\n    grid-template-columns: auto auto auto auto auto auto; }\n  #ge-propertyTab .ge-divider-short {\n    display: grid;\n    grid-template-columns: 1fr 1fr; }\n  #ge-propertyTab .ge-grid-divider {\n    display: grid;\n    grid-template-columns: 150px 1fr auto; }\n    #ge-propertyTab .ge-grid-divider .textLine {\n      grid-column: auto; }\n  #ge-propertyTab .ge-grid-button-divider {\n    display: grid;\n    grid-template-columns: 60px 60px 60px 60px; }\n  #ge-propertyTab .ge-grid-remove {\n    display: grid;\n    background-color: #c2c2c2;\n    margin-bottom: 5px;\n    filter: invert(1); }\n  #ge-propertyTab .ge-grid-edit {\n    display: grid;\n    background-color: #878787;\n    margin-bottom: 5px;\n    filter: invert(1); }\n  #ge-propertyTab .ge-grid {\n    display: grid;\n    margin-bottom: 5px; }\n  #ge-propertyTab .textInputLine {\n    user-select: none;\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-columns: auto auto 2fr 1fr; }\n    #ge-propertyTab .textInputLine .label {\n      grid-column: 2;\n      padding-left: 5px;\n      display: flex;\n      align-items: center;\n      min-width: 15px; }\n    #ge-propertyTab .textInputLine img {\n      width: 30px; }\n    #ge-propertyTab .textInputLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .textInputLine .value {\n      display: flex;\n      align-items: center;\n      padding-left: 15px;\n      grid-column: 3;\n      background: transparent; }\n      #ge-propertyTab .textInputLine .value input {\n        width: calc(100% - 5px);\n        background-color: transparent;\n        outline-color: transparent;\n        border-left: transparent;\n        border-right: transparent;\n        border-top: transparent;\n        outline-width: 0px; }\n    #ge-propertyTab .textInputLine .noUnderline input {\n      border-bottom: transparent; }\n  #ge-propertyTab .textInputArea {\n    padding-left: 5px;\n    height: 100%;\n    display: grid;\n    grid-template-columns: 1fr 120px; }\n    #ge-propertyTab .textInputArea .label {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .textInputArea .value {\n      display: flex;\n      align-items: center;\n      grid-column: 2; }\n      #ge-propertyTab .textInputArea .value textarea {\n        width: calc(150% - 5px);\n        margin-left: -50%;\n        height: 40px; }\n  #ge-propertyTab .paneContainer {\n    margin-top: 3px;\n    display: grid;\n    grid-template-rows: 100%;\n    grid-template-columns: 100%; }\n    #ge-propertyTab .paneContainer .paneList {\n      border-left: 3px solid transparent; }\n    #ge-propertyTab .paneContainer:hover .paneList {\n      border-left: 3px solid rgba(51, 122, 183, 0.8); }\n    #ge-propertyTab .paneContainer:hover .paneContainer-content .header .title {\n      border-left: 3px solid #337ab7; }\n    #ge-propertyTab .paneContainer .paneContainer-highlight-border {\n      grid-row: 1;\n      grid-column: 1;\n      opacity: 1;\n      border: 3px solid red;\n      transition: opacity 250ms;\n      pointer-events: none; }\n      #ge-propertyTab .paneContainer .paneContainer-highlight-border.transparent {\n        opacity: 0; }\n    #ge-propertyTab .paneContainer .paneContainer-content {\n      grid-row: 1;\n      grid-column: 1; }\n      #ge-propertyTab .paneContainer .paneContainer-content .header {\n        display: grid;\n        grid-template-columns: 1fr auto;\n        background: #cccccc;\n        height: var(--spacingHeight);\n        padding-bottom: 0px;\n        padding-top: 0px;\n        padding-right: 5px;\n        cursor: pointer; }\n        #ge-propertyTab .paneContainer .paneContainer-content .header .title {\n          border-left: 3px solid transparent;\n          padding-left: 5px;\n          grid-column: 1;\n          display: flex;\n          align-items: center; }\n        #ge-propertyTab .paneContainer .paneContainer-content .header .collapse {\n          grid-column: 2;\n          display: flex;\n          align-items: center;\n          justify-items: center;\n          transform-origin: center; }\n          #ge-propertyTab .paneContainer .paneContainer-content .header .collapse.closed {\n            transform: rotate(180deg); }\n      #ge-propertyTab .paneContainer .paneContainer-content .paneList > div:not(:last-child) {\n        border-bottom: 0.5px solid rgba(255, 255, 255, 0.1); }\n      #ge-propertyTab .paneContainer .paneContainer-content .fragment > div:not(:last-child) {\n        border-bottom: 0.5px solid rgba(255, 255, 255, 0.1); }\n  #ge-propertyTab .color-picker {\n    height: 150px;\n    width: 15px; }\n    #ge-propertyTab .color-picker .color-rect {\n      height: 15px;\n      border: 1px black solid;\n      cursor: pointer; }\n    #ge-propertyTab .color-picker .color-picker-cover {\n      position: fixed;\n      top: 0px;\n      right: 0px;\n      bottom: 0px;\n      left: 0px; }\n    #ge-propertyTab .color-picker .color-picker-float {\n      z-index: 2;\n      position: absolute; }\n  #ge-propertyTab .gradient-step {\n    display: grid;\n    grid-template-rows: 100%;\n    grid-template-columns: 20px 30px 40px auto 20px 30px;\n    padding-top: 5px;\n    padding-left: 5px;\n    padding-bottom: 5px; }\n    #ge-propertyTab .gradient-step .step {\n      grid-row: 1;\n      grid-column: 1; }\n    #ge-propertyTab .gradient-step .color {\n      grid-row: 1;\n      grid-column: 2;\n      cursor: pointer; }\n    #ge-propertyTab .gradient-step .step-value {\n      margin-left: 5px;\n      grid-row: 1;\n      grid-column: 3;\n      text-align: right;\n      margin-right: 5px; }\n    #ge-propertyTab .gradient-step .step-slider {\n      grid-row: 1;\n      grid-column: 4;\n      display: grid;\n      justify-content: stretch;\n      align-content: center;\n      margin-right: -5px;\n      padding-left: 12px; }\n      #ge-propertyTab .gradient-step .step-slider input {\n        width: 90%; }\n    #ge-propertyTab .gradient-step .gradient-copy {\n      grid-row: 1;\n      grid-column: 5;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n      #ge-propertyTab .gradient-step .gradient-copy .img {\n        height: 20px;\n        width: 20px; }\n      #ge-propertyTab .gradient-step .gradient-copy .img:hover {\n        cursor: pointer; }\n    #ge-propertyTab .gradient-step .gradient-delete {\n      grid-row: 1;\n      grid-column: 6;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n      #ge-propertyTab .gradient-step .gradient-delete .img {\n        height: 20px;\n        width: 20px; }\n      #ge-propertyTab .gradient-step .gradient-delete .img:hover {\n        cursor: pointer; }\n  #ge-propertyTab .command-button {\n    cursor: pointer;\n    width: auto; }\n    #ge-propertyTab .command-button .command-label {\n      display: none; }\n    #ge-propertyTab .command-button .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      color: white;\n      align-content: center;\n      justify-content: center; }\n    #ge-propertyTab .command-button:hover {\n      background-color: white; }\n    #ge-propertyTab .command-button .active {\n      transform-origin: center;\n      background-color: white; }\n    #ge-propertyTab .command-button img.active {\n      background-color: white; }\n  #ge-propertyTab .command-button-alt {\n    cursor: pointer;\n    width: 40px;\n    margin-left: 5px;\n    margin-right: 5px;\n    background-color: white; }\n    #ge-propertyTab .command-button-alt .command-label {\n      display: none; }\n    #ge-propertyTab .command-button-alt .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n    #ge-propertyTab .command-button-alt:hover {\n      background-color: #c2c2c2;\n      filter: invert(1); }\n  #ge-propertyTab .command-button-alt-disabled {\n    cursor: pointer;\n    pointer-events: none;\n    width: 40px;\n    margin-left: 5px;\n    margin-right: 5px;\n    background-color: white; }\n    #ge-propertyTab .command-button-alt-disabled .command-label {\n      display: none; }\n    #ge-propertyTab .command-button-alt-disabled .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n    #ge-propertyTab .command-button-alt-disabled img {\n      filter: invert(1); }\n  #ge-propertyTab .command-button-alt-active {\n    cursor: pointer;\n    pointer-events: none;\n    width: 40px;\n    margin-left: 5px;\n    margin-right: 5px;\n    background-color: #c2c2c2;\n    filter: invert(1); }\n    #ge-propertyTab .command-button-alt-active .command-label {\n      display: none; }\n    #ge-propertyTab .command-button-alt-active .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n  #ge-propertyTab .floatLine {\n    user-select: none;\n    padding-left: 5px;\n    height: var(--spacingHeight);\n    padding-bottom: 0px;\n    padding-top: 0px;\n    display: grid;\n    grid-template-columns: auto auto 2fr 1fr; }\n    #ge-propertyTab .floatLine .label {\n      grid-column: 2;\n      display: flex;\n      align-items: center;\n      min-width: 15px; }\n    #ge-propertyTab .floatLine img {\n      width: 30px; }\n    #ge-propertyTab .floatLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .floatLine .value {\n      display: flex;\n      padding-left: 15px;\n      align-items: center;\n      grid-column: 3;\n      background: transparent; }\n      #ge-propertyTab .floatLine .value input {\n        width: calc(100% - 5px);\n        background-color: transparent;\n        outline-color: transparent;\n        border-left: transparent;\n        border-right: transparent;\n        border-top: transparent;\n        outline-width: 0px; }\n    #ge-propertyTab .floatLine .short {\n      grid-column: 2;\n      display: flex;\n      align-items: center; }\n      #ge-propertyTab .floatLine .short input {\n        width: 27px; }\n      #ge-propertyTab .floatLine .short input::-webkit-outer-spin-button,\n      #ge-propertyTab .floatLine .short input::-webkit-inner-spin-button {\n        -webkit-appearance: none;\n        margin: 0; }\n      #ge-propertyTab .floatLine .short input[type=number] {\n        -moz-appearance: textfield; }\n  #ge-propertyTab .vector3Line {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    display: grid; }\n    #ge-propertyTab .vector3Line .firstLine {\n      display: grid;\n      grid-template-columns: 1fr auto 20px;\n      height: var(--spacingHeight); }\n      #ge-propertyTab .vector3Line .firstLine .label {\n        grid-column: 1;\n        display: flex;\n        align-items: center; }\n      #ge-propertyTab .vector3Line .firstLine .vector {\n        grid-column: 2;\n        display: flex;\n        align-items: center;\n        text-align: right;\n        opacity: 0.8; }\n      #ge-propertyTab .vector3Line .firstLine .expand {\n        grid-column: 3;\n        display: grid;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer; }\n    #ge-propertyTab .vector3Line .secondLine {\n      display: grid;\n      padding-right: 5px;\n      border-left: 1px solid #337ab7; }\n      #ge-propertyTab .vector3Line .secondLine .no-right-margin {\n        margin-right: 0; }\n      #ge-propertyTab .vector3Line .secondLine .numeric {\n        display: grid;\n        grid-template-columns: 1fr auto; }\n      #ge-propertyTab .vector3Line .secondLine .numeric-label {\n        text-align: right;\n        grid-column: 1;\n        display: flex;\n        align-items: center;\n        justify-self: right;\n        margin-right: 10px; }\n      #ge-propertyTab .vector3Line .secondLine .numeric-value {\n        width: 120px;\n        grid-column: 2;\n        display: flex;\n        align-items: center;\n        border: 1px solid #337ab7; }\n  #ge-propertyTab .buttonLine {\n    height: var(--spacingHeight);\n    padding-bottom: 0px;\n    padding-top: 0px;\n    display: grid;\n    align-items: center;\n    justify-items: stretch;\n    padding-bottom: 5px; }\n    #ge-propertyTab .buttonLine input[type=\"file\"] {\n      display: none; }\n    #ge-propertyTab .buttonLine .file-upload {\n      background: var(--backgroundGrey);\n      border: 1px solid #424242;\n      margin: 5px 10px;\n      color: white;\n      padding: 4px 5px;\n      padding-top: 0px;\n      opacity: 0.9;\n      cursor: pointer;\n      text-align: center;\n      border-radius: 4px; }\n    #ge-propertyTab .buttonLine .file-upload:hover {\n      opacity: 1.0; }\n    #ge-propertyTab .buttonLine .file-upload:active {\n      transform: scale(0.98);\n      transform-origin: 0.5 0.5; }\n    #ge-propertyTab .buttonLine button {\n      background: var(--backgroundGrey);\n      border: 1px solid #424242;\n      margin: 5px 10px 5px 10px;\n      color: white;\n      padding: 4px 5px;\n      opacity: 0.9;\n      border-radius: 4px; }\n    #ge-propertyTab .buttonLine button:hover {\n      opacity: 1.0; }\n    #ge-propertyTab .buttonLine button:active {\n      background: #282828; }\n    #ge-propertyTab .buttonLine button:focus {\n      border: 1px solid #424242;\n      outline: 0px; }\n  #ge-propertyTab .numeric {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-columns: 1fr 120px auto; }\n    #ge-propertyTab .numeric .numeric-label {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .numeric .number {\n      display: flex;\n      align-items: center;\n      grid-column: 2;\n      height: 10px; }\n      #ge-propertyTab .numeric .number .input {\n        width: calc(100% - 5px);\n        height: 10px; }\n  #ge-propertyTab .checkBoxLine {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-columns: auto auto 1fr; }\n    #ge-propertyTab .checkBoxLine .label {\n      grid-column: 2;\n      display: flex;\n      align-items: center;\n      min-width: 100px;\n      margin-left: 15px; }\n    #ge-propertyTab .checkBoxLine img {\n      width: 30px; }\n    #ge-propertyTab .checkBoxLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .checkBoxLine .checkBox {\n      grid-column: 3;\n      display: flex;\n      align-items: center;\n      padding-left: 15px; }\n      #ge-propertyTab .checkBoxLine .checkBox .lbl {\n        position: relative;\n        display: block;\n        height: 14px;\n        width: 34px;\n        margin-right: 5px;\n        border-radius: 100px;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        border: solid;\n        border-width: thin; }\n      #ge-propertyTab .checkBoxLine .checkBox .lbl:after {\n        position: absolute;\n        left: 3px;\n        top: 1px;\n        display: block;\n        width: 10px;\n        height: 10px;\n        border-radius: 100px;\n        background: #e2e2e2;\n        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);\n        content: '';\n        transition: all 0.15s ease;\n        border: solid;\n        border-width: thin; }\n      #ge-propertyTab .checkBoxLine .checkBox .lbl:active:after {\n        transform: scale(1.15, 0.85); }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx:checked ~ label {\n        background: transparent; }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx:checked ~ label:after {\n        left: 20px;\n        background: black;\n        border: solid;\n        border-width: thin; }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx:checked ~ label.disabled {\n        background: black;\n        cursor: pointer; }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx:checked ~ label.disabled:after {\n        left: 20px;\n        background: #555555;\n        cursor: pointer; }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx ~ label.disabled {\n        background: #555555;\n        cursor: pointer; }\n      #ge-propertyTab .checkBoxLine .checkBox .hidden {\n        display: none; }\n  #ge-propertyTab .listLine {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-columns: auto 1fr auto; }\n    #ge-propertyTab .listLine .label {\n      grid-column: 2;\n      display: none;\n      align-items: center; }\n    #ge-propertyTab .listLine img {\n      width: 30px; }\n    #ge-propertyTab .listLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .listLine .options {\n      grid-column: 2;\n      padding-left: 15px;\n      display: flex;\n      align-items: center;\n      margin-right: 5px; }\n      #ge-propertyTab .listLine .options select {\n        width: 120px;\n        height: 25px;\n        border: transparent;\n        border-radius: 4px; }\n  #ge-propertyTab .color3Line {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    display: grid; }\n    #ge-propertyTab .color3Line .firstLine {\n      height: var(--spacingHeight);\n      display: grid;\n      grid-template-columns: auto auto 1fr; }\n      #ge-propertyTab .color3Line .firstLine .label {\n        grid-column: 2;\n        padding-left: 5px;\n        display: none;\n        align-items: center;\n        min-width: 15px; }\n      #ge-propertyTab .color3Line .firstLine .img {\n        grid-column: 1;\n        display: flex;\n        align-items: center; }\n      #ge-propertyTab .color3Line .firstLine img {\n        width: 30px;\n        height: 30px; }\n      #ge-propertyTab .color3Line .firstLine .textInputLine {\n        grid-column: 3;\n        padding-left: 0px; }\n      #ge-propertyTab .color3Line .firstLine .color3 {\n        grid-column: 2;\n        margin-top: 6px;\n        display: flex;\n        align-items: center; }\n        #ge-propertyTab .color3Line .firstLine .color3 input {\n          margin-right: 5px; }\n      #ge-propertyTab .color3Line .firstLine .copy {\n        grid-column: 4;\n        display: none;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer;\n        color: black; }\n        #ge-propertyTab .color3Line .firstLine .copy img {\n          height: 100%;\n          width: 20px; }\n      #ge-propertyTab .color3Line .firstLine .expand {\n        grid-column: 4;\n        display: none;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer; }\n        #ge-propertyTab .color3Line .firstLine .expand img {\n          height: 100%;\n          width: 20px; }\n    #ge-propertyTab .color3Line .secondLine {\n      display: grid;\n      padding-right: 5px;\n      border-left: 1px solid #337ab7; }\n      #ge-propertyTab .color3Line .secondLine .numeric {\n        display: grid;\n        grid-template-columns: 1fr auto; }\n      #ge-propertyTab .color3Line .secondLine .numeric-label {\n        text-align: right;\n        grid-column: 1;\n        display: flex;\n        align-items: center;\n        justify-self: right;\n        margin-right: 10px; }\n      #ge-propertyTab .color3Line .secondLine .numeric-value {\n        width: 120px;\n        grid-column: 2;\n        display: flex;\n        align-items: center;\n        border: 1px solid #337ab7; }\n  #ge-propertyTab .textLine {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    height: auto;\n    display: grid;\n    grid-template-columns: auto auto 2fr 1fr; }\n    #ge-propertyTab .textLine .label {\n      grid-column: 2;\n      padding-left: 5px;\n      padding-top: 4px;\n      display: flex;\n      align-items: left;\n      min-width: 15px; }\n    #ge-propertyTab .textLine img {\n      width: 30px; }\n    #ge-propertyTab .textLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .textLine .link-value {\n      grid-column: 2;\n      white-space: nowrap;\n      text-overflow: ellipsis;\n      overflow: hidden;\n      text-align: end;\n      opacity: 0.8;\n      margin: 5px;\n      margin-top: 6px;\n      max-width: 140px;\n      text-decoration: underline;\n      cursor: pointer; }\n    #ge-propertyTab .textLine .value {\n      display: none;\n      grid-column: 3;\n      white-space: nowrap;\n      text-overflow: ellipsis;\n      overflow: hidden;\n      text-align: end;\n      opacity: 0.8;\n      margin: 5px;\n      margin-top: 6px;\n      max-width: 200px;\n      -webkit-user-select: text;\n      -moz-user-select: text;\n      -ms-user-select: text;\n      user-select: text; }\n      #ge-propertyTab .textLine .value.check {\n        color: green; }\n      #ge-propertyTab .textLine .value.uncheck {\n        color: red; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\n  --backgroundGrey: #aaaaaa;\n  --spacingHeight: 30px;\n  --labelFamily: \"acumin-pro-condensed-semibold\";\n  --button: #333333;\n  --buttonBackground: #ffffff;\n  --buttonDisabledBackground: #c8c8c8;\n  --buttonPressed: #ffffff;\n  --buttonPressedBackground: #606060; }\n\nhr.ge {\n  border: 1px solid #d0cece; }\n\n#ge-propertyTab {\n  user-select: none;\n  color: black;\n  background: #e2e2e2; }\n  #ge-propertyTab * {\n    font-family: \"acumin-pro-semicondensed\";\n    font-size: 12px; }\n  #ge-propertyTab #header {\n    height: 30px;\n    font-size: 16px;\n    color: white;\n    background: white;\n    grid-row: 1;\n    text-align: center;\n    display: grid;\n    grid-template-columns: 30px 1fr;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #ge-propertyTab #header #logo {\n      position: relative;\n      background: white;\n      grid-column: 1;\n      width: 32px;\n      height: 32px;\n      left: 0;\n      display: flex;\n      align-self: center;\n      justify-self: center; }\n    #ge-propertyTab #header #title {\n      background: white;\n      color: black;\n      grid-column: 2;\n      display: grid;\n      align-items: center;\n      text-align: center; }\n  #ge-propertyTab .range {\n    -webkit-appearance: none;\n    width: 100%;\n    height: 2px;\n    background: #bcbcbc;\n    border-radius: 5px;\n    outline: none;\n    opacity: 0.7;\n    -webkit-transition: .2s;\n    transition: opacity .2s; }\n  #ge-propertyTab .range:hover {\n    opacity: 1; }\n  #ge-propertyTab .range::-webkit-slider-thumb {\n    -webkit-appearance: none;\n    appearance: none;\n    width: 14px;\n    height: 14px;\n    border-radius: 50%;\n    background: #e2e2e2;\n    border: solid;\n    border-width: thin;\n    cursor: pointer; }\n  #ge-propertyTab .range::-moz-range-thumb {\n    width: 14px;\n    height: 14px;\n    border-radius: 50%;\n    background: black;\n    cursor: pointer; }\n  #ge-propertyTab input[type=\"color\"] {\n    -webkit-appearance: none;\n    border: 1px solid rgba(255, 255, 255, 0.5);\n    padding: 0;\n    width: 30px;\n    height: 20px; }\n  #ge-propertyTab input[type=\"color\"]::-webkit-color-swatch-wrapper {\n    padding: 0; }\n  #ge-propertyTab input[type=\"color\"]::-webkit-color-swatch {\n    border: none; }\n  #ge-propertyTab .unit {\n    width: 26px;\n    height: 26px;\n    color: var(--button);\n    background-color: var(--buttonBackground);\n    border: none;\n    margin-top: 2px;\n    cursor: pointer; }\n  #ge-propertyTab .unit.disabled {\n    background-color: var(--buttonDisabledBackground); }\n  #ge-propertyTab .unit:active {\n    color: var(--buttonPressed);\n    background-color: var(--buttonPressedBackground); }\n  #ge-propertyTab .sliderLine {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    padding-right: 18px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-rows: 100%;\n    grid-template-columns: auto auto auto 1fr; }\n    #ge-propertyTab .sliderLine .label {\n      grid-column: 2;\n      display: flex;\n      align-items: center;\n      min-width: 15px;\n      font-family: var(--labelFamily); }\n    #ge-propertyTab .sliderLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .sliderLine .slider {\n      grid-column: 4;\n      grid-row: 1;\n      margin-right: 5px;\n      width: 90%;\n      display: flex;\n      align-items: center;\n      padding-left: 5px; }\n    #ge-propertyTab .sliderLine .floatLine {\n      grid-column: 3;\n      padding-left: 0px; }\n      #ge-propertyTab .sliderLine .floatLine .label {\n        grid-column: 1;\n        display: none;\n        align-items: center;\n        font-family: var(--labelFamily); }\n      #ge-propertyTab .sliderLine .floatLine .short {\n        grid-column: 1;\n        display: flex;\n        align-items: center; }\n        #ge-propertyTab .sliderLine .floatLine .short input {\n          width: 60px;\n          background-color: white;\n          outline-color: transparent;\n          border: transparent;\n          height: 26px;\n          outline-width: 0px; }\n        #ge-propertyTab .sliderLine .floatLine .short input::-webkit-outer-spin-button,\n        #ge-propertyTab .sliderLine .floatLine .short input::-webkit-inner-spin-button {\n          -webkit-appearance: none;\n          margin: 0; }\n        #ge-propertyTab .sliderLine .floatLine .short input[type=number] {\n          -webkit-appearance: textfield;\n          -moz-appearance: textfield;\n          appearance: textfield; }\n  #ge-propertyTab .ge-divider {\n    display: grid;\n    grid-template-columns: auto auto auto auto auto auto;\n    padding-right: 18px; }\n  #ge-propertyTab .ge-divider-short {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    padding-right: 18px; }\n  #ge-propertyTab .ge-divider-single {\n    display: block;\n    padding-right: 18px; }\n  #ge-propertyTab .ge-grid-divider {\n    display: grid;\n    grid-template-columns: 150px 1fr auto; }\n    #ge-propertyTab .ge-grid-divider .textLine {\n      grid-column: auto; }\n  #ge-propertyTab .ge-grid-button-divider {\n    display: grid;\n    grid-template-columns: 60px 60px 60px 60px; }\n  #ge-propertyTab .ge-grid-remove {\n    display: grid;\n    background-color: #c2c2c2;\n    margin-bottom: 5px;\n    filter: invert(1); }\n  #ge-propertyTab .ge-grid-edit {\n    display: grid;\n    background-color: #878787;\n    margin-bottom: 5px;\n    filter: invert(1); }\n  #ge-propertyTab .ge-grid {\n    display: grid;\n    margin-bottom: 5px; }\n  #ge-propertyTab .textInputLine {\n    user-select: none;\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    padding-right: 18px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-columns: auto auto 1fr; }\n    #ge-propertyTab .textInputLine .label {\n      grid-column: 2;\n      display: flex;\n      align-items: center;\n      min-width: 15px;\n      font-family: var(--labelFamily); }\n    #ge-propertyTab .textInputLine img {\n      width: 30px; }\n    #ge-propertyTab .textInputLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .textInputLine .value {\n      display: flex;\n      align-items: center;\n      grid-column: 3;\n      background: transparent;\n      height: 26px;\n      position: relative;\n      background-color: white;\n      margin-top: 2px;\n      overflow-y: hidden;\n      margin-right: 2px; }\n      #ge-propertyTab .textInputLine .value input {\n        width: 100%;\n        outline-color: transparent;\n        border: transparent;\n        outline-width: 0px;\n        height: 24px; }\n      #ge-propertyTab .textInputLine .value input.hasArrows {\n        padding-right: 15px; }\n      #ge-propertyTab .textInputLine .value .arrows {\n        display: none; }\n      #ge-propertyTab .textInputLine .value:hover .arrows, #ge-propertyTab .textInputLine .value:focus .arrows, #ge-propertyTab .textInputLine .value.dragging .arrows {\n        position: absolute;\n        right: 0;\n        display: flex;\n        flex-direction: column;\n        background-color: white;\n        cursor: grab; }\n        #ge-propertyTab .textInputLine .value:hover .arrows .downArrowIcon, #ge-propertyTab .textInputLine .value:hover .arrows .upArrowIcon, #ge-propertyTab .textInputLine .value:focus .arrows .downArrowIcon, #ge-propertyTab .textInputLine .value:focus .arrows .upArrowIcon, #ge-propertyTab .textInputLine .value.dragging .arrows .downArrowIcon, #ge-propertyTab .textInputLine .value.dragging .arrows .upArrowIcon {\n          width: 15px;\n          height: 15px; }\n      #ge-propertyTab .textInputLine .value.dragging .arrows {\n        background-color: var(--buttonPressedBackground); }\n        #ge-propertyTab .textInputLine .value.dragging .arrows .downArrowIcon, #ge-propertyTab .textInputLine .value.dragging .arrows .upArrowIcon {\n          filter: invert(100%) brightness(500%); }\n  #ge-propertyTab .textInputLine.withUnits {\n    grid-template-columns: auto auto 1fr auto; }\n  #ge-propertyTab .textInputArea {\n    padding-left: 5px;\n    height: 100%;\n    display: grid;\n    grid-template-columns: 1fr 120px; }\n    #ge-propertyTab .textInputArea .label {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .textInputArea .value {\n      display: flex;\n      align-items: center;\n      grid-column: 2; }\n      #ge-propertyTab .textInputArea .value textarea {\n        width: calc(150% - 5px);\n        margin-left: -50%;\n        height: 40px; }\n  #ge-propertyTab .paneContainer {\n    margin-top: 3px;\n    display: grid;\n    grid-template-rows: 100%;\n    grid-template-columns: 100%; }\n    #ge-propertyTab .paneContainer .paneList {\n      border-left: 3px solid transparent; }\n    #ge-propertyTab .paneContainer:hover .paneList {\n      border-left: 3px solid rgba(51, 122, 183, 0.8); }\n    #ge-propertyTab .paneContainer:hover .paneContainer-content .header .title {\n      border-left: 3px solid #337ab7; }\n    #ge-propertyTab .paneContainer .paneContainer-highlight-border {\n      grid-row: 1;\n      grid-column: 1;\n      opacity: 1;\n      border: 3px solid red;\n      transition: opacity 250ms;\n      pointer-events: none; }\n      #ge-propertyTab .paneContainer .paneContainer-highlight-border.transparent {\n        opacity: 0; }\n    #ge-propertyTab .paneContainer .paneContainer-content {\n      grid-row: 1;\n      grid-column: 1; }\n      #ge-propertyTab .paneContainer .paneContainer-content .header {\n        display: grid;\n        grid-template-columns: 1fr auto;\n        background: #cccccc;\n        height: var(--spacingHeight);\n        padding-bottom: 0px;\n        padding-top: 0px;\n        padding-right: 5px;\n        cursor: pointer; }\n        #ge-propertyTab .paneContainer .paneContainer-content .header .title {\n          border-left: 3px solid transparent;\n          padding-left: 5px;\n          grid-column: 1;\n          display: flex;\n          align-items: center; }\n        #ge-propertyTab .paneContainer .paneContainer-content .header .collapse {\n          grid-column: 2;\n          display: flex;\n          align-items: center;\n          justify-items: center;\n          transform-origin: center; }\n          #ge-propertyTab .paneContainer .paneContainer-content .header .collapse.closed {\n            transform: rotate(180deg); }\n      #ge-propertyTab .paneContainer .paneContainer-content .paneList > div:not(:last-child) {\n        border-bottom: 0.5px solid rgba(255, 255, 255, 0.1); }\n      #ge-propertyTab .paneContainer .paneContainer-content .fragment > div:not(:last-child) {\n        border-bottom: 0.5px solid rgba(255, 255, 255, 0.1); }\n  #ge-propertyTab .color-picker {\n    height: 150px;\n    width: 15px; }\n    #ge-propertyTab .color-picker .color-rect-background {\n      height: 15px;\n      border: 1px black solid;\n      cursor: pointer;\n      background: repeating-conic-gradient(#E2E2E2 0% 25%, white 0% 50%) 50%/10px 10px; }\n      #ge-propertyTab .color-picker .color-rect-background .color-rect {\n        height: 100%; }\n    #ge-propertyTab .color-picker .color-picker-cover {\n      position: fixed;\n      top: 0px;\n      right: 0px;\n      bottom: 0px;\n      left: 0px; }\n    #ge-propertyTab .color-picker .color-picker-float {\n      z-index: 2;\n      position: absolute; }\n  #ge-propertyTab .gradient-step {\n    display: grid;\n    grid-template-rows: 100%;\n    grid-template-columns: 20px 30px 40px auto 20px 30px;\n    padding-top: 5px;\n    padding-left: 5px;\n    padding-bottom: 5px; }\n    #ge-propertyTab .gradient-step .step {\n      grid-row: 1;\n      grid-column: 1; }\n    #ge-propertyTab .gradient-step .color {\n      grid-row: 1;\n      grid-column: 2;\n      cursor: pointer; }\n    #ge-propertyTab .gradient-step .step-value {\n      margin-left: 5px;\n      grid-row: 1;\n      grid-column: 3;\n      text-align: right;\n      margin-right: 5px; }\n    #ge-propertyTab .gradient-step .step-slider {\n      grid-row: 1;\n      grid-column: 4;\n      display: grid;\n      justify-content: stretch;\n      align-content: center;\n      margin-right: -5px;\n      padding-left: 12px; }\n      #ge-propertyTab .gradient-step .step-slider input {\n        width: 90%; }\n    #ge-propertyTab .gradient-step .gradient-copy {\n      grid-row: 1;\n      grid-column: 5;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n      #ge-propertyTab .gradient-step .gradient-copy .img {\n        height: 20px;\n        width: 20px; }\n      #ge-propertyTab .gradient-step .gradient-copy .img:hover {\n        cursor: pointer; }\n    #ge-propertyTab .gradient-step .gradient-delete {\n      grid-row: 1;\n      grid-column: 6;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n      #ge-propertyTab .gradient-step .gradient-delete .img {\n        height: 20px;\n        width: 20px; }\n      #ge-propertyTab .gradient-step .gradient-delete .img:hover {\n        cursor: pointer; }\n  #ge-propertyTab .alignment-bar {\n    display: flex;\n    justify-content: center;\n    padding-right: 5px; }\n  #ge-propertyTab .command-button {\n    cursor: pointer;\n    width: 30px; }\n    #ge-propertyTab .command-button .command-label {\n      display: none; }\n    #ge-propertyTab .command-button .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      color: white;\n      align-content: center;\n      justify-content: center; }\n    #ge-propertyTab .command-button:hover {\n      background-color: white; }\n    #ge-propertyTab .command-button .active {\n      transform-origin: center;\n      background-color: white; }\n    #ge-propertyTab .command-button img.active {\n      background-color: white; }\n  #ge-propertyTab .command-button-alt {\n    cursor: pointer;\n    width: 40px;\n    margin-left: 5px;\n    margin-right: 5px;\n    background-color: white; }\n    #ge-propertyTab .command-button-alt .command-label {\n      display: none; }\n    #ge-propertyTab .command-button-alt .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n    #ge-propertyTab .command-button-alt:hover {\n      background-color: #c2c2c2;\n      filter: invert(1); }\n  #ge-propertyTab .command-button-alt-disabled {\n    cursor: pointer;\n    pointer-events: none;\n    width: 40px;\n    margin-left: 5px;\n    margin-right: 5px;\n    background-color: white; }\n    #ge-propertyTab .command-button-alt-disabled .command-label {\n      display: none; }\n    #ge-propertyTab .command-button-alt-disabled .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n    #ge-propertyTab .command-button-alt-disabled img {\n      filter: invert(1); }\n  #ge-propertyTab .command-button-alt-active {\n    cursor: pointer;\n    pointer-events: none;\n    width: 40px;\n    margin-left: 5px;\n    margin-right: 5px;\n    background-color: #c2c2c2;\n    filter: invert(1); }\n    #ge-propertyTab .command-button-alt-active .command-label {\n      display: none; }\n    #ge-propertyTab .command-button-alt-active .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n  #ge-propertyTab .floatLine {\n    user-select: none;\n    padding-left: 5px;\n    height: var(--spacingHeight);\n    padding-bottom: 0px;\n    padding-top: 0px;\n    display: grid;\n    grid-template-columns: auto auto 2fr 1fr; }\n    #ge-propertyTab .floatLine .label {\n      grid-column: 2;\n      display: flex;\n      align-items: center;\n      min-width: 15px;\n      font-family: var(--labelFamily); }\n    #ge-propertyTab .floatLine img {\n      width: 30px; }\n    #ge-propertyTab .floatLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .floatLine .value {\n      display: flex;\n      align-items: center;\n      grid-column: 3;\n      background: transparent;\n      height: 30px;\n      margin-right: 2px; }\n      #ge-propertyTab .floatLine .value input {\n        width: 100%;\n        background-color: white;\n        outline-color: transparent;\n        border: none;\n        outline-width: 0px;\n        height: 24px; }\n    #ge-propertyTab .floatLine .short {\n      grid-column: 2;\n      display: flex;\n      align-items: center; }\n      #ge-propertyTab .floatLine .short input {\n        width: 27px; }\n      #ge-propertyTab .floatLine .short input::-webkit-outer-spin-button,\n      #ge-propertyTab .floatLine .short input::-webkit-inner-spin-button {\n        -webkit-appearance: none;\n        margin: 0; }\n      #ge-propertyTab .floatLine .short input[type=number] {\n        -moz-appearance: textfield; }\n  #ge-propertyTab .vector3Line {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    display: grid; }\n    #ge-propertyTab .vector3Line .firstLine {\n      display: grid;\n      grid-template-columns: 1fr auto 20px;\n      height: var(--spacingHeight); }\n      #ge-propertyTab .vector3Line .firstLine .label {\n        grid-column: 1;\n        display: flex;\n        align-items: center; }\n      #ge-propertyTab .vector3Line .firstLine .vector {\n        grid-column: 2;\n        display: flex;\n        align-items: center;\n        text-align: right;\n        opacity: 0.8; }\n      #ge-propertyTab .vector3Line .firstLine .expand {\n        grid-column: 3;\n        display: grid;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer; }\n    #ge-propertyTab .vector3Line .secondLine {\n      display: grid;\n      padding-right: 5px;\n      border-left: 1px solid #337ab7; }\n      #ge-propertyTab .vector3Line .secondLine .no-right-margin {\n        margin-right: 0; }\n      #ge-propertyTab .vector3Line .secondLine .numeric {\n        display: grid;\n        grid-template-columns: 1fr auto; }\n      #ge-propertyTab .vector3Line .secondLine .numeric-label {\n        text-align: right;\n        grid-column: 1;\n        display: flex;\n        align-items: center;\n        justify-self: right;\n        margin-right: 10px; }\n      #ge-propertyTab .vector3Line .secondLine .numeric-value {\n        width: 120px;\n        grid-column: 2;\n        display: flex;\n        align-items: center;\n        border: 1px solid #337ab7; }\n  #ge-propertyTab .buttonLine {\n    height: var(--spacingHeight);\n    padding-bottom: 0px;\n    padding-top: 0px;\n    display: grid;\n    align-items: center;\n    justify-items: stretch;\n    padding-bottom: 5px; }\n    #ge-propertyTab .buttonLine input[type=\"file\"] {\n      display: none; }\n    #ge-propertyTab .buttonLine .file-upload {\n      background: var(--backgroundGrey);\n      border: 1px solid #424242;\n      margin: 5px 10px;\n      color: white;\n      padding: 4px 5px;\n      opacity: 0.9;\n      cursor: pointer;\n      text-align: center;\n      border-radius: 4px; }\n    #ge-propertyTab .buttonLine .file-upload:hover {\n      opacity: 1.0; }\n    #ge-propertyTab .buttonLine .file-upload:active {\n      transform: scale(0.98);\n      transform-origin: 0.5 0.5; }\n    #ge-propertyTab .buttonLine button {\n      background: var(--backgroundGrey);\n      border: 1px solid #424242;\n      margin: 5px 10px 5px 10px;\n      color: white;\n      padding: 4px 5px;\n      opacity: 0.9;\n      border-radius: 4px; }\n    #ge-propertyTab .buttonLine button:hover {\n      opacity: 1.0; }\n    #ge-propertyTab .buttonLine button:active {\n      background: #282828; }\n    #ge-propertyTab .buttonLine button:focus {\n      border: 1px solid #424242;\n      outline: 0px; }\n  #ge-propertyTab .numeric {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-columns: 1fr 120px auto; }\n    #ge-propertyTab .numeric .numeric-label {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .numeric .number {\n      display: flex;\n      align-items: center;\n      grid-column: 2;\n      height: 10px; }\n      #ge-propertyTab .numeric .number .input {\n        width: calc(100% - 5px);\n        height: 10px; }\n  #ge-propertyTab .checkBoxLine {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    padding-right: 18px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-columns: auto auto 1fr; }\n    #ge-propertyTab .checkBoxLine .label {\n      grid-column: 2;\n      display: flex;\n      align-items: center;\n      min-width: 100px;\n      margin-left: 15px;\n      font-family: var(--labelFamily); }\n    #ge-propertyTab .checkBoxLine img {\n      width: 30px; }\n    #ge-propertyTab .checkBoxLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .checkBoxLine .checkBox {\n      grid-column: 3;\n      display: flex;\n      align-items: center;\n      margin-left: auto;\n      margin-right: 0px; }\n      #ge-propertyTab .checkBoxLine .checkBox .lbl {\n        position: relative;\n        display: block;\n        height: 14px;\n        width: 34px;\n        border-radius: 100px;\n        cursor: pointer;\n        transition: all 0.3s ease;\n        border: solid;\n        border-width: thin; }\n      #ge-propertyTab .checkBoxLine .checkBox .lbl:after {\n        position: absolute;\n        left: 3px;\n        top: 1px;\n        display: block;\n        width: 10px;\n        height: 10px;\n        border-radius: 100px;\n        background: #e2e2e2;\n        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);\n        content: '';\n        transition: all 0.15s ease;\n        border: solid;\n        border-width: thin; }\n      #ge-propertyTab .checkBoxLine .checkBox .lbl:active:after {\n        transform: scale(1.15, 0.85); }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx:checked ~ label {\n        background: transparent; }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx:checked ~ label:after {\n        left: 20px;\n        background: black;\n        border: solid;\n        border-width: thin; }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx.conflict ~ label:after {\n        left: 10px;\n        background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 5px, black 10px); }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx:checked ~ label.disabled {\n        background: black;\n        cursor: pointer; }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx:checked ~ label.disabled:after {\n        left: 20px;\n        background: #555555;\n        cursor: pointer; }\n      #ge-propertyTab .checkBoxLine .checkBox .cbx ~ label.disabled {\n        background: #555555;\n        cursor: pointer; }\n      #ge-propertyTab .checkBoxLine .checkBox .hidden {\n        display: none; }\n  #ge-propertyTab .listLine {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    height: var(--spacingHeight);\n    display: grid;\n    grid-template-columns: auto 1fr auto; }\n    #ge-propertyTab .listLine .label {\n      grid-column: 2;\n      display: none;\n      align-items: center; }\n    #ge-propertyTab .listLine img {\n      width: 30px; }\n    #ge-propertyTab .listLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .listLine .options {\n      grid-column: 2;\n      padding-left: 15px;\n      display: flex;\n      align-items: center;\n      margin-right: 5px; }\n      #ge-propertyTab .listLine .options select {\n        width: 120px;\n        height: 25px;\n        border: transparent;\n        border-radius: 4px; }\n  #ge-propertyTab .color3Line {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    padding-right: 18px;\n    display: grid; }\n    #ge-propertyTab .color3Line .firstLine {\n      height: var(--spacingHeight);\n      display: grid;\n      grid-template-columns: auto auto 1fr; }\n      #ge-propertyTab .color3Line .firstLine .label {\n        grid-column: 2;\n        padding-left: 5px;\n        display: none;\n        align-items: center;\n        min-width: 15px; }\n      #ge-propertyTab .color3Line .firstLine .img {\n        grid-column: 1;\n        display: flex;\n        align-items: center; }\n      #ge-propertyTab .color3Line .firstLine img {\n        width: 30px;\n        height: 30px; }\n      #ge-propertyTab .color3Line .firstLine .textInputLine {\n        grid-column: 3;\n        padding-left: 0px; }\n      #ge-propertyTab .color3Line .firstLine .color3 {\n        grid-column: 2;\n        margin-top: 6px;\n        display: flex;\n        align-items: center;\n        padding-left: 15px; }\n        #ge-propertyTab .color3Line .firstLine .color3 input {\n          margin-right: 5px; }\n      #ge-propertyTab .color3Line .firstLine .textInputLine .value {\n        padding-left: 2px; }\n      #ge-propertyTab .color3Line .firstLine .copy {\n        grid-column: 4;\n        display: none;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer;\n        color: black; }\n        #ge-propertyTab .color3Line .firstLine .copy img {\n          height: 100%;\n          width: 20px; }\n      #ge-propertyTab .color3Line .firstLine .expand {\n        grid-column: 4;\n        display: none;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer; }\n        #ge-propertyTab .color3Line .firstLine .expand img {\n          height: 100%;\n          width: 20px; }\n    #ge-propertyTab .color3Line .secondLine {\n      display: grid;\n      padding-right: 5px;\n      border-left: 1px solid #337ab7; }\n      #ge-propertyTab .color3Line .secondLine .numeric {\n        display: grid;\n        grid-template-columns: 1fr auto; }\n      #ge-propertyTab .color3Line .secondLine .numeric-label {\n        text-align: right;\n        grid-column: 1;\n        display: flex;\n        align-items: center;\n        justify-self: right;\n        margin-right: 10px; }\n      #ge-propertyTab .color3Line .secondLine .numeric-value {\n        width: 120px;\n        grid-column: 2;\n        display: flex;\n        align-items: center;\n        border: 1px solid #337ab7; }\n  #ge-propertyTab .textLine {\n    padding-left: 5px;\n    padding-bottom: 0px;\n    padding-top: 0px;\n    padding-right: 18px;\n    height: auto;\n    display: grid;\n    grid-template-columns: auto auto 2fr 1fr; }\n    #ge-propertyTab .textLine .label {\n      grid-column: 2;\n      padding-left: 5px;\n      padding-top: 4px;\n      display: flex;\n      align-items: left;\n      min-width: 15px;\n      color: #a9a9a9;\n      font-size: 10px;\n      font-family: \"acumin-pro-semicondensed\"; }\n    #ge-propertyTab .textLine img {\n      width: 30px; }\n    #ge-propertyTab .textLine .img {\n      grid-column: 1;\n      display: flex;\n      align-items: center; }\n    #ge-propertyTab .textLine .link-value {\n      grid-column: 2;\n      white-space: nowrap;\n      text-overflow: ellipsis;\n      overflow: hidden;\n      text-align: end;\n      opacity: 0.8;\n      margin: 5px;\n      margin-top: 6px;\n      max-width: 140px;\n      text-decoration: underline;\n      cursor: pointer; }\n    #ge-propertyTab .textLine .value {\n      display: none;\n      grid-column: 3;\n      white-space: nowrap;\n      text-overflow: ellipsis;\n      overflow: hidden;\n      text-align: end;\n      opacity: 0.8;\n      margin: 5px;\n      margin-top: 6px;\n      max-width: 200px;\n      -webkit-user-select: text;\n      -moz-user-select: text;\n      -ms-user-select: text;\n      user-select: text; }\n      #ge-propertyTab .textLine .value.check {\n        color: green; }\n      #ge-propertyTab .textLine .value.uncheck {\n        color: red; }\n", "",{"version":3,"sources":["webpack://./components/propertyTab/propertyTab.scss"],"names":[],"mappings":"AAAA;EACI,yBAAiB;EACjB,qBAAgB;EAChB,8CAAc;EACd,iBAAS;EACT,2BAAmB;EACnB,mCAA2B;EAC3B,wBAAgB;EAChB,kCAA0B,EAAA;;AAG9B;EACI,yBAAyB,EAAA;;AAG7B;EACI,iBAAiB;EAKjB,YAAW;EACX,mBAAmB,EAAA;EAPvB;IASQ,uCAAuC;IACvC,eAAe,EAAA;EAVvB;IAaQ,YAAY;IACZ,eAAe;IACf,YAAY;IACZ,iBAAiB;IACjB,WAAW;IACX,kBAAkB;IAClB,aAAa;IACb,+BAA+B;IAC/B,yBAAyB;IACzB,sBAAsB;IACtB,qBAAqB;IACrB,iBAAiB,EAAA;IAxBzB;MA2BY,kBAAkB;MAClB,iBAAiB;MACjB,cAAc;MACd,WAAW;MACX,YAAY;MACZ,OAAM;MACN,aAAa;MACb,kBAAkB;MAClB,oBAAoB,EAAA;IAnChC;MAuCY,iBAAiB;MACjB,YAAY;MACZ,cAAc;MACd,aAAa;MACb,mBAAmB;MACnB,kBAAkB,EAAA;EA5C9B;IAiDQ,wBAAwB;IACxB,WAAW;IACX,WAAW;IACX,mBAAmB;IACnB,kBAAkB;IAClB,aAAa;IACb,YAAY;IACZ,uBAAuB;IACvB,uBAAuB,EAAA;EAzD/B;IA6DQ,UAAU,EAAA;EA7DlB;IAiEQ,wBAAwB;IACxB,gBAAgB;IAChB,WAAW;IACX,YAAY;IACZ,kBAAkB;IAClB,mBAAmB;IACnB,aAAa;IACb,kBAAkB;IAClB,eAAe,EAAA;EAzEvB;IA6EQ,WAAW;IACX,YAAY;IACZ,kBAAkB;IAClB,iBAAwB;IACxB,eAAe,EAAA;EAjFvB;IAqFQ,wBAAwB;IACxB,0CAA0C;IAC1C,UAAU;IACV,WAAW;IACX,YAAY,EAAA;EAzFpB;IA4FQ,UAAU,EAAA;EA5FlB;IA+FQ,YAAY,EAAA;EA/FpB;IAmGQ,WAAW;IACX,YAAY;IACZ,oBAAoB;IACpB,yCAAyC;IACzC,YAAY;IACZ,eAAe;IACf,eAAe,EAAA;EAzGvB;IA6GQ,iDAAiD,EAAA;EA7GzD;IAiHQ,2BAA2B;IAC3B,gDAAgD,EAAA;EAlHxD;IAsHQ,iBApHmB;IAqHnB,mBApHqB;IAqHrB,gBApHkB;IAqHlB,mBApHqB;IAqHrB,4BAA4B;IAC5B,aAAa;IACb,wBAAwB;IACxB,yCAAyC,EAAA;IA7HjD;MAgIY,cAAc;MACd,aAAa;MACb,mBAAmB;MACnB,eAAe;MACf,+BAA+B,EAAA;IApI3C;MAwIY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;IA1I/B;MA+IY,cAAc;MACd,WAAW;MACX,iBAAiB;MACjB,UAAU;MACV,aAAa;MACb,mBAAmB;MACnB,iBAAiB,EAAA;IArJ7B;MAyJY,cAAc;MACd,iBAAiB,EAAA;MA1J7B;QA6JgB,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,+BAA+B,EAAA;MAhK/C;QAoKgB,cAAc;QACd,aAAa;QACb,mBAAmB,EAAA;QAtKnC;UAyKoB,WAAW;UACX,uBAAuB;UACvB,0BAA0B;UAC1B,mBAAmB;UACnB,YAAY;UACZ,kBACJ,EAAA;QA/KhB;;UAmLkB,wBAAwB;UACxB,SAAS,EAAA;QApL3B;UAwLoB,6BAA6B;UAC7B,0BAA0B;UAC1B,qBAAqB,EAAA;EA1LzC;IAiMQ,aAAa;IACb,oDAAoD;IACpD,mBA9LqB,EAAA;EAL7B;IAuMQ,aAAa;IACb,8BAA8B;IAC9B,mBApMqB,EAAA;EAL7B;IA6MQ,cAAc;IACd,mBAzMqB,EAAA;EAL7B;IAkNQ,aAAa;IACb,qCAAqC,EAAA;IAnN7C;MAsNY,iBAAiB,EAAA;EAtN7B;IA4NQ,aAAa;IACb,0CAA0C,EAAA;EA7NlD;IAiOQ,aAAa;IACb,yBAAyB;IACzB,kBAAkB;IAClB,iBAAiB,EAAA;EApOzB;IAwOQ,aAAa;IACb,yBAAyB;IACzB,kBAAkB;IAClB,iBAAiB,EAAA;EA3OzB;IAgPQ,aAAa;IACb,kBAAkB,EAAA;EAjP1B;IAsPQ,iBAAiB;IACjB,iBArPmB;IAsPnB,mBArPqB;IAsPrB,gBArPkB;IAsPlB,mBArPqB;IAsPrB,4BAA4B;IAC5B,aAAa;IACb,oCAAoC,EAAA;IA7P5C;MA+PY,cAAc;MACd,aAAa;MACb,mBAAmB;MACnB,eAAe;MACf,+BAA+B,EAAA;IAnQ3C;MAuQY,WAAW,EAAA;IAvQvB;MA2QY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;IA7Q/B;MAiRY,aAAa;MACb,mBAAmB;MACnB,cAAc;MACd,uBAAuB;MACvB,YAAY;MACZ,kBAAkB;MAClB,uBAAuB;MACvB,eAAe;MACf,kBAAkB;MAClB,iBAAiB,EAAA;MA1R7B;QA4RgB,WAAW;QACX,0BAA0B;QAC1B,mBAAmB;QACnB,kBAAkB;QAClB,YAAY,EAAA;MAhS5B;QAmSgB,mBAAmB,EAAA;MAnSnC;QAsSgB,aAAa,EAAA;MAtS7B;QAySgB,kBAAkB;QAClB,QAAQ;QACR,aAAa;QACb,sBAAsB;QACtB,uBAAuB;QACvB,YAAY,EAAA;QA9S5B;UAgToB,WAAW;UACX,YAAY,EAAA;MAjThC;QAqTgB,gDAAgD,EAAA;QArThE;UAuToB,qCAAqC,EAAA;EAvTzD;IA8TQ,yCAAyC,EAAA;EA9TjD;IAkUQ,iBAhUmB;IAiUnB,YAAY;IACZ,aAAa;IACb,gCAAgC,EAAA;IArUxC;MAwUY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;IA1U/B;MA8UY,aAAa;MACb,mBAAmB;MACnB,cAAc,EAAA;MAhV1B;QAmVgB,uBAAuB;QACvB,iBAAiB;QACjB,YAAY,EAAA;EArV5B;IA2VQ,eAAe;IACf,aAAY;IACZ,wBAAwB;IACxB,2BAA2B,EAAA;IA9VnC;MAiWY,kCAAkC,EAAA;IAjW9C;MAsWgB,8CAA8C,EAAA;IAtW9D;MA4WwB,8BAAwC,EAAA;IA5WhE;MAmXY,WAAW;MACX,cAAc;MACd,UAAU;MACV,qBAAqB;MACrB,yBAAyB;MACzB,oBAAoB,EAAA;MAxXhC;QA2XgB,UAAU,EAAA;IA3X1B;MAgYY,WAAW;MACX,cAAc,EAAA;MAjY1B;QAoYgB,aAAa;QACb,+BAA+B;QAC/B,mBAAmB;QACnB,4BAA4B;QAC5B,mBArYa;QAsYb,gBArYU;QAsYV,kBAAkB;QAClB,eAAe,EAAA;QA3Y/B;UA8YoB,kCAAkC;UAClC,iBAAiB;UACjB,cAAc;UACd,aAAa;UACb,mBAAmB,EAAA;QAlZvC;UAsZoB,cAAc;UACd,aAAa;UACb,mBAAmB;UACnB,qBAAqB;UACrB,wBAAwB,EAAA;UA1Z5C;YA6ZwB,yBAAyB,EAAA;MA7ZjD;QAmagB,mDAAmD,EAAA;MAnanE;QAuagB,mDAAmD,EAAA;EAvanE;IA6aQ,aAAa;IACb,WAAW,EAAA;IA9anB;MAibY,YAAY;MACZ,uBAAuB;MACvB,eAAe;MACf,gFAAkF,EAAA;MApb9F;QAsbgB,YAAY,EAAA;IAtb5B;MA2bY,eAAe;MACf,QAAQ;MACR,UAAU;MACV,WAAW;MACX,SAAS,EAAA;IA/brB;MAmcY,UAAU;MACV,kBAAkB,EAAA;EApc9B;IAycQ,aAAa;IACb,wBAAwB;IACxB,oDAAoD;IACpD,gBAAgB;IAChB,iBAAiB;IACjB,mBAAmB,EAAA;IA9c3B;MAidY,WAAW;MACX,cAAc,EAAA;IAld1B;MAsdY,WAAW;MACX,cAAc;MACd,eAAe,EAAA;IAxd3B;MA4dY,gBAAgB;MAChB,WAAW;MACX,cAAc;MACd,iBAAiB;MACjB,iBAAiB,EAAA;IAhe7B;MAoeY,WAAW;MACX,cAAc;MACd,aAAa;MACb,wBAAwB;MACxB,qBAAqB;MACrB,kBAAkB;MAClB,kBAAkB,EAAA;MA1e9B;QA6egB,UAAU,EAAA;IA7e1B;MAkfY,WAAW;MACX,cAAc;MACd,aAAa;MACb,qBAAqB;MACrB,uBAAuB,EAAA;MAtfnC;QAyfgB,YAAY;QACZ,WAAW,EAAA;MA1f3B;QA6fgB,eAAe,EAAA;IA7f/B;MAkgBY,WAAW;MACX,cAAc;MACd,aAAa;MACb,qBAAqB;MACrB,uBAAuB,EAAA;MAtgBnC;QAwgBgB,YAAY;QACZ,WAAW,EAAA;MAzgB3B;QA4gBgB,eAAe,EAAA;EA5gB/B;IAohBQ,aAAa;IACb,uBAAuB;IACvB,kBAAkB,EAAA;EAthB1B;IA0hBQ,eAAe;IACf,WAAW,EAAA;IA3hBnB;MA8hBY,aAAa,EAAA;IA9hBzB;MAkiBY,YAAY;MACZ,WAAW;MACX,aAAa;MACb,YAAY;MACZ,qBAAqB;MACrB,uBAAuB,EAAA;IAviBnC;MA2iBY,uBAAuB,EAAA;IA3iBnC;MA+iBY,wBAAwB;MACxB,uBAAuB,EAAA;IAhjBnC;MAqjBgB,uBAAuB,EAAA;EArjBvC;IA2jBQ,eAAe;IACf,WAAW;IACX,gBAAgB;IAChB,iBAAiB;IAKjB,uBAAuB,EAAA;IAnkB/B;MAgkBY,aAAa,EAAA;IAhkBzB;MAqkBY,YAAY;MACZ,WAAW;MACX,aAAa;MACb,qBAAqB;MACrB,uBAAuB,EAAA;IAzkBnC;MA4kBY,yBAAyB;MACzB,iBAAiB,EAAA;EA7kB7B;IAklBQ,eAAe;IACf,oBAAoB;IACpB,WAAW;IACX,gBAAgB;IAChB,iBAAiB;IAKjB,uBAAuB,EAAA;IA3lB/B;MAwlBY,aAAa,EAAA;IAxlBzB;MA6lBY,YAAY;MACZ,WAAW;MACX,aAAa;MACb,qBAAqB;MACrB,uBAAuB,EAAA;IAjmBnC;MAqmBY,iBAAiB,EAAA;EArmB7B;IA2mBQ,eAAe;IACf,oBAAoB;IACpB,WAAW;IACX,gBAAgB;IAChB,iBAAiB;IAKjB,yBAAyB;IACzB,iBAAiB,EAAA;IArnBzB;MAinBY,aAAa,EAAA;IAjnBzB;MAunBY,YAAY;MACZ,WAAW;MACX,aAAa;MACb,qBAAqB;MACrB,uBAAuB,EAAA;EA3nBnC;IAgoBQ,iBAAiB;IACjB,iBA/nBmB;IAgoBnB,4BAA4B;IAC5B,mBAhoBqB;IAioBrB,gBAhoBkB;IAioBlB,aAAa;IACb,wCAAwC,EAAA;IAtoBhD;MAyoBY,cAAc;MACd,aAAa;MACb,mBAAmB;MACnB,eAAe;MACf,+BAA+B,EAAA;IA7oB3C;MAipBY,WAAW,EAAA;IAjpBvB;MAqpBY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;IAvpB/B;MA2pBY,aAAa;MACb,mBAAmB;MACnB,cAAc;MACd,uBAAuB;MACvB,YAAY;MACZ,iBAAiB,EAAA;MAhqB7B;QAkqBgB,WAAW;QACX,uBAAuB;QACvB,0BAA0B;QAC1B,YAAY;QACZ,kBAAkB;QAClB,YAAY,EAAA;IAvqB5B;MA4qBY,cAAc;MAEd,aAAa;MACb,mBAAmB,EAAA;MA/qB/B;QAkrBgB,WAAW,EAAA;MAlrB3B;;QAurBc,wBAAwB;QACxB,SAAS,EAAA;MAxrBvB;QA4rBgB,0BAA0B,EAAA;EA5rB1C;IAksBQ,iBAhsBmB;IAisBnB,mBAhsBqB;IAisBrB,gBAhsBkB;IAisBlB,aAAa,EAAA;IArsBrB;MAusBY,aAAa;MACb,oCAAoC;MACpC,4BAA4B,EAAA;MAzsBxC;QA4sBgB,cAAc;QACd,aAAa;QACb,mBAAmB,EAAA;MA9sBnC;QAktBgB,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,iBAAiB;QACjB,YAAY,EAAA;MAttB5B;QA0tBgB,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,qBAAqB;QACrB,eAAe,EAAA;IA9tB/B;MAmuBY,aAAa;MACb,kBAAkB;MAClB,8BAAwC,EAAA;MAruBpD;QAwuBgB,eAAe,EAAA;MAxuB/B;QA4uBgB,aAAa;QACb,+BAA+B,EAAA;MA7uB/C;QAivBgB,iBAAiB;QACjB,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,mBAAmB;QACnB,kBAAkB,EAAA;MAtvBlC;QA0vBgB,YAAY;QACZ,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,yBAAoC,EAAA;EA9vBpD;IAowBQ,4BAA4B;IAC5B,mBAlwBqB;IAmwBrB,gBAlwBkB;IAmwBlB,aAAa;IACb,mBAAmB;IACnB,sBAAsB;IACtB,mBAAmB,EAAA;IA1wB3B;MA4wBY,aAAa,EAAA;IA5wBzB;MAgxBY,iCAAiC;MACjC,yBAAyB;MACzB,gBAAgB;MAChB,YAAW;MACX,gBAAgB;MAChB,YAAY;MACZ,eAAe;MACf,kBAAkB;MAClB,kBAAkB,EAAA;IAxxB9B;MA4xBY,YAAY,EAAA;IA5xBxB;MAgyBY,sBAAsB;MACtB,yBAAyB,EAAA;IAjyBrC;MAqyBY,iCAAiC;MACjC,yBAAyB;MACzB,yBAAyB;MACzB,YAAW;MACX,gBAAgB;MAChB,YAAY;MACZ,kBAAkB,EAAA;IA3yB9B;MA+yBY,YAAY,EAAA;IA/yBxB;MAmzBY,mBAAmB,EAAA;IAnzB/B;MAuzBY,yBAAyB;MACzB,YAAY,EAAA;EAxzBxB;IA6zBQ,iBA3zBmB;IA4zBnB,mBA3zBqB;IA4zBrB,gBA3zBkB;IA4zBlB,4BAA4B;IAC5B,aAAa;IACb,qCAAqC,EAAA;IAl0B7C;MAq0BY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;IAv0B/B;MA20BY,aAAa;MACb,mBAAmB;MACnB,cAAc;MACd,YAAY,EAAA;MA90BxB;QAg1BgB,uBAAuB;QACvB,YAAY,EAAA;EAj1B5B;IAu1BQ,iBAr1BmB;IAs1BnB,mBAr1BqB;IAs1BrB,gBAr1BkB;IAs1BlB,mBAr1BqB;IAs1BrB,4BAA4B;IAC5B,aAAa;IACb,oCAAqC,EAAA;IA71B7C;MAg2BY,cAAc;MACd,aAAa;MACb,mBAAmB;MACnB,gBAAgB;MAChB,iBAAiB;MACjB,+BAA+B,EAAA;IAr2B3C;MAy2BY,WAAW,EAAA;IAz2BvB;MA62BY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;IA/2B/B;MAm3BY,cAAc;MACd,aAAa;MACb,mBAAmB;MACnB,iBAAiB;MACjB,iBAAiB,EAAA;MAv3B7B;QA03BgB,kBAAkB;QAClB,cAAc;QACd,YAAY;QACZ,WAAW;QACX,oBAAoB;QACpB,eAAe;QACf,yBAAyB;QACzB,aAAa;QACb,kBAAkB,EAAA;MAl4BlC;QAs4BgB,kBAAkB;QAClB,SAAS;QACT,QAAQ;QACR,cAAc;QACd,WAAW;QACX,YAAY;QACZ,oBAAoB;QACpB,mBAAmB;QACnB,2CAAwC;QACxC,WAAW;QACX,0BAA0B;QAC1B,aAAa;QACb,kBAAkB,EAAA;MAl5BlC;QAs5BgB,4BAA4B,EAAA;MAt5B5C;QA05BgB,uBAAuB,EAAA;MA15BvC;QA+5BgB,UAAU;QACV,iBAAwB;QACxB,aAAa;QACb,kBAAkB,EAAA;MAl6BlC;QAs6BgB,UAAU;QACV,iGAAiG,EAAA;MAv6BjH;QA26BgB,iBAAwB;QACxB,eAAe,EAAA;MA56B/B;QAg7BgB,UAAU;QACV,mBAA2B;QAC3B,eAAe,EAAA;MAl7B/B;QAs7BgB,mBAA2B;QAC3B,eAAe,EAAA;MAv7B/B;QA27BgB,aAAa,EAAA;EA37B7B;IAi8BQ,iBA/7BmB;IAg8BnB,mBA/7BqB;IAg8BrB,gBA/7BkB;IAg8BlB,4BAA4B;IAC5B,aAAa;IACb,oCAAqC,EAAA;IAt8B7C;MAy8BY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;IA38B/B;MA+8BY,WAAW,EAAA;IA/8BvB;MAm9BY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;IAr9B/B;MAy9BY,cAAc;MACd,kBAAkB;MAClB,aAAa;MACb,mBAAmB;MACnB,iBAAiB,EAAA;MA79B7B;QAg+BgB,YAAY;QACZ,YAAY;QACZ,mBAAmB;QACnB,kBAAkB,EAAA;EAn+BlC;IAy+BQ,iBAv+BmB;IAw+BnB,mBAv+BqB;IAw+BrB,gBAv+BkB;IAw+BlB,mBAv+BqB;IAw+BrB,aAAa,EAAA;IA7+BrB;MAg/BY,4BAA4B;MAC5B,aAAa;MACb,oCAAoC,EAAA;MAl/BhD;QAq/BgB,cAAc;QACd,iBAAiB;QACjB,aAAa;QACb,mBAAmB;QACnB,eAAe,EAAA;MAz/B/B;QA6/BgB,cAAc;QACd,aAAa;QACb,mBAAmB,EAAA;MA//BnC;QAmgCgB,WAAW;QACX,YAAY,EAAA;MApgC5B;QAwgCgB,cAAc;QACd,iBAAiB,EAAA;MAzgCjC;QA6gCgB,cAAc;QACd,eAAe;QACf,aAAa;QACb,mBAAmB;QACnB,kBAAkB,EAAA;QAjhClC;UAohCoB,iBAAiB,EAAA;MAphCrC;QA0hCoB,iBAAiB,EAAA;MA1hCrC;QA+hCgB,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,qBAAqB;QACrB,eAAe;QACf,YAAY,EAAA;QApiC5B;UAsiCoB,YAAY;UACZ,WAAW,EAAA;MAviC/B;QA4iCgB,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,qBAAqB;QACrB,eAAe,EAAA;QAhjC/B;UAmjCoB,YAAY;UACZ,WAAW,EAAA;IApjC/B;MA0jCY,aAAa;MACb,kBAAkB;MAClB,8BAAwC,EAAA;MA5jCpD;QA+jCgB,aAAa;QACb,+BAA+B,EAAA;MAhkC/C;QAokCgB,iBAAiB;QACjB,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,mBAAmB;QACnB,kBAAkB,EAAA;MAzkClC;QA6kCgB,YAAY;QACZ,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,yBAAoC,EAAA;EAjlCpD;IAulCQ,iBArlCmB;IAslCnB,mBArlCqB;IAslCrB,gBArlCkB;IAslClB,mBArlCqB;IAslCrB,YAAY;IACZ,aAAa;IACb,wCAAwC,EAAA;IA7lChD;MA+lCY,cAAc;MACd,iBAAiB;MACjB,gBAAgB;MAChB,aAAa;MACb,iBAAiB;MACjB,eAAe;MACf,cAAc;MACd,eAAe;MACf,uCAAuC,EAAA;IAvmCnD;MA2mCY,WAAW,EAAA;IA3mCvB;MA+mCY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;IAjnC/B;MAqnCY,cAAc;MACd,mBAAmB;MACnB,uBAAuB;MACvB,gBAAgB;MAChB,eAAe;MACf,YAAY;MACZ,WAAU;MACV,eAAe;MACf,gBAAgB;MAChB,0BAA0B;MAC1B,eAAe,EAAA;IA/nC3B;MAmoCY,aAAa;MACb,cAAc;MACd,mBAAmB;MACnB,uBAAuB;MACvB,gBAAgB;MAChB,eAAe;MACf,YAAY;MACZ,WAAU;MACV,eAAe;MACf,gBAAgB;MAChB,yBAAyB;MACzB,sBAAsB;MACtB,qBAAqB;MACrB,iBAAiB,EAAA;MAhpC7B;QAmpCgB,YAAY,EAAA;MAnpC5B;QAupCgB,UAAU,EAAA","sourcesContent":[":root {\r\n    --backgroundGrey: #aaaaaa;\r\n    --spacingHeight: 30px;\r\n    --labelFamily: \"acumin-pro-condensed-semibold\";\r\n    --button: #333333;\r\n    --buttonBackground: #ffffff;\r\n    --buttonDisabledBackground: #c8c8c8;\r\n    --buttonPressed: #ffffff;\r\n    --buttonPressedBackground: #606060;\r\n}\r\n\r\nhr.ge {\r\n    border: 1px solid #d0cece;\r\n}\r\n\r\n#ge-propertyTab {\r\n    user-select: none;\r\n    $line-padding-left: 5px;\r\n    $line-padding-bottom: 0px;\r\n    $line-padding-top: 0px;\r\n    $line-padding-right: 18px;\r\n    color:black;\r\n    background: #e2e2e2;\r\n      * {\r\n        font-family: \"acumin-pro-semicondensed\";\r\n        font-size: 12px;\r\n      }\r\n      #header {\r\n        height: 30px;\r\n        font-size: 16px;\r\n        color: white;\r\n        background: white;\r\n        grid-row: 1;\r\n        text-align: center;\r\n        display: grid;\r\n        grid-template-columns: 30px 1fr;        \r\n        -webkit-user-select: none; \r\n        -moz-user-select: none;   \r\n        -ms-user-select: none;    \r\n        user-select: none;                \r\n\r\n        #logo {\r\n            position: relative;\r\n            background: white;\r\n            grid-column: 1; \r\n            width: 32px;\r\n            height: 32px;\r\n            left:0;\r\n            display: flex;\r\n            align-self: center;   \r\n            justify-self: center;\r\n        }        \r\n\r\n        #title {\r\n            background: white;\r\n            color: black;\r\n            grid-column: 2; \r\n            display: grid;\r\n            align-items: center;   \r\n            text-align: center;\r\n        }\r\n    }\r\n\r\n    .range {\r\n        -webkit-appearance: none;\r\n        width: 100%;\r\n        height: 2px;\r\n        background: #bcbcbc;\r\n        border-radius: 5px;\r\n        outline: none;\r\n        opacity: 0.7;\r\n        -webkit-transition: .2s;\r\n        transition: opacity .2s;\r\n    }\r\n    \r\n    .range:hover {\r\n        opacity: 1;\r\n    }\r\n    \r\n    .range::-webkit-slider-thumb {\r\n        -webkit-appearance: none;\r\n        appearance: none;\r\n        width: 14px;\r\n        height: 14px;\r\n        border-radius: 50%;\r\n        background: #e2e2e2;\r\n        border: solid;\r\n        border-width: thin;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .range::-moz-range-thumb {\r\n        width: 14px;\r\n        height: 14px;\r\n        border-radius: 50%;\r\n        background: rgb(0, 0, 0);\r\n        cursor: pointer;\r\n    }\r\n\r\n    input[type=\"color\"] {\r\n        -webkit-appearance: none;\r\n        border: 1px solid rgba(255, 255, 255, 0.5);\r\n        padding: 0;\r\n        width: 30px;\r\n        height: 20px;\r\n    }\r\n    input[type=\"color\"]::-webkit-color-swatch-wrapper {\r\n        padding: 0;\r\n    }\r\n    input[type=\"color\"]::-webkit-color-swatch {\r\n        border: none;\r\n    }\r\n\r\n    .unit {\r\n        width: 26px;\r\n        height: 26px;\r\n        color: var(--button);\r\n        background-color: var(--buttonBackground);\r\n        border: none;\r\n        margin-top: 2px;\r\n        cursor: pointer;\r\n    }\r\n\r\n    .unit.disabled {\r\n        background-color: var(--buttonDisabledBackground);\r\n    }\r\n\r\n    .unit:active {\r\n        color: var(--buttonPressed);\r\n        background-color: var(--buttonPressedBackground);\r\n    }\r\n\r\n    .sliderLine {\r\n        padding-left: $line-padding-left;\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;\r\n        padding-right: $line-padding-right;\r\n        height: var(--spacingHeight);;\r\n        display: grid;\r\n        grid-template-rows: 100%;\r\n        grid-template-columns: auto auto auto 1fr;\r\n\r\n        .label {\r\n            grid-column: 2;\r\n            display: flex;\r\n            align-items: center;\r\n            min-width: 15px;\r\n            font-family: var(--labelFamily);\r\n        }\r\n\r\n        .img {\r\n            grid-column: 1;\r\n            display: flex;\r\n            align-items: center;\r\n        }\r\n\r\n\r\n        .slider {\r\n            grid-column: 4;\r\n            grid-row: 1;\r\n            margin-right: 5px;\r\n            width: 90%;\r\n            display: flex;\r\n            align-items: center;\r\n            padding-left: 5px;\r\n        }\r\n\r\n        .floatLine {\r\n            grid-column: 3;\r\n            padding-left: 0px;\r\n            \r\n            .label {\r\n                grid-column: 1;\r\n                display: none;\r\n                align-items: center;\r\n                font-family: var(--labelFamily);\r\n            }\r\n        \r\n            .short {\r\n                grid-column: 1; \r\n                display: flex;\r\n                align-items: center;\r\n                \r\n                input {\r\n                    width: 60px;\r\n                    background-color: white;\r\n                    outline-color: transparent;\r\n                    border: transparent;\r\n                    height: 26px;\r\n                    outline-width: 0px\r\n                }\r\n                \r\n                input::-webkit-outer-spin-button,\r\n                input::-webkit-inner-spin-button {\r\n                  -webkit-appearance: none;\r\n                  margin: 0;\r\n                }\r\n    \r\n                input[type=number] {\r\n                    -webkit-appearance: textfield;\r\n                    -moz-appearance: textfield;\r\n                    appearance: textfield;\r\n                }\r\n            }\r\n        }  \r\n    }     \r\n\r\n    .ge-divider {\r\n        display: grid;\r\n        grid-template-columns: auto auto auto auto auto auto;\r\n        padding-right: $line-padding-right;\r\n    }\r\n\r\n    .ge-divider-short {\r\n        display: grid;\r\n        grid-template-columns: 1fr 1fr;\r\n        padding-right: $line-padding-right;\r\n    }\r\n\r\n    .ge-divider-single {\r\n        display: block;\r\n        padding-right: $line-padding-right;\r\n    }\r\n    \r\n    .ge-grid-divider {\r\n        display: grid;\r\n        grid-template-columns: 150px 1fr auto;\r\n        \r\n        .textLine {\r\n            grid-column: auto;\r\n           \r\n        }\r\n    }\r\n\r\n    .ge-grid-button-divider {\r\n        display: grid;\r\n        grid-template-columns: 60px 60px 60px 60px;\r\n    }\r\n\r\n    .ge-grid-remove {\r\n        display: grid;\r\n        background-color: #c2c2c2;\r\n        margin-bottom: 5px;\r\n        filter: invert(1);\r\n    }\r\n\r\n    .ge-grid-edit {\r\n        display: grid;\r\n        background-color: #878787;\r\n        margin-bottom: 5px;\r\n        filter: invert(1);\r\n\r\n    }\r\n  \r\n    .ge-grid {\r\n        display: grid;\r\n        margin-bottom: 5px;\r\n    }\r\n\r\n\r\n    .textInputLine {\r\n        user-select: none;\r\n        padding-left: $line-padding-left;\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;\r\n        padding-right: $line-padding-right;\r\n        height: var(--spacingHeight);\r\n        display: grid;\r\n        grid-template-columns: auto auto 1fr;\r\n        .label {\r\n            grid-column: 2;\r\n            display: flex;\r\n            align-items: center;\r\n            min-width: 15px;\r\n            font-family: var(--labelFamily);\r\n        }\r\n\r\n        img {\r\n            width: 30px;\r\n        }\r\n        \r\n        .img {\r\n            grid-column: 1;\r\n            display: flex;\r\n            align-items: center;\r\n        }\r\n\r\n        .value {                        \r\n            display: flex;\r\n            align-items: center;\r\n            grid-column: 3;\r\n            background: transparent;\r\n            height: 26px;\r\n            position: relative;\r\n            background-color: white;\r\n            margin-top: 2px;\r\n            overflow-y: hidden;\r\n            margin-right: 2px;\r\n            input {\r\n                width: 100%;\r\n                outline-color: transparent;\r\n                border: transparent;\r\n                outline-width: 0px;\r\n                height: 24px;\r\n            }\r\n            input.hasArrows {\r\n                padding-right: 15px;\r\n            }\r\n            .arrows {\r\n                display: none;\r\n            }\r\n            &:hover .arrows, &:focus .arrows, &.dragging .arrows {\r\n                position: absolute;\r\n                right: 0;\r\n                display: flex;\r\n                flex-direction: column;\r\n                background-color: white;\r\n                cursor: grab;\r\n                .downArrowIcon, .upArrowIcon {\r\n                    width: 15px;\r\n                    height: 15px;\r\n                }\r\n            }\r\n            &.dragging .arrows {\r\n                background-color: var(--buttonPressedBackground);\r\n                .downArrowIcon, .upArrowIcon {\r\n                    filter: invert(100%) brightness(500%);\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    .textInputLine.withUnits {\r\n        grid-template-columns: auto auto 1fr auto;\r\n    }\r\n    \r\n    .textInputArea {\r\n        padding-left: $line-padding-left;\r\n        height: 100%;\r\n        display: grid;\r\n        grid-template-columns: 1fr 120px;\r\n\r\n        .label {\r\n            grid-column: 1;\r\n            display: flex;\r\n            align-items: center;\r\n        }\r\n\r\n        .value {                        \r\n            display: flex;\r\n            align-items: center;\r\n            grid-column: 2;\r\n            \r\n            textarea {\r\n                width: calc(150% - 5px);\r\n                margin-left: -50%;\r\n                height: 40px;\r\n            }\r\n        }\r\n    }\r\n    \r\n    .paneContainer {\r\n        margin-top: 3px;\r\n        display:grid;\r\n        grid-template-rows: 100%;\r\n        grid-template-columns: 100%;\r\n        \r\n        .paneList {\r\n            border-left: 3px solid transparent;\r\n        }\r\n\r\n        &:hover {  \r\n            .paneList {                      \r\n                border-left: 3px solid rgba(51, 122, 183, 0.8);\r\n            }\r\n\r\n            .paneContainer-content {\r\n                .header {\r\n                    .title {   \r\n                        border-left: 3px solid rgb(51, 122, 183);\r\n                    }\r\n                }\r\n            }\r\n        }\r\n        \r\n        .paneContainer-highlight-border {\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n            opacity: 1;\r\n            border: 3px solid red;\r\n            transition: opacity 250ms;\r\n            pointer-events: none;\r\n            \r\n            &.transparent {\r\n                opacity: 0;\r\n            }\r\n        }\r\n\r\n        .paneContainer-content {\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n\r\n            .header {\r\n                display: grid;\r\n                grid-template-columns: 1fr auto;\r\n                background: #cccccc;    \r\n                height: var(--spacingHeight);\r\n                padding-bottom: $line-padding-bottom;\r\n                padding-top: $line-padding-top;\r\n                padding-right: 5px;                        \r\n                cursor: pointer;\r\n                \r\n                .title {                                \r\n                    border-left: 3px solid transparent;\r\n                    padding-left: 5px;\r\n                    grid-column: 1;\r\n                    display: flex;\r\n                    align-items: center;\r\n                }\r\n\r\n                .collapse {\r\n                    grid-column: 2;\r\n                    display: flex;\r\n                    align-items: center;  \r\n                    justify-items: center;\r\n                    transform-origin: center;\r\n\r\n                    &.closed {\r\n                        transform: rotate(180deg);\r\n                    }\r\n                }                        \r\n            }\r\n\r\n            .paneList > div:not(:last-child) {\r\n                border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);\r\n            }\r\n\r\n            .fragment > div:not(:last-child)  {\r\n                border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);\r\n            }\r\n        }\r\n    }\r\n\r\n    .color-picker {\r\n        height: 150px;\r\n        width: 15px;\r\n\r\n        .color-rect-background {\r\n            height: 15px;\r\n            border: 1px black solid;\r\n            cursor: pointer;\r\n            background: repeating-conic-gradient(#E2E2E2 0% 25%, white 0% 50%) 50% / 10px 10px;\r\n            .color-rect {\r\n                height: 100%;\r\n            }\r\n        }\r\n\r\n        .color-picker-cover {\r\n            position: fixed;\r\n            top: 0px;\r\n            right: 0px;\r\n            bottom: 0px;\r\n            left: 0px;\r\n        }\r\n\r\n        .color-picker-float {\r\n            z-index: 2;\r\n            position: absolute;  \r\n        }                \r\n    }\r\n\r\n    .gradient-step {\r\n        display: grid;\r\n        grid-template-rows: 100%;\r\n        grid-template-columns: 20px 30px 40px auto 20px 30px;\r\n        padding-top: 5px;\r\n        padding-left: 5px;\r\n        padding-bottom: 5px;\r\n\r\n        .step {\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n        }\r\n            \r\n        .color {\r\n            grid-row: 1;\r\n            grid-column: 2;\r\n            cursor: pointer;\r\n        }\r\n\r\n        .step-value {       \r\n            margin-left: 5px;     \r\n            grid-row: 1;\r\n            grid-column: 3;\r\n            text-align: right;\r\n            margin-right: 5px;\r\n        }\r\n\r\n        .step-slider {            \r\n            grid-row: 1;\r\n            grid-column: 4;\r\n            display: grid;\r\n            justify-content: stretch;\r\n            align-content: center;\r\n            margin-right: -5px;\r\n            padding-left: 12px;\r\n\r\n            input {\r\n                width: 90%;\r\n            }\r\n        }\r\n\r\n        .gradient-copy {            \r\n            grid-row: 1;\r\n            grid-column: 5;\r\n            display: grid;\r\n            align-content: center;\r\n            justify-content: center;\r\n \r\n            .img {\r\n                height: 20px;\r\n                width: 20px;\r\n            }\r\n            .img:hover {\r\n                cursor: pointer;\r\n            }\r\n\r\n        }\r\n        .gradient-delete {            \r\n            grid-row: 1;\r\n            grid-column: 6;\r\n            display: grid;\r\n            align-content: center;\r\n            justify-content: center;\r\n            .img {\r\n                height: 20px;\r\n                width: 20px;\r\n            }\r\n            .img:hover {\r\n                cursor: pointer;\r\n            }\r\n\r\n        }\r\n\r\n    }\r\n\r\n    .alignment-bar {\r\n        display: flex;\r\n        justify-content: center;\r\n        padding-right: 5px;\r\n    }\r\n\r\n    .command-button {\r\n        cursor: pointer;\r\n        width: 30px;\r\n\r\n        .command-label {\r\n            display: none;\r\n        }        \r\n\r\n        .command-button-icon {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: grid;\r\n            color: white;\r\n            align-content: center;\r\n            justify-content: center;\r\n        }\r\n\r\n        &:hover {\r\n            background-color: white;\r\n        } \r\n        \r\n        .active {\r\n            transform-origin: center;\r\n            background-color: white;\r\n        }\r\n\r\n        img {\r\n            &.active {\r\n                background-color: white;\r\n            }\r\n        }\r\n    }\r\n\r\n    .command-button-alt {\r\n        cursor: pointer;\r\n        width: 40px;\r\n        margin-left: 5px;\r\n        margin-right: 5px;\r\n        .command-label {\r\n            display: none;\r\n        }        \r\n\r\n        background-color: white;\r\n        .command-button-icon {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: grid;\r\n            align-content: center;\r\n            justify-content: center;\r\n        }\r\n        &:hover {\r\n            background-color: #c2c2c2;\r\n            filter: invert(1);\r\n        } \r\n    }\r\n\r\n    .command-button-alt-disabled {\r\n        cursor: pointer;\r\n        pointer-events: none;\r\n        width: 40px;\r\n        margin-left: 5px;\r\n        margin-right: 5px;\r\n        .command-label {\r\n            display: none;\r\n        }        \r\n\r\n        background-color: white;\r\n        .command-button-icon {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: grid;\r\n            align-content: center;\r\n            justify-content: center;\r\n        }\r\n\r\n        img {\r\n            filter: invert(1);\r\n        }\r\n    }\r\n\r\n    \r\n    .command-button-alt-active {\r\n        cursor: pointer;\r\n        pointer-events: none;\r\n        width: 40px;\r\n        margin-left: 5px;\r\n        margin-right: 5px;\r\n        .command-label {\r\n            display: none;\r\n        }        \r\n\r\n        background-color: #c2c2c2;\r\n        filter: invert(1);\r\n        .command-button-icon {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: grid;\r\n            align-content: center;\r\n            justify-content: center;\r\n        }\r\n    }\r\n\r\n    .floatLine {\r\n        user-select: none;\r\n        padding-left: $line-padding-left;\r\n        height: var(--spacingHeight);\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;\r\n        display: grid;\r\n        grid-template-columns: auto auto 2fr 1fr;\r\n\r\n        .label {\r\n            grid-column: 2;\r\n            display: flex;\r\n            align-items: center;\r\n            min-width: 15px;\r\n            font-family: var(--labelFamily);\r\n        }\r\n\r\n        img {\r\n            width: 30px;\r\n        }\r\n\r\n        .img {\r\n            grid-column: 1;\r\n            display: flex;\r\n            align-items: center;\r\n        }\r\n\r\n        .value {                        \r\n            display: flex;\r\n            align-items: center;\r\n            grid-column: 3;\r\n            background: transparent;\r\n            height: 30px;\r\n            margin-right: 2px;\r\n            input {\r\n                width: 100%;\r\n                background-color: white;\r\n                outline-color: transparent;\r\n                border: none;\r\n                outline-width: 0px;\r\n                height: 24px;\r\n            }\r\n        }\r\n\r\n        .short {\r\n            grid-column: 2;\r\n            \r\n            display: flex;\r\n            align-items: center;\r\n            \r\n            input {\r\n                width: 27px;\r\n            }\r\n            \r\n            input::-webkit-outer-spin-button,\r\n            input::-webkit-inner-spin-button {\r\n              -webkit-appearance: none;\r\n              margin: 0;\r\n            }\r\n\r\n            input[type=number] {\r\n                -moz-appearance: textfield;\r\n            }\r\n        }\r\n    }\r\n\r\n    .vector3Line {\r\n        padding-left:$line-padding-left;\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;      \r\n        display: grid;\r\n        .firstLine {\r\n            display: grid;\r\n            grid-template-columns: 1fr auto 20px;\r\n            height: var(--spacingHeight);\r\n\r\n            .label {\r\n                grid-column: 1;\r\n                display: flex;\r\n                align-items: center;\r\n            }\r\n\r\n            .vector {\r\n                grid-column: 2;\r\n                display: flex;\r\n                align-items: center;\r\n                text-align: right;\r\n                opacity: 0.8;\r\n            }\r\n\r\n            .expand {\r\n                grid-column: 3;\r\n                display: grid;\r\n                align-items: center;\r\n                justify-items: center;\r\n                cursor: pointer;\r\n            }\r\n        }\r\n\r\n        .secondLine {\r\n            display: grid;\r\n            padding-right: 5px;  \r\n            border-left: 1px solid rgb(51, 122, 183);\r\n\r\n            .no-right-margin {\r\n                margin-right: 0;\r\n            }\r\n\r\n            .numeric {\r\n                display: grid;\r\n                grid-template-columns: 1fr auto;\r\n            }\r\n\r\n            .numeric-label {\r\n                text-align: right;\r\n                grid-column: 1;\r\n                display: flex;\r\n                align-items: center;                            \r\n                justify-self: right;\r\n                margin-right: 10px;                          \r\n            }\r\n\r\n            .numeric-value {\r\n                width: 120px;\r\n                grid-column: 2;\r\n                display: flex;\r\n                align-items: center;  \r\n                border: 1px solid  rgb(51, 122, 183);\r\n            }                        \r\n        }\r\n    }\r\n\r\n    .buttonLine {\r\n        height: var(--spacingHeight);\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;\r\n        display: grid;\r\n        align-items: center;\r\n        justify-items: stretch;\r\n        padding-bottom: 5px;\r\n        input[type=\"file\"] {\r\n            display: none;\r\n        }\r\n\r\n        .file-upload {            \r\n            background: var(--backgroundGrey);\r\n            border: 1px solid #424242;\r\n            margin: 5px 10px;\r\n            color:white;\r\n            padding: 4px 5px;\r\n            opacity: 0.9;\r\n            cursor: pointer;\r\n            text-align: center;\r\n            border-radius: 4px;\r\n        }\r\n\r\n        .file-upload:hover {\r\n            opacity: 1.0;\r\n        }\r\n\r\n        .file-upload:active {\r\n            transform: scale(0.98);\r\n            transform-origin: 0.5 0.5;\r\n        }\r\n\r\n        button {\r\n            background: var(--backgroundGrey);\r\n            border: 1px solid #424242;\r\n            margin: 5px 10px 5px 10px;\r\n            color:white;\r\n            padding: 4px 5px;\r\n            opacity: 0.9;\r\n            border-radius: 4px;\r\n        }\r\n\r\n        button:hover {\r\n            opacity: 1.0;\r\n        }\r\n\r\n        button:active {\r\n            background: #282828;\r\n        }   \r\n        \r\n        button:focus {\r\n            border: 1px solid #424242;\r\n            outline: 0px;\r\n        }  \r\n    }\r\n\r\n    .numeric {\r\n        padding-left: $line-padding-left;\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;\r\n        height: var(--spacingHeight);;\r\n        display: grid;\r\n        grid-template-columns: 1fr 120px auto;\r\n\r\n        .numeric-label {\r\n            grid-column: 1;\r\n            display: flex;\r\n            align-items: center;\r\n        }\r\n\r\n        .number {                        \r\n            display: flex;\r\n            align-items: center;\r\n            grid-column: 2;\r\n            height: 10px;\r\n            .input {\r\n                width: calc(100% - 5px);\r\n                height: 10px;\r\n            }\r\n        }\r\n    }\r\n    \r\n    .checkBoxLine {\r\n        padding-left: $line-padding-left;\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;\r\n        padding-right: $line-padding-right;\r\n        height: var(--spacingHeight);\r\n        display: grid;\r\n        grid-template-columns: auto auto 1fr ;\r\n\r\n        .label {\r\n            grid-column: 2;\r\n            display: flex;\r\n            align-items: center;\r\n            min-width: 100px;\r\n            margin-left: 15px;\r\n            font-family: var(--labelFamily);\r\n        }\r\n\r\n        img {\r\n            width: 30px;\r\n        }\r\n        \r\n        .img {\r\n            grid-column: 1;\r\n            display: flex;\r\n            align-items: center;\r\n        }\r\n\r\n        .checkBox {\r\n            grid-column: 3;\r\n            display: flex;\r\n            align-items: center;\r\n            margin-left: auto;\r\n            margin-right: 0px;\r\n            \r\n            .lbl {\r\n                position: relative;\r\n                display: block;\r\n                height: 14px;\r\n                width: 34px;\r\n                border-radius: 100px;\r\n                cursor: pointer;\r\n                transition: all 0.3s ease;\r\n                border: solid;\r\n                border-width: thin;\r\n            }\r\n\r\n            .lbl:after {\r\n                position: absolute;\r\n                left: 3px;\r\n                top: 1px;\r\n                display: block;\r\n                width: 10px;\r\n                height: 10px;\r\n                border-radius: 100px;\r\n                background: #e2e2e2;\r\n                box-shadow: 0px 3px 3px rgba(0,0,0,0.05);\r\n                content: '';\r\n                transition: all 0.15s ease;\r\n                border: solid;\r\n                border-width: thin;\r\n            }\r\n\r\n            .lbl:active:after { \r\n                transform: scale(1.15, 0.85); \r\n            }\r\n\r\n            .cbx:checked ~ label { \r\n                background: transparent;\r\n                \r\n            }\r\n\r\n            .cbx:checked ~ label:after {\r\n                left: 20px;\r\n                background: rgb(0, 0, 0);\r\n                border: solid;\r\n                border-width: thin;\r\n            }\r\n\r\n            .cbx.conflict ~ label:after {\r\n                left: 10px;\r\n                background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 5px, black 10px);\r\n            }\r\n\r\n            .cbx:checked ~ label.disabled { \r\n                background: rgb(0, 0, 0);\r\n                cursor: pointer;\r\n            }\r\n\r\n            .cbx:checked ~ label.disabled:after {\r\n                left: 20px;\r\n                background: rgb(85, 85, 85);\r\n                cursor: pointer;\r\n            }\r\n\r\n            .cbx ~ label.disabled {\r\n                background: rgb(85, 85, 85);\r\n                cursor: pointer;\r\n            }\r\n\r\n            .hidden { \r\n                display: none; \r\n            }               \r\n        }                    \r\n    }  \r\n\r\n    .listLine {\r\n        padding-left: $line-padding-left;\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;\r\n        height: var(--spacingHeight);\r\n        display: grid;\r\n        grid-template-columns: auto 1fr auto ;\r\n\r\n        .label {\r\n            grid-column: 2;\r\n            display: none;\r\n            align-items: center;\r\n        }\r\n\r\n        img {\r\n            width: 30px;\r\n        }\r\n\r\n        .img {\r\n            grid-column: 1;\r\n            display: flex;\r\n            align-items: center;\r\n        }\r\n\r\n        .options {\r\n            grid-column: 2;\r\n            padding-left: 15px;\r\n            display: flex;\r\n            align-items: center;   \r\n            margin-right: 5px;\r\n\r\n            select {\r\n                width: 120px;\r\n                height: 25px;\r\n                border: transparent;\r\n                border-radius: 4px;\r\n            }\r\n        }                    \r\n    }  \r\n                    \r\n    .color3Line {\r\n        padding-left: $line-padding-left;\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;\r\n        padding-right: $line-padding-right;\r\n        display: grid;\r\n\r\n        .firstLine {\r\n            height: var(--spacingHeight);\r\n            display: grid;\r\n            grid-template-columns: auto auto 1fr;\r\n\r\n            .label {\r\n                grid-column: 2;\r\n                padding-left: 5px;\r\n                display: none;\r\n                align-items: center;\r\n                min-width: 15px;\r\n            }\r\n    \r\n            .img {\r\n                grid-column: 1;\r\n                display: flex;\r\n                align-items: center;\r\n            }\r\n\r\n            img {\r\n                width: 30px;\r\n                height: 30px;\r\n            }\r\n    \r\n            .textInputLine {\r\n                grid-column: 3;\r\n                padding-left: 0px;\r\n            }\r\n    \r\n            .color3 {\r\n                grid-column: 2;                \r\n                margin-top: 6px;\r\n                display: flex;\r\n                align-items: center;\r\n                padding-left: 15px;\r\n                \r\n                input {\r\n                    margin-right: 5px;\r\n                }\r\n            }\r\n\r\n            .textInputLine {\r\n                .value {\r\n                    padding-left: 2px;\r\n                }\r\n            }\r\n\r\n            .copy {\r\n                grid-column: 4;\r\n                display: none;\r\n                align-items: center;\r\n                justify-items: center;\r\n                cursor: pointer;\r\n                color: black;\r\n                img {\r\n                    height: 100%;\r\n                    width: 20px;\r\n                }\r\n            }\r\n\r\n            .expand {\r\n                grid-column: 4;\r\n                display: none;\r\n                align-items: center;\r\n                justify-items: center;\r\n                cursor: pointer;\r\n\r\n                img {\r\n                    height: 100%;\r\n                    width: 20px;\r\n                }\r\n            }\r\n        }   \r\n\r\n        .secondLine {\r\n            display: grid;\r\n            padding-right: 5px;  \r\n            border-left: 1px solid rgb(51, 122, 183);\r\n\r\n            .numeric {\r\n                display: grid;\r\n                grid-template-columns: 1fr auto;\r\n            }\r\n\r\n            .numeric-label {\r\n                text-align: right;\r\n                grid-column: 1;\r\n                display: flex;\r\n                align-items: center;                            \r\n                justify-self: right;\r\n                margin-right: 10px;                          \r\n            }\r\n\r\n            .numeric-value {\r\n                width: 120px;\r\n                grid-column: 2;\r\n                display: flex;\r\n                align-items: center;  \r\n                border: 1px solid  rgb(51, 122, 183);\r\n            }                        \r\n        }                  \r\n    }     \r\n    \r\n    .textLine {\r\n        padding-left: $line-padding-left;\r\n        padding-bottom: $line-padding-bottom;\r\n        padding-top: $line-padding-top;\r\n        padding-right: $line-padding-right;\r\n        height: auto;\r\n        display: grid;\r\n        grid-template-columns: auto auto 2fr 1fr;\r\n        .label {\r\n            grid-column: 2;\r\n            padding-left: 5px;\r\n            padding-top: 4px;\r\n            display: flex;\r\n            align-items: left;\r\n            min-width: 15px;\r\n            color: #a9a9a9;\r\n            font-size: 10px;\r\n            font-family: \"acumin-pro-semicondensed\";\r\n        }\r\n\r\n        img {\r\n            width: 30px;\r\n        }\r\n\r\n        .img {\r\n            grid-column: 1;\r\n            display: flex;\r\n            align-items: center;\r\n        }\r\n\r\n        .link-value {\r\n            grid-column: 2;\r\n            white-space: nowrap;\r\n            text-overflow: ellipsis;\r\n            overflow: hidden;\r\n            text-align: end;\r\n            opacity: 0.8;\r\n            margin:5px;\r\n            margin-top: 6px;\r\n            max-width: 140px;\r\n            text-decoration: underline;\r\n            cursor: pointer;\r\n        }\r\n\r\n        .value {\r\n            display: none;\r\n            grid-column: 3;\r\n            white-space: nowrap;\r\n            text-overflow: ellipsis;\r\n            overflow: hidden;\r\n            text-align: end;\r\n            opacity: 0.8;\r\n            margin:5px;\r\n            margin-top: 6px;\r\n            max-width: 200px;\r\n            -webkit-user-select: text; \r\n            -moz-user-select: text;   \r\n            -ms-user-select: text;    \r\n            user-select: text;                \r\n\r\n            &.check {\r\n                color: green;\r\n            }\r\n\r\n            &.uncheck {\r\n                color: red;\r\n            }  \r\n        }\r\n    }    \r\n\r\n}"],"sourceRoot":""}]);
 // Exports
-module.exports = exports;
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./components/sceneExplorer/sceneExplorer.scss":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/css-loader/dist/cjs.js!E:/Babylon/Babylon.js/node_modules/sass-loader/dist/cjs.js!./components/sceneExplorer/sceneExplorer.scss ***!
-  \**************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/cjs.js!C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/sass-loader/dist/cjs.js!./components/sceneExplorer/sceneExplorer.scss ***!
+  \************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-exports.push([module.i, "#ge-scene-explorer-host {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  bottom: 0px;\n  font-family: \"acumin-pro-condensed\"; }\n  #ge-scene-explorer-host:focus {\n    outline: none; }\n\n#ge-__resizable_base__ {\n  display: none; }\n\n.ge-context-menu {\n  background: #e2e2e2; }\n  .ge-context-menu .react-contextmenu-item {\n    padding: 10px;\n    cursor: pointer; }\n    .ge-context-menu .react-contextmenu-item:hover {\n      background: #e2e2e2; }\n\n.ge-eact-contextmenu.context-menu.react-contextmenu--visible {\n  z-index: 99;\n  transform: scale(1); }\n\n#ge-sceneExplorer {\n  background: #e2e2e2;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  display: grid;\n  grid-template-rows: auto 1fr;\n  font: 16px \"acumin-pro-condensed\"; }\n  #ge-sceneExplorer:focus {\n    outline: none; }\n  #ge-sceneExplorer #header {\n    height: 30px;\n    font-size: 16px;\n    color: black;\n    background: #e2e2e2;\n    grid-row: 1;\n    text-align: center;\n    display: grid;\n    grid-template-columns: 30px 1fr 50px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #ge-sceneExplorer #header #logo {\n      position: relative;\n      grid-column: 1;\n      width: 24px;\n      height: 24px;\n      left: 0;\n      display: flex;\n      align-self: center;\n      justify-self: center; }\n    #ge-sceneExplorer #header #title {\n      grid-column: 2;\n      display: grid;\n      align-items: center;\n      text-align: center; }\n    #ge-sceneExplorer #header #commands {\n      grid-column: 3;\n      display: grid;\n      align-items: center;\n      grid-template-columns: 1fr 1fr; }\n      #ge-sceneExplorer #header #commands .expand {\n        grid-column: 1;\n        display: grid;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer; }\n      #ge-sceneExplorer #header #commands .close {\n        grid-column: 2;\n        display: grid;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer; }\n  #ge-sceneExplorer #tree {\n    grid-row: 2;\n    overflow-x: hidden;\n    overflow-y: auto; }\n  #ge-sceneExplorer .filter {\n    display: flex;\n    align-items: stretch; }\n    #ge-sceneExplorer .filter input {\n      width: 100%;\n      margin: 10px 40px 5px 40px;\n      display: block;\n      border: none;\n      padding: 0;\n      border-bottom: solid 1px #337ab7;\n      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #337ab7 4%);\n      background-position: -1000px 0;\n      background-size: 1000px 100%;\n      background-repeat: no-repeat;\n      color: black; }\n    #ge-sceneExplorer .filter input::placeholder {\n      color: lightgray; }\n    #ge-sceneExplorer .filter input:focus {\n      box-shadow: none;\n      outline: none;\n      background-position: 0 0; }\n  #ge-sceneExplorer .groupContainer {\n    margin-left: 0px;\n    color: black;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    height: 24px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    align-self: center;\n    display: grid;\n    align-items: center; }\n    #ge-sceneExplorer .groupContainer:hover {\n      background: #bbbbbb; }\n    #ge-sceneExplorer .groupContainer .expandableHeader {\n      display: grid;\n      grid-template-columns: 1fr 20px; }\n      #ge-sceneExplorer .groupContainer .expandableHeader .text {\n        grid-column: 1;\n        display: grid;\n        grid-template-columns: 20px 1fr; }\n        #ge-sceneExplorer .groupContainer .expandableHeader .text .arrow {\n          grid-column: 1;\n          margin-left: 0px;\n          color: black;\n          cursor: pointer;\n          display: inline-block;\n          margin-right: 6px;\n          opacity: 0.5; }\n        #ge-sceneExplorer .groupContainer .expandableHeader .text .text-value {\n          grid-column: 2;\n          display: flex;\n          align-items: center; }\n      #ge-sceneExplorer .groupContainer .expandableHeader .expandAll {\n        opacity: 0.5;\n        grid-column: 2;\n        margin-right: 10px; }\n  #ge-sceneExplorer .icon {\n    display: grid;\n    align-items: center;\n    justify-items: center;\n    cursor: pointer; }\n  #ge-sceneExplorer .addComponent {\n    display: none; }\n  #ge-sceneExplorer .makeChild {\n    grid-column: 3; }\n  #ge-sceneExplorer .itemContainer {\n    margin-left: 0px;\n    color: black;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    height: 32px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    display: grid;\n    grid-template-columns: 20px 1fr;\n    border: 2px solid transparent; }\n    #ge-sceneExplorer .itemContainer.hover {\n      border: 2px solid #527089;\n      cursor: pointer; }\n    #ge-sceneExplorer .itemContainer.seAbove {\n      border-top: 2px solid #527089;\n      cursor: pointer; }\n    #ge-sceneExplorer .itemContainer.seBelow {\n      border-bottom: 2px solid #527089;\n      cursor: pointer; }\n    #ge-sceneExplorer .itemContainer.selected {\n      background: #bfbebe;\n      color: black; }\n    #ge-sceneExplorer .itemContainer.dragged {\n      background: transparent;\n      color: black; }\n    #ge-sceneExplorer .itemContainer.parent {\n      background: #ffffff;\n      color: black; }\n    #ge-sceneExplorer .itemContainer .isNotActive {\n      opacity: 0.3; }\n    #ge-sceneExplorer .itemContainer .arrow {\n      grid-column: 1;\n      color: black;\n      opacity: 0.6; }\n    #ge-sceneExplorer .itemContainer .popup {\n      width: 200px;\n      visibility: hidden;\n      background-color: #bbbbbb;\n      color: #fff;\n      border: 1px solid rgba(255, 255, 255, 0.5);\n      position: absolute;\n      z-index: 1;\n      margin-left: -180px;\n      box-sizing: border-box; }\n      #ge-sceneExplorer .itemContainer .popup.show {\n        visibility: visible; }\n      #ge-sceneExplorer .itemContainer .popup:focus {\n        outline: none; }\n      #ge-sceneExplorer .itemContainer .popup .popupMenu {\n        padding: 6px 5px 5px 10px;\n        overflow: hidden;\n        white-space: nowrap;\n        text-overflow: ellipsis;\n        height: 18px; }\n        #ge-sceneExplorer .itemContainer .popup .popupMenu:hover {\n          background: white;\n          color: #333333; }\n    #ge-sceneExplorer .itemContainer .sceneNode {\n      grid-column: 2;\n      margin-left: -10px;\n      display: grid;\n      grid-template-columns: 1fr 20px 20px 20px 20px 10px 20px 20px auto 5px;\n      align-items: center;\n      cursor: pointer; }\n      #ge-sceneExplorer .itemContainer .sceneNode .sceneTitle {\n        grid-column: 1;\n        margin-right: 5px;\n        display: flex;\n        align-items: center;\n        height: 24px; }\n      #ge-sceneExplorer .itemContainer .sceneNode .translation {\n        grid-column: 2;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .translation.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .rotation {\n        grid-column: 3;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .rotation.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .scaling {\n        grid-column: 4;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .scaling.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .bounding {\n        grid-column: 5;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .bounding.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .separator {\n        grid-column: 6;\n        margin-left: 5px;\n        width: 5px;\n        display: flex;\n        align-items: center;\n        height: 18px;\n        border-left: solid 1px #337ab7; }\n      #ge-sceneExplorer .itemContainer .sceneNode .pickingMode {\n        grid-column: 7;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .pickingMode.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .refresh {\n        grid-column: 8; }\n      #ge-sceneExplorer .itemContainer .sceneNode .extensions {\n        width: 20px;\n        grid-column: 9; }\n    #ge-sceneExplorer .itemContainer .adtextureTools {\n      grid-column: 2;\n      display: grid;\n      grid-template-columns: 1fr 20px auto 5px;\n      align-items: center; }\n      #ge-sceneExplorer .itemContainer .adtextureTools .pickingMode {\n        grid-column: 2;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .adtextureTools .pickingMode.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .adtextureTools .extensions {\n        width: 20px;\n        grid-column: 3; }\n    #ge-sceneExplorer .itemContainer .controlTools {\n      grid-column: 2;\n      display: grid;\n      grid-template-columns: 1fr 30px 30px auto 5px;\n      align-items: center; }\n      #ge-sceneExplorer .itemContainer .controlTools .highlight {\n        grid-column: 2; }\n      #ge-sceneExplorer .itemContainer .controlTools .visibility {\n        grid-column: 3; }\n      #ge-sceneExplorer .itemContainer .controlTools .extensions {\n        width: 20px;\n        grid-column: 4; }\n    #ge-sceneExplorer .itemContainer .title {\n      grid-column: 1;\n      background: transparent;\n      white-space: nowrap;\n      overflow: hidden;\n      min-width: 0;\n      margin-right: 5px;\n      display: grid;\n      align-items: center;\n      grid-template-columns: 1fr;\n      height: 24px;\n      cursor: pointer; }\n      #ge-sceneExplorer .itemContainer .title .titleText {\n        grid-column: 1;\n        white-space: nowrap;\n        text-overflow: ellipsis;\n        overflow: hidden; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#ge-scene-explorer-host {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  bottom: 0px; }\n  #ge-scene-explorer-host * {\n    font-family: \"acumin-pro-condensed\"; }\n  #ge-scene-explorer-host:focus {\n    outline: none; }\n\n#ge-__resizable_base__ {\n  display: none; }\n\n.ge-context-menu {\n  background: #e2e2e2; }\n  .ge-context-menu .react-contextmenu-item {\n    padding: 10px;\n    cursor: pointer; }\n    .ge-context-menu .react-contextmenu-item:hover {\n      background: #e2e2e2; }\n\n.ge-eact-contextmenu.context-menu.react-contextmenu--visible {\n  z-index: 99;\n  transform: scale(1); }\n\n#ge-sceneExplorer {\n  background: #e2e2e2;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  display: grid;\n  grid-template-rows: auto 1fr;\n  font: 16px \"acumin-pro-condensed\"; }\n  #ge-sceneExplorer:focus {\n    outline: none; }\n  #ge-sceneExplorer #header {\n    height: 30px;\n    font-size: 16px;\n    color: black;\n    background: #e2e2e2;\n    grid-row: 1;\n    text-align: center;\n    display: grid;\n    grid-template-columns: 30px 1fr 50px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #ge-sceneExplorer #header #logo {\n      position: relative;\n      grid-column: 1;\n      width: 24px;\n      height: 24px;\n      left: 0;\n      display: flex;\n      align-self: center;\n      justify-self: center; }\n    #ge-sceneExplorer #header #title {\n      grid-column: 2;\n      display: grid;\n      align-items: center;\n      text-align: center; }\n    #ge-sceneExplorer #header #commands {\n      grid-column: 3;\n      display: grid;\n      align-items: center;\n      grid-template-columns: 1fr 1fr; }\n      #ge-sceneExplorer #header #commands .expand {\n        grid-column: 1;\n        display: grid;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer; }\n      #ge-sceneExplorer #header #commands .close {\n        grid-column: 2;\n        display: grid;\n        align-items: center;\n        justify-items: center;\n        cursor: pointer; }\n  #ge-sceneExplorer #tree {\n    grid-row: 2;\n    overflow-x: hidden;\n    overflow-y: auto; }\n  #ge-sceneExplorer .filter {\n    display: flex;\n    align-items: stretch; }\n    #ge-sceneExplorer .filter input {\n      width: 100%;\n      margin: 10px 40px 5px 40px;\n      display: block;\n      border: none;\n      padding: 0;\n      border-bottom: solid 1px #337ab7;\n      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #337ab7 4%);\n      background-position: -1000px 0;\n      background-size: 1000px 100%;\n      background-repeat: no-repeat;\n      color: black; }\n    #ge-sceneExplorer .filter input::placeholder {\n      color: lightgray; }\n    #ge-sceneExplorer .filter input:focus {\n      box-shadow: none;\n      outline: none;\n      background-position: 0 0; }\n  #ge-sceneExplorer .groupContainer {\n    margin-left: 0px;\n    color: black;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    height: 24px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    align-self: center;\n    display: grid;\n    align-items: center; }\n    #ge-sceneExplorer .groupContainer:hover {\n      background: #bbbbbb; }\n    #ge-sceneExplorer .groupContainer .expandableHeader {\n      display: grid;\n      grid-template-columns: 1fr 20px; }\n      #ge-sceneExplorer .groupContainer .expandableHeader .text {\n        grid-column: 1;\n        display: grid;\n        grid-template-columns: 20px 1fr; }\n        #ge-sceneExplorer .groupContainer .expandableHeader .text .arrow {\n          grid-column: 1;\n          margin-left: 0px;\n          color: black;\n          cursor: pointer;\n          display: inline-block;\n          margin-right: 6px;\n          opacity: 0.5; }\n        #ge-sceneExplorer .groupContainer .expandableHeader .text .text-value {\n          grid-column: 2;\n          display: flex;\n          align-items: center; }\n      #ge-sceneExplorer .groupContainer .expandableHeader .expandAll {\n        opacity: 0.5;\n        grid-column: 2;\n        margin-right: 10px; }\n  #ge-sceneExplorer .icon {\n    display: grid;\n    align-items: center;\n    justify-items: center;\n    cursor: pointer; }\n  #ge-sceneExplorer .addComponent {\n    display: none; }\n  #ge-sceneExplorer .makeChild {\n    grid-column: 3; }\n  #ge-sceneExplorer .itemContainer {\n    margin-left: 0px;\n    color: black;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    height: 32px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    display: grid;\n    grid-template-columns: 20px 1fr;\n    border: 2px solid transparent; }\n    #ge-sceneExplorer .itemContainer.hover {\n      border: 2px solid #527089;\n      cursor: pointer; }\n    #ge-sceneExplorer .itemContainer.seAbove {\n      border-top: 2px solid #527089;\n      cursor: pointer; }\n    #ge-sceneExplorer .itemContainer.seBelow {\n      border-bottom: 2px solid #527089;\n      cursor: pointer; }\n    #ge-sceneExplorer .itemContainer.selected {\n      background: #bfbebe;\n      color: black; }\n    #ge-sceneExplorer .itemContainer.dragged {\n      background: transparent;\n      color: black; }\n    #ge-sceneExplorer .itemContainer.parent {\n      background: #ffffff;\n      color: black; }\n    #ge-sceneExplorer .itemContainer .isNotActive {\n      opacity: 0.3; }\n    #ge-sceneExplorer .itemContainer .arrow {\n      grid-column: 1;\n      color: black;\n      opacity: 0.6; }\n    #ge-sceneExplorer .itemContainer .popup {\n      width: 200px;\n      visibility: hidden;\n      background-color: #bbbbbb;\n      color: #fff;\n      border: 1px solid rgba(255, 255, 255, 0.5);\n      position: absolute;\n      z-index: 1;\n      margin-left: -180px;\n      box-sizing: border-box; }\n      #ge-sceneExplorer .itemContainer .popup.show {\n        visibility: visible; }\n      #ge-sceneExplorer .itemContainer .popup:focus {\n        outline: none; }\n      #ge-sceneExplorer .itemContainer .popup .popupMenu {\n        padding: 6px 5px 5px 10px;\n        overflow: hidden;\n        white-space: nowrap;\n        text-overflow: ellipsis;\n        height: 18px; }\n        #ge-sceneExplorer .itemContainer .popup .popupMenu:hover {\n          background: white;\n          color: #333333; }\n    #ge-sceneExplorer .itemContainer .sceneNode {\n      grid-column: 2;\n      margin-left: -10px;\n      display: grid;\n      grid-template-columns: 1fr 20px 20px 20px 20px 10px 20px 20px auto 5px;\n      align-items: center;\n      cursor: pointer; }\n      #ge-sceneExplorer .itemContainer .sceneNode .sceneTitle {\n        grid-column: 1;\n        margin-right: 5px;\n        display: flex;\n        align-items: center;\n        height: 24px; }\n      #ge-sceneExplorer .itemContainer .sceneNode .translation {\n        grid-column: 2;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .translation.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .rotation {\n        grid-column: 3;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .rotation.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .scaling {\n        grid-column: 4;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .scaling.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .bounding {\n        grid-column: 5;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .bounding.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .separator {\n        grid-column: 6;\n        margin-left: 5px;\n        width: 5px;\n        display: flex;\n        align-items: center;\n        height: 18px;\n        border-left: solid 1px #337ab7; }\n      #ge-sceneExplorer .itemContainer .sceneNode .pickingMode {\n        grid-column: 7;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .sceneNode .pickingMode.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .sceneNode .refresh {\n        grid-column: 8; }\n      #ge-sceneExplorer .itemContainer .sceneNode .extensions {\n        width: 20px;\n        grid-column: 9; }\n    #ge-sceneExplorer .itemContainer .adtextureTools {\n      grid-column: 2;\n      display: grid;\n      grid-template-columns: 1fr 20px auto 5px;\n      align-items: center; }\n      #ge-sceneExplorer .itemContainer .adtextureTools .pickingMode {\n        grid-column: 2;\n        opacity: 0.6; }\n        #ge-sceneExplorer .itemContainer .adtextureTools .pickingMode.selected {\n          opacity: 1; }\n      #ge-sceneExplorer .itemContainer .adtextureTools .extensions {\n        width: 20px;\n        grid-column: 3; }\n    #ge-sceneExplorer .itemContainer .controlTools {\n      grid-column: 2;\n      display: grid;\n      align-items: center; }\n      #ge-sceneExplorer .itemContainer .controlTools .highlight {\n        grid-column: 2; }\n      #ge-sceneExplorer .itemContainer .controlTools .visibility {\n        grid-column: 3; }\n      #ge-sceneExplorer .itemContainer .controlTools .extensions {\n        width: 20px;\n        grid-column: 4; }\n    #ge-sceneExplorer .itemContainer .title {\n      background: transparent;\n      white-space: nowrap;\n      overflow: hidden;\n      min-width: 0;\n      margin-right: 5px;\n      align-items: center;\n      height: 24px;\n      cursor: pointer; }\n      #ge-sceneExplorer .itemContainer .title .titleText {\n        white-space: nowrap;\n        text-overflow: ellipsis;\n        overflow: hidden;\n        outline: none; }\n", "",{"version":3,"sources":["webpack://./components/sceneExplorer/sceneExplorer.scss"],"names":[],"mappings":"AAAA;EACI,kBAAkB;EAClB,SAAS;EACT,QAAO;EACP,WAAW,EAAA;EAJf;IAMY,mCAAmC,EAAA;EAN/C;IASQ,aAAa,EAAA;;AAIrB;EACI,aAAa,EAAA;;AAGjB;EACI,mBAAmB,EAAA;EADvB;IAIQ,aAAa;IACb,eAAe,EAAA;IALvB;MAQY,mBAAmB,EAAA;;AAK/B;EACI,WAAW;EACX,mBAAmB,EAAA;;AAGvB;EACI,mBAAmB;EACnB,YAAY;EACZ,SAAS;EACT,UAAU;EACV,aAAa;EACb,4BAA4B;EAC5B,iCAAiC,EAAA;EAPrC;IAUQ,aAAa,EAAA;EAVrB;IAcQ,YAAY;IACZ,eAAe;IACf,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,kBAAkB;IAClB,aAAa;IACb,oCAAoC;IACpC,yBAAyB;IACzB,sBAAsB;IACtB,qBAAqB;IACrB,iBAAiB,EAAA;IAzBzB;MA4BY,kBAAkB;MAClB,cAAc;MACd,WAAW;MACX,YAAY;MACZ,OAAM;MACN,aAAa;MACb,kBAAkB;MAClB,oBAAoB,EAAA;IAnChC;MAuCY,cAAc;MACd,aAAa;MACb,mBAAmB;MACnB,kBAAkB,EAAA;IA1C9B;MA8CY,cAAc;MACd,aAAa;MACb,mBAAmB;MACnB,8BAA8B,EAAA;MAjD1C;QAoDgB,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,qBAAqB;QACrB,eAAe,EAAA;MAxD/B;QA4DgB,cAAc;QACd,aAAa;QACb,mBAAmB;QACnB,qBAAqB;QACrB,eAAe,EAAA;EAhE/B;IAsEO,WAAW;IAEX,kBAAkB;IAClB,gBAAgB,EAAA;EAzEvB;IA6EQ,aAAa;IACb,oBAAoB,EAAA;IA9E5B;MAiFY,WAAW;MACX,0BAA0B;MAC1B,cAAc;MACd,YAAY;MACZ,UAAU;MACV,gCAA0C;MAC1C,8EAAwF;MACxF,8BAA8B;MAC9B,4BAA4B;MAC5B,4BAA4B;MAC5B,YAAW,EAAA;IA3FvB;MA+FY,gBAAgB,EAAA;IA/F5B;MAmGY,gBAAgB;MAChB,aAAa;MACb,wBAAwB,EAAA;EArGpC;IA0GQ,gBAAgB;IAChB,YAAY;IACZ,eAAe;IACf,kBAAkB;IAClB,YAAY;IAEZ,yBAAyB;IACzB,sBAAsB;IACtB,qBAAqB;IACrB,iBAAiB;IAEjB,kBAAkB;IAClB,aAAa;IACb,mBAAmB,EAAA;IAvH3B;MA0HY,mBAAmB,EAAA;IA1H/B;MA8HY,aAAa;MACb,+BAA+B,EAAA;MA/H3C;QAkIgB,cAAc;QACd,aAAa;QACb,+BAA+B,EAAA;QApI/C;UAuIoB,cAAc;UACd,gBAAgB;UAChB,YAAY;UACZ,eAAe;UACf,qBAAqB;UACrB,iBAAiB;UACjB,YAAY,EAAA;QA7IhC;UAiJoB,cAAc;UACd,aAAa;UACb,mBAAmB,EAAA;MAnJvC;QAwJgB,YAAY;QACZ,cAAc;QACd,kBAAkB,EAAA;EA1JlC;IAkKQ,aAAa;IACb,mBAAmB;IACnB,qBAAqB;IACrB,eAAe,EAAA;EArKvB;IAyKQ,aAAa,EAAA;EAzKrB;IA6KO,cAAc,EAAA;EA7KrB;IAiLQ,gBAAgB;IAChB,YAAY;IACZ,eAAe;IACf,kBAAkB;IAClB,YAAY;IACZ,yBAAyB;IACzB,sBAAsB;IACtB,qBAAqB;IACrB,iBAAiB;IACjB,aAAa;IACb,+BAA+B;IAC/B,6BAA6B,EAAA;IA5LrC;MA8LY,yBAAyB;MACzB,eAAe,EAAA;IA/L3B;MAmMY,6BAA6B;MAC7B,eAAe,EAAA;IApM3B;MAuMY,gCAAgC;MAChC,eAAe,EAAA;IAxM3B;MA6MY,mBAAmB;MACnB,YAAY,EAAA;IA9MxB;MAkNY,uBAAuB;MACvB,YAAY,EAAA;IAnNxB;MAuNY,mBAAmB;MACnB,YAAY,EAAA;IAxNxB;MA4NY,YAAY,EAAA;IA5NxB;MA+NY,cAAc;MACd,YAAY;MACZ,YAAY,EAAA;IAjOxB;MAqOY,YAAY;MACZ,kBAAkB;MAClB,yBAAyB;MACzB,WAAW;MACX,0CAA0C;MAC1C,kBAAkB;MAClB,UAAU;MACV,mBAAmB;MACnB,sBAAsB,EAAA;MA7OlC;QAgPgB,mBAAmB,EAAA;MAhPnC;QAoPgB,aAAa,EAAA;MApP7B;QAwPgB,yBAAyB;QACzB,gBAAgB;QAChB,mBAAmB;QACnB,uBAAuB;QACvB,YAAY,EAAA;QA5P5B;UAgQoB,iBAAiB;UACjB,cAAc,EAAA;IAjQlC;MAuQY,cAAc;MACd,kBAAkB;MAClB,aAAa;MACb,sEAAsE;MACtE,mBAAmB;MACnB,eAAe,EAAA;MA5Q3B;QA+QgB,cAAc;QACd,iBAAiB;QACjB,aAAa;QACb,mBAAmB;QACnB,YAAY,EAAA;MAnR5B;QAuRgB,cAAc;QACd,YAAY,EAAA;QAxR5B;UA2RoB,UAAU,EAAA;MA3R9B;QAgSgB,cAAc;QACd,YAAY,EAAA;QAjS5B;UAoSoB,UAAU,EAAA;MApS9B;QAySgB,cAAc;QACd,YAAY,EAAA;QA1S5B;UA4SoB,UAAU,EAAA;MA5S9B;QAiTgB,cAAc;QACd,YAAY,EAAA;QAlT5B;UAoToB,UAAU,EAAA;MApT9B;QAyTgB,cAAc;QACd,gBAAgB;QAChB,UAAU;QACV,aAAa;QACb,mBAAmB;QACnB,YAAY;QACZ,8BAAwC,EAAA;MA/TxD;QAmUgB,cAAc;QACd,YAAY,EAAA;QApU5B;UAuUoB,UAAU,EAAA;MAvU9B;QA4UgB,cAAc,EAAA;MA5U9B;QAgVgB,WAAW;QACX,cAAc,EAAA;IAjV9B;MAsVY,cAAc;MACd,aAAa;MACb,wCAAwC;MACxC,mBAAmB,EAAA;MAzV/B;QA4VgB,cAAc;QACd,YAAY,EAAA;QA7V5B;UAgWoB,UAAU,EAAA;MAhW9B;QAqWgB,WAAW;QACX,cAAc,EAAA;IAtW9B;MA2WY,cAAc;MACd,aAAa;MACb,mBAAmB,EAAA;MA7W/B;QAgXgB,cAAc,EAAA;MAhX9B;QAoXgB,cAAc,EAAA;MApX9B;QAwXgB,WAAW;QACX,cAAc,EAAA;IAzX9B;MA8XY,uBAAuB;MACvB,mBAAmB;MACnB,gBAAgB;MAChB,YAAY;MACZ,iBAAiB;MACjB,mBAAmB;MACnB,YAAY;MACZ,eAAe,EAAA;MArY3B;QAwYgB,mBAAmB;QACnB,uBAAuB;QACvB,gBAAgB;QAChB,aAAa,EAAA","sourcesContent":["#ge-scene-explorer-host {\r\n    position: absolute;\r\n    left: 0px;\r\n    top:0px;\r\n    bottom: 0px;\r\n    * {\r\n            font-family: \"acumin-pro-condensed\";\r\n    }\r\n    &:focus {\r\n        outline: none;\r\n    }\r\n}\r\n\r\n#ge-__resizable_base__ {\r\n    display: none;\r\n}\r\n\r\n.ge-context-menu {\r\n    background: #e2e2e2;\r\n\r\n    .react-contextmenu-item {\r\n        padding: 10px;\r\n        cursor: pointer;\r\n\r\n        &:hover {\r\n            background: #e2e2e2;\r\n        }\r\n    }\r\n}\r\n\r\n.ge-eact-contextmenu.context-menu.react-contextmenu--visible {\r\n    z-index: 99;\r\n    transform: scale(1);\r\n}\r\n\r\n#ge-sceneExplorer {\r\n    background: #e2e2e2;\r\n    height: 100%;\r\n    margin: 0;\r\n    padding: 0;\r\n    display: grid;\r\n    grid-template-rows: auto 1fr;\r\n    font: 16px \"acumin-pro-condensed\";\r\n\r\n    &:focus {\r\n        outline: none;\r\n    }\r\n\r\n    #header {\r\n        height: 30px;\r\n        font-size: 16px;\r\n        color: black;\r\n        background: #e2e2e2;\r\n        grid-row: 1;\r\n        text-align: center;\r\n        display: grid;\r\n        grid-template-columns: 30px 1fr 50px;        \r\n        -webkit-user-select: none; \r\n        -moz-user-select: none;   \r\n        -ms-user-select: none;    \r\n        user-select: none;                \r\n\r\n        #logo {\r\n            position: relative;\r\n            grid-column: 1; \r\n            width: 24px;\r\n            height: 24px;\r\n            left:0;\r\n            display: flex;\r\n            align-self: center;   \r\n            justify-self: center;\r\n        }        \r\n\r\n        #title {\r\n            grid-column: 2; \r\n            display: grid;\r\n            align-items: center;   \r\n            text-align: center;\r\n        }\r\n\r\n        #commands {\r\n            grid-column: 3; \r\n            display: grid;\r\n            align-items: center;  \r\n            grid-template-columns: 1fr 1fr;   \r\n            \r\n            .expand {\r\n                grid-column: 1;\r\n                display: grid;\r\n                align-items: center;   \r\n                justify-items: center;\r\n                cursor: pointer;     \r\n            }\r\n\r\n            .close {\r\n                grid-column: 2;\r\n                display: grid;\r\n                align-items: center;   \r\n                justify-items: center;\r\n                cursor: pointer;     \r\n            }            \r\n        }\r\n    }\r\n\r\n    #tree {\r\n       grid-row: 2; \r\n\r\n       overflow-x: hidden;\r\n       overflow-y: auto;\r\n    }\r\n\r\n    .filter {\r\n        display: flex;\r\n        align-items: stretch;\r\n\r\n        input {\r\n            width: 100%;\r\n            margin: 10px 40px 5px 40px;\r\n            display: block;\r\n            border: none;\r\n            padding: 0;\r\n            border-bottom: solid 1px rgb(51, 122, 183);\r\n            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, rgb(51, 122, 183) 4%);\r\n            background-position: -1000px 0;\r\n            background-size: 1000px 100%;\r\n            background-repeat: no-repeat;  \r\n            color:black;    \r\n        }\r\n\r\n        input::placeholder {\r\n            color: lightgray;\r\n        }\r\n\r\n        input:focus  {\r\n            box-shadow: none;\r\n            outline: none;\r\n            background-position: 0 0;\r\n        }\r\n    }\r\n\r\n    .groupContainer {\r\n        margin-left: 0px;\r\n        color: black;\r\n        margin-top: 0px;\r\n        margin-bottom: 0px;\r\n        height: 24px;    \r\n\r\n        -webkit-user-select: none; \r\n        -moz-user-select: none;   \r\n        -ms-user-select: none;    \r\n        user-select: none;    \r\n        \r\n        align-self: center;     \r\n        display: grid;\r\n        align-items: center;           \r\n\r\n        &:hover {\r\n            background: #bbbbbb;\r\n        }\r\n\r\n        .expandableHeader {\r\n            display: grid;\r\n            grid-template-columns: 1fr 20px;\r\n\r\n            .text {\r\n                grid-column: 1;\r\n                display: grid;\r\n                grid-template-columns: 20px 1fr;\r\n\r\n                .arrow {\r\n                    grid-column: 1;\r\n                    margin-left: 0px;\r\n                    color: black;\r\n                    cursor: pointer;\r\n                    display: inline-block;\r\n                    margin-right: 6px;\r\n                    opacity: 0.5;\r\n                }\r\n\r\n                .text-value {\r\n                    grid-column: 2;\r\n                    display: flex;\r\n                    align-items: center;\r\n                }\r\n            }\r\n\r\n            .expandAll {                \r\n                opacity: 0.5;\r\n                grid-column: 2;\r\n                margin-right: 10px;  \r\n            }\r\n        }\r\n        \r\n\r\n    }\r\n\r\n    .icon {\r\n        display: grid;\r\n        align-items: center;   \r\n        justify-items: center;\r\n        cursor: pointer;\r\n    }\r\n\r\n    .addComponent {\r\n        display: none;\r\n    }\r\n\r\n    .makeChild{\r\n       grid-column: 3;\r\n    }\r\n\r\n    .itemContainer {\r\n        margin-left: 0px;\r\n        color: black;\r\n        margin-top: 0px;\r\n        margin-bottom: 0px;\r\n        height: 32px;   \r\n        -webkit-user-select: none; \r\n        -moz-user-select: none;   \r\n        -ms-user-select: none;    \r\n        user-select: none;\r\n        display: grid;\r\n        grid-template-columns: 20px 1fr;\r\n        border: 2px solid transparent;\r\n        &.hover {\r\n            border: 2px solid #527089;\r\n            cursor: pointer;\r\n        }\r\n\r\n        &.seAbove {\r\n            border-top: 2px solid #527089;\r\n            cursor: pointer;\r\n        }\r\n        &.seBelow {\r\n            border-bottom: 2px solid #527089;\r\n            cursor: pointer;\r\n        }\r\n\r\n        &.selected {\r\n            \r\n            background: #bfbebe;\r\n            color: black;\r\n        }\r\n\r\n        &.dragged {\r\n            background: transparent;\r\n            color: black;\r\n        }\r\n\r\n        &.parent {\r\n            background: #ffffff;\r\n            color: black;\r\n        }\r\n        \r\n        .isNotActive {\r\n            opacity: 0.3;\r\n        }\r\n        .arrow {\r\n            grid-column: 1;\r\n            color: black;\r\n            opacity: 0.6;\r\n        }\r\n\r\n        .popup {\r\n            width: 200px;\r\n            visibility: hidden;\r\n            background-color: #bbbbbb;\r\n            color: #fff;\r\n            border: 1px solid rgba(255, 255, 255, 0.5);\r\n            position: absolute;\r\n            z-index: 1;\r\n            margin-left: -180px;\r\n            box-sizing: border-box;\r\n\r\n            &.show {\r\n                visibility: visible;\r\n            }\r\n\r\n            &:focus {\r\n                outline: none;\r\n            }\r\n\r\n            .popupMenu {\r\n                padding: 6px 5px 5px 10px;\r\n                overflow: hidden;\r\n                white-space: nowrap;\r\n                text-overflow: ellipsis;\r\n                height: 18px;\r\n                \r\n\r\n                &:hover {\r\n                    background: white;\r\n                    color: #333333;\r\n                }\r\n            }\r\n        }\r\n\r\n        .sceneNode {\r\n            grid-column: 2;\r\n            margin-left: -10px;\r\n            display: grid;\r\n            grid-template-columns: 1fr 20px 20px 20px 20px 10px 20px 20px auto 5px;\r\n            align-items: center;\r\n            cursor: pointer;         \r\n\r\n            .sceneTitle {\r\n                grid-column: 1;\r\n                margin-right: 5px;     \r\n                display: flex;\r\n                align-items: center;   \r\n                height: 24px;       \r\n            }            \r\n\r\n            .translation {\r\n                grid-column: 2;\r\n                opacity: 0.6;\r\n               \r\n                &.selected {\r\n                    opacity: 1;\r\n                }    \r\n            }\r\n\r\n            .rotation {\r\n                grid-column: 3;\r\n                opacity: 0.6;\r\n\r\n                &.selected {\r\n                    opacity: 1;\r\n                }    \r\n            }\r\n\r\n            .scaling {\r\n                grid-column: 4;\r\n                opacity: 0.6;\r\n                &.selected {\r\n                    opacity: 1;\r\n                }    \r\n            }\r\n            \r\n            .bounding {\r\n                grid-column: 5;\r\n                opacity: 0.6;\r\n                &.selected {\r\n                    opacity: 1;\r\n                }    \r\n            }\r\n\r\n            .separator {\r\n                grid-column: 6;\r\n                margin-left: 5px;    \r\n                width: 5px;\r\n                display: flex;\r\n                align-items: center;   \r\n                height: 18px;           \r\n                border-left: solid 1px rgb(51, 122, 183);\r\n            }\r\n\r\n            .pickingMode {\r\n                grid-column: 7;\r\n                opacity: 0.6;\r\n\r\n                &.selected {\r\n                    opacity: 1;\r\n                }\r\n            }\r\n\r\n            .refresh {\r\n                grid-column: 8;\r\n            }\r\n\r\n            .extensions {\r\n                width: 20px;\r\n                grid-column: 9;\r\n            }\r\n        }\r\n        \r\n        .adtextureTools {\r\n            grid-column: 2;\r\n            display: grid;\r\n            grid-template-columns: 1fr 20px auto 5px;\r\n            align-items: center;\r\n            \r\n            .pickingMode {\r\n                grid-column: 2;\r\n                opacity: 0.6;\r\n\r\n                &.selected {\r\n                    opacity: 1;\r\n                }\r\n            }\r\n\r\n            .extensions {\r\n                width: 20px;\r\n                grid-column: 3;\r\n            }\r\n        }         \r\n\r\n        .controlTools {\r\n            grid-column: 2;\r\n            display: grid;\r\n            align-items: center;\r\n\r\n            .highlight {\r\n                grid-column: 2;\r\n            }\r\n\r\n            .visibility {\r\n                grid-column: 3;\r\n            }\r\n\r\n            .extensions {\r\n                width: 20px;\r\n                grid-column: 4;\r\n            }\r\n        }   \r\n        \r\n        .title {\r\n            background: transparent;\r\n            white-space: nowrap;\r\n            overflow: hidden;\r\n            min-width: 0;\r\n            margin-right: 5px;\r\n            align-items: center;  \r\n            height: 24px;\r\n            cursor: pointer;\r\n\r\n            .titleText {\r\n                white-space: nowrap;\r\n                text-overflow: ellipsis;\r\n                overflow: hidden;\r\n                outline: none;\r\n            }   \r\n \r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
-module.exports = exports;
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./diagram/workbenchCanvas.scss":
-/*!***********************************************************************************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/css-loader/dist/cjs.js!E:/Babylon/Babylon.js/node_modules/sass-loader/dist/cjs.js!./diagram/workbenchCanvas.scss ***!
-  \***********************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/cjs.js!C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/sass-loader/dist/cjs.js!./diagram/workbenchCanvas.scss ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-exports.push([module.i, "#workbench-canvas {\n  grid-column: 1;\n  grid-row: 1;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  font: 14px \"acumin-pro-condensed\";\n  cursor: default;\n  user-select: none;\n  overflow: hidden;\n  background-image: linear-gradient(to right, #4F4E4F 1px, transparent 1px), linear-gradient(to bottom, #4F4E4F 1px, transparent 1px); }\n  #workbench-canvas #selection-container {\n    pointer-events: none; }\n    #workbench-canvas #selection-container .selection-box {\n      z-index: 10;\n      background: rgba(72, 72, 196, 0.5);\n      border: blue solid 2px; }\n  #workbench-canvas #workbench-container {\n    width: 100%;\n    height: 100%;\n    left: 0;\n    top: 0;\n    transform-origin: left top;\n    display: grid;\n    grid-template-rows: 100%;\n    grid-template-columns: 100%; }\n    #workbench-canvas #workbench-container #frame-container {\n      overflow: visible;\n      grid-row: 1;\n      grid-column: 1;\n      position: relative;\n      width: 100%;\n      height: 100%; }\n    #workbench-canvas #workbench-container .frame-box {\n      position: absolute;\n      background: rgba(72, 72, 72, 0.7);\n      display: grid;\n      grid-template-rows: 40px calc(100% - 40px);\n      grid-template-columns: 100%;\n      box-sizing: border-box; }\n      #workbench-canvas #workbench-container .frame-box.collapsed {\n        height: auto !important;\n        width: 200px !important;\n        z-index: 3; }\n        #workbench-canvas #workbench-container .frame-box.collapsed .frame-box-header {\n          font-size: 16px;\n          grid-template-columns: calc(100% - 37px) 30px 7px; }\n          #workbench-canvas #workbench-container .frame-box.collapsed .frame-box-header .frame-box-header-collapse {\n            margin-top: -2px; }\n          #workbench-canvas #workbench-container .frame-box.collapsed .frame-box-header .frame-box-header-close {\n            display: none; }\n        #workbench-canvas #workbench-container .frame-box.collapsed .frame-comments.has-comments .frame-comment-span {\n          white-space: nowrap;\n          text-overflow: ellipsis;\n          overflow: hidden; }\n      #workbench-canvas #workbench-container .frame-box .frame-box-border {\n        grid-row: 1 / span 2;\n        grid-column: 1;\n        width: 100%;\n        height: 100%;\n        border: transparent solid 4px;\n        pointer-events: none;\n        box-sizing: border-box; }\n      #workbench-canvas #workbench-container .frame-box .frame-box-header {\n        grid-row: 1;\n        grid-column: 1;\n        background: #484848;\n        color: white;\n        font-size: 24px;\n        text-align: center;\n        display: grid;\n        grid-template-rows: 100%;\n        grid-template-columns: calc(100% - 74px) 30px 7px 30px 7px;\n        align-content: center;\n        overflow: hidden; }\n        #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-button {\n          cursor: pointer;\n          align-self: center;\n          transform-origin: 50% 50%;\n          transform: scale(1);\n          stroke: transparent;\n          fill: white;\n          display: grid; }\n          #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-button.down {\n            transform: scale(0.9); }\n        #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-collapse {\n          grid-column: 2;\n          grid-row: 1; }\n        #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-close {\n          grid-column: 4;\n          grid-row: 1; }\n        #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-title {\n          grid-column: 1;\n          grid-row: 1;\n          display: grid;\n          height: 100%;\n          width: 100%;\n          align-self: stretch;\n          align-items: center;\n          margin-top: -2px; }\n      #workbench-canvas #workbench-container .frame-box .frame-comments.has-comments {\n        display: grid;\n        grid-row: 2;\n        grid-column: 1;\n        padding: 0 10px;\n        font-style: italic;\n        word-wrap: break-word; }\n      #workbench-canvas #workbench-container .frame-box.selected .frame-box-border {\n        border-color: white; }\n      #workbench-canvas #workbench-container .frame-box .right-handle {\n        grid-area: 1 / 2 / 3 / 2;\n        width: 4px;\n        background-color: transparent;\n        cursor: ew-resize; }\n        #workbench-canvas #workbench-container .frame-box .right-handle::after {\n          content: \"\";\n          width: 8px;\n          position: absolute;\n          top: 0;\n          bottom: 0;\n          margin-left: -4px;\n          cursor: ew-resize; }\n        #workbench-canvas #workbench-container .frame-box .right-handle.collapsed {\n          cursor: pointer; }\n      #workbench-canvas #workbench-container .frame-box .top-right-corner-handle {\n        background-color: transparent;\n        height: 4px;\n        z-index: 21;\n        cursor: ne-resize;\n        width: 4px;\n        margin-left: -6px; }\n        #workbench-canvas #workbench-container .frame-box .top-right-corner-handle::after {\n          background-color: transparent;\n          cursor: ne-resize;\n          margin-left: unset;\n          top: -4px;\n          height: 10px;\n          width: 10px; }\n      #workbench-canvas #workbench-container .frame-box .bottom-right-corner-handle {\n        background-color: transparent;\n        height: 0px;\n        z-index: 21;\n        cursor: nw-resize;\n        grid-area: 4 / 2 / 4 / 2;\n        margin-left: -2px; }\n        #workbench-canvas #workbench-container .frame-box .bottom-right-corner-handle::after {\n          background-color: transparent;\n          height: 10px;\n          cursor: nw-resize;\n          top: unset;\n          bottom: -4px;\n          width: 10px; }\n      #workbench-canvas #workbench-container .frame-box .left-handle {\n        grid-area: 1 / 1 / 3 / 1;\n        width: 4px;\n        background-color: transparent;\n        cursor: ew-resize; }\n        #workbench-canvas #workbench-container .frame-box .left-handle::before {\n          content: \"\";\n          width: 8px;\n          position: absolute;\n          top: 0;\n          bottom: 0;\n          margin-left: -4px; }\n      #workbench-canvas #workbench-container .frame-box .top-left-corner-handle {\n        background-color: transparent;\n        height: 4px;\n        z-index: 21;\n        cursor: nw-resize;\n        width: 4px;\n        margin-left: -4px; }\n        #workbench-canvas #workbench-container .frame-box .top-left-corner-handle::before {\n          background-color: transparent;\n          cursor: nw-resize;\n          margin-left: unset;\n          top: -4px;\n          height: 10px;\n          width: 10px; }\n      #workbench-canvas #workbench-container .frame-box .bottom-left-corner-handle {\n        background-color: transparent;\n        height: 0px;\n        z-index: 21;\n        cursor: sw-resize;\n        grid-area: 4 / 1 / 4 / 1; }\n        #workbench-canvas #workbench-container .frame-box .bottom-left-corner-handle::before {\n          background-color: transparent;\n          height: 10px;\n          cursor: sw-resize;\n          top: unset;\n          bottom: -4px;\n          width: 10px; }\n      #workbench-canvas #workbench-container .frame-box .top-handle {\n        grid-area: 1 / 1 / 1 / 1;\n        background-color: transparent;\n        height: 4px;\n        cursor: ns-resize; }\n        #workbench-canvas #workbench-container .frame-box .top-handle::before {\n          content: \"\";\n          width: 100%;\n          position: absolute;\n          top: -4px;\n          bottom: 100%;\n          right: 0;\n          left: 0;\n          margin-bottom: -8px;\n          cursor: ns-resize;\n          height: 8px; }\n      #workbench-canvas #workbench-container .frame-box .bottom-handle {\n        grid-area: 3 / 1 / 3 / 1;\n        background-color: transparent;\n        height: 4px;\n        cursor: ns-resize; }\n        #workbench-canvas #workbench-container .frame-box .bottom-handle::after {\n          content: \"\";\n          width: 100%;\n          position: absolute;\n          top: 100%;\n          bottom: 0;\n          right: 0;\n          left: 0;\n          margin-top: -8px;\n          cursor: ns-resize;\n          height: 12px; }\n      #workbench-canvas #workbench-container .frame-box.collapsed .top-handle, #workbench-canvas #workbench-container .frame-box.collapsed .top-right-corner-handle, #workbench-canvas #workbench-container .frame-box.collapsed .right-handle, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-right-corner-handle, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-handle, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-left-corner-handle, #workbench-canvas #workbench-container .frame-box.collapsed .left-handle, #workbench-canvas #workbench-container .frame-box.collapsed .top-left-corner-handle {\n        cursor: default; }\n      #workbench-canvas #workbench-container .frame-box.collapsed .right-handle::after, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-handle::after, #workbench-canvas #workbench-container .frame-box.collapsed .top-right-corner-handle::after, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-right-corner-handle::after {\n        cursor: default; }\n      #workbench-canvas #workbench-container .frame-box.collapsed .left-handle::before, #workbench-canvas #workbench-container .frame-box.collapsed .top-handle::before, #workbench-canvas #workbench-container .frame-box.collapsed .top-left-corner-handle::before, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-left-corner-handle::before {\n        cursor: default; }\n    #workbench-canvas #workbench-container #workbench-svg-container {\n      grid-row: 1;\n      grid-column: 1;\n      position: relative;\n      width: 100%;\n      height: 100%;\n      overflow: visible;\n      pointer-events: none;\n      z-index: 2; }\n      #workbench-canvas #workbench-container #workbench-svg-container .link {\n        stroke-width: 4px; }\n        #workbench-canvas #workbench-container #workbench-svg-container .link.selected {\n          stroke: white !important;\n          stroke-dasharray: 10, 2; }\n        #workbench-canvas #workbench-container #workbench-svg-container .link.hidden {\n          display: none; }\n      #workbench-canvas #workbench-container #workbench-svg-container .selection-link {\n        pointer-events: all;\n        stroke-width: 16px;\n        opacity: 0;\n        transition: opacity 75ms;\n        stroke: transparent;\n        cursor: pointer; }\n        #workbench-canvas #workbench-container #workbench-svg-container .selection-link.hidden {\n          display: none; }\n        #workbench-canvas #workbench-container #workbench-svg-container .selection-link:hover, #workbench-canvas #workbench-container #workbench-svg-container .selection-link.selected {\n          stroke: white !important;\n          opacity: 0.4; }\n    #workbench-canvas #workbench-container #workbench-canvas-container {\n      grid-row: 1;\n      grid-column: 1;\n      position: relative;\n      width: 100%;\n      height: 100%; }\n      #workbench-canvas #workbench-container #workbench-canvas-container .visual {\n        z-index: 4;\n        width: 200px;\n        position: absolute;\n        left: 0;\n        top: 0;\n        background: gray;\n        border: 4px solid black;\n        border-radius: 12px;\n        display: grid;\n        grid-template-rows: 30px auto;\n        grid-template-columns: 100%;\n        color: white; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual.hidden {\n          display: none; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual .comments {\n          position: absolute;\n          top: -50px;\n          width: 200px;\n          height: 45px;\n          overflow: hidden;\n          font-style: italic;\n          opacity: 0.8;\n          display: grid;\n          align-items: flex-end;\n          pointer-events: none; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual .selection-border {\n          grid-row: 1 / span 3;\n          grid-column: 1;\n          margin: -4px;\n          transition: border-color 100ms;\n          border: 4px solid black;\n          border-radius: 12px; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual.selected .selection-border {\n          border-color: white; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual .header {\n          grid-row: 1;\n          grid-column: 1;\n          border: 4px solid black;\n          border-top-right-radius: 7px;\n          border-top-left-radius: 7px;\n          font-size: 16px;\n          text-align: center;\n          margin-top: -1px;\n          margin-left: -1px;\n          margin-right: -1px;\n          white-space: nowrap;\n          text-overflow: ellipsis;\n          overflow: hidden;\n          background: black;\n          color: white; }\n          #workbench-canvas #workbench-container #workbench-canvas-container .visual .header.constant {\n            border-color: #464348;\n            background: #464348; }\n          #workbench-canvas #workbench-container #workbench-canvas-container .visual .header.inspector {\n            border-color: #66491b;\n            background: #66491b; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#workbench-canvas {\n  grid-column: 1;\n  grid-row: 1;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  font: 14px \"acumin-pro-condensed\";\n  cursor: default;\n  user-select: none;\n  overflow: hidden;\n  background-image: linear-gradient(to right, #4F4E4F 1px, transparent 1px), linear-gradient(to bottom, #4F4E4F 1px, transparent 1px); }\n  #workbench-canvas #selection-container {\n    pointer-events: none; }\n    #workbench-canvas #selection-container .selection-box {\n      z-index: 10;\n      background: rgba(72, 72, 196, 0.5);\n      border: blue solid 2px; }\n  #workbench-canvas #workbench-container {\n    width: 100%;\n    height: 100%;\n    left: 0;\n    top: 0;\n    transform-origin: left top;\n    display: grid;\n    grid-template-rows: 100%;\n    grid-template-columns: 100%; }\n    #workbench-canvas #workbench-container #frame-container {\n      overflow: visible;\n      grid-row: 1;\n      grid-column: 1;\n      position: relative;\n      width: 100%;\n      height: 100%; }\n    #workbench-canvas #workbench-container .frame-box {\n      position: absolute;\n      background: rgba(72, 72, 72, 0.7);\n      display: grid;\n      grid-template-rows: 40px calc(100% - 40px);\n      grid-template-columns: 100%;\n      box-sizing: border-box; }\n      #workbench-canvas #workbench-container .frame-box.collapsed {\n        height: auto !important;\n        width: 200px !important;\n        z-index: 3; }\n        #workbench-canvas #workbench-container .frame-box.collapsed .frame-box-header {\n          font-size: 16px;\n          grid-template-columns: calc(100% - 37px) 30px 7px; }\n          #workbench-canvas #workbench-container .frame-box.collapsed .frame-box-header .frame-box-header-collapse {\n            margin-top: -2px; }\n          #workbench-canvas #workbench-container .frame-box.collapsed .frame-box-header .frame-box-header-close {\n            display: none; }\n        #workbench-canvas #workbench-container .frame-box.collapsed .frame-comments.has-comments .frame-comment-span {\n          white-space: nowrap;\n          text-overflow: ellipsis;\n          overflow: hidden; }\n      #workbench-canvas #workbench-container .frame-box .frame-box-border {\n        grid-row: 1 / span 2;\n        grid-column: 1;\n        width: 100%;\n        height: 100%;\n        border: transparent solid 4px;\n        pointer-events: none;\n        box-sizing: border-box; }\n      #workbench-canvas #workbench-container .frame-box .frame-box-header {\n        grid-row: 1;\n        grid-column: 1;\n        background: #484848;\n        color: white;\n        font-size: 24px;\n        text-align: center;\n        display: grid;\n        grid-template-rows: 100%;\n        grid-template-columns: calc(100% - 74px) 30px 7px 30px 7px;\n        align-content: center;\n        overflow: hidden; }\n        #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-button {\n          cursor: pointer;\n          align-self: center;\n          transform-origin: 50% 50%;\n          transform: scale(1);\n          stroke: transparent;\n          fill: white;\n          display: grid; }\n          #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-button.down {\n            transform: scale(0.9); }\n        #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-collapse {\n          grid-column: 2;\n          grid-row: 1; }\n        #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-close {\n          grid-column: 4;\n          grid-row: 1; }\n        #workbench-canvas #workbench-container .frame-box .frame-box-header .frame-box-header-title {\n          grid-column: 1;\n          grid-row: 1;\n          display: grid;\n          height: 100%;\n          width: 100%;\n          align-self: stretch;\n          align-items: center;\n          margin-top: -2px; }\n      #workbench-canvas #workbench-container .frame-box .frame-comments.has-comments {\n        display: grid;\n        grid-row: 2;\n        grid-column: 1;\n        padding: 0 10px;\n        font-style: italic;\n        word-wrap: break-word; }\n      #workbench-canvas #workbench-container .frame-box.selected .frame-box-border {\n        border-color: white; }\n      #workbench-canvas #workbench-container .frame-box .right-handle {\n        grid-area: 1 / 2 / 3 / 2;\n        width: 4px;\n        background-color: transparent;\n        cursor: ew-resize; }\n        #workbench-canvas #workbench-container .frame-box .right-handle::after {\n          content: \"\";\n          width: 8px;\n          position: absolute;\n          top: 0;\n          bottom: 0;\n          margin-left: -4px;\n          cursor: ew-resize; }\n        #workbench-canvas #workbench-container .frame-box .right-handle.collapsed {\n          cursor: pointer; }\n      #workbench-canvas #workbench-container .frame-box .top-right-corner-handle {\n        background-color: transparent;\n        height: 4px;\n        z-index: 21;\n        cursor: ne-resize;\n        width: 4px;\n        margin-left: -6px; }\n        #workbench-canvas #workbench-container .frame-box .top-right-corner-handle::after {\n          background-color: transparent;\n          cursor: ne-resize;\n          margin-left: unset;\n          top: -4px;\n          height: 10px;\n          width: 10px; }\n      #workbench-canvas #workbench-container .frame-box .bottom-right-corner-handle {\n        background-color: transparent;\n        height: 0px;\n        z-index: 21;\n        cursor: nw-resize;\n        grid-area: 4 / 2 / 4 / 2;\n        margin-left: -2px; }\n        #workbench-canvas #workbench-container .frame-box .bottom-right-corner-handle::after {\n          background-color: transparent;\n          height: 10px;\n          cursor: nw-resize;\n          top: unset;\n          bottom: -4px;\n          width: 10px; }\n      #workbench-canvas #workbench-container .frame-box .left-handle {\n        grid-area: 1 / 1 / 3 / 1;\n        width: 4px;\n        background-color: transparent;\n        cursor: ew-resize; }\n        #workbench-canvas #workbench-container .frame-box .left-handle::before {\n          content: \"\";\n          width: 8px;\n          position: absolute;\n          top: 0;\n          bottom: 0;\n          margin-left: -4px; }\n      #workbench-canvas #workbench-container .frame-box .top-left-corner-handle {\n        background-color: transparent;\n        height: 4px;\n        z-index: 21;\n        cursor: nw-resize;\n        width: 4px;\n        margin-left: -4px; }\n        #workbench-canvas #workbench-container .frame-box .top-left-corner-handle::before {\n          background-color: transparent;\n          cursor: nw-resize;\n          margin-left: unset;\n          top: -4px;\n          height: 10px;\n          width: 10px; }\n      #workbench-canvas #workbench-container .frame-box .bottom-left-corner-handle {\n        background-color: transparent;\n        height: 0px;\n        z-index: 21;\n        cursor: sw-resize;\n        grid-area: 4 / 1 / 4 / 1; }\n        #workbench-canvas #workbench-container .frame-box .bottom-left-corner-handle::before {\n          background-color: transparent;\n          height: 10px;\n          cursor: sw-resize;\n          top: unset;\n          bottom: -4px;\n          width: 10px; }\n      #workbench-canvas #workbench-container .frame-box .top-handle {\n        grid-area: 1 / 1 / 1 / 1;\n        background-color: transparent;\n        height: 4px;\n        cursor: ns-resize; }\n        #workbench-canvas #workbench-container .frame-box .top-handle::before {\n          content: \"\";\n          width: 100%;\n          position: absolute;\n          top: -4px;\n          bottom: 100%;\n          right: 0;\n          left: 0;\n          margin-bottom: -8px;\n          cursor: ns-resize;\n          height: 8px; }\n      #workbench-canvas #workbench-container .frame-box .bottom-handle {\n        grid-area: 3 / 1 / 3 / 1;\n        background-color: transparent;\n        height: 4px;\n        cursor: ns-resize; }\n        #workbench-canvas #workbench-container .frame-box .bottom-handle::after {\n          content: \"\";\n          width: 100%;\n          position: absolute;\n          top: 100%;\n          bottom: 0;\n          right: 0;\n          left: 0;\n          margin-top: -8px;\n          cursor: ns-resize;\n          height: 12px; }\n      #workbench-canvas #workbench-container .frame-box.collapsed .top-handle, #workbench-canvas #workbench-container .frame-box.collapsed .top-right-corner-handle, #workbench-canvas #workbench-container .frame-box.collapsed .right-handle, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-right-corner-handle, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-handle, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-left-corner-handle, #workbench-canvas #workbench-container .frame-box.collapsed .left-handle, #workbench-canvas #workbench-container .frame-box.collapsed .top-left-corner-handle {\n        cursor: default; }\n      #workbench-canvas #workbench-container .frame-box.collapsed .right-handle::after, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-handle::after, #workbench-canvas #workbench-container .frame-box.collapsed .top-right-corner-handle::after, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-right-corner-handle::after {\n        cursor: default; }\n      #workbench-canvas #workbench-container .frame-box.collapsed .left-handle::before, #workbench-canvas #workbench-container .frame-box.collapsed .top-handle::before, #workbench-canvas #workbench-container .frame-box.collapsed .top-left-corner-handle::before, #workbench-canvas #workbench-container .frame-box.collapsed .bottom-left-corner-handle::before {\n        cursor: default; }\n    #workbench-canvas #workbench-container #workbench-svg-container {\n      grid-row: 1;\n      grid-column: 1;\n      position: relative;\n      width: 100%;\n      height: 100%;\n      overflow: visible;\n      pointer-events: none;\n      z-index: 2; }\n      #workbench-canvas #workbench-container #workbench-svg-container .link {\n        stroke-width: 4px; }\n        #workbench-canvas #workbench-container #workbench-svg-container .link.selected {\n          stroke: white !important;\n          stroke-dasharray: 10, 2; }\n        #workbench-canvas #workbench-container #workbench-svg-container .link.hidden {\n          display: none; }\n      #workbench-canvas #workbench-container #workbench-svg-container .selection-link {\n        pointer-events: all;\n        stroke-width: 16px;\n        opacity: 0;\n        transition: opacity 75ms;\n        stroke: transparent;\n        cursor: pointer; }\n        #workbench-canvas #workbench-container #workbench-svg-container .selection-link.hidden {\n          display: none; }\n        #workbench-canvas #workbench-container #workbench-svg-container .selection-link:hover, #workbench-canvas #workbench-container #workbench-svg-container .selection-link.selected {\n          stroke: white !important;\n          opacity: 0.4; }\n    #workbench-canvas #workbench-container #workbench-canvas-container {\n      grid-row: 1;\n      grid-column: 1;\n      position: relative;\n      width: 100%;\n      height: 100%; }\n      #workbench-canvas #workbench-container #workbench-canvas-container .visual {\n        z-index: 4;\n        width: 200px;\n        position: absolute;\n        left: 0;\n        top: 0;\n        background: gray;\n        border: 4px solid black;\n        border-radius: 12px;\n        display: grid;\n        grid-template-rows: 30px auto;\n        grid-template-columns: 100%;\n        color: white; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual.hidden {\n          display: none; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual .comments {\n          position: absolute;\n          top: -50px;\n          width: 200px;\n          height: 45px;\n          overflow: hidden;\n          font-style: italic;\n          opacity: 0.8;\n          display: grid;\n          align-items: flex-end;\n          pointer-events: none; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual .selection-border {\n          grid-row: 1 / span 3;\n          grid-column: 1;\n          margin: -4px;\n          transition: border-color 100ms;\n          border: 4px solid black;\n          border-radius: 12px; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual.selected .selection-border {\n          border-color: white; }\n        #workbench-canvas #workbench-container #workbench-canvas-container .visual .header {\n          grid-row: 1;\n          grid-column: 1;\n          border: 4px solid black;\n          border-top-right-radius: 7px;\n          border-top-left-radius: 7px;\n          font-size: 16px;\n          text-align: center;\n          margin-top: -1px;\n          margin-left: -1px;\n          margin-right: -1px;\n          white-space: nowrap;\n          text-overflow: ellipsis;\n          overflow: hidden;\n          background: black;\n          color: white; }\n          #workbench-canvas #workbench-container #workbench-canvas-container .visual .header.constant {\n            border-color: #464348;\n            background: #464348; }\n          #workbench-canvas #workbench-container #workbench-canvas-container .visual .header.inspector {\n            border-color: #66491b;\n            background: #66491b; }\n", "",{"version":3,"sources":["webpack://./diagram/workbenchCanvas.scss"],"names":[],"mappings":"AAAA;EACI,cAAc;EACd,WAAW;EACX,WAAW;EACX,YAAY;EACZ,SAAS;EACT,UAAU;EACV,iCAAiC;EACjC,eAAe;EACf,iBAAiB;EACjB,gBAAgB;EAEhB,mIAE4D,EAAA;EAdhE;IAiBQ,oBAAoB,EAAA;IAjB5B;MAoBY,WAAW;MACX,kCAAkC;MAClC,sBAAsB,EAAA;EAtBlC;IA2BQ,WAAW;IACX,YAAY;IACZ,OAAO;IACP,MAAM;IACN,0BAA0B;IAC1B,aAAa;IACb,wBAAwB;IACxB,2BAA2B,EAAA;IAlCnC;MAqCY,iBAAiB;MACjB,WAAW;MACX,cAAc;MACd,kBAAkB;MAClB,WAAW;MACX,YAAY,EAAA;IA1CxB;MA8CY,kBAAkB;MAClB,iCAAiC;MACjC,aAAa;MACb,0CAA0C;MAC1C,2BAA2B;MAC3B,sBAAsB,EAAA;MAnDlC;QAsDgB,uBAAuB;QACvB,uBAAuB;QACvB,UAAU,EAAA;QAxD1B;UA2DoB,eAAe;UACf,iDAAiD,EAAA;UA5DrE;YA+DwB,gBAAgB,EAAA;UA/DxC;YAmEwB,aAAa,EAAA;QAnErC;UAyEwB,mBAAmB;UACnB,uBAAuB;UACvB,gBAAgB,EAAA;MA3ExC;QAiFgB,oBAAoB;QACpB,cAAc;QACd,WAAW;QACX,YAAY;QACZ,6BAA6B;QAC7B,oBAAoB;QACpB,sBAAsB,EAAA;MAvFtC;QA2FgB,WAAW;QACX,cAAc;QACd,mBAA+B;QAC/B,YAAY;QACZ,eAAe;QACf,kBAAkB;QAClB,aAAa;QACb,wBAAwB;QACxB,0DAA0D;QAC1D,qBAAqB;QACrB,gBAAgB,EAAA;QArGhC;UAwGoB,eAAe;UACf,kBAAkB;UAClB,yBAAyB;UACzB,mBAAmB;UACnB,mBAAmB;UACnB,WAAW;UACX,aAAa,EAAA;UA9GjC;YAiHwB,qBAAsB,EAAA;QAjH9C;UAsHoB,cAAc;UACd,WAAW,EAAA;QAvH/B;UA2HoB,cAAc;UACd,WAAW,EAAA;QA5H/B;UAgIoB,cAAc;UACd,WAAW;UACX,aAAa;UACb,YAAY;UACZ,WAAW;UACX,mBAAmB;UACnB,mBAAmB;UACnB,gBAAgB,EAAA;MAvIpC;QA6IgB,aAAa;QACb,WAAW;QACX,cAAc;QACd,eAAe;QACf,kBAAkB;QAClB,qBAAqB,EAAA;MAlJrC;QAuJkB,mBAAmB,EAAA;MAvJrC;QA4JgB,wBAAwB;QACxB,UAAU;QACV,6BAA6B;QAC7B,iBAAiB,EAAA;QA/JjC;UAkKoB,WAAW;UACX,UAAU;UACV,kBAAkB;UAClB,MAAM;UACN,SAAS;UACT,iBAAiB;UACjB,iBAAiB,EAAA;QAxKrC;UA6KoB,eAAe,EAAA;MA7KnC;QAkLgB,6BAA6B;QAC7B,WAAW;QACX,WAAW;QACX,iBAAiB;QACjB,UAAU;QACV,iBAAiB,EAAA;QAvLjC;UA0LoB,6BAA6B;UAC7B,iBAAiB;UACjB,kBAAkB;UAClB,SAAS;UACT,YAAY;UACZ,WAAW,EAAA;MA/L/B;QAqMgB,6BAA6B;QAC7B,WAAW;QACX,WAAW;QACX,iBAAiB;QACjB,wBAAwB;QACxB,iBAAiB,EAAA;QA1MjC;UA8MoB,6BAA6B;UAC7B,YAAY;UACZ,iBAAiB;UACjB,UAAU;UACV,YAAY;UACZ,WAAW,EAAA;MAnN/B;QAwNgB,wBAAwB;QACxB,UAAU;QACV,6BAA6B;QAC7B,iBAAiB,EAAA;QA3NjC;UA8NoB,WAAW;UACX,UAAU;UACV,kBAAkB;UAClB,MAAM;UACN,SAAS;UACT,iBAAiB,EAAA;MAnOrC;QAyOgB,6BAA6B;QAC7B,WAAW;QACX,WAAW;QACX,iBAAiB;QACjB,UAAU;QACV,iBAAiB,EAAA;QA9OjC;UAiPoB,6BAA6B;UAC7B,iBAAiB;UACjB,kBAAkB;UAClB,SAAS;UACT,YAAY;UACZ,WAAW,EAAA;MAtP/B;QA2PgB,6BAA6B;QAC7B,WAAW;QACX,WAAW;QACX,iBAAiB;QACjB,wBAAwB,EAAA;QA/PxC;UAmQoB,6BAA6B;UAC7B,YAAY;UACZ,iBAAiB;UACjB,UAAU;UACV,YAAY;UACZ,WAAW,EAAA;MAxQ/B;QA6QgB,wBAAwB;QACxB,6BAA6B;QAC7B,WAAW;QACX,iBAAiB,EAAA;QAhRjC;UAmRoB,WAAW;UACX,WAAW;UACX,kBAAkB;UAClB,SAAS;UACT,YAAY;UACZ,QAAQ;UACR,OAAO;UACP,mBAAmB;UACnB,iBAAiB;UACjB,WAAW,EAAA;MA5R/B;QAiSgB,wBAAwB;QACxB,6BAA6B;QAC7B,WAAW;QACX,iBAAiB,EAAA;QApSjC;UAuSoB,WAAW;UACX,WAAW;UACX,kBAAkB;UAClB,SAAS;UACT,SAAS;UACT,QAAQ;UACR,OAAO;UACP,gBAAgB;UAChB,iBAAiB;UACjB,YAAY,EAAA;MAhThC;QAsToB,eAAe,EAAA;MAtTnC;QA2TwB,eAAe,EAAA;MA3TvC;QAiUwB,eAAe,EAAA;IAjUvC;MAwUY,WAAW;MACX,cAAc;MACd,kBAAkB;MAClB,WAAW;MACX,YAAY;MACZ,iBAAiB;MACjB,oBAAoB;MACpB,UAAU,EAAA;MA/UtB;QAkVgB,iBAAiB,EAAA;QAlVjC;UAoVoB,wBAAwB;UACxB,uBAAuB,EAAA;QArV3C;UAyVoB,aAAa,EAAA;MAzVjC;QA8VgB,mBAAmB;QACnB,kBAAkB;QAClB,UAAU;QACV,wBAAwB;QACxB,mBAAmB;QACnB,eAAe,EAAA;QAnW/B;UAsWoB,aAAa,EAAA;QAtWjC;UA0WoB,wBAAwB;UACxB,YAAY,EAAA;IA3WhC;MAiXY,WAAW;MACX,cAAc;MACd,kBAAkB;MAClB,WAAW;MACX,YAAY,EAAA;MArXxB;QAwXgB,UAAU;QACV,YAAY;QACZ,kBAAkB;QAClB,OAAO;QACP,MAAM;QACN,gBAAgB;QAChB,uBAAuB;QACvB,mBAAmB;QACnB,aAAa;QACb,6BAA6B;QAC7B,2BAA2B;QAC3B,YAAY,EAAA;QAnY5B;UAsYoB,aAAa,EAAA;QAtYjC;UA0YoB,kBAAkB;UAClB,UAAU;UACV,YAAY;UACZ,YAAY;UACZ,gBAAgB;UAChB,kBAAkB;UAClB,YAAY;UACZ,aAAa;UACb,qBAAqB;UACrB,oBAAoB,EAAA;QAnZxC;UAuZoB,oBAAoB;UACpB,cAAc;UACd,YAAY;UAEZ,8BAA8B;UAE9B,uBAAuB;UACvB,mBAAmB,EAAA;QA9ZvC;UAmawB,mBAAmB,EAAA;QAna3C;UAwaoB,WAAW;UACX,cAAc;UACd,uBAAuB;UACvB,4BAA4B;UAC5B,2BAA2B;UAC3B,eAAe;UACf,kBAAkB;UAClB,gBAAgB;UAChB,iBAAiB;UACjB,kBAAkB;UAClB,mBAAmB;UACnB,uBAAuB;UACvB,gBAAgB;UAChB,iBAAiB;UACjB,YAAY,EAAA;UAtbhC;YAybwB,qBAAqB;YACrB,mBAAmB,EAAA;UA1b3C;YA8bwB,qBAAqB;YACrB,mBAAmB,EAAA","sourcesContent":["#workbench-canvas {\r\n    grid-column: 1;\r\n    grid-row: 1;\r\n    width: 100%;\r\n    height: 100%;\r\n    margin: 0;\r\n    padding: 0;            \r\n    font: 14px \"acumin-pro-condensed\";\r\n    cursor: default;\r\n    user-select: none;\r\n    overflow: hidden;\r\n\r\n    background-image:\r\n        linear-gradient(to right, #4F4E4F 1px, transparent 1px),\r\n        linear-gradient(to bottom, #4F4E4F 1px, transparent 1px);  \r\n\r\n    #selection-container {\r\n        pointer-events: none;\r\n        \r\n        .selection-box {\r\n            z-index: 10;\r\n            background: rgba(72, 72, 196, 0.5);\r\n            border: blue solid 2px;\r\n        }\r\n    }\r\n\r\n    #workbench-container {\r\n        width: 100%;\r\n        height: 100%;\r\n        left: 0;\r\n        top: 0;\r\n        transform-origin: left top;\r\n        display: grid;\r\n        grid-template-rows: 100%;          \r\n        grid-template-columns: 100%;          \r\n\r\n        #frame-container {\r\n            overflow: visible;   \r\n            grid-row: 1;\r\n            grid-column: 1;\r\n            position: relative;\r\n            width: 100%;\r\n            height: 100%;             \r\n        }\r\n\r\n        .frame-box {\r\n            position: absolute;\r\n            background: rgba(72, 72, 72, 0.7);\r\n            display: grid;\r\n            grid-template-rows: 40px calc(100% - 40px);\r\n            grid-template-columns: 100%;            \r\n            box-sizing: border-box;\r\n\r\n            &.collapsed {\r\n                height: auto !important;\r\n                width: 200px !important;\r\n                z-index: 3;\r\n\r\n                .frame-box-header {\r\n                    font-size: 16px;\r\n                    grid-template-columns: calc(100% - 37px) 30px 7px;  \r\n                    \r\n                    .frame-box-header-collapse {\r\n                        margin-top: -2px;\r\n                    }\r\n                    \r\n                    .frame-box-header-close {\r\n                        display: none;\r\n                    }\r\n                }\r\n\r\n                .frame-comments.has-comments{\r\n                    .frame-comment-span{\r\n                        white-space: nowrap;\r\n                        text-overflow: ellipsis;\r\n                        overflow: hidden;\r\n                    }\r\n                }\r\n            }\r\n\r\n            .frame-box-border {                \r\n                grid-row: 1 / span 2;\r\n                grid-column: 1;\r\n                width: 100%;\r\n                height: 100%;\r\n                border: transparent solid 4px;\r\n                pointer-events: none;\r\n                box-sizing: border-box;\r\n            }\r\n\r\n            .frame-box-header {\r\n                grid-row: 1;\r\n                grid-column: 1;\r\n                background: rgba(72, 72, 72, 1);    \r\n                color: white;\r\n                font-size: 24px;\r\n                text-align: center;\r\n                display: grid;\r\n                grid-template-rows: 100%;  \r\n                grid-template-columns: calc(100% - 74px) 30px 7px 30px 7px;  \r\n                align-content: center;\r\n                overflow: hidden;\r\n\r\n                .frame-box-header-button {\r\n                    cursor: pointer;\r\n                    align-self: center;\r\n                    transform-origin: 50% 50%;\r\n                    transform: scale(1);\r\n                    stroke: transparent;\r\n                    fill: white;\r\n                    display: grid;               \r\n\r\n                    &.down {\r\n                        transform: scale(0.90);\r\n                    }\r\n                }\r\n\r\n                .frame-box-header-collapse {\r\n                    grid-column: 2;\r\n                    grid-row: 1;\r\n                }\r\n\r\n                .frame-box-header-close {\r\n                    grid-column: 4;\r\n                    grid-row: 1;\r\n                }\r\n\r\n                .frame-box-header-title {\r\n                    grid-column: 1;\r\n                    grid-row: 1;\r\n                    display: grid;\r\n                    height: 100%;\r\n                    width: 100%;\r\n                    align-self: stretch;\r\n                    align-items: center;\r\n                    margin-top: -2px;\r\n                }\r\n            }\r\n\r\n\r\n            .frame-comments.has-comments{\r\n                display: grid;\r\n                grid-row: 2;\r\n                grid-column: 1;\r\n                padding: 0 10px;\r\n                font-style: italic;\r\n                word-wrap: break-word;\r\n            }\r\n\r\n            &.selected {\r\n                .frame-box-border {\r\n                  border-color: white;\r\n                }\r\n            }\r\n\r\n            .right-handle {\r\n                grid-area: 1 / 2 / 3 / 2;\r\n                width: 4px;\r\n                background-color: transparent;\r\n                cursor: ew-resize;\r\n\r\n                &::after{\r\n                    content: \"\";\r\n                    width: 8px;\r\n                    position: absolute;\r\n                    top: 0;\r\n                    bottom: 0;\r\n                    margin-left: -4px;\r\n                    cursor: ew-resize;\r\n                    \r\n                }\r\n\r\n                &.collapsed {\r\n                    cursor: pointer;\r\n                }\r\n            }\r\n\r\n            .top-right-corner-handle{\r\n                background-color: transparent;\r\n                height: 4px;\r\n                z-index: 21;\r\n                cursor: ne-resize;\r\n                width: 4px;\r\n                margin-left: -6px;\r\n\r\n                &::after {\r\n                    background-color: transparent;\r\n                    cursor: ne-resize;\r\n                    margin-left: unset;\r\n                    top: -4px;\r\n                    height: 10px;\r\n                    width: 10px;\r\n                }\r\n            }\r\n\r\n\r\n            .bottom-right-corner-handle{\r\n                background-color: transparent;\r\n                height: 0px;\r\n                z-index: 21;\r\n                cursor: nw-resize;\r\n                grid-area: 4 / 2 / 4 / 2;;\r\n                margin-left: -2px;\r\n\r\n\r\n                &::after {\r\n                    background-color: transparent;\r\n                    height: 10px;\r\n                    cursor: nw-resize;\r\n                    top: unset;\r\n                    bottom: -4px;\r\n                    width: 10px;               \r\n                }\r\n            }\r\n\r\n            .left-handle {\r\n                grid-area: 1 / 1 / 3 / 1;\r\n                width: 4px;\r\n                background-color: transparent;\r\n                cursor: ew-resize;\r\n\r\n                &::before{\r\n                    content: \"\";\r\n                    width: 8px;\r\n                    position: absolute;\r\n                    top: 0;\r\n                    bottom: 0;\r\n                    margin-left: -4px;\r\n\r\n                }\r\n            }\r\n\r\n            .top-left-corner-handle{\r\n                background-color: transparent;\r\n                height: 4px;\r\n                z-index: 21;\r\n                cursor: nw-resize;\r\n                width: 4px;\r\n                margin-left: -4px;\r\n\r\n                &::before {\r\n                    background-color: transparent;\r\n                    cursor: nw-resize;\r\n                    margin-left: unset;\r\n                    top: -4px;\r\n                    height: 10px;\r\n                    width: 10px;\r\n                }\r\n            }\r\n\r\n            .bottom-left-corner-handle{\r\n                background-color: transparent;\r\n                height: 0px;\r\n                z-index: 21;\r\n                cursor: sw-resize;\r\n                grid-area: 4 / 1 / 4 / 1;\r\n\r\n\r\n                &::before {\r\n                    background-color: transparent;\r\n                    height: 10px;\r\n                    cursor: sw-resize;\r\n                    top: unset;\r\n                    bottom: -4px;\r\n                    width: 10px;               \r\n                }\r\n            }\r\n\r\n            .top-handle {\r\n                grid-area: 1 / 1 / 1 / 1;\r\n                background-color: transparent;\r\n                height: 4px;\r\n                cursor: ns-resize;\r\n\r\n                &::before{\r\n                    content: \"\";\r\n                    width: 100%;\r\n                    position: absolute;\r\n                    top: -4px;\r\n                    bottom: 100%;\r\n                    right: 0;\r\n                    left: 0;\r\n                    margin-bottom: -8px;\r\n                    cursor: ns-resize;\r\n                    height: 8px;\r\n                }\r\n            }\r\n\r\n            .bottom-handle {\r\n                grid-area: 3 / 1 / 3 / 1;\r\n                background-color: transparent;\r\n                height: 4px;\r\n                cursor: ns-resize;\r\n\r\n                &::after {\r\n                    content: \"\";\r\n                    width: 100%;\r\n                    position: absolute;\r\n                    top: 100%;\r\n                    bottom: 0;\r\n                    right: 0;\r\n                    left: 0;\r\n                    margin-top: -8px;\r\n                    cursor: ns-resize;\r\n                    height: 12px;\r\n                }\r\n            }\r\n            \r\n            &.collapsed{\r\n                .top-handle, .top-right-corner-handle, .right-handle, .bottom-right-corner-handle, .bottom-handle, .bottom-left-corner-handle, .left-handle, .top-left-corner-handle {\r\n                    cursor: default;\r\n                }\r\n\r\n                .right-handle, .bottom-handle, .top-right-corner-handle, .bottom-right-corner-handle{\r\n                    &::after{\r\n                        cursor: default;\r\n                    }\r\n                }\r\n\r\n                .left-handle, .top-handle, .top-left-corner-handle, .bottom-left-corner-handle{\r\n                    &::before{\r\n                        cursor: default;\r\n                    }\r\n                }\r\n            }\r\n        }\r\n\r\n        #workbench-svg-container {\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n            position: relative;\r\n            width: 100%;\r\n            height: 100%;  \r\n            overflow: visible; \r\n            pointer-events: none;\r\n            z-index: 2;\r\n            \r\n            .link {\r\n                stroke-width: 4px;    \r\n                &.selected {                    \r\n                    stroke: white !important;\r\n                    stroke-dasharray: 10, 2;\r\n                }       \r\n\r\n                &.hidden {\r\n                    display: none;\r\n                }\r\n            }\r\n\r\n            .selection-link {\r\n                pointer-events: all;\r\n                stroke-width: 16px;\r\n                opacity: 0;\r\n                transition: opacity 75ms;\r\n                stroke: transparent;                        \r\n                cursor: pointer;\r\n\r\n                &.hidden {\r\n                    display: none;\r\n                }\r\n\r\n                &:hover, &.selected {\r\n                    stroke: white !important;\r\n                    opacity: 0.4;\r\n                }\r\n            }\r\n        }\r\n\r\n        #workbench-canvas-container {\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n            position: relative;\r\n            width: 100%;\r\n            height: 100%;                  \r\n\r\n            .visual {\r\n                z-index: 4;\r\n                width: 200px;\r\n                position: absolute;\r\n                left: 0;\r\n                top: 0;\r\n                background: gray;\r\n                border: 4px solid black;\r\n                border-radius: 12px;\r\n                display: grid;\r\n                grid-template-rows: 30px auto;\r\n                grid-template-columns: 100%;\r\n                color: white;\r\n\r\n                &.hidden {\r\n                    display: none;\r\n                }\r\n\r\n                .comments {\r\n                    position: absolute;\r\n                    top: -50px;\r\n                    width: 200px;\r\n                    height: 45px;\r\n                    overflow: hidden;                    \r\n                    font-style: italic;\r\n                    opacity: 0.8;\r\n                    display: grid;\r\n                    align-items: flex-end;\r\n                    pointer-events: none;\r\n                }\r\n\r\n                .selection-border {                    \r\n                    grid-row: 1 / span 3;\r\n                    grid-column: 1;\r\n                    margin: -4px;\r\n\r\n                    transition: border-color 100ms;\r\n\r\n                    border: 4px solid black;\r\n                    border-radius: 12px;\r\n                }\r\n\r\n                &.selected {\r\n                    .selection-border {  \r\n                        border-color: white;\r\n                    }\r\n                }\r\n\r\n                .header {\r\n                    grid-row: 1;\r\n                    grid-column: 1;\r\n                    border: 4px solid black;\r\n                    border-top-right-radius: 7px;\r\n                    border-top-left-radius: 7px;\r\n                    font-size: 16px;\r\n                    text-align: center;\r\n                    margin-top: -1px;\r\n                    margin-left: -1px;\r\n                    margin-right: -1px;\r\n                    white-space: nowrap;\r\n                    text-overflow: ellipsis;\r\n                    overflow: hidden;\r\n                    background: black;\r\n                    color: white;\r\n\r\n                    &.constant {\r\n                        border-color: #464348;\r\n                        background: #464348;\r\n                    }\r\n            \r\n                    &.inspector {\r\n                        border-color: #66491b;\r\n                        background: #66491b;\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
-module.exports = exports;
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./main.scss":
-/*!****************************************************************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/css-loader/dist/cjs.js!E:/Babylon/Babylon.js/node_modules/sass-loader/dist/cjs.js!./main.scss ***!
-  \****************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/cjs.js!C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/sass-loader/dist/cjs.js!./main.scss ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-exports.push([module.i, ":root {\n  --blackBarHeight: 55px; }\n\n#gui-editor-workbench-root {\n  display: grid;\n  grid-template-rows: calc(100% - 55px);\n  height: 100%;\n  width: 100%;\n  background: #e2e2e2;\n  font: 14px \"acumin-pro-condensed\"; }\n\n.wait-screen {\n  display: grid;\n  justify-content: center;\n  align-content: center;\n  height: 100%;\n  width: 100%;\n  background: #464646;\n  opacity: 0.95;\n  color: white;\n  font: 24px \"acumin-pro-condensed\";\n  position: absolute;\n  top: 0;\n  left: 0; }\n  .wait-screen.hidden {\n    visibility: hidden; }\n\n#leftGrab {\n  grid-row: 1 / span 2;\n  grid-column: 2;\n  cursor: ew-resize; }\n\n#rightGrab {\n  grid-row: 1 / span 2;\n  grid-column: 5;\n  cursor: ew-resize; }\n\n#toolbarGrab {\n  background: #333333;\n  grid-row: 1 / span 3;\n  grid-column: 3;\n  height: 100%; }\n  #toolbarGrab .blackLine {\n    height: 5px;\n    background: black; }\n  #toolbarGrab .toolbar-label {\n    color: white;\n    font-size: 18px;\n    display: grid;\n    align-items: center;\n    cursor: pointer;\n    user-select: none;\n    grid-template-columns: 1fr 20px;\n    grid-template-rows: 100%;\n    position: relative; }\n    #toolbarGrab .toolbar-label.active {\n      font-weight: bold;\n      font-size: 20px; }\n    #toolbarGrab .toolbar-label:hover {\n      background: var(--selectionGrey); }\n      #toolbarGrab .toolbar-label:hover .sub-items {\n        display: block; }\n  #toolbarGrab .toolbar-icon {\n    width: 40px;\n    height: 40px; }\n\n.diagram-container {\n  position: relative;\n  display: grid;\n  grid-row: 1;\n  grid-column: 4;\n  background: #5f5b60;\n  width: 100%;\n  height: 100%; }\n  .diagram-container .diagram {\n    display: none;\n    width: 100%;\n    height: 100%; }\n  .diagram-container .ge-scalePoint {\n    width: 10px;\n    height: 10px;\n    background: transparent;\n    outline: #7d7d7d 2px solid; }\n  .diagram-container .ge-pivotPoint {\n    width: 30px;\n    height: 30px;\n    background: transparent; }\n\n.right-panel {\n  grid-row: 1 / span 2;\n  grid-column: 6;\n  display: grid;\n  grid-template-rows: 1fr 40px auto 40px;\n  grid-template-columns: 100%;\n  height: calc(100% - var(--blackBarHeight));\n  overflow-y: auto; }\n  .right-panel #propertyTab {\n    grid-row: 1;\n    grid-column: 1; }\n  .right-panel .button {\n    display: grid;\n    justify-content: center;\n    align-content: center;\n    height: auto;\n    width: calc(100% / 7);\n    cursor: pointer; }\n    .right-panel .button:hover {\n      background: #337ab7;\n      color: white;\n      opacity: 0.8; }\n    .right-panel .button.selected {\n      background: #337ab7;\n      color: white; }\n    .right-panel .button.align {\n      justify-content: stretch;\n      text-align: center; }\n\n.blocker {\n  visibility: hidden;\n  position: absolute;\n  width: calc(100% - 40px);\n  height: 100%;\n  top: 0;\n  left: 0;\n  background: rgba(20, 20, 20, 0.95);\n  font-family: \"acumin-pro-condensed\";\n  color: white;\n  font-size: 24px;\n  display: grid;\n  align-content: center;\n  justify-content: center;\n  user-select: none;\n  padding: 20px;\n  text-align: center; }\n\n#log-console {\n  grid-row: 2;\n  grid-column: 4;\n  display: none; }\n\n.dialog-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.6);\n  display: grid;\n  font-family: \"acumin-pro-condensed\";\n  top: 0; }\n  .dialog-container .dialog {\n    align-self: center;\n    justify-self: center;\n    min-height: 140px;\n    max-width: 400px;\n    border-radius: 10px;\n    background: white;\n    display: grid;\n    grid-template-columns: 100%;\n    grid-template-rows: calc(100% - 50px) 50px; }\n    .dialog-container .dialog .dialog-message {\n      grid-row: 1;\n      grid-column: 1;\n      margin-top: 20px;\n      padding: 10px;\n      font-size: 18px;\n      color: black; }\n    .dialog-container .dialog .dialog-buttons {\n      grid-row: 2;\n      grid-column: 1;\n      display: grid;\n      grid-template-rows: 100%;\n      grid-template-columns: 100%;\n      color: white; }\n      .dialog-container .dialog .dialog-buttons .dialog-button-ok {\n        cursor: pointer;\n        justify-self: center;\n        background: green;\n        min-width: 80px;\n        justify-content: center;\n        display: grid;\n        align-content: center;\n        align-self: center;\n        height: 35px;\n        border-radius: 10px; }\n        .dialog-container .dialog .dialog-buttons .dialog-button-ok:hover {\n          opacity: 0.8; }\n        .dialog-container .dialog .dialog-buttons .dialog-button-ok.error {\n          background: red; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\n  --blackBarHeight: 55px; }\n\n#gui-editor-workbench-root {\n  display: grid;\n  grid-template-rows: calc(100% - 55px);\n  height: 100%;\n  width: 100%;\n  background: #e2e2e2;\n  font: 14px \"acumin-pro-condensed\"; }\n\n.wait-screen {\n  display: grid;\n  justify-content: center;\n  align-content: center;\n  height: 100%;\n  width: 100%;\n  background: #464646;\n  opacity: 0.95;\n  color: white;\n  font: 24px \"acumin-pro-condensed\";\n  position: absolute;\n  top: 0;\n  left: 0; }\n  .wait-screen.hidden {\n    visibility: hidden; }\n\n#leftGrab {\n  grid-row: 1 / span 2;\n  grid-column: 2;\n  cursor: ew-resize; }\n\n#rightGrab {\n  grid-row: 1 / span 2;\n  grid-column: 5;\n  cursor: ew-resize; }\n\n#toolbarGrab {\n  background: #333333;\n  grid-row: 1 / span 3;\n  grid-column: 3;\n  height: 100%; }\n  #toolbarGrab .blackLine {\n    height: 5px;\n    background: black; }\n  #toolbarGrab .toolbar-label {\n    color: white;\n    font-size: 18px;\n    display: grid;\n    align-items: center;\n    cursor: pointer;\n    user-select: none;\n    grid-template-columns: 1fr 20px;\n    grid-template-rows: 100%;\n    position: relative; }\n    #toolbarGrab .toolbar-label.active {\n      font-weight: bold;\n      font-size: 20px; }\n    #toolbarGrab .toolbar-label:hover {\n      background: var(--selectionGrey); }\n      #toolbarGrab .toolbar-label:hover .sub-items {\n        display: block; }\n  #toolbarGrab .toolbar-icon {\n    width: 40px;\n    height: 40px; }\n\n.diagram-container {\n  position: relative;\n  display: grid;\n  grid-row: 1;\n  grid-column: 4;\n  background: #CCCCCC;\n  width: 100%;\n  height: 100%;\n  overflow: hidden; }\n  .diagram-container .diagram {\n    display: none;\n    width: 100%;\n    height: 100%; }\n\n.right-panel {\n  grid-row: 1 / span 2;\n  grid-column: 6;\n  display: grid;\n  grid-template-rows: 1fr 40px auto 40px;\n  grid-template-columns: 100%;\n  height: calc(100% - var(--blackBarHeight));\n  overflow-y: auto; }\n  .right-panel #propertyTab {\n    grid-row: 1;\n    grid-column: 1; }\n  .right-panel .button {\n    display: grid;\n    justify-content: center;\n    align-content: center;\n    height: auto;\n    width: calc(100% / 7);\n    cursor: pointer; }\n    .right-panel .button:hover {\n      background: #337ab7;\n      color: white;\n      opacity: 0.8; }\n    .right-panel .button.selected {\n      background: #337ab7;\n      color: white; }\n    .right-panel .button.align {\n      justify-content: stretch;\n      text-align: center; }\n\n.blocker {\n  visibility: hidden;\n  position: absolute;\n  width: calc(100% - 40px);\n  height: 100%;\n  top: 0;\n  left: 0;\n  background: rgba(20, 20, 20, 0.95);\n  font-family: \"acumin-pro-condensed\";\n  color: white;\n  font-size: 24px;\n  display: grid;\n  align-content: center;\n  justify-content: center;\n  user-select: none;\n  padding: 20px;\n  text-align: center; }\n\n#log-console {\n  grid-row: 2;\n  grid-column: 4;\n  display: none; }\n\n.dialog-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.6);\n  display: grid;\n  font-family: \"acumin-pro-condensed\";\n  top: 0; }\n  .dialog-container .dialog {\n    align-self: center;\n    justify-self: center;\n    min-height: 140px;\n    max-width: 400px;\n    border-radius: 10px;\n    background: white;\n    display: grid;\n    grid-template-columns: 100%;\n    grid-template-rows: calc(100% - 50px) 50px; }\n    .dialog-container .dialog .dialog-message {\n      grid-row: 1;\n      grid-column: 1;\n      margin-top: 20px;\n      padding: 10px;\n      font-size: 18px;\n      color: black; }\n    .dialog-container .dialog .dialog-buttons {\n      grid-row: 2;\n      grid-column: 1;\n      display: grid;\n      grid-template-rows: 100%;\n      grid-template-columns: 100%;\n      color: white; }\n      .dialog-container .dialog .dialog-buttons .dialog-button-ok {\n        cursor: pointer;\n        justify-self: center;\n        background: green;\n        min-width: 80px;\n        justify-content: center;\n        display: grid;\n        align-content: center;\n        align-self: center;\n        height: 35px;\n        border-radius: 10px; }\n        .dialog-container .dialog .dialog-buttons .dialog-button-ok:hover {\n          opacity: 0.8; }\n        .dialog-container .dialog .dialog-buttons .dialog-button-ok.error {\n          background: red; }\n\n.gizmo * {\n  user-select: none; }\n\n.gizmo .bounding-box-line {\n  background-color: black;\n  position: absolute;\n  line-height: 1px;\n  height: 1px;\n  pointer-events: none; }\n\n.gizmo .scale-point-container {\n  position: absolute;\n  width: 30px;\n  height: 30px; }\n  .gizmo .scale-point-container .scale-point {\n    top: 10px;\n    left: 10px;\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    background: transparent;\n    outline: #7d7d7d 2px solid; }\n  .gizmo .scale-point-container .rotate-click-area {\n    width: 20px;\n    height: 20px;\n    position: absolute; }\n  .gizmo .scale-point-container .scale-click-area {\n    width: 20px;\n    height: 20px;\n    position: absolute; }\n\n.gizmo .pivot-point {\n  width: 30px;\n  height: 30px;\n  background: transparent;\n  position: absolute; }\n\n#workbench-canvas {\n  position: relative; }\n\n.artboard-stroke {\n  outline: 1px solid black;\n  position: absolute;\n  z-index: 5;\n  pointer-events: none; }\n\n.artboard-background {\n  position: absolute;\n  background: repeating-conic-gradient(#E2E2E2 0% 25%, white 0% 50%) 50%/10px 10px;\n  width: 100%;\n  height: 100%; }\n", "",{"version":3,"sources":["webpack://./main.scss"],"names":[],"mappings":"AAAA;EACI,sBAAiB,EAAA;;AAGrB;EACI,aAAa;EACb,qCAAqC;EACrC,YAAY;EACZ,WAAW;EACX,mBAAmB;EACnB,iCAAiC,EAAA;;AAGrC;EACI,aAAa;EACb,uBAAuB;EACvB,qBAAqB;EACrB,YAAY;EACZ,WAAW;EACX,mBAAmB;EACnB,aAAa;EACb,YAAW;EACX,iCAAiC;EACjC,kBAAkB;EAClB,MAAM;EACN,OAAO,EAAA;EAZX;IAeQ,kBAAkB,EAAA;;AAI1B;EACI,oBAAoB;EACpB,cAAc;EACd,iBAAiB,EAAA;;AAGrB;EACI,oBAAoB;EACpB,cAAc;EACd,iBAAiB,EAAA;;AAIrB;EACI,mBAAmB;EACnB,oBAAoB;EACpB,cAAc;EACd,YAAY,EAAA;EAJhB;IAOQ,WAAY;IACZ,iBAAiB,EAAA;EARzB;IAWQ,YAAW;IACX,eAAe;IACf,aAAa;IACb,mBAAmB;IACnB,eAAe;IACf,iBAAiB;IACjB,+BAA+B;IAC/B,wBAAwB;IACxB,kBAAkB,EAAA;IAnB1B;MAsBY,iBAAiB;MACjB,eAAe,EAAA;IAvB3B;MA2BY,gCAAgC,EAAA;MA3B5C;QA6BgB,cAAc,EAAA;EA7B9B;IAkCQ,WAAW;IACX,YAAY,EAAA;;AAIpB;EACI,kBAAkB;EAClB,aAAa;EACb,WAAW;EACX,cAAc;EACd,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,gBAAgB,EAAA;EARpB;IAWQ,aAAa;IACb,WAAW;IACX,YAAY,EAAA;;AAIpB;EACI,oBAAoB;EACpB,cAAc;EACd,aAAa;EACb,sCAAsC;EACtC,2BAA2B;EAC3B,0CAA0C;EAC1C,gBAAgB,EAAA;EAPpB;IAUQ,WAAW;IACX,cAAc,EAAA;EAXtB;IAeQ,aAAa;IACb,uBAAuB;IACvB,qBAAqB;IACrB,YAAY;IACZ,qBAAqB;IACrB,eAAe,EAAA;IApBvB;MAuBY,mBAA6B;MAC7B,YAAY;MACZ,YAAY,EAAA;IAzBxB;MA6BY,mBAA6B;MAC7B,YAAY,EAAA;IA9BxB;MAkCY,wBAAwB;MACxB,kBAAkB,EAAA;;AAK9B;EACI,kBAAkB;EAClB,kBAAkB;EAClB,wBAAwB;EACxB,YAAY;EACZ,MAAM;EACN,OAAO;EAEP,kCAAkC;EAClC,mCAAmC;EACnC,YAAY;EACZ,eAAe;EAEf,aAAa;EACb,qBAAqB;EACrB,uBAAuB;EAEvB,iBAAiB;EAEjB,aAAa;EACb,kBAAkB,EAAA;;AAGtB;EACI,WAAW;EACX,cAAc;EACd,aAAa,EAAA;;AAGjB;EACI,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,8BAAoC;EACpC,aAAa;EACb,mCAAmC;EACnC,MAAK,EAAA;EAPT;IAUQ,kBAAkB;IAClB,oBAAoB;IACpB,iBAAiB;IACjB,gBAAgB;IAChB,mBAAmB;IACnB,iBAAiB;IAEjB,aAAa;IACb,2BAA2B;IAC3B,0CAA0C,EAAA;IAnBlD;MAsBY,WAAW;MACX,cAAc;MACd,gBAAgB;MAChB,aAAa;MACb,eAAe;MACf,YAAY,EAAA;IA3BxB;MA+BY,WAAW;MACX,cAAc;MACd,aAAa;MACb,wBAAwB;MACxB,2BAA2B;MAC3B,YAAY,EAAA;MApCxB;QAuCgB,eAAe;QACf,oBAAoB;QACpB,iBAAgB;QAChB,eAAe;QACf,uBAAuB;QACvB,aAAa;QACb,qBAAqB;QACrB,kBAAkB;QAClB,YAAY;QACZ,mBAAmB,EAAA;QAhDnC;UAmDoB,YAAY,EAAA;QAnDhC;UAuDoB,eAAe,EAAA;;AAMnC;EAEQ,iBAAiB,EAAA;;AAFzB;EAKQ,uBAAuB;EACvB,kBAAkB;EAClB,gBAAgB;EAChB,WAAW;EACX,oBAAoB,EAAA;;AAT5B;EAYQ,kBAAkB;EAClB,WAAW;EACX,YAAY,EAAA;EAdpB;IAgBY,SAAS;IACT,UAAU;IACV,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,uBAAuB;IACvB,0BAAqC,EAAA;EAtBjD;IAyBY,WAAW;IACX,YAAY;IACZ,kBAAkB,EAAA;EA3B9B;IA8BY,WAAW;IACX,YAAY;IACZ,kBAAkB,EAAA;;AAhC9B;EAoCQ,WAAW;EACX,YAAY;EACZ,uBAAuB;EACvB,kBAAkB,EAAA;;AAG1B;EACI,kBAAkB,EAAA;;AAEtB;EACI,wBAAwB;EACxB,kBAAkB;EAClB,UAAU;EACV,oBAAoB,EAAA;;AAExB;EACI,kBAAkB;EAClB,gFAAkF;EAClF,WAAW;EACX,YAAY,EAAA","sourcesContent":[":root {\r\n    --blackBarHeight: 55px;\r\n}\r\n\r\n#gui-editor-workbench-root {\r\n    display: grid;\r\n    grid-template-rows: calc(100% - 55px);\r\n    height: 100%;\r\n    width: 100%;\r\n    background: #e2e2e2;\r\n    font: 14px \"acumin-pro-condensed\";   \r\n}\r\n\r\n.wait-screen {\r\n    display: grid;\r\n    justify-content: center;\r\n    align-content: center;\r\n    height: 100%;\r\n    width: 100%;\r\n    background: #464646;\r\n    opacity: 0.95;\r\n    color:white;\r\n    font: 24px \"acumin-pro-condensed\";  \r\n    position: absolute;\r\n    top: 0;\r\n    left: 0; \r\n\r\n    &.hidden {\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n#leftGrab {\r\n    grid-row: 1 / span 2;\r\n    grid-column: 2;\r\n    cursor: ew-resize;\r\n}\r\n\r\n#rightGrab {\r\n    grid-row: 1 / span 2;\r\n    grid-column: 5;\r\n    cursor: ew-resize;\r\n}\r\n\r\n\r\n#toolbarGrab {\r\n    background: #333333;\r\n    grid-row: 1 / span 3;\r\n    grid-column: 3;\r\n    height: 100%;\r\n\r\n    .blackLine {\r\n        height:  5px;\r\n        background: black;\r\n    }\r\n    .toolbar-label {\r\n        color:white;\r\n        font-size: 18px;\r\n        display: grid;\r\n        align-items: center;\r\n        cursor: pointer;\r\n        user-select: none;\r\n        grid-template-columns: 1fr 20px;\r\n        grid-template-rows: 100%;\r\n        position: relative;\r\n\r\n        &.active {\r\n            font-weight: bold;\r\n            font-size: 20px;\r\n        }\r\n\r\n        &:hover {\r\n            background: var(--selectionGrey);\r\n            .sub-items {\r\n                display: block;\r\n            }\r\n        } \r\n    }\r\n    .toolbar-icon {\r\n        width: 40px;\r\n        height: 40px;\r\n    }\r\n}\r\n\r\n.diagram-container {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1;\r\n    grid-column: 4;\r\n    background: #CCCCCC;\r\n    width: 100%;\r\n    height: 100%;\r\n    overflow: hidden;\r\n\r\n    .diagram {\r\n        display: none;\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n}\r\n\r\n.right-panel {\r\n    grid-row: 1 / span 2;\r\n    grid-column: 6;\r\n    display: grid;\r\n    grid-template-rows: 1fr 40px auto 40px;\r\n    grid-template-columns: 100%;\r\n    height: calc(100% - var(--blackBarHeight));\r\n    overflow-y: auto;\r\n\r\n    #propertyTab {\r\n        grid-row: 1;\r\n        grid-column: 1;\r\n    }        \r\n    \r\n    .button {\r\n        display: grid;\r\n        justify-content: center;\r\n        align-content: center;\r\n        height: auto;\r\n        width: calc(100% / 7);\r\n        cursor: pointer;\r\n\r\n        &:hover {\r\n            background: rgb(51, 122, 183);\r\n            color: white;\r\n            opacity: 0.8;\r\n        }\r\n\r\n        &.selected {\r\n            background: rgb(51, 122, 183);\r\n            color: white;\r\n        }\r\n        \r\n        &.align {\r\n            justify-content: stretch;\r\n            text-align: center;\r\n        }\r\n    }    \r\n}\r\n\r\n.blocker {\r\n    visibility: hidden;\r\n    position: absolute;\r\n    width: calc(100% - 40px);\r\n    height: 100%;\r\n    top: 0;\r\n    left: 0;\r\n\r\n    background: rgba(20, 20, 20, 0.95);    \r\n    font-family: \"acumin-pro-condensed\";\r\n    color: white;\r\n    font-size: 24px;\r\n\r\n    display: grid;\r\n    align-content: center;\r\n    justify-content: center;\r\n\r\n    user-select: none;\r\n\r\n    padding: 20px;\r\n    text-align: center;\r\n}\r\n\r\n#log-console {\r\n    grid-row: 2;\r\n    grid-column: 4;\r\n    display: none;\r\n}\r\n\r\n.dialog-container {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: rgba(0.1, 0.1, 0.1, 0.6);\r\n    display: grid;\r\n    font-family: \"acumin-pro-condensed\";\r\n    top:0;\r\n\r\n    .dialog {\r\n        align-self: center;\r\n        justify-self: center;\r\n        min-height: 140px;\r\n        max-width: 400px;\r\n        border-radius: 10px;\r\n        background: white;\r\n\r\n        display: grid;\r\n        grid-template-columns: 100%;\r\n        grid-template-rows: calc(100% - 50px) 50px;\r\n\r\n        .dialog-message {\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n            margin-top: 20px;\r\n            padding: 10px;\r\n            font-size: 18px;\r\n            color: black;\r\n        }\r\n\r\n        .dialog-buttons {\r\n            grid-row: 2;\r\n            grid-column: 1;\r\n            display: grid;\r\n            grid-template-rows: 100%;\r\n            grid-template-columns: 100%;\r\n            color: white;\r\n\r\n            .dialog-button-ok {\r\n                cursor: pointer;\r\n                justify-self: center;\r\n                background:green;\r\n                min-width: 80px;\r\n                justify-content: center;\r\n                display: grid;\r\n                align-content: center;\r\n                align-self: center;\r\n                height: 35px;      \r\n                border-radius: 10px;\r\n\r\n                &:hover {\r\n                    opacity: 0.8;\r\n                }\r\n\r\n                &.error {\r\n                    background: red;\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n.gizmo {\r\n    * {\r\n        user-select: none;\r\n    }\r\n    .bounding-box-line {\r\n        background-color: black;\r\n        position: absolute;\r\n        line-height: 1px;\r\n        height: 1px;\r\n        pointer-events: none;\r\n    }\r\n    .scale-point-container {\r\n        position: absolute;\r\n        width: 30px;\r\n        height: 30px;\r\n        .scale-point {\r\n            top: 10px;\r\n            left: 10px;\r\n            position: absolute;\r\n            width: 10px;\r\n            height: 10px;\r\n            background: transparent;\r\n            outline: rgb(125, 125, 125) 2px solid;\r\n        }\r\n        .rotate-click-area {\r\n            width: 20px;\r\n            height: 20px;\r\n            position: absolute;\r\n        }\r\n        .scale-click-area {\r\n            width: 20px;\r\n            height: 20px;\r\n            position: absolute;\r\n        }\r\n    }\r\n    .pivot-point {\r\n        width: 30px;\r\n        height: 30px;\r\n        background: transparent;\r\n        position: absolute;\r\n    }\r\n}\r\n#workbench-canvas {\r\n    position: relative;\r\n}\r\n.artboard-stroke {\r\n    outline: 1px solid black;\r\n    position: absolute;\r\n    z-index: 5;\r\n    pointer-events: none;\r\n}\r\n.artboard-background {\r\n    position: absolute;\r\n    background: repeating-conic-gradient(#E2E2E2 0% 25%, white 0% 50%) 50% / 10px 10px;\r\n    width: 100%;\r\n    height: 100%;\r\n}"],"sourceRoot":""}]);
 // Exports
-module.exports = exports;
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./scss/commandBar.scss":
-/*!***************************************************************************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/css-loader/dist/cjs.js!E:/Babylon/Babylon.js/node_modules/sass-loader/dist/cjs.js!./scss/commandBar.scss ***!
-  \***************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/cjs.js!C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/sass-loader/dist/cjs.js!./scss/commandBar.scss ***!
+  \*************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-exports.push([module.i, ":root {\n  --selectionGrey: #666666; }\n\n.ge-commands {\n  grid-row: 1;\n  grid-column: 1;\n  user-select: none; }\n  .ge-commands .commands-left {\n    float: left;\n    display: flex; }\n  .ge-commands .commands-right {\n    float: right;\n    display: flex; }\n  .ge-commands.background-ts .command-button img, .ge-commands.background-ts .command-dropdown img {\n    filter: invert(64%) sepia(78%) saturate(940%) hue-rotate(323deg) brightness(105%) contrast(103%); }\n  .ge-commands.background-ts .command-button .command-dropdown-active, .ge-commands.background-ts .command-dropdown .command-dropdown-active {\n    color: #333333; }\n  .ge-commands.background-ts .command-button:hover img, .ge-commands.background-ts .command-button.activated img, .ge-commands.background-ts .command-dropdown:hover img, .ge-commands.background-ts .command-dropdown.activated img {\n    filter: invert(34%) sepia(21%) saturate(3832%) hue-rotate(324deg) brightness(88%) contrast(82%) !important; }\n  .ge-commands.background-js .command-button img, .ge-commands.background-js .command-dropdown img {\n    filter: invert(57%) sepia(80%) saturate(2031%) hue-rotate(215deg); }\n  .ge-commands.background-js .command-button .command-dropdown-active, .ge-commands.background-js .command-dropdown .command-dropdown-active {\n    color: #333333; }\n  .ge-commands.background-js .command-button:hover img, .ge-commands.background-js .command-button.activated img, .ge-commands.background-js .command-dropdown:hover img, .ge-commands.background-js .command-dropdown.activated img {\n    filter: invert(17%) !important; }\n  .ge-commands .command-button {\n    cursor: pointer;\n    width: 55px; }\n    .ge-commands .command-button .command-label {\n      display: none; }\n    .ge-commands .command-button .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      color: white;\n      align-content: center;\n      justify-content: center; }\n    .ge-commands .command-button:hover {\n      background-color: var(--selectionGrey); }\n    .ge-commands .command-button .active {\n      transform-origin: center;\n      background-color: var(--selectionGrey); }\n    .ge-commands .command-button img.active {\n      background-color: var(--selectionGrey); }\n  .ge-commands .command-dropdown-root {\n    position: relative;\n    text-transform: uppercase;\n    z-index: 1; }\n  .ge-commands .command-dropdown {\n    cursor: pointer;\n    width: 55px;\n    height: 55px; }\n    .ge-commands .command-dropdown .command-dropdown-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n    .ge-commands .command-dropdown .command-dropdown-active {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center;\n      font-size: 14px; }\n    .ge-commands .command-dropdown:hover, .ge-commands .command-dropdown.activated {\n      background-color: #666666;\n      color: black; }\n    .ge-commands .command-dropdown:active {\n      transform-origin: center;\n      transform: scale(0.95); }\n  .ge-commands .command-dropdown-blocker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    transform: scale(1);\n    z-index: 1; }\n  .ge-commands.background-js .command-dropdown-content {\n    background: #333333; }\n    .ge-commands.background-js .command-dropdown-content .command-dropdown-label:hover {\n      background: #333333; }\n  .ge-commands.background-ts .command-dropdown-content .command-dropdown-label:hover {\n    background: #333333; }\n  .ge-commands .command-dropdown-content {\n    background: #333333;\n    position: absolute;\n    top: 55px;\n    width: 55px;\n    transform: scale(1); }\n    .ge-commands .command-dropdown-content.toRight {\n      width: 120px; }\n    .ge-commands .command-dropdown-content .command-dropdown-label {\n      color: white;\n      padding: 5px;\n      padding-left: 7px;\n      height: 35px;\n      font-size: 18px;\n      display: grid;\n      align-items: center;\n      cursor: pointer;\n      user-select: none;\n      grid-template-columns: 1fr 20px;\n      grid-template-rows: 100%;\n      position: relative; }\n      .ge-commands .command-dropdown-content .command-dropdown-label.active {\n        font-weight: bold;\n        font-size: 20px; }\n      .ge-commands .command-dropdown-content .command-dropdown-label:hover {\n        background: var(--selectionGrey); }\n        .ge-commands .command-dropdown-content .command-dropdown-label:hover .sub-items {\n          display: block; }\n      .ge-commands .command-dropdown-content .command-dropdown-label .command-dropdown-label-text {\n        font-family: Arial;\n        font-size: 12px;\n        grid-column: 1;\n        grid-row: 1; }\n      .ge-commands .command-dropdown-content .command-dropdown-label .command-dropdown-label-check {\n        grid-column: 2;\n        grid-row: 1; }\n      .ge-commands .command-dropdown-content .command-dropdown-label .command-dropdown-arrow {\n        grid-column: 2;\n        grid-row: 1;\n        font-size: 20px;\n        font-weight: bold;\n        padding-bottom: 10px;\n        padding-left: 4px; }\n      .ge-commands .command-dropdown-content .command-dropdown-label .sub-items {\n        position: absolute;\n        left: 200px;\n        top: 0;\n        width: 150px;\n        display: none; }\n        .ge-commands .command-dropdown-content .command-dropdown-label .sub-items.background-js {\n          background: #bfabff; }\n          .ge-commands .command-dropdown-content .command-dropdown-label .sub-items.background-js .sub-item:hover {\n            background-color: #333333;\n            color: white; }\n        .ge-commands .command-dropdown-content .command-dropdown-label .sub-items.background-ts {\n          background: #333333; }\n          .ge-commands .command-dropdown-content .command-dropdown-label .sub-items.background-ts .sub-item:hover {\n            background-color: #333333;\n            color: white; }\n        .ge-commands .command-dropdown-content .command-dropdown-label .sub-items .sub-item {\n          color: white;\n          padding: 5px;\n          padding-left: 10px;\n          height: 35px;\n          display: grid; }\n          .ge-commands .command-dropdown-content .command-dropdown-label .sub-items .sub-item.checked {\n            background: white;\n            color: black; }\n    .ge-commands .command-dropdown-content .buttonLine {\n      color: white;\n      padding: 5px;\n      padding-left: 7px;\n      height: 35px;\n      font-size: 18px;\n      display: grid;\n      align-items: center;\n      cursor: pointer;\n      user-select: none;\n      grid-template-columns: 1fr 20px;\n      grid-template-rows: 100%;\n      position: relative;\n      font-family: Arial;\n      font-size: 12px;\n      grid-column: 1;\n      grid-row: 1; }\n      .ge-commands .command-dropdown-content .buttonLine input[type=\"file\"] {\n        display: none; }\n      .ge-commands .command-dropdown-content .buttonLine.active {\n        font-weight: bold;\n        font-size: 20px;\n        cursor: pointer; }\n      .ge-commands .command-dropdown-content .buttonLine:hover {\n        background: var(--selectionGrey);\n        cursor: pointer; }\n        .ge-commands .command-dropdown-content .buttonLine:hover .sub-items {\n          display: block; }\n      .ge-commands .command-dropdown-content .buttonLine .file-upload {\n        cursor: pointer; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ":root {\n  --selectionGrey: #666666; }\n\n.ge-commands {\n  grid-row: 1;\n  grid-column: 1;\n  user-select: none; }\n  .ge-commands .commands-left {\n    float: left;\n    display: flex; }\n  .ge-commands .commands-right {\n    float: right;\n    display: flex; }\n  .ge-commands.background-ts .command-button img, .ge-commands.background-ts .command-dropdown img {\n    filter: invert(64%) sepia(78%) saturate(940%) hue-rotate(323deg) brightness(105%) contrast(103%); }\n  .ge-commands.background-ts .command-button .command-dropdown-active, .ge-commands.background-ts .command-dropdown .command-dropdown-active {\n    color: #333333; }\n  .ge-commands.background-ts .command-button:hover img, .ge-commands.background-ts .command-button.activated img, .ge-commands.background-ts .command-dropdown:hover img, .ge-commands.background-ts .command-dropdown.activated img {\n    filter: invert(34%) sepia(21%) saturate(3832%) hue-rotate(324deg) brightness(88%) contrast(82%) !important; }\n  .ge-commands.background-js .command-button img, .ge-commands.background-js .command-dropdown img {\n    filter: invert(57%) sepia(80%) saturate(2031%) hue-rotate(215deg); }\n  .ge-commands.background-js .command-button .command-dropdown-active, .ge-commands.background-js .command-dropdown .command-dropdown-active {\n    color: #333333; }\n  .ge-commands.background-js .command-button:hover img, .ge-commands.background-js .command-button.activated img, .ge-commands.background-js .command-dropdown:hover img, .ge-commands.background-js .command-dropdown.activated img {\n    filter: invert(17%) !important; }\n  .ge-commands .command-button {\n    cursor: pointer;\n    width: 55px; }\n    .ge-commands .command-button .command-label {\n      display: none; }\n    .ge-commands .command-button .command-button-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      color: white;\n      align-content: center;\n      justify-content: center; }\n    .ge-commands .command-button:hover {\n      background-color: var(--selectionGrey); }\n    .ge-commands .command-button .active {\n      transform-origin: center;\n      background-color: var(--selectionGrey); }\n    .ge-commands .command-button img.active {\n      background-color: var(--selectionGrey); }\n  .ge-commands .command-dropdown-root {\n    position: relative;\n    text-transform: uppercase;\n    z-index: 1; }\n  .ge-commands .command-dropdown {\n    cursor: pointer;\n    width: 55px;\n    height: 55px; }\n    .ge-commands .command-dropdown .command-dropdown-icon {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center; }\n    .ge-commands .command-dropdown .command-dropdown-active {\n      height: 100%;\n      width: 100%;\n      display: grid;\n      align-content: center;\n      justify-content: center;\n      font-size: 14px; }\n    .ge-commands .command-dropdown:hover, .ge-commands .command-dropdown.activated {\n      background-color: #666666;\n      color: black; }\n    .ge-commands .command-dropdown:active {\n      transform-origin: center;\n      transform: scale(0.95); }\n  .ge-commands .command-dropdown-blocker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    transform: scale(1);\n    z-index: 1; }\n  .ge-commands.background-js .command-dropdown-content {\n    background: #333333; }\n    .ge-commands.background-js .command-dropdown-content .command-dropdown-label:hover {\n      background: #333333; }\n  .ge-commands.background-ts .command-dropdown-content .command-dropdown-label:hover {\n    background: #333333; }\n  .ge-commands .command-dropdown-content {\n    background: #333333;\n    position: absolute;\n    top: 55px;\n    width: 55px;\n    transform: scale(1); }\n    .ge-commands .command-dropdown-content.toRight {\n      width: 120px; }\n    .ge-commands .command-dropdown-content .command-dropdown-label {\n      color: white;\n      padding: 5px;\n      padding-left: 7px;\n      height: 35px;\n      font-size: 18px;\n      display: grid;\n      align-items: center;\n      cursor: pointer;\n      user-select: none;\n      grid-template-columns: 1fr 20px;\n      grid-template-rows: 100%;\n      position: relative; }\n      .ge-commands .command-dropdown-content .command-dropdown-label.active {\n        font-weight: bold;\n        font-size: 20px; }\n      .ge-commands .command-dropdown-content .command-dropdown-label:hover {\n        background: var(--selectionGrey); }\n        .ge-commands .command-dropdown-content .command-dropdown-label:hover .sub-items {\n          display: block; }\n      .ge-commands .command-dropdown-content .command-dropdown-label .command-dropdown-label-text {\n        font-family: Arial;\n        font-size: 12px;\n        grid-column: 1;\n        grid-row: 1; }\n      .ge-commands .command-dropdown-content .command-dropdown-label .command-dropdown-label-check {\n        grid-column: 2;\n        grid-row: 1; }\n      .ge-commands .command-dropdown-content .command-dropdown-label .command-dropdown-arrow {\n        grid-column: 2;\n        grid-row: 1;\n        font-size: 20px;\n        font-weight: bold;\n        padding-bottom: 10px;\n        padding-left: 4px; }\n      .ge-commands .command-dropdown-content .command-dropdown-label .sub-items {\n        position: absolute;\n        left: 200px;\n        top: 0;\n        width: 150px;\n        display: none; }\n        .ge-commands .command-dropdown-content .command-dropdown-label .sub-items.background-js {\n          background: #bfabff; }\n          .ge-commands .command-dropdown-content .command-dropdown-label .sub-items.background-js .sub-item:hover {\n            background-color: #333333;\n            color: white; }\n        .ge-commands .command-dropdown-content .command-dropdown-label .sub-items.background-ts {\n          background: #333333; }\n          .ge-commands .command-dropdown-content .command-dropdown-label .sub-items.background-ts .sub-item:hover {\n            background-color: #333333;\n            color: white; }\n        .ge-commands .command-dropdown-content .command-dropdown-label .sub-items .sub-item {\n          color: white;\n          padding: 5px;\n          padding-left: 10px;\n          height: 35px;\n          display: grid; }\n          .ge-commands .command-dropdown-content .command-dropdown-label .sub-items .sub-item.checked {\n            background: white;\n            color: black; }\n    .ge-commands .command-dropdown-content .buttonLine {\n      color: white;\n      padding: 5px;\n      padding-left: 7px;\n      height: 35px;\n      font-size: 18px;\n      display: grid;\n      align-items: center;\n      cursor: pointer;\n      user-select: none;\n      grid-template-columns: 1fr 20px;\n      grid-template-rows: 100%;\n      position: relative;\n      font-family: Arial;\n      font-size: 12px;\n      grid-column: 1;\n      grid-row: 1; }\n      .ge-commands .command-dropdown-content .buttonLine input[type=\"file\"] {\n        display: none; }\n      .ge-commands .command-dropdown-content .buttonLine.active {\n        font-weight: bold;\n        font-size: 20px;\n        cursor: pointer; }\n      .ge-commands .command-dropdown-content .buttonLine:hover {\n        background: var(--selectionGrey);\n        cursor: pointer; }\n        .ge-commands .command-dropdown-content .buttonLine:hover .sub-items {\n          display: block; }\n      .ge-commands .command-dropdown-content .buttonLine .file-upload {\n        cursor: pointer; }\n", "",{"version":3,"sources":["webpack://./scss/commandBar.scss"],"names":[],"mappings":"AAAA;EACI,wBAAgB,EAAA;;AAGpB;EACI,WAAW;EACX,cAAc;EACd,iBAAiB,EAAA;EAHrB;IAMQ,WAAW;IACX,aAAa,EAAA;EAPrB;IAWQ,YAAY;IACZ,aAAa,EAAA;EAZrB;IAkBgB,gGAAgG,EAAA;EAlBhH;IAsBgB,cAAc,EAAA;EAtB9B;IA2BoB,0GAA0G,EAAA;EA3B9H;IAoCgB,iEAAiE,EAAA;EApCjF;IAwCgB,cAAc,EAAA;EAxC9B;IA6CoB,8BAA8B,EAAA;EA7ClD;IAoDQ,eAAe;IACf,WAAW,EAAA;IArDnB;MAwDY,aAAa,EAAA;IAxDzB;MA4DY,YAAY;MACZ,WAAW;MACX,aAAa;MACb,YAAY;MACZ,qBAAqB;MACrB,uBAAuB,EAAA;IAjEnC;MAqEY,sCAAsC,EAAA;IArElD;MAyEY,wBAAwB;MACxB,sCAAsC,EAAA;IA1ElD;MA+EgB,sCAAsC,EAAA;EA/EtD;IAqFQ,kBAAkB;IAClB,yBAAyB;IACzB,UAAU,EAAA;EAvFlB;IA2FQ,eAAe;IACf,WAAW;IACX,YAAY,EAAA;IA7FpB;MAgGY,YAAY;MACZ,WAAW;MACX,aAAa;MACb,qBAAqB;MACrB,uBAAuB,EAAA;IApGnC;MAwGY,YAAY;MACZ,WAAW;MACX,aAAa;MACb,qBAAqB;MACrB,uBAAuB;MACvB,eAAe,EAAA;IA7G3B;MAiHY,yBAAwB;MACxB,YAAY,EAAA;IAlHxB;MAsHY,wBAAwB;MACxB,sBAAsB,EAAA;EAvHlC;IA4HQ,kBAAkB;IAClB,MAAK;IACL,OAAM;IACN,WAAW;IACX,YAAY;IACZ,mBAAmB;IACnB,UAAU,EAAA;EAlIlB;IAuIY,mBAAmB,EAAA;IAvI/B;MA0IoB,mBAAmB,EAAA;EA1IvC;IAoJoB,mBAAmB,EAAA;EApJvC;IA2JQ,mBAAmB;IACnB,kBAAkB;IAClB,SAAS;IACT,WAAW;IACX,mBAAmB,EAAA;IA/J3B;MAkKY,YAAY,EAAA;IAlKxB;MAsKY,YAAW;MACX,YAAY;MACZ,iBAAiB;MACjB,YAAY;MACZ,eAAe;MACf,aAAa;MACb,mBAAmB;MACnB,eAAe;MACf,iBAAiB;MACjB,+BAA+B;MAC/B,wBAAwB;MACxB,kBAAkB,EAAA;MAjL9B;QAoLgB,iBAAiB;QACjB,eAAe,EAAA;MArL/B;QAyLgB,gCAAgC,EAAA;QAzLhD;UA2LoB,cAAc,EAAA;MA3LlC;QAgMgB,kBAAkB;QAClB,eAAe;QACf,cAAc;QACd,WAAW,EAAA;MAnM3B;QAuMgB,cAAc;QACd,WAAW,EAAA;MAxM3B;QA4MgB,cAAc;QACd,WAAW;QACX,eAAe;QACf,iBAAiB;QACjB,oBAAoB;QACpB,iBAAiB,EAAA;MAjNjC;QAqNgB,kBAAkB;QAClB,WAAW;QACX,MAAM;QACN,YAAY;QACZ,aAAa,EAAA;QAzN7B;UA4NoB,mBAAmB,EAAA;UA5NvC;YA+N4B,yBAAyB;YACzB,YAAY,EAAA;QAhOxC;UAsOoB,mBAAmB,EAAA;UAtOvC;YAyO4B,yBAAyB;YACzB,YAAY,EAAA;QA1OxC;UAgPoB,YAAY;UACZ,YAAY;UACZ,kBAAkB;UAClB,YAAY;UACZ,aAAa,EAAA;UApPjC;YAuPwB,iBAAiB;YACjB,YAAY,EAAA;IAxPpC;MA+PY,YAAW;MACX,YAAY;MACZ,iBAAiB;MACjB,YAAY;MACZ,eAAe;MACf,aAAa;MACb,mBAAmB;MACnB,eAAe;MACf,iBAAiB;MACjB,+BAA+B;MAC/B,wBAAwB;MACxB,kBAAkB;MAClB,kBAAkB;MAClB,eAAe;MACf,cAAc;MACd,WAAW,EAAA;MA9QvB;QAgRgB,aAAa,EAAA;MAhR7B;QAoRgB,iBAAiB;QACjB,eAAe;QACf,eAAe,EAAA;MAtR/B;QA0RgB,gCAAgC;QAIhC,eAAe,EAAA;QA9R/B;UA4RoB,cAAc,EAAA;MA5RlC;QAkSgB,eAAe,EAAA","sourcesContent":[":root {\r\n    --selectionGrey: #666666;\r\n}\r\n\r\n.ge-commands {\r\n    grid-row: 1;\r\n    grid-column: 1;\r\n    user-select: none;\r\n\r\n    .commands-left {\r\n        float: left;\r\n        display: flex;\r\n    }\r\n\r\n    .commands-right {\r\n        float: right;\r\n        display: flex;\r\n    }\r\n\r\n    &.background-ts {\r\n        .command-button, .command-dropdown  {\r\n            img {\r\n                filter: invert(64%) sepia(78%) saturate(940%) hue-rotate(323deg) brightness(105%) contrast(103%);\r\n            }\r\n\r\n            .command-dropdown-active {\r\n                color: #333333;\r\n            }\r\n\r\n            &:hover, &.activated {\r\n                img {\r\n                    filter: invert(34%) sepia(21%) saturate(3832%) hue-rotate(324deg) brightness(88%) contrast(82%) !important;\r\n                }\r\n            } \r\n        }\r\n    }\r\n\r\n    &.background-js {\r\n        .command-button, .command-dropdown  {\r\n            img {\r\n                filter: invert(57%) sepia(80%) saturate(2031%) hue-rotate(215deg);\r\n            }\r\n\r\n            .command-dropdown-active {\r\n                color: #333333;\r\n            }\r\n\r\n            &:hover, &.activated {\r\n                img {\r\n                    filter: invert(17%) !important;\r\n                }\r\n            } \r\n        }\r\n    }\r\n\r\n    .command-button {\r\n        cursor: pointer;\r\n        width: 55px;\r\n\r\n        .command-label {\r\n            display: none;\r\n        }        \r\n\r\n        .command-button-icon {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: grid;\r\n            color: white;\r\n            align-content: center;\r\n            justify-content: center;\r\n        }\r\n\r\n        &:hover {\r\n            background-color: var(--selectionGrey);\r\n        } \r\n        \r\n        .active {\r\n            transform-origin: center;\r\n            background-color: var(--selectionGrey);\r\n        }\r\n\r\n        img {\r\n            &.active {\r\n                background-color: var(--selectionGrey);\r\n            }\r\n        }\r\n    }\r\n\r\n    .command-dropdown-root {\r\n        position: relative;\r\n        text-transform: uppercase;\r\n        z-index: 1;\r\n    }\r\n\r\n    .command-dropdown {        \r\n        cursor: pointer;\r\n        width: 55px;\r\n        height: 55px;\r\n\r\n        .command-dropdown-icon {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: grid;\r\n            align-content: center;\r\n            justify-content: center;\r\n        }\r\n\r\n        .command-dropdown-active {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: grid;\r\n            align-content: center;\r\n            justify-content: center;\r\n            font-size: 14px;\r\n        }\r\n\r\n        &:hover, &.activated {\r\n            background-color:#666666;\r\n            color: black;\r\n        } \r\n        \r\n        &:active {\r\n            transform-origin: center;\r\n            transform: scale(0.95);\r\n        }\r\n    }\r\n\r\n    .command-dropdown-blocker {\r\n        position: absolute;    \r\n        top:0;\r\n        left:0;\r\n        width: 100%;\r\n        height: 100%;\r\n        transform: scale(1);\r\n        z-index: 1;\r\n    }\r\n\r\n    &.background-js {\r\n        .command-dropdown-content {\r\n            background: #333333;\r\n            .command-dropdown-label {\r\n                &:hover {\r\n                    background: #333333;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    &.background-ts {\r\n        .command-dropdown-content {\r\n            .command-dropdown-label {\r\n                &:hover {\r\n                    background: #333333;\r\n                }\r\n            }\r\n        }\r\n    }\r\n        \r\n    .command-dropdown-content {\r\n        background: #333333;\r\n        position: absolute;\r\n        top: 55px;\r\n        width: 55px;\r\n        transform: scale(1);\r\n\r\n        &.toRight {\r\n            width: 120px;\r\n        } \r\n        \r\n        .command-dropdown-label {\r\n            color:white;\r\n            padding: 5px;\r\n            padding-left: 7px;\r\n            height: 35px;\r\n            font-size: 18px;\r\n            display: grid;\r\n            align-items: center;\r\n            cursor: pointer;\r\n            user-select: none;\r\n            grid-template-columns: 1fr 20px;\r\n            grid-template-rows: 100%;\r\n            position: relative;\r\n\r\n            &.active {\r\n                font-weight: bold;\r\n                font-size: 20px;\r\n            }\r\n\r\n            &:hover {\r\n                background: var(--selectionGrey);\r\n                .sub-items {\r\n                    display: block;\r\n                }\r\n            } \r\n\r\n            .command-dropdown-label-text {\r\n                font-family: Arial;\r\n                font-size: 12px;\r\n                grid-column: 1;\r\n                grid-row: 1;\r\n            }\r\n\r\n            .command-dropdown-label-check {\r\n                grid-column: 2;\r\n                grid-row: 1;\r\n            }\r\n\r\n            .command-dropdown-arrow {\r\n                grid-column: 2;\r\n                grid-row: 1;    \r\n                font-size: 20px;\r\n                font-weight: bold;\r\n                padding-bottom: 10px;\r\n                padding-left: 4px;\r\n            }\r\n\r\n            .sub-items {\r\n                position: absolute;\r\n                left: 200px;\r\n                top: 0;\r\n                width: 150px;\r\n                display: none;        \r\n    \r\n                &.background-js {\r\n                    background: #bfabff;\r\n                    .sub-item {                      \r\n                        &:hover {\r\n                            background-color: #333333;\r\n                            color: white;\r\n                        }\r\n                    }\r\n                }   \r\n\r\n                &.background-ts {\r\n                    background: #333333;\r\n                    .sub-item {                      \r\n                        &:hover {\r\n                            background-color: #333333;\r\n                            color: white;\r\n                        }\r\n                    }\r\n                }   \r\n                                    \r\n                .sub-item {                      \r\n                    color: white;\r\n                    padding: 5px;\r\n                    padding-left: 10px;\r\n                    height: 35px;\r\n                    display: grid;\r\n\r\n                    &.checked {\r\n                        background: white;\r\n                        color: black;\r\n                    }\r\n                }\r\n            }            \r\n        }\r\n\r\n        .buttonLine {\r\n            color:white;\r\n            padding: 5px;\r\n            padding-left: 7px;\r\n            height: 35px;\r\n            font-size: 18px;\r\n            display: grid;\r\n            align-items: center;\r\n            cursor: pointer;\r\n            user-select: none;\r\n            grid-template-columns: 1fr 20px;\r\n            grid-template-rows: 100%;\r\n            position: relative;\r\n            font-family: Arial;\r\n            font-size: 12px;\r\n            grid-column: 1;\r\n            grid-row: 1;\r\n            input[type=\"file\"] {\r\n                display: none;\r\n            }\r\n\r\n            &.active {\r\n                font-weight: bold;\r\n                font-size: 20px;\r\n                cursor: pointer;\r\n            }\r\n\r\n            &:hover {\r\n                background: var(--selectionGrey);\r\n                .sub-items {\r\n                    display: block;\r\n                }\r\n                cursor: pointer;\r\n            } \r\n\r\n            .file-upload{\r\n                cursor: pointer;\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
-module.exports = exports;
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./scss/header.scss":
-/*!***********************************************************************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/css-loader/dist/cjs.js!E:/Babylon/Babylon.js/node_modules/sass-loader/dist/cjs.js!./scss/header.scss ***!
-  \***********************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/cjs.js!C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/sass-loader/dist/cjs.js!./scss/header.scss ***!
+  \*********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-exports.push([module.i, "#ge-header {\n  width: 100%;\n  grid-column: 2 / 4;\n  grid-row: 1;\n  padding: 0;\n  margin: 0;\n  display: grid;\n  grid-template-columns: auto 1fr;\n  grid-template-rows: 100%;\n  background: #333333; }\n  #ge-header .command-bar {\n    padding-left: 15px;\n    grid-row: 1;\n    grid-column: 2;\n    display: grid;\n    width: 100%;\n    grid-template-columns: 74px 144px 1fr;\n    grid-template-rows: 100%; }\n    #ge-header .command-bar .language-button {\n      grid-row: 1;\n      grid-column: 2;\n      color: white;\n      width: 144px;\n      font-size: 18px;\n      text-align: center;\n      display: grid;\n      align-content: center;\n      border-top-left-radius: 14px;\n      transform: scale(1);\n      user-select: none; }\n      #ge-header .command-bar .language-button.active {\n        width: 74px;\n        cursor: pointer;\n        grid-column: 1;\n        margin-right: -5px;\n        transform: translateX(10px); }\n\n@media screen and (max-width: 1280px) {\n  #ge-header .logo-area {\n    width: 300px; }\n    #ge-header .logo-area .version .version-text {\n      display: none; }\n    #ge-header .logo-area .version .version-number {\n      font-size: 16px; } }\n\n@media screen and (max-width: 1080px) {\n  #ge-header {\n    grid-template-columns: 100%; }\n    #ge-header .logo-area {\n      width: 100%; }\n      #ge-header .logo-area .version .version-text {\n        display: none; }\n    #ge-header .command-bar {\n      display: none; } }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#ge-header {\n  width: 100%;\n  grid-column: 2 / 4;\n  grid-row: 1;\n  padding: 0;\n  margin: 0;\n  display: grid;\n  grid-template-columns: auto 1fr;\n  grid-template-rows: 100%;\n  background: #333333; }\n  #ge-header .command-bar {\n    padding-left: 15px;\n    grid-row: 1;\n    grid-column: 2;\n    display: grid;\n    width: 100%;\n    grid-template-columns: 74px 144px 1fr;\n    grid-template-rows: 100%; }\n    #ge-header .command-bar .language-button {\n      grid-row: 1;\n      grid-column: 2;\n      color: white;\n      width: 144px;\n      font-size: 18px;\n      text-align: center;\n      display: grid;\n      align-content: center;\n      border-top-left-radius: 14px;\n      transform: scale(1);\n      user-select: none; }\n      #ge-header .command-bar .language-button.active {\n        width: 74px;\n        cursor: pointer;\n        grid-column: 1;\n        margin-right: -5px;\n        transform: translateX(10px); }\n\n@media screen and (max-width: 1280px) {\n  #ge-header .logo-area {\n    width: 300px; }\n    #ge-header .logo-area .version .version-text {\n      display: none; }\n    #ge-header .logo-area .version .version-number {\n      font-size: 16px; } }\n\n@media screen and (max-width: 1080px) {\n  #ge-header {\n    grid-template-columns: 100%; }\n    #ge-header .logo-area {\n      width: 100%; }\n      #ge-header .logo-area .version .version-text {\n        display: none; }\n    #ge-header .command-bar {\n      display: none; } }\n", "",{"version":3,"sources":["webpack://./scss/header.scss"],"names":[],"mappings":"AAAA;EACI,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,UAAU;EACV,SAAS;EACT,aAAa;EACb,+BAA+B;EAC/B,wBAAwB;EACxB,mBAAmB,EAAA;EATvB;IAYQ,kBAAkB;IAClB,WAAW;IACX,cAAc;IACd,aAAa;IACb,WAAW;IACX,qCAAqC;IACrC,wBAAwB,EAAA;IAlBhC;MAqBY,WAAW;MACX,cAAc;MACd,YAAY;MACZ,YAAY;MACZ,eAAe;MACf,kBAAkB;MAClB,aAAa;MACb,qBAAqB;MACrB,4BAA4B;MAC5B,mBAAmB;MACnB,iBAAiB,EAAA;MA/B7B;QAkCgB,WAAW;QACX,eAAe;QACf,cAAc;QACd,kBAAkB;QAClB,2BAA2B,EAAA;;AAO3C;EACI;IAEQ,YAAY,EAAA;IAFpB;MAMgB,aAAa,EAAA;IAN7B;MAUgB,eAAe,EAAA,EAClB;;AAMjB;EACI;IACI,2BAA2B,EAAA;IAD/B;MAIQ,WAAW,EAAA;MAJnB;QAQgB,aAAa,EAAA;IAR7B;MAcQ,aAAa,EAAA,EAChB","sourcesContent":["#ge-header {\r\n    width: 100%;\r\n    grid-column: 2 / 4;\r\n    grid-row: 1;\r\n    padding: 0;\r\n    margin: 0;\r\n    display: grid;\r\n    grid-template-columns: auto 1fr;\r\n    grid-template-rows: 100%;\r\n    background: #333333;\r\n\r\n    .command-bar {\r\n        padding-left: 15px;   \r\n        grid-row: 1;\r\n        grid-column: 2;\r\n        display: grid;\r\n        width: 100%;\r\n        grid-template-columns: 74px 144px 1fr;\r\n        grid-template-rows: 100%;\r\n\r\n        .language-button {        \r\n            grid-row: 1;\r\n            grid-column: 2;\r\n            color: white;\r\n            width: 144px;\r\n            font-size: 18px;\r\n            text-align: center;\r\n            display: grid;\r\n            align-content: center;\r\n            border-top-left-radius: 14px;\r\n            transform: scale(1);\r\n            user-select: none;\r\n\r\n            &.active {\r\n                width: 74px;\r\n                cursor: pointer;            \r\n                grid-column: 1;\r\n                margin-right: -5px;\r\n                transform: translateX(10px);\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n\r\n@media screen and (max-width: 1280px) {\r\n    #ge-header {\r\n        .logo-area {\r\n            width: 300px;\r\n                \r\n            .version {\r\n                .version-text {\r\n                    display: none;\r\n                }\r\n                \r\n                .version-number {\r\n                    font-size: 16px;\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 1080px) {\r\n    #ge-header {\r\n        grid-template-columns: 100%;\r\n\r\n        .logo-area {\r\n            width: 100%;\r\n                \r\n            .version {\r\n                .version-text {\r\n                    display: none;\r\n                }\r\n            }\r\n        }\r\n        \r\n        .command-bar {  \r\n            display: none;\r\n        }\r\n    }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
-module.exports = exports;
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./sharedUiComponents/colorPicker/colorPicker.scss":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/css-loader/dist/cjs.js!E:/Babylon/Babylon.js/node_modules/sass-loader/dist/cjs.js!./sharedUiComponents/colorPicker/colorPicker.scss ***!
-  \******************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/cjs.js!C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/sass-loader/dist/cjs.js!./sharedUiComponents/colorPicker/colorPicker.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-exports.push([module.i, ".color-picker-container {\n  width: 320px;\n  height: 300px;\n  background-color: white;\n  display: grid;\n  grid-template-columns: 100%;\n  grid-template-rows: 50% 50px 60px 40px 1fr auto;\n  font-family: \"acumin-pro-condensed\";\n  font-weight: normal;\n  font-size: 14px; }\n  .color-picker-container.with-hints {\n    height: 380px; }\n  .color-picker-container .color-picker-saturation {\n    grid-row: 1;\n    grid-column: 1;\n    display: grid;\n    grid-template-columns: 100%;\n    grid-template-rows: 100%;\n    position: relative;\n    cursor: pointer; }\n    .color-picker-container .color-picker-saturation .color-picker-saturation-white {\n      grid-row: 1;\n      grid-column: 1;\n      background: -webkit-linear-gradient(to right, #fff, rgba(255, 255, 255, 0));\n      background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0)); }\n    .color-picker-container .color-picker-saturation .color-picker-saturation-black {\n      grid-row: 1;\n      grid-column: 1;\n      background: -webkit-linear-gradient(to top, #000, rgba(0, 0, 0, 0));\n      background: linear-gradient(to top, #000, rgba(0, 0, 0, 0)); }\n    .color-picker-container .color-picker-saturation .color-picker-saturation-cursor {\n      pointer-events: none;\n      width: 4px;\n      height: 4px;\n      box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 1px 2px rgba(0, 0, 0, 0.4);\n      border-radius: 50%;\n      transform: translate(-2px, -2px);\n      position: absolute; }\n  .color-picker-container .color-picker-hue {\n    grid-row: 2;\n    grid-column: 1;\n    display: grid;\n    margin: 10px;\n    grid-template-columns: 24% 76%;\n    grid-template-rows: 100%; }\n    .color-picker-container .color-picker-hue .color-picker-hue-color {\n      grid-row: 1;\n      grid-column: 1;\n      align-self: center;\n      justify-self: center;\n      width: 30px;\n      height: 30px;\n      border-radius: 15px;\n      border: 1px solid black; }\n    .color-picker-container .color-picker-hue .color-picker-hue-slider {\n      grid-row: 1;\n      grid-column: 2;\n      align-self: center;\n      height: 16px;\n      position: relative;\n      cursor: pointer;\n      background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n      background: -webkit-linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%); }\n      .color-picker-container .color-picker-hue .color-picker-hue-slider .color-picker-hue-cursor {\n        pointer-events: none;\n        width: 8px;\n        height: 18px;\n        transform: translate(-4px, -2px);\n        background-color: #f8f8f8;\n        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);\n        position: absolute; }\n  .color-picker-container .color-picker-component {\n    display: grid;\n    margin: 5px;\n    grid-template-columns: 100%;\n    grid-template-rows: 50% 50%; }\n    .color-picker-container .color-picker-component .color-picker-component-value {\n      justify-self: center;\n      align-self: center;\n      grid-row: 1;\n      grid-column: 1;\n      margin-bottom: 4px; }\n      .color-picker-container .color-picker-component .color-picker-component-value input {\n        width: 50px; }\n    .color-picker-container .color-picker-component .color-picker-component-label {\n      justify-self: center;\n      align-self: center;\n      grid-row: 2;\n      grid-column: 1;\n      color: black; }\n  .color-picker-container .color-picker-rgb {\n    grid-row: 3;\n    grid-column: 1;\n    display: grid;\n    margin: 10px;\n    grid-template-columns: 20% 6.66% 20% 6.66% 20% 6.66% 20%;\n    grid-template-rows: 100%; }\n  .color-picker-container .red {\n    grid-row: 1;\n    grid-column: 1; }\n  .color-picker-container .green {\n    grid-row: 1;\n    grid-column: 3; }\n  .color-picker-container .blue {\n    grid-row: 1;\n    grid-column: 5; }\n  .color-picker-container .alpha {\n    grid-row: 1;\n    grid-column: 7; }\n    .color-picker-container .alpha.grayed {\n      opacity: 0.5; }\n  .color-picker-container .color-picker-hex {\n    grid-row: 4;\n    grid-column: 1;\n    display: grid;\n    grid-template-columns: 20% 80%;\n    grid-template-rows: 100%; }\n    .color-picker-container .color-picker-hex .color-picker-hex-label {\n      justify-self: center;\n      align-self: center;\n      grid-row: 1;\n      grid-column: 1;\n      margin-left: 10px;\n      color: black; }\n    .color-picker-container .color-picker-hex .color-picker-hex-value {\n      justify-self: left;\n      align-self: center;\n      grid-row: 1;\n      grid-column: 2;\n      margin-left: 10px;\n      margin-right: 10px; }\n      .color-picker-container .color-picker-hex .color-picker-hex-value input {\n        width: 70px; }\n  .color-picker-container .color-picker-warning {\n    color: black;\n    font-size: 11px;\n    padding: 4px;\n    justify-self: left;\n    align-self: center;\n    grid-row: 6;\n    grid-column: 1; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ".color-picker-container {\n  width: 320px;\n  height: 300px;\n  background-color: white;\n  display: grid;\n  grid-template-columns: 100%;\n  grid-template-rows: 50% 50px 60px 40px 1fr auto;\n  font-family: \"acumin-pro-condensed\";\n  font-weight: normal;\n  font-size: 14px; }\n  .color-picker-container.with-hints {\n    height: 380px; }\n  .color-picker-container .color-picker-saturation {\n    grid-row: 1;\n    grid-column: 1;\n    display: grid;\n    grid-template-columns: 100%;\n    grid-template-rows: 100%;\n    position: relative;\n    cursor: pointer; }\n    .color-picker-container .color-picker-saturation .color-picker-saturation-white {\n      grid-row: 1;\n      grid-column: 1;\n      background: -webkit-linear-gradient(to right, #fff, rgba(255, 255, 255, 0));\n      background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0)); }\n    .color-picker-container .color-picker-saturation .color-picker-saturation-black {\n      grid-row: 1;\n      grid-column: 1;\n      background: -webkit-linear-gradient(to top, #000, rgba(0, 0, 0, 0));\n      background: linear-gradient(to top, #000, rgba(0, 0, 0, 0)); }\n    .color-picker-container .color-picker-saturation .color-picker-saturation-cursor {\n      pointer-events: none;\n      width: 4px;\n      height: 4px;\n      box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 1px 2px rgba(0, 0, 0, 0.4);\n      border-radius: 50%;\n      transform: translate(-2px, -2px);\n      position: absolute; }\n  .color-picker-container .color-picker-hue {\n    grid-row: 2;\n    grid-column: 1;\n    display: grid;\n    margin: 10px;\n    grid-template-columns: 24% 76%;\n    grid-template-rows: 100%; }\n    .color-picker-container .color-picker-hue .color-picker-hue-color {\n      grid-row: 1;\n      grid-column: 1;\n      align-self: center;\n      justify-self: center;\n      width: 30px;\n      height: 30px;\n      border-radius: 15px;\n      border: 1px solid black; }\n    .color-picker-container .color-picker-hue .color-picker-hue-slider {\n      grid-row: 1;\n      grid-column: 2;\n      align-self: center;\n      height: 16px;\n      position: relative;\n      cursor: pointer;\n      background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n      background: -webkit-linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%); }\n      .color-picker-container .color-picker-hue .color-picker-hue-slider .color-picker-hue-cursor {\n        pointer-events: none;\n        width: 8px;\n        height: 18px;\n        transform: translate(-4px, -2px);\n        background-color: #f8f8f8;\n        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);\n        position: absolute; }\n  .color-picker-container .color-picker-component {\n    display: grid;\n    margin: 5px;\n    grid-template-columns: 100%;\n    grid-template-rows: 50% 50%; }\n    .color-picker-container .color-picker-component .color-picker-component-value {\n      justify-self: center;\n      align-self: center;\n      grid-row: 1;\n      grid-column: 1;\n      margin-bottom: 4px; }\n      .color-picker-container .color-picker-component .color-picker-component-value input {\n        width: 50px; }\n    .color-picker-container .color-picker-component .color-picker-component-label {\n      justify-self: center;\n      align-self: center;\n      grid-row: 2;\n      grid-column: 1;\n      color: black; }\n  .color-picker-container .color-picker-rgb {\n    grid-row: 3;\n    grid-column: 1;\n    display: grid;\n    margin: 10px;\n    grid-template-columns: 20% 6.66% 20% 6.66% 20% 6.66% 20%;\n    grid-template-rows: 100%; }\n  .color-picker-container .red {\n    grid-row: 1;\n    grid-column: 1; }\n  .color-picker-container .green {\n    grid-row: 1;\n    grid-column: 3; }\n  .color-picker-container .blue {\n    grid-row: 1;\n    grid-column: 5; }\n  .color-picker-container .alpha {\n    grid-row: 1;\n    grid-column: 7; }\n    .color-picker-container .alpha.grayed {\n      opacity: 0.5; }\n  .color-picker-container .color-picker-hex {\n    grid-row: 4;\n    grid-column: 1;\n    display: grid;\n    grid-template-columns: 20% 80%;\n    grid-template-rows: 100%; }\n    .color-picker-container .color-picker-hex .color-picker-hex-label {\n      justify-self: center;\n      align-self: center;\n      grid-row: 1;\n      grid-column: 1;\n      margin-left: 10px;\n      color: black; }\n    .color-picker-container .color-picker-hex .color-picker-hex-value {\n      justify-self: left;\n      align-self: center;\n      grid-row: 1;\n      grid-column: 2;\n      margin-left: 10px;\n      margin-right: 10px; }\n      .color-picker-container .color-picker-hex .color-picker-hex-value input {\n        width: 70px; }\n  .color-picker-container .color-picker-warning {\n    color: black;\n    font-size: 11px;\n    padding: 4px;\n    justify-self: left;\n    align-self: center;\n    grid-row: 6;\n    grid-column: 1; }\n", "",{"version":3,"sources":["webpack://./sharedUiComponents/colorPicker/colorPicker.scss"],"names":[],"mappings":"AAAA;EACI,YAAY;EACZ,aAAa;EACb,uBAAuB;EACvB,aAAa;EACb,2BAA2B;EAC3B,+CAA+C;EAC/C,mCAAmC;EACnC,mBAAmB;EACnB,eAAe,EAAA;EATnB;IAYQ,aAAa,EAAA;EAZrB;IAgBQ,WAAW;IACX,cAAc;IACd,aAAa;IACb,2BAA2B;IAC3B,wBAAwB;IACxB,kBAAkB;IAClB,eAAe,EAAA;IAtBvB;MAyBY,WAAW;MACX,cAAc;MAEd,2EAAwE;MACxE,mEAAgE,EAAA;IA7B5E;MAiCY,WAAW;MACX,cAAc;MAEd,mEAAgE;MAChE,2DAAwD,EAAA;IArCpE;MAyCY,oBAAoB;MACpB,UAAU;MACV,WAAW;MACX,kGAA0F;MAC1F,kBAAkB;MAClB,gCAAgC;MAChC,kBAAkB,EAAA;EA/C9B;IAoDQ,WAAW;IACX,cAAc;IACd,aAAa;IACb,YAAY;IACZ,8BAA8B;IAC9B,wBAAwB,EAAA;IAzDhC;MA4DY,WAAW;MACX,cAAc;MACd,kBAAkB;MAClB,oBAAoB;MACpB,WAAW;MACX,YAAY;MACZ,mBAAmB;MACnB,uBAAuB,EAAA;IAnEnC;MAuEY,WAAW;MACX,cAAc;MACd,kBAAkB;MAClB,YAAY;MACZ,kBAAkB;MAClB,eAAe;MAEf,2GACqD;MACrD,mHAC2D,EAAA;MAjFvE;QAoFgB,oBAAoB;QACpB,UAAU;QACV,YAAY;QACZ,gCAAgC;QAChC,yBAAoC;QACpC,2CAA2C;QAC3C,kBAAkB,EAAA;EA1FlC;IAgGQ,aAAa;IACb,WAAW;IACX,2BAA2B;IAC3B,2BAA2B,EAAA;IAnGnC;MAsGY,oBAAoB;MACpB,kBAAkB;MAClB,WAAW;MACX,cAAc;MACd,kBAAkB,EAAA;MA1G9B;QA6GgB,WAAW,EAAA;IA7G3B;MAkHY,oBAAoB;MACpB,kBAAkB;MAClB,WAAW;MACX,cAAc;MACd,YAAW,EAAA;EAtHvB;IA2HQ,WAAW;IACX,cAAc;IACd,aAAa;IACb,YAAY;IACZ,wDAAwD;IACxD,wBAAwB,EAAA;EAhIhC;IAoIQ,WAAW;IACX,cAAc,EAAA;EArItB;IAyIQ,WAAW;IACX,cAAc,EAAA;EA1ItB;IA8IQ,WAAW;IACX,cAAc,EAAA;EA/ItB;IAmJQ,WAAW;IACX,cAAc,EAAA;IApJtB;MAuJY,YAAY,EAAA;EAvJxB;IA4JQ,WAAW;IACX,cAAc;IACd,aAAa;IACb,8BAA8B;IAC9B,wBAAwB,EAAA;IAhKhC;MAmKY,oBAAoB;MACpB,kBAAkB;MAClB,WAAW;MACX,cAAc;MACd,iBAAiB;MACjB,YAAW,EAAA;IAxKvB;MA4KY,kBAAkB;MAClB,kBAAkB;MAClB,WAAW;MACX,cAAc;MACd,iBAAiB;MACjB,kBAAkB,EAAA;MAjL9B;QAoLgB,WAAW,EAAA;EApL3B;IA0LQ,YAAY;IACZ,eAAe;IACf,YAAY;IACZ,kBAAkB;IAClB,kBAAkB;IAClB,WAAW;IACX,cAAc,EAAA","sourcesContent":[".color-picker-container {\r\n    width: 320px;\r\n    height: 300px;\r\n    background-color: white;\r\n    display: grid;    \r\n    grid-template-columns: 100%;\r\n    grid-template-rows: 50% 50px 60px 40px 1fr auto;\r\n    font-family: \"acumin-pro-condensed\";\r\n    font-weight: normal;   \r\n    font-size: 14px;\r\n\r\n    &.with-hints {        \r\n        height: 380px;\r\n    }\r\n    \r\n    .color-picker-saturation {\r\n        grid-row: 1;\r\n        grid-column: 1;\r\n        display: grid;\r\n        grid-template-columns: 100%;\r\n        grid-template-rows: 100%;\r\n        position: relative;\r\n        cursor: pointer;\r\n    \r\n        .color-picker-saturation-white {\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n\r\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\r\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\r\n        }\r\n\r\n        .color-picker-saturation-black {\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n\r\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\r\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\r\n        }\r\n\r\n        .color-picker-saturation-cursor {\r\n            pointer-events: none;\r\n            width: 4px;\r\n            height: 4px;\r\n            box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3), 0 0 1px 2px rgba(0,0,0,.4);\r\n            border-radius: 50%;\r\n            transform: translate(-2px, -2px);\r\n            position: absolute;\r\n        }\r\n    }\r\n\r\n    .color-picker-hue {\r\n        grid-row: 2;\r\n        grid-column: 1;\r\n        display: grid;\r\n        margin: 10px;\r\n        grid-template-columns: 24% 76%;\r\n        grid-template-rows: 100%;\r\n\r\n        .color-picker-hue-color {\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n            align-self: center;\r\n            justify-self: center;\r\n            width: 30px;\r\n            height: 30px;\r\n            border-radius: 15px;\r\n            border: 1px solid black;\r\n        }\r\n\r\n        .color-picker-hue-slider {\r\n            grid-row: 1;\r\n            grid-column: 2;\r\n            align-self: center;\r\n            height: 16px;\r\n            position: relative;\r\n            cursor: pointer;\r\n            \r\n            background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\r\n                    33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\r\n            background: -webkit-linear-gradient(to right, #f00 0%, #ff0\r\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);                \r\n\r\n            .color-picker-hue-cursor {\r\n                pointer-events: none;\r\n                width: 8px;\r\n                height: 18px;\r\n                transform: translate(-4px, -2px);\r\n                background-color: rgb(248, 248, 248);\r\n                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);\r\n                position: absolute;\r\n            }\r\n        }\r\n    }\r\n\r\n    .color-picker-component {\r\n        display: grid;\r\n        margin: 5px;\r\n        grid-template-columns: 100%;\r\n        grid-template-rows: 50% 50%;\r\n\r\n        .color-picker-component-value {\r\n            justify-self: center;\r\n            align-self: center;\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n            margin-bottom: 4px;\r\n\r\n            input {\r\n                width: 50px;\r\n            }\r\n        }\r\n\r\n        .color-picker-component-label {\r\n            justify-self: center;\r\n            align-self: center;\r\n            grid-row: 2;\r\n            grid-column: 1;\r\n            color:black;\r\n        }\r\n    }\r\n\r\n    .color-picker-rgb {\r\n        grid-row: 3;\r\n        grid-column: 1;\r\n        display: grid;\r\n        margin: 10px;\r\n        grid-template-columns: 20% 6.66% 20% 6.66% 20% 6.66% 20%;\r\n        grid-template-rows: 100%;\r\n    }\r\n\r\n    .red {\r\n        grid-row: 1;\r\n        grid-column: 1;\r\n    }\r\n\r\n    .green {\r\n        grid-row: 1;\r\n        grid-column: 3;\r\n    }\r\n\r\n    .blue {\r\n        grid-row: 1;\r\n        grid-column: 5;\r\n    }\r\n\r\n    .alpha {\r\n        grid-row: 1;\r\n        grid-column: 7;\r\n\r\n        &.grayed {\r\n            opacity: 0.5;\r\n        }\r\n    }\r\n\r\n    .color-picker-hex {\r\n        grid-row: 4;\r\n        grid-column: 1;\r\n        display: grid;       \r\n        grid-template-columns: 20% 80%;\r\n        grid-template-rows: 100%;\r\n\r\n        .color-picker-hex-label {\r\n            justify-self: center;\r\n            align-self: center;\r\n            grid-row: 1;\r\n            grid-column: 1;\r\n            margin-left: 10px;\r\n            color:black;\r\n        }\r\n\r\n        .color-picker-hex-value {\r\n            justify-self: left;\r\n            align-self: center;\r\n            grid-row: 1;\r\n            grid-column: 2;\r\n            margin-left: 10px;\r\n            margin-right: 10px;\r\n\r\n            input {\r\n                width: 70px;\r\n            }\r\n        }\r\n    }\r\n\r\n    .color-picker-warning {\r\n        color: black;\r\n        font-size: 11px;\r\n        padding: 4px;\r\n        justify-self: left;\r\n        align-self: center;\r\n        grid-row: 6;\r\n        grid-column: 1;\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
-module.exports = exports;
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ "../../node_modules/css-loader/dist/runtime/api.js":
-/*!*************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/css-loader/dist/runtime/api.js ***!
-  \*************************************************************************/
+/*!************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/runtime/api.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10207,27 +10287,27 @@ module.exports = exports;
 */
 // css base code, injected by the css-loader
 // eslint-disable-next-line func-names
-module.exports = function (useSourceMap) {
+module.exports = function (cssWithMappingToString) {
   var list = []; // return the list of modules as css string
 
   list.toString = function toString() {
     return this.map(function (item) {
-      var content = cssWithMappingToString(item, useSourceMap);
+      var content = cssWithMappingToString(item);
 
       if (item[2]) {
         return "@media ".concat(item[2], " {").concat(content, "}");
       }
 
       return content;
-    }).join('');
+    }).join("");
   }; // import a list of modules into the list
   // eslint-disable-next-line func-names
 
 
   list.i = function (modules, mediaQuery, dedupe) {
-    if (typeof modules === 'string') {
+    if (typeof modules === "string") {
       // eslint-disable-next-line no-param-reassign
-      modules = [[null, modules, '']];
+      modules = [[null, modules, ""]];
     }
 
     var alreadyImportedModules = {};
@@ -10266,40 +10346,59 @@ module.exports = function (useSourceMap) {
   return list;
 };
 
-function cssWithMappingToString(item, useSourceMap) {
-  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
+/***/ }),
 
-  var cssMapping = item[3];
+/***/ "../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js":
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/css-loader/dist/runtime/cssWithMappingToString.js ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+module.exports = function cssWithMappingToString(item) {
+  var _item = _slicedToArray(item, 4),
+      content = _item[1],
+      cssMapping = _item[3];
 
   if (!cssMapping) {
     return content;
   }
 
-  if (useSourceMap && typeof btoa === 'function') {
-    var sourceMapping = toComment(cssMapping);
+  if (typeof btoa === "function") {
+    // eslint-disable-next-line no-undef
+    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
+    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+    var sourceMapping = "/*# ".concat(data, " */");
     var sourceURLs = cssMapping.sources.map(function (source) {
-      return "/*# sourceURL=".concat(cssMapping.sourceRoot || '').concat(source, " */");
+      return "/*# sourceURL=".concat(cssMapping.sourceRoot || "").concat(source, " */");
     });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+    return [content].concat(sourceURLs).concat([sourceMapping]).join("\n");
   }
 
-  return [content].join('\n');
-} // Adapted from convert-source-map (MIT)
-
-
-function toComment(sourceMap) {
-  // eslint-disable-next-line no-undef
-  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
-  return "/*# ".concat(data, " */");
-}
+  return [content].join("\n");
+};
 
 /***/ }),
 
 /***/ "../../node_modules/object-assign/index.js":
-/*!*****************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/object-assign/index.js ***!
-  \*****************************************************************/
+/*!****************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/object-assign/index.js ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10399,9 +10498,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /***/ }),
 
 /***/ "../../node_modules/process/browser.js":
-/*!*************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/process/browser.js ***!
-  \*************************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/process/browser.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10594,9 +10693,9 @@ process.umask = function() { return 0; };
 /***/ }),
 
 /***/ "../../node_modules/prop-types/checkPropTypes.js":
-/*!***********************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/prop-types/checkPropTypes.js ***!
-  \***********************************************************************/
+/*!**********************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/prop-types/checkPropTypes.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10708,9 +10807,9 @@ module.exports = checkPropTypes;
 /***/ }),
 
 /***/ "../../node_modules/prop-types/factoryWithTypeCheckers.js":
-/*!********************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/prop-types/factoryWithTypeCheckers.js ***!
-  \********************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/prop-types/factoryWithTypeCheckers.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11311,9 +11410,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /***/ }),
 
 /***/ "../../node_modules/prop-types/index.js":
-/*!**************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/prop-types/index.js ***!
-  \**************************************************************/
+/*!*************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/prop-types/index.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11337,9 +11436,9 @@ if (true) {
 /***/ }),
 
 /***/ "../../node_modules/prop-types/lib/ReactPropTypesSecret.js":
-/*!*********************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
-  \*********************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11361,9 +11460,9 @@ module.exports = ReactPropTypesSecret;
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/AbstractMenu.js":
-/*!********************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/AbstractMenu.js ***!
-  \********************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/AbstractMenu.js ***!
+  \*******************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11587,9 +11686,9 @@ var _initialiseProps = function _initialiseProps() {
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/ContextMenu.js":
-/*!*******************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/ContextMenu.js ***!
-  \*******************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/ContextMenu.js ***!
+  \******************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11904,9 +12003,9 @@ ContextMenu.defaultProps = {
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/ContextMenuTrigger.js":
-/*!**************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/ContextMenuTrigger.js ***!
-  \**************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/ContextMenuTrigger.js ***!
+  \*************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12104,9 +12203,9 @@ ContextMenuTrigger.defaultProps = {
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/MenuItem.js":
-/*!****************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/MenuItem.js ***!
-  \****************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/MenuItem.js ***!
+  \***************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12244,9 +12343,9 @@ MenuItem.defaultProps = {
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/SubMenu.js":
-/*!***************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/SubMenu.js ***!
-  \***************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/SubMenu.js ***!
+  \**************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12584,9 +12683,9 @@ SubMenu.defaultProps = {
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/actions.js":
-/*!***************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/actions.js ***!
-  \***************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/actions.js ***!
+  \**************************************************************************************************/
 /*! exports provided: MENU_SHOW, MENU_HIDE, dispatchGlobalEvent, showMenu, hideMenu */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12644,9 +12743,9 @@ function hideMenu() {
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/connectMenu.js":
-/*!*******************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/connectMenu.js ***!
-  \*******************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/connectMenu.js ***!
+  \******************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12742,9 +12841,9 @@ var ignoredTriggerProps = [].concat(_toConsumableArray(Object.keys(_ContextMenuT
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/globalEventListener.js":
-/*!***************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/globalEventListener.js ***!
-  \***************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/globalEventListener.js ***!
+  \**************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12804,9 +12903,9 @@ var GlobalEventListener = function GlobalEventListener() {
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/helpers.js":
-/*!***************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/helpers.js ***!
-  \***************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/helpers.js ***!
+  \**************************************************************************************************/
 /*! exports provided: callIfExists, hasOwnProp, uniqueId, cssClasses, store, canUseDOM */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12853,9 +12952,9 @@ var canUseDOM = Boolean(typeof window !== 'undefined' && window.document && wind
 /***/ }),
 
 /***/ "../../node_modules/react-contextmenu/es6/index.js":
-/*!*************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-contextmenu/es6/index.js ***!
-  \*************************************************************************/
+/*!************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-contextmenu/es6/index.js ***!
+  \************************************************************************************************/
 /*! exports provided: ContextMenu, ContextMenuTrigger, MenuItem, SubMenu, connectMenu, hideMenu, showMenu */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12891,9 +12990,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "../../node_modules/react-dom/cjs/react-dom.development.js":
-/*!*********************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-dom/cjs/react-dom.development.js ***!
-  \*********************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-dom/cjs/react-dom.development.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37915,9 +38014,9 @@ exports.version = ReactVersion;
 /***/ }),
 
 /***/ "../../node_modules/react-dom/index.js":
-/*!*************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-dom/index.js ***!
-  \*************************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-dom/index.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37960,9 +38059,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "../../node_modules/react-is/cjs/react-is.development.js":
-/*!*******************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-is/cjs/react-is.development.js ***!
-  \*******************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-is/cjs/react-is.development.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38153,9 +38252,9 @@ exports.typeOf = typeOf;
 /***/ }),
 
 /***/ "../../node_modules/react-is/index.js":
-/*!************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react-is/index.js ***!
-  \************************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react-is/index.js ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38170,9 +38269,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "../../node_modules/react/cjs/react.development.js":
-/*!*************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react/cjs/react.development.js ***!
-  \*************************************************************************/
+/*!************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react/cjs/react.development.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40094,9 +40193,9 @@ exports.version = ReactVersion;
 /***/ }),
 
 /***/ "../../node_modules/react/index.js":
-/*!*********************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/react/index.js ***!
-  \*********************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/react/index.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40111,9 +40210,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "../../node_modules/scheduler/cjs/scheduler-tracing.development.js":
-/*!*****************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
-  \*****************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40472,9 +40571,9 @@ exports.unstable_wrap = unstable_wrap;
 /***/ }),
 
 /***/ "../../node_modules/scheduler/cjs/scheduler.development.js":
-/*!*********************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/scheduler/cjs/scheduler.development.js ***!
-  \*********************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/scheduler/cjs/scheduler.development.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41342,9 +41441,9 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
 /***/ }),
 
 /***/ "../../node_modules/scheduler/index.js":
-/*!*************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/scheduler/index.js ***!
-  \*************************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/scheduler/index.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41359,9 +41458,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "../../node_modules/scheduler/tracing.js":
-/*!***************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/scheduler/tracing.js ***!
-  \***************************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/scheduler/tracing.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41376,9 +41475,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "../../node_modules/setimmediate/setImmediate.js":
-/*!***********************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/setimmediate/setImmediate.js ***!
-  \***********************************************************************/
+/*!**********************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/setimmediate/setImmediate.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41574,9 +41673,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!************************************************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \************************************************************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41854,9 +41953,9 @@ module.exports = function (list, options) {
 /***/ }),
 
 /***/ "../../node_modules/timers-browserify/main.js":
-/*!********************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/timers-browserify/main.js ***!
-  \********************************************************************/
+/*!*******************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/timers-browserify/main.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41929,9 +42028,9 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ }),
 
 /***/ "../../node_modules/tslib/tslib.es6.js":
-/*!*************************************************************!*\
-  !*** E:/Babylon/Babylon.js/node_modules/tslib/tslib.es6.js ***!
-  \*************************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/tslib/tslib.es6.js ***!
+  \************************************************************************************/
 /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __spreadArray, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -42236,13 +42335,53 @@ module.exports = g;
 /***/ }),
 
 /***/ "../../sharedUiComponents/imgs/fillColorIcon.svg":
-/*!***********************************************************************!*\
-  !*** E:/Babylon/Babylon.js/sharedUiComponents/imgs/fillColorIcon.svg ***!
-  \***********************************************************************/
+/*!**********************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/sharedUiComponents/imgs/fillColorIcon.svg ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M7.31,16.54v4.1a2,2,0,0,0,2,2H21.42a2,2,0,0,0,2-2V11.78a2,2,0,0,0-2-2H14.21L15.42,11h6a.8.8,0,0,1,.8.81v8.86a.8.8,0,0,1-.8.81H9.33a.81.81,0,0,1-.81-.81V17.75Z' style='fill:%23333'/%3E%3Cpath d='M10.54,8a.6.6,0,1,1,1.2,0V9a1.57,1.57,0,0,1,1,.46l2.85,2.85a1.61,1.61,0,0,1,0,2.28L12.17,18a1.61,1.61,0,0,1-2.28,0L7,15.13a1.61,1.61,0,0,1,0-2.28l3.42-3.42.08-.07Zm0,3.62v-.5L8.21,13.4h6.64a.34.34,0,0,0-.12-.26l-2.85-2.85a.34.34,0,0,0-.14-.09v1.37a.6.6,0,1,1-1.2,0Zm-2.32,3,2.52,2.52a.42.42,0,0,0,.57,0l2.53-2.52Z' style='fill:%23333'/%3E%3Cpath d='M14.57,17.32a2.76,2.76,0,0,1,.27-1.12,5.33,5.33,0,0,1,.54-.91c.2-.27.39-.49.53-.65l.24-.26h0a.6.6,0,0,1,.86,0l.24.27a6,6,0,0,1,.53.65,5.33,5.33,0,0,1,.54.91,2.76,2.76,0,0,1,.28,1.12,2,2,0,1,1-4,0ZM16.37,16a4.15,4.15,0,0,0-.43.72,1.57,1.57,0,0,0-.17.61.81.81,0,1,0,1.62,0,1.57,1.57,0,0,0-.17-.61,4.15,4.15,0,0,0-.43-.72l-.21-.28Z' style='fill:%23333'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs sync recursive ^\\.\\/cursor_rotate.*\\.svg$":
+/*!******************************************************!*\
+  !*** ../public/imgs sync ^\.\/cursor_rotate.*\.svg$ ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./cursor_rotate0.svg": "../public/imgs/cursor_rotate0.svg",
+	"./cursor_rotate1.svg": "../public/imgs/cursor_rotate1.svg",
+	"./cursor_rotate2.svg": "../public/imgs/cursor_rotate2.svg",
+	"./cursor_rotate3.svg": "../public/imgs/cursor_rotate3.svg",
+	"./cursor_rotate4.svg": "../public/imgs/cursor_rotate4.svg",
+	"./cursor_rotate5.svg": "../public/imgs/cursor_rotate5.svg",
+	"./cursor_rotate6.svg": "../public/imgs/cursor_rotate6.svg",
+	"./cursor_rotate7.svg": "../public/imgs/cursor_rotate7.svg"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "../public/imgs sync recursive ^\\.\\/cursor_rotate.*\\.svg$";
 
 /***/ }),
 
@@ -42364,6 +42503,138 @@ module.exports = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml,%3Csvg id='icons' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23333;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M13.31,15.34a8.34,8.34,0,0,1,14.25,8.34c-1.35,3.7-4.91,5.16-7.47,3.3a3.82,3.82,0,0,1-1.52-3l-.08-.81,0-.32c-.1-.76-.26-1.1-.58-1.28a1.27,1.27,0,0,0-1.3,0l-.28.12-.15.06a3.12,3.12,0,0,1-2.07.34l-.17,0-.13,0C11.49,21.29,11.15,18.2,13.31,15.34Zm.8,5.48.1,0,.11,0a1.81,1.81,0,0,0,1.17-.19l.49-.21a2.47,2.47,0,0,1,3.68,2.21l0,.37.05.44,0,.34a2.75,2.75,0,0,0,1,2.16c1.86,1.35,4.52.25,5.61-2.73a7.11,7.11,0,0,0-12.12-7.19C12.59,18.33,12.8,20.38,14.11,20.82Zm9.16-1.63a1,1,0,1,1,2-.53,1,1,0,0,1-2,.53ZM23.68,22a1,1,0,1,1,1.24.72A1,1,0,0,1,23.68,22Zm-2-5.3a1,1,0,0,1,.72-1.25,1,1,0,1,1,.53,2A1,1,0,0,1,21.66,16.74Zm0,7.35a1,1,0,0,1,.72-1.25,1,1,0,0,1,.53,2A1,1,0,0,1,21.63,24.09ZM18.78,16a1,1,0,1,1,1.25.72A1,1,0,0,1,18.78,16Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_rotate0.svg":
+/*!*****************************************!*\
+  !*** ../public/imgs/cursor_rotate0.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath d='M18.91,12.11l-.66-.66a8.14,8.14,0,0,0-11.5,0l-.66.66L4.68,10.7,3.39,15.51l4.82-1.29L6.8,12.81l.65-.65a7.16,7.16,0,0,1,10.1,0l.65.65-1.41,1.41,4.82,1.29L20.32,10.7Z'/%3E%3Cpath class='cls-1' d='M12.5,9.07a8.13,8.13,0,0,1,5.75,2.38l.66.66,1.41-1.41,1.29,4.81-4.82-1.29,1.41-1.41-.65-.65a7.15,7.15,0,0,0-10.1,0l-.65.65,1.41,1.41L3.39,15.51,4.68,10.7l1.41,1.41.66-.66A8.13,8.13,0,0,1,12.5,9.07m0-1a9.08,9.08,0,0,0-6.41,2.62l-.7-.7L4.16,8.77l-.44,1.67L2.43,15.25,2,16.93l1.67-.45,4.82-1.29,1.67-.45L8.91,13.52l-.7-.71a6.16,6.16,0,0,1,8.58,0l-.71.71-1.22,1.22,1.67.45,4.82,1.29,1.67.45-.45-1.68-1.29-4.81-.44-1.67L19.61,10l-.7.7A9.08,9.08,0,0,0,12.5,8.07Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_rotate1.svg":
+/*!*****************************************!*\
+  !*** ../public/imgs/cursor_rotate1.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath d='M18.33,15.74v-.93a8.15,8.15,0,0,0-8.14-8.14H9.26v-2L5,7.17l4.31,2.5v-2h.93a7.14,7.14,0,0,1,7.14,7.14v.93h-2l2.5,4.31,2.49-4.31Z'/%3E%3Cpath class='cls-1' d='M9.26,4.68v2h.93a8.15,8.15,0,0,1,8.14,8.14v.93h2l-2.49,4.31-2.5-4.31h2v-.93a7.14,7.14,0,0,0-7.14-7.14H9.26v2L5,7.17,9.26,4.68m1-1.73-1.5.86L4.45,6.31,3,7.17,4.45,8l4.31,2.49,1.5.87V8.67a6.15,6.15,0,0,1,6.07,6.07H13.6l.87,1.5L17,20.55l.87,1.5.86-1.5,2.5-4.31.86-1.5H19.33a9.16,9.16,0,0,0-9.07-9.07V3Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_rotate2.svg":
+/*!*****************************************!*\
+  !*** ../public/imgs/cursor_rotate2.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath d='M12.89,18.91l.66-.66a8.14,8.14,0,0,0,0-11.5l-.66-.66L14.3,4.68,9.49,3.39l1.29,4.82L12.19,6.8l.65.65a7.16,7.16,0,0,1,0,10.1l-.65.65-1.41-1.41L9.49,21.61l4.81-1.29Z'/%3E%3Cpath class='cls-1' d='M9.49,3.39,14.3,4.68,12.89,6.09l.66.66a8.14,8.14,0,0,1,0,11.5l-.66.66,1.41,1.41L9.49,21.61l1.29-4.82,1.41,1.41.65-.65a7.16,7.16,0,0,0,0-10.1l-.65-.65L10.78,8.21,9.49,3.39M8.07,2l.45,1.67L9.81,8.47l.45,1.67,1.22-1.23.71-.7a6.16,6.16,0,0,1,0,8.58l-.71-.7-1.22-1.23-.45,1.67L8.52,21.35,8.07,23l1.68-.45,4.81-1.29,1.67-.44L15,19.61l-.7-.7a9.15,9.15,0,0,0,0-12.82l.7-.7,1.22-1.23-1.67-.44L9.75,2.43,8.07,2Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_rotate3.svg":
+/*!*****************************************!*\
+  !*** ../public/imgs/cursor_rotate3.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath d='M9.26,18.33h.93a8.15,8.15,0,0,0,8.14-8.14V9.26h2L17.83,5l-2.5,4.31h2v.93a7.14,7.14,0,0,1-7.14,7.14H9.26v-2L5,17.83l4.31,2.49Z'/%3E%3Cpath class='cls-1' d='M17.83,5l2.49,4.31h-2v.93a8.15,8.15,0,0,1-8.14,8.14H9.26v2L5,17.83l4.31-2.5v2h.93a7.14,7.14,0,0,0,7.14-7.14V9.26h-2L17.83,5m0-2L17,4.45,14.47,8.76l-.87,1.5h2.73a6.15,6.15,0,0,1-6.07,6.07V13.6l-1.5.87L4.45,17,3,17.83l1.5.86,4.31,2.5,1.5.86V19.33a9.16,9.16,0,0,0,9.07-9.07h2.72l-.86-1.5-2.5-4.31L17.83,3Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_rotate4.svg":
+/*!*****************************************!*\
+  !*** ../public/imgs/cursor_rotate4.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath d='M6.09,12.89l.66.66a8.14,8.14,0,0,0,11.5,0l.66-.66,1.41,1.41,1.29-4.81-4.82,1.29,1.41,1.41-.65.65a7.16,7.16,0,0,1-10.1,0l-.65-.65,1.41-1.41L3.39,9.49,4.68,14.3Z'/%3E%3Cpath class='cls-1' d='M21.61,9.49,20.32,14.3l-1.41-1.41-.66.66a8.14,8.14,0,0,1-11.5,0l-.66-.66L4.68,14.3,3.39,9.49l4.82,1.29L6.8,12.19l.65.65a7.15,7.15,0,0,0,10.1,0l.65-.65-1.41-1.41,4.82-1.29M23,8.07l-1.67.45L16.53,9.81l-1.67.45,1.23,1.22.7.71a6.16,6.16,0,0,1-8.58,0l.7-.71,1.23-1.22L8.47,9.81,3.65,8.52,2,8.07l.45,1.68,1.29,4.81.44,1.67L5.39,15l.7-.7a9.15,9.15,0,0,0,12.82,0l.7.7,1.23,1.22.44-1.67,1.29-4.81L23,8.07Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_rotate5.svg":
+/*!*****************************************!*\
+  !*** ../public/imgs/cursor_rotate5.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath d='M6.67,9.26v.93a8.15,8.15,0,0,0,8.14,8.14h.93v2l4.31-2.49-4.31-2.5v2h-.93a7.14,7.14,0,0,1-7.14-7.14V9.26h2L7.17,5,4.68,9.26Z'/%3E%3Cpath class='cls-1' d='M7.17,5l2.5,4.31h-2v.93a7.14,7.14,0,0,0,7.14,7.14h.93v-2l4.31,2.5-4.31,2.49v-2h-.93a8.15,8.15,0,0,1-8.14-8.14V9.26h-2L7.17,5m0-2-.86,1.5L3.81,8.76,3,10.26H5.67a9.16,9.16,0,0,0,9.07,9.07v2.72l1.5-.86,4.31-2.5,1.5-.86L20.55,17l-4.31-2.49-1.5-.87v2.73a6.15,6.15,0,0,1-6.07-6.07H11.4l-.87-1.5L8,4.45,7.17,3Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_rotate6.svg":
+/*!*****************************************!*\
+  !*** ../public/imgs/cursor_rotate6.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath d='M12.11,6.09l-.66.66a8.14,8.14,0,0,0,0,11.5l.66.66L10.7,20.32l4.81,1.29-1.29-4.82L12.81,18.2l-.65-.65a7.16,7.16,0,0,1,0-10.1l.65-.65,1.41,1.41,1.29-4.82L10.7,4.68Z'/%3E%3Cpath class='cls-1' d='M15.51,3.39,14.22,8.21,12.81,6.8l-.65.65a7.16,7.16,0,0,0,0,10.1l.65.65,1.41-1.41,1.29,4.82L10.7,20.32l1.41-1.41-.66-.66a8.14,8.14,0,0,1,0-11.5l.66-.66L10.7,4.68l4.81-1.29M16.93,2l-1.68.45L10.44,3.72l-1.67.44L10,5.39l.7.7a9.15,9.15,0,0,0,0,12.82l-.7.7L8.77,20.84l1.67.44,4.81,1.29,1.68.45-.45-1.67-1.29-4.82-.45-1.67-1.22,1.23-.71.7a6.16,6.16,0,0,1,0-8.58l.71.7,1.22,1.23.45-1.67,1.29-4.82L16.93,2Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_rotate7.svg":
+/*!*****************************************!*\
+  !*** ../public/imgs/cursor_rotate7.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath d='M15.74,6.67h-.93a8.15,8.15,0,0,0-8.14,8.14v.93h-2l2.49,4.31,2.5-4.31h-2v-.93a7.14,7.14,0,0,1,7.14-7.14h.93v2l4.31-2.5L15.74,4.68Z'/%3E%3Cpath class='cls-1' d='M15.74,4.68l4.31,2.49-4.31,2.5v-2h-.93a7.14,7.14,0,0,0-7.14,7.14v.93h2l-2.5,4.31L4.68,15.74h2v-.93a8.15,8.15,0,0,1,8.14-8.14h.93v-2M14.74,3V5.67a9.16,9.16,0,0,0-9.07,9.07H3l.86,1.5,2.5,4.31.86,1.5L8,20.55l2.49-4.31.87-1.5H8.67a6.15,6.15,0,0,1,6.07-6.07V11.4l1.5-.87L20.55,8l1.5-.87-1.5-.86-4.31-2.5L14.74,3Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_scaleDiagonalLeft.svg":
+/*!***************************************************!*\
+  !*** ../public/imgs/cursor_scaleDiagonalLeft.svg ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpolygon points='7.51 11.04 6.22 6.22 11.04 7.51 9.63 8.92 16.08 15.37 17.48 13.96 18.77 18.77 13.96 17.48 15.37 16.08 8.92 9.63 7.51 11.04'/%3E%3Cpath class='cls-1' d='M6.22,6.22,11,7.51,9.63,8.92l6.45,6.45L17.49,14l1.29,4.82L14,17.49l1.41-1.41L8.92,9.63,7.51,11,6.22,6.22M4.81,4.81l.45,1.67L6.55,11.3,7,13l1.22-1.22.7-.7,5,5-.7.7L12,18l1.67.45,4.82,1.29,1.67.45-.45-1.67L18.45,13.7,18,12l-1.22,1.22-.7.7-5-5,.7-.7L13,7,11.3,6.55,6.48,5.26,4.81,4.81Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_scaleDiagonalRight.svg":
+/*!****************************************************!*\
+  !*** ../public/imgs/cursor_scaleDiagonalRight.svg ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpolygon points='17.48 11.04 18.77 6.22 13.96 7.51 15.37 8.92 8.92 15.37 7.51 13.96 6.22 18.77 11.04 17.48 9.63 16.08 16.08 9.63 17.48 11.04'/%3E%3Cpath class='cls-1' d='M18.78,6.22,17.49,11,16.08,9.63,9.63,16.08,11,17.49,6.22,18.78,7.51,14l1.41,1.41,6.45-6.45L14,7.51l4.82-1.29m1.41-1.41-1.67.45L13.7,6.55,12,7l1.22,1.22.7.7-5,5-.7-.7L7,12,6.55,13.7,5.26,18.52l-.45,1.67,1.67-.45,4.82-1.29L13,18l-1.22-1.22-.7-.7,5-5,.7.7L18,13l.45-1.67,1.29-4.82.45-1.67Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_scaleHorizontal.svg":
+/*!*************************************************!*\
+  !*** ../public/imgs/cursor_scaleHorizontal.svg ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpolygon points='7.94 10.01 3.63 12.5 7.94 14.99 7.94 13 17.06 13 17.06 14.99 21.38 12.5 17.06 10.01 17.06 12 7.94 12 7.94 10.01'/%3E%3Cpath class='cls-1' d='M7.94,10v2h9.12V10l4.31,2.49L17.06,15V13H7.94v2L3.63,12.5,7.94,10m1-1.74-1.5.87L3.13,11.63l-1.5.87,1.5.87,4.31,2.49,1.5.87V14h7.12v2.73l1.5-.87,4.31-2.49,1.5-.87-1.5-.87L17.56,9.14l-1.5-.87V11H8.94V8.27Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "../public/imgs/cursor_scaleVertical.svg":
+/*!***********************************************!*\
+  !*** ../public/imgs/cursor_scaleVertical.svg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' width='25' height='25'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpolygon points='14.99 7.94 12.5 3.63 10.01 7.94 12 7.94 12 17.06 10.01 17.06 12.5 21.38 14.99 17.06 13 17.06 13 7.94 14.99 7.94'/%3E%3Cpath class='cls-1' d='M12.5,3.63,15,7.94H13v9.12h2L12.5,21.37,10,17.06h2V7.94H10L12.5,3.63m0-2-.87,1.5L9.14,7.44l-.87,1.5H11v7.12H8.27l.87,1.5,2.49,4.31.87,1.5.87-1.5,2.49-4.31.87-1.5H14V8.94h2.73l-.87-1.5L13.37,3.13l-.87-1.5Z'/%3E%3C/svg%3E"
 
 /***/ }),
 
@@ -42829,13 +43100,10 @@ module.exports = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommandBarComponent", function() { return CommandBarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var babylonjs_gui_2D_controls_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! babylonjs-gui/2D/controls/container */ "babylonjs-gui/2D/controls/button");
-/* harmony import */ var babylonjs_gui_2D_controls_container__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babylonjs_gui_2D_controls_container__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _commandButtonComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./commandButtonComponent */ "./components/commandButtonComponent.tsx");
-/* harmony import */ var _commandDropdownComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./commandDropdownComponent */ "./components/commandDropdownComponent.tsx");
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _commandButtonComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./commandButtonComponent */ "./components/commandButtonComponent.tsx");
+/* harmony import */ var _commandDropdownComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./commandDropdownComponent */ "./components/commandDropdownComponent.tsx");
 
 
 
@@ -42873,32 +43141,17 @@ var CommandBarComponent = /** @class */ (function (_super) {
             _this._selecting = false;
             _this.forceUpdate();
         });
-        props.globalState.onOutlinesObservable.add(function () {
-            _this._outlines = !_this._outlines;
-            var nodes = _this.props.globalState.workbench.nodes;
-            nodes.forEach(function (node) {
-                _this.updateNodeOutline(node);
-            });
+        props.globalState.onOutlineChangedObservable.add(function () {
             _this.forceUpdate();
         });
         return _this;
     }
-    CommandBarComponent.prototype.updateNodeOutline = function (guiControl) {
-        var _this = this;
-        guiControl.isHighlighted = this._outlines;
-        guiControl.highlightLineWidth = 5;
-        if (guiControl instanceof babylonjs_gui_2D_controls_container__WEBPACK_IMPORTED_MODULE_1__["Container"]) {
-            guiControl.children.forEach(function (child) {
-                _this.updateNodeOutline(child);
-            });
-        }
-    };
     CommandBarComponent.prototype.render = function () {
         var _this = this;
-        return (react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", { className: "ge-commands" },
-            react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", { className: "commands-left" },
-                react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("img", { src: logoIcon, color: "white", className: "active" }),
-                react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_commandDropdownComponent__WEBPACK_IMPORTED_MODULE_4__["CommandDropdownComponent"], { globalState: this.props.globalState, toRight: true, icon: hamburgerIcon, tooltip: "Options", items: [
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-commands" },
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "commands-left" },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: logoIcon, color: "white", className: "active" }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandDropdownComponent__WEBPACK_IMPORTED_MODULE_3__["CommandDropdownComponent"], { globalState: this.props.globalState, toRight: true, icon: hamburgerIcon, tooltip: "Options", items: [
                         {
                             label: "Save",
                             onClick: function () {
@@ -42924,19 +43177,29 @@ var CommandBarComponent = /** @class */ (function (_super) {
                         {
                             label: "Copy Selected",
                             onClick: function () {
-                                _this.props.globalState.workbench.copyToClipboard();
+                                _this.props.globalState.onCopyObservable.notifyObservers(function (content) { return _this.props.globalState.hostWindow.navigator.clipboard.writeText(content); });
                             },
                         },
                         {
                             label: "Paste",
-                            onClick: function () {
-                                _this.props.globalState.workbench.pasteFromClipboard();
-                            }
+                            onClick: function () { return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, function () {
+                                var _a, _b;
+                                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_c) {
+                                    switch (_c.label) {
+                                        case 0:
+                                            _b = (_a = this.props.globalState.onPasteObservable).notifyObservers;
+                                            return [4 /*yield*/, this.props.globalState.hostWindow.navigator.clipboard.readText()];
+                                        case 1:
+                                            _b.apply(_a, [_c.sent()]);
+                                            return [2 /*return*/];
+                                    }
+                                });
+                            }); }
                         },
                         {
                             label: "Delete Selected",
                             onClick: function () {
-                                _this.props.globalState.workbench.selectedGuiNodes.forEach(function (guiNode) {
+                                _this.props.globalState.selectedControls.forEach(function (guiNode) {
                                     var _a;
                                     if (guiNode !== _this.props.globalState.guiTexture.getChildren()[0]) {
                                         _this.props.globalState.guiTexture.removeControl(guiNode);
@@ -42944,7 +43207,7 @@ var CommandBarComponent = /** @class */ (function (_super) {
                                         guiNode.dispose();
                                     }
                                 });
-                                _this.props.globalState.onSelectionChangedObservable.notifyObservers(null);
+                                _this.props.globalState.setSelection([]);
                             },
                         },
                         {
@@ -42960,28 +43223,26 @@ var CommandBarComponent = /** @class */ (function (_super) {
                             },
                         },
                     ] }),
-                react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_3__["CommandButtonComponent"], { tooltip: "Select", icon: pointerIcon, shortcut: "S", isActive: this._selecting, onClick: function () {
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_2__["CommandButtonComponent"], { tooltip: "Select", icon: pointerIcon, shortcut: "S", isActive: this._selecting, onClick: function () {
                         if (!_this._selecting)
                             _this.props.globalState.onSelectionButtonObservable.notifyObservers();
                     } }),
-                react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_3__["CommandButtonComponent"], { tooltip: "Pan", icon: handIcon, shortcut: "P", isActive: this._panning, onClick: function () {
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_2__["CommandButtonComponent"], { tooltip: "Pan", icon: handIcon, shortcut: "P", isActive: this._panning, onClick: function () {
                         if (!_this._panning)
                             _this.props.globalState.onPanObservable.notifyObservers();
                     } }),
-                react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_3__["CommandButtonComponent"], { tooltip: "Zoom", shortcut: "Z", icon: zoomIcon, isActive: this._zooming, onClick: function () {
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_2__["CommandButtonComponent"], { tooltip: "Zoom", shortcut: "Z", icon: zoomIcon, isActive: this._zooming, onClick: function () {
                         if (!_this._zooming)
                             _this.props.globalState.onZoomObservable.notifyObservers();
                     } }),
-                react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_3__["CommandButtonComponent"], { tooltip: "Fit to Window", shortcut: "F", icon: canvasFitIcon, isActive: false, onClick: function () {
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_2__["CommandButtonComponent"], { tooltip: "Fit to Window", shortcut: "F", icon: canvasFitIcon, isActive: false, onClick: function () {
                         _this.props.globalState.onFitToWindowObservable.notifyObservers();
                     } }),
-                react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_3__["CommandButtonComponent"], { tooltip: "Toggle Guides", shortcut: "G", icon: guidesIcon, isActive: this._outlines, onClick: function () {
-                        _this.props.globalState.onOutlinesObservable.notifyObservers();
-                    } })),
-            react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", { className: "commands-right" })));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_2__["CommandButtonComponent"], { tooltip: "Toggle Guides", shortcut: "G", icon: guidesIcon, isActive: this.props.globalState.outlines, onClick: function () { return _this.props.globalState.outlines = !_this.props.globalState.outlines; } })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "commands-right" })));
     };
     return CommandBarComponent;
-}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]));
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
 
 
 
@@ -43009,14 +43270,14 @@ var CommandButtonComponent = /** @class */ (function (_super) {
     }
     CommandButtonComponent.prototype.render = function () {
         var divClassName = this.props.altStyle ?
-            "command-button-alt" + (this.props.disabled ? "-disabled" : "") + (this.props.isActive ? "-" : "") :
+            "command-button-alt".concat(this.props.disabled ? "-disabled" : "").concat(this.props.isActive ? "-" : "") :
             "command-button ";
         var iconClassName = "command-button-icon ";
         if (this.props.isActive) {
             divClassName += "active";
             iconClassName += "active";
         }
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: divClassName, onClick: this.props.onClick, title: this.props.tooltip + " " + (this.props.shortcut ? " (" + this.props.shortcut + ")" : "") },
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: divClassName, onClick: this.props.onClick, title: "".concat(this.props.tooltip, " ").concat(this.props.shortcut ? " (" + this.props.shortcut + ")" : "") },
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: iconClassName },
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: this.props.icon, title: this.props.iconLabel, alt: this.props.iconLabel, className: this.props.isActive ? "active" : "" })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "command-label" }, this.props.tooltip),
@@ -43291,6 +43552,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
 /* harmony import */ var _commandButtonComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../commandButtonComponent */ "./components/commandButtonComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -43310,15 +43573,15 @@ var ButtonPropertyGridComponent = /** @class */ (function (_super) {
     }
     ButtonPropertyGridComponent.prototype.render = function () {
         var _this = this;
-        var rectangle = this.props.rectangle;
+        var rectangles = this.props.rectangles;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: rectangle, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: rectangles, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__["TextLineComponent"], { label: "RECTANGLE", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__["CheckBoxLineComponent"], { label: "CLIP CONTENT", iconLabel: "Clip Content", icon: clipContentsIcon, target: rectangle, propertyName: "clipChildren", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__["CheckBoxLineComponent"], { label: "CLIP CONTENT", iconLabel: "Clip Content", icon: clipContentsIcon, target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(rectangles, this.props.onPropertyChangedObservable), propertyName: "clipChildren", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: rectangle, propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Corner Radius", icon: conerRadiusIcon, lockObject: this.props.lockObject, label: "", target: rectangle, propertyName: "cornerRadius", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(rectangles, this.props.onPropertyChangedObservable), propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Corner Radius", icon: conerRadiusIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(rectangles, this.props.onPropertyChangedObservable), propertyName: "cornerRadius", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__["TextLineComponent"], { label: "BUTTON", value: " ", color: "grey" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
@@ -43353,6 +43616,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -43367,13 +43632,13 @@ var CheckboxPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     CheckboxPropertyGridComponent.prototype.render = function () {
-        var checkbox = this.props.checkbox;
+        var checkboxes = this.props.checkboxes;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: checkbox, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: checkboxes, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__["TextLineComponent"], { label: "CHECKBOX", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Check size ratio", icon: sizeIcon, lockObject: this.props.lockObject, label: "", target: checkbox, propertyName: "checkSizeRatio", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__["CheckBoxLineComponent"], { iconLabel: "Checked", icon: fillColorIcon, label: "CHECKED", target: checkbox, propertyName: "isChecked", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Check size ratio", icon: sizeIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(checkboxes, this.props.onPropertyChangedObservable), propertyName: "checkSizeRatio", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__["CheckBoxLineComponent"], { iconLabel: "Checked", icon: fillColorIcon, label: "CHECKED", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(checkboxes, this.props.onPropertyChangedObservable), propertyName: "isChecked", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return CheckboxPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -43398,6 +43663,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../gui/commonControlPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/commonControlPropertyGridComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/color3LineComponent */ "./sharedUiComponents/lines/color3LineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -43409,12 +43676,12 @@ var ColorPickerPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     ColorPickerPropertyGridComponent.prototype.render = function () {
-        var colorPicker = this.props.colorPicker;
+        var colorPickers = this.props.colorPickers;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: colorPicker, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: colorPickers, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextLineComponent"], { label: "COLORPICKER", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_3__["Color3LineComponent"], { label: "Color", target: colorPicker, propertyName: "value", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_3__["Color3LineComponent"], { label: "Color", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_5__["makeTargetsProxy"])(colorPickers, this.props.onPropertyChangedObservable), propertyName: "value", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return ColorPickerPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -43443,8 +43710,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textInputLineComponent */ "./sharedUiComponents/lines/textInputLineComponent.tsx");
 /* harmony import */ var _commandButtonComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../commandButtonComponent */ "./components/commandButtonComponent.tsx");
-/* harmony import */ var _sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/color3LineComponent */ "./sharedUiComponents/lines/color3LineComponent.tsx");
-/* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/colorLineComponent */ "./sharedUiComponents/lines/colorLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+/* harmony import */ var _diagram_coordinateHelper__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../diagram/coordinateHelper */ "./diagram/coordinateHelper.tsx");
+/* harmony import */ var babylonjs_Maths_math__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! babylonjs/Maths/math */ "babylonjs/Misc/observable");
+/* harmony import */ var babylonjs_Maths_math__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Maths_math__WEBPACK_IMPORTED_MODULE_12__);
+
+
+
+
 
 
 
@@ -43482,65 +43757,189 @@ var descendantsOnlyPaddingIcon = __webpack_require__(/*! ../../../../sharedUiCom
 var CommonControlPropertyGridComponent = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(CommonControlPropertyGridComponent, _super);
     function CommonControlPropertyGridComponent(props) {
+        var _a;
         var _this = _super.call(this, props) || this;
-        _this._width = _this.props.control.width;
-        _this._height = _this.props.control.height;
+        var controls = _this.props.controls;
+        for (var _i = 0, controls_1 = controls; _i < controls_1.length; _i++) {
+            var control = controls_1[_i];
+            var transformed = _this._getTransformedReferenceCoordinate(control);
+            if (!control.metadata) {
+                control.metadata = {};
+            }
+            control.metadata._previousCenter = transformed;
+        }
+        _this._onPropertyChangedObserver = (_a = _this.props.onPropertyChangedObservable) === null || _a === void 0 ? void 0 : _a.add(function (event) {
+            var isTransformEvent = event.property === "transformCenterX" || event.property === "transformCenterY";
+            for (var _i = 0, controls_2 = controls; _i < controls_2.length; _i++) {
+                var control = controls_2[_i];
+                var transformed = _this._getTransformedReferenceCoordinate(control);
+                if (isTransformEvent && control.metadata._previousCenter) {
+                    // Calculate the difference between current center and previous center
+                    var diff = transformed.subtract(control.metadata._previousCenter);
+                    control.leftInPixels -= diff.x;
+                    control.topInPixels -= diff.y;
+                    // Update center in reference to left and top positions
+                    transformed = _this._getTransformedReferenceCoordinate(control);
+                }
+                control.metadata._previousCenter = transformed;
+            }
+            _this.forceUpdate();
+        });
         return _this;
     }
+    CommonControlPropertyGridComponent.prototype._getTransformedReferenceCoordinate = function (control) {
+        var nodeMatrix = _diagram_coordinateHelper__WEBPACK_IMPORTED_MODULE_11__["CoordinateHelper"].getNodeMatrix(control);
+        var transformed = new babylonjs_Maths_math__WEBPACK_IMPORTED_MODULE_12__["Vector2"](1, 1);
+        nodeMatrix.transformCoordinates(1, 1, transformed);
+        return transformed;
+    };
     CommonControlPropertyGridComponent.prototype._updateAlignment = function (alignment, value) {
-        var control = this.props.control;
-        if (control.typeName === "TextBlock" && this.props.control.resizeToFit === false) {
-            this.props.control["text" + alignment.charAt(0).toUpperCase() + alignment.slice(1)] = value;
-        }
-        else {
-            this.props.control[alignment] = value;
+        for (var _i = 0, _a = this.props.controls; _i < _a.length; _i++) {
+            var control = _a[_i];
+            if (control.typeName === "TextBlock" && control.resizeToFit === false) {
+                control["text" + alignment.charAt(0).toUpperCase() + alignment.slice(1)] = value;
+            }
+            else {
+                control[alignment] = value;
+            }
         }
         this.forceUpdate();
     };
     CommonControlPropertyGridComponent.prototype._checkAndUpdateValues = function (propertyName, value) {
         var _a, _b;
-        // checking the previous value unit to see what it was.
-        var vau = this.props.control["_" + propertyName];
-        var percentage = vau.isPercentage;
-        // now checking if the new string contains either a px or a % sign in case we need to change the unit.
-        var negative = value.charAt(0) === "-";
-        if (value.charAt(value.length - 1) === "%") {
-            percentage = true;
+        for (var _i = 0, _c = this.props.controls; _i < _c.length; _i++) {
+            var control = _c[_i];
+            // checking the previous value unit to see what it was.
+            var vau = control["_" + propertyName];
+            var percentage = vau.isPercentage;
+            // now checking if the new string contains either a px or a % sign in case we need to change the unit.
+            var negative = value.charAt(0) === "-";
+            if (value.charAt(value.length - 1) === "%") {
+                percentage = true;
+            }
+            else if (value.charAt(value.length - 1) === "x" && value.charAt(value.length - 2) === "p") {
+                percentage = false;
+            }
+            if (((_a = control.parent) === null || _a === void 0 ? void 0 : _a.typeName) === "StackPanel") {
+                percentage = false;
+            }
+            var newValue = (_b = value.match(/([\d\.\,]+)/g)) === null || _b === void 0 ? void 0 : _b[0];
+            if (!newValue) {
+                newValue = "0";
+            }
+            newValue = (negative ? "-" : "") + newValue;
+            newValue += percentage ? "%" : "px";
+            control[propertyName] = newValue;
         }
-        else if (value.charAt(value.length - 1) === "x" && value.charAt(value.length - 2) === "p") {
-            percentage = false;
-        }
-        if (((_a = this.props.control.parent) === null || _a === void 0 ? void 0 : _a.typeName) === "StackPanel") {
-            percentage = false;
-        }
-        var newValue = (_b = value.match(/([\d\.\,]+)/g)) === null || _b === void 0 ? void 0 : _b[0];
-        if (!newValue) {
-            newValue = "0";
-        }
-        newValue = (negative ? "-" : "") + newValue;
-        newValue += percentage ? "%" : "px";
-        this.props.control[propertyName] = newValue;
         this.forceUpdate();
     };
     CommonControlPropertyGridComponent.prototype._markChildrenAsDirty = function () {
-        if (this.props.control instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"])
-            this.props.control._children.forEach(function (child) {
-                child._markAsDirty();
-            });
+        for (var _i = 0, _a = this.props.controls; _i < _a.length; _i++) {
+            var control = _a[_i];
+            if (control instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"])
+                control._children.forEach(function (child) {
+                    child._markAsDirty();
+                });
+        }
+    };
+    CommonControlPropertyGridComponent.prototype.componentWillUnmount = function () {
+        var _a;
+        if (this._onPropertyChangedObserver) {
+            (_a = this.props.onPropertyChangedObservable) === null || _a === void 0 ? void 0 : _a.remove(this._onPropertyChangedObserver);
+        }
     };
     CommonControlPropertyGridComponent.prototype.render = function () {
         var _this = this;
-        var control = this.props.control;
-        var horizontalAlignment = this.props.control.horizontalAlignment;
-        var verticalAlignment = this.props.control.verticalAlignment;
-        if (control.typeName === "TextBlock" && this.props.control.resizeToFit === false) {
-            horizontalAlignment = this.props.control.textHorizontalAlignment;
-            verticalAlignment = this.props.control.textVerticalAlignment;
+        var controls = this.props.controls;
+        var firstControl = controls[0];
+        var horizontalAlignment = firstControl.horizontalAlignment;
+        var verticalAlignment = firstControl.verticalAlignment;
+        for (var _i = 0, controls_3 = controls; _i < controls_3.length; _i++) {
+            var control = controls_3[_i];
+            if (control.horizontalAlignment !== horizontalAlignment) {
+                horizontalAlignment = babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Control"].HORIZONTAL_ALIGNMENT_CENTER;
+            }
+            if (control.verticalAlignment !== verticalAlignment) {
+                verticalAlignment = babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Control"].VERTICAL_ALIGNMENT_CENTER;
+            }
         }
-        this._width = this.props.control.width;
-        this._height = this.props.control.height;
+        if (controls.every(function (control) { return control.typeName === "TextBlock" && control.resizeToFit === false; })) {
+            horizontalAlignment = firstControl.textHorizontalAlignment;
+            verticalAlignment = firstControl.textVerticalAlignment;
+        }
+        var showTextProperties = (firstControl instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"] || firstControl.typeName === "TextBlock");
+        var proxy = Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["makeTargetsProxy"])(controls, this.props.onPropertyChangedObservable);
+        var getValue = function (propertyName) {
+            var values = (controls.map(function (control) { return control[propertyName]._value; }));
+            var firstValue = values[0];
+            if (values.every(function (value) { return value === firstValue; })) {
+                var units = getUnitString(propertyName);
+                if (units === "%") {
+                    return (firstValue * 100).toFixed(2);
+                }
+                else if (units === "PX") {
+                    return firstValue.toFixed(2);
+                }
+                else {
+                    return _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["conflictingValuesPlaceholder"];
+                }
+            }
+            else {
+                return _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["conflictingValuesPlaceholder"];
+            }
+        };
+        var getUnitString = function (propertyName) {
+            var units = (controls.map(function (control) { return control[propertyName]._unit; }));
+            var firstUnit = units[0];
+            if (units.every(function (unit) { return unit === firstUnit; })) {
+                if (firstUnit === babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["ValueAndUnit"].UNITMODE_PIXEL) {
+                    return "PX";
+                }
+                else {
+                    return "%";
+                }
+            }
+            else {
+                return _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["conflictingValuesPlaceholder"];
+            }
+        };
+        var increment = function (propertyName, amount, minimum, maximum) {
+            var _a;
+            for (var _i = 0, controls_4 = controls; _i < controls_4.length; _i++) {
+                var control = controls_4[_i];
+                var initialValue = control[propertyName];
+                var initialUnit = control["_" + propertyName]._unit;
+                var newValue = control["".concat(propertyName, "InPixels")] + amount;
+                if (minimum !== undefined && newValue < minimum)
+                    newValue = minimum;
+                if (maximum !== undefined && newValue > maximum)
+                    newValue = maximum;
+                control["".concat(propertyName, "InPixels")] = newValue;
+                if (initialUnit === babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["ValueAndUnit"].UNITMODE_PERCENTAGE) {
+                    _diagram_coordinateHelper__WEBPACK_IMPORTED_MODULE_11__["CoordinateHelper"].convertToPercentage(control, [propertyName]);
+                }
+                (_a = _this.props.onPropertyChangedObservable) === null || _a === void 0 ? void 0 : _a.notifyObservers({
+                    object: control,
+                    property: propertyName,
+                    initialValue: initialValue,
+                    value: control[propertyName]
+                });
+            }
+        };
+        var convertUnits = function (unit, property) {
+            for (var _i = 0, controls_5 = controls; _i < controls_5.length; _i++) {
+                var control = controls_5[_i];
+                if (unit === "PX") {
+                    _diagram_coordinateHelper__WEBPACK_IMPORTED_MODULE_11__["CoordinateHelper"].convertToPercentage(control, [property], _this.props.onPropertyChangedObservable);
+                }
+                else {
+                    _diagram_coordinateHelper__WEBPACK_IMPORTED_MODULE_11__["CoordinateHelper"].convertToPixels(control, [property], _this.props.onPropertyChangedObservable);
+                }
+                _this.forceUpdate();
+            }
+        };
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", null,
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider alignment-bar" },
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_7__["CommandButtonComponent"], { tooltip: "Left", icon: hAlignLeftIcon, shortcut: "", isActive: horizontalAlignment === babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Control"].HORIZONTAL_ALIGNMENT_LEFT, onClick: function () {
                         _this._updateAlignment("horizontalAlignment", babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Control"].HORIZONTAL_ALIGNMENT_LEFT);
                     } }),
@@ -43560,77 +43959,93 @@ var CommonControlPropertyGridComponent = /** @class */ (function (_super) {
                         _this._updateAlignment("verticalAlignment", babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Control"].VERTICAL_ALIGNMENT_BOTTOM);
                     } })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, iconLabel: "Position", icon: positionIcon, lockObject: this.props.lockObject, label: "X", target: control, delayInput: true, propertyName: "left", onChange: function (newValue) { return _this._checkAndUpdateValues("left", newValue); }, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, lockObject: this.props.lockObject, label: "Y", target: control, delayInput: true, propertyName: "top", onChange: function (newValue) { return _this._checkAndUpdateValues("top", newValue); }, onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, iconLabel: "Position", icon: positionIcon, lockObject: this.props.lockObject, label: "X", delayInput: true, value: getValue("_left"), onChange: function (newValue) { return _this._checkAndUpdateValues("left", newValue); }, unit: getUnitString("_left"), onUnitClicked: function (unit) { return convertUnits(unit, "left"); }, arrows: true, arrowsIncrement: function (amount) { return increment("left", amount); } }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, lockObject: this.props.lockObject, label: "Y", delayInput: true, value: getValue("_top"), onChange: function (newValue) { return _this._checkAndUpdateValues("top", newValue); }, onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: getUnitString("_top"), onUnitClicked: function (unit) { return convertUnits(unit, "top"); }, arrows: true, arrowsIncrement: function (amount) { return increment("top", amount); } })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, iconLabel: "Scale", icon: sizeIcon, lockObject: this.props.lockObject, label: "W", target: this, delayInput: true, propertyName: "_width", onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function (newValue) {
-                        if (control.typeName === "Image") {
-                            control.autoScale = false;
-                        }
-                        else if (control instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"]) {
-                            control.adaptWidthToChildren = false;
-                        }
-                        else if (_this.props.control.typeName === "ColorPicker") {
-                            if (newValue === "0" || newValue === "-") {
-                                newValue = "1";
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, iconLabel: "Scale", icon: sizeIcon, lockObject: this.props.lockObject, label: "W", delayInput: true, value: getValue("_width"), onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function (newValue) {
+                        for (var _i = 0, controls_6 = controls; _i < controls_6.length; _i++) {
+                            var control = controls_6[_i];
+                            if (control.typeName === "Image") {
+                                control.autoScale = false;
+                            }
+                            else if (control instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"]) {
+                                control.adaptWidthToChildren = false;
+                            }
+                            else if (control.typeName === "ColorPicker") {
+                                if (newValue === "0" || newValue === "-") {
+                                    newValue = "1";
+                                }
                             }
                         }
-                        _this._width = newValue;
-                        _this._checkAndUpdateValues("width", _this._width.toString());
-                    } }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, lockObject: this.props.lockObject, label: "H", target: this, delayInput: true, propertyName: "_height", onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function (newValue) {
-                        if (control.typeName === "Image") {
-                            control.autoScale = false;
-                        }
-                        else if (control instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"]) {
-                            control.adaptHeightToChildren = false;
-                        }
-                        else if (_this.props.control.typeName === "ColorPicker") {
-                            if (newValue === "0" || newValue === "-") {
-                                newValue = "1";
+                        _this._checkAndUpdateValues("width", newValue);
+                    }, unit: getUnitString("_width"), onUnitClicked: function (unit) { return convertUnits(unit, "width"); }, arrows: true, arrowsIncrement: function (amount) { return increment("width", amount); } }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, lockObject: this.props.lockObject, label: "H", delayInput: true, value: getValue("_height"), onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function (newValue) {
+                        for (var _i = 0, controls_7 = controls; _i < controls_7.length; _i++) {
+                            var control = controls_7[_i];
+                            if (control.typeName === "Image") {
+                                control.autoScale = false;
+                            }
+                            else if (control instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"]) {
+                                control.adaptHeightToChildren = false;
+                            }
+                            else if (control.typeName === "ColorPicker") {
+                                if (newValue === "0" || newValue === "-") {
+                                    newValue = "1";
+                                }
                             }
                         }
-                        _this._height = newValue;
-                        _this._checkAndUpdateValues("height", _this._height.toString());
-                    } })),
+                        _this._checkAndUpdateValues("height", newValue);
+                    }, unit: getUnitString("_height"), onUnitClicked: function (unit) { return convertUnits(unit, "height"); }, arrows: true, arrowsIncrement: function (amount) { return increment("height", amount); } })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, iconLabel: "Padding", icon: verticalMarginIcon, lockObject: this.props.lockObject, label: "B", target: control, propertyName: "paddingBottom", delayInput: true, onChange: function (newValue) { _this._checkAndUpdateValues("paddingBottom", newValue); _this._markChildrenAsDirty(); }, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, lockObject: this.props.lockObject, label: "T", target: control, propertyName: "paddingTop", delayInput: true, onChange: function (newValue) { _this._checkAndUpdateValues("paddingTop", newValue); _this._markChildrenAsDirty(); }, onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, iconLabel: "Padding", icon: verticalMarginIcon, lockObject: this.props.lockObject, label: "T", delayInput: true, value: getValue("_paddingTop"), onChange: function (newValue) {
+                        _this._checkAndUpdateValues("paddingTop", newValue);
+                        _this._markChildrenAsDirty();
+                    }, onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: getUnitString("_paddingTop"), onUnitClicked: function (unit) { return convertUnits(unit, "paddingTop"); }, arrows: true, arrowsIncrement: function (amount) { return increment("paddingTop", amount, 0); } }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, lockObject: this.props.lockObject, label: "B", delayInput: true, value: getValue("_paddingBottom"), onChange: function (newValue) {
+                        _this._checkAndUpdateValues("paddingBottom", newValue);
+                        _this._markChildrenAsDirty();
+                    }, onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: getUnitString("_paddingBottom"), onUnitClicked: function (unit) { return convertUnits(unit, "paddingBottom"); }, arrows: true, arrowsIncrement: function (amount) { return increment("paddingBottom", amount, 0); } })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, iconLabel: "Horizontal Margins", icon: horizontalMarginIcon, lockObject: this.props.lockObject, label: "L", target: control, propertyName: "paddingLeft", delayInput: true, onChange: function (newValue) { _this._checkAndUpdateValues("paddingLeft", newValue); _this._markChildrenAsDirty(); }, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, lockObject: this.props.lockObject, label: "R", target: control, delayInput: true, propertyName: "paddingRight", onChange: function (newValue) { _this._checkAndUpdateValues("paddingRight", newValue); _this._markChildrenAsDirty(); }, onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider-shot" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_9__["CheckBoxLineComponent"], { iconLabel: "Padding does not affect the parameters of this control, only the descendants of this control.", icon: descendantsOnlyPaddingIcon, label: "", target: control, propertyName: "descendentsOnlyPadding", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, iconLabel: "Horizontal Margins", icon: horizontalMarginIcon, lockObject: this.props.lockObject, label: "L", delayInput: true, value: getValue("_paddingLeft"), onChange: function (newValue) {
+                        _this._checkAndUpdateValues("paddingLeft", newValue);
+                        _this._markChildrenAsDirty();
+                    }, onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: getUnitString("_paddingLeft"), onUnitClicked: function (unit) { return convertUnits(unit, "paddingLeft"); }, arrows: true, arrowsIncrement: function (amount) { return increment("paddingLeft", amount); } }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { numbersOnly: true, lockObject: this.props.lockObject, label: "R", delayInput: true, value: getValue("_paddingRight"), onChange: function (newValue) {
+                        _this._checkAndUpdateValues("paddingRight", newValue);
+                        _this._markChildrenAsDirty();
+                    }, onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: getUnitString("_paddingRight"), onUnitClicked: function (unit) { return convertUnits(unit, "paddingRight"); }, arrows: true, arrowsIncrement: function (amount) { return increment("paddingRight", amount); } })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_8__["CheckBoxLineComponent"], { iconLabel: "Padding does not affect the parameters of this control, only the descendants of this control.", icon: descendantsOnlyPaddingIcon, label: "PAD ONLY DESCENDENTS", target: proxy, propertyName: "descendentsOnlyPadding", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", { className: "ge" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_2__["TextLineComponent"], { tooltip: "", label: "TRANSFORMATION", value: " ", color: "grey" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { iconLabel: "Trasnsform Center", icon: positionIcon, lockObject: this.props.lockObject, label: "X", target: control, propertyName: "transformCenterX", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "Y", target: control, propertyName: "transformCenterY", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Transform Center", icon: positionIcon, lockObject: this.props.lockObject, label: "X", target: proxy, propertyName: "transformCenterX", onPropertyChangedObservable: this.props.onPropertyChangedObservable, arrows: true, step: 0.0005, numbersOnly: true }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { lockObject: this.props.lockObject, label: "Y", target: proxy, propertyName: "transformCenterY", onPropertyChangedObservable: this.props.onPropertyChangedObservable, arrows: true, step: 0.0005, numbersOnly: true })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { iconLabel: "Scale", icon: scaleIcon, lockObject: this.props.lockObject, label: "X", target: control, propertyName: "scaleX", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "Y", target: control, propertyName: "scaleY", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_sliderLineComponent__WEBPACK_IMPORTED_MODULE_4__["SliderLineComponent"], { iconLabel: "Rotation", lockObject: this.props.lockObject, icon: rotationIcon, label: "R", target: control, decimalCount: 2, propertyName: "rotation", minimum: 0, maximum: 2 * Math.PI, step: 0.01, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Scale", icon: scaleIcon, lockObject: this.props.lockObject, label: "X", target: proxy, propertyName: "scaleX", onPropertyChangedObservable: this.props.onPropertyChangedObservable, arrows: true, step: 0.0005, numbersOnly: true }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { lockObject: this.props.lockObject, label: "Y", target: proxy, propertyName: "scaleY", onPropertyChangedObservable: this.props.onPropertyChangedObservable, arrows: true, step: 0.0005, numbersOnly: true })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_sliderLineComponent__WEBPACK_IMPORTED_MODULE_4__["SliderLineComponent"], { iconLabel: "Rotation", lockObject: this.props.lockObject, icon: rotationIcon, label: "R", target: proxy, decimalCount: 2, propertyName: "rotation", minimum: 0, maximum: 2 * Math.PI, step: 0.01, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", { className: "ge" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_2__["TextLineComponent"], { tooltip: "", label: "APPEARANCE", value: " ", color: "grey" }),
-            (control.color !== undefined && control.typeName !== "Image" &&
-                control.typeName !== "ImageBasedSlider" && control.typeName !== "ColorPicker") && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_8__["Color3LineComponent"], { iconLabel: "Color", icon: colorIcon, lockObject: this.props.lockObject, label: "", target: control, propertyName: "color", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            control.background !== undefined && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_8__["Color3LineComponent"], { iconLabel: "Background", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: control, propertyName: "background", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_sliderLineComponent__WEBPACK_IMPORTED_MODULE_4__["SliderLineComponent"], { lockObject: this.props.lockObject, iconLabel: "Alpha", icon: alphaIcon, label: "", target: control, propertyName: "alpha", minimum: 0, maximum: 1, step: 0.01, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_8__["Color3LineComponent"], { iconLabel: "Shadow Color", icon: shadowColorIcon, lockObject: this.props.lockObject, label: "", target: control, propertyName: "shadowColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            controls.every(function (control) { return control.color !== undefined && control.typeName !== "Image" && control.typeName !== "ImageBasedSlider" && control.typeName !== "ColorPicker"; }) && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__["ColorLineComponent"], { iconLabel: "Color", icon: colorIcon, lockObject: this.props.lockObject, label: "Outline Color", target: proxy, propertyName: "color", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+            controls.every(function (control) { return control.background !== undefined; }) && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__["ColorLineComponent"], { iconLabel: "Background", icon: fillColorIcon, lockObject: this.props.lockObject, label: "Background Color", target: proxy, propertyName: "background", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_sliderLineComponent__WEBPACK_IMPORTED_MODULE_4__["SliderLineComponent"], { lockObject: this.props.lockObject, iconLabel: "Alpha", icon: alphaIcon, label: " ", target: proxy, propertyName: "alpha", minimum: 0, maximum: 1, step: 0.01, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__["ColorLineComponent"], { iconLabel: "Shadow Color", icon: shadowColorIcon, lockObject: this.props.lockObject, label: "", target: proxy, propertyName: "shadowColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable, disableAlpha: true }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { iconLabel: "Shadow Offset X", icon: shadowOffsetXIcon, lockObject: this.props.lockObject, label: "", target: control, propertyName: "shadowOffsetX", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { iconLabel: "Shadow Offset Y", icon: shadowOffsetYIcon, lockObject: this.props.lockObject, label: "", target: control, propertyName: "shadowOffsetY", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider-short" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { iconLabel: "Shadow Blur", icon: shadowBlurIcon, lockObject: this.props.lockObject, label: "", target: control, propertyName: "shadowBlur", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            (control instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"] || control.typeName === "TextBlock") && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { iconLabel: "Shadow Offset X", icon: shadowOffsetXIcon, lockObject: this.props.lockObject, label: "", target: proxy, propertyName: "shadowOffsetX", onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: "PX", unitLocked: true }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { iconLabel: "Shadow Offset Y", icon: shadowOffsetYIcon, lockObject: this.props.lockObject, label: "", target: proxy, propertyName: "shadowOffsetY", onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: "PX", unitLocked: true })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { iconLabel: "Shadow Blur", icon: shadowBlurIcon, lockObject: this.props.lockObject, label: "", target: proxy, propertyName: "shadowBlur", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+            showTextProperties && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", { className: "ge" }),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_2__["TextLineComponent"], { tooltip: "", label: "FONT STYLE", value: " ", color: "grey" }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Font Family", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: control, propertyName: "fontFamily", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Font Size", icon: fontSizeIcon, lockObject: this.props.lockObject, label: "", target: control, numbersOnly: true, propertyName: "fontSize", onChange: function (newValue) { return _this._checkAndUpdateValues("fontSize", newValue); }, onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Font Weight", icon: shadowBlurIcon, lockObject: this.props.lockObject, label: "", target: control, propertyName: "fontWeight", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Font Style", icon: fontStyleIcon, lockObject: this.props.lockObject, label: "", target: control, propertyName: "fontStyle", onPropertyChangedObservable: this.props.onPropertyChangedObservable })))));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider-single" },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Font Family", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: proxy, propertyName: "fontFamily", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider-single" },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Font Size", icon: fontSizeIcon, lockObject: this.props.lockObject, label: "", target: proxy, numbersOnly: true, propertyName: "fontSize", onChange: function (newValue) { return _this._checkAndUpdateValues("fontSize", newValue); }, onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider-single" },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Font Weight", icon: shadowBlurIcon, lockObject: this.props.lockObject, label: "", target: proxy, propertyName: "fontWeight", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider-single" },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextInputLineComponent"], { iconLabel: "Font Style", icon: fontStyleIcon, lockObject: this.props.lockObject, label: "", target: proxy, propertyName: "fontStyle", onPropertyChangedObservable: this.props.onPropertyChangedObservable })))));
     };
     return CommonControlPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -43662,9 +44077,9 @@ var ControlPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     ControlPropertyGridComponent.prototype.render = function () {
-        var control = this.props.control;
+        var controls = this.props.controls;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: control, onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: controls, onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return ControlPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -43689,7 +44104,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../gui/commonControlPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/commonControlPropertyGridComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
-/* harmony import */ var _sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/color3LineComponent */ "./sharedUiComponents/lines/color3LineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/colorLineComponent */ "./sharedUiComponents/lines/colorLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -43706,19 +44123,19 @@ var DisplayGridPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     DisplayGridPropertyGridComponent.prototype.render = function () {
-        var displayGrid = this.props.displayGrid;
+        var displayGrids = this.props.displayGrids;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: displayGrid, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: displayGrids, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { label: "DISPLAY GRID", value: " ", color: "grey" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Cell Size", icon: sizeIcon, min: 1, isInteger: true, lockObject: this.props.lockObject, label: "W", target: displayGrid, propertyName: "cellWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { min: 1, isInteger: true, lockObject: this.props.lockObject, label: "H", target: displayGrid, propertyName: "cellHeight", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Minor Line Tickness", icon: strokeWeightIcon, min: 1, isInteger: true, lockObject: this.props.lockObject, label: "", target: displayGrid, propertyName: "minorLineTickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_5__["Color3LineComponent"], { iconLabel: "Minor Line Color", icon: colorIcon, lockObject: this.props.lockObject, label: "", target: displayGrid, propertyName: "minorLineColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Major Line Tickness", icon: strokeWeightIcon, min: 1, isInteger: true, lockObject: this.props.lockObject, label: "", target: displayGrid, propertyName: "majorLineTickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_5__["Color3LineComponent"], { iconLabel: "Major Line Color", icon: colorIcon, lockObject: this.props.lockObject, label: "", target: displayGrid, propertyName: "majorLineColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Major Line Frequency", icon: conerRadiusIcon, min: 1, isInteger: true, lockObject: this.props.lockObject, label: "", target: displayGrid, propertyName: "majorLineFrequency", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Cell Size", icon: sizeIcon, min: 1, isInteger: true, lockObject: this.props.lockObject, label: "W", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(displayGrids, this.props.onPropertyChangedObservable), propertyName: "cellWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { min: 1, isInteger: true, lockObject: this.props.lockObject, label: "H", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(displayGrids, this.props.onPropertyChangedObservable), propertyName: "cellHeight", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Minor Line Tickness", icon: strokeWeightIcon, min: 1, isInteger: true, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(displayGrids, this.props.onPropertyChangedObservable), propertyName: "minorLineTickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_5__["ColorLineComponent"], { iconLabel: "Minor Line Color", icon: colorIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(displayGrids, this.props.onPropertyChangedObservable), propertyName: "minorLineColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Major Line Tickness", icon: strokeWeightIcon, min: 1, isInteger: true, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(displayGrids, this.props.onPropertyChangedObservable), propertyName: "majorLineTickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_5__["ColorLineComponent"], { iconLabel: "Major Line Color", icon: colorIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(displayGrids, this.props.onPropertyChangedObservable), propertyName: "majorLineColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Major Line Frequency", icon: conerRadiusIcon, min: 1, isInteger: true, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(displayGrids, this.props.onPropertyChangedObservable), propertyName: "majorLineFrequency", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return DisplayGridPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -43744,6 +44161,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -43758,13 +44177,14 @@ var EllipsePropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     EllipsePropertyGridComponent.prototype.render = function () {
-        var ellipse = this.props.ellipse;
+        var ellipses = this.props.ellipses;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: ellipse, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: ellipses, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__["TextLineComponent"], { label: "ELLIPSE", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__["CheckBoxLineComponent"], { iconLabel: "Clip Content", icon: clipContentsIcon, label: "CLIP CONTENT", target: ellipse, propertyName: "clipChildren", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: ellipse, propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(ellipses, this.props.onPropertyChangedObservable), propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: "PX", unitLocked: true })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__["CheckBoxLineComponent"], { iconLabel: "Clip Content", icon: clipContentsIcon, label: "CLIP CONTENT", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(ellipses, this.props.onPropertyChangedObservable), propertyName: "clipChildren", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return EllipsePropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -43824,9 +44244,9 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
     GridPropertyGridComponent.prototype.renderRows = function () {
         var _this = this;
         return (this._rowDefinitions.map(function (rd, i) {
-            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { key: "r" + i, className: _this._removingRow && i === _this._rowEditFlags.length - 1 ? "ge-grid-remove" : _this._rowEditFlags[i] ? "ge-grid-edit" : "ge-grid" },
+            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { key: "r".concat(i), className: _this._removingRow && i === _this._rowEditFlags.length - 1 ? "ge-grid-remove" : _this._rowEditFlags[i] ? "ge-grid-edit" : "ge-grid" },
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-grid-divider" },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { lockObject: _this.props.lockObject, key: "rText" + i, label: "", icon: gridColumnIconDark, iconLabel: "Row " + i, value: rd, numbersOnly: true, onChange: function (newValue) {
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { lockObject: _this.props.lockObject, key: "rText".concat(i), label: "", icon: gridColumnIconDark, iconLabel: "Row ".concat(i), value: rd, numbersOnly: true, onChange: function (newValue) {
                             _this._rowDefinitions[i] = newValue;
                             _this._rowEditFlags[i] = true;
                             _this._editedRow = true;
@@ -43834,7 +44254,7 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
                             _this._rowChild = false;
                             _this.forceUpdate();
                         } }),
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { tooltip: "", label: "[" + i + "]", value: "", color: "grey" }),
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { tooltip: "", label: "[".concat(i, "]"), value: "", color: "grey" }),
                     _this._removingRow && i === _this._rowEditFlags.length - 1 &&
                         react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { icon: deleteGridElementDark, label: " ", value: " ", color: "grey" }),
                     _this._rowEditFlags[i] &&
@@ -43842,7 +44262,7 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
         }));
     };
     GridPropertyGridComponent.prototype.setRowValues = function () {
-        var grid = this.props.grid;
+        var grid = this.props.grids[0];
         this._rowDefinitions = [];
         this._rowEditFlags = [];
         this._editedRow = false;
@@ -43855,7 +44275,7 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
         }
     };
     GridPropertyGridComponent.prototype.setColumnValues = function () {
-        var grid = this.props.grid;
+        var grid = this.props.grids[0];
         this._columnDefinitions = [];
         this._columnEditFlags = [];
         this._editedColumn = false;
@@ -43870,9 +44290,9 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
     GridPropertyGridComponent.prototype.renderColumns = function () {
         var _this = this;
         return (this._columnDefinitions.map(function (cd, i) {
-            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { key: "c" + i, className: _this._removingColumn && i === _this._columnEditFlags.length - 1 ? "ge-grid-remove" : _this._columnEditFlags[i] ? "ge-grid-edit" : "ge-grid" },
+            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { key: "c".concat(i), className: _this._removingColumn && i === _this._columnEditFlags.length - 1 ? "ge-grid-remove" : _this._columnEditFlags[i] ? "ge-grid-edit" : "ge-grid" },
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-grid-divider" },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { lockObject: _this.props.lockObject, key: "ctext" + i, label: "", icon: gridRowIconDark, iconLabel: "Column " + i, value: cd, numbersOnly: true, onChange: function (newValue) {
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { lockObject: _this.props.lockObject, key: "ctext".concat(i), label: "", icon: gridRowIconDark, iconLabel: "Column ".concat(i), value: cd, numbersOnly: true, onChange: function (newValue) {
                             _this._columnDefinitions[i] = newValue;
                             _this._columnEditFlags[i] = true;
                             _this._editedColumn = true;
@@ -43880,7 +44300,7 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
                             _this._columnChild = false;
                             _this.forceUpdate();
                         } }),
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { tooltip: "", label: "[" + i + "]", value: "", color: "grey" }),
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { tooltip: "", label: "[".concat(i, "]"), value: "", color: "grey" }),
                     _this._removingColumn && i === _this._columnEditFlags.length - 1 &&
                         react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { icon: deleteGridElementDark, label: " ", value: " ", color: "grey" }),
                     _this._columnEditFlags[i] &&
@@ -43888,7 +44308,7 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
         }));
     };
     GridPropertyGridComponent.prototype.resizeRow = function () {
-        var grid = this.props.grid;
+        var grid = this.props.grids[0];
         var total = 0;
         var editCount = 0;
         var percentCount = 0;
@@ -43947,7 +44367,7 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
         this.setRowValues();
     };
     GridPropertyGridComponent.prototype.resizeColumn = function () {
-        var grid = this.props.grid;
+        var grid = this.props.grids[0];
         var total = 0;
         var editCount = 0;
         var percentCount = 0;
@@ -44019,7 +44439,7 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
         return value.substring(value.length - toSearch.length, value.length) !== toSearch;
     };
     GridPropertyGridComponent.prototype.resetValues = function () {
-        var grid = this.props.grid;
+        var grid = this.props.grids[0];
         this._removingColumn = false;
         this._removingRow = false;
         this._columnChild = false;
@@ -44032,137 +44452,140 @@ var GridPropertyGridComponent = /** @class */ (function (_super) {
     };
     GridPropertyGridComponent.prototype.render = function () {
         var _this = this;
-        var grid = this.props.grid;
+        var grids = this.props.grids;
+        var grid = this.props.grids[0];
         if (grid !== this._previousGrid) {
             this.resetValues();
         }
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: grid, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: grids, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", { className: "ge" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { tooltip: "", label: "GRID", value: " ", color: "grey" }),
             this.renderRows(),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-gridLine" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-grid-button-divider" },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Add Row", icon: addGridElementDark, shortcut: "", isActive: false, onClick: function () {
-                            var total = 0;
-                            var count = 0;
-                            for (var i = 0; i < grid.rowCount; ++i) {
-                                var rd = grid.getRowDefinition(i);
-                                if (rd === null || rd === void 0 ? void 0 : rd.isPercentage) {
-                                    total += rd === null || rd === void 0 ? void 0 : rd.getValue(grid.host);
-                                    count++;
+            this.props.grids.length === 1 &&
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-gridLine" },
+                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-grid-button-divider" },
+                            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Add Row", icon: addGridElementDark, shortcut: "", isActive: false, onClick: function () {
+                                    var total = 0;
+                                    var count = 0;
+                                    for (var i = 0; i < grid.rowCount; ++i) {
+                                        var rd = grid.getRowDefinition(i);
+                                        if (rd === null || rd === void 0 ? void 0 : rd.isPercentage) {
+                                            total += rd === null || rd === void 0 ? void 0 : rd.getValue(grid.host);
+                                            count++;
+                                        }
+                                    }
+                                    grid.addRowDefinition(total / count, false);
+                                    _this.resetValues();
+                                    _this.forceUpdate();
+                                } }),
+                            "  ",
+                            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Remove Row", icon: subtractGridElementDark, shortcut: "", isActive: this._removingRow, disabled: grid.rowCount <= 1, onClick: function () {
+                                    var hasChild = false;
+                                    for (var i = 0; i < grid.columnCount; ++i) {
+                                        var child = grid.cells[(grid.rowCount - 1) + ":" + i];
+                                        if (child === null || child === void 0 ? void 0 : child.children.length) {
+                                            hasChild = true;
+                                            break;
+                                            //(grid.rowCount > 1 && !this._removingRow) 
+                                        }
+                                    }
+                                    _this.resetValues();
+                                    if (hasChild) {
+                                        _this._rowChild = true;
+                                    }
+                                    _this._removingRow = true;
+                                    _this.forceUpdate();
+                                } }),
+                            this._editedRow &&
+                                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                                    " ",
+                                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Confirm", icon: confirmGridElementDark, shortcut: "", isActive: false, onClick: function () {
+                                            _this.resizeRow();
+                                            _this.forceUpdate();
+                                        } }),
+                                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Cancel", icon: cancelGridElementDark, shortcut: "", isActive: false, onClick: function () {
+                                            _this.resetValues();
+                                            _this.forceUpdate();
+                                        } })),
+                            this._removingRow &&
+                                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Confirm", icon: confirmGridElementDark, shortcut: "", isActive: false, onClick: function () {
+                                            grid.removeRowDefinition(grid.rowCount - 1);
+                                            _this.setRowValues();
+                                            _this.resizeRow();
+                                            _this.forceUpdate();
+                                            _this._removingRow = false;
+                                            _this._rowChild = false;
+                                        } }),
+                                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Cancel", icon: cancelGridElementDark, shortcut: "", isActive: false, onClick: function () {
+                                            _this._removingRow = false;
+                                            _this._rowChild = false;
+                                            _this.forceUpdate();
+                                        } })))),
+                    this._rowChild && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { tooltip: "", label: "This row is not empty. Removing it will delete all contained controls. Do you want to remove this row and delete all controls within?", value: " ", color: "grey" })),
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", { className: "ge" }),
+                    this.renderColumns(),
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-grid-button-divider" },
+                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Add Column", icon: addGridElementDark, shortcut: "", isActive: false, onClick: function () {
+                                var total = 0;
+                                var count = 0;
+                                for (var i = 0; i < grid.columnCount; ++i) {
+                                    var cd = grid.getColumnDefinition(i);
+                                    if (cd === null || cd === void 0 ? void 0 : cd.isPercentage) {
+                                        total += cd === null || cd === void 0 ? void 0 : cd.getValue(grid.host);
+                                        count++;
+                                    }
                                 }
-                            }
-                            grid.addRowDefinition(total / count, false);
-                            _this.resetValues();
-                            _this.forceUpdate();
-                        } }),
-                    "  ",
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Remove Row", icon: subtractGridElementDark, shortcut: "", isActive: this._removingRow, disabled: grid.rowCount <= 1, onClick: function () {
-                            var hasChild = false;
-                            for (var i = 0; i < grid.columnCount; ++i) {
-                                var child = grid.cells[(grid.rowCount - 1) + ":" + i];
-                                if (child === null || child === void 0 ? void 0 : child.children.length) {
-                                    hasChild = true;
-                                    break;
-                                    //(grid.rowCount > 1 && !this._removingRow) 
+                                grid.addColumnDefinition(total / count, false);
+                                _this.resetValues();
+                                _this.forceUpdate();
+                            } }),
+                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Remove Column", icon: subtractGridElementDark, shortcut: "", isActive: this._removingColumn, disabled: grid.columnCount <= 1, onClick: function () {
+                                var hasChild = false;
+                                for (var i = 0; i < grid.rowCount; ++i) {
+                                    var child = grid.cells[i + ":" + (grid.columnCount - 1)];
+                                    if (child === null || child === void 0 ? void 0 : child.children.length) {
+                                        hasChild = true;
+                                        break;
+                                    }
                                 }
-                            }
-                            _this.resetValues();
-                            if (hasChild) {
-                                _this._rowChild = true;
-                            }
-                            _this._removingRow = true;
-                            _this.forceUpdate();
-                        } }),
-                    this._editedRow &&
-                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-                            " ",
+                                _this.resetValues();
+                                if (hasChild) {
+                                    _this._columnChild = true;
+                                }
+                                _this._removingColumn = true;
+                                _this.forceUpdate();
+                            } }),
+                        this._editedColumn && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
                             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Confirm", icon: confirmGridElementDark, shortcut: "", isActive: false, onClick: function () {
-                                    _this.resizeRow();
+                                    _this.resizeColumn();
                                     _this.forceUpdate();
                                 } }),
                             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Cancel", icon: cancelGridElementDark, shortcut: "", isActive: false, onClick: function () {
                                     _this.resetValues();
                                     _this.forceUpdate();
                                 } })),
-                    this._removingRow &&
-                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-                            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Confirm", icon: confirmGridElementDark, shortcut: "", isActive: false, onClick: function () {
-                                    grid.removeRowDefinition(grid.rowCount - 1);
-                                    _this.setRowValues();
-                                    _this.resizeRow();
-                                    _this.forceUpdate();
-                                    _this._removingRow = false;
-                                    _this._rowChild = false;
-                                } }),
-                            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Cancel", icon: cancelGridElementDark, shortcut: "", isActive: false, onClick: function () {
-                                    _this._removingRow = false;
-                                    _this._rowChild = false;
-                                    _this.forceUpdate();
-                                } })))),
-            this._rowChild && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { tooltip: "", label: "This row is not empty. Removing it will delete all contained controls. Do you want to remove this row and delete all controls within?", value: " ", color: "grey" })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", { className: "ge" }),
-            this.renderColumns(),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-grid-button-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Add Column", icon: addGridElementDark, shortcut: "", isActive: false, onClick: function () {
-                        var total = 0;
-                        var count = 0;
-                        for (var i = 0; i < grid.columnCount; ++i) {
-                            var cd = grid.getColumnDefinition(i);
-                            if (cd === null || cd === void 0 ? void 0 : cd.isPercentage) {
-                                total += cd === null || cd === void 0 ? void 0 : cd.getValue(grid.host);
-                                count++;
-                            }
-                        }
-                        grid.addColumnDefinition(total / count, false);
-                        _this.resetValues();
-                        _this.forceUpdate();
-                    } }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Remove Column", icon: subtractGridElementDark, shortcut: "", isActive: this._removingColumn, disabled: grid.columnCount <= 1, onClick: function () {
-                        var hasChild = false;
-                        for (var i = 0; i < grid.rowCount; ++i) {
-                            var child = grid.cells[i + ":" + (grid.columnCount - 1)];
-                            if (child === null || child === void 0 ? void 0 : child.children.length) {
-                                hasChild = true;
-                                break;
-                            }
-                        }
-                        _this.resetValues();
-                        if (hasChild) {
-                            _this._columnChild = true;
-                        }
-                        _this._removingColumn = true;
-                        _this.forceUpdate();
-                    } }),
-                this._editedColumn && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Confirm", icon: confirmGridElementDark, shortcut: "", isActive: false, onClick: function () {
-                            _this.resizeColumn();
-                            _this.forceUpdate();
-                        } }),
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Cancel", icon: cancelGridElementDark, shortcut: "", isActive: false, onClick: function () {
-                            _this.resetValues();
-                            _this.forceUpdate();
-                        } })),
-                this._removingColumn &&
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Confirm", icon: confirmGridElementDark, shortcut: "", isActive: false, onClick: function () {
-                                grid.removeColumnDefinition(grid.columnCount - 1);
-                                _this.setColumnValues();
-                                _this.resizeColumn();
-                                _this.forceUpdate();
-                                _this._removingColumn = false;
-                                _this._columnChild = false;
-                            } }),
-                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Cancel", icon: cancelGridElementDark, shortcut: "", isActive: false, onClick: function () {
-                                _this._removingColumn = false;
-                                _this._columnChild = false;
-                                _this.forceUpdate();
-                            } })),
-                " "),
-            this._columnChild && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { tooltip: "", label: "This column is not empty. Removing it will delete all contained controls. Do you want to remove this column and delete all controls within?", value: " ", color: "grey" }))));
+                        this._removingColumn &&
+                            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Confirm", icon: confirmGridElementDark, shortcut: "", isActive: false, onClick: function () {
+                                        grid.removeColumnDefinition(grid.columnCount - 1);
+                                        _this.setColumnValues();
+                                        _this.resizeColumn();
+                                        _this.forceUpdate();
+                                        _this._removingColumn = false;
+                                        _this._columnChild = false;
+                                    } }),
+                                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commandButtonComponent__WEBPACK_IMPORTED_MODULE_5__["CommandButtonComponent"], { altStyle: true, tooltip: "Cancel", icon: cancelGridElementDark, shortcut: "", isActive: false, onClick: function () {
+                                        _this._removingColumn = false;
+                                        _this._columnChild = false;
+                                        _this.forceUpdate();
+                                    } })),
+                        " "),
+                    this._columnChild && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextLineComponent"], { tooltip: "", label: "This column is not empty. Removing it will delete all contained controls. Do you want to remove this column and delete all controls within?", value: " ", color: "grey" })))));
     };
     return GridPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44188,6 +44611,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textInputLineComponent */ "./sharedUiComponents/lines/textInputLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
 /* harmony import */ var _sliderPropertyGridComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sliderPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/sliderPropertyGridComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -44203,15 +44628,15 @@ var ImageBasedSliderPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     ImageBasedSliderPropertyGridComponent.prototype.render = function () {
-        var imageBasedSlider = this.props.imageBasedSlider;
+        var imageBasedSliders = this.props.imageBasedSliders;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: imageBasedSlider, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: imageBasedSliders, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextLineComponent"], { label: "IMAGE LINKS", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { icon: thumbImageLinkIcon, lockObject: this.props.lockObject, iconLabel: "Thumb Image Link", target: imageBasedSlider.thumbImage, label: "", propertyName: "source", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { icon: valueBarImageLinkIcon, lockObject: this.props.lockObject, iconLabel: "Value Bar Image Link", target: imageBasedSlider.valueBarImage, label: "", propertyName: "source", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { icon: sliderBackgroundImageIcon, lockObject: this.props.lockObject, iconLabel: "Background Image Link", target: imageBasedSlider.backgroundImage, label: "", propertyName: "source", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sliderPropertyGridComponent__WEBPACK_IMPORTED_MODULE_5__["SliderPropertyGridComponent"], { slider: imageBasedSlider, lockObject: this.props.lockObject, onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { icon: thumbImageLinkIcon, lockObject: this.props.lockObject, iconLabel: "Thumb Image Link", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(imageBasedSliders.map(function (slider) { return slider.thumbImage; }), this.props.onPropertyChangedObservable), label: "", propertyName: "source", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { icon: valueBarImageLinkIcon, lockObject: this.props.lockObject, iconLabel: "Value Bar Image Link", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(imageBasedSliders.map(function (slider) { return slider.valueBarImage; }), this.props.onPropertyChangedObservable), label: "", propertyName: "source", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { icon: sliderBackgroundImageIcon, lockObject: this.props.lockObject, iconLabel: "Background Image Link", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(imageBasedSliders.map(function (slider) { return slider.backgroundImage; }), this.props.onPropertyChangedObservable), label: "", propertyName: "source", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sliderPropertyGridComponent__WEBPACK_IMPORTED_MODULE_5__["SliderPropertyGridComponent"], { sliders: imageBasedSliders, lockObject: this.props.lockObject, onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return ImageBasedSliderPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44241,6 +44666,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_optionsLineComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/optionsLineComponent */ "./sharedUiComponents/lines/optionsLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textInputLineComponent */ "./sharedUiComponents/lines/textInputLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -44256,14 +44683,54 @@ var cropIcon = __webpack_require__(/*! ../../../../sharedUiComponents/imgs/cropI
 var cellIDIcon = __webpack_require__(/*! ../../../../sharedUiComponents/imgs/cellIDIcon.svg */ "./sharedUiComponents/imgs/cellIDIcon.svg");
 var autoResizeIcon = __webpack_require__(/*! ../../../../sharedUiComponents/imgs/autoResizeIcon.svg */ "./sharedUiComponents/imgs/autoResizeIcon.svg");
 var sizeIcon = __webpack_require__(/*! ../../../../sharedUiComponents/imgs/sizeIcon.svg */ "./sharedUiComponents/imgs/sizeIcon.svg");
+var animationSheetIcon = __webpack_require__(/*! ../../../../sharedUiComponents/imgs/animationSheetIcon.svg */ "./sharedUiComponents/imgs/animationSheetIcon.svg");
 var ImagePropertyGridComponent = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(ImagePropertyGridComponent, _super);
     function ImagePropertyGridComponent(props) {
         return _super.call(this, props) || this;
     }
+    ImagePropertyGridComponent.prototype.toggleAnimations = function (on) {
+        for (var _i = 0, _a = this.props.images; _i < _a.length; _i++) {
+            var image = _a[_i];
+            if (on) {
+                image.cellId = 0;
+                image.cellWidth = image.imageWidth;
+                image.cellHeight = image.imageHeight;
+            }
+            else {
+                image.cellId = -1;
+            }
+        }
+    };
+    ImagePropertyGridComponent.prototype.getMaxCells = function () {
+        var maxCells = Number.MAX_SAFE_INTEGER;
+        for (var _i = 0, _a = this.props.images; _i < _a.length; _i++) {
+            var image = _a[_i];
+            if (image.cellWidth === 0 || image.cellHeight === 0)
+                continue;
+            var cols = Math.ceil(image.imageWidth / image.cellWidth);
+            var rows = Math.ceil(image.imageHeight / image.cellHeight);
+            var max = (cols * rows) - 1;
+            if (max < maxCells)
+                maxCells = max;
+        }
+        return maxCells;
+    };
+    ImagePropertyGridComponent.prototype.updateCellSize = function () {
+        var maxCells = this.getMaxCells();
+        for (var _i = 0, _a = this.props.images; _i < _a.length; _i++) {
+            var image = _a[_i];
+            if (image.cellId > maxCells) {
+                image.cellId = maxCells;
+            }
+        }
+        this.forceUpdate();
+    };
     ImagePropertyGridComponent.prototype.render = function () {
         var _this = this;
-        var image = this.props.image;
+        var images = this.props.images;
+        var image = images[0]; // for nine slice
+        var proxy = Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_9__["makeTargetsProxy"])(images, this.props.onPropertyChangedObservable);
         var stretchOptions = [
             { label: "None", value: babylonjs_gui_2D_controls_image__WEBPACK_IMPORTED_MODULE_3__["Image"].STRETCH_NONE },
             { label: "Fill", value: babylonjs_gui_2D_controls_image__WEBPACK_IMPORTED_MODULE_3__["Image"].STRETCH_FILL },
@@ -44271,20 +44738,24 @@ var ImagePropertyGridComponent = /** @class */ (function (_super) {
             { label: "Extend", value: babylonjs_gui_2D_controls_image__WEBPACK_IMPORTED_MODULE_3__["Image"].STRETCH_EXTEND },
             { label: "NinePatch", value: babylonjs_gui_2D_controls_image__WEBPACK_IMPORTED_MODULE_3__["Image"].STRETCH_NINE_PATCH },
         ];
+        var animationSheet = images.every(function (image) { return image.cellId !== -1; });
+        var maxCells = this.getMaxCells();
+        var maxCellWidth = Math.max.apply(Math, images.map(function (image) { return image.imageWidth; }));
+        var maxCellHeight = Math.max.apply(Math, images.map(function (image) { return image.imageHeight; }));
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: image, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: images, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_8__["TextLineComponent"], { label: "IMAGE", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_7__["TextInputLineComponent"], { iconLabel: "Source", icon: imageLinkIcon, lockObject: this.props.lockObject, label: "", target: image, propertyName: "source", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_7__["TextInputLineComponent"], { iconLabel: "Source", icon: imageLinkIcon, lockObject: this.props.lockObject, label: "", target: proxy, propertyName: "source", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Crop", icon: cropIcon, lockObject: this.props.lockObject, label: "L", target: image, propertyName: "sourceLeft", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "T", target: image, propertyName: "sourceTop", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Crop", icon: cropIcon, lockObject: this.props.lockObject, label: "L", target: proxy, propertyName: "sourceLeft", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "T", target: proxy, propertyName: "sourceTop", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "R", target: image, icon: cropIcon, iconLabel: "Crop", propertyName: "sourceWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "B", target: image, propertyName: "sourceHeight", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "Autoscale", icon: autoResizeIcon, label: "AUTOSCALE", target: image, propertyName: "autoScale", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_optionsLineComponent__WEBPACK_IMPORTED_MODULE_6__["OptionsLineComponent"], { iconLabel: "Stretch", icon: stretchFillIcon, label: "", options: stretchOptions, target: image, propertyName: "stretch", onPropertyChangedObservable: this.props.onPropertyChangedObservable, onSelect: function (value) { return _this.setState({ mode: value }); } }),
-            image.stretch === babylonjs_gui_2D_controls_image__WEBPACK_IMPORTED_MODULE_3__["Image"].STRETCH_NINE_PATCH && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "R", target: proxy, icon: cropIcon, iconLabel: "Crop", propertyName: "sourceWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "B", target: proxy, propertyName: "sourceHeight", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "Autoscale", icon: autoResizeIcon, label: "AUTOSCALE", target: proxy, propertyName: "autoScale", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_optionsLineComponent__WEBPACK_IMPORTED_MODULE_6__["OptionsLineComponent"], { iconLabel: "Stretch", icon: stretchFillIcon, label: "", options: stretchOptions, target: proxy, propertyName: "stretch", onPropertyChangedObservable: this.props.onPropertyChangedObservable, onSelect: function (value) { return _this.setState({ mode: value }); } }),
+            images.length === 1 && image.stretch === babylonjs_gui_2D_controls_image__WEBPACK_IMPORTED_MODULE_3__["Image"].STRETCH_NINE_PATCH && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
                     react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Slice", icon: cropIcon, lockObject: this.props.lockObject, label: "L", target: image, propertyName: "sliceLeft", onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function () { image.populateNinePatchSlicesFromImage = false; _this.forceUpdate(); } }),
                     react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "R", target: image, propertyName: "sliceRight", onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function () { image.populateNinePatchSlicesFromImage = false; _this.forceUpdate(); } })),
@@ -44293,12 +44764,13 @@ var ImagePropertyGridComponent = /** @class */ (function (_super) {
                     react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "B", target: image, propertyName: "sliceBottom", onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function () { image.populateNinePatchSlicesFromImage = false; _this.forceUpdate(); } })),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "populateNinePatchSlicesFromImage", icon: autoResizeIcon, label: "SLICE FROM IMAGE", target: image, propertyName: "populateNinePatchSlicesFromImage", onPropertyChangedObservable: this.props.onPropertyChangedObservable, onValueChanged: function () { _this.forceUpdate(); image._markAsDirty(); } })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_8__["TextLineComponent"], { label: "ANIMATION SHEET", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider-short" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Cell Id", icon: cellIDIcon, lockObject: this.props.lockObject, label: "", isInteger: true, target: image, propertyName: "cellId", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { icon: sizeIcon, lockObject: this.props.lockObject, label: "W", target: image, propertyName: "cellWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "H", target: image, propertyName: "cellHeight", onPropertyChangedObservable: this.props.onPropertyChangedObservable }))));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "animationSheet", icon: animationSheetIcon, label: "ANIMATION SHEET", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_9__["makeTargetsProxy"])(images, this.props.onPropertyChangedObservable, function (target) { return target.cellId !== -1; }), onValueChanged: function () { _this.toggleAnimations(!animationSheet); _this.forceUpdate(); } }),
+            animationSheet && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider-short" },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { iconLabel: "Cell Id", icon: cellIDIcon, lockObject: this.props.lockObject, label: "", isInteger: true, target: proxy, propertyName: "cellId", onPropertyChangedObservable: this.props.onPropertyChangedObservable, min: 0, max: maxCells })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { icon: sizeIcon, lockObject: this.props.lockObject, label: "W", target: proxy, propertyName: "cellWidth", isInteger: true, onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function () { return _this.updateCellSize(); }, min: 1, max: maxCellWidth }),
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_4__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "H", target: proxy, propertyName: "cellHeight", isInteger: true, onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function () { return _this.updateCellSize(); }, min: 1, max: maxCellHeight })))));
     };
     return ImagePropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44326,7 +44798,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
-/* harmony import */ var _sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/color3LineComponent */ "./sharedUiComponents/lines/color3LineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+/* harmony import */ var _sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/colorLineComponent */ "./sharedUiComponents/lines/colorLineComponent.tsx");
+
 
 
 
@@ -44349,23 +44823,23 @@ var InputTextPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     InputTextPropertyGridComponent.prototype.render = function () {
-        var inputText = this.props.inputText;
+        var inputTexts = this.props.inputTexts;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: inputText, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: inputTexts, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_7__["TextLineComponent"], { label: "INPUT TEXT", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Text", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: inputText, propertyName: "text", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Prompt", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: inputText, propertyName: "promptMessage", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Max width", icon: sizeIcon, lockObject: this.props.lockObject, label: "", target: inputText, propertyName: "maxWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_8__["Color3LineComponent"], { iconLabel: "Highlight color", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: inputText, propertyName: "textHighlightColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_sliderLineComponent__WEBPACK_IMPORTED_MODULE_4__["SliderLineComponent"], { iconLabel: "Highligher opacity", icon: alphaIcon, label: "", minimum: 0, maximum: 1, step: 0.01, target: inputText, propertyName: "highligherOpacity", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "On focus select all", icon: verticalMarginIcon, label: "ON FOCUS SELECT ALL", target: inputText, propertyName: "onFocusSelectAll", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Focused background", icon: colorIcon, lockObject: this.props.lockObject, label: "", target: inputText, propertyName: "focusedBackground", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Margin", icon: verticalMarginIcon, lockObject: this.props.lockObject, label: "", target: inputText, propertyName: "margin", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "Auto stretch width", icon: sizeIcon, label: "AUTO STRETCH", target: inputText, propertyName: "autoStretchWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_6__["FloatLineComponent"], { iconLabel: "Thickness", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: inputText, propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Placeholder text", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: inputText, propertyName: "placeholderText", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_8__["Color3LineComponent"], { iconLabel: "Placeholder color", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: inputText, propertyName: "placeholderColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Text", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "text" }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Prompt", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "promptMessage" }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Max width", icon: sizeIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "maxWidth" }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__["ColorLineComponent"], { iconLabel: "Highlight color", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "textHighlightColor" }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_sliderLineComponent__WEBPACK_IMPORTED_MODULE_4__["SliderLineComponent"], { iconLabel: "Highligher opacity", icon: alphaIcon, label: "", minimum: 0, maximum: 1, step: 0.01, target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "highligherOpacity" }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "On focus select all", icon: verticalMarginIcon, label: "ON FOCUS SELECT ALL", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "onFocusSelectAll", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__["ColorLineComponent"], { iconLabel: "Focused background", icon: colorIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "focusedBackground", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Margin", icon: verticalMarginIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "margin", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "Auto stretch width", icon: sizeIcon, label: "AUTO STRETCH", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "autoStretchWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_6__["FloatLineComponent"], { iconLabel: "Thickness", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_3__["TextInputLineComponent"], { iconLabel: "Placeholder text", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "placeholderText", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__["ColorLineComponent"], { iconLabel: "Placeholder color", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_8__["makeTargetsProxy"])(inputTexts, this.props.onPropertyChangedObservable), propertyName: "placeholderColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return InputTextPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44391,6 +44865,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textInputLineComponent */ "./sharedUiComponents/lines/textInputLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -44404,32 +44880,58 @@ var LinePropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     LinePropertyGridComponent.prototype.onDashChange = function (value) {
-        var line = this.props.line;
         var split = value.split(",");
-        line.dash = [];
-        split.forEach(function (v) {
-            var int = parseInt(v);
-            if (isNaN(int)) {
-                return;
-            }
-            line.dash.push(int);
-        });
+        var _loop_1 = function (line) {
+            line.dash = [];
+            split.forEach(function (v) {
+                var int = parseInt(v);
+                if (isNaN(int)) {
+                    return;
+                }
+                line.dash.push(int);
+            });
+        };
+        for (var _i = 0, _a = this.props.lines; _i < _a.length; _i++) {
+            var line = _a[_i];
+            _loop_1(line);
+        }
+        this.forceUpdate();
     };
     LinePropertyGridComponent.prototype.render = function () {
         var _this = this;
-        var line = this.props.line;
+        var lines = this.props.lines;
+        var dashes = lines[0].dash;
+        var _loop_2 = function (line) {
+            if (dashes.length === 0)
+                return "break";
+            if (line.dash.length !== dashes.length) {
+                dashes = [];
+            }
+            dashes.forEach(function (dash, index) {
+                if (line.dash[index] !== dash) {
+                    dashes = [];
+                }
+            });
+        };
+        for (var _i = 0, lines_1 = lines; _i < lines_1.length; _i++) {
+            var line = lines_1[_i];
+            var state_1 = _loop_2(line);
+            if (state_1 === "break")
+                break;
+        }
+        var dashString = dashes.join(",");
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: line, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: lines, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__["TextLineComponent"], { label: "LINE", value: " ", color: "grey" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Position 1", icon: positionIcon, lockObject: this.props.lockObject, label: "X", target: line, propertyName: "x1", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { lockObject: this.props.lockObject, label: "Y", target: line, propertyName: "y1", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Position 1", icon: positionIcon, lockObject: this.props.lockObject, label: "X", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(lines, this.props.onPropertyChangedObservable), propertyName: "x1", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { lockObject: this.props.lockObject, label: "Y", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(lines, this.props.onPropertyChangedObservable), propertyName: "y1", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Position 2", icon: positionIcon, lockObject: this.props.lockObject, label: "X", target: line, propertyName: "x2", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { lockObject: this.props.lockObject, label: "Y", target: line, propertyName: "y2", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Line width", icon: positionIcon, lockObject: this.props.lockObject, label: "", target: line, propertyName: "lineWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Dash pattern", icon: positionIcon, lockObject: this.props.lockObject, label: "", target: line, value: line.dash.join(","), onChange: function (newValue) { return _this.onDashChange(newValue); } })));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Position 2", icon: positionIcon, lockObject: this.props.lockObject, label: "X", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(lines, this.props.onPropertyChangedObservable), propertyName: "x2", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { lockObject: this.props.lockObject, label: "Y", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(lines, this.props.onPropertyChangedObservable), propertyName: "y2", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Line width", icon: positionIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(lines, this.props.onPropertyChangedObservable), propertyName: "lineWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Dash pattern", icon: positionIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(lines, this.props.onPropertyChangedObservable), value: dashString, onChange: function (newValue) { return _this.onDashChange(newValue); } })));
     };
     return LinePropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44456,6 +44958,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textInputLineComponent */ "./sharedUiComponents/lines/textInputLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -44472,16 +44976,16 @@ var RadioButtonPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     RadioButtonPropertyGridComponent.prototype.render = function () {
-        var radioButton = this.props.radioButton;
+        var radioButtons = this.props.radioButtons;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: radioButton, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: radioButtons, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextLineComponent"], { label: "RADIO BUTTON", value: " ", color: "grey" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: radioButton, propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Check Size Ratio", icon: scaleIcon, lockObject: this.props.lockObject, label: "", target: radioButton, propertyName: "checkSizeRatio", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Group", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: radioButton, propertyName: "group", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "Is Checked", icon: checkboxIcon, label: "CHECKED", target: radioButton, propertyName: "isChecked", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(radioButtons, this.props.onPropertyChangedObservable), propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Check Size Ratio", icon: scaleIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(radioButtons, this.props.onPropertyChangedObservable), propertyName: "checkSizeRatio", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Group", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(radioButtons, this.props.onPropertyChangedObservable), propertyName: "group", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { iconLabel: "Is Checked", icon: checkboxIcon, label: "CHECKED", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(radioButtons, this.props.onPropertyChangedObservable), propertyName: "isChecked", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return RadioButtonPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44507,6 +45011,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -44522,15 +45028,16 @@ var RectanglePropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     RectanglePropertyGridComponent.prototype.render = function () {
-        var rectangle = this.props.rectangle;
+        var rectangles = this.props.rectangles;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: rectangle, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: rectangles, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__["TextLineComponent"], { label: "RECTANGLE", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__["CheckBoxLineComponent"], { iconLabel: "Clip Content", icon: clipContentsIcon, label: "CLIP CONTENT", target: rectangle, propertyName: "clipChildren", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: rectangle, propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Corner Radius", icon: conerRadiusIcon, lockObject: this.props.lockObject, label: "", target: rectangle, propertyName: "cornerRadius", onPropertyChangedObservable: this.props.onPropertyChangedObservable }))));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(rectangles, this.props.onPropertyChangedObservable), propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: "PX", unitLocked: true })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Corner Radius", icon: conerRadiusIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(rectangles, this.props.onPropertyChangedObservable), propertyName: "cornerRadius", onPropertyChangedObservable: this.props.onPropertyChangedObservable, unit: "PX", unitLocked: true })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_4__["CheckBoxLineComponent"], { iconLabel: "Clip Content", icon: clipContentsIcon, label: "CLIP CONTENT", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(rectangles, this.props.onPropertyChangedObservable), propertyName: "clipChildren", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return RectanglePropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44555,7 +45062,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../gui/commonControlPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/commonControlPropertyGridComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
-/* harmony import */ var _sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/color3LineComponent */ "./sharedUiComponents/lines/color3LineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/colorLineComponent */ "./sharedUiComponents/lines/colorLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -44572,21 +45081,21 @@ var ScrollViewerPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     ScrollViewerPropertyGridComponent.prototype.render = function () {
-        var scrollViewer = this.props.scrollViewer;
+        var scrollViewers = this.props.scrollViewers;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: scrollViewer, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: scrollViewers, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextLineComponent"], { label: "RECTANGLE", value: " ", color: "grey" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: scrollViewer, propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Corner Radius", icon: conerRadiusIcon, lockObject: this.props.lockObject, label: "", target: scrollViewer, propertyName: "cornerRadius", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Stroke Weight", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(scrollViewers, this.props.onPropertyChangedObservable), propertyName: "thickness", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Corner Radius", icon: conerRadiusIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(scrollViewers, this.props.onPropertyChangedObservable), propertyName: "cornerRadius", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextLineComponent"], { label: "SCROLLVIEWER", value: " ", color: "grey" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Wheel precision", icon: sizeIcon, lockObject: this.props.lockObject, label: "", target: scrollViewer, propertyName: "wheelPrecision", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Bar size", icon: sizeIcon, lockObject: this.props.lockObject, label: "", target: scrollViewer, propertyName: "barSize", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_5__["Color3LineComponent"], { iconLabel: "Bar color", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: scrollViewer, propertyName: "barColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_5__["Color3LineComponent"], { iconLabel: "Bar background", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: scrollViewer, propertyName: "barBackground", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Wheel precision", icon: sizeIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(scrollViewers, this.props.onPropertyChangedObservable), propertyName: "wheelPrecision", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_3__["FloatLineComponent"], { iconLabel: "Bar size", icon: sizeIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(scrollViewers, this.props.onPropertyChangedObservable), propertyName: "barSize", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_5__["ColorLineComponent"], { iconLabel: "Bar color", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(scrollViewers, this.props.onPropertyChangedObservable), propertyName: "barColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_5__["ColorLineComponent"], { iconLabel: "Bar background", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(scrollViewers, this.props.onPropertyChangedObservable), propertyName: "barBackground", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return ScrollViewerPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44620,10 +45129,10 @@ var SliderGenericPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     SliderGenericPropertyGridComponent.prototype.render = function () {
-        var slider = this.props.slider;
+        var sliders = this.props.sliders;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: slider, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sliderPropertyGridComponent__WEBPACK_IMPORTED_MODULE_3__["SliderPropertyGridComponent"], { slider: slider, lockObject: this.props.lockObject, onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: sliders, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sliderPropertyGridComponent__WEBPACK_IMPORTED_MODULE_3__["SliderPropertyGridComponent"], { sliders: sliders, lockObject: this.props.lockObject, onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return SliderGenericPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44649,7 +45158,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textInputLineComponent */ "./sharedUiComponents/lines/textInputLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
-/* harmony import */ var _sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/color3LineComponent */ "./sharedUiComponents/lines/color3LineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/colorLineComponent */ "./sharedUiComponents/lines/colorLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -44673,23 +45184,23 @@ var SliderPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     SliderPropertyGridComponent.prototype.render = function () {
-        var slider = this.props.slider;
+        var sliders = this.props.sliders;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_5__["TextLineComponent"], { label: "SLIDER", value: " ", color: "grey" }),
-            slider.typeName === "Slider" && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_6__["Color3LineComponent"], { iconLabel: "Border color", icon: colorIcon, lockObject: this.props.lockObject, label: "", target: slider, propertyName: "borderColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Display thumb", icon: showThumbIcon, label: "DISPLAY THUMB", target: slider, propertyName: "displayThumb", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Thumb circle", icon: thumbCircleIcon, label: "THUMB CIRCLE", target: slider, propertyName: "isThumbCircle", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Thumb clamped", icon: clampSliderValueIcon, label: "THUMB CLAMPED", target: slider, propertyName: "isThumbClamped", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Vertical", icon: verticalSliderIcon, label: "VERTICAL", target: slider, propertyName: "isVertical", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            sliders.every(function (slider) { return slider.typeName === "Slider"; }) && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_6__["ColorLineComponent"], { iconLabel: "Border color", icon: colorIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "borderColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Display thumb", icon: showThumbIcon, label: "DISPLAY THUMB", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "displayThumb", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Thumb circle", icon: thumbCircleIcon, label: "THUMB CIRCLE", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "isThumbCircle", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Thumb clamped", icon: clampSliderValueIcon, label: "THUMB CLAMPED", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "isThumbClamped", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Vertical", icon: verticalSliderIcon, label: "VERTICAL", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "isVertical", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Thumb width", icon: thumbWidthIcon, lockObject: this.props.lockObject, label: "", target: slider, propertyName: "thumbWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Bar offset", icon: barOffsetIcon, lockObject: this.props.lockObject, label: "", target: slider, propertyName: "barOffset", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Thumb width", icon: thumbWidthIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "thumbWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Bar offset", icon: barOffsetIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "barOffset", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_2__["FloatLineComponent"], { iconLabel: "Minimum", icon: sliderValueMinimumIcon, lockObject: this.props.lockObject, label: "", target: slider, propertyName: "minimum", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_2__["FloatLineComponent"], { iconLabel: "Maximum", icon: sliderValueMaximumIcon, lockObject: this.props.lockObject, label: "", target: slider, propertyName: "maximum", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_2__["FloatLineComponent"], { iconLabel: "Minimum", icon: sliderValueMinimumIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "minimum", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_2__["FloatLineComponent"], { iconLabel: "Maximum", icon: sliderValueMaximumIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "maximum", onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider-short" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_2__["FloatLineComponent"], { iconLabel: "Value", icon: sliderValueIcon, lockObject: this.props.lockObject, label: "", target: slider, propertyName: "value", onPropertyChangedObservable: this.props.onPropertyChangedObservable }))));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_2__["FloatLineComponent"], { iconLabel: "Value", icon: sliderValueIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_7__["makeTargetsProxy"])(sliders, this.props.onPropertyChangedObservable), propertyName: "value", onPropertyChangedObservable: this.props.onPropertyChangedObservable }))));
     };
     return SliderPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44715,6 +45226,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -44729,14 +45242,14 @@ var StackPanelPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     StackPanelPropertyGridComponent.prototype.render = function () {
-        var stackPanel = this.props.stackPanel;
+        var stackPanels = this.props.stackPanels;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: stackPanel, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: stackPanels, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextLineComponent"], { label: "STACKPANEL", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Clip children", icon: clipContentsIcon, label: "CLIP CHILDREN", target: stackPanel, propertyName: "clipChildren", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Vertical", icon: verticalMarginIcon, label: "VERTICAL", target: stackPanel, propertyName: "isVertical", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "", icon: verticalMarginIcon, iconLabel: "spacing", target: stackPanel, propertyName: "spacing", defaultValue: 0, onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function () { return stackPanel._markAsDirty(); } })));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Clip children", icon: clipContentsIcon, label: "CLIP CHILDREN", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(stackPanels, this.props.onPropertyChangedObservable), propertyName: "clipChildren", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_3__["CheckBoxLineComponent"], { iconLabel: "Vertical", icon: verticalMarginIcon, label: "VERTICAL", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(stackPanels, this.props.onPropertyChangedObservable), propertyName: "isVertical", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_5__["FloatLineComponent"], { lockObject: this.props.lockObject, label: "", icon: verticalMarginIcon, iconLabel: "spacing", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_6__["makeTargetsProxy"])(stackPanels, this.props.onPropertyChangedObservable), propertyName: "spacing", defaultValue: 0, onPropertyChangedObservable: this.props.onPropertyChangedObservable, onChange: function () { return stackPanels.forEach(function (panel) { return panel._markAsDirty(); }); } })));
     };
     return StackPanelPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44766,7 +45279,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/checkBoxLineComponent */ "./sharedUiComponents/lines/checkBoxLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/textLineComponent */ "./sharedUiComponents/lines/textLineComponent.tsx");
-/* harmony import */ var _sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/color3LineComponent */ "./sharedUiComponents/lines/color3LineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/colorLineComponent */ "./sharedUiComponents/lines/colorLineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -44786,24 +45301,24 @@ var TextBlockPropertyGridComponent = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     TextBlockPropertyGridComponent.prototype.render = function () {
-        var textBlock = this.props.textBlock;
+        var textBlocks = this.props.textBlocks;
         var wrappingOptions = [
             { label: "Clip", value: babylonjs_gui_2D_controls_textBlock__WEBPACK_IMPORTED_MODULE_3__["TextWrapping"].Clip },
             { label: "Ellipsis", value: babylonjs_gui_2D_controls_textBlock__WEBPACK_IMPORTED_MODULE_3__["TextWrapping"].Ellipsis },
             { label: "Word wrap", value: babylonjs_gui_2D_controls_textBlock__WEBPACK_IMPORTED_MODULE_3__["TextWrapping"].WordWrap },
         ];
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "pane" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, control: textBlock, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_gui_commonControlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_2__["CommonControlPropertyGridComponent"], { lockObject: this.props.lockObject, controls: textBlocks, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_8__["TextLineComponent"], { label: "TEXTBLOCK", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Text", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: textBlock, propertyName: "text", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_6__["CheckBoxLineComponent"], { iconLabel: "Resize to fit", icon: fontFamilyIcon, label: "RESIZE TO FIT", target: textBlock, propertyName: "resizeToFit", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_optionsLineComponent__WEBPACK_IMPORTED_MODULE_5__["OptionsLineComponent"], { iconLabel: "Wrapping", icon: fontFamilyIcon, label: "", options: wrappingOptions, target: textBlock, propertyName: "textWrapping", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Line spacing", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: textBlock, propertyName: "lineSpacing", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Text", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["makeTargetsProxy"])(textBlocks, this.props.onPropertyChangedObservable), propertyName: "text", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_6__["CheckBoxLineComponent"], { iconLabel: "Resize to fit", icon: fontFamilyIcon, label: "RESIZE TO FIT", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["makeTargetsProxy"])(textBlocks, this.props.onPropertyChangedObservable), propertyName: "resizeToFit", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_optionsLineComponent__WEBPACK_IMPORTED_MODULE_5__["OptionsLineComponent"], { iconLabel: "Wrapping", icon: fontFamilyIcon, label: "", options: wrappingOptions, target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["makeTargetsProxy"])(textBlocks, this.props.onPropertyChangedObservable), propertyName: "textWrapping", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_4__["TextInputLineComponent"], { iconLabel: "Line spacing", icon: fontFamilyIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["makeTargetsProxy"])(textBlocks, this.props.onPropertyChangedObservable), propertyName: "lineSpacing", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", null),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_8__["TextLineComponent"], { label: "OUTLINE", value: " ", color: "grey" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_7__["FloatLineComponent"], { iconLabel: "Outline width", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: textBlock, propertyName: "outlineWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_9__["Color3LineComponent"], { iconLabel: "Outline color", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: textBlock, propertyName: "outlineColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_7__["FloatLineComponent"], { iconLabel: "Outline width", icon: strokeWeightIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["makeTargetsProxy"])(textBlocks, this.props.onPropertyChangedObservable), propertyName: "outlineWidth", onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_9__["ColorLineComponent"], { iconLabel: "Outline color", icon: fillColorIcon, lockObject: this.props.lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_10__["makeTargetsProxy"])(textBlocks, this.props.onPropertyChangedObservable), propertyName: "outlineColor", onPropertyChangedObservable: this.props.onPropertyChangedObservable })));
     };
     return TextBlockPropertyGridComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -44876,18 +45391,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _propertyGrids_gui_scrollViewerPropertyGridComponent__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./propertyGrids/gui/scrollViewerPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/scrollViewerPropertyGridComponent.tsx");
 /* harmony import */ var _propertyGrids_gui_ellipsePropertyGridComponent__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./propertyGrids/gui/ellipsePropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/ellipsePropertyGridComponent.tsx");
 /* harmony import */ var _propertyGrids_gui_checkboxPropertyGridComponent__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./propertyGrids/gui/checkboxPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/checkboxPropertyGridComponent.tsx");
-/* harmony import */ var babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! babylonjs-gui/2D/controls/control */ "babylonjs-gui/2D/controls/button");
-/* harmony import */ var babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _propertyGrids_gui_controlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./propertyGrids/gui/controlPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/controlPropertyGridComponent.tsx");
+/* harmony import */ var _propertyGrids_gui_controlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./propertyGrids/gui/controlPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/controlPropertyGridComponent.tsx");
+/* harmony import */ var babylonjs_gui_2D_advancedDynamicTexture__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! babylonjs-gui/2D/advancedDynamicTexture */ "babylonjs-gui/2D/controls/button");
+/* harmony import */ var babylonjs_gui_2D_advancedDynamicTexture__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(babylonjs_gui_2D_advancedDynamicTexture__WEBPACK_IMPORTED_MODULE_24__);
 /* harmony import */ var _sharedUiComponents_lines_optionsLineComponent__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../sharedUiComponents/lines/optionsLineComponent */ "./sharedUiComponents/lines/optionsLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../sharedUiComponents/lines/floatLineComponent */ "./sharedUiComponents/lines/floatLineComponent.tsx");
-/* harmony import */ var _sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../sharedUiComponents/lines/color3LineComponent */ "./sharedUiComponents/lines/color3LineComponent.tsx");
+/* harmony import */ var _sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../sharedUiComponents/lines/colorLineComponent */ "./sharedUiComponents/lines/colorLineComponent.tsx");
 /* harmony import */ var _sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../sharedUiComponents/lines/textInputLineComponent */ "./sharedUiComponents/lines/textInputLineComponent.tsx");
 /* harmony import */ var _parentingPropertyGridComponent__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../parentingPropertyGridComponent */ "./components/parentingPropertyGridComponent.tsx");
 /* harmony import */ var _propertyGrids_gui_displayGridPropertyGridComponent__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./propertyGrids/gui/displayGridPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/displayGridPropertyGridComponent.tsx");
 /* harmony import */ var _propertyGrids_gui_buttonPropertyGridComponent__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./propertyGrids/gui/buttonPropertyGridComponent */ "./components/propertyTab/propertyGrids/gui/buttonPropertyGridComponent.tsx");
 /* harmony import */ var _guiNodeTools__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../guiNodeTools */ "./guiNodeTools.ts");
-
+/* harmony import */ var _sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../../sharedUiComponents/lines/targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
 
 
 
@@ -44976,7 +45491,7 @@ var PropertyTabComponent = /** @class */ (function (_super) {
                             if (windowAsAny.Playground && oldId) {
                                 windowAsAny.Playground.onRequestCodeChangeObservable.notifyObservers({
                                     regex: new RegExp(oldId, "g"),
-                                    replace: "parseFromSnippetAsync(\"" + adt.snippetId + ")",
+                                    replace: "parseFromSnippetAsync(\"".concat(adt.snippetId, ")"),
                                 });
                             }
                             resolve(adt.snippetId);
@@ -44986,7 +45501,7 @@ var PropertyTabComponent = /** @class */ (function (_super) {
                         }
                     }
                 };
-                xmlHttp.open("POST", babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_23__["AdvancedDynamicTexture"].SnippetUrl + (adt.snippetId ? "/" + adt.snippetId : ""), true);
+                xmlHttp.open("POST", babylonjs_gui_2D_advancedDynamicTexture__WEBPACK_IMPORTED_MODULE_24__["AdvancedDynamicTexture"].SnippetUrl + (adt.snippetId ? "/" + adt.snippetId : ""), true);
                 xmlHttp.setRequestHeader("Content-Type", "application/json");
                 var dataToSend = {
                     payload: JSON.stringify({
@@ -45010,12 +45525,12 @@ var PropertyTabComponent = /** @class */ (function (_super) {
                 savePromise(content, adt)
                     .then(function (snippetId) {
                     adt.snippetId = snippetId;
-                    var alertMessage = "GUI saved with ID:  " + adt.snippetId;
+                    var alertMessage = "GUI saved with ID:  ".concat(adt.snippetId);
                     if (_this.props.globalState.hostWindow.navigator.clipboard) {
                         _this.props.globalState.hostWindow.navigator.clipboard
                             .writeText(adt.snippetId)
                             .then(function () {
-                            _this.props.globalState.hostWindow.alert(alertMessage + ". The ID was copied to your clipboard.");
+                            _this.props.globalState.hostWindow.alert("".concat(alertMessage, ". The ID was copied to your clipboard."));
                         })
                             .catch(function (err) {
                             _this.props.globalState.hostWindow.alert(alertMessage);
@@ -45033,7 +45548,6 @@ var PropertyTabComponent = /** @class */ (function (_super) {
                 return [2 /*return*/];
             });
         }); };
-        _this.state = { currentNode: null };
         _this._lockObject = new _sharedUiComponents_tabs_propertyGrids_lockObject__WEBPACK_IMPORTED_MODULE_8__["LockObject"]();
         _this.props.globalState.lockObject = _this._lockObject;
         _this.props.globalState.onSaveObservable.add(function () {
@@ -45053,16 +45567,10 @@ var PropertyTabComponent = /** @class */ (function (_super) {
     }
     PropertyTabComponent.prototype.componentDidMount = function () {
         var _this = this;
-        this.props.globalState.onSelectionChangedObservable.add(function (selection) {
-            if (selection instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_23__["Control"]) {
-                _this.setState({ currentNode: selection });
-            }
-            else {
-                _this.setState({ currentNode: null });
-            }
+        this.props.globalState.onSelectionChangedObservable.add(function () {
+            _this.forceUpdate();
         });
         this.props.globalState.onResizeObservable.add(function (newSize) {
-            _this.props.globalState.workbench.artBoardBackground._markAsDirty(true);
             _this.forceUpdate();
         });
         this._onBuiltObserver = this.props.globalState.onBuiltObservable.add(function () {
@@ -45078,20 +45586,14 @@ var PropertyTabComponent = /** @class */ (function (_super) {
         babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Tools"].ReadFile(file, function (data) {
             var decoder = new TextDecoder("utf-8");
             _this.props.globalState.workbench.loadFromJson(JSON.parse(decoder.decode(data)));
-            _this.props.globalState.onSelectionChangedObservable.notifyObservers(null);
+            _this.props.globalState.setSelection([]);
         }, undefined, true);
     };
     PropertyTabComponent.prototype.save = function (saveCallback) {
-        //removing the art board background from the adt.
-        this.props.globalState.guiTexture.removeControl(this.props.globalState.workbench.artBoardBackground);
+        this.props.globalState.workbench.removeEditorTransformation();
+        var size = this.props.globalState.workbench.guiSize;
+        this.props.globalState.guiTexture.scaleTo(size.width, size.height);
         saveCallback();
-        //readding the art board at the front of the list so it will be the first thing rendered.
-        if (this.props.globalState.guiTexture.getChildren()[0].children.length) {
-            this.props.globalState.guiTexture.getChildren()[0].children.unshift(this.props.globalState.workbench.artBoardBackground);
-        }
-        else {
-            this.props.globalState.guiTexture.getChildren()[0].children.push(this.props.globalState.workbench.artBoardBackground);
-        }
     };
     PropertyTabComponent.prototype.loadFromSnippet = function () {
         var snippedId = this.props.globalState.hostWindow.prompt("Please enter the snippet ID to use");
@@ -45100,90 +45602,118 @@ var PropertyTabComponent = /** @class */ (function (_super) {
         }
         this.props.globalState.workbench.loadFromSnippet(snippedId);
     };
-    PropertyTabComponent.prototype.renderProperties = function () {
-        var _this = this;
+    ;
+    PropertyTabComponent.prototype.renderNode = function (nodes) {
         var _a;
-        var className = (_a = this.state.currentNode) === null || _a === void 0 ? void 0 : _a.getClassName();
+        var node = nodes[0];
+        return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "header" },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { id: "logo", src: this.renderControlIcon(nodes) }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "title" },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_28__["TextInputLineComponent"], { noUnderline: true, lockObject: this._lockObject, label: "", target: Object(_sharedUiComponents_lines_targetsProxy__WEBPACK_IMPORTED_MODULE_33__["makeTargetsProxy"])(nodes, this.props.globalState.onPropertyChangedObservable), propertyName: "name", onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }))),
+            this.renderProperties(nodes),
+            ((_a = node === null || node === void 0 ? void 0 : node.parent) === null || _a === void 0 ? void 0 : _a.typeName) === "Grid" && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_parentingPropertyGridComponent__WEBPACK_IMPORTED_MODULE_29__["ParentingPropertyGridComponent"], { control: node, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable, lockObject: this._lockObject })));
+    };
+    /**
+     * returns the class name of a list of controls if they share a class, or an empty string if not
+     */
+    PropertyTabComponent.prototype.getControlsCommonClassName = function (nodes) {
+        if (nodes.length === 0)
+            return "";
+        var firstNode = nodes[0];
+        var firstClass = firstNode.getClassName();
+        for (var _i = 0, nodes_1 = nodes; _i < nodes_1.length; _i++) {
+            var node = nodes_1[_i];
+            if (node.getClassName() !== firstClass) {
+                return "";
+            }
+        }
+        return firstClass;
+    };
+    PropertyTabComponent.prototype.renderProperties = function (nodes) {
+        var _this = this;
+        if (nodes.length === 0)
+            return;
+        var className = this.getControlsCommonClassName(nodes);
         switch (className) {
             case "TextBlock": {
-                var textBlock = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_textBlockPropertyGridComponent__WEBPACK_IMPORTED_MODULE_12__["TextBlockPropertyGridComponent"], { textBlock: textBlock, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var textBlocks = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_textBlockPropertyGridComponent__WEBPACK_IMPORTED_MODULE_12__["TextBlockPropertyGridComponent"], { textBlocks: textBlocks, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "InputText": {
-                var inputText = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_inputTextPropertyGridComponent__WEBPACK_IMPORTED_MODULE_13__["InputTextPropertyGridComponent"], { inputText: inputText, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var inputTexts = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_inputTextPropertyGridComponent__WEBPACK_IMPORTED_MODULE_13__["InputTextPropertyGridComponent"], { inputTexts: inputTexts, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "ColorPicker": {
-                var colorPicker = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_colorPickerPropertyGridComponent__WEBPACK_IMPORTED_MODULE_14__["ColorPickerPropertyGridComponent"], { colorPicker: colorPicker, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var colorPickers = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_colorPickerPropertyGridComponent__WEBPACK_IMPORTED_MODULE_14__["ColorPickerPropertyGridComponent"], { colorPickers: colorPickers, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "Image": {
-                var image = this.state.currentNode;
-                return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_imagePropertyGridComponent__WEBPACK_IMPORTED_MODULE_15__["ImagePropertyGridComponent"], { image: image, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable });
+                var images = nodes;
+                return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_imagePropertyGridComponent__WEBPACK_IMPORTED_MODULE_15__["ImagePropertyGridComponent"], { images: images, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable });
             }
             case "Slider": {
-                var slider = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_sliderGenericPropertyGridComponent__WEBPACK_IMPORTED_MODULE_9__["SliderGenericPropertyGridComponent"], { slider: slider, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var sliders = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_sliderGenericPropertyGridComponent__WEBPACK_IMPORTED_MODULE_9__["SliderGenericPropertyGridComponent"], { sliders: sliders, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "ImageBasedSlider": {
-                var imageBasedSlider = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_imageBasedSliderPropertyGridComponent__WEBPACK_IMPORTED_MODULE_16__["ImageBasedSliderPropertyGridComponent"], { imageBasedSlider: imageBasedSlider, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var imageBasedSliders = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_imageBasedSliderPropertyGridComponent__WEBPACK_IMPORTED_MODULE_16__["ImageBasedSliderPropertyGridComponent"], { imageBasedSliders: imageBasedSliders, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "Rectangle": {
-                var rectangle = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_rectanglePropertyGridComponent__WEBPACK_IMPORTED_MODULE_17__["RectanglePropertyGridComponent"], { rectangle: rectangle, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_rectanglePropertyGridComponent__WEBPACK_IMPORTED_MODULE_17__["RectanglePropertyGridComponent"], { rectangles: nodes, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "StackPanel": {
-                var stackPanel = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_stackPanelPropertyGridComponent__WEBPACK_IMPORTED_MODULE_18__["StackPanelPropertyGridComponent"], { stackPanel: stackPanel, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var stackPanels = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_stackPanelPropertyGridComponent__WEBPACK_IMPORTED_MODULE_18__["StackPanelPropertyGridComponent"], { stackPanels: stackPanels, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "Grid": {
-                var grid = this.state.currentNode;
-                return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_gridPropertyGridComponent__WEBPACK_IMPORTED_MODULE_19__["GridPropertyGridComponent"], { grid: grid, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable });
+                var grids = nodes;
+                return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_gridPropertyGridComponent__WEBPACK_IMPORTED_MODULE_19__["GridPropertyGridComponent"], { grids: grids, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable });
             }
             case "ScrollViewer": {
-                var scrollViewer = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_scrollViewerPropertyGridComponent__WEBPACK_IMPORTED_MODULE_20__["ScrollViewerPropertyGridComponent"], { scrollViewer: scrollViewer, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var scrollViewers = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_scrollViewerPropertyGridComponent__WEBPACK_IMPORTED_MODULE_20__["ScrollViewerPropertyGridComponent"], { scrollViewers: scrollViewers, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "Ellipse": {
-                var ellipse = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_ellipsePropertyGridComponent__WEBPACK_IMPORTED_MODULE_21__["EllipsePropertyGridComponent"], { ellipse: ellipse, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var ellipses = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_ellipsePropertyGridComponent__WEBPACK_IMPORTED_MODULE_21__["EllipsePropertyGridComponent"], { ellipses: ellipses, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "Checkbox": {
-                var checkbox = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_checkboxPropertyGridComponent__WEBPACK_IMPORTED_MODULE_22__["CheckboxPropertyGridComponent"], { checkbox: checkbox, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var checkboxes = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_checkboxPropertyGridComponent__WEBPACK_IMPORTED_MODULE_22__["CheckboxPropertyGridComponent"], { checkboxes: checkboxes, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "RadioButton": {
-                var radioButton = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_radioButtonPropertyGridComponent__WEBPACK_IMPORTED_MODULE_11__["RadioButtonPropertyGridComponent"], { radioButton: radioButton, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var radioButtons = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_radioButtonPropertyGridComponent__WEBPACK_IMPORTED_MODULE_11__["RadioButtonPropertyGridComponent"], { radioButtons: radioButtons, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "Line": {
-                var line = this.state.currentNode;
-                return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_linePropertyGridComponent__WEBPACK_IMPORTED_MODULE_10__["LinePropertyGridComponent"], { line: line, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable });
+                var lines = nodes;
+                return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_linePropertyGridComponent__WEBPACK_IMPORTED_MODULE_10__["LinePropertyGridComponent"], { lines: lines, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable });
             }
             case "DisplayGrid": {
-                var displayGrid = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_displayGridPropertyGridComponent__WEBPACK_IMPORTED_MODULE_30__["DisplayGridPropertyGridComponent"], { displayGrid: displayGrid, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
+                var displayGrids = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_displayGridPropertyGridComponent__WEBPACK_IMPORTED_MODULE_30__["DisplayGridPropertyGridComponent"], { displayGrids: displayGrids, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
             }
             case "Button": {
-                var button_1 = this.state.currentNode;
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_buttonPropertyGridComponent__WEBPACK_IMPORTED_MODULE_31__["ButtonPropertyGridComponent"], { key: "buttonMenu", rectangle: button_1, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable, onAddComponent: function (value) {
-                        var guiElement = _guiNodeTools__WEBPACK_IMPORTED_MODULE_32__["GUINodeTools"].CreateControlFromString(value);
-                        var newGuiNode = _this.props.globalState.workbench.createNewGuiNode(guiElement);
-                        button_1.addControl(newGuiNode);
-                        _this.props.globalState.onSelectionChangedObservable.notifyObservers(newGuiNode);
+                var buttons_1 = nodes;
+                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_buttonPropertyGridComponent__WEBPACK_IMPORTED_MODULE_31__["ButtonPropertyGridComponent"], { key: "buttonMenu", rectangles: buttons_1, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable, onAddComponent: function (value) {
+                        for (var _i = 0, buttons_2 = buttons_1; _i < buttons_2.length; _i++) {
+                            var button = buttons_2[_i];
+                            var guiElement = _guiNodeTools__WEBPACK_IMPORTED_MODULE_32__["GUINodeTools"].CreateControlFromString(value);
+                            var newGuiNode = _this.props.globalState.workbench.createNewGuiNode(guiElement);
+                            button.addControl(newGuiNode);
+                            _this.props.globalState.select(newGuiNode);
+                        }
                     } }));
             }
         }
-        if (className !== "") {
-            var control = this.state.currentNode;
-            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_controlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_24__["ControlPropertyGridComponent"], { control: control, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
-        }
-        return null;
+        var controls = nodes;
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_propertyGrids_gui_controlPropertyGridComponent__WEBPACK_IMPORTED_MODULE_23__["ControlPropertyGridComponent"], { controls: controls, lockObject: this._lockObject, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }));
     };
-    PropertyTabComponent.prototype.renderControlIcon = function () {
-        var _a;
-        var className = (_a = this.state.currentNode) === null || _a === void 0 ? void 0 : _a.getClassName();
+    PropertyTabComponent.prototype.renderControlIcon = function (nodes) {
+        var node = nodes[0];
+        var className = node.getClassName();
         switch (className) {
             case "TextBlock": {
                 return textBoxIcon;
@@ -45236,27 +45766,29 @@ var PropertyTabComponent = /** @class */ (function (_super) {
             case "Button": {
                 return buttonIcon;
             }
+            case "Container": {
+                return rectangleIcon;
+            }
         }
         return adtIcon;
     };
     PropertyTabComponent.prototype.render = function () {
         var _this = this;
-        var _a, _b;
         if (this.props.globalState.guiTexture == undefined)
             return null;
         var _sizeValues = [
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](1920, 1080),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](1366, 768),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](1280, 800),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](3840, 2160),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](750, 1334),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](1125, 2436),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](1170, 2532),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](1284, 2778),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](1080, 2220),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](1080, 2340),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](1024, 1024),
-            new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](2048, 2048),
+            { width: 1920, height: 1080 },
+            { width: 1366, height: 768 },
+            { width: 1280, height: 800 },
+            { width: 3840, height: 2160 },
+            { width: 750, height: 1334 },
+            { width: 1125, height: 2436 },
+            { width: 1170, height: 2532 },
+            { width: 1284, height: 2778 },
+            { width: 1080, height: 2220 },
+            { width: 1080, height: 2340 },
+            { width: 1024, height: 1024 },
+            { width: 2048, height: 2048 },
         ];
         var _sizeOptions = [
             { label: "Web (1920)", value: 0 },
@@ -45272,21 +45804,14 @@ var PropertyTabComponent = /** @class */ (function (_super) {
             { label: "Square (1024)", value: 10 },
             { label: "Square (2048)", value: 11 },
         ];
-        var size = this.props.globalState.guiTexture.getSize();
-        var textureSize = new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](size.width, size.height);
-        this._sizeOption = _sizeValues.findIndex(function (value) { return value.x == textureSize.x && value.y == textureSize.y; });
+        var size = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.props.globalState.workbench.guiSize);
+        this._sizeOption = _sizeValues.findIndex(function (value) { return value.width == size.width && value.height == size.height; });
         if (this._sizeOption < 0) {
             this.props.globalState.onResponsiveChangeObservable.notifyObservers(false);
             babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["DataStorage"].WriteBoolean("Responsive", false);
         }
-        if (this.state.currentNode && this.props.globalState.workbench.selectedGuiNodes.length === 1) {
-            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "ge-propertyTab" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "header" },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { id: "logo", src: this.renderControlIcon() }),
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "title" },
-                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textInputLineComponent__WEBPACK_IMPORTED_MODULE_28__["TextInputLineComponent"], { noUnderline: true, lockObject: this._lockObject, label: "", target: this.state.currentNode, propertyName: "name", onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable }))),
-                this.renderProperties(),
-                ((_b = (_a = this.state.currentNode) === null || _a === void 0 ? void 0 : _a.parent) === null || _b === void 0 ? void 0 : _b.typeName) === "Grid" && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_parentingPropertyGridComponent__WEBPACK_IMPORTED_MODULE_29__["ParentingPropertyGridComponent"], { control: this.state.currentNode, onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable, lockObject: this._lockObject }))));
+        if (this.props.globalState.selectedControls.length > 0) {
+            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "ge-propertyTab" }, this.renderNode(this.props.globalState.selectedControls)));
         }
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "ge-propertyTab" },
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "header" },
@@ -45294,7 +45819,7 @@ var PropertyTabComponent = /** @class */ (function (_super) {
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "title" }, "AdvancedDynamicTexture")),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", null,
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextLineComponent"], { tooltip: "", label: "ART BOARD", value: " ", color: "grey" }),
-                this.props.globalState.workbench._scene !== undefined && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_color3LineComponent__WEBPACK_IMPORTED_MODULE_27__["Color3LineComponent"], { iconLabel: "Background Color", lockObject: this._lockObject, icon: artboardColorIcon, label: "", target: this.props.globalState.workbench._scene, propertyName: "clearColor", onPropertyChangedObservable: this.props.globalState.onPropertyChangedObservable })),
+                this.props.globalState.workbench._scene !== undefined && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_colorLineComponent__WEBPACK_IMPORTED_MODULE_27__["ColorLineComponent"], { iconLabel: "Background Color", lockObject: this._lockObject, icon: artboardColorIcon, label: "", target: this.props.globalState, propertyName: "backgroundColor", disableAlpha: true })),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", { className: "ge" }),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_textLineComponent__WEBPACK_IMPORTED_MODULE_6__["TextLineComponent"], { tooltip: "", label: "CANVAS", value: " ", color: "grey" }),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_checkBoxLineComponent__WEBPACK_IMPORTED_MODULE_5__["CheckBoxLineComponent"], { label: "RESPONSIVE", iconLabel: "A responsive layout for the AdvancedDynamicTexture will resize the UI layout and reflow controls to accommodate different device screen sizes", icon: responsiveIcon, isSelected: function () { return babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["DataStorage"].ReadBoolean("Responsive", true); }, onSelect: function (value) {
@@ -45303,7 +45828,7 @@ var PropertyTabComponent = /** @class */ (function (_super) {
                         _this._sizeOption = _sizeOptions.length;
                         if (value) {
                             _this._sizeOption = 0;
-                            _this.props.globalState.workbench.resizeGuiTexture(_sizeValues[_this._sizeOption]);
+                            _this.props.globalState.workbench.guiSize = _sizeValues[_this._sizeOption];
                         }
                         _this.forceUpdate();
                     } }),
@@ -45311,19 +45836,19 @@ var PropertyTabComponent = /** @class */ (function (_super) {
                         _this._sizeOption = value;
                         if (_this._sizeOption !== _sizeOptions.length) {
                             var newSize = _sizeValues[_this._sizeOption];
-                            _this.props.globalState.workbench.resizeGuiTexture(newSize);
+                            _this.props.globalState.workbench.guiSize = newSize;
                         }
                         _this.forceUpdate();
                     } })),
                 !babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["DataStorage"].ReadBoolean("Responsive", true) && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "ge-divider" },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_26__["FloatLineComponent"], { icon: canvasSizeIcon, iconLabel: "Canvas Size", label: "W", target: textureSize, propertyName: "x", isInteger: true, min: 1, max: MAX_TEXTURE_SIZE, onChange: function (newvalue) {
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_26__["FloatLineComponent"], { icon: canvasSizeIcon, iconLabel: "Canvas Size", label: "W", target: size, propertyName: "width", isInteger: true, min: 1, max: MAX_TEXTURE_SIZE, onChange: function (newvalue) {
                             if (!isNaN(newvalue)) {
-                                _this.props.globalState.workbench.resizeGuiTexture(new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](newvalue, textureSize.y));
+                                _this.props.globalState.workbench.guiSize = { width: newvalue, height: size.height };
                             }
                         } }),
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_26__["FloatLineComponent"], { icon: canvasSizeIcon, label: "H", target: textureSize, propertyName: "y", isInteger: true, min: 1, max: MAX_TEXTURE_SIZE, onChange: function (newvalue) {
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_floatLineComponent__WEBPACK_IMPORTED_MODULE_26__["FloatLineComponent"], { icon: canvasSizeIcon, label: "H", target: size, propertyName: "height", isInteger: true, min: 1, max: MAX_TEXTURE_SIZE, onChange: function (newvalue) {
                             if (!isNaN(newvalue)) {
-                                _this.props.globalState.workbench.resizeGuiTexture(new babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_4__["Vector2"](textureSize.x, newvalue));
+                                _this.props.globalState.workbench.guiSize = { width: size.width, height: newvalue };
                             }
                         } }))),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", { className: "ge" }),
@@ -45337,7 +45862,9 @@ var PropertyTabComponent = /** @class */ (function (_super) {
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_buttonLineComponent__WEBPACK_IMPORTED_MODULE_2__["ButtonLineComponent"], { label: "Load from snippet server", onClick: function () { return _this.loadFromSnippet(); } }),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sharedUiComponents_lines_buttonLineComponent__WEBPACK_IMPORTED_MODULE_2__["ButtonLineComponent"], { label: "Save to snippet server", onClick: function () {
                         _this.props.globalState.onSnippetSaveObservable.notifyObservers();
-                    } }))));
+                    } }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("hr", { className: "ge" }),
+                this.renderNode([this.props.globalState.workbench.trueRootContainer]))));
     };
     return PropertyTabComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -45379,7 +45906,7 @@ var ControlTreeItemComponent = /** @class */ (function (_super) {
     function ControlTreeItemComponent(props) {
         var _this = _super.call(this, props) || this;
         var control = _this.props.control;
-        _this.state = { isActive: control.isHighlighted, isVisible: control.isVisible };
+        _this.state = { isActive: control.isHighlighted, isVisible: control.isVisible, isRenaming: false };
         return _this;
     }
     ControlTreeItemComponent.prototype.highlight = function () {
@@ -45392,21 +45919,25 @@ var ControlTreeItemComponent = /** @class */ (function (_super) {
         this.setState({ isVisible: newState });
         this.props.control.isVisible = newState;
     };
+    ControlTreeItemComponent.prototype.onRename = function (name) {
+        this.props.control.name = name;
+        this.props.globalState.onPropertyGridUpdateRequiredObservable.notifyObservers();
+    };
     ControlTreeItemComponent.prototype.render = function () {
         var _this = this;
         var _a;
         var control = this.props.control;
-        var name = (control.name || "No name") + " [" + control.getClassName() + "]";
+        var bracket = "";
         if (((_a = control.parent) === null || _a === void 0 ? void 0 : _a.typeName) === "Grid") {
-            name += " [" + control.parent.getChildCellInfo(this.props.control) + "]";
+            bracket = control.parent.getChildCellInfo(this.props.control);
         }
         var draggingSelf = this.props.globalState.draggedControl === control;
         return (react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "controlTools" },
-            react__WEBPACK_IMPORTED_MODULE_3__["createElement"](_treeItemLabelComponent__WEBPACK_IMPORTED_MODULE_1__["TreeItemLabelComponent"], { label: name, onClick: function () { return _this.props.onClick(); }, color: "greenyellow" }),
-            !draggingSelf && this.props.dragOverHover && this.props.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].CENTER && control instanceof babylonjs_gui_2D_controls_container__WEBPACK_IMPORTED_MODULE_5__["Container"] && (react__WEBPACK_IMPORTED_MODULE_3__["createElement"](react__WEBPACK_IMPORTED_MODULE_3__["Fragment"], null,
+            react__WEBPACK_IMPORTED_MODULE_3__["createElement"](_treeItemLabelComponent__WEBPACK_IMPORTED_MODULE_1__["TreeItemLabelComponent"], { label: control.name, bracket: bracket, onClick: function () { return _this.props.onClick(); }, onChange: function (name) { return _this.onRename(name); }, setRenaming: function (renaming) { return _this.setState({ isRenaming: renaming }); }, renaming: this.state.isRenaming }),
+            !draggingSelf && this.props.isDragOver && this.props.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].CENTER && control instanceof babylonjs_gui_2D_controls_container__WEBPACK_IMPORTED_MODULE_5__["Container"] && (react__WEBPACK_IMPORTED_MODULE_3__["createElement"](react__WEBPACK_IMPORTED_MODULE_3__["Fragment"], null,
                 react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "makeChild icon", onClick: function () { return _this.highlight(); }, title: "Make Child" },
                     react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("img", { src: makeChildOfContainerIcon })))),
-            this.props.isHovered && this.props.globalState.draggedControl === null && this.props.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].NONE && (react__WEBPACK_IMPORTED_MODULE_3__["createElement"](react__WEBPACK_IMPORTED_MODULE_3__["Fragment"], null,
+            !this.state.isRenaming && this.props.isHovered && this.props.globalState.draggedControl === null && this.props.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].NONE && (react__WEBPACK_IMPORTED_MODULE_3__["createElement"](react__WEBPACK_IMPORTED_MODULE_3__["Fragment"], null,
                 react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "addComponent icon", onClick: function () { return _this.highlight(); }, title: "Add component (Not Implemented)" },
                     react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("img", { src: makeComponentIcon })),
                 react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "visibility icon", onClick: function () { return _this.switchVisibility(); }, title: "Show/Hide control" },
@@ -45619,14 +46150,14 @@ var SceneExplorerComponent = /** @class */ (function (_super) {
                 data.found = true;
                 if (!goNext) {
                     if (data.previousOne) {
-                        this.props.globalState.onSelectionChangedObservable.notifyObservers(data.previousOne);
+                        this.props.globalState.select(data.previousOne);
                     }
                     return true;
                 }
             }
             else {
                 if (data.found) {
-                    this.props.globalState.onSelectionChangedObservable.notifyObservers(item);
+                    this.props.globalState.select(item);
                     return true;
                 }
                 data.previousOne = item;
@@ -45640,9 +46171,10 @@ var SceneExplorerComponent = /** @class */ (function (_super) {
         return false;
     };
     SceneExplorerComponent.prototype.processKeys = function (keyEvent) {
-        if (!this.state.selectedEntity) {
+        var _this = this;
+        // if typing inside a text box, don't process keys
+        if (keyEvent.target.localName === "input")
             return;
-        }
         var scene = this.state.scene;
         var search = false;
         var goNext = false;
@@ -45656,27 +46188,37 @@ var SceneExplorerComponent = /** @class */ (function (_super) {
                 break;
             case "Enter":
             case "ArrowRight":
-                var reservedDataStore = this.state.selectedEntity.reservedDataStore;
-                if (reservedDataStore && reservedDataStore.setExpandedState) {
-                    reservedDataStore.setExpandedState(true);
-                }
+                this.props.globalState.selectedControls.forEach(function (node) {
+                    var reservedDataStore = node.reservedDataStore;
+                    if (reservedDataStore && reservedDataStore.setExpandedState) {
+                        reservedDataStore.setExpandedState(true);
+                    }
+                });
                 keyEvent.preventDefault();
+                this.forceUpdate();
                 return;
             case "ArrowLeft":
-                var reservedDataStore = this.state.selectedEntity.reservedDataStore;
-                if (reservedDataStore && reservedDataStore.setExpandedState) {
-                    reservedDataStore.setExpandedState(false);
-                }
+                this.props.globalState.selectedControls.forEach(function (node) {
+                    var reservedDataStore = node.reservedDataStore;
+                    console.log(reservedDataStore);
+                    if (reservedDataStore && reservedDataStore.setExpandedState) {
+                        reservedDataStore.setExpandedState(false);
+                    }
+                });
                 keyEvent.preventDefault();
+                this.forceUpdate();
                 return;
-                break;
             case "Delete":
+            case "Backspace":
                 if (this.state.selectedEntity !== this.props.globalState.guiTexture.getChildren()[0]) {
                     this.state.selectedEntity.dispose();
-                    this.forceUpdate();
+                    this.props.globalState.selectedControls.forEach(function (node) {
+                        if (node !== _this.props.globalState.guiTexture.getChildren()[0]) {
+                            node.dispose();
+                        }
+                        _this.forceUpdate();
+                    });
                 }
-                break;
-            default:
                 break;
         }
         if (!search) {
@@ -45684,10 +46226,11 @@ var SceneExplorerComponent = /** @class */ (function (_super) {
         }
         keyEvent.preventDefault();
         if (scene) {
+            var selectedEntity = this.props.globalState.selectedControls[this.props.globalState.selectedControls.length - 1];
             var data = {};
-            if (!this.findSiblings(null, scene.rootNodes, this.state.selectedEntity, goNext, data)) {
-                if (!this.findSiblings(null, scene.materials, this.state.selectedEntity, goNext, data)) {
-                    this.findSiblings(null, scene.textures, this.state.selectedEntity, goNext, data);
+            if (!this.findSiblings(null, scene.rootNodes, selectedEntity, goNext, data)) {
+                if (!this.findSiblings(null, scene.materials, selectedEntity, goNext, data)) {
+                    this.findSiblings(null, scene.textures, selectedEntity, goNext, data);
                 }
             }
         }
@@ -45700,17 +46243,18 @@ var SceneExplorerComponent = /** @class */ (function (_super) {
         }
         var guiElements = scene.textures.filter(function (t) { return t.getClassName() === "AdvancedDynamicTexture"; });
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "tree", onDrop: function (event) {
+                _this.props.globalState.onDropObservable.notifyObservers();
                 _this.props.globalState.onParentingChangeObservable.notifyObservers(null);
             }, onDragOver: function (event) {
                 event.preventDefault();
             }, onClick: function (event) {
                 if (!_this.props.globalState.selectionLock) {
-                    _this.props.globalState.onSelectionChangedObservable.notifyObservers(null);
+                    _this.props.globalState.setSelection([]);
                 }
                 else {
                     _this.props.globalState.selectionLock = false;
                 }
-            } }, guiElements && guiElements.length > 0 && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_treeItemComponent__WEBPACK_IMPORTED_MODULE_2__["TreeItemComponent"], { globalState: this.props.globalState, extensibilityGroups: this.props.extensibilityGroups, selectedEntity: this.state.selectedEntity, items: guiElements, label: "GUI", offset: 1, filter: this.state.filter }))));
+            }, onContextMenu: function (ev) { return ev.preventDefault(); } }, guiElements && guiElements.length > 0 && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_treeItemComponent__WEBPACK_IMPORTED_MODULE_2__["TreeItemComponent"], { globalState: this.props.globalState, extensibilityGroups: this.props.extensibilityGroups, selectedEntities: this.props.globalState.selectedControls, items: guiElements, label: "GUI", offset: 1, filter: this.state.filter }))));
     };
     SceneExplorerComponent.prototype.onClose = function () {
         if (!this.props.onClose) {
@@ -45726,7 +46270,9 @@ var SceneExplorerComponent = /** @class */ (function (_super) {
     };
     SceneExplorerComponent.prototype.render = function () {
         var _this = this;
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "ge-sceneExplorer", tabIndex: 0, onKeyDown: function (keyEvent) { return _this.processKeys(keyEvent); } }, this.renderContent()));
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "ge-sceneExplorer", tabIndex: 0, onKeyDown: function (keyEvent) { return _this.processKeys(keyEvent); } },
+            this.props.children,
+            this.renderContent()));
     };
     return SceneExplorerComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -45811,13 +46357,11 @@ var TreeItemComponent = /** @class */ (function (_super) {
         }
         var items = nextProps.items;
         if (items && items.length) {
-            if (nextProps.selectedEntity) {
-                for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
-                    var item = items_1[_i];
-                    if (_tools__WEBPACK_IMPORTED_MODULE_5__["Tools"].LookForItem(item, nextProps.selectedEntity)) {
-                        nextState.isExpanded = true;
-                        return true;
-                    }
+            for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
+                var item = items_1[_i];
+                if (_tools__WEBPACK_IMPORTED_MODULE_5__["Tools"].LookForItems(item, nextProps.selectedEntities)) {
+                    nextState.isExpanded = true;
+                    return true;
                 }
             }
         }
@@ -45864,7 +46408,7 @@ var TreeItemComponent = /** @class */ (function (_super) {
         }
         var sortedItems = _tools__WEBPACK_IMPORTED_MODULE_5__["Tools"].SortAndFilter(null, items)[0].getChildren();
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", null, sortedItems.map(function (item) {
-            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_treeItemSelectableComponent__WEBPACK_IMPORTED_MODULE_4__["TreeItemSelectableComponent"], { extensibilityGroups: _this.props.extensibilityGroups, key: item.uniqueId !== undefined && item.uniqueId !== null ? item.uniqueId : item.name, offset: _this.props.offset + 1, selectedEntity: _this.props.selectedEntity, entity: item, globalState: _this.props.globalState, filter: _this.props.filter }));
+            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_treeItemSelectableComponent__WEBPACK_IMPORTED_MODULE_4__["TreeItemSelectableComponent"], { extensibilityGroups: _this.props.extensibilityGroups, key: item.uniqueId !== undefined && item.uniqueId !== null ? item.uniqueId : item.name, offset: _this.props.offset + 1, selectedEntities: _this.props.selectedEntities, entity: item, globalState: _this.props.globalState, filter: _this.props.filter }));
         })));
     };
     TreeItemComponent._ContextMenuUniqueIdGenerator = 0;
@@ -45893,18 +46437,38 @@ __webpack_require__.r(__webpack_exports__);
 var TreeItemLabelComponent = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(TreeItemLabelComponent, _super);
     function TreeItemLabelComponent(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            value: ""
+        };
+        return _this;
     }
     TreeItemLabelComponent.prototype.onClick = function () {
-        if (!this.props.onClick) {
+        if (!this.props.onClick || this.props.renaming) {
             return;
         }
         this.props.onClick();
     };
+    TreeItemLabelComponent.prototype.onBlur = function () {
+        this.props.setRenaming(false);
+    };
     TreeItemLabelComponent.prototype.render = function () {
         var _this = this;
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "title", onClick: function () { return _this.onClick(); } },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "titleText" }, this.props.label || "no name")));
+        // if editing, overwrite string with local value
+        var label = this.props.renaming ? this.state.value : (this.props.label || "No Name");
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "title", onClick: function () { return _this.onClick(); } }, this.props.renaming ?
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("input", { type: "text", onBlur: function () { return _this.onBlur(); }, autoFocus: true, value: label, onChange: function (ev) {
+                    _this.props.onChange(ev.target.value);
+                    _this.setState({ value: ev.target.value });
+                }, onKeyDown: function (ev) {
+                    if (ev.key === "Enter")
+                        _this.onBlur();
+                }, className: "titleText" })
+            :
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "titleText", onDoubleClick: function () {
+                        _this.props.setRenaming(true);
+                        _this.setState({ value: label });
+                    } }, label)));
     };
     return TreeItemLabelComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -45947,9 +46511,15 @@ var TreeItemSelectableComponent = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(TreeItemSelectableComponent, _super);
     function TreeItemSelectableComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.state = { dragOverLocation: _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].NONE, isHovered: false, isSelected: _this.props.entity === _this.props.selectedEntity };
-        _this._onSelectionChangedObservable = props.globalState.onSelectionChangedObservable.add(function (selection) {
-            _this.setState({ isSelected: selection === _this.props.entity });
+        /** flag flipped onDragEnter if dragOver is already true
+         * prevents dragLeave from immediately setting dragOver to false
+         * required to make dragging work as expected
+         * see: see: https://github.com/transformation-dev/matrx/tree/master/packages/dragster
+         */
+        _this._secondDragEnter = false;
+        _this.state = { dragOver: false, dragOverLocation: _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].NONE, isHovered: false, isSelected: _this.props.selectedEntities.includes(_this.props.entity) };
+        _this._onSelectionChangedObservable = props.globalState.onSelectionChangedObservable.add(function () {
+            _this.setState({ isSelected: _this.props.globalState.selectedControls.includes(_this.props.entity) });
         });
         _this._onDraggingEndObservable = props.globalState.onDraggingEndObservable.add(function () {
             _this.setState({ dragOverLocation: _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].NONE });
@@ -45960,21 +46530,19 @@ var TreeItemSelectableComponent = /** @class */ (function (_super) {
         return _this;
     }
     TreeItemSelectableComponent.prototype.switchExpandedState = function () {
-        this.props.entity.reservedDataStore.isExpanded = !this.props.entity.reservedDataStore.isExpanded;
+        this.props.entity.reservedDataStore.setExpandedState(!this.props.entity.reservedDataStore.isExpanded);
     };
     TreeItemSelectableComponent.prototype.shouldComponentUpdate = function (nextProps, nextState) {
         //if the next entity is going to be selected then we want to highlight it so update
-        if (nextProps.entity === nextProps.selectedEntity) {
+        if (nextProps.selectedEntities.includes(nextProps.entity)) {
             nextState.isSelected = true;
             return true;
         }
         else {
             nextState.isSelected = false;
         }
-        if (nextProps.selectedEntity) {
-            if (_tools__WEBPACK_IMPORTED_MODULE_1__["Tools"].LookForItem(nextProps.entity, nextProps.selectedEntity)) {
-                return true;
-            }
+        if (_tools__WEBPACK_IMPORTED_MODULE_1__["Tools"].LookForItems(nextProps.entity, nextProps.selectedEntities)) {
+            return true;
         }
         return true;
     };
@@ -45990,15 +46558,13 @@ var TreeItemSelectableComponent = /** @class */ (function (_super) {
         this.props.globalState.onParentingChangeObservable.remove(this._onDraggingStartObservable);
     };
     TreeItemSelectableComponent.prototype.onSelect = function () {
-        if (!this.props.globalState.onSelectionChangedObservable) {
-            return;
-        }
         var entity = this.props.entity;
-        this.props.globalState.onSelectionChangedObservable.notifyObservers(entity);
+        this.props.globalState.select(entity);
         this.props.globalState.selectionLock = true;
     };
-    TreeItemSelectableComponent.prototype.renderChildren = function (isExpanded) {
+    TreeItemSelectableComponent.prototype.renderChildren = function (isExpanded, offset) {
         var _this = this;
+        if (offset === void 0) { offset = true; }
         var entity = this.props.entity;
         if ((!entity.getChildren && !entity.children) || !isExpanded) {
             return null;
@@ -46011,20 +46577,27 @@ var TreeItemSelectableComponent = /** @class */ (function (_super) {
             if (item.name == "Art-Board-Background") {
                 return null;
             }
-            return (react__WEBPACK_IMPORTED_MODULE_3__["createElement"](TreeItemSelectableComponent, { globalState: _this.props.globalState, mustExpand: _this.props.mustExpand, extensibilityGroups: _this.props.extensibilityGroups, selectedEntity: _this.props.selectedEntity, key: i, offset: _this.props.offset + 2, entity: item, filter: _this.props.filter }));
+            return (react__WEBPACK_IMPORTED_MODULE_3__["createElement"](TreeItemSelectableComponent, { globalState: _this.props.globalState, mustExpand: _this.props.mustExpand, extensibilityGroups: _this.props.extensibilityGroups, selectedEntities: _this.props.selectedEntities, key: i, offset: _this.props.offset + (offset ? 2 : 0), entity: item, filter: _this.props.filter }));
         });
     };
     TreeItemSelectableComponent.prototype.render = function () {
         var _this = this;
+        if (this.props.entity === this.props.globalState.workbench.trueRootContainer ||
+            this.props.entity === this.props.globalState.workbench.visibleRegionContainer ||
+            this.props.entity === this.props.globalState.workbench.panAndZoomContainer) {
+            return this.renderChildren(true, false);
+        }
         var marginStyle = {
             paddingLeft: 10 * (this.props.offset + 0.5) - 20 + "px",
         };
         var entity = this.props.entity;
         if (!entity.reservedDataStore) {
-            entity.reservedDataStore = {};
-            entity.reservedDataStore.isExpanded = true;
+            entity.reservedDataStore = {
+                isExpanded: true,
+                setExpandedState: function (expanded) { return entity.reservedDataStore.isExpanded = expanded; }
+            };
         }
-        var isExpanded = entity.reservedDataStore.isExpanded || _tools__WEBPACK_IMPORTED_MODULE_1__["Tools"].LookForItem(this.props.entity, this.props.selectedEntity);
+        var isExpanded = entity.reservedDataStore.isExpanded || _tools__WEBPACK_IMPORTED_MODULE_1__["Tools"].LookForItems(this.props.entity, this.props.selectedEntities);
         entity.reservedDataStore.isExpanded = isExpanded;
         var chevron = isExpanded ? react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("img", { src: expandedIcon, className: "icon" }) : react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("img", { src: collapsedIcon, className: "icon" });
         var children = entity.getClassName() === "MultiMaterial" ? [] : _tools__WEBPACK_IMPORTED_MODULE_1__["Tools"].SortAndFilter(entity, entity.getChildren ? entity.getChildren() : entity.children);
@@ -46047,43 +46620,60 @@ var TreeItemSelectableComponent = /** @class */ (function (_super) {
         var className = "itemContainer"; //setting class name plus whatever extras based on states
         className += this.state.isSelected && this.props.globalState.draggedControl === null ? " selected" : "";
         className += this.state.isHovered && this.props.globalState.draggedControl === null ? " hover" : "";
-        className += this.dragOverHover && this.state.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].CENTER && entity instanceof babylonjs_gui_2D_controls_container__WEBPACK_IMPORTED_MODULE_6__["Container"] ? " parent" : "";
+        className += this.state.dragOver && this.state.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].CENTER && entity instanceof babylonjs_gui_2D_controls_container__WEBPACK_IMPORTED_MODULE_6__["Container"] ? " parent" : "";
         className += this.props.globalState.draggedControl === this.props.entity ? " dragged" : "";
         className +=
-            this.dragOverHover && this.state.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].ABOVE && this.props.globalState.draggedControl != null && entity.parent ? " seAbove" : "";
+            this.state.dragOver && this.state.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].ABOVE && entity.parent ? " seAbove" : "";
         className +=
-            this.dragOverHover && this.state.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].BELOW && this.props.globalState.draggedControl != null && entity.parent ? " seBelow" : "";
+            this.state.dragOver && this.state.dragOverLocation == _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].BELOW && entity.parent ? " seBelow" : "";
         return (react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", null,
-            react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: className, style: marginStyle, draggable: entity.parent ? true : false, onMouseOver: function () { return _this.setState({ isHovered: true }); }, onMouseLeave: function () { return _this.setState({ isHovered: false }); }, onClick: function () {
+            react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: className, style: marginStyle, onPointerUp: function () {
                     _this.onSelect();
-                }, onDragStart: function (event) {
-                    _this.props.globalState.draggedControl = entity;
+                }, onPointerEnter: function () { return _this.setState({ isHovered: true }); }, onPointerLeave: function () { return _this.setState({ isHovered: false }); }, onDragStart: function () {
+                    _this.props.globalState.draggedControl = _this.props.entity;
                     _this.props.globalState.onDraggingStartObservable.notifyObservers();
-                }, onDrop: function (event) {
-                    _this.drop();
-                }, onDragEnd: function (event) {
+                }, onDragEnd: function () {
                     _this.props.globalState.onDraggingEndObservable.notifyObservers();
-                }, onDragOver: function (event) {
+                }, draggable: entity.parent ? true : false, onDrop: function (event) {
+                    _this.drop();
+                    event.preventDefault();
+                }, onDragEnter: function (event) {
+                    event.preventDefault();
                     _this.dragOver(event);
-                }, onDragLeave: function (event) {
-                    _this.dragOverHover = false;
-                    _this.forceUpdate();
+                }, onDragOver: function (event) { return _this.updateDragOverLocation(event); }, onDragLeave: function () {
+                    // don't immediately set dragOver to false
+                    if (_this._secondDragEnter) {
+                        _this._secondDragEnter = false;
+                    }
+                    else {
+                        _this.setState({ dragOver: false });
+                    }
                 } },
                 hasChildren && (react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "arrow icon", onClick: function () { return _this.switchExpandedState(); } }, chevron)),
-                react__WEBPACK_IMPORTED_MODULE_3__["createElement"](_entities_gui_controlTreeItemComponent__WEBPACK_IMPORTED_MODULE_5__["ControlTreeItemComponent"], { globalState: this.props.globalState, extensibilityGroups: this.props.extensibilityGroups, control: entity, onClick: function () { }, isHovered: this.state.isHovered, dragOverHover: this.dragOverHover, dragOverLocation: this.state.dragOverLocation })),
+                react__WEBPACK_IMPORTED_MODULE_3__["createElement"](_entities_gui_controlTreeItemComponent__WEBPACK_IMPORTED_MODULE_5__["ControlTreeItemComponent"], { globalState: this.props.globalState, extensibilityGroups: this.props.extensibilityGroups, control: entity, onClick: function () { }, isHovered: this.state.isHovered, isDragOver: this.state.dragOver, dragOverLocation: this.state.dragOverLocation })),
             this.renderChildren(isExpanded)));
     };
     TreeItemSelectableComponent.prototype.dragOver = function (event) {
-        //check the positiions of the mouse cursor.
+        this.updateDragOverLocation(event);
+        // if we've already hovered the element, record a new drag event
+        if (this.state.dragOver) {
+            this._secondDragEnter = true;
+        }
+        else {
+            this.setState({ dragOver: true });
+        }
+    };
+    TreeItemSelectableComponent.prototype.updateDragOverLocation = function (event) {
+        //check the positions of the mouse cursor.
         var target = event.target;
         var rect = target.getBoundingClientRect();
         var y = event.clientY - rect.top;
         if (this.props.entity instanceof babylonjs_gui_2D_controls_container__WEBPACK_IMPORTED_MODULE_6__["Container"]) {
-            if (y < CONTROL_HEIGHT / 3) {
-                //split in thirds
+            if (y < CONTROL_HEIGHT / 5) {
+                //split in fifths
                 this.setState({ dragOverLocation: _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].ABOVE });
             }
-            else if (y > (2 * CONTROL_HEIGHT) / 3) {
+            else if (y > (4 * CONTROL_HEIGHT) / 5) {
                 this.setState({ dragOverLocation: _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].BELOW });
             }
             else {
@@ -46099,19 +46689,17 @@ var TreeItemSelectableComponent = /** @class */ (function (_super) {
                 this.setState({ dragOverLocation: _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].BELOW });
             }
         }
-        event.preventDefault();
-        this.dragOverHover = true;
-        this.forceUpdate();
     };
     TreeItemSelectableComponent.prototype.drop = function () {
+        this.props.globalState.onDropObservable.notifyObservers();
         var control = this.props.entity;
         if (this.props.globalState.draggedControl != control) {
-            this.dragOverHover = false;
             this.props.globalState.draggedControlDirection = this.state.dragOverLocation;
             this.props.globalState.onParentingChangeObservable.notifyObservers(this.props.entity);
         }
         this.props.globalState.draggedControl = null;
-        this.setState({ dragOverLocation: _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].NONE });
+        this.setState({ dragOverLocation: _globalState__WEBPACK_IMPORTED_MODULE_4__["DragOverLocation"].NONE, dragOver: false });
+        this._secondDragEnter = false;
     };
     return TreeItemSelectableComponent;
 }(react__WEBPACK_IMPORTED_MODULE_3__["Component"]));
@@ -46120,1642 +46708,339 @@ var TreeItemSelectableComponent = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "./diagram/GUIEditorNodeMaterial.ts":
-/*!******************************************!*\
-  !*** ./diagram/GUIEditorNodeMaterial.ts ***!
-  \******************************************/
-/*! exports provided: GUIEditorNodeMaterial */
+/***/ "./diagram/artBoard.tsx":
+/*!******************************!*\
+  !*** ./diagram/artBoard.tsx ***!
+  \******************************/
+/*! exports provided: ArtBoardComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GUIEditorNodeMaterial", function() { return GUIEditorNodeMaterial; });
-var GUIEditorNodeMaterial = {
-    "tags": null,
-    "ignoreAlpha": false,
-    "maxSimultaneousLights": 4,
-    "mode": 0,
-    "id": "node",
-    "name": "node",
-    "checkReadyOnEveryCall": false,
-    "checkReadyOnlyOnce": false,
-    "state": "",
-    "alpha": 1,
-    "backFaceCulling": true,
-    "cullBackFaces": true,
-    "sideOrientation": 1,
-    "alphaMode": 2,
-    "_needDepthPrePass": false,
-    "disableDepthWrite": false,
-    "disableColorWrite": false,
-    "forceDepthWrite": false,
-    "depthFunction": 0,
-    "separateCullingPass": false,
-    "fogEnabled": true,
-    "pointSize": 1,
-    "zOffset": 0,
-    "zOffsetUnits": 0,
-    "pointsCloud": false,
-    "fillMode": 0,
-    "editorData": {
-        "locations": [
-            {
-                "blockId": 211,
-                "x": -1460,
-                "y": -100
-            },
-            {
-                "blockId": 212,
-                "x": -1740,
-                "y": -100
-            },
-            {
-                "blockId": 213,
-                "x": -2000,
-                "y": -160
-            },
-            {
-                "blockId": 214,
-                "x": -2260,
-                "y": -180
-            },
-            {
-                "blockId": 215,
-                "x": -2240,
-                "y": -80
-            },
-            {
-                "blockId": 216,
-                "x": -2000,
-                "y": -20
-            },
-            {
-                "blockId": 217,
-                "x": 3380,
-                "y": 740
-            },
-            {
-                "blockId": 218,
-                "x": 2720,
-                "y": 540
-            },
-            {
-                "blockId": 219,
-                "x": 2960,
-                "y": 200
-            },
-            {
-                "blockId": 220,
-                "x": 2400,
-                "y": 320
-            },
-            {
-                "blockId": 221,
-                "x": 2080,
-                "y": 320
-            },
-            {
-                "blockId": 222,
-                "x": 1600,
-                "y": 560
-            },
-            {
-                "blockId": 223,
-                "x": 1320,
-                "y": 500
-            },
-            {
-                "blockId": 224,
-                "x": 1080,
-                "y": 420
-            },
-            {
-                "blockId": 225,
-                "x": 820,
-                "y": 520
-            },
-            {
-                "blockId": 226,
-                "x": 540,
-                "y": 520
-            },
-            {
-                "blockId": 227,
-                "x": 280,
-                "y": 520
-            },
-            {
-                "blockId": 228,
-                "x": -60,
-                "y": 440
-            },
-            {
-                "blockId": 229,
-                "x": -340,
-                "y": 420
-            },
-            {
-                "blockId": 230,
-                "x": -620,
-                "y": 340
-            },
-            {
-                "blockId": 231,
-                "x": -880,
-                "y": 340
-            },
-            {
-                "blockId": 232,
-                "x": -1160,
-                "y": 160
-            },
-            {
-                "blockId": 233,
-                "x": -1480,
-                "y": 260
-            },
-            {
-                "blockId": 234,
-                "x": -1160,
-                "y": 460
-            },
-            {
-                "blockId": 235,
-                "x": -880,
-                "y": 480
-            },
-            {
-                "blockId": 236,
-                "x": -60,
-                "y": 700
-            },
-            {
-                "blockId": 237,
-                "x": -340,
-                "y": 700
-            },
-            {
-                "blockId": 238,
-                "x": -620,
-                "y": 700
-            },
-            {
-                "blockId": 239,
-                "x": -300,
-                "y": 920
-            },
-            {
-                "blockId": 240,
-                "x": 540,
-                "y": 420
-            },
-            {
-                "blockId": 241,
-                "x": 820,
-                "y": 660
-            },
-            {
-                "blockId": 242,
-                "x": 540,
-                "y": 660
-            },
-            {
-                "blockId": 243,
-                "x": 280,
-                "y": 660
-            },
-            {
-                "blockId": 244,
-                "x": 1340,
-                "y": 660
-            },
-            {
-                "blockId": 245,
-                "x": 1080,
-                "y": 800
-            },
-            {
-                "blockId": 246,
-                "x": 2160,
-                "y": 160
-            },
-            {
-                "blockId": 247,
-                "x": 2280,
-                "y": 1000
-            },
-            {
-                "blockId": 248,
-                "x": 2040,
-                "y": 780
-            },
-            {
-                "blockId": 249,
-                "x": 2860,
-                "y": 840
-            }
-        ],
-        "frames": [
-            {
-                "x": 1920,
-                "y": 80,
-                "width": 1859.67,
-                "height": 1260,
-                "color": [
-                    0.2823529411764706,
-                    0.2823529411764706,
-                    0.2823529411764706
-                ],
-                "name": "Checkered",
-                "isCollapsed": false,
-                "blocks": [
-                    221,
-                    246,
-                    220,
-                    219,
-                    248,
-                    247,
-                    218,
-                    249,
-                    217
-                ]
-            }
-        ],
-        "x": 155.3919960630531,
-        "y": 164.5512292933413,
-        "zoom": 0.2532192552683995
-    },
-    "customType": "BABYLON.NodeMaterial",
-    "outputNodes": [
-        211,
-        217
-    ],
-    "blocks": [
-        {
-            "customType": "BABYLON.VertexOutputBlock",
-            "id": 211,
-            "name": "VertexOutput",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [
-                {
-                    "name": "vector",
-                    "inputName": "vector",
-                    "targetBlockId": 212,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": []
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArtBoardComponent", function() { return ArtBoardComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _coordinateHelper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./coordinateHelper */ "./diagram/coordinateHelper.tsx");
+
+
+
+var ArtBoardComponent = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(ArtBoardComponent, _super);
+    function ArtBoardComponent(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            bounds: new _coordinateHelper__WEBPACK_IMPORTED_MODULE_2__["Rect"](0, 0, 0, 0)
+        };
+        _this.props.globalState.onArtBoardUpdateRequiredObservable.add(function () { return _this.update(); });
+        return _this;
+    }
+    ArtBoardComponent.prototype.update = function () {
+        var visibleRegion = this.props.globalState.workbench.visibleRegionContainer;
+        if (!visibleRegion)
+            return;
+        var localBounds = _coordinateHelper__WEBPACK_IMPORTED_MODULE_2__["CoordinateHelper"].computeLocalBounds(visibleRegion);
+        var topLeftRTT = _coordinateHelper__WEBPACK_IMPORTED_MODULE_2__["CoordinateHelper"].nodeToRTTSpace(visibleRegion, localBounds.left, localBounds.top, undefined);
+        var topLeftCanvas = _coordinateHelper__WEBPACK_IMPORTED_MODULE_2__["CoordinateHelper"].rttToCanvasSpace(topLeftRTT.x, topLeftRTT.y);
+        var bottomRightRTT = _coordinateHelper__WEBPACK_IMPORTED_MODULE_2__["CoordinateHelper"].nodeToRTTSpace(visibleRegion, localBounds.right, localBounds.bottom, undefined);
+        var bottomRightCanvas = _coordinateHelper__WEBPACK_IMPORTED_MODULE_2__["CoordinateHelper"].rttToCanvasSpace(bottomRightRTT.x, bottomRightRTT.y);
+        this.setState({
+            bounds: new _coordinateHelper__WEBPACK_IMPORTED_MODULE_2__["Rect"](topLeftCanvas.x, topLeftCanvas.y, bottomRightCanvas.x, bottomRightCanvas.y)
+        });
+    };
+    ArtBoardComponent.prototype.render = function () {
+        var style = {
+            top: "".concat(this.state.bounds.top, "px"),
+            left: "".concat(this.state.bounds.left, "px"),
+            width: "".concat(this.state.bounds.width, "px"),
+            height: "".concat(this.state.bounds.height, "px")
+        };
+        return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "artboard-stroke", style: style }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "artboard-background", style: style }));
+    };
+    return ArtBoardComponent;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
+
+
+
+/***/ }),
+
+/***/ "./diagram/coordinateHelper.tsx":
+/*!**************************************!*\
+  !*** ./diagram/coordinateHelper.tsx ***!
+  \**************************************/
+/*! exports provided: Rect, CoordinateHelper */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Rect", function() { return Rect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoordinateHelper", function() { return CoordinateHelper; });
+/* harmony import */ var babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! babylonjs-gui/2D/valueAndUnit */ "babylonjs-gui/2D/controls/button");
+/* harmony import */ var babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! babylonjs/Maths/math.vector */ "babylonjs/Misc/observable");
+/* harmony import */ var babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+var Rect = /** @class */ (function () {
+    function Rect(left, top, right, bottom) {
+        this.left = left;
+        this.top = top;
+        this.right = right;
+        this.bottom = bottom;
+    }
+    Rect.prototype.clone = function () {
+        return new Rect(this.left, this.top, this.right, this.bottom);
+    };
+    Object.defineProperty(Rect.prototype, "center", {
+        get: function () {
+            var topLeft = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector2"](this.left, this.top);
+            return topLeft.addInPlace(new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector2"](this.right, this.bottom).subtractInPlace(topLeft).multiplyByFloats(0.5, 0.5));
         },
-        {
-            "customType": "BABYLON.TransformBlock",
-            "id": 212,
-            "name": "WorldPos * ViewProjectionTransform",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [
-                {
-                    "name": "vector",
-                    "inputName": "vector",
-                    "targetBlockId": 213,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "transform",
-                    "inputName": "transform",
-                    "targetBlockId": 216,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                },
-                {
-                    "name": "xyz"
-                }
-            ],
-            "complementZ": 0,
-            "complementW": 1
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Rect.prototype, "width", {
+        get: function () {
+            return this.right - this.left;
         },
-        {
-            "customType": "BABYLON.TransformBlock",
-            "id": 213,
-            "name": "WorldPos",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [
-                {
-                    "name": "vector",
-                    "inputName": "vector",
-                    "targetBlockId": 214,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "transform",
-                    "inputName": "transform",
-                    "targetBlockId": 215,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                },
-                {
-                    "name": "xyz"
-                }
-            ],
-            "complementZ": 0,
-            "complementW": 1
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Rect.prototype, "height", {
+        get: function () {
+            return this.bottom - this.top;
         },
-        {
-            "customType": "BABYLON.InputBlock",
-            "id": 214,
-            "name": "position",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "type": 8,
-            "mode": 1,
-            "animationType": 0,
-            "min": 0,
-            "max": 0,
-            "isBoolean": false,
-            "matrixMode": 0,
-            "isConstant": false,
-            "groupInInspector": "",
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false
-        },
-        {
-            "customType": "BABYLON.InputBlock",
-            "id": 215,
-            "name": "World",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "type": 128,
-            "mode": 0,
-            "systemValue": 1,
-            "animationType": 0,
-            "min": 0,
-            "max": 0,
-            "isBoolean": false,
-            "matrixMode": 0,
-            "isConstant": false,
-            "groupInInspector": "",
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false
-        },
-        {
-            "customType": "BABYLON.InputBlock",
-            "id": 216,
-            "name": "ViewProjection",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "type": 128,
-            "mode": 0,
-            "systemValue": 4,
-            "animationType": 0,
-            "min": 0,
-            "max": 0,
-            "isBoolean": false,
-            "matrixMode": 0,
-            "isConstant": false,
-            "groupInInspector": "",
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false
-        },
-        {
-            "customType": "BABYLON.FragmentOutputBlock",
-            "id": 217,
-            "name": "FragmentOutput",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 2,
-            "inputs": [
-                {
-                    "name": "rgba",
-                    "displayName": "rgba"
-                },
-                {
-                    "name": "rgb",
-                    "displayName": "rgb",
-                    "inputName": "rgb",
-                    "targetBlockId": 218,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "a",
-                    "displayName": "a",
-                    "inputName": "a",
-                    "targetBlockId": 249,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [],
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false
-        },
-        {
-            "customType": "BABYLON.LerpBlock",
-            "id": 218,
-            "name": "Lerp",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "displayName": "left",
-                    "inputName": "left",
-                    "targetBlockId": 219,
-                    "targetConnectionName": "rgb",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "displayName": "right",
-                    "inputName": "right",
-                    "targetBlockId": 247,
-                    "targetConnectionName": "rgb",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "gradient",
-                    "displayName": "gradient",
-                    "inputName": "gradient",
-                    "targetBlockId": 247,
-                    "targetConnectionName": "a",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output",
-                    "displayName": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.ColorSplitterBlock",
-            "id": 219,
-            "name": "ColorSplitter",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "rgba",
-                    "displayName": "rgba",
-                    "inputName": "rgba",
-                    "targetBlockId": 220,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "rgb ",
-                    "displayName": "rgb ",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": 3
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "rgb",
-                    "displayName": "rgb"
-                },
-                {
-                    "name": "r",
-                    "displayName": "r"
-                },
-                {
-                    "name": "g",
-                    "displayName": "g"
-                },
-                {
-                    "name": "b",
-                    "displayName": "b"
-                },
-                {
-                    "name": "a",
-                    "displayName": "a"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.MaxBlock",
-            "id": 220,
-            "name": "Max",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "displayName": "left",
-                    "inputName": "left",
-                    "targetBlockId": 221,
-                    "targetConnectionName": "rgba",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "displayName": "right",
-                    "inputName": "right",
-                    "targetBlockId": 246,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output",
-                    "displayName": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.ColorMergerBlock",
-            "id": 221,
-            "name": "ColorMerger",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "rgb ",
-                    "displayName": "rgb "
-                },
-                {
-                    "name": "r",
-                    "displayName": "r",
-                    "inputName": "r",
-                    "targetBlockId": 222,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": 0
-                },
-                {
-                    "name": "g",
-                    "displayName": "g",
-                    "inputName": "g",
-                    "targetBlockId": 222,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": 1
-                },
-                {
-                    "name": "b",
-                    "displayName": "b",
-                    "inputName": "b",
-                    "targetBlockId": 222,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": 2
-                },
-                {
-                    "name": "a",
-                    "displayName": "a"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "rgba",
-                    "displayName": "rgba"
-                },
-                {
-                    "name": "rgb",
-                    "displayName": "rgb"
-                }
-            ],
-            "rSwizzle": "r",
-            "gSwizzle": "g",
-            "bSwizzle": "b",
-            "aSwizzle": "a"
-        },
-        {
-            "customType": "BABYLON.MaxBlock",
-            "id": 222,
-            "name": "Max",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 223,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 244,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.MultiplyBlock",
-            "id": 223,
-            "name": "Multiply",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 224,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 241,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.OneMinusBlock",
-            "id": 224,
-            "name": "One minus",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "input",
-                    "inputName": "input",
-                    "targetBlockId": 225,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.ModBlock",
-            "id": 225,
-            "name": "Mod",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 226,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 240,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.TrigonometryBlock",
-            "id": 226,
-            "name": "Round",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "input",
-                    "inputName": "input",
-                    "targetBlockId": 227,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "operation": 5
-        },
-        {
-            "customType": "BABYLON.MultiplyBlock",
-            "id": 227,
-            "name": "Multiply",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 228,
-                    "targetConnectionName": "x",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 236,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.VectorSplitterBlock",
-            "id": 228,
-            "name": "VectorSplitter",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "xyzw"
-                },
-                {
-                    "name": "xyz "
-                },
-                {
-                    "name": "xy ",
-                    "inputName": "xy ",
-                    "targetBlockId": 229,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "xyz"
-                },
-                {
-                    "name": "xy"
-                },
-                {
-                    "name": "zw"
-                },
-                {
-                    "name": "x"
-                },
-                {
-                    "name": "y"
-                },
-                {
-                    "name": "z"
-                },
-                {
-                    "name": "w"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.AddBlock",
-            "id": 229,
-            "name": "Add",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 230,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 235,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.MultiplyBlock",
-            "id": 230,
-            "name": "Multiply",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 231,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 235,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.DivideBlock",
-            "id": 231,
-            "name": "Divide",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 232,
-                    "targetConnectionName": "xy",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 234,
-                    "targetConnectionName": "xy",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.VectorMergerBlock",
-            "id": 232,
-            "name": "VectorMerger",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "xyzw "
-                },
-                {
-                    "name": "xyz "
-                },
-                {
-                    "name": "xy "
-                },
-                {
-                    "name": "zw "
-                },
-                {
-                    "name": "x",
-                    "inputName": "x",
-                    "targetBlockId": 233,
-                    "targetConnectionName": "x",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "y",
-                    "inputName": "y",
-                    "targetBlockId": 233,
-                    "targetConnectionName": "y",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "z"
-                },
-                {
-                    "name": "w"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "xyzw"
-                },
-                {
-                    "name": "xyz"
-                },
-                {
-                    "name": "xy"
-                },
-                {
-                    "name": "zw"
-                }
-            ],
-            "xSwizzle": "x",
-            "ySwizzle": "y",
-            "zSwizzle": "z",
-            "wSwizzle": "w"
-        },
-        {
-            "customType": "BABYLON.VectorSplitterBlock",
-            "id": 233,
-            "name": "VectorSplitter",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "xyzw",
-                    "inputName": "xyzw",
-                    "targetBlockId": 212,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "xyz ",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "xy "
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "xyz"
-                },
-                {
-                    "name": "xy"
-                },
-                {
-                    "name": "zw"
-                },
-                {
-                    "name": "x"
-                },
-                {
-                    "name": "y"
-                },
-                {
-                    "name": "z"
-                },
-                {
-                    "name": "w"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.VectorMergerBlock",
-            "id": 234,
-            "name": "VectorMerger",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "xyzw "
-                },
-                {
-                    "name": "xyz "
-                },
-                {
-                    "name": "xy "
-                },
-                {
-                    "name": "zw "
-                },
-                {
-                    "name": "x",
-                    "inputName": "x",
-                    "targetBlockId": 233,
-                    "targetConnectionName": "w",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "y",
-                    "inputName": "y",
-                    "targetBlockId": 233,
-                    "targetConnectionName": "w",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "z"
-                },
-                {
-                    "name": "w"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "xyzw"
-                },
-                {
-                    "name": "xyz"
-                },
-                {
-                    "name": "xy"
-                },
-                {
-                    "name": "zw"
-                }
-            ],
-            "xSwizzle": "x",
-            "ySwizzle": "y",
-            "zSwizzle": "z",
-            "wSwizzle": "w"
-        },
-        {
-            "customType": "BABYLON.InputBlock",
-            "id": 235,
-            "name": "Vector2",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "type": 4,
-            "mode": 0,
-            "animationType": 0,
-            "min": 0,
-            "max": 0,
-            "isBoolean": false,
-            "matrixMode": 0,
-            "isConstant": false,
-            "groupInInspector": "",
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false,
-            "valueType": "BABYLON.Vector2",
-            "value": [
-                0.5,
-                0.5
-            ]
-        },
-        {
-            "customType": "BABYLON.MultiplyBlock",
-            "id": 236,
-            "name": "Multiply",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 237,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 239,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.DivideBlock",
-            "id": 237,
-            "name": "Divide",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 238,
-                    "targetConnectionName": "x",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 238,
-                    "targetConnectionName": "y",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.ScreenSizeBlock",
-            "id": 238,
-            "name": "ScreenSize",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 2,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "xy"
-                },
-                {
-                    "name": "x"
-                },
-                {
-                    "name": "y"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.InputBlock",
-            "id": 239,
-            "name": "resolution",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "type": 1,
-            "mode": 0,
-            "animationType": 0,
-            "min": 0,
-            "max": 0,
-            "isBoolean": false,
-            "matrixMode": 0,
-            "isConstant": false,
-            "groupInInspector": "",
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false,
-            "valueType": "number",
-            "value": 100
-        },
-        {
-            "customType": "BABYLON.InputBlock",
-            "id": 240,
-            "name": "Float",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "type": 1,
-            "mode": 0,
-            "animationType": 0,
-            "min": 0,
-            "max": 0,
-            "isBoolean": false,
-            "matrixMode": 0,
-            "isConstant": false,
-            "groupInInspector": "",
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false,
-            "valueType": "number",
-            "value": 2
-        },
-        {
-            "customType": "BABYLON.ModBlock",
-            "id": 241,
-            "name": "Mod",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 242,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 240,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.TrigonometryBlock",
-            "id": 242,
-            "name": "Round",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "input",
-                    "inputName": "input",
-                    "targetBlockId": 243,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "operation": 5
-        },
-        {
-            "customType": "BABYLON.MultiplyBlock",
-            "id": 243,
-            "name": "Multiply",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 228,
-                    "targetConnectionName": "y",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 239,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.MultiplyBlock",
-            "id": 244,
-            "name": "Multiply",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "inputName": "left",
-                    "targetBlockId": 225,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "inputName": "right",
-                    "targetBlockId": 245,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.OneMinusBlock",
-            "id": 245,
-            "name": "One minus",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "input",
-                    "inputName": "input",
-                    "targetBlockId": 241,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ]
-        },
-        {
-            "customType": "BABYLON.InputBlock",
-            "id": 246,
-            "name": "Color4",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "type": 64,
-            "mode": 0,
-            "animationType": 0,
-            "min": 0,
-            "max": 0,
-            "isBoolean": false,
-            "matrixMode": 0,
-            "isConstant": false,
-            "groupInInspector": "",
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false,
-            "valueType": "BABYLON.Color4",
-            "value": [
-                0.8862745098039215,
-                0.8862745098039215,
-                0.8862745098039215,
-                1
-            ]
-        },
-        {
-            "customType": "BABYLON.TextureBlock",
-            "id": 247,
-            "name": "Texture",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 3,
-            "inputs": [
-                {
-                    "name": "uv",
-                    "displayName": "uv",
-                    "inputName": "uv",
-                    "targetBlockId": 248,
-                    "targetConnectionName": "output",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "source",
-                    "displayName": "source"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "rgba",
-                    "displayName": "rgba"
-                },
-                {
-                    "name": "rgb",
-                    "displayName": "rgb"
-                },
-                {
-                    "name": "r",
-                    "displayName": "r"
-                },
-                {
-                    "name": "g",
-                    "displayName": "g"
-                },
-                {
-                    "name": "b",
-                    "displayName": "b"
-                },
-                {
-                    "name": "a",
-                    "displayName": "a"
-                },
-                {
-                    "name": "level",
-                    "displayName": "level"
-                }
-            ],
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false,
-            "fragmentOnly": false,
-            "disableLevelMultiplication": false
-        },
-        {
-            "customType": "BABYLON.InputBlock",
-            "id": 248,
-            "name": "uv",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 1,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "output"
-                }
-            ],
-            "type": 4,
-            "mode": 1,
-            "animationType": 0,
-            "min": 0,
-            "max": 0,
-            "isBoolean": false,
-            "matrixMode": 0,
-            "isConstant": false,
-            "groupInInspector": "",
-            "convertToGammaSpace": false,
-            "convertToLinearSpace": false
-        },
-        {
-            "customType": "BABYLON.AddBlock",
-            "id": 249,
-            "name": "Add",
-            "comments": "",
-            "visibleInInspector": false,
-            "visibleOnFrame": false,
-            "target": 4,
-            "inputs": [
-                {
-                    "name": "left",
-                    "displayName": "left",
-                    "inputName": "left",
-                    "targetBlockId": 219,
-                    "targetConnectionName": "a",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                },
-                {
-                    "name": "right",
-                    "displayName": "right",
-                    "inputName": "right",
-                    "targetBlockId": 247,
-                    "targetConnectionName": "a",
-                    "isExposedOnFrame": true,
-                    "exposedPortPosition": -1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "output",
-                    "displayName": "output"
-                }
-            ]
+        enumerable: false,
+        configurable: true
+    });
+    return Rect;
+}());
+
+var roundFactor = 100;
+var round = function (value) { return Math.round(value * roundFactor) / roundFactor; };
+var CoordinateHelper = /** @class */ (function () {
+    function CoordinateHelper() {
+    }
+    /**
+     * Get the scaling of a specific GUI control
+     * @param node the node for which we are getting the scaling
+     * @param relative should we return only the relative scaling (relative to the parent)
+     * @returns an X,Y vector of the scaling
+     */
+    CoordinateHelper.getScale = function (node, relative) {
+        var x = node.scaleX;
+        var y = node.scaleY;
+        if (relative) {
+            return new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector2"](x, y);
         }
-    ]
-};
+        var parent = node.parent;
+        while (parent) {
+            x *= parent.scaleX;
+            y *= parent.scaleY;
+            parent = parent.parent;
+        }
+        return new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector2"](x, y);
+    };
+    CoordinateHelper.getRotation = function (node, relative) {
+        // Gets rotate of a control account for all of it's parents rotations
+        var rotation = node.rotation;
+        if (relative) {
+            return rotation;
+        }
+        var parent = node.parent;
+        while (parent) {
+            rotation += parent.rotation;
+            parent = parent.parent;
+        }
+        return rotation;
+    };
+    /**
+     * This function calculates a local matrix for a node, including it's full transformation and pivot point
+     *
+     * @param node the node to calculate the matrix for
+     * @param useStoredValues should the stored (cached) values be used to calculate the matrix
+     * @returns a new matrix for the control
+     */
+    CoordinateHelper.getNodeMatrix = function (node, storedValues) {
+        var size = this.globalState.guiTexture.getSize();
+        // parent should always be defined, but stay safe
+        var parentWidth = node.parent ? node.parent._currentMeasure.width : size.width;
+        var parentHeight = node.parent ? node.parent._currentMeasure.height : size.height;
+        var x = 0;
+        var y = 0;
+        var width = storedValues ? storedValues.width : node.widthInPixels;
+        var height = storedValues ? storedValues.height : node.heightInPixels;
+        var left = storedValues ? storedValues.left : node.leftInPixels;
+        var top = storedValues ? storedValues.top : node.topInPixels;
+        switch (node.horizontalAlignment) {
+            case babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Control"].HORIZONTAL_ALIGNMENT_LEFT:
+                x = -(parentWidth - width) / 2;
+                break;
+            case babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Control"].HORIZONTAL_ALIGNMENT_RIGHT:
+                x = (parentWidth - width) / 2;
+                break;
+            case babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Control"].HORIZONTAL_ALIGNMENT_CENTER:
+                x = 0;
+                break;
+        }
+        switch (node.verticalAlignment) {
+            case babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Control"].VERTICAL_ALIGNMENT_TOP:
+                y = -(parentHeight - height) / 2;
+                break;
+            case babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Control"].VERTICAL_ALIGNMENT_BOTTOM:
+                y = (parentHeight - height) / 2;
+                break;
+            case babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Control"].VERTICAL_ALIGNMENT_CENTER:
+                y = 0;
+                break;
+        }
+        this.resetMatrixArray();
+        var m2d = this._matrixCache[0];
+        var translateTo = this._matrixCache[1];
+        // as this is used later it needs to persist
+        var resultMatrix = babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Matrix2D"].Identity();
+        // the pivot point around which the object transforms
+        var offsetX = width * node.transformCenterX - width / 2;
+        var offsetY = height * node.transformCenterY - height / 2;
+        // pivot changes this point's position! but only in legacy pivot mode
+        if (!node.descendantsOnlyPadding) {
+            // TODO - padding needs to also take scaling into account?
+            offsetX -= ((node.paddingRightInPixels - node.paddingLeftInPixels) * 1) / 2;
+            offsetY -= ((node.paddingBottomInPixels - node.paddingTopInPixels) * 1) / 2;
+        }
+        // Set the translation
+        babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Matrix2D"].TranslationToRef(x + left, y + top, translateTo);
+        // without parents scaling and rotation, calculate world matrix for each
+        var rotation = this.getRotation(node, true);
+        var scaling = this.getScale(node, true);
+        // COmpose doesn't actually translate, but creates a form of pivot in a specific position
+        babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Matrix2D"].ComposeToRef(-offsetX, -offsetY, rotation, scaling.x, scaling.y, null, m2d);
+        // actually compose the matrix
+        resultMatrix.multiplyToRef(m2d, resultMatrix);
+        resultMatrix.multiplyToRef(translateTo, resultMatrix);
+        return resultMatrix;
+    };
+    /**
+     * Using the node's tree, calculate its world matrix and return it
+     * @param node the node to calculate the matrix for
+     * @param useStoredValuesIfPossible used stored valued (cached when pointer down is clicked)
+     * @returns the world matrix for this node
+     */
+    CoordinateHelper.nodeToRTTWorldMatrix = function (node, storedValues) {
+        var _this = this;
+        var listOfNodes = [node];
+        var parent = node.parent;
+        var child = node;
+        while (parent) {
+            if (parent.typeName === "Grid") {
+                var cellInfo = parent.getChildCellInfo(child);
+                var cell = parent.cells[cellInfo];
+                listOfNodes.push(cell);
+            }
+            listOfNodes.push(parent);
+            child = parent;
+            parent = parent.parent;
+        }
+        this.resetMatrixArray();
+        var matrices = listOfNodes.map(function (node, index) { return _this.getNodeMatrix(node, index === 0 ? storedValues : undefined); });
+        return matrices.reduce(function (acc, cur) {
+            acc.multiplyToRef(cur, acc);
+            return acc;
+        }, this._matrixCache[2]);
+    };
+    CoordinateHelper.nodeToRTTSpace = function (node, x, y, reference, storedValues) {
+        if (reference === void 0) { reference = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector2"](); }
+        var worldMatrix = this.nodeToRTTWorldMatrix(node, storedValues);
+        worldMatrix.transformCoordinates(x, y, reference);
+        // round
+        reference.x = round(reference.x);
+        reference.y = round(reference.y);
+        return reference;
+    };
+    CoordinateHelper.rttToLocalNodeSpace = function (node, x, y, reference, storedValues) {
+        if (reference === void 0) { reference = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector2"](); }
+        var worldMatrix = this.nodeToRTTWorldMatrix(node, storedValues);
+        var inv = this._matrixCache[3];
+        worldMatrix.invertToRef(inv);
+        inv.transformCoordinates(x, y, reference);
+        // round
+        reference.x = round(reference.x);
+        reference.y = round(reference.y);
+        return reference;
+    };
+    CoordinateHelper.rttToCanvasSpace = function (x, y) {
+        var engine = this.globalState.workbench._scene.getEngine();
+        return new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector2"](x + engine.getRenderWidth() / 2, y + engine.getRenderHeight() / 2);
+    };
+    CoordinateHelper.mousePointerToRTTSpace = function (node, x, y) {
+        var scene = this.globalState.workbench._scene;
+        var engine = scene.getEngine();
+        return new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector2"]((x || scene.pointerX) - engine.getRenderWidth() / 2, (y || scene.pointerY) - engine.getRenderHeight() / 2);
+    };
+    CoordinateHelper.resetMatrixArray = function () {
+        this._matrixCache.forEach(function (matrix) {
+            babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Matrix2D"].IdentityToRef(matrix);
+        });
+    };
+    CoordinateHelper.computeLocalBounds = function (node) {
+        return new Rect(-node.widthInPixels * 0.5, -node.heightInPixels * 0.5, node.widthInPixels * 0.5, node.heightInPixels * 0.5);
+    };
+    /**
+     * converts a node's dimensions to percentage, properties can be specified as a list, or can convert all
+    */
+    CoordinateHelper.convertToPercentage = function (guiControl, properties, onPropertyChangedObservable) {
+        if (properties === void 0) { properties = ["left", "top", "width", "height"]; }
+        var ratioX = 1;
+        var ratioY = 1;
+        if (guiControl.parent) {
+            if (guiControl.parent.typeName === "Grid") {
+                var cellInfo = guiControl.parent.getChildCellInfo(guiControl);
+                var cell = guiControl.parent.cells[cellInfo];
+                ratioX = cell.widthInPixels;
+                ratioY = cell.heightInPixels;
+            }
+            else if (guiControl.parent.typeName === "Rectangle" || guiControl.parent.typeName === "Button") {
+                var thickness = guiControl.parent.thickness * 2;
+                ratioX = guiControl.parent._currentMeasure.width - thickness;
+                ratioY = guiControl.parent._currentMeasure.height - thickness;
+            }
+            else {
+                ratioX = guiControl.parent._currentMeasure.width;
+                ratioY = guiControl.parent._currentMeasure.height;
+            }
+        }
+        for (var _i = 0, properties_1 = properties; _i < properties_1.length; _i++) {
+            var property = properties_1[_i];
+            var initialValue = guiControl[property];
+            var ratio = (property === "left" || property === "width" || property === "paddingLeft" || property === "paddingRight") ? ratioX : ratioY;
+            var newValue = guiControl["".concat(property, "InPixels")] * 100 / ratio;
+            guiControl[property] = "".concat(newValue.toFixed(2), "%");
+            onPropertyChangedObservable === null || onPropertyChangedObservable === void 0 ? void 0 : onPropertyChangedObservable.notifyObservers({
+                object: guiControl,
+                initialValue: initialValue,
+                value: guiControl[property],
+                property: property
+            });
+        }
+    };
+    CoordinateHelper.round = function (value) {
+        return Math.floor(value * 100) / 100;
+    };
+    CoordinateHelper.convertToPixels = function (guiControl, properties, onPropertyChangedObservable) {
+        if (properties === void 0) { properties = ["left", "top", "width", "height"]; }
+        for (var _i = 0, properties_2 = properties; _i < properties_2.length; _i++) {
+            var property = properties_2[_i];
+            guiControl["_".concat(property)] = new babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["ValueAndUnit"](this.round(guiControl["".concat(property, "InPixels")]), babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["ValueAndUnit"].UNITMODE_PIXEL);
+        }
+    };
+    CoordinateHelper._matrixCache = [babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Matrix2D"].Identity(), babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Matrix2D"].Identity(), babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Matrix2D"].Identity(), babylonjs_gui_2D_valueAndUnit__WEBPACK_IMPORTED_MODULE_0__["Matrix2D"].Identity()];
+    return CoordinateHelper;
+}());
+
 
 
 /***/ }),
@@ -47773,12 +47058,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! babylonjs-gui/2D/controls/control */ "babylonjs-gui/2D/controls/button");
 /* harmony import */ var babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! babylonjs/Maths/math.axis */ "babylonjs/Misc/observable");
-/* harmony import */ var babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! babylonjs/Maths/math.vector */ "babylonjs/Misc/observable");
+/* harmony import */ var babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-
-
+/* harmony import */ var _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./coordinateHelper */ "./diagram/coordinateHelper.tsx");
 
 
 
@@ -47787,446 +47071,196 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(/*! ./workbenchCanvas.scss */ "./diagram/workbenchCanvas.scss");
 var gizmoPivotIcon = __webpack_require__(/*! ../../public/imgs/gizmoPivotIcon.svg */ "../public/imgs/gizmoPivotIcon.svg");
+// which side of the bounding box are we on?
+var ScalePointPosition;
+(function (ScalePointPosition) {
+    ScalePointPosition[ScalePointPosition["Top"] = -1] = "Top";
+    ScalePointPosition[ScalePointPosition["Left"] = -1] = "Left";
+    ScalePointPosition[ScalePointPosition["Center"] = 0] = "Center";
+    ScalePointPosition[ScalePointPosition["Right"] = 1] = "Right";
+    ScalePointPosition[ScalePointPosition["Bottom"] = 1] = "Bottom";
+})(ScalePointPosition || (ScalePointPosition = {}));
 var roundFactor = 100;
 var round = function (value) { return Math.round(value * roundFactor) / roundFactor; };
+// this defines the lines that link the corners, making up the bounding box
+var lines = [
+    [0, 2],
+    [0, 6],
+    [2, 8],
+    [6, 8],
+];
+// load in custom cursor icons
+var cursorScaleDiagonaLeft = "url(\"".concat(__webpack_require__(/*! ../../public/imgs/cursor_scaleDiagonalLeft.svg */ "../public/imgs/cursor_scaleDiagonalLeft.svg"), "\") 12 12, nwse-resize");
+var cursorScaleDiagonalRight = "url(\"".concat(__webpack_require__(/*! ../../public/imgs/cursor_scaleDiagonalRight.svg */ "../public/imgs/cursor_scaleDiagonalRight.svg"), "\") 12 12, nesw-resize");
+var cursorScaleHorizontal = "url(\"".concat(__webpack_require__(/*! ../../public/imgs/cursor_scaleHorizontal.svg */ "../public/imgs/cursor_scaleHorizontal.svg"), "\") 12 12, pointer");
+var cursorScaleVertical = "url(\"".concat(__webpack_require__(/*! ../../public/imgs/cursor_scaleVertical.svg */ "../public/imgs/cursor_scaleVertical.svg"), "\") 12 12, ns-resize");
+var scalePointCursors = [cursorScaleVertical, cursorScaleDiagonalRight, cursorScaleHorizontal, cursorScaleDiagonaLeft, cursorScaleVertical, cursorScaleDiagonalRight, cursorScaleHorizontal, cursorScaleDiagonaLeft];
+var rotateCursors = [];
+for (var idx = 0; idx < 8; idx++) {
+    rotateCursors.push("url(\"".concat(__webpack_require__("../public/imgs sync recursive ^\\.\\/cursor_rotate.*\\.svg$")("./cursor_rotate".concat(idx, ".svg")), "\") 12 12, pointer"));
+}
+// used to calculate which cursor icon we should display for the scalepoints
+var defaultScalePointRotations = [
+    315, 0, 45,
+    270, 0, 90,
+    225, 180, 135,
+];
 var GuiGizmoComponent = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(GuiGizmoComponent, _super);
     function GuiGizmoComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.scalePoints = [];
-        _this._scalePointIndex = -1;
-        _this._plane = babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Plane"].FromPositionAndNormal(babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector3"].Zero(), babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Axis"].Y);
         _this._onUp = function (evt) {
+            // if left is still pressed, don't release
+            if (evt && (evt.buttons & 1)) {
+                return;
+            }
             // cleanup on pointer up
-            _this._pointerData.pointerDown = false;
-            document.querySelectorAll(".ge-scalePoint").forEach(function (scalePoint) {
-                scalePoint.style.pointerEvents = "auto";
-            });
-            _this._scalePointIndex = -1;
+            _this.setState({ scalePointDragging: -1, isRotating: false });
         };
-        _this._initH = 0;
-        _this._initW = 0;
-        _this._initX = 0;
-        _this._initY = 0;
         _this._onMove = function () {
-            if (_this._pointerData.pointerDown) {
-                var scene = _this.props.globalState.workbench._scene;
-                var selectedGuiNodes = _this.props.globalState.workbench.selectedGuiNodes;
-                if (selectedGuiNodes.length > 0) {
-                    var node = selectedGuiNodes[0];
-                    // get the mouse position in node space
-                    var inRTT = _this._mousePointerToRTTSpace(node, scene.pointerX, scene.pointerY);
-                    var inNodeSpace = _this._rttToLocalNodeSpace(node, inRTT.x, inRTT.y, undefined, true);
-                    // set the corner
-                    _this._setNodeCorner(node, inNodeSpace, _this._scalePointIndex);
-                    //convert to percentage
-                    if (_this._responsive) {
-                        _this.props.globalState.workbench.convertToPercentage(node, false);
-                    }
-                    _this.props.globalState.workbench._liveGuiTextureRerender = false;
-                    _this.props.globalState.onPropertyGridUpdateRequiredObservable.notifyObservers();
+            var scene = _this.props.globalState.workbench._scene;
+            if (_this.state.scalePointDragging !== -1) {
+                var node = _this.props.control;
+                var inRTT = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].mousePointerToRTTSpace(node, scene.pointerX, scene.pointerY);
+                var inNodeSpace = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].rttToLocalNodeSpace(node, inRTT.x, inRTT.y, undefined, _this._storedValues);
+                _this._dragLocalBounds(inNodeSpace);
+                _this._updateNodeFromLocalBounds();
+                _this.props.globalState.onPropertyGridUpdateRequiredObservable.notifyObservers();
+            }
+            if (_this.state.isRotating) {
+                var angle = Math.atan2(scene.pointerY - _this._rotation.pivot.y, scene.pointerX - _this._rotation.pivot.x);
+                for (var _i = 0, _a = _this.props.globalState.selectedControls; _i < _a.length; _i++) {
+                    var control = _a[_i];
+                    var oldRotation = control.rotation;
+                    control.rotation += (angle - _this._rotation.initialAngleToPivot);
+                    _this.props.globalState.onPropertyChangedObservable.notifyObservers({
+                        object: control,
+                        property: 'rotation',
+                        value: control.rotation,
+                        initialValue: oldRotation
+                    });
                 }
+                _this._rotation.initialAngleToPivot = angle;
+                _this.props.globalState.onPropertyGridUpdateRequiredObservable.notifyObservers();
             }
         };
-        _this._setMousePosition = function (index) {
-            _this._pointerData.pointerDown = true;
-            _this._scalePointIndex = index;
-            document.querySelectorAll(".ge-scalePoint").forEach(function (scalePoint) {
-                scalePoint.style.pointerEvents = "none";
-            });
-            var selectedGuiNodes = _this.props.globalState.workbench.selectedGuiNodes;
-            if (selectedGuiNodes.length > 0) {
-                var node = selectedGuiNodes[0];
-                _this._nodeToCorners(node);
-                _this._initW = node.widthInPixels;
-                _this._initH = node.heightInPixels;
-                _this._initY = node.topInPixels;
-                _this._initX = node.leftInPixels;
+        _this._beginDraggingScalePoint = function (scalePointIndex) {
+            _this.setState({ scalePointDragging: scalePointIndex });
+            var node = _this.props.control;
+            _this._localBounds = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].computeLocalBounds(node);
+            _this._storedValues = new _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["Rect"](node.leftInPixels, node.topInPixels, node.leftInPixels + node.widthInPixels, node.topInPixels + node.heightInPixels);
+            for (var _i = 0, _a = _this.props.globalState.selectedControls; _i < _a.length; _i++) {
+                var node_1 = _a[_i];
+                node_1.metadata.localBounds = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].computeLocalBounds(node_1);
+                node_1.metadata.storedValues = new _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["Rect"](node_1.leftInPixels, node_1.topInPixels, node_1.leftInPixels + node_1.widthInPixels, node_1.topInPixels + node_1.heightInPixels);
             }
         };
-        _this.props.globalState.guiGizmo = _this;
-        _this._responsive = babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["DataStorage"].ReadBoolean("Responsive", true);
-        _this._pointerData = { corners: [new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"]()], pointerDown: false };
-        _this._htmlPoints = [new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"]()];
-        _this._matrixCache = [babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Matrix2D"].Identity(), babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Matrix2D"].Identity(), babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Matrix2D"].Identity(), babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Matrix2D"].Identity()];
-        // Set visibility
-        props.globalState.onSelectionChangedObservable.add(function (selection) {
-            if (selection) {
-                _this.scalePoints.forEach(function (scalePoint) {
-                    scalePoint.style.display = "flex";
-                });
+        _this._beginRotate = function () {
+            var scene = _this.props.globalState.workbench._scene;
+            var pivot;
+            var node = _this.props.control;
+            var nodeSpace = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_2__["Vector2"](node.transformCenterX, node.transformCenterY);
+            var rtt = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].nodeToRTTSpace(node, nodeSpace.x, nodeSpace.y, undefined);
+            var canvas = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].rttToCanvasSpace(rtt.x, rtt.y);
+            pivot = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_2__["Vector2"](canvas.x, canvas.y);
+            var initialAngleToPivot = Math.atan2(scene.pointerY - pivot.y, scene.pointerX - pivot.x);
+            _this._rotation = {
+                pivot: pivot,
+                initialAngleToPivot: initialAngleToPivot,
+            };
+            _this.setState({ isRotating: true });
+        };
+        var scalePoints = [];
+        for (var vertical = ScalePointPosition.Top; vertical <= ScalePointPosition.Bottom; vertical++) {
+            for (var horizontal = ScalePointPosition.Left; horizontal <= ScalePointPosition.Right; horizontal++) {
+                var isPivot = horizontal === ScalePointPosition.Center && vertical === ScalePointPosition.Center;
+                scalePoints.push({ position: new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_2__["Vector2"](), horizontalPosition: horizontal, verticalPosition: vertical, rotation: 0, isPivot: isPivot });
             }
-            else {
-                _this.scalePoints.forEach(function (scalePoint) {
-                    scalePoint.style.display = "none";
-                });
-            }
+        }
+        _this._localBounds = new _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["Rect"](0, 0, 0, 0);
+        _this.state = {
+            canvasBounds: new _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["Rect"](0, 0, 0, 0),
+            scalePoints: scalePoints,
+            scalePointDragging: -1,
+            isRotating: false
+        };
+        _this._gizmoUpdateObserver = _this.props.globalState.onGizmoUpdateRequireObservable.add(function () {
             _this.updateGizmo(true);
         });
-        _this.props.globalState.onResponsiveChangeObservable.add(function (value) {
-            _this._responsive = value;
-        });
-        _this.props.globalState.onGizmoUpdateRequireObservable.add(function () {
-            // TODO - no need to update on each frame.
-            _this.updateGizmo(true);
-        });
+        _this._pointerUpObserver = _this.props.globalState.onPointerUpObservable.add(function (evt) { return _this._onUp(evt); });
+        _this._pointerMoveObserver = _this.props.globalState.onPointerMoveObservable.add(function () { return _this._onMove(); });
+        _this.updateGizmo(true);
         return _this;
     }
-    GuiGizmoComponent.prototype.componentDidMount = function () { };
+    GuiGizmoComponent.prototype.componentWillUnmount = function () {
+        this.props.globalState.onGizmoUpdateRequireObservable.remove(this._gizmoUpdateObserver);
+        this.props.globalState.onPointerUpObservable.remove(this._pointerUpObserver);
+        this.props.globalState.onPointerMoveObservable.remove(this._pointerMoveObserver);
+    };
     /**
-     * Update the gizmo's corners positions
+     * Update the gizmo's positions
      * @param force should the update be forced. otherwise it will be updated only when the pointer is down
      */
     GuiGizmoComponent.prototype.updateGizmo = function (force) {
-        var _this = this;
-        var selectedGuiNodes = this.props.globalState.workbench.selectedGuiNodes;
-        if (selectedGuiNodes.length > 0 && (force || this._pointerData.pointerDown)) {
-            var node_1 = selectedGuiNodes[0];
-            // Calculating the offsets for each scale point.
-            var half = 1 / 2;
-            this._htmlPoints[0].x = -node_1.widthInPixels * half;
-            this._htmlPoints[0].y = node_1.heightInPixels * half;
-            this._htmlPoints[1].x = -node_1.widthInPixels * half;
-            this._htmlPoints[1].y = -node_1.heightInPixels * half;
-            this._htmlPoints[2].x = node_1.widthInPixels * half;
-            this._htmlPoints[2].y = -node_1.heightInPixels * half;
-            this._htmlPoints[3].x = node_1.widthInPixels * half;
-            this._htmlPoints[3].y = node_1.heightInPixels * half;
-            this._htmlPoints[4].x = -node_1.widthInPixels * half;
-            this._htmlPoints[5].y = -node_1.heightInPixels * half;
-            this._htmlPoints[6].x = node_1.widthInPixels * half;
-            this._htmlPoints[7].y = node_1.heightInPixels * half;
-            // Calculate the pivot point
-            var pivotX = (node_1.transformCenterX - 0.5) * 2;
-            var pivotY = (node_1.transformCenterY - 0.5) * 2;
-            this._htmlPoints[8].x = node_1.widthInPixels * half * pivotX;
-            this._htmlPoints[8].y = node_1.heightInPixels * half * pivotY;
-            this.scalePoints.forEach(function (scalePoint, index) {
-                // TODO optimize this - unify?
-                var result = _this._nodeToRTTSpace(node_1, _this._htmlPoints[index].x, _this._htmlPoints[index].y, undefined, false);
-                var finalResult = _this._rttToCanvasSpace(node_1, result.x, result.y);
-                var scene = _this.props.globalState.workbench._scene;
-                var engine = scene.getEngine();
-                // If the scale point is outside the viewport, do not render
-                scalePoint.style.display =
-                    finalResult.x < 0 || finalResult.x < 0 || finalResult.x > engine.getRenderWidth() || finalResult.y > engine.getRenderHeight() ? "none" : "flex";
-                if (scalePoint.style.display === "flex") {
-                    scalePoint.style.left = finalResult.x + "px";
-                    scalePoint.style.top = finalResult.y + "px";
-                    var rotate = _this.getRotation(node_1) * (180 / Math.PI);
-                    scalePoint.style.transform = "translate(-50%, -50%) rotate(" + rotate + "deg)";
-                }
-            });
-        }
-    };
-    GuiGizmoComponent.prototype._resetMatrixArray = function () {
-        this._matrixCache.forEach(function (matrix) {
-            babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Matrix2D"].IdentityToRef(matrix);
-        });
-    };
-    /**
-     * This function calculates a local matrix for a node, including it's full transformation and pivot point
-     *
-     * @param node the node to calculate the matrix for
-     * @param useStoredValues should the stored (cached) values be used to calculate the matrix
-     * @returns a new matrix for the control
-     */
-    GuiGizmoComponent.prototype._getNodeMatrix = function (node, useStoredValues) {
-        var size = this.props.globalState.guiTexture.getSize();
-        // parent should always be defined, but stay safe
-        var parentWidth = node.parent ? node.parent._currentMeasure.width : size.width;
-        var parentHeight = node.parent ? node.parent._currentMeasure.height : size.height;
-        var x = 0;
-        var y = 0;
-        var width = useStoredValues ? this._initW : node.widthInPixels;
-        var height = useStoredValues ? this._initH : node.heightInPixels;
-        var left = useStoredValues ? this._initX : node.leftInPixels;
-        var top = useStoredValues ? this._initY : node.topInPixels;
-        switch (node.horizontalAlignment) {
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].HORIZONTAL_ALIGNMENT_LEFT:
-                x = -(parentWidth - width) / 2;
-                break;
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].HORIZONTAL_ALIGNMENT_RIGHT:
-                x = (parentWidth - width) / 2;
-                break;
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].HORIZONTAL_ALIGNMENT_CENTER:
-                x = 0;
-                break;
-        }
-        switch (node.verticalAlignment) {
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].VERTICAL_ALIGNMENT_TOP:
-                y = -(parentHeight - height) / 2;
-                break;
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].VERTICAL_ALIGNMENT_BOTTOM:
-                y = (parentHeight - height) / 2;
-                break;
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].VERTICAL_ALIGNMENT_CENTER:
-                y = 0;
-                break;
-        }
-        this._resetMatrixArray();
-        var m2d = this._matrixCache[0];
-        var translateTo = this._matrixCache[1];
-        // as this is used later it needs to persist
-        var resultMatrix = babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Matrix2D"].Identity();
-        // the pivot point around which the object transforms
-        var offsetX = width * node.transformCenterX - width / 2;
-        var offsetY = height * node.transformCenterY - height / 2;
-        // pivot changes this point's position! but only in legacy pivot mode
-        if (!node.descendantsOnlyPadding) {
-            // TODO - padding needs to also take scaling into account?
-            offsetX -= ((node.paddingRightInPixels - node.paddingLeftInPixels) * 1) / 2;
-            offsetY -= ((node.paddingBottomInPixels - node.paddingTopInPixels) * 1) / 2;
-        }
-        // Set the translation
-        babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Matrix2D"].TranslationToRef(x + left, y + top, translateTo);
-        // without parents scaling and rotation, calculate world matrix for each
-        var rotation = this.getRotation(node, true);
-        var scaling = this.getScale(node, true);
-        // COmpose doesn't actually translate, but creates a form of pivot in a specific position
-        babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Matrix2D"].ComposeToRef(-offsetX, -offsetY, rotation, scaling.x, scaling.y, null, m2d);
-        // actually compose the matrix
-        resultMatrix.multiplyToRef(m2d, resultMatrix);
-        resultMatrix.multiplyToRef(translateTo, resultMatrix);
-        return resultMatrix;
-    };
-    /**
-     * Using the node's tree, calculate its world matrix and return it
-     * @param node the node to calculate the matrix for
-     * @param useStoredValuesIfPossible used stored valued (cached when pointer down is clicked)
-     * @returns the world matrix for this node
-     */
-    GuiGizmoComponent.prototype._nodeToRTTWorldMatrix = function (node, useStoredValuesIfPossible) {
-        var _this = this;
-        var listOfNodes = [node];
-        var parent = node.parent;
-        var child = node;
-        while (parent) {
-            if (parent.typeName === "Grid") {
-                var cellInfo = parent.getChildCellInfo(child);
-                var cell = parent.cells[cellInfo];
-                listOfNodes.push(cell);
+        var node = this.props.control;
+        // Calculating the offsets for each scale point.
+        var half = 1 / 2;
+        var canvasBounds = new _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["Rect"](Number.MAX_VALUE, Number.MAX_VALUE, 0, 0);
+        var localBounds = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].computeLocalBounds(node);
+        this.state.scalePoints.forEach(function (scalePoint) {
+            var nodeSpace = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_2__["Vector2"]();
+            switch (scalePoint.horizontalPosition) {
+                case ScalePointPosition.Left:
+                    nodeSpace.x = localBounds.left;
+                    break;
+                case ScalePointPosition.Center:
+                    nodeSpace.x = localBounds.center.x;
+                    break;
+                case ScalePointPosition.Right:
+                    nodeSpace.x = localBounds.right;
+                    break;
             }
-            listOfNodes.push(parent);
-            child = parent;
-            parent = parent.parent;
-        }
-        this._resetMatrixArray();
-        var matrices = listOfNodes.map(function (node, index) { return _this._getNodeMatrix(node, index === 0 && _this._pointerData.pointerDown && useStoredValuesIfPossible); });
-        return matrices.reduce(function (acc, cur) {
-            acc.multiplyToRef(cur, acc);
-            return acc;
-        }, this._matrixCache[2]);
-    };
-    GuiGizmoComponent.prototype._nodeToRTTSpace = function (node, x, y, reference, useStoredValuesIfPossible) {
-        if (reference === void 0) { reference = new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](); }
-        var worldMatrix = this._nodeToRTTWorldMatrix(node, useStoredValuesIfPossible);
-        worldMatrix.transformCoordinates(x, y, reference);
-        // round
-        reference.x = round(reference.x);
-        reference.y = round(reference.y);
-        return reference;
-    };
-    GuiGizmoComponent.prototype._rttToLocalNodeSpace = function (node, x, y, reference, useStoredValuesIfPossible) {
-        if (reference === void 0) { reference = new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](); }
-        var worldMatrix = this._nodeToRTTWorldMatrix(node, useStoredValuesIfPossible);
-        var inv = this._matrixCache[3];
-        worldMatrix.invertToRef(inv);
-        inv.transformCoordinates(x, y, reference);
-        // round
-        reference.x = round(reference.x);
-        reference.y = round(reference.y);
-        return reference;
-    };
-    GuiGizmoComponent.prototype._rttToCanvasSpace = function (node, x, y, reference) {
-        if (reference === void 0) { reference = new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](); }
-        var tmpVec = new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector3"](x, 0, -y);
-        // Get the final projection in view space
-        var camera = this.props.globalState.workbench._camera;
-        var scene = this.props.globalState.workbench._scene;
-        var engine = scene.getEngine();
-        // TODO - to ref
-        var projected = babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector3"].Project(tmpVec, babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Matrix"].Identity(), scene.getTransformMatrix(), camera.viewport.toGlobal(engine.getRenderWidth(), engine.getRenderHeight()));
-        // round to 1 decimal points
-        projected.x = round(projected.x);
-        projected.y = round(projected.y);
-        return projected;
-    };
-    GuiGizmoComponent.prototype._mousePointerToRTTSpace = function (node, x, y) {
-        var camera = this.props.globalState.workbench._camera;
-        var scene = this.props.globalState.workbench._scene;
-        var newPosition = this.props.globalState.workbench.getPosition(scene, camera, this._plane, x !== null && x !== void 0 ? x : scene.pointerX, y || scene.pointerY);
-        newPosition.z *= -1;
-        return new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](round(newPosition.x), round(newPosition.z));
-    };
-    /**
-     * Get the scaling of a specific GUI control
-     * @param node the node for which we are getting the scaling
-     * @param relative should we return only the relative scaling (relative to the parent)
-     * @returns an X,Y vector of the scaling
-     */
-    GuiGizmoComponent.prototype.getScale = function (node, relative) {
-        var x = node.scaleX;
-        var y = node.scaleY;
-        if (relative) {
-            return new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](x, y);
-        }
-        var parent = node.parent;
-        while (parent) {
-            x *= parent.scaleX;
-            y *= parent.scaleY;
-            parent = parent.parent;
-        }
-        return new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](x, y);
-    };
-    GuiGizmoComponent.prototype.getRotation = function (node, relative) {
-        // Gets rotate of a control account for all of it's parents rotations
-        var rotation = node.rotation;
-        if (relative) {
-            return rotation;
-        }
-        var parent = node.parent;
-        while (parent) {
-            rotation += parent.rotation;
-            parent = parent.parent;
-        }
-        return rotation;
-    };
-    GuiGizmoComponent.prototype.createBaseGizmo = function () {
-        var _this = this;
-        var _a, _b;
-        // Get the canvas element from the DOM.
-        var canvas = this.props.globalState.hostDocument.getElementById("workbench-canvas");
-        var scalePointCursors = [
-            "nesw-resize",
-            "nwse-resize",
-            "nesw-resize",
-            "nwse-resize",
-            "ew-resize",
-            "ns-resize",
-            "ew-resize",
-            "ns-resize"
-        ];
-        var _loop_1 = function (i) {
-            var scalePoint = canvas.ownerDocument.createElement("div");
-            scalePoint.className = "ge-scalePoint";
-            (_a = canvas.parentElement) === null || _a === void 0 ? void 0 : _a.appendChild(scalePoint);
-            scalePoint.style.position = "absolute";
-            scalePoint.style.display = "none";
-            scalePoint.style.left = i * 100 + "px";
-            scalePoint.style.top = i * 100 + "px";
-            scalePoint.style.transform = "translate(-50%, -50%)";
-            scalePoint.style.cursor = scalePointCursors[i];
-            scalePoint.addEventListener("pointerdown", function () {
-                _this._setMousePosition(i);
-            });
-            scalePoint.ondragstart = function (evt) {
-                evt.preventDefault();
-            };
-            scalePoint.draggable = true;
-            scalePoint.addEventListener("pointerup", this_1._onUp);
-            this_1.scalePoints.push(scalePoint);
-        };
-        var this_1 = this;
-        for (var i = 0; i < 8; ++i) {
-            _loop_1(i);
-        }
-        // Create the pivot point which is special
-        var pivotPoint = canvas.ownerDocument.createElement("img");
-        pivotPoint.src = gizmoPivotIcon;
-        pivotPoint.className = "ge-pivotPoint";
-        (_b = canvas.parentElement) === null || _b === void 0 ? void 0 : _b.appendChild(pivotPoint);
-        pivotPoint.style.position = "absolute";
-        pivotPoint.style.display = "none";
-        this.scalePoints.push(pivotPoint);
-        pivotPoint.ondragstart = function (evt) {
-            evt.preventDefault();
-        };
-        pivotPoint.draggable = true;
-        this.updateGizmo();
-    };
-    GuiGizmoComponent.prototype.onUp = function (evt) {
-        this._onUp(evt);
-    };
-    GuiGizmoComponent.prototype.onMove = function (evt) {
-        this._onMove();
-    };
-    /**
-     * Calculate the 4 corners in node space
-     * @param node The node to use
-     */
-    GuiGizmoComponent.prototype._nodeToCorners = function (node) {
-        var half = 0.5;
-        this._pointerData.corners[0].x = -node.widthInPixels * half;
-        this._pointerData.corners[0].y = node.heightInPixels * half;
-        this._pointerData.corners[1].x = -node.widthInPixels * half;
-        this._pointerData.corners[1].y = -node.heightInPixels * half;
-        this._pointerData.corners[2].x = node.widthInPixels * half;
-        this._pointerData.corners[2].y = -node.heightInPixels * half;
-        this._pointerData.corners[3].x = node.widthInPixels * half;
-        this._pointerData.corners[3].y = node.heightInPixels * half;
-    };
-    /**
-     * Computer the node's width, height, top and left, using the 4 corners
-     * @param node the node we use
-     */
-    GuiGizmoComponent.prototype._updateNodeFromCorners = function (node) {
-        var upperLeft = this._pointerData.corners[1];
-        var lowerRight = this._pointerData.corners[3];
-        var width = lowerRight.x - upperLeft.x;
-        var height = lowerRight.y - upperLeft.y;
-        var left = this._scalePointIndex === 0 || this._scalePointIndex === 1;
-        var top = this._scalePointIndex === 1 || this._scalePointIndex === 2;
-        // calculate the center point
-        var localRotation = this.getRotation(node, true);
-        var localScaling = this.getScale(node, true);
-        var absoluteCenter = new babylonjs_Maths_math_axis__WEBPACK_IMPORTED_MODULE_2__["Vector2"](upperLeft.x + width * 0.5, upperLeft.y + height * 0.5);
-        var center = absoluteCenter.clone();
-        // move to pivot
-        center.multiplyInPlace(localScaling);
-        var cosRotation = Math.cos(localRotation);
-        var sinRotation = Math.sin(localRotation);
-        var cosRotation180 = Math.cos(localRotation + Math.PI);
-        var sinRotation180 = Math.sin(localRotation + Math.PI);
-        var widthDelta = (this._initW - width) * 0.5;
-        var heightDelta = (this._initH - height) * 0.5;
-        // alignment compensation
-        switch (node.horizontalAlignment) {
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].HORIZONTAL_ALIGNMENT_LEFT:
-                center.x += (left ? widthDelta : -absoluteCenter.x) * cosRotation;
-                center.y += (left ? -widthDelta : absoluteCenter.x) * sinRotation;
-                break;
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].HORIZONTAL_ALIGNMENT_RIGHT:
-                center.x += (left ? -widthDelta : absoluteCenter.x) * cosRotation;
-                center.y += (left ? widthDelta : -absoluteCenter.x) * sinRotation;
-                break;
-        }
-        switch (node.verticalAlignment) {
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].VERTICAL_ALIGNMENT_TOP:
-                center.y += (top ? -heightDelta : absoluteCenter.y) * cosRotation180;
-                center.x += (top ? -heightDelta : absoluteCenter.y) * sinRotation180;
-                break;
-            case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].VERTICAL_ALIGNMENT_BOTTOM:
-                center.y += (top ? heightDelta : -absoluteCenter.y) * cosRotation180;
-                center.x += (top ? heightDelta : -absoluteCenter.y) * sinRotation180;
-                break;
-        }
-        // rotate the center around 0,0
-        var rotatedCenter = this._rotate(center.x, center.y, 0, 0, localRotation);
-        // round the values and set them
-        node.leftInPixels = round(this._initX + rotatedCenter.x);
-        node.topInPixels = round(this._initY + rotatedCenter.y);
-        node.widthInPixels = round(Math.max(10, width));
-        node.heightInPixels = round(Math.max(10, height));
-        if (node.typeName === "Image") {
-            node.autoScale = false;
-        }
-        else if (node.typeName === "TextBlock") {
-            node.resizeToFit = false;
-        }
-        if (this._responsive) {
-            this.props.globalState.workbench.convertToPercentage(node, true);
-        }
+            switch (scalePoint.verticalPosition) {
+                case ScalePointPosition.Top:
+                    nodeSpace.y = localBounds.top;
+                    break;
+                case ScalePointPosition.Center:
+                    nodeSpace.y = localBounds.center.y;
+                    break;
+                case ScalePointPosition.Bottom:
+                    nodeSpace.y = localBounds.bottom;
+                    break;
+            }
+            if (scalePoint.isPivot) {
+                // Calculate the pivot point
+                var pivotX = (node.transformCenterX - 0.5) * 2;
+                var pivotY = (node.transformCenterY - 0.5) * 2;
+                nodeSpace.x = node.widthInPixels * half * pivotX;
+                nodeSpace.y = node.heightInPixels * half * pivotY;
+            }
+            var rtt = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].nodeToRTTSpace(node, nodeSpace.x, nodeSpace.y, undefined);
+            var canvas = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].rttToCanvasSpace(rtt.x, rtt.y);
+            if (canvas.x < canvasBounds.left) {
+                canvasBounds.left = canvas.x;
+            }
+            if (canvas.x > canvasBounds.right) {
+                canvasBounds.right = canvas.x;
+            }
+            if (canvas.y < canvasBounds.top) {
+                canvasBounds.top = canvas.y;
+            }
+            if (canvas.y > canvasBounds.bottom) {
+                canvasBounds.bottom = canvas.y;
+            }
+            // edges, and rotate based on the rotation of the control
+            scalePoint.position.x = canvas.x;
+            scalePoint.position.y = canvas.y;
+            scalePoint.rotation = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].getRotation(node) * (180 / Math.PI);
+        });
+        this.setState({
+            canvasBounds: canvasBounds,
+            scalePoints: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spreadArray"])([], this.state.scalePoints, true),
+        });
     };
     GuiGizmoComponent.prototype._rotate = function (x, y, centerX, centerY, angle) {
         return {
@@ -48234,43 +47268,244 @@ var GuiGizmoComponent = /** @class */ (function (_super) {
             y: (x - centerX) * Math.sin(angle) + (y - centerY) * Math.cos(angle) + centerY,
         };
     };
-    GuiGizmoComponent.prototype._setNodeCorner = function (node, corner, cornerIndex) {
-        // are we in a fixed-axis situation
-        var fixedAxis = cornerIndex > 3;
-        // the actual corner to update. This relies on the fact that the corners are in a specific order
-        var toUpdate = cornerIndex % 4;
-        if (fixedAxis) {
-            // check which axis is fixed
-            if (cornerIndex === 4 || cornerIndex === 6) {
-                // set the corner's y axis correctly
-                corner.y = this._pointerData.corners[toUpdate].y;
+    GuiGizmoComponent.prototype._modulo = function (dividend, divisor) {
+        return ((dividend % divisor) + divisor) % divisor;
+    };
+    GuiGizmoComponent.prototype._dragLocalBounds = function (toPosition) {
+        var _this = this;
+        var scalePoint = this.state.scalePoints[this.state.scalePointDragging];
+        var newBounds = this._localBounds.clone();
+        if (scalePoint.horizontalPosition === ScalePointPosition.Left) {
+            newBounds.left = Math.min(this._localBounds.right - 1, toPosition.x);
+        }
+        if (scalePoint.verticalPosition === ScalePointPosition.Left) {
+            newBounds.top = Math.min(this._localBounds.bottom - 1, toPosition.y);
+        }
+        if (scalePoint.horizontalPosition === ScalePointPosition.Right) {
+            newBounds.right = Math.max(this._localBounds.left + 1, toPosition.x);
+        }
+        if (scalePoint.verticalPosition === ScalePointPosition.Bottom) {
+            newBounds.bottom = Math.max(this._localBounds.top + 1, toPosition.y);
+        }
+        // apply bounds changes to all controls 
+        var edges = ["left", "top", "right", "bottom"];
+        var _loop_1 = function (node) {
+            var initialBounds = node.metadata.localBounds;
+            var nb = initialBounds.clone();
+            // account for rotation: if other control is rotated 90 degrees
+            // relative to primary control, we should modify top instead of left
+            var rotationModifier = this_1._modulo((this_1.props.control.rotation - node.rotation), Math.PI * 2) / Math.PI * 2;
+            edges.forEach(function (edge, index) {
+                var modifiedIndex = Math.round(index + rotationModifier) % 4;
+                var flipSign = ((index < 2) === (modifiedIndex < 2)) ? 1 : -1;
+                nb[edges[modifiedIndex]] += (newBounds[edge] - _this._localBounds[edge]) * flipSign;
+            });
+            nb.left = Math.min(initialBounds.right - 1, nb.left);
+            nb.top = Math.min(initialBounds.bottom - 1, nb.top);
+            nb.right = Math.max(initialBounds.left + 1, nb.right);
+            nb.bottom = Math.max(initialBounds.top + 1, nb.bottom);
+            node.metadata.localBounds = nb;
+        };
+        var this_1 = this;
+        for (var _i = 0, _a = this.props.globalState.selectedControls; _i < _a.length; _i++) {
+            var node = _a[_i];
+            _loop_1(node);
+        }
+        this._localBounds = newBounds;
+    };
+    GuiGizmoComponent.prototype._updateNodeFromLocalBounds = function () {
+        var scalePoint = this.state.scalePoints[this.state.scalePointDragging];
+        var left = scalePoint.horizontalPosition === ScalePointPosition.Left;
+        var top = scalePoint.verticalPosition === ScalePointPosition.Top;
+        for (var _i = 0, _a = this.props.globalState.selectedControls; _i < _a.length; _i++) {
+            var selectedControl = _a[_i];
+            var width = selectedControl.metadata.localBounds.width;
+            var height = selectedControl.metadata.localBounds.height;
+            // calculate the center point
+            var localRotation = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].getRotation(selectedControl, true);
+            var localScaling = _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].getScale(selectedControl, true);
+            var absoluteCenter = selectedControl.metadata.localBounds.center;
+            var center = absoluteCenter.clone();
+            // move to pivot
+            center.multiplyInPlace(localScaling);
+            var cosRotation = Math.cos(localRotation);
+            var sinRotation = Math.sin(localRotation);
+            var cosRotation180 = Math.cos(localRotation + Math.PI);
+            var sinRotation180 = Math.sin(localRotation + Math.PI);
+            var widthDelta = (selectedControl.metadata.storedValues.width - width) * 0.5;
+            var heightDelta = (selectedControl.metadata.storedValues.height - height) * 0.5;
+            // alignment compensation
+            switch (selectedControl.horizontalAlignment) {
+                case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].HORIZONTAL_ALIGNMENT_LEFT:
+                    center.x += (left ? widthDelta : -absoluteCenter.x) * cosRotation;
+                    center.y += (left ? -widthDelta : absoluteCenter.x) * sinRotation;
+                    break;
+                case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].HORIZONTAL_ALIGNMENT_RIGHT:
+                    center.x += (left ? -widthDelta : absoluteCenter.x) * cosRotation;
+                    center.y += (left ? widthDelta : -absoluteCenter.x) * sinRotation;
+                    break;
             }
-            else {
-                // set the corner's x axis correctly
-                corner.x = this._pointerData.corners[toUpdate].x;
+            switch (selectedControl.verticalAlignment) {
+                case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].VERTICAL_ALIGNMENT_TOP:
+                    center.y += (top ? -heightDelta : absoluteCenter.y) * cosRotation180;
+                    center.x += (top ? -heightDelta : absoluteCenter.y) * sinRotation180;
+                    break;
+                case babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["Control"].VERTICAL_ALIGNMENT_BOTTOM:
+                    center.y += (top ? heightDelta : -absoluteCenter.y) * cosRotation180;
+                    center.x += (top ? heightDelta : -absoluteCenter.y) * sinRotation180;
+                    break;
+            }
+            // rotate the center around 0,0
+            var rotatedCenter = this._rotate(center.x, center.y, 0, 0, localRotation);
+            var properties = ["left", "top", "width", "height"];
+            for (var _b = 0, properties_1 = properties; _b < properties_1.length; _b++) {
+                var property = properties_1[_b];
+                var newPixels = 0;
+                switch (property) {
+                    case "left":
+                        newPixels = round(selectedControl.metadata.storedValues.left + rotatedCenter.x);
+                        break;
+                    case "top":
+                        newPixels = round(selectedControl.metadata.storedValues.top + rotatedCenter.y);
+                        break;
+                    case "width":
+                        newPixels = round(width);
+                        break;
+                    case "height":
+                        newPixels = round(height);
+                        break;
+                }
+                // compute real change in property
+                var initialUnit = selectedControl["_".concat(property)].unit;
+                var oldPixels = selectedControl["".concat(property, "InPixels")];
+                selectedControl["".concat(property, "InPixels")] = newPixels;
+                this.props.globalState.onPropertyChangedObservable.notifyObservers({
+                    object: selectedControl,
+                    property: "".concat(property, "InPixels"),
+                    value: newPixels,
+                    initialValue: oldPixels
+                });
+                if (initialUnit === babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_1__["ValueAndUnit"].UNITMODE_PERCENTAGE) {
+                    _coordinateHelper__WEBPACK_IMPORTED_MODULE_4__["CoordinateHelper"].convertToPercentage(selectedControl, [property]);
+                }
+            }
+            if (selectedControl.typeName === "Image") {
+                selectedControl.autoScale = false;
+            }
+            else if (selectedControl.typeName === "TextBlock") {
+                selectedControl.resizeToFit = false;
             }
         }
-        this._pointerData.corners[toUpdate].copyFrom(corner);
-        // also update the other corners
-        var next = (cornerIndex + 1) % 4;
-        var prev = (cornerIndex + 3) % 4;
-        // Update the next and the previous points
-        if (toUpdate % 2 === 0) {
-            this._pointerData.corners[next].x = this._pointerData.corners[toUpdate].x;
-            this._pointerData.corners[prev].y = this._pointerData.corners[toUpdate].y;
-        }
-        else {
-            this._pointerData.corners[next].y = this._pointerData.corners[toUpdate].y;
-            this._pointerData.corners[prev].x = this._pointerData.corners[toUpdate].x;
-        }
-        // update the transformation accordingly
-        this._updateNodeFromCorners(node);
     };
     GuiGizmoComponent.prototype.render = function () {
-        return null;
+        var _this = this;
+        // don't render if we don't have anything selected, or if we're currently dragging
+        return (react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "gizmo" },
+            lines.map(function (line, index) {
+                var start = _this.state.scalePoints[line[0]];
+                var end = _this.state.scalePoints[line[1]];
+                // the vector between start and end
+                var delta = end.position.subtract(start.position);
+                var angle = Math.atan2(delta.y, delta.x);
+                var length = delta.length();
+                return (react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "bounding-box-line", key: index, style: {
+                        left: "".concat(start.position.x + delta.x / 2, "px"),
+                        top: "".concat(start.position.y + delta.y / 2, "px"),
+                        width: "".concat(length, "px"),
+                        transform: "translate(-50%, -50%) rotate(".concat(angle, "rad)"),
+                    } }));
+            }),
+            this.state.scalePoints.map(function (scalePoint, index) {
+                var style = {
+                    left: "".concat(scalePoint.position.x, "px"),
+                    top: "".concat(scalePoint.position.y, "px"),
+                    transform: "translate(-50%, -50%) rotate(" + scalePoint.rotation + "deg)",
+                    pointerEvents: _this.state.scalePointDragging === -1 && !scalePoint.isPivot && !_this.state.isRotating ? "auto" : "none",
+                };
+                if (scalePoint.isPivot) {
+                    return react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("img", { className: "pivot-point", src: gizmoPivotIcon, style: style, key: index });
+                }
+                // compute which cursor icon to use on hover
+                var angleOfCursor = (defaultScalePointRotations[index] + scalePoint.rotation);
+                var angleAdjusted = _this._modulo(angleOfCursor, 360);
+                var increment = 45;
+                var cursorIndex = Math.round(angleAdjusted / increment) % 8;
+                var cursor = scalePointCursors[cursorIndex];
+                var scalePointContainerSize = 30; // .scale-point-container width/height in px
+                var rotateClickAreaSize = 20; // .rotate-click-area width/height
+                var rotateClickAreaOffset = 7; // how much to offset the invisible rotate click area from the center
+                var rotateClickAreaStyle = {
+                    top: (scalePointContainerSize - rotateClickAreaSize) / 2 + rotateClickAreaOffset * scalePoint.verticalPosition,
+                    left: (scalePointContainerSize - rotateClickAreaSize) / 2 + rotateClickAreaOffset * scalePoint.horizontalPosition,
+                    cursor: rotateCursors[cursorIndex]
+                };
+                var scaleClickAreaSize = 20; // .scale-click-area width/height
+                var scaleClickAreaOffset = 5; // how much to offset the invisible scale click area from the center
+                var scaleClickAreaStyle = {
+                    top: (scalePointContainerSize - scaleClickAreaSize) / 2 - scaleClickAreaOffset * scalePoint.verticalPosition,
+                    left: (scalePointContainerSize - scaleClickAreaSize) / 2 - scaleClickAreaOffset * scalePoint.horizontalPosition,
+                    cursor: cursor
+                };
+                return (react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { key: index, style: style, className: "scale-point-container" },
+                    react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "rotate-click-area", onPointerDown: function () { return _this._beginRotate(); }, style: rotateClickAreaStyle }),
+                    react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "scale-click-area", draggable: true, onDragStart: function (evt) { return evt.preventDefault(); }, onPointerDown: function (event) {
+                            // if left mouse button down
+                            if (event.buttons & 1) {
+                                _this._beginDraggingScalePoint(index);
+                            }
+                        }, onPointerUp: _this._onUp, style: scaleClickAreaStyle }),
+                    react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", { className: "scale-point", draggable: true, onDragStart: function (evt) { return evt.preventDefault(); }, onPointerDown: function (event) {
+                            if (event.buttons & 1) {
+                                _this._beginDraggingScalePoint(index);
+                            }
+                        }, onPointerUp: _this._onUp, style: { cursor: cursor } })));
+            })));
     };
     return GuiGizmoComponent;
 }(react__WEBPACK_IMPORTED_MODULE_3__["Component"]));
+
+
+
+/***/ }),
+
+/***/ "./diagram/guiGizmoWrapper.tsx":
+/*!*************************************!*\
+  !*** ./diagram/guiGizmoWrapper.tsx ***!
+  \*************************************/
+/*! exports provided: GizmoWrapper */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GizmoWrapper", function() { return GizmoWrapper; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _guiGizmo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./guiGizmo */ "./diagram/guiGizmo.tsx");
+
+
+
+var GizmoWrapper = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(GizmoWrapper, _super);
+    function GizmoWrapper() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    GizmoWrapper.prototype.componentWillMount = function () {
+        var _this = this;
+        this.observer = this.props.globalState.onSelectionChangedObservable.add(function () { return _this.forceUpdate(); });
+    };
+    GizmoWrapper.prototype.componentWillUnmount = function () {
+        this.props.globalState.onSelectionChangedObservable.remove(this.observer);
+    };
+    GizmoWrapper.prototype.render = function () {
+        var _this = this;
+        var controls = this.props.globalState.selectedControls;
+        return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, controls.map(function (control) {
+            return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_guiGizmo__WEBPACK_IMPORTED_MODULE_2__["GuiGizmoComponent"], { globalState: _this.props.globalState, control: control, key: control.uniqueId });
+        }));
+    };
+    return GizmoWrapper;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
 
 
 
@@ -48296,9 +47531,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! babylonjs/Maths/math.vector */ "babylonjs/Misc/observable");
 /* harmony import */ var babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _tools__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../tools */ "./tools.ts");
-/* harmony import */ var _GUIEditorNodeMaterial__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./GUIEditorNodeMaterial */ "./diagram/GUIEditorNodeMaterial.ts");
-
-
+/* harmony import */ var _coordinateHelper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./coordinateHelper */ "./diagram/coordinateHelper.tsx");
 
 
 
@@ -48327,6 +47560,8 @@ var ConstraintDirection;
     ConstraintDirection[ConstraintDirection["X"] = 2] = "X";
     ConstraintDirection[ConstraintDirection["Y"] = 3] = "Y";
 })(ConstraintDirection || (ConstraintDirection = {}));
+var ARROW_KEY_MOVEMENT_SMALL = 1; // px
+var ARROW_KEY_MOVEMENT_LARGE = 5; // px
 var WorkbenchComponent = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(WorkbenchComponent, _super);
     function WorkbenchComponent(props) {
@@ -48334,24 +47569,29 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         _this._setConstraintDirection = false;
         _this._mouseStartPointX = null;
         _this._mouseStartPointY = null;
-        _this._selectedGuiNodes = [];
         _this._ctrlKeyIsPressed = false;
         _this._altKeyIsPressed = false;
         _this._constraintDirection = ConstraintDirection.NONE;
         _this._forcePanning = false;
         _this._forceZooming = false;
         _this._forceSelecting = true;
-        _this._outlines = false;
         _this._isOverGUINode = [];
-        _this._clipboard = [];
-        _this._selectAll = false;
-        _this._cameraMaxRadiasFactor = 16384; // 2^13
         _this._mainSelection = null;
         _this._selectionDepth = 0;
         _this._doubleClick = null;
-        _this._lockMainSelection = false;
         _this._liveGuiTextureRerender = true;
+        _this._anyControlClicked = true;
+        _this._nextLiveGuiRender = -1;
+        _this._liveGuiRerenderDelay = 30;
+        _this._defaultGUISize = { width: 1024, height: 1024 };
+        _this._initialPanningOffset = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](0, 0);
+        _this._panningOffset = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](0, 0);
+        _this._zoomFactor = 1;
+        _this._zoomModeIncrement = 0.2;
+        _this._guiSize = _this._defaultGUISize;
         _this.keyEvent = function (evt) {
+            if (evt.target.localName === "input")
+                return;
             _this._ctrlKeyIsPressed = evt.ctrlKey;
             _this._altKeyIsPressed = evt.altKey;
             if (evt.shiftKey) {
@@ -48361,41 +47601,15 @@ var WorkbenchComponent = /** @class */ (function (_super) {
                 _this._setConstraintDirection = false;
                 _this._constraintDirection = ConstraintDirection.NONE;
             }
-            if (evt.key === "Delete") {
+            if (evt.key === "Delete" || evt.key === "Backspace") {
                 if (!_this.props.globalState.lockObject.lock) {
-                    _this._selectedGuiNodes.forEach(function (guiNode) {
-                        var _a;
-                        if (guiNode !== _this.globalState.guiTexture.getChildren()[0]) {
-                            _this.props.globalState.guiTexture.removeControl(guiNode);
-                            (_a = _this.props.globalState.liveGuiTexture) === null || _a === void 0 ? void 0 : _a.removeControl(guiNode);
-                            guiNode.dispose();
-                        }
-                    });
-                    _this.props.globalState.onSelectionChangedObservable.notifyObservers(null);
+                    _this._deleteSelectedNodes();
                 }
             }
             if (_this._ctrlKeyIsPressed && !_this.props.globalState.lockObject.lock) {
                 if (evt.key === "a") {
-                    _this.props.globalState.onSelectionChangedObservable.notifyObservers(null);
-                    var index_1 = 0;
-                    _this.nodes.forEach(function (node) {
-                        if (index_1++) {
-                            //skip the first node, the background
-                            _this.selectAllGUI(node);
-                        }
-                    });
+                    _this.props.globalState.setSelection(_this.trueRootContainer.children);
                 }
-                else if (evt.key === "c") {
-                    _this.copyToClipboard();
-                }
-                else if (evt.key === "v" && !_this._pasted) {
-                    _this.globalState.onSelectionChangedObservable.notifyObservers(null);
-                    _this.pasteFromClipboard();
-                    _this._pasted = true;
-                }
-            }
-            else if (!_this._ctrlKeyIsPressed) {
-                _this._pasted = false;
             }
             if (_this._forceZooming) {
                 _this._canvas.style.cursor = _this._altKeyIsPressed ? "zoom-out" : "zoom-in";
@@ -48404,44 +47618,12 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         _this.blurEvent = function () {
             _this._ctrlKeyIsPressed = false;
             _this._constraintDirection = ConstraintDirection.NONE;
-            _this.props.globalState.guiGizmo.onUp();
+            _this.props.globalState.onPointerUpObservable.notifyObservers(null);
         };
         _this.isUp = true;
         _this._rootContainer = react__WEBPACK_IMPORTED_MODULE_1__["createRef"]();
         _this._responsive = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["DataStorage"].ReadBoolean("Responsive", true);
-        props.globalState.onSelectionChangedObservable.add(function (selection) {
-            if (!selection) {
-                _this.changeSelectionHighlight(false);
-                _this._selectedGuiNodes = [];
-                _this._selectAll = false;
-                _this._mainSelection = null;
-            }
-            else {
-                if (selection instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Control"]) {
-                    if (_this._ctrlKeyIsPressed) {
-                        var index = _this._selectedGuiNodes.indexOf(selection);
-                        if (index === -1) {
-                            _this._selectedGuiNodes.push(selection);
-                        }
-                        else {
-                            _this.changeSelectionHighlight(false);
-                            _this._selectedGuiNodes.splice(index, 1);
-                        }
-                    }
-                    else if (_this._selectedGuiNodes.length <= 1) {
-                        _this.changeSelectionHighlight(false);
-                        _this._selectedGuiNodes = [selection];
-                        if (!_this._lockMainSelection && selection != _this.props.globalState.guiTexture._rootContainer) {
-                            //incase the selection did not come from the canvas and mouse
-                            _this._mainSelection = selection;
-                        }
-                        _this._lockMainSelection = false;
-                        _this._selectAll = false;
-                    }
-                    _this.changeSelectionHighlight(true);
-                }
-            }
-        });
+        props.globalState.onSelectionChangedObservable.add(function () { return _this.updateNodeOutlines(); });
         props.globalState.onPanObservable.add(function () {
             _this._forcePanning = !_this._forcePanning;
             _this._forceSelecting = false;
@@ -48452,16 +47634,12 @@ var WorkbenchComponent = /** @class */ (function (_super) {
             else {
                 _this._canvas.style.cursor = "grab";
             }
-            _this.updateHitTest(_this.globalState.guiTexture.getChildren()[0], _this._forceSelecting);
-            _this.artBoardBackground.isHitTestVisible = true;
         });
         props.globalState.onSelectionButtonObservable.add(function () {
             _this._forceSelecting = !_this._forceSelecting;
             _this._forcePanning = false;
             _this._forceZooming = false;
             _this._canvas.style.cursor = "default";
-            _this.updateHitTest(_this.globalState.guiTexture.getChildren()[0], _this._forceSelecting);
-            _this.artBoardBackground.isHitTestVisible = true;
         });
         props.globalState.onZoomObservable.add(function () {
             _this._forceZooming = !_this._forceZooming;
@@ -48473,20 +47651,18 @@ var WorkbenchComponent = /** @class */ (function (_super) {
             else {
                 _this._canvas.style.cursor = "zoom-in";
             }
-            _this.updateHitTest(_this.globalState.guiTexture.getChildren()[0], _this._forceSelecting);
-            _this.artBoardBackground.isHitTestVisible = true;
         });
         props.globalState.onFitToWindowObservable.add(function () {
-            _this.setCameraRadius();
-            for (var i = 0; i < 2; ++i) {
-                _this._camera.alpha = -Math.PI / 2;
-                _this._camera.beta = 0;
-                _this._camera.radius = _this._cameraRadias;
-                _this._camera.target = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector3"].Zero();
-            }
+            _this._panningOffset = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](0, 0);
+            var xFactor = _this._engine.getRenderWidth() / _this.guiSize.width;
+            var yFactor = _this._engine.getRenderHeight() / _this.guiSize.height;
+            _this._zoomFactor = Math.min(xFactor, yFactor) * 0.9;
         });
-        props.globalState.onOutlinesObservable.add(function () {
-            _this._outlines = !_this._outlines;
+        props.globalState.onOutlineChangedObservable.add(function () {
+            _this.updateNodeOutlines();
+        });
+        props.globalState.onSelectionChangedObservable.add(function () {
+            _this.updateNodeOutlines();
         });
         props.globalState.onParentingChangeObservable.add(function (control) {
             _this.parent(control);
@@ -48499,12 +47675,88 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         _this.props.globalState.hostDocument.addEventListener("keydown", _this.keyEvent, false);
         _this.props.globalState.hostDocument.defaultView.addEventListener("blur", _this.blurEvent, false);
         props.globalState.onWindowResizeObservable.add(function () {
-            //this.props.globalState.onGizmoUpdateRequireObservable.notifyObservers();
+            _this.props.globalState.onGizmoUpdateRequireObservable.notifyObservers();
+            _this.props.globalState.onArtBoardUpdateRequiredObservable.notifyObservers();
             _this._engine.resize();
         });
+        props.globalState.onCopyObservable.add(function (copyFn) { return _this.copyToClipboard(copyFn); });
+        props.globalState.onCutObservable.add(function (copyFn) { return _this.cutToClipboard(copyFn); });
+        props.globalState.onPasteObservable.add(function (content) { return _this.pasteFromClipboard(content); });
         _this.props.globalState.workbench = _this;
         return _this;
     }
+    Object.defineProperty(WorkbenchComponent.prototype, "visibleRegionContainer", {
+        get: function () {
+            return this._visibleRegionContainer;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(WorkbenchComponent.prototype, "panAndZoomContainer", {
+        get: function () {
+            return this._panAndZoomContainer;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(WorkbenchComponent.prototype, "trueRootContainer", {
+        get: function () {
+            return this._trueRootContainer;
+        },
+        set: function (value) {
+            var _this = this;
+            if (value === this._trueRootContainer)
+                return;
+            this._visibleRegionContainer.children.forEach(function (child) { return _this._visibleRegionContainer.removeControl(child); });
+            this._visibleRegionContainer.addControl(value);
+            this._trueRootContainer = value;
+            this._trueRootContainer.isPointerBlocker = false;
+            value._host = this.props.globalState.guiTexture;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(WorkbenchComponent.prototype, "guiSize", {
+        get: function () {
+            return this._guiSize;
+        },
+        // sets the size of the GUI and makes all neccessary adjustments
+        set: function (value) {
+            this._guiSize = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, value);
+            this._visibleRegionContainer.widthInPixels = this._guiSize.width;
+            this._visibleRegionContainer.heightInPixels = this._guiSize.height;
+            this.globalState.onResizeObservable.notifyObservers(this._guiSize);
+            this.globalState.onFitToWindowObservable.notifyObservers();
+            this.globalState.onArtBoardUpdateRequiredObservable.notifyObservers();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    WorkbenchComponent.prototype.applyEditorTransformation = function () {
+        var adt = this.globalState.guiTexture;
+        if (adt._rootContainer != this._panAndZoomContainer) {
+            adt._rootContainer = this._panAndZoomContainer;
+            this._visibleRegionContainer.addControl(this._trueRootContainer);
+            this.globalState.guiTexture.markAsDirty();
+        }
+        if (adt.getSize().width !== this._engine.getRenderWidth() || adt.getSize().height !== this._engine.getRenderHeight()) {
+            adt.scaleTo(this._engine.getRenderWidth(), this._engine.getRenderHeight());
+        }
+        if (adt.getSize().width !== this._engine.getRenderWidth() || adt.getSize().height !== this._engine.getRenderHeight()) {
+            adt.scaleTo(this._engine.getRenderWidth(), this._engine.getRenderHeight());
+        }
+        this._trueRootContainer.clipContent = false;
+        this._trueRootContainer.clipChildren = false;
+    };
+    WorkbenchComponent.prototype.removeEditorTransformation = function () {
+        var adt = this.globalState.guiTexture;
+        if (adt._rootContainer != this._trueRootContainer) {
+            this._visibleRegionContainer.removeControl(this._trueRootContainer);
+            adt._rootContainer = this._trueRootContainer;
+        }
+        this._trueRootContainer.clipContent = true;
+        this._trueRootContainer.clipChildren = true;
+    };
     Object.defineProperty(WorkbenchComponent.prototype, "globalState", {
         get: function () {
             return this.props.globalState;
@@ -48521,7 +47773,7 @@ var WorkbenchComponent = /** @class */ (function (_super) {
     });
     Object.defineProperty(WorkbenchComponent.prototype, "selectedGuiNodes", {
         get: function () {
-            return this._selectedGuiNodes;
+            return this.props.globalState.selectedControls;
         },
         enumerable: false,
         configurable: true
@@ -48549,9 +47801,9 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         return parent;
     };
     WorkbenchComponent.prototype.determineMouseSelection = function (selection) {
-        if (selection && this._selectedGuiNodes.length <= 1) {
+        if (this.props.globalState.selectedControls.length <= 1) {
             // if we're still on the same main selection, got down the tree.
-            if (selection === this._selectedGuiNodes[0] || selection === this._mainSelection) {
+            if (selection === this.props.globalState.selectedControls[0]) {
                 selection = this._getParentWithDepth(selection);
             }
             else { // get the start of our tree by getting our max parent and storing our main selected control
@@ -48559,56 +47811,59 @@ var WorkbenchComponent = /** @class */ (function (_super) {
                     selection = this._getParentWithDepth(selection);
                 }
                 else {
-                    selection = this._getMaxParent(selection, this.globalState.guiTexture._rootContainer);
+                    selection = this._getMaxParent(selection, this.trueRootContainer);
                 }
                 this._mainSelection = selection;
             }
         }
-        this._lockMainSelection = true;
-        this.props.globalState.onSelectionChangedObservable.notifyObservers(selection);
+        this.props.globalState.select(selection);
     };
-    WorkbenchComponent.prototype.updateHitTest = function (guiControl, value) {
-        var _this = this;
-        guiControl.isHitTestVisible = value;
-        if (guiControl instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"]) {
-            guiControl.children.forEach(function (child) {
-                _this.updateHitTest(child, value);
-            });
+    WorkbenchComponent.prototype._deleteSelectedNodes = function () {
+        var _a;
+        for (var _i = 0, _b = this.props.globalState.selectedControls; _i < _b.length; _i++) {
+            var control = _b[_i];
+            this.props.globalState.guiTexture.removeControl(control);
+            (_a = this.props.globalState.liveGuiTexture) === null || _a === void 0 ? void 0 : _a.removeControl(control);
+            control.dispose();
         }
+        ;
+        this.props.globalState.setSelection([]);
     };
-    WorkbenchComponent.prototype.updateHitTestForSelection = function (value) {
-        if (this._forceSelecting && !value)
-            return;
-        this.selectedGuiNodes.forEach(function (control) {
-            control.isHitTestVisible = value;
-        });
+    WorkbenchComponent.prototype.copyToClipboard = function (copyFn) {
+        var controlList = [];
+        for (var _i = 0, _a = this.selectedGuiNodes; _i < _a.length; _i++) {
+            var control = _a[_i];
+            var obj = {};
+            control.serialize(obj);
+            controlList.push(obj);
+        }
+        copyFn(JSON.stringify({
+            GUIClipboard: true,
+            controls: controlList
+        }));
     };
-    WorkbenchComponent.prototype.setCameraRadius = function () {
-        var size = this.props.globalState.guiTexture.getSize();
-        this._cameraRadias = size.width > size.height ? size.width : size.height;
-        this._cameraRadias += this._cameraRadias - this._cameraRadias / 1.5;
+    WorkbenchComponent.prototype.cutToClipboard = function (copyFn) {
+        this.copyToClipboard(copyFn);
+        this._deleteSelectedNodes();
     };
-    WorkbenchComponent.prototype.copyToClipboard = function () {
-        var _this = this;
-        this._clipboard = [];
-        if (this._selectAll) {
-            var index_2 = 0;
-            this.nodes.forEach(function (node) {
-                if (index_2++) {
-                    //skip the first node, the background
-                    _this._clipboard.push(node);
+    WorkbenchComponent.prototype.pasteFromClipboard = function (clipboardContents) {
+        try {
+            var parsed = JSON.parse(clipboardContents);
+            if (parsed.GUIClipboard) {
+                var newSelection = [];
+                for (var _i = 0, _a = parsed.controls; _i < _a.length; _i++) {
+                    var control = _a[_i];
+                    newSelection.push(this.appendBlock(babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Control"].Parse(control, this.props.globalState.guiTexture)));
                 }
-            });
+                this.props.globalState.setSelection(newSelection);
+                return true;
+            }
         }
-        else {
-            this._clipboard = this.selectedGuiNodes;
+        catch (_b) {
+            // don't need an error message
         }
-    };
-    WorkbenchComponent.prototype.pasteFromClipboard = function () {
-        var _this = this;
-        this._clipboard.forEach(function (control) {
-            _this.CopyGUIControl(control);
-        });
+        babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Logger"].Warn("Paste attempted, but clipboard content was invalid.");
+        return false;
     };
     WorkbenchComponent.prototype.CopyGUIControl = function (original) {
         var _a, _b;
@@ -48626,25 +47881,24 @@ var WorkbenchComponent = /** @class */ (function (_super) {
             else {
                 (_b = original.parent) === null || _b === void 0 ? void 0 : _b.addControl(newControl);
             }
-            var index_3 = 1;
+            var index_1 = 1;
             while (this.props.globalState.guiTexture.getDescendants(false).filter(
             //search if there are any copies
-            function (control) { return control.name === newControl.name + " Copy " + index_3; }).length) {
-                index_3++;
+            function (control) { return control.name === "".concat(newControl.name, " Copy ").concat(index_1); }).length) {
+                index_1++;
             }
-            newControl.name = newControl.name + " Copy " + index_3;
-            this.props.globalState.onSelectionChangedObservable.notifyObservers(newControl);
+            newControl.name = "".concat(newControl.name, " Copy ").concat(index_1);
+            this.props.globalState.select(newControl);
         }
     };
     WorkbenchComponent.prototype.selectAllGUI = function (node) {
         var _this = this;
-        this.globalState.onSelectionChangedObservable.notifyObservers(node);
+        this.globalState.select(node);
         if (node instanceof babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"]) {
             node.children.forEach(function (child) {
                 _this.selectAllGUI(child);
             });
         }
-        this._selectAll = true;
     };
     WorkbenchComponent.prototype.componentWillUnmount = function () {
         this.props.globalState.hostDocument.removeEventListener("keyup", this.keyEvent);
@@ -48671,7 +47925,8 @@ var WorkbenchComponent = /** @class */ (function (_super) {
     };
     WorkbenchComponent.prototype.loadFromJson = function (serializationObject) {
         var _a;
-        this.globalState.onSelectionChangedObservable.notifyObservers(null);
+        this.removeEditorTransformation();
+        this.props.globalState.setSelection([]);
         if (this.props.globalState.liveGuiTexture) {
             (_a = this.globalState.liveGuiTexture) === null || _a === void 0 ? void 0 : _a.parseContent(serializationObject, true);
             this.synchronizeLiveGUI();
@@ -48679,6 +47934,8 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         else {
             this.globalState.guiTexture.parseContent(serializationObject, true);
         }
+        this.trueRootContainer = this.props.globalState.guiTexture._rootContainer;
+        this.guiSize = this.globalState.guiTexture.getSize();
         this.loadToEditor();
     };
     WorkbenchComponent.prototype.loadFromSnippet = function (snippetId) {
@@ -48687,7 +47944,8 @@ var WorkbenchComponent = /** @class */ (function (_super) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_b) {
                 switch (_b.label) {
                     case 0:
-                        this.globalState.onSelectionChangedObservable.notifyObservers(null);
+                        this.removeEditorTransformation();
+                        this.props.globalState.setSelection([]);
                         if (!this.props.globalState.liveGuiTexture) return [3 /*break*/, 2];
                         return [4 /*yield*/, ((_a = this.globalState.liveGuiTexture) === null || _a === void 0 ? void 0 : _a.parseFromSnippetAsync(snippetId, true))];
                     case 1:
@@ -48699,13 +47957,14 @@ var WorkbenchComponent = /** @class */ (function (_super) {
                         _b.sent();
                         _b.label = 4;
                     case 4:
+                        this.trueRootContainer = this.props.globalState.guiTexture._rootContainer;
+                        this.guiSize = this.globalState.guiTexture.getSize();
                         this.loadToEditor();
                         if (this.props.globalState.customLoad) {
                             this.props.globalState.customLoad.action(this.globalState.guiTexture.snippetId).catch(function (err) {
                                 alert("Unable to load your GUI");
                             });
                         }
-                        this.globalState.onSelectionChangedObservable.notifyObservers(null);
                         return [2 /*return*/];
                 }
             });
@@ -48713,44 +47972,19 @@ var WorkbenchComponent = /** @class */ (function (_super) {
     };
     WorkbenchComponent.prototype.loadToEditor = function () {
         var _this = this;
-        var size = this.globalState.guiTexture.getSize();
-        this.resizeGuiTexture(new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](size.width, size.height));
         this.globalState.guiTexture.rootContainer.children.forEach(function (guiElement) {
-            if (guiElement.name === "Art-Board-Background" && guiElement.typeName === "Rectangle") {
-                _this.artBoardBackground = guiElement;
-                return;
-            }
             _this.createNewGuiNode(guiElement);
         });
-        if (this.props.globalState.guiTexture.getChildren()[0].children.length) {
-            this.props.globalState.guiTexture.getChildren()[0].children.unshift(this.props.globalState.workbench.artBoardBackground);
-        }
-        else {
-            this.props.globalState.guiTexture.getChildren()[0].children.push(this.props.globalState.workbench.artBoardBackground);
-        }
         this._isOverGUINode = [];
-    };
-    WorkbenchComponent.prototype.changeSelectionHighlight = function (value) {
-        var _this = this;
-        this._selectedGuiNodes.forEach(function (node) {
-            if (_this._outlines) {
-                node.isHighlighted = true;
-                node.highlightLineWidth = 5;
-            }
-            else {
-                node.isHighlighted = value && node.typeName === "Grid";
-                node.highlightLineWidth = 5;
-            }
-        });
-        this.updateHitTestForSelection(value);
-    };
-    WorkbenchComponent.prototype.resizeGuiTexture = function (newvalue) {
-        this._textureMesh.scaling.x = newvalue.x;
-        this._textureMesh.scaling.z = newvalue.y;
-        this.globalState.guiTexture.scaleTo(newvalue.x, newvalue.y);
-        this.globalState.guiTexture.markAsDirty();
-        this.globalState.onResizeObservable.notifyObservers(newvalue);
+        this.globalState.setSelection([]);
         this.globalState.onFitToWindowObservable.notifyObservers();
+    };
+    WorkbenchComponent.prototype.updateNodeOutlines = function () {
+        for (var _i = 0, _a = this._trueRootContainer.getDescendants(); _i < _a.length; _i++) {
+            var guiControl = _a[_i];
+            guiControl.isHighlighted = guiControl.getClassName() === "Grid" && (this.props.globalState.outlines || this.props.globalState.selectedControls.includes(guiControl));
+            guiControl.highlightLineWidth = 5;
+        }
     };
     WorkbenchComponent.prototype.findNodeFromGuiElement = function (guiControl) {
         return this.nodes.filter(function (n) { return n === guiControl; })[0];
@@ -48760,7 +47994,7 @@ var WorkbenchComponent = /** @class */ (function (_super) {
             this.globalState.liveGuiTexture.addControl(guiElement);
         }
         var newGuiNode = this.createNewGuiNode(guiElement);
-        this.globalState.guiTexture.addControl(guiElement);
+        this.trueRootContainer.addControl(guiElement);
         return newGuiNode;
     };
     //is the
@@ -48780,6 +48014,7 @@ var WorkbenchComponent = /** @class */ (function (_super) {
             _this.clicked = false;
         });
         var onPointerDown = guiControl.onPointerDownObservable.add(function (evt) {
+            _this._anyControlClicked = true;
             if (!_this.isUp || evt.buttonIndex > 0)
                 return;
             if (_this._forceSelecting) {
@@ -48857,7 +48092,7 @@ var WorkbenchComponent = /** @class */ (function (_super) {
                     }
                     else if (dropLocationControl.parent) {
                         //dropping inside the controls parent container
-                        if (dropLocationControl.parent.typeName != "Grid") {
+                        if (dropLocationControl.parent.typeName !== "Grid") {
                             draggedControlParent.removeControl(draggedControl);
                             var index = dropLocationControl.parent.children.indexOf(dropLocationControl);
                             var reversed = dropLocationControl.parent.typeName === "StackPanel" || dropLocationControl.parent.typeName === "VirtualKeyboard";
@@ -48880,14 +48115,14 @@ var WorkbenchComponent = /** @class */ (function (_super) {
                     }
                     else {
                         draggedControlParent.removeControl(draggedControl);
-                        this.props.globalState.guiTexture.addControl(draggedControl);
+                        this.trueRootContainer.addControl(draggedControl);
                     }
                 }
                 else {
-                    //starting at index 1 because of object "Art-Board-Background" must be at index 0
                     draggedControlParent.removeControl(draggedControl);
-                    draggedControlParent.children.splice(1, 0, draggedControl);
-                    draggedControl.parent = draggedControlParent;
+                    this.trueRootContainer.addControl(draggedControl);
+                    this.trueRootContainer.children.pop();
+                    this.trueRootContainer.children.splice(0, 0, draggedControl);
                 }
             }
         }
@@ -48931,11 +48166,10 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         return index;
     };
     WorkbenchComponent.prototype.isSelected = function (value, guiNode) {
-        this.globalState.onSelectionChangedObservable.notifyObservers(guiNode);
+        this.globalState.select(guiNode);
     };
     WorkbenchComponent.prototype._onMove = function (guiControl, evt, startPos, ignorClick) {
         if (ignorClick === void 0) { ignorClick = false; }
-        this._liveGuiTextureRerender = false;
         var newX = evt.x - startPos.x;
         var newY = evt.y - startPos.y;
         if (this._setConstraintDirection) {
@@ -48964,45 +48198,14 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         guiControl.topInPixels += newY;
         //convert to percentage
         if (this._responsive) {
-            this.convertToPercentage(guiControl, false);
+            _coordinateHelper__WEBPACK_IMPORTED_MODULE_6__["CoordinateHelper"].convertToPercentage(guiControl, ["left", "top"]);
         }
         this.props.globalState.onPropertyGridUpdateRequiredObservable.notifyObservers();
         return true;
     };
-    WorkbenchComponent.prototype.convertToPercentage = function (guiControl, includeScale) {
-        var ratioX = this._textureMesh.scaling.x;
-        var ratioY = this._textureMesh.scaling.z;
-        if (guiControl.parent) {
-            if (guiControl.parent.typeName === "Grid") {
-                var cellInfo = guiControl.parent.getChildCellInfo(guiControl);
-                var cell = guiControl.parent.cells[cellInfo];
-                ratioX = cell.widthInPixels;
-                ratioY = cell.heightInPixels;
-            }
-            else if (guiControl.parent.typeName === "Rectangle" || guiControl.parent.typeName === "Button") {
-                var thickness = guiControl.parent.thickness * 2;
-                ratioX = guiControl.parent._currentMeasure.width - thickness;
-                ratioY = guiControl.parent._currentMeasure.height - thickness;
-            }
-            else {
-                ratioX = guiControl.parent._currentMeasure.width;
-                ratioY = guiControl.parent._currentMeasure.height;
-            }
-        }
-        var left = (guiControl.leftInPixels * 100) / ratioX;
-        var top = (guiControl.topInPixels * 100) / ratioY;
-        guiControl.left = left.toFixed(2) + "%";
-        guiControl.top = top.toFixed(2) + "%";
-        if (includeScale) {
-            var width = (guiControl.widthInPixels * 100) / ratioX;
-            var height = (guiControl.heightInPixels * 100) / ratioY;
-            guiControl.width = width.toFixed(2) + "%";
-            guiControl.height = height.toFixed(2) + "%";
-        }
-    };
     WorkbenchComponent.prototype.onMove = function (evt) {
         var _this = this;
-        var pos = this.getGroundPosition();
+        var pos = this.getScaledPointerPosition();
         // Move or guiNodes
         if (this._mouseStartPointX != null && this._mouseStartPointY != null && !this._panning) {
             var x = this._mouseStartPointX;
@@ -49010,40 +48213,33 @@ var WorkbenchComponent = /** @class */ (function (_super) {
             var selected_1 = false;
             this.selectedGuiNodes.forEach(function (element) {
                 if (pos) {
-                    selected_1 = _this._onMove(element, new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](pos.x, -pos.z), new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](x, y), false) || selected_1;
+                    selected_1 = _this._onMove(element, new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](pos.x, pos.y), new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](x, y), false) || selected_1;
                 }
             });
             this._mouseStartPointX = pos ? pos.x : this._mouseStartPointX;
-            this._mouseStartPointY = pos ? pos.z * -1 : this._mouseStartPointY;
+            this._mouseStartPointY = pos ? pos.y : this._mouseStartPointY;
         }
     };
-    WorkbenchComponent.prototype.getGroundPosition = function () {
-        var tex = this._textureMesh;
-        // Use a predicate to get position on the ground
-        var pickinfo = this._scene.pick(this._scene.pointerX, this._scene.pointerY, function (mesh) {
-            return mesh == tex;
-        });
-        if (pickinfo === null || pickinfo === void 0 ? void 0 : pickinfo.hit) {
-            return pickinfo.pickedPoint;
-        }
-        return null;
+    WorkbenchComponent.prototype._screenToTexturePosition = function (screenPos) {
+        var zoomVector = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](this._zoomFactor, this._zoomFactor);
+        return screenPos.divideInPlace(zoomVector).add(this._panningOffset);
+    };
+    WorkbenchComponent.prototype.getScaledPointerPosition = function () {
+        return this._screenToTexturePosition(new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](this._scene.pointerX, this._scene.pointerY));
     };
     WorkbenchComponent.prototype.onDown = function (evt) {
         var _a;
         (_a = this._rootContainer.current) === null || _a === void 0 ? void 0 : _a.setPointerCapture(evt.pointerId);
         if (this._isOverGUINode.length === 0 && !evt.button) {
             if (this._forceSelecting) {
-                this.props.globalState.onSelectionChangedObservable.notifyObservers(null);
+                this.props.globalState.setSelection([]);
             }
             return;
         }
-        var pos = this.getGroundPosition();
-        if (pos === null && this._forceSelecting && !evt.button) {
-            this.props.globalState.onSelectionChangedObservable.notifyObservers(null);
-        }
+        var pos = this.getScaledPointerPosition();
         if (this._forceSelecting) {
             this._mouseStartPointX = pos ? pos.x : this._mouseStartPointX;
-            this._mouseStartPointY = pos ? -pos.z : this._mouseStartPointY;
+            this._mouseStartPointY = pos ? pos.y : this._mouseStartPointY;
         }
     };
     WorkbenchComponent.prototype.onUp = function (evt) {
@@ -49063,60 +48259,66 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         this._engine = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Engine"](canvas);
         // Create our first scene.
         this._scene = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Scene"](this._engine);
-        var clearColor = 204 / 255.0;
-        this._scene.clearColor = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Color4"](clearColor, clearColor, clearColor, 1.0);
+        this._scene.clearColor = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Color4"](0, 0, 0, 0);
         var light = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["HemisphericLight"]("light1", babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Axis"].Y, this._scene);
         light.intensity = 0.9;
-        var textureSize = 1024;
-        this._textureMesh = Object(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["CreateGround"])("GuiCanvas", { width: 1, height: 1, subdivisions: 1 }, this._scene);
-        this._textureMesh.scaling.x = textureSize;
-        this._textureMesh.scaling.z = textureSize;
-        this.globalState.guiTexture = babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["AdvancedDynamicTexture"].CreateForMesh(this._textureMesh, textureSize, textureSize, true);
-        this.globalState.guiTexture.rootContainer.clipChildren = false;
-        this.globalState.guiTexture.useInvalidateRectOptimization = false;
-        this._textureMesh.showBoundingBox = true;
-        this.artBoardBackground = new babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Rectangle"]("Art-Board-Background");
-        this.artBoardBackground.width = "100%";
-        this.artBoardBackground.height = "100%";
-        this.artBoardBackground.background = "transparent";
-        this.artBoardBackground.thickness = 0;
-        this.globalState.guiTexture.addControl(this.artBoardBackground);
+        this._guiSize = this._defaultGUISize;
+        this._panAndZoomContainer = new babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"]("panAndZoom");
+        this._panAndZoomContainer.clipContent = false;
+        this._panAndZoomContainer.clipChildren = false;
+        this._visibleRegionContainer = new babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["Container"]("visibleRegion");
+        this._visibleRegionContainer.clipChildren = false;
+        this._visibleRegionContainer.clipContent = false;
+        this._visibleRegionContainer.widthInPixels = this.guiSize.width;
+        this._visibleRegionContainer.heightInPixels = this.guiSize.height;
+        this._panAndZoomContainer.addControl(this._visibleRegionContainer);
+        var adt = this.globalState.guiTexture =
+            this._visibleRegionContainer._host =
+                this._panAndZoomContainer._host =
+                    babylonjs_gui_2D_controls_control__WEBPACK_IMPORTED_MODULE_3__["AdvancedDynamicTexture"].CreateFullscreenUI("guiTexture", true, this._scene, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Texture"].NEAREST_NEAREST_MIPNEAREST, false);
+        adt.useInvalidateRectOptimization = false;
+        this.trueRootContainer = adt.rootContainer;
+        adt.onEndRenderObservable.add(function () { return _this.props.globalState.onGizmoUpdateRequireObservable.notifyObservers(); });
         this.synchronizeLiveGUI();
-        var nodeMaterial = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["NodeMaterial"]("NodeMaterial", this._scene);
-        nodeMaterial.loadFromSerialization(_GUIEditorNodeMaterial__WEBPACK_IMPORTED_MODULE_6__["GUIEditorNodeMaterial"]);
-        nodeMaterial.build(true);
-        this._textureMesh.material = nodeMaterial;
-        if (nodeMaterial) {
-            var block = nodeMaterial.getBlockByName("Texture");
-            block.texture = this.globalState.guiTexture;
-        }
-        this.setCameraRadius();
-        this._camera = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["ArcRotateCamera"]("Camera", -Math.PI / 2, 0, this._cameraRadias, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector3"].Zero(), this._scene);
-        this._camera.maxZ = this._cameraMaxRadiasFactor * 2;
-        // This attaches the camera to the canvas
-        this.addControls(this._scene, this._camera);
+        new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["ArcRotateCamera"]("Camera", 0, 0, 0, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector3"].Zero(), this._scene);
+        // This attaches the mouse controls
+        this.addControls(this._scene);
         this._scene.getEngine().onCanvasPointerOutObservable.clear();
         this._scene.doNotHandleCursors = true;
         // Watch for browser/canvas resize events
         this.globalState.hostWindow.addEventListener("resize", function () {
-            _this._engine.resize();
+            _this.props.globalState.onWindowResizeObservable.notifyObservers();
         });
         this._engine.resize();
+        this.globalState.guiTexture.onBeginRenderObservable.add(function () {
+            _this.applyEditorTransformation();
+        });
+        this.globalState.onPropertyChangedObservable.add(function (ev) {
+            ev.object.markAsDirty(false);
+            _this.globalState.onArtBoardUpdateRequiredObservable.notifyObservers();
+        });
         // Every time the original ADT re-renders, we must also re-render, so that layout information is computed correctly
         // also, every time *we* re-render (due to a change in the GUI), we must re-render the original ADT
         // to prevent an infite loop, we flip a boolean flag
         if (this.globalState.liveGuiTexture) {
             this._guiRenderObserver = this.globalState.guiTexture.onBeginRenderObservable.add(function () {
-                var _a;
                 if (_this._liveGuiTextureRerender) {
-                    (_a = _this.globalState.liveGuiTexture) === null || _a === void 0 ? void 0 : _a.markAsDirty();
+                    _this._nextLiveGuiRender = Date.now() + _this._liveGuiRerenderDelay;
                 }
                 _this._liveGuiTextureRerender = true;
             });
             this._liveRenderObserver = this.globalState.liveGuiTexture.onEndRenderObservable.add(function () {
                 var _a;
+                // return the GUI to the editor mode
                 (_a = _this.globalState.guiTexture) === null || _a === void 0 ? void 0 : _a.markAsDirty();
                 _this._liveGuiTextureRerender = false;
+            });
+            this._scene.onAfterRenderObservable.add(function () {
+                var _a;
+                if (_this._nextLiveGuiRender > 0 && Date.now() > _this._nextLiveGuiRender) {
+                    _this._nextLiveGuiRender = -1;
+                    (_a = _this.globalState.liveGuiTexture) === null || _a === void 0 ? void 0 : _a.markAsDirty();
+                }
             });
         }
         this.props.globalState.onErrorMessageDialogRequiredObservable.notifyObservers("Welcome to the GUI Editor Alpha. This editor is still a work in progress. Icons are currently temporary. Please submit feedback using the \"Give feedback\" button in the menu. ");
@@ -49125,12 +48327,13 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         });
         this.globalState.onNewSceneObservable.notifyObservers(this.globalState.guiTexture.getScene());
         this.globalState.onPropertyGridUpdateRequiredObservable.notifyObservers();
+        this.props.globalState.onFitToWindowObservable.notifyObservers();
     };
     // removes all controls from both GUIs, and re-adds the controls from the original to the GUI editor
     WorkbenchComponent.prototype.synchronizeLiveGUI = function () {
         var _this = this;
         if (this.globalState.liveGuiTexture) {
-            this.globalState.guiTexture._rootContainer.getDescendants().filter(function (desc) { return desc.name !== "Art-Board-Background"; }).forEach(function (desc) { return desc.dispose(); });
+            this._trueRootContainer.getDescendants().forEach(function (desc) { return desc.dispose(); });
             this.globalState.liveGuiTexture.rootContainer.getDescendants(true).forEach(function (desc) {
                 var _a;
                 (_a = _this.globalState.liveGuiTexture) === null || _a === void 0 ? void 0 : _a.removeControl(desc);
@@ -49139,65 +48342,63 @@ var WorkbenchComponent = /** @class */ (function (_super) {
             this.globalState.guiTexture.snippetId = this.globalState.liveGuiTexture.snippetId;
         }
     };
-    //Add map-like controls to an ArcRotate camera
-    WorkbenchComponent.prototype.addControls = function (scene, camera) {
+    //Add zoom and pan controls
+    WorkbenchComponent.prototype.addControls = function (scene) {
         var _this = this;
-        var _a;
-        camera.inertia = 0.7;
-        camera.lowerRadiusLimit = 10;
-        camera.upperRadiusLimit = this._cameraMaxRadiasFactor;
-        camera.upperBetaLimit = Math.PI / 2 - 0.1;
-        camera.angularSensibilityX = camera.angularSensibilityY = 500;
-        var plane = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Plane"].FromPositionAndNormal(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector3"].Zero(), babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Axis"].Y);
-        var inertialPanning = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector3"].Zero();
-        var initialPos = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector3"](0, 0, 0);
-        var panningFn = function () {
-            var pos = _this.getPosition(scene, camera, plane);
-            _this.panning(pos, initialPos, camera.inertia, inertialPanning);
-            //this.props.globalState.onGizmoUpdateRequireObservable.notifyObservers();
+        var _a, _b, _c, _d;
+        var zoomFnScrollWheel = function (e) {
+            var delta = _this.zoomWheel(e);
+            _this.zooming(1 + (delta / 1000));
         };
-        var inertialPanningFn = function () {
-            if (inertialPanning.x !== 0 || inertialPanning.y !== 0 || inertialPanning.z !== 0) {
-                camera.target.addInPlace(inertialPanning);
-                inertialPanning.scaleInPlace(camera.inertia);
-                _this.zeroIfClose(inertialPanning);
-            }
+        var panningFn = function () { return _this.panning(); };
+        var startPanning = function () {
+            _this._scene.onPointerObservable.add(panningFn, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["PointerEventTypes"].POINTERMOVE);
+            _this._panning = true;
+            _this._initialPanningOffset = _this.getScaledPointerPosition();
+            _this._panAndZoomContainer.getDescendants().forEach(function (desc) {
+                if (!desc.metadata)
+                    desc.metadata = {};
+                desc.metadata.isPointerBlocker = desc.isPointerBlocker;
+                desc.isPointerBlocker = false;
+            });
         };
-        var wheelPrecisionFn = function () {
-            camera.wheelPrecision = (1 / camera.radius) * 1000;
-        };
-        var zoomFnScrollWheel = function (p, e) {
-            var delta = _this.zoomWheel(p, e, camera);
-            _this.zooming(delta, scene, camera, plane, inertialPanning);
-        };
-        var zoomFnMouse = function (p, e) {
-            _this.zooming(_this._altKeyIsPressed ? -10 : 10, scene, camera, plane, inertialPanning);
+        var endPanning = function () {
+            _this._panning = false;
+            _this._panAndZoomContainer.getDescendants().forEach(function (desc) {
+                if (desc.metadata && desc.metadata.isPointerBlocker !== undefined) {
+                    desc.isPointerBlocker = desc.metadata.isPointerBlocker;
+                    delete desc.metadata.isPointerBlocker;
+                }
+            });
         };
         var removeObservers = function () {
             scene.onPointerObservable.removeCallback(panningFn);
-            scene.onPointerObservable.removeCallback(zoomFnMouse);
         };
-        scene.onPointerObservable.add(function (p, e) {
+        (_a = this._rootContainer.current) === null || _a === void 0 ? void 0 : _a.addEventListener("wheel", zoomFnScrollWheel);
+        (_b = this._rootContainer.current) === null || _b === void 0 ? void 0 : _b.addEventListener("pointerdown", function (event) {
             removeObservers();
-            if (p.event.button !== 0 || _this._forcePanning) {
-                initialPos = _this.getPosition(scene, camera, plane);
-                scene.onPointerObservable.add(panningFn, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["PointerEventTypes"].POINTERMOVE);
-                _this._panning = true;
-            }
-            else if (_this._forceZooming) {
-                initialPos = _this.getPosition(scene, camera, plane);
-                scene.onPointerObservable.add(zoomFnMouse, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["PointerEventTypes"].POINTERMOVE);
-                _this._panning = false;
+            if (event.button !== 0 || _this._forcePanning) {
+                startPanning();
             }
             else {
-                _this._panning = false;
+                if (_this._forceZooming) {
+                    _this.zooming(1.0 + (_this._altKeyIsPressed ? -_this._zoomModeIncrement : _this._zoomModeIncrement));
+                }
+                endPanning();
+                // if we click in the scene and we don't hit any controls, deselect all
+                _this._scene.onAfterRenderObservable.addOnce(function () {
+                    if (!_this._anyControlClicked) {
+                        _this.props.globalState.setSelection([]);
+                    }
+                    _this._anyControlClicked = false;
+                });
             }
-        }, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["PointerEventTypes"].POINTERDOWN);
-        scene.onPointerObservable.add(function (p, e) {
+        });
+        (_c = this._rootContainer.current) === null || _c === void 0 ? void 0 : _c.addEventListener("pointerup", function (event) {
             _this._panning = false;
             removeObservers();
-            _this.props.globalState.guiGizmo.onUp();
-        }, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["PointerEventTypes"].POINTERUP);
+            _this.props.globalState.onPointerUpObservable.notifyObservers(event);
+        });
         scene.onKeyboardObservable.add(function (k, e) {
             switch (k.event.key) {
                 case "s": //select
@@ -49217,47 +48418,89 @@ var WorkbenchComponent = /** @class */ (function (_super) {
                     break;
                 case "g": //outlines
                 case "G":
-                    _this.globalState.onOutlinesObservable.notifyObservers();
+                    _this.globalState.outlines = !_this.globalState.outlines;
                     break;
                 case "f": //fit to window
                 case "F":
                     _this.globalState.onFitToWindowObservable.notifyObservers();
                     break;
+                case "ArrowUp": // move up
+                    _this.moveControls(false, k.event.shiftKey ? -ARROW_KEY_MOVEMENT_LARGE : -ARROW_KEY_MOVEMENT_SMALL);
+                    break;
+                case "ArrowDown": // move down
+                    _this.moveControls(false, k.event.shiftKey ? ARROW_KEY_MOVEMENT_LARGE : ARROW_KEY_MOVEMENT_SMALL);
+                    break;
+                case "ArrowLeft": // move left
+                    _this.moveControls(true, k.event.shiftKey ? -ARROW_KEY_MOVEMENT_LARGE : -ARROW_KEY_MOVEMENT_SMALL);
+                    break;
+                case "ArrowRight": // move right
+                    _this.moveControls(true, k.event.shiftKey ? ARROW_KEY_MOVEMENT_LARGE : ARROW_KEY_MOVEMENT_SMALL);
                 default:
                     break;
             }
         }, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["KeyboardEventTypes"].KEYDOWN);
-        scene.onAfterRenderObservable.add(function () { _this.props.globalState.onGizmoUpdateRequireObservable.notifyObservers(); });
-        scene.onPointerObservable.add(zoomFnScrollWheel, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["PointerEventTypes"].POINTERWHEEL);
-        scene.onBeforeRenderObservable.add(inertialPanningFn);
-        scene.onBeforeRenderObservable.add(wheelPrecisionFn);
+        scene.onBeforeRenderObservable.add(function () {
+            if (_this._panAndZoomContainer.scaleX !== _this._zoomFactor) {
+                _this._panAndZoomContainer.scaleX = _this._zoomFactor;
+                _this._panAndZoomContainer.scaleY = _this._zoomFactor;
+                _this.globalState.onArtBoardUpdateRequiredObservable.notifyObservers();
+                _this.globalState.onGizmoUpdateRequireObservable.notifyObservers();
+            }
+            var left = _this._zoomFactor * _this._panningOffset.x;
+            var top = _this._zoomFactor * -_this._panningOffset.y;
+            if (_this._panAndZoomContainer.leftInPixels !== left || _this._panAndZoomContainer.topInPixels !== top) {
+                _this._panAndZoomContainer.leftInPixels = left;
+                _this._panAndZoomContainer.topInPixels = top;
+                _this.globalState.onArtBoardUpdateRequiredObservable.notifyObservers();
+                _this.globalState.onGizmoUpdateRequireObservable.notifyObservers();
+            }
+        });
         // stop context menu showing on canvas right click
-        (_a = scene
+        (_d = scene
             .getEngine()
-            .getRenderingCanvas()) === null || _a === void 0 ? void 0 : _a.addEventListener("contextmenu", function (e) {
+            .getRenderingCanvas()) === null || _d === void 0 ? void 0 : _d.addEventListener("contextmenu", function (e) {
             e.preventDefault();
         });
     };
-    //Get pos on plane
-    WorkbenchComponent.prototype.getPosition = function (scene, camera, plane, x, y) {
-        if (x === void 0) { x = scene.pointerX; }
-        if (y === void 0) { y = scene.pointerY; }
-        var ray = scene.createPickingRay(x, y, babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Matrix"].Identity(), camera, false);
-        var distance = ray.intersectsPlane(plane);
-        //not using this ray again, so modifying its vectors here is fine
-        return distance !== null ? ray.origin.addInPlace(ray.direction.scaleInPlace(distance)) : babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_4__["Vector3"].Zero();
-    };
     //Return offsets for inertial panning given initial and current pointer positions
-    WorkbenchComponent.prototype.panning = function (newPos, initialPos, inertia, ref) {
-        var directionToZoomLocation = initialPos.subtract(newPos);
-        var panningX = directionToZoomLocation.x * (1 - inertia);
-        var panningZ = directionToZoomLocation.z * (1 - inertia);
-        ref.copyFromFloats(panningX, 0, panningZ);
-        return ref;
+    WorkbenchComponent.prototype.panning = function () {
+        var panningDelta = this.getScaledPointerPosition().subtract(this._initialPanningOffset).multiplyByFloats(1, -1);
+        this._panningOffset = this._panningOffset.add(panningDelta);
+        this._initialPanningOffset = this.getScaledPointerPosition();
+        this.props.globalState.onArtBoardUpdateRequiredObservable.notifyObservers();
+        this.props.globalState.onGizmoUpdateRequireObservable.notifyObservers();
     };
-    //Get the wheel delta divided by the camera wheel precision
-    WorkbenchComponent.prototype.zoomWheel = function (p, e, camera) {
-        var event = p.event;
+    // Move the selected controls. Can be either on horizontal (leftInPixels) or 
+    // vertical (topInPixels) direction
+    WorkbenchComponent.prototype.moveControls = function (moveHorizontal, amount) {
+        for (var _i = 0, _a = this.props.globalState.workbench.selectedGuiNodes; _i < _a.length; _i++) {
+            var selectedControl = _a[_i];
+            if (moveHorizontal) { // move horizontal
+                var prevValue = selectedControl.leftInPixels;
+                selectedControl.leftInPixels += amount;
+                this.props.globalState.onPropertyChangedObservable.notifyObservers({
+                    object: selectedControl,
+                    property: "leftInPixels",
+                    value: selectedControl.leftInPixels,
+                    initialValue: prevValue
+                });
+                this.props.globalState.onPropertyGridUpdateRequiredObservable.notifyObservers();
+            }
+            else { // move vertical
+                var prevValue = selectedControl.topInPixels;
+                selectedControl.topInPixels += amount;
+                this.props.globalState.onPropertyChangedObservable.notifyObservers({
+                    object: selectedControl,
+                    property: "topInPixels",
+                    value: selectedControl.topInPixels,
+                    initialValue: prevValue
+                });
+                this.props.globalState.onPropertyGridUpdateRequiredObservable.notifyObservers();
+            }
+        }
+    };
+    //Get the wheel delta
+    WorkbenchComponent.prototype.zoomWheel = function (event) {
         event.preventDefault();
         var delta = 0;
         if (event.deltaY) {
@@ -49266,38 +48509,11 @@ var WorkbenchComponent = /** @class */ (function (_super) {
         else if (event.detail) {
             delta = -event.detail;
         }
-        delta /= camera.wheelPrecision;
         return delta;
     };
     //Zoom to pointer position. Zoom amount determined by delta
-    WorkbenchComponent.prototype.zooming = function (delta, scene, camera, plane, ref) {
-        var lr = camera.lowerRadiusLimit;
-        var ur = camera.upperRadiusLimit;
-        if (!lr || !ur) {
-            return;
-        }
-        if (camera.radius - lr < 1 && delta > 0) {
-            return;
-        }
-        else if (ur - camera.radius < 1 && delta < 0) {
-            return;
-        }
-        var inertiaComp = 1 - camera.inertia;
-        if (camera.radius - (camera.inertialRadiusOffset + delta) / inertiaComp < lr) {
-            delta = (camera.radius - lr) * inertiaComp - camera.inertialRadiusOffset;
-        }
-        else if (camera.radius - (camera.inertialRadiusOffset + delta) / inertiaComp > ur) {
-            delta = (camera.radius - ur) * inertiaComp - camera.inertialRadiusOffset;
-        }
-        var zoomDistance = delta / inertiaComp;
-        var ratio = zoomDistance / camera.radius;
-        var vec = this.getPosition(scene, camera, plane);
-        var directionToZoomLocation = vec.subtract(camera.target);
-        var offset = directionToZoomLocation.scale(ratio);
-        offset.scaleInPlace(inertiaComp);
-        ref.addInPlace(offset);
-        camera.inertialRadiusOffset += delta;
-        //this.props.globalState.onGizmoUpdateRequireObservable.notifyObservers();
+    WorkbenchComponent.prototype.zooming = function (delta) {
+        this._zoomFactor *= delta;
     };
     //Sets x y or z of passed in vector to zero if less than Epsilon
     WorkbenchComponent.prototype.zeroIfClose = function (vec) {
@@ -49317,12 +48533,10 @@ var WorkbenchComponent = /** @class */ (function (_super) {
                 if (_this.props.globalState.guiTexture) {
                     _this.onMove(evt);
                 }
-                if (_this.props.globalState.guiGizmo) {
-                    _this.props.globalState.guiGizmo.onMove(evt);
-                }
+                _this.props.globalState.onPointerMoveObservable.notifyObservers(evt);
             }, onPointerDown: function (evt) { return _this.onDown(evt); }, onPointerUp: function (evt) {
                 _this.onUp(evt);
-                _this.props.globalState.guiGizmo.onUp(evt);
+                _this.props.globalState.onPointerUpObservable.notifyObservers(evt);
             }, ref: this._rootContainer }));
     };
     return WorkbenchComponent;
@@ -49372,9 +48586,13 @@ module.exports = content.locals || {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DragOverLocation", function() { return DragOverLocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalState", function() { return GlobalState; });
-/* harmony import */ var babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! babylonjs/Misc/observable */ "babylonjs/Misc/observable");
-/* harmony import */ var babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _sharedUiComponents_tabs_propertyGrids_lockObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sharedUiComponents/tabs/propertyGrids/lockObject */ "./sharedUiComponents/tabs/propertyGrids/lockObject.ts");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! babylonjs/Misc/observable */ "babylonjs/Misc/observable");
+/* harmony import */ var babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _sharedUiComponents_tabs_propertyGrids_lockObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sharedUiComponents/tabs/propertyGrids/lockObject */ "./sharedUiComponents/tabs/propertyGrids/lockObject.ts");
+/* harmony import */ var _diagram_coordinateHelper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./diagram/coordinateHelper */ "./diagram/coordinateHelper.tsx");
+
+
 
 
 
@@ -49388,46 +48606,141 @@ var DragOverLocation;
 })(DragOverLocation || (DragOverLocation = {}));
 var GlobalState = /** @class */ (function () {
     function GlobalState() {
-        this.onSelectionChangedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onResizeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onBuiltObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onResetRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onUpdateRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onLogRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onErrorMessageDialogRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onIsLoadingChanged = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onSelectionBoxMoved = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onNewSceneObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onGuiNodeRemovalObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onPopupClosedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
+        this.selectedControls = [];
+        this.onSelectionChangedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onResizeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onBuiltObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onResetRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onUpdateRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onLogRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onErrorMessageDialogRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onIsLoadingChanged = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onSelectionBoxMoved = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onNewSceneObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onGuiNodeRemovalObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onPopupClosedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this._outlines = false;
+        this.isMultiSelecting = false;
+        this.onOutlineChangedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         this.blockKeyboardEvents = false;
-        this.onPropertyChangedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onZoomObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onFitToWindowObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onPanObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onSelectionButtonObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onMoveObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onLoadObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onSaveObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onSnippetLoadObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onSnippetSaveObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onOutlinesObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onResponsiveChangeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onParentingChangeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onPropertyGridUpdateRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onDraggingEndObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onDraggingStartObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onWindowResizeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
-        this.onGizmoUpdateRequireObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Observable"]();
+        this.onPropertyChangedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onZoomObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onFitToWindowObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onPanObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onSelectionButtonObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onLoadObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onSaveObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onSnippetLoadObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onSnippetSaveObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onResponsiveChangeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onParentingChangeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onDropObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onPropertyGridUpdateRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onDraggingEndObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onDraggingStartObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onWindowResizeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onGizmoUpdateRequireObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onArtBoardUpdateRequiredObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onBackgroundColorChangeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onPointerMoveObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onPointerUpObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         this.draggedControl = null;
+        this.onCopyObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onCutObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
+        this.onPasteObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         this.isSaving = false;
-        this.lockObject = new _sharedUiComponents_tabs_propertyGrids_lockObject__WEBPACK_IMPORTED_MODULE_1__["LockObject"]();
-        this.controlCamera = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["DataStorage"].ReadBoolean("ControlCamera", true);
-        var r = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["DataStorage"].ReadNumber("BackgroundColorR", 0.12549019607843137);
-        var g = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["DataStorage"].ReadNumber("BackgroundColorG", 0.09803921568627451);
-        var b = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["DataStorage"].ReadNumber("BackgroundColorB", 0.25098039215686274);
-        this.backgroundColor = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_0__["Color4"](r, g, b, 1.0);
+        this.lockObject = new _sharedUiComponents_tabs_propertyGrids_lockObject__WEBPACK_IMPORTED_MODULE_2__["LockObject"]();
+        this.controlCamera = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["DataStorage"].ReadBoolean("ControlCamera", true);
+        var defaultBrightness = 204 / 255.0;
+        var r = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["DataStorage"].ReadNumber("BackgroundColorR", defaultBrightness);
+        var g = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["DataStorage"].ReadNumber("BackgroundColorG", defaultBrightness);
+        var b = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["DataStorage"].ReadNumber("BackgroundColorB", defaultBrightness);
+        this.backgroundColor = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Color3"](r, g, b);
+        this.onBackgroundColorChangeObservable.notifyObservers();
+        _diagram_coordinateHelper__WEBPACK_IMPORTED_MODULE_3__["CoordinateHelper"].globalState = this;
     }
+    /** adds copy, cut and paste listeners to the host window */
+    GlobalState.prototype.registerEventListeners = function () {
+        var _this = this;
+        this.hostDocument.addEventListener("copy", function (event) {
+            var target = event.target;
+            if (!target.isContentEditable && target.tagName !== "input" && target.tagName !== "textarea") {
+                _this.onCopyObservable.notifyObservers(function (content) { var _a; return (_a = event.clipboardData) === null || _a === void 0 ? void 0 : _a.setData("text/plain", content); });
+                event.preventDefault();
+            }
+        });
+        this.hostDocument.addEventListener("cut", function (event) {
+            var target = event.target;
+            if (!target.isContentEditable && target.tagName !== "input" && target.tagName !== "textarea") {
+                _this.onCutObservable.notifyObservers(function (content) { var _a; return (_a = event.clipboardData) === null || _a === void 0 ? void 0 : _a.setData("text/plain", content); });
+                event.preventDefault();
+            }
+        });
+        this.hostDocument.addEventListener("paste", function (event) {
+            var _a;
+            var target = event.target;
+            if (!target.isContentEditable && target.tagName !== "input" && target.tagName !== "textarea") {
+                _this.onPasteObservable.notifyObservers(((_a = event.clipboardData) === null || _a === void 0 ? void 0 : _a.getData("text")) || "");
+                event.preventDefault();
+            }
+        });
+        this.hostDocument.addEventListener("keydown", function (evt) { return _this._updateKeys(evt); });
+        this.hostDocument.addEventListener("keyup", function (evt) { return _this._updateKeys(evt); });
+        this.hostDocument.addEventListener("keypress", function (evt) { return _this._updateKeys(evt); });
+    };
+    GlobalState.prototype._updateKeys = function (event) {
+        this.isMultiSelecting = event.ctrlKey;
+    };
+    Object.defineProperty(GlobalState.prototype, "backgroundColor", {
+        get: function () {
+            return this._backgroundColor;
+        },
+        set: function (value) {
+            this._backgroundColor = value;
+            this.onBackgroundColorChangeObservable.notifyObservers();
+            babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["DataStorage"].WriteNumber("BackgroundColorR", value.r);
+            babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["DataStorage"].WriteNumber("BackgroundColorG", value.g);
+            babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["DataStorage"].WriteNumber("BackgroundColorB", value.b);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(GlobalState.prototype, "outlines", {
+        get: function () {
+            return this._outlines;
+        },
+        set: function (value) {
+            this._outlines = value;
+            this.onOutlineChangedObservable.notifyObservers();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    GlobalState.prototype.select = function (control) {
+        if (this.isMultiSelecting && this.isMultiSelectable(control)) {
+            var index = this.selectedControls.indexOf(control);
+            if (index === -1) {
+                this.setSelection(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spreadArray"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spreadArray"])([], this.selectedControls, true), [control], false));
+            }
+            else {
+                this.setSelection(this.selectedControls.filter(function (node) { return node !== control; }));
+            }
+        }
+        else {
+            this.setSelection([control]);
+        }
+    };
+    GlobalState.prototype.setSelection = function (controls) {
+        this.selectedControls = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spreadArray"])([], controls, true);
+        this.onSelectionChangedObservable.notifyObservers();
+    };
+    GlobalState.prototype.isMultiSelectable = function (control) {
+        if (this.selectedControls.length === 0)
+            return true;
+        if (this.selectedControls[0].parent === control.parent)
+            return true;
+        return false;
+    };
     return GlobalState;
 }());
 
@@ -49504,13 +48817,13 @@ var GUIEditor = /** @class */ (function () {
                         globalState.customSave = options.customSave;
                         globalState.customLoad = options.customLoad;
                         globalState.hostWindow = hostElement.ownerDocument.defaultView;
+                        globalState.registerEventListeners();
                         graphEditor = react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_workbenchEditor__WEBPACK_IMPORTED_MODULE_4__["WorkbenchEditor"], {
                             globalState: globalState,
                         });
                         react_dom__WEBPACK_IMPORTED_MODULE_2__["render"](graphEditor, hostElement);
                         if (!!globalState.guiTexture) return [3 /*break*/, 4];
                         globalState.workbench.createGUICanvas();
-                        globalState.guiGizmo.createBaseGizmo();
                         if (!options.currentSnippetToken) return [3 /*break*/, 4];
                         _a.label = 1;
                     case 1:
@@ -49689,7 +49002,6 @@ var GUINodeTools = /** @class */ (function () {
                 return element;
             case "Grid":
                 element = new babylonjs_gui_2D_controls_button__WEBPACK_IMPORTED_MODULE_0__["Grid"]("Grid");
-                element.isHighlighted = true;
                 element.addColumnDefinition(1.0, false);
                 element.addRowDefinition(1.0, false);
                 element.isPointerBlocker = true;
@@ -49699,7 +49011,6 @@ var GUINodeTools = /** @class */ (function () {
                 return element;
             case "StackPanel":
                 element = new babylonjs_gui_2D_controls_button__WEBPACK_IMPORTED_MODULE_0__["StackPanel"]("StackPanel");
-                element.isHighlighted = true;
                 element.width = "100%";
                 element.height = "100%";
                 return element;
@@ -49738,7 +49049,7 @@ var GUINodeTools = /** @class */ (function () {
                 return element;
         }
     };
-    GUINodeTools.ImageControlDefaultUrl = "https://playground.babylonjs.com/textures/grass.png";
+    GUINodeTools.ImageControlDefaultUrl = "./imageControlDefault.jpg";
     return GUINodeTools;
 }());
 
@@ -50113,6 +49424,9 @@ var ColorPicker = /** @class */ (function (_super) {
         }
         var hsv = this.state.color.toHSV();
         babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color3"].HSVtoRGBToRef(hsv.r, saturation, value, this.state.color);
+        if (this.state.alpha === 0) {
+            this.setState({ alpha: 1 });
+        }
         this.setState({ color: this.state.color });
     };
     ColorPicker.prototype._evaluateHue = function (evt) {
@@ -50154,8 +49468,8 @@ var ColorPicker = /** @class */ (function (_super) {
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-saturation-white" }),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-saturation-black" }),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-saturation-cursor", style: {
-                        top: -(hsv.b * 100) + 100 + "%",
-                        left: hsv.g * 100 + "%",
+                        top: "".concat(-(hsv.b * 100) + 100, "%"),
+                        left: "".concat(hsv.g * 100, "%"),
                     } })),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-hue" },
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-hue-color", style: {
@@ -50163,9 +49477,10 @@ var ColorPicker = /** @class */ (function (_super) {
                     } }),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-hue-slider", ref: this._hueRef, onPointerMove: function (e) { return _this.onHuePointerMove(e); }, onPointerDown: function (e) { return _this.onHuePointerDown(e); }, onPointerUp: function (e) { return _this.onHuePointerUp(e); } },
                     react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-hue-cursor", style: {
-                            left: (hsv.r / 360.0) * 100 + "%",
+                            left: "".concat((hsv.r / 360.0) * 100, "%"),
                             border: "1px solid " + colorHexRef,
                         } }))),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-alpha" }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-rgb" },
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "red" },
                     react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_colorComponentEntry__WEBPACK_IMPORTED_MODULE_3__["ColorComponentEntry"], { label: "R", min: 0, max: 255, value: Math.round(this.state.color.r * 255), onChange: function (value) {
@@ -50292,6 +49607,17 @@ module.exports = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M7,14.4a8,8,0,0,1,16,0h0V15A8,8,0,0,1,7,15v-.6Zm8-6.21A6.8,6.8,0,0,0,8.22,14.4H21.78A6.8,6.8,0,0,0,15,8.19Z' style='fill:%23333'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "./sharedUiComponents/imgs/animationSheetIcon.svg":
+/*!********************************************************!*\
+  !*** ./sharedUiComponents/imgs/animationSheetIcon.svg ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='icons' xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23333;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M8.56,8.56h8.85A1.61,1.61,0,0,1,19,10.17V15.8a1.61,1.61,0,0,1-1.61,1.61H8.56A1.61,1.61,0,0,1,7,15.8V10.17A1.61,1.61,0,0,1,8.56,8.56Zm8.85,1.21H8.56a.4.4,0,0,0-.4.4V15.8a.4.4,0,0,0,.4.41h8.85a.41.41,0,0,0,.41-.41V10.17A.4.4,0,0,0,17.41,9.77ZM9,18.22a1.62,1.62,0,0,0,1.56,1.21h7.25A3.22,3.22,0,0,0,21,16.21v-4a1.62,1.62,0,0,0-1.21-1.56v5.59a2,2,0,0,1-2,2Zm2,2a1.61,1.61,0,0,0,1.56,1.21h5.83a4.63,4.63,0,0,0,4.63-4.63V14.2a1.6,1.6,0,0,0-1.21-1.56v4.17a3.42,3.42,0,0,1-3.42,3.42Z'/%3E%3C/svg%3E"
 
 /***/ }),
 
@@ -50881,6 +50207,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "../../node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _targetsProxy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -50891,10 +50219,10 @@ var CheckBoxLineComponent = /** @class */ (function (_super) {
         _this._localChange = false;
         _this._uniqueId = CheckBoxLineComponent._UniqueIdSeed++;
         if (_this.props.isSelected) {
-            _this.state = { isSelected: _this.props.isSelected() };
+            _this.state = { isSelected: _this.props.isSelected(), isConflict: false };
         }
         else {
-            _this.state = { isSelected: _this.props.target[_this.props.propertyName] == true };
+            _this.state = { isSelected: _this.props.target[_this.props.propertyName] === true, isConflict: _this.props.target[_this.props.propertyName] === _targetsProxy__WEBPACK_IMPORTED_MODULE_3__["conflictingValuesPlaceholder"] };
         }
         if (_this.props.disabled) {
             _this.state = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, _this.state), { isDisabled: _this.props.disabled });
@@ -50907,7 +50235,10 @@ var CheckBoxLineComponent = /** @class */ (function (_super) {
             currentState = nextProps.isSelected();
         }
         else {
-            currentState = nextProps.target[nextProps.propertyName] == true;
+            currentState = nextProps.target[nextProps.propertyName] === true;
+            if (nextProps.target[nextProps.propertyName] === _targetsProxy__WEBPACK_IMPORTED_MODULE_3__["conflictingValuesPlaceholder"]) {
+                nextState.isConflict = true;
+            }
         }
         if (currentState !== nextState.isSelected || this._localChange) {
             nextState.isSelected = currentState;
@@ -50917,7 +50248,7 @@ var CheckBoxLineComponent = /** @class */ (function (_super) {
         if (nextProps.disabled !== nextState.isDisabled) {
             return true;
         }
-        return nextProps.label !== this.props.label || nextProps.target !== this.props.target;
+        return nextProps.label !== this.props.label || nextProps.target !== this.props.target || nextState.isConflict !== this.state.isConflict;
     };
     CheckBoxLineComponent.prototype.onChange = function () {
         this._localChange = true;
@@ -50933,12 +50264,14 @@ var CheckBoxLineComponent = /** @class */ (function (_super) {
                     initialValue: this.state.isSelected,
                 });
             }
-            this.props.target[this.props.propertyName] = !this.state.isSelected;
+            if (this.props.target && this.props.propertyName) {
+                this.props.target[this.props.propertyName] = !this.state.isSelected;
+            }
         }
         if (this.props.onValueChanged) {
             this.props.onValueChanged();
         }
-        this.setState({ isSelected: !this.state.isSelected });
+        this.setState({ isSelected: !this.state.isSelected, isConflict: false });
     };
     CheckBoxLineComponent.prototype.render = function () {
         var _this = this;
@@ -50946,10 +50279,10 @@ var CheckBoxLineComponent = /** @class */ (function (_super) {
             this.props.icon && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: this.props.icon, title: this.props.iconLabel, alt: this.props.iconLabel, className: "icon" }),
             this.props.label &&
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "label", title: this.props.iconLabel }, this.props.label),
-            this.props.faIcons && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], { className: "cbx " + (this.props.disabled ? "disabled" : ""), icon: this.state.isSelected ? this.props.faIcons.enabled : this.props.faIcons.disabled, onClick: function () { return !_this.props.disabled && _this.onChange(); } }),
+            this.props.faIcons && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], { className: "cbx ".concat(this.props.disabled ? "disabled" : ""), icon: this.state.isSelected ? this.props.faIcons.enabled : this.props.faIcons.disabled, onClick: function () { return !_this.props.disabled && _this.onChange(); } }),
             !this.props.faIcons && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "checkBox" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("input", { type: "checkbox", id: "checkbox" + this._uniqueId, className: "cbx hidden", checked: this.state.isSelected, onChange: function () { return _this.onChange(); }, disabled: !!this.props.disabled }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("label", { htmlFor: "checkbox" + this._uniqueId, className: "lbl" + (!!this.props.disabled ? " disabled" : "") }))));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("input", { type: "checkbox", id: "checkbox" + this._uniqueId, className: "cbx hidden ".concat(this.state.isConflict ? "conflict" : ""), checked: this.state.isSelected, onChange: function () { return _this.onChange(); }, disabled: !!this.props.disabled }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("label", { htmlFor: "checkbox" + this._uniqueId, className: "lbl".concat(!!this.props.disabled ? " disabled" : "") }))));
     };
     CheckBoxLineComponent._UniqueIdSeed = 0;
     return CheckBoxLineComponent;
@@ -50972,13 +50305,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _numericInputComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./numericInputComponent */ "./sharedUiComponents/lines/numericInputComponent.tsx");
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "../../node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "../../node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
-/* harmony import */ var babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! babylonjs/Maths/math.color */ "babylonjs/Misc/observable");
-/* harmony import */ var babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _colorLineComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./colorLineComponent */ "./sharedUiComponents/lines/colorLineComponent.tsx");
+
+
+
+var Color3LineComponent = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(Color3LineComponent, _super);
+    function Color3LineComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Color3LineComponent.prototype.render = function () {
+        var props = this.props;
+        return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_colorLineComponent__WEBPACK_IMPORTED_MODULE_2__["ColorLineComponent"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({ disableAlpha: true }, props));
+    };
+    return Color3LineComponent;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
+
+
+
+/***/ }),
+
+/***/ "./sharedUiComponents/lines/colorLineComponent.tsx":
+/*!*********************************************************!*\
+  !*** ./sharedUiComponents/lines/colorLineComponent.tsx ***!
+  \*********************************************************/
+/*! exports provided: ColorLineComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ColorLineComponent", function() { return ColorLineComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! babylonjs/Maths/math.color */ "babylonjs/Misc/observable");
+/* harmony import */ var babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _numericInputComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./numericInputComponent */ "./sharedUiComponents/lines/numericInputComponent.tsx");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "../../node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "../../node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var _colorPickerComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./colorPickerComponent */ "./sharedUiComponents/lines/colorPickerComponent.tsx");
 /* harmony import */ var _textInputLineComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./textInputLineComponent */ "./sharedUiComponents/lines/textInputLineComponent.tsx");
+/* harmony import */ var _targetsProxy__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -50988,137 +50356,128 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var copyIcon = __webpack_require__(/*! ./copy.svg */ "./sharedUiComponents/lines/copy.svg");
-var Color3LineComponent = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(Color3LineComponent, _super);
-    function Color3LineComponent(props) {
+var emptyColor = new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color4"](0, 0, 0, 0);
+var ColorLineComponent = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(ColorLineComponent, _super);
+    function ColorLineComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this._localChange = false;
-        var typeName = typeof _this.props.target[_this.props.propertyName];
-        if (typeName === "string") {
-            var colorConverted = _this.convertToColor3(_this.props.target[_this.props.propertyName]);
-            _this.state = { isExpanded: false, color: colorConverted, colorText: _this.props.target[_this.props.propertyName] };
-        }
-        else {
-            _this.state = { isExpanded: false, color: _this.props.target[_this.props.propertyName].clone(), colorText: _this.props.target[_this.props.propertyName].toHexString() };
-        }
+        var colorString = _this.getValueAsString();
+        var color = _this.getValue();
+        _this.state = { isExpanded: false, color: color, colorString: colorString };
         if (props.isLinear) {
             _this.state.color.toGammaSpaceToRef(_this.state.color);
         }
-        props.target._isLinearColor = props.isLinear; // so that replayRecorder can append toLinearSpace() as appropriate
-        _this._colorPickerOpen = false;
+        var target = _this.props.target;
+        target._isLinearColor = props.isLinear; // so that replayRecorder can append toLinearSpace() as appropriate
         return _this;
     }
-    Color3LineComponent.prototype.convertToColor3 = function (color) {
-        if (color === "" || color === "transparent") {
-            return new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_5__["Color4"](0, 0, 0, 0);
+    ColorLineComponent.prototype.shouldComponentUpdate = function (nextProps, nextState) {
+        var stateString = nextState.colorString;
+        var stateColor = nextState.color;
+        var propsString = this.getValueAsString(nextProps);
+        var propsColor = this.getValue(nextProps);
+        if (stateString !== this.state.colorString || stateColor !== this.state.color) {
+            nextState.colorString = stateString;
+            nextState.color = stateColor;
+            return true;
         }
-        if (color.substring(0, 1) !== "#" || color.length !== 7) {
-            var d = document.createElement("div");
-            d.style.color = color;
-            document.body.append(d);
-            var rgb = window.getComputedStyle(d).color;
-            document.body.removeChild(d);
-            var rgbArray = rgb
-                .substring(4, rgb.length - 1)
-                .replace(/ /g, "")
-                .split(",");
-            return new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_5__["Color3"](parseInt(rgbArray[0]) / 255, parseInt(rgbArray[1]) / 255, parseInt(rgbArray[2]) / 255);
+        if (propsString !== this.state.colorString || propsColor !== this.state.color) {
+            nextState.colorString = propsString;
+            nextState.color = propsColor;
+            return true;
         }
-        return babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_5__["Color3"].FromHexString(color);
-    };
-    Color3LineComponent.prototype.shouldComponentUpdate = function (nextProps, nextState) {
-        var isString = typeof this.props.target[this.props.propertyName] === "string";
-        var currentState = isString
-            ? this.convertToColor3(nextProps.target[nextProps.propertyName])
-            : this.props.isLinear
-                ? nextProps.target[nextProps.propertyName].toGammaSpace()
-                : nextProps.target[nextProps.propertyName];
-        if (!currentState.equals(nextState.color) || this._localChange) {
-            nextState.color = currentState.clone();
-            nextState.colorText = isString ? nextProps.target[nextProps.propertyName] : nextProps.target[nextProps.propertyName].toHexString();
-            this._localChange = false;
+        if (nextState.isExpanded !== this.state.isExpanded) {
             return true;
         }
         return false;
     };
-    Color3LineComponent.prototype.setPropertyValue = function (newColor, newColorText) {
-        var isString = typeof this.props.target[this.props.propertyName] === "string";
-        if (isString) {
-            this.props.target[this.props.propertyName] = newColorText;
+    ColorLineComponent.prototype.getValue = function (props) {
+        if (props === void 0) { props = this.props; }
+        var target = props.target;
+        var property = target[props.propertyName];
+        if (!property)
+            return emptyColor;
+        if (typeof property === "string") {
+            if (property === _targetsProxy__WEBPACK_IMPORTED_MODULE_8__["conflictingValuesPlaceholder"]) {
+                return emptyColor;
+            }
+            return this.convertToColor(property);
         }
         else {
-            this.props.target[this.props.propertyName] = newColor;
-            if (this.props.isLinear) {
-                this.props.target[this.props.propertyName] = newColor.toLinearSpace();
-            }
+            return property;
         }
     };
-    Color3LineComponent.prototype.onChange = function (newValue) {
-        this._localChange = true;
-        var newColor = this.convertToColor3(newValue);
-        if (this._colorPickerOpen && this.props.icon) {
-            var savedColor = this.convertToColor3(this._colorStringSaved);
-            if (savedColor.equals(newColor)) {
-                newValue = this._colorStringSaved;
-            }
+    ColorLineComponent.prototype.getValueAsString = function (props) {
+        if (props === void 0) { props = this.props; }
+        var target = props.target;
+        var property = target[props.propertyName];
+        if (!property)
+            return "";
+        if (typeof property === "string") {
+            return property;
         }
+        else {
+            return property.toHexString();
+        }
+    };
+    ColorLineComponent.prototype.setColorFromString = function (colorString) {
+        if (colorString === _targetsProxy__WEBPACK_IMPORTED_MODULE_8__["conflictingValuesPlaceholder"])
+            return;
+        var color = this.convertToColor(colorString);
+        if (this.props.isLinear) {
+            color = color.toLinearSpace();
+        }
+        this.updateColor(color);
+        this.setState({ color: color, colorString: colorString });
+    };
+    ColorLineComponent.prototype.setColor = function (color) {
+        if (this.props.isLinear) {
+            color = color.toLinearSpace();
+        }
+        this.updateColor(color);
+        var colorString = this.props.disableAlpha ? this.toColor3(color).toHexString() : color.toHexString();
+        this.setState({ color: color, colorString: colorString });
+    };
+    ColorLineComponent.prototype.updateColor = function (newColor) {
+        // whether to set properties to color3 or color4
+        var setColor = this.props.disableAlpha ? this.toColor3(newColor) : newColor;
+        var target = this.props.target;
+        var initialValue = target[this.props.propertyName];
+        var value = typeof target[this.props.propertyName] === "string" ? setColor.toHexString() : setColor;
+        // make the change
+        target[this.props.propertyName] = value;
+        // notify observers
         if (this.props.onPropertyChangedObservable) {
             this.props.onPropertyChangedObservable.notifyObservers({
-                object: this.props.target,
+                object: target,
                 property: this.props.propertyName,
-                value: newColor,
-                initialValue: this.state.color,
+                value: value,
+                initialValue: initialValue
             });
         }
-        this.setPropertyValue(newColor, newValue);
-        this.setState({ color: newColor, colorText: newValue });
-        if (this.props.onValueChange) {
-            this.props.onValueChange(newValue);
+        if (this.props.onChange) {
+            this.props.onChange();
         }
     };
-    Color3LineComponent.prototype.switchExpandState = function () {
-        this._localChange = true;
+    ColorLineComponent.prototype.switchExpandState = function () {
         this.setState({ isExpanded: !this.state.isExpanded });
     };
-    Color3LineComponent.prototype.raiseOnPropertyChanged = function (previousValue) {
-        if (!this.props.onPropertyChangedObservable) {
+    ColorLineComponent.prototype.updateStateR = function (value) {
+        this.setColor(new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color4"](value, this.state.color.g, this.state.color.b, this.state.color.a));
+    };
+    ColorLineComponent.prototype.updateStateG = function (value) {
+        this.setColor(new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color4"](this.state.color.r, value, this.state.color.b, this.state.color.a));
+    };
+    ColorLineComponent.prototype.updateStateB = function (value) {
+        this.setColor(new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color4"](this.state.color.r, this.state.color.g, value, this.state.color.a));
+    };
+    ColorLineComponent.prototype.updateStateA = function (value) {
+        if (this.props.disableAlpha) {
             return;
         }
-        this.props.onPropertyChangedObservable.notifyObservers({
-            object: this.props.target,
-            property: this.props.propertyName,
-            value: this.state.color,
-            initialValue: previousValue,
-        });
+        this.setColor(new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color4"](this.state.color.r, this.state.color.g, this.state.color.b, value));
     };
-    Color3LineComponent.prototype.updateStateR = function (value) {
-        this._localChange = true;
-        var store = this.state.color.clone();
-        this.state.color.r = value;
-        var hex = this.state.color.toHexString();
-        this.setPropertyValue(this.state.color, hex);
-        this.setState({ color: this.state.color, colorText: hex });
-        this.raiseOnPropertyChanged(store);
-    };
-    Color3LineComponent.prototype.updateStateG = function (value) {
-        this._localChange = true;
-        var store = this.state.color.clone();
-        this.state.color.g = value;
-        var hex = this.state.color.toHexString();
-        this.setPropertyValue(this.state.color, hex);
-        this.setState({ color: this.state.color, colorText: hex });
-        this.raiseOnPropertyChanged(store);
-    };
-    Color3LineComponent.prototype.updateStateB = function (value) {
-        this._localChange = true;
-        var store = this.state.color.clone();
-        this.state.color.b = value;
-        var hex = this.state.color.toHexString();
-        this.setPropertyValue(this.state.color, hex);
-        this.setState({ color: this.state.color, colorText: hex });
-        this.raiseOnPropertyChanged(store);
-    };
-    Color3LineComponent.prototype.copyToClipboard = function () {
+    ColorLineComponent.prototype.copyToClipboard = function () {
         var element = document.createElement("div");
         element.textContent = this.state.color.toHexString();
         document.body.appendChild(element);
@@ -51131,38 +50490,64 @@ var Color3LineComponent = /** @class */ (function (_super) {
         document.execCommand("copy");
         element.remove();
     };
-    Color3LineComponent.prototype.convert = function (colorString) {
-        this.onChange(this._colorString);
+    Object.defineProperty(ColorLineComponent.prototype, "colorString", {
+        get: function () {
+            return this.state.colorString;
+        },
+        set: function (_) { },
+        enumerable: false,
+        configurable: true
+    });
+    ColorLineComponent.prototype.convertToColor = function (color) {
+        if (color === "" || color === "transparent") {
+            return emptyColor;
+        }
+        if (color.substring(0, 1) !== "#" || (color.length !== 7 && color.length !== 9)) {
+            var d = document.createElement("div");
+            d.style.color = color;
+            document.body.append(d);
+            var rgb = window.getComputedStyle(d).color;
+            document.body.removeChild(d);
+            var rgbArray = rgb
+                .substring(4, rgb.length - 1)
+                .replace(/ /g, "")
+                .split(",");
+            var alpha = rgbArray.length > 3 ? parseInt(rgbArray[3]) / 255 : 1.0;
+            return new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color4"](parseInt(rgbArray[0]) / 255, parseInt(rgbArray[1]) / 255, parseInt(rgbArray[2]) / 255, alpha);
+        }
+        if (this.props.disableAlpha) {
+            var color3 = babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color3"].FromHexString(color);
+            return new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color4"](color3.r, color3.g, color3.b, 1.0);
+        }
+        return babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color4"].FromHexString(color);
     };
-    Color3LineComponent.prototype.render = function () {
+    ColorLineComponent.prototype.toColor3 = function (color) {
+        return new babylonjs_Maths_math_color__WEBPACK_IMPORTED_MODULE_2__["Color3"](color.r, color.g, color.b);
+    };
+    ColorLineComponent.prototype.render = function () {
         var _this = this;
-        var chevron = this.state.isExpanded ? react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], { icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faMinus"] }) : react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], { icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faPlus"] });
-        this._colorString = this.state.colorText;
+        var chevron = this.state.isExpanded ? react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], { icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faMinus"] }) : react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], { icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faPlus"] });
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color3Line" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "firstLine", title: this.props.label },
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "firstLine" },
                 this.props.icon && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: this.props.icon, title: this.props.iconLabel, alt: this.props.iconLabel, className: "icon" }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "label" }, this.props.label),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "label", title: this.props.label }, this.props.label),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color3" },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_colorPickerComponent__WEBPACK_IMPORTED_MODULE_6__["ColorPickerLineComponent"], { linearHint: this.props.isLinear, value: this.state.color, onColorChanged: function (color) {
-                            if (!_this._colorPickerOpen) {
-                                _this._colorStringSaved = _this._colorString;
-                            }
-                            _this._colorPickerOpen = true;
-                            _this.onChange(color);
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_colorPickerComponent__WEBPACK_IMPORTED_MODULE_6__["ColorPickerLineComponent"], { linearHint: this.props.isLinear, value: this.props.disableAlpha ? this.toColor3(this.state.color) : this.state.color, onColorChanged: function (color) {
+                            _this.setColor(_this.convertToColor(color));
                         } })),
-                this.props.icon && this.props.lockObject && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_textInputLineComponent__WEBPACK_IMPORTED_MODULE_7__["TextInputLineComponent"], { lockObject: this.props.lockObject, label: "", target: this, propertyName: "_colorString", onChange: function (newValue) {
-                        _this._colorPickerOpen = false;
-                        _this.convert(newValue);
+                this.props.icon && this.props.lockObject && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_textInputLineComponent__WEBPACK_IMPORTED_MODULE_7__["TextInputLineComponent"], { lockObject: this.props.lockObject, label: "", target: this, propertyName: "colorString", onChange: function (newValue) {
+                        _this.setColorFromString(newValue);
                     }, onPropertyChangedObservable: this.props.onPropertyChangedObservable })),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "copy hoverIcon", onClick: function () { return _this.copyToClipboard(); }, title: "Copy to clipboard" },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: copyIcon, alt: "" })),
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: copyIcon, alt: "Copy" })),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "expand hoverIcon", onClick: function () { return _this.switchExpandState(); }, title: "Expand" }, chevron)),
             this.state.isExpanded && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "secondLine" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_numericInputComponent__WEBPACK_IMPORTED_MODULE_2__["NumericInputComponent"], { label: "r", value: this.state.color.r, onChange: function (value) { return _this.updateStateR(value); } }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_numericInputComponent__WEBPACK_IMPORTED_MODULE_2__["NumericInputComponent"], { label: "g", value: this.state.color.g, onChange: function (value) { return _this.updateStateG(value); } }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_numericInputComponent__WEBPACK_IMPORTED_MODULE_2__["NumericInputComponent"], { label: "b", value: this.state.color.b, onChange: function (value) { return _this.updateStateB(value); } })))));
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_numericInputComponent__WEBPACK_IMPORTED_MODULE_3__["NumericInputComponent"], { label: "r", value: this.state.color.r, onChange: function (value) { return _this.updateStateR(value); } }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_numericInputComponent__WEBPACK_IMPORTED_MODULE_3__["NumericInputComponent"], { label: "g", value: this.state.color.g, onChange: function (value) { return _this.updateStateG(value); } }),
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_numericInputComponent__WEBPACK_IMPORTED_MODULE_3__["NumericInputComponent"], { label: "b", value: this.state.color.b, onChange: function (value) { return _this.updateStateB(value); } }),
+                this.props.disableAlpha || react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_numericInputComponent__WEBPACK_IMPORTED_MODULE_3__["NumericInputComponent"], { label: "a", value: this.state.color.a, onChange: function (value) { return _this.updateStateA(value); } })))));
     };
-    return Color3LineComponent;
+    return ColorLineComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
 
 
@@ -51190,7 +50575,7 @@ var ColorPickerLineComponent = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(ColorPickerLineComponent, _super);
     function ColorPickerLineComponent(props) {
         var _this = _super.call(this, props) || this;
-        _this.state = { pickerEnabled: false, color: _this.props.value, hex: _this.props.value.toHexString() };
+        _this.state = { pickerEnabled: false, color: _this.props.value, hex: _this.getHexString(props) };
         _this._floatRef = react__WEBPACK_IMPORTED_MODULE_1__["createRef"]();
         _this._floatHostRef = react__WEBPACK_IMPORTED_MODULE_1__["createRef"]();
         return _this;
@@ -51215,12 +50600,16 @@ var ColorPickerLineComponent = /** @class */ (function (_super) {
         }
     };
     ColorPickerLineComponent.prototype.shouldComponentUpdate = function (nextProps, nextState) {
-        var diffProps = nextProps.value.toHexString() !== this.props.value.toHexString();
+        var diffProps = this.getHexString(nextProps) !== this.getHexString();
         if (diffProps) {
             nextState.color = nextProps.value;
-            nextState.hex = nextProps.value.toHexString();
+            nextState.hex = this.getHexString(nextProps);
         }
         return diffProps || nextState.hex !== this.state.hex || nextState.pickerEnabled !== this.state.pickerEnabled;
+    };
+    ColorPickerLineComponent.prototype.getHexString = function (props) {
+        if (props === void 0) { props = this.props; }
+        return props.value.toHexString();
     };
     ColorPickerLineComponent.prototype.componentDidUpdate = function () {
         this.syncPositions();
@@ -51230,10 +50619,10 @@ var ColorPickerLineComponent = /** @class */ (function (_super) {
     };
     ColorPickerLineComponent.prototype.render = function () {
         var _this = this;
-        var color = this.state.color;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker" },
             this.props.icon && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: this.props.icon, title: this.props.iconLabel, alt: this.props.iconLabel, className: "icon" }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-rect", ref: this._floatHostRef, style: { background: this.state.hex }, onClick: function () { return _this.setState({ pickerEnabled: true }); } }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-rect-background", ref: this._floatHostRef, onClick: function () { return _this.setState({ pickerEnabled: true }); } },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-rect", style: { background: this.state.hex } })),
             this.state.pickerEnabled && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-cover", onClick: function (evt) {
                         var _a, _b;
@@ -51243,7 +50632,7 @@ var ColorPickerLineComponent = /** @class */ (function (_super) {
                         _this.setState({ pickerEnabled: false });
                     } },
                     react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "color-picker-float", ref: this._floatRef },
-                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_colorPicker_colorPicker__WEBPACK_IMPORTED_MODULE_2__["ColorPicker"], { color: color, linearhint: this.props.linearHint, onColorChanged: function (color) {
+                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_colorPicker_colorPicker__WEBPACK_IMPORTED_MODULE_2__["ColorPicker"], { color: this.state.color, linearhint: this.props.linearHint, onColorChanged: function (color) {
                                 var hex = color.toHexString();
                                 _this.setState({ hex: hex, color: color });
                                 _this.props.onColorChanged(hex);
@@ -51328,6 +50717,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sliderLineComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sliderLineComponent */ "./sharedUiComponents/lines/sliderLineComponent.tsx");
 /* harmony import */ var babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! babylonjs/Misc/tools */ "babylonjs/Misc/observable");
 /* harmony import */ var babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _targetsProxy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+
 
 
 
@@ -51338,12 +50729,26 @@ var FloatLineComponent = /** @class */ (function (_super) {
         var _this = _super.call(this, props) || this;
         _this._localChange = false;
         var currentValue = _this.props.target[_this.props.propertyName];
-        _this.state = { value: currentValue ? (_this.props.isInteger ? currentValue.toFixed(0) : currentValue.toFixed(_this.props.digits || 4)) : "0" };
+        _this.state = { value: _this.getValueString(currentValue) };
         _this._store = currentValue;
         return _this;
     }
     FloatLineComponent.prototype.componentWillUnmount = function () {
         this.unlock();
+    };
+    FloatLineComponent.prototype.getValueString = function (value) {
+        if (value) {
+            if (value === _targetsProxy__WEBPACK_IMPORTED_MODULE_4__["conflictingValuesPlaceholder"]) {
+                return _targetsProxy__WEBPACK_IMPORTED_MODULE_4__["conflictingValuesPlaceholder"];
+            }
+            else if (this.props.isInteger) {
+                return value.toFixed(0);
+            }
+            else {
+                return value.toFixed(this.props.digits || 4);
+            }
+        }
+        return "0";
     };
     FloatLineComponent.prototype.shouldComponentUpdate = function (nextProps, nextState) {
         if (this._localChange) {
@@ -51351,7 +50756,7 @@ var FloatLineComponent = /** @class */ (function (_super) {
             return true;
         }
         var newValue = nextProps.target[nextProps.propertyName];
-        var newValueString = newValue ? (this.props.isInteger ? newValue.toFixed(0) : newValue.toFixed(this.props.digits || 4)) : "0";
+        var newValueString = this.getValueString(newValue);
         if (newValueString !== nextState.value) {
             nextState.value = newValueString;
             return true;
@@ -51429,6 +50834,8 @@ var FloatLineComponent = /** @class */ (function (_super) {
             valueAsNumber = parseFloat(this.state.value);
         }
         var className = this.props.smallUI ? "short" : "value";
+        var value = this.state.value === _targetsProxy__WEBPACK_IMPORTED_MODULE_4__["conflictingValuesPlaceholder"] ? "" : this.state.value;
+        var placeholder = this.state.value === _targetsProxy__WEBPACK_IMPORTED_MODULE_4__["conflictingValuesPlaceholder"] ? _targetsProxy__WEBPACK_IMPORTED_MODULE_4__["conflictingValuesPlaceholder"] : "";
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
             !this.props.useEuler && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: this.props.additionalClass ? this.props.additionalClass + " floatLine" : "floatLine" },
                 this.props.icon && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: this.props.icon, title: this.props.iconLabel, alt: this.props.iconLabel, className: "icon" }),
@@ -51441,15 +50848,70 @@ var FloatLineComponent = /** @class */ (function (_super) {
                             if (_this.props.onEnter) {
                                 _this.props.onEnter(_this._store);
                             }
-                        }, value: this.state.value, onBlur: function () {
+                        }, value: value, onBlur: function () {
                             _this.unlock();
                             if (_this.props.onEnter) {
                                 _this.props.onEnter(_this._store);
                             }
-                        }, onFocus: function () { return _this.lock(); }, onChange: function (evt) { return _this.updateValue(evt.target.value); } })))),
+                        }, placeholder: placeholder, onFocus: function () { return _this.lock(); }, onChange: function (evt) { return _this.updateValue(evt.target.value); } })),
+                this.props.unit && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", { className: this.props.unitLocked ? "unit disabled" : "unit", onClick: function () { if (_this.props.onUnitClicked && !_this.props.unitLocked)
+                        _this.props.onUnitClicked(); } }, this.props.unit))),
             this.props.useEuler && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_sliderLineComponent__WEBPACK_IMPORTED_MODULE_2__["SliderLineComponent"], { label: this.props.label, minimum: 0, maximum: 360, step: 0.1, directValue: babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_3__["Tools"].ToDegrees(valueAsNumber), onChange: function (value) { return _this.updateValue(babylonjs_Misc_tools__WEBPACK_IMPORTED_MODULE_3__["Tools"].ToRadians(value).toString()); } }))));
     };
     return FloatLineComponent;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
+
+
+
+/***/ }),
+
+/***/ "./sharedUiComponents/lines/inputArrowsComponent.tsx":
+/*!***********************************************************!*\
+  !*** ./sharedUiComponents/lines/inputArrowsComponent.tsx ***!
+  \***********************************************************/
+/*! exports provided: InputArrowsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InputArrowsComponent", function() { return InputArrowsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var upArrowIcon = __webpack_require__(/*! ./valueUpArrowIcon.svg */ "./sharedUiComponents/lines/valueUpArrowIcon.svg");
+var downArrowIcon = __webpack_require__(/*! ./valueDownArrowIcon.svg */ "./sharedUiComponents/lines/valueDownArrowIcon.svg");
+var InputArrowsComponent = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(InputArrowsComponent, _super);
+    function InputArrowsComponent() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._arrowsRef = react__WEBPACK_IMPORTED_MODULE_1__["createRef"]();
+        _this._drag = function (event) {
+            _this.props.incrementValue(event.movementY);
+        };
+        _this._releaseListener = function () {
+            var _a, _b;
+            _this.props.setDragging(false);
+            (_a = _this._arrowsRef.current) === null || _a === void 0 ? void 0 : _a.ownerDocument.exitPointerLock();
+            window.removeEventListener("pointerup", _this._releaseListener);
+            (_b = _this._arrowsRef.current) === null || _b === void 0 ? void 0 : _b.ownerDocument.removeEventListener("mousemove", _this._drag);
+        };
+        return _this;
+    }
+    InputArrowsComponent.prototype.render = function () {
+        var _this = this;
+        return react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "arrows", ref: this._arrowsRef, onPointerDown: function (event) {
+                var _a, _b;
+                _this.props.setDragging(true);
+                (_a = _this._arrowsRef.current) === null || _a === void 0 ? void 0 : _a.requestPointerLock();
+                window.addEventListener("pointerup", _this._releaseListener);
+                (_b = _this._arrowsRef.current) === null || _b === void 0 ? void 0 : _b.ownerDocument.addEventListener("mousemove", _this._drag);
+            }, onDragStart: function (evt) { return evt.preventDefault(); } },
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { className: "upArrowIcon", src: upArrowIcon, alt: "Increase Value" }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { className: "downArrowIcon", src: downArrowIcon, alt: "Increase Value" }));
+    };
+    return InputArrowsComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
 
 
@@ -51515,7 +50977,7 @@ var NumericInputComponent = /** @class */ (function (_super) {
         var _this = this;
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "numeric" },
             this.props.icon && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: this.props.icon, title: this.props.iconLabel, alt: this.props.iconLabel, className: "icon" }),
-            this.props.label && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "numeric-label", title: this.props.label }, this.props.label + ": ")),
+            this.props.label && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "numeric-label", title: this.props.label }, "".concat(this.props.label, ": "))),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("input", { type: "number", step: this.props.step, className: "numeric-input", value: this.state.value, onChange: function (evt) { return _this.updateValue(evt); }, onBlur: function () { return _this.onBlur(); } })));
     };
     NumericInputComponent.defaultProps = {
@@ -51757,6 +51219,8 @@ var SliderLineComponent = /** @class */ (function (_super) {
         return false;
     };
     SliderLineComponent.prototype.onChange = function (newValueString) {
+        if (newValueString === "—")
+            return;
         this._localChange = true;
         var newValue = parseFloat(newValueString);
         if (this.props.useEuler) {
@@ -51804,13 +51268,74 @@ var SliderLineComponent = /** @class */ (function (_super) {
                 }, onChange: function (evt) {
                     var changed = _this.prepareDataToRead(_this.state.value);
                     _this.onChange(changed);
-                } }),
+                }, onPropertyChangedObservable: this.props.onPropertyChangedObservable }),
             react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "slider" },
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("input", { className: "range", type: "range", step: this.props.step, min: this.prepareDataToRead(this.props.minimum), max: this.prepareDataToRead(this.props.maximum), value: this.prepareDataToRead(this.state.value), onInput: function (evt) { return _this.onInput(evt.target.value); }, onChange: function (evt) { return _this.onChange(evt.target.value); } }))));
     };
     return SliderLineComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
 
+
+
+/***/ }),
+
+/***/ "./sharedUiComponents/lines/targetsProxy.tsx":
+/*!***************************************************!*\
+  !*** ./sharedUiComponents/lines/targetsProxy.tsx ***!
+  \***************************************************/
+/*! exports provided: conflictingValuesPlaceholder, makeTargetsProxy */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "conflictingValuesPlaceholder", function() { return conflictingValuesPlaceholder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "makeTargetsProxy", function() { return makeTargetsProxy; });
+var conflictingValuesPlaceholder = "—";
+/**
+ *
+ * @param propertyName the property that the input changes
+ * @param targets a list of selected targets
+ * @param defaultValue the value that should be returned when two targets have conflicting values
+ * @param setter an optional setter function to override the default setter behavior
+ * @returns a proxy object that can be passed as a target into the input
+ */
+function makeTargetsProxy(targets, onPropertyChangedObservable, getProperty) {
+    if (getProperty === void 0) { getProperty = function (target, property) { return target[property]; }; }
+    return new Proxy({}, {
+        get: function (_, name) {
+            var property = name;
+            if (targets.length === 0)
+                return conflictingValuesPlaceholder;
+            var firstValue = getProperty(targets[0], property);
+            for (var _i = 0, targets_1 = targets; _i < targets_1.length; _i++) {
+                var target = targets_1[_i];
+                if (getProperty(target, property) !== firstValue) {
+                    return conflictingValuesPlaceholder;
+                }
+            }
+            return firstValue;
+        },
+        set: function (_, name, value) {
+            if (value === "—")
+                return true;
+            var property = name;
+            for (var _i = 0, targets_2 = targets; _i < targets_2.length; _i++) {
+                var target = targets_2[_i];
+                var initialValue = target[property];
+                target[property] = value;
+                if (onPropertyChangedObservable) {
+                    onPropertyChangedObservable.notifyObservers({
+                        object: target,
+                        property: name,
+                        value: target[property],
+                        initialValue: initialValue
+                    });
+                }
+            }
+            return true;
+        }
+    });
+}
 
 
 /***/ }),
@@ -51828,6 +51353,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _targetsProxy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./targetsProxy */ "./sharedUiComponents/lines/targetsProxy.tsx");
+/* harmony import */ var _inputArrowsComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./inputArrowsComponent */ "./sharedUiComponents/lines/inputArrowsComponent.tsx");
+
+
 
 
 var TextInputLineComponent = /** @class */ (function (_super) {
@@ -51835,7 +51364,10 @@ var TextInputLineComponent = /** @class */ (function (_super) {
     function TextInputLineComponent(props) {
         var _this = _super.call(this, props) || this;
         _this._localChange = false;
-        _this.state = { value: (_this.props.value !== undefined ? _this.props.value : _this.props.target[_this.props.propertyName]) || "" };
+        _this.state = {
+            value: (_this.props.value !== undefined ? _this.props.value : _this.props.target[_this.props.propertyName]) || "",
+            dragging: false
+        };
         return _this;
     }
     TextInputLineComponent.prototype.componentWillUnmount = function () {
@@ -51851,6 +51383,8 @@ var TextInputLineComponent = /** @class */ (function (_super) {
             nextState.value = newValue || "";
             return true;
         }
+        if (nextState.dragging != this.state.dragging)
+            return true;
         return false;
     };
     TextInputLineComponent.prototype.raiseOnPropertyChanged = function (newValue, previousValue) {
@@ -51889,16 +51423,45 @@ var TextInputLineComponent = /** @class */ (function (_super) {
         }
         this.raiseOnPropertyChanged(value, store);
     };
+    TextInputLineComponent.prototype.incrementValue = function (amount) {
+        if (this.props.step) {
+            amount *= this.props.step;
+        }
+        if (this.props.arrowsIncrement) {
+            this.props.arrowsIncrement(amount);
+            return;
+        }
+        var currentValue = parseFloat(this.state.value);
+        this.updateValue((currentValue + amount).toFixed(2));
+    };
+    TextInputLineComponent.prototype.onKeyDown = function (event) {
+        if (this.props.arrows) {
+            if (event.key === "ArrowUp") {
+                this.incrementValue(-1);
+                event.preventDefault();
+            }
+            if (event.key === "ArrowDown") {
+                this.incrementValue(1);
+                event.preventDefault();
+            }
+        }
+    };
     TextInputLineComponent.prototype.render = function () {
         var _this = this;
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "textInputLine" },
+        var value = this.state.value === _targetsProxy__WEBPACK_IMPORTED_MODULE_2__["conflictingValuesPlaceholder"] ? "" : this.state.value;
+        var placeholder = this.state.value === _targetsProxy__WEBPACK_IMPORTED_MODULE_2__["conflictingValuesPlaceholder"] ? _targetsProxy__WEBPACK_IMPORTED_MODULE_2__["conflictingValuesPlaceholder"] : "";
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: this.props.unit !== undefined ? "textInputLine withUnits" : "textInputLine" },
             this.props.icon && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("img", { src: this.props.icon, title: this.props.iconLabel, alt: this.props.iconLabel, color: "black", className: "icon" }),
             (!this.props.icon || (this.props.icon && this.props.label != "")) && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "label", title: this.props.label }, this.props.label)),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "value" + (this.props.noUnderline === true ? " noUnderline" : "") },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("input", { value: this.state.value, onBlur: function () {
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "value".concat(this.props.noUnderline === true ? " noUnderline" : "").concat(this.props.arrows ? " hasArrows" : "").concat(this.state.dragging ? " dragging" : "") },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("input", { value: value, onBlur: function () {
                         _this.props.lockObject.lock = false;
                         _this.updateValue((_this.props.value !== undefined ? _this.props.value : _this.props.target[_this.props.propertyName]) || "");
-                    }, onFocus: function () { return (_this.props.lockObject.lock = true); }, onChange: function (evt) { return _this.updateValue(evt.target.value); } }))));
+                    }, onFocus: function () { return (_this.props.lockObject.lock = true); }, onChange: function (evt) { return _this.updateValue(evt.target.value); }, onKeyDown: function (evt) { return _this.onKeyDown(evt); }, placeholder: placeholder }),
+                this.props.arrows &&
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_inputArrowsComponent__WEBPACK_IMPORTED_MODULE_3__["InputArrowsComponent"], { incrementValue: function (amount) { return _this.incrementValue(amount); }, setDragging: function (dragging) { return _this.setState({ dragging: dragging }); } })),
+            this.props.unit !== undefined && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", { className: this.props.unitLocked ? "unit disabled" : "unit", onClick: function () { if (_this.props.onUnitClicked && !_this.props.unitLocked)
+                    _this.props.onUnitClicked(_this.props.unit || ""); } }, this.props.unit)));
     };
     return TextInputLineComponent;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
@@ -51958,6 +51521,28 @@ var TextLineComponent = /** @class */ (function (_super) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
 
 
+
+/***/ }),
+
+/***/ "./sharedUiComponents/lines/valueDownArrowIcon.svg":
+/*!*********************************************************!*\
+  !*** ./sharedUiComponents/lines/valueDownArrowIcon.svg ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='icons' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23333;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M4.09,5.55a.61.61,0,0,1,.85,0l2,2V1.79a.6.6,0,1,1,1.2,0V7.52l2-2a.61.61,0,0,1,.85,0,.6.6,0,0,1,0,.84l-3,3a.6.6,0,0,1-.84,0l-3-3A.6.6,0,0,1,4.09,5.55Z'/%3E%3C/svg%3E"
+
+/***/ }),
+
+/***/ "./sharedUiComponents/lines/valueUpArrowIcon.svg":
+/*!*******************************************************!*\
+  !*** ./sharedUiComponents/lines/valueUpArrowIcon.svg ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml,%3Csvg id='icons' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23333;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M4.09,9.45a.6.6,0,0,1,0-.84l3-3a.6.6,0,0,1,.84,0l3,3a.6.6,0,0,1,0,.84.61.61,0,0,1-.85,0l-2-2v5.73a.6.6,0,0,1-1.2,0V7.48l-2,2A.61.61,0,0,1,4.09,9.45Z'/%3E%3C/svg%3E"
 
 /***/ }),
 
@@ -52103,16 +51688,19 @@ __webpack_require__.r(__webpack_exports__);
 var Tools = /** @class */ (function () {
     function Tools() {
     }
-    Tools.LookForItem = function (item, selectedEntity, firstIteration) {
+    Tools.LookForItems = function (item, selectedEntities, firstIteration) {
         if (firstIteration === void 0) { firstIteration = true; }
-        if (!firstIteration && item === selectedEntity) {
+        if (selectedEntities.length == 0) {
+            return false;
+        }
+        if (!firstIteration && selectedEntities.includes(item)) {
             return true;
         }
         var children = item.getChildren ? item.getChildren() : item.children;
         if (children) {
             for (var _i = 0, children_1 = children; _i < children_1.length; _i++) {
                 var child = children_1[_i];
-                if (Tools.LookForItem(child, selectedEntity, false)) {
+                if (Tools.LookForItems(child, selectedEntities, false)) {
                     return true;
                 }
             }
@@ -52202,7 +51790,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedComponents_messageDialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sharedComponents/messageDialog */ "./sharedComponents/messageDialog.tsx");
 /* harmony import */ var _components_sceneExplorer_sceneExplorerComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/sceneExplorer/sceneExplorerComponent */ "./components/sceneExplorer/sceneExplorerComponent.tsx");
 /* harmony import */ var _components_commandBarComponent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/commandBarComponent */ "./components/commandBarComponent.tsx");
-/* harmony import */ var _diagram_guiGizmo__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./diagram/guiGizmo */ "./diagram/guiGizmo.tsx");
+/* harmony import */ var _diagram_guiGizmoWrapper__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./diagram/guiGizmoWrapper */ "./diagram/guiGizmoWrapper.tsx");
+/* harmony import */ var _diagram_artBoard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./diagram/artBoard */ "./diagram/artBoard.tsx");
+
 
 
 
@@ -52333,6 +51923,13 @@ var WorkbenchEditor = /** @class */ (function (_super) {
             }
         }, false);
         _this.createItems();
+        _this.props.globalState.onBackgroundColorChangeObservable.add(function () { return _this.forceUpdate(); });
+        _this.props.globalState.onDropObservable.add(function () {
+            if (_this._draggedItem != null) {
+                _this.props.globalState.draggedControl = _this.onCreate(_this._draggedItem);
+            }
+            _this._draggedItem = null;
+        });
         return _this;
     }
     WorkbenchEditor.prototype.componentDidMount = function () {
@@ -52364,14 +51961,15 @@ var WorkbenchEditor = /** @class */ (function (_super) {
         }
         var deltaX = evt.clientX - this._startX;
         var rootElement = evt.currentTarget.ownerDocument.getElementById("gui-editor-workbench-root");
+        var maxWidth = this.props.globalState.hostWindow.innerWidth - this._toolBarIconSize - 8;
         if (forLeft) {
             this._leftWidth += deltaX;
-            this._leftWidth = Math.max(150, Math.min(400, this._leftWidth));
+            this._leftWidth = Math.max(150, Math.min(maxWidth - this._rightWidth, this._leftWidth));
             babylonjs_Misc_dataStorage__WEBPACK_IMPORTED_MODULE_5__["DataStorage"].WriteNumber("LeftWidth", this._leftWidth);
         }
         else {
             this._rightWidth -= deltaX;
-            this._rightWidth = Math.max(250, Math.min(500, this._rightWidth));
+            this._rightWidth = Math.max(250, Math.min(maxWidth - this._leftWidth, this._rightWidth));
             babylonjs_Misc_dataStorage__WEBPACK_IMPORTED_MODULE_5__["DataStorage"].WriteNumber("RightWidth", this._rightWidth);
         }
         rootElement.style.gridTemplateColumns = this.buildColumnLayout();
@@ -52379,7 +51977,7 @@ var WorkbenchEditor = /** @class */ (function (_super) {
         this.props.globalState.onWindowResizeObservable.notifyObservers();
     };
     WorkbenchEditor.prototype.buildColumnLayout = function () {
-        return this._leftWidth + "px 4px " + this._toolBarIconSize + "px calc(100% - " + (this._leftWidth + this._toolBarIconSize + 8 + this._rightWidth) + "px) 4px " + this._rightWidth + "px";
+        return "".concat(this._leftWidth, "px 4px ").concat(this._toolBarIconSize, "px calc(100% - ").concat(this._leftWidth + this._toolBarIconSize + 8 + this._rightWidth, "px) 4px ").concat(this._rightWidth, "px");
     };
     WorkbenchEditor.prototype.render = function () {
         var _this = this;
@@ -52399,15 +51997,16 @@ var WorkbenchEditor = /** @class */ (function (_super) {
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_components_sceneExplorer_sceneExplorerComponent__WEBPACK_IMPORTED_MODULE_9__["SceneExplorerComponent"], { globalState: this.props.globalState, noExpand: true }),
                 this.createToolbar(),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "diagram-container", onDrop: function (event) {
-                        if (_this._draggedItem != null) {
-                            _this.onCreate(_this._draggedItem);
-                        }
-                        _this._draggedItem = null;
+                        event.preventDefault();
+                        _this.props.globalState.onDropObservable.notifyObservers();
                     }, onDragOver: function (event) {
                         event.preventDefault();
+                    }, style: {
+                        backgroundColor: this.props.globalState.backgroundColor.toHexString()
                     } },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_diagram_artBoard__WEBPACK_IMPORTED_MODULE_12__["ArtBoardComponent"], { globalState: this.props.globalState }),
                     react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_diagram_workbench__WEBPACK_IMPORTED_MODULE_7__["WorkbenchComponent"], { ref: "workbenchCanvas", globalState: this.props.globalState }),
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_diagram_guiGizmo__WEBPACK_IMPORTED_MODULE_11__["GuiGizmoComponent"], { globalState: this.props.globalState })),
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_diagram_guiGizmoWrapper__WEBPACK_IMPORTED_MODULE_11__["GizmoWrapper"], { globalState: this.props.globalState })),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: "rightGrab", onPointerDown: function (evt) { return _this.onPointerDown(evt); }, onPointerUp: function (evt) { return _this.onPointerUp(evt); }, onPointerMove: function (evt) { return _this.resizeColumns(evt, false); } }),
                 react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: "right-panel" },
                     react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_components_propertyTab_propertyTabComponent__WEBPACK_IMPORTED_MODULE_2__["PropertyTabComponent"], { globalState: this.props.globalState })),
@@ -52550,9 +52149,10 @@ var WorkbenchEditor = /** @class */ (function (_super) {
     WorkbenchEditor.prototype.onCreate = function (value) {
         var guiElement = _guiNodeTools__WEBPACK_IMPORTED_MODULE_6__["GUINodeTools"].CreateControlFromString(value);
         var newGuiNode = this.props.globalState.workbench.appendBlock(guiElement);
-        this.props.globalState.onSelectionChangedObservable.notifyObservers(newGuiNode);
-        this.props.globalState.guiGizmo.onUp();
+        this.props.globalState.select(newGuiNode);
+        this.props.globalState.onPointerUpObservable.notifyObservers(null);
         this.forceUpdate();
+        return newGuiNode;
     };
     WorkbenchEditor.prototype.createToolbar = function () {
         var _this = this;

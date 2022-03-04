@@ -1,6 +1,12 @@
 :root {
     --backgroundGrey: #aaaaaa;
     --spacingHeight: 30px;
+    --labelFamily: "acumin-pro-condensed-semibold";
+    --button: #333333;
+    --buttonBackground: #ffffff;
+    --buttonDisabledBackground: #c8c8c8;
+    --buttonPressed: #ffffff;
+    --buttonPressedBackground: #606060;
 }
 
 hr.ge {
@@ -12,9 +18,13 @@ hr.ge {
     $line-padding-left: 5px;
     $line-padding-bottom: 0px;
     $line-padding-top: 0px;
+    $line-padding-right: 18px;
     color:black;
     background: #e2e2e2;
-    font-family: "acumin-pro-condensed";
+      * {
+        font-family: "acumin-pro-semicondensed";
+        font-size: 12px;
+      }
       #header {
         height: 30px;
         font-size: 16px;
@@ -53,9 +63,9 @@ hr.ge {
 
     .range {
         -webkit-appearance: none;
-        width: 120px;
+        width: 100%;
         height: 2px;
-        background: black;
+        background: #bcbcbc;
         border-radius: 5px;
         outline: none;
         opacity: 0.7;
@@ -101,20 +111,43 @@ hr.ge {
         border: none;
     }
 
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .unit {
+        width: 26px;
+        height: 26px;
+        color: var(--button);
+        background-color: var(--buttonBackground);
+        border: none;
+        margin-top: 2px;
+        cursor: pointer;
+    }
+
+    .unit.disabled {
+        background-color: var(--buttonDisabledBackground);
+    }
+
+    .unit:active {
+        color: var(--buttonPressed);
+        background-color: var(--buttonPressedBackground);
+    }
+
     .sliderLine {
-        padding-left: $line-padding-left;
-        padding-bottom: $line-padding-bottom;
-        padding-top: $line-padding-top;
         height: var(--spacingHeight);;
         display: grid;
         grid-template-rows: 100%;
         grid-template-columns: auto auto auto 1fr;
+        flex-grow: 1;
 
         .label {
             grid-column: 2;
             display: flex;
             align-items: center;
             min-width: 15px;
+            font-family: var(--labelFamily);
         }
 
         .img {
@@ -123,12 +156,10 @@ hr.ge {
             align-items: center;
         }
 
-
         .slider {
             grid-column: 4;
             grid-row: 1;
             margin-right: 5px;
-            width: 90%;
             display: flex;
             align-items: center;
             padding-left: 5px;
@@ -136,12 +167,13 @@ hr.ge {
 
         .floatLine {
             grid-column: 3;
-            padding-left: 15px;
+            padding-left: 0px;
             
             .label {
                 grid-column: 1;
                 display: none;
                 align-items: center;
+                font-family: var(--labelFamily);
             }
         
             .short {
@@ -150,12 +182,11 @@ hr.ge {
                 align-items: center;
                 
                 input {
-                    width: 40px;
-                    background-color: transparent;
+                    width: 60px;
+                    background-color: white;
                     outline-color: transparent;
-                    border-left: transparent;
-                    border-right: transparent;
-                    border-top: transparent;
+                    border: transparent;
+                    height: 26px;
                     outline-width: 0px
                 }
                 
@@ -166,22 +197,21 @@ hr.ge {
                 }
     
                 input[type=number] {
+                    -webkit-appearance: textfield;
                     -moz-appearance: textfield;
+                    appearance: textfield;
                 }
             }
         }  
     }     
 
-    .ge-divider {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
+    .ge-divider, .ge-divider-short, .ge-divider-single {
+        display: flex;
+        flex-direction: row;
+        padding-right: $line-padding-right;
+        align-items: center;
+        padding-left: 5px;
     }
-
-    .ge-divider-short {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
     .ge-grid-divider {
         display: grid;
         grid-template-columns: 150px 1fr auto;
@@ -220,18 +250,19 @@ hr.ge {
 
     .textInputLine {
         user-select: none;
-        padding-left: $line-padding-left;
         padding-bottom: $line-padding-bottom;
         padding-top: $line-padding-top;
+        padding-right: 5px;
         height: var(--spacingHeight);
         display: grid;
-        grid-template-columns: auto auto 2fr 1fr;
+        grid-template-columns: auto auto 1fr;
+        flex-grow: 1;
         .label {
             grid-column: 2;
-            padding-left: 5px;
             display: flex;
             align-items: center;
             min-width: 15px;
+            font-family: var(--labelFamily);
         }
 
         img {
@@ -247,25 +278,50 @@ hr.ge {
         .value {                        
             display: flex;
             align-items: center;
-            padding-left: 15px;
             grid-column: 3;
             background: transparent;
+            height: 26px;
+            position: relative;
+            background-color: white;
+            margin-top: 2px;
+            overflow-y: hidden;
+            margin-right: 2px;
             input {
-                width: calc(100% - 5px);
-                background-color: transparent;
+                width: 100%;
                 outline-color: transparent;
-                border-left: transparent;
-                border-right: transparent;
-                border-top: transparent;
-                outline-width: 0px
+                border: transparent;
+                outline-width: 0px;
+                height: 24px;
+            }
+            input.hasArrows {
+                padding-right: 15px;
+            }
+            .arrows {
+                display: none;
+            }
+            &:hover .arrows, &:focus .arrows, &.dragging .arrows {
+                position: absolute;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                cursor: grab;
+                .downArrowIcon, .upArrowIcon {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+            &.dragging .arrows {
+                background-color: var(--buttonPressedBackground);
+                .downArrowIcon, .upArrowIcon {
+                    filter: invert(100%) brightness(500%);
+                }
             }
         }
+    }
 
-        .noUnderline {
-            input {
-                border-bottom: transparent;
-            }
-        }
+    .textInputLine.withUnits {
+        grid-template-columns: auto auto 1fr auto;
     }
     
     .textInputArea {
@@ -376,13 +432,18 @@ hr.ge {
     }
 
     .color-picker {
-        height: 150px;
-        width: 15px;
+        height: 26px;
+        width: 26px;
 
-        .color-rect {
-            height: 15px;
+        .color-rect-background {
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
             border: 1px black solid;
             cursor: pointer;
+            background: repeating-conic-gradient(#E2E2E2 0% 25%, white 0% 50%) 50% / 100% 100%;
+            .color-rect {
+                height: 100%;
+            }
         }
 
         .color-picker-cover {
@@ -474,9 +535,15 @@ hr.ge {
 
     }
 
+    .alignment-bar {
+        display: flex;
+        justify-content: center;
+        padding-right: 5px;
+    }
+
     .command-button {
         cursor: pointer;
-        width: auto;
+        width: 30px;
 
         .command-label {
             display: none;
@@ -578,18 +645,19 @@ hr.ge {
 
     .floatLine {
         user-select: none;
-        padding-left: $line-padding-left;
         height: var(--spacingHeight);
         padding-bottom: $line-padding-bottom;
         padding-top: $line-padding-top;
         display: grid;
-        grid-template-columns: auto auto 2fr 1fr;
+        grid-template-columns: auto auto 2fr auto;
+        flex-grow: 1;
 
         .label {
             grid-column: 2;
             display: flex;
             align-items: center;
             min-width: 15px;
+            font-family: var(--labelFamily);
         }
 
         img {
@@ -604,18 +672,18 @@ hr.ge {
 
         .value {                        
             display: flex;
-            padding-left: 15px;
             align-items: center;
             grid-column: 3;
             background: transparent;
+            height: 30px;
+            margin-right: 2px;
             input {
-                width: calc(100% - 5px);
-                background-color: transparent;
+                width: 100%;
+                background-color: white;
                 outline-color: transparent;
-                border-left: transparent;
-                border-right: transparent;
-                border-top: transparent;
-                outline-width: 0px
+                border: none;
+                outline-width: 0px;
+                height: 24px;
             }
         }
 
@@ -642,7 +710,6 @@ hr.ge {
     }
 
     .vector3Line {
-        padding-left:$line-padding-left;
         padding-bottom: $line-padding-bottom;
         padding-top: $line-padding-top;      
         display: grid;
@@ -725,7 +792,6 @@ hr.ge {
             margin: 5px 10px;
             color:white;
             padding: 4px 5px;
-            padding-top: 0px;
             opacity: 0.9;
             cursor: pointer;
             text-align: center;
@@ -766,7 +832,6 @@ hr.ge {
     }
 
     .numeric {
-        padding-left: $line-padding-left;
         padding-bottom: $line-padding-bottom;
         padding-top: $line-padding-top;
         height: var(--spacingHeight);;
@@ -792,12 +857,12 @@ hr.ge {
     }
     
     .checkBoxLine {
-        padding-left: $line-padding-left;
         padding-bottom: $line-padding-bottom;
         padding-top: $line-padding-top;
         height: var(--spacingHeight);
         display: grid;
-        grid-template-columns: auto auto 1fr ;
+        grid-template-columns: auto 1fr auto ;
+        flex-grow: 1;
 
         .label {
             grid-column: 2;
@@ -805,6 +870,7 @@ hr.ge {
             align-items: center;
             min-width: 100px;
             margin-left: 15px;
+            font-family: var(--labelFamily);
         }
 
         img {
@@ -821,14 +887,14 @@ hr.ge {
             grid-column: 3;
             display: flex;
             align-items: center;
-            padding-left: 15px;
+            margin-left: auto;
+            margin-right: 0px;
             
             .lbl {
                 position: relative;
                 display: block;
                 height: 14px;
                 width: 34px;
-                margin-right: 5px;
                 border-radius: 100px;
                 cursor: pointer;
                 transition: all 0.3s ease;
@@ -868,6 +934,11 @@ hr.ge {
                 border-width: thin;
             }
 
+            .cbx.conflict ~ label:after {
+                left: 10px;
+                background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 5px, black 10px);
+            }
+
             .cbx:checked ~ label.disabled { 
                 background: rgb(0, 0, 0);
                 cursor: pointer;
@@ -891,12 +962,12 @@ hr.ge {
     }  
 
     .listLine {
-        padding-left: $line-padding-left;
         padding-bottom: $line-padding-bottom;
         padding-top: $line-padding-top;
         height: var(--spacingHeight);
         display: grid;
         grid-template-columns: auto 1fr auto ;
+        flex-grow: 1;
 
         .label {
             grid-column: 2;
@@ -931,15 +1002,16 @@ hr.ge {
     }  
                     
     .color3Line {
-        padding-left: $line-padding-left;
+        padding-left: 15px;
         padding-bottom: $line-padding-bottom;
         padding-top: $line-padding-top;
         display: grid;
+        flex-grow: 1;
 
         .firstLine {
             height: var(--spacingHeight);
-            display: grid;
-            grid-template-columns: auto auto 1fr;
+            display: flex;
+            align-items: center;
 
             .label {
                 grid-column: 2;
@@ -962,17 +1034,22 @@ hr.ge {
     
             .textInputLine {
                 grid-column: 3;
-                padding-left: 0px;
+                padding-left: 2px;
+                flex-grow: 1;
             }
     
             .color3 {
-                grid-column: 2;                
-                margin-top: 6px;
                 display: flex;
-                align-items: center;            
+                align-items: center;
                 
                 input {
                     margin-right: 5px;
+                }
+            }
+
+            .textInputLine {
+                .value {
+                    padding-left: 2px;
                 }
             }
 
@@ -1036,6 +1113,7 @@ hr.ge {
         padding-left: $line-padding-left;
         padding-bottom: $line-padding-bottom;
         padding-top: $line-padding-top;
+        padding-right: $line-padding-right;
         height: auto;
         display: grid;
         grid-template-columns: auto auto 2fr 1fr;
@@ -1046,6 +1124,9 @@ hr.ge {
             display: flex;
             align-items: left;
             min-width: 15px;
+            color: #a9a9a9;
+            font-size: 10px;
+            font-family: "acumin-pro-semicondensed";
         }
 
         img {

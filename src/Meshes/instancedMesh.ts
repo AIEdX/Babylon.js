@@ -70,7 +70,7 @@ export class InstancedMesh extends AbstractMesh {
 
         this.setPivotMatrix(source.getPivotMatrix());
 
-        this.refreshBoundingInfo();
+        this.refreshBoundingInfo(true, true);
         this._syncSubMeshes();
     }
 
@@ -321,7 +321,7 @@ export class InstancedMesh extends AbstractMesh {
         }
 
         if (this._currentLOD) {
-            let differentSign = (this._currentLOD._getWorldMatrixDeterminant() > 0) !== (this._getWorldMatrixDeterminant() > 0);
+            let differentSign = (this._currentLOD._getWorldMatrixDeterminant() >= 0) !== (this._getWorldMatrixDeterminant() >= 0);
             if (differentSign) {
                 this._internalAbstractMeshDataInfo._actAsRegularMesh = true;
                 return true;
@@ -387,12 +387,12 @@ export class InstancedMesh extends AbstractMesh {
             return this;
         }
 
-        let boundingInfo = this.getBoundingInfo();
-
-        this._currentLOD = <Mesh>this.sourceMesh.getLOD(camera, boundingInfo.boundingSphere);
-
-        if (this._currentLOD === this.sourceMesh) {
-            return this.sourceMesh;
+        const sourceMeshLODLevels = this.sourceMesh.getLODLevels();
+        if (!sourceMeshLODLevels || sourceMeshLODLevels.length === 0) {
+            this._currentLOD = this.sourceMesh;
+        } else {
+            let boundingInfo = this.getBoundingInfo();
+            this._currentLOD = <Mesh>this.sourceMesh.getLOD(camera, boundingInfo.boundingSphere);
         }
 
         return this._currentLOD;
@@ -421,14 +421,12 @@ export class InstancedMesh extends AbstractMesh {
 
     /** @hidden */
     public _updateBoundingInfo(): AbstractMesh {
-        const effectiveMesh = this as AbstractMesh;
         if (this.hasBoundingInfo) {
-            this.getBoundingInfo().update(effectiveMesh.worldMatrixFromCache);
+            this.getBoundingInfo().update(this.worldMatrixFromCache);
+        } else {
+            this.buildBoundingInfo(this.absolutePosition, this.absolutePosition, this.worldMatrixFromCache);
         }
-        else {
-            this.buildBoundingInfo(this.absolutePosition, this.absolutePosition, effectiveMesh.worldMatrixFromCache);
-        }
-        this._updateSubMeshesBoundingInfo(effectiveMesh.worldMatrixFromCache);
+        this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache);
         return this;
     }
 

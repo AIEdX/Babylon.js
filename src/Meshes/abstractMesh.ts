@@ -102,6 +102,7 @@ class _InternalAbstractMeshDataInfo {
     public _positions: Nullable<Vector3[]> = null;
     // Collisions
     public _meshCollisionData = new _MeshCollisionData();
+    public _enableDistantPicking = false;
 }
 
 /**
@@ -189,6 +190,9 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
     // Internal data
     /** @hidden */
     public _internalAbstractMeshDataInfo = new _InternalAbstractMeshDataInfo();
+
+    /** @hidden */
+    public _waitingMaterialId: Nullable<string> = null;
 
     /**
      * The culling strategy to use to check whether the mesh must be rendered or not.
@@ -324,7 +328,7 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
     public onCollideObservable = new Observable<AbstractMesh>();
 
     /** Set a function to call when this mesh collides with another one */
-    public set onCollide(callback: () => void) {
+    public set onCollide(callback: (collidedMesh?: AbstractMesh) => void) {
         if (this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver) {
             this.onCollideObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver);
         }
@@ -583,13 +587,20 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
         this._markSubMeshesAsMiscDirty();
     }
 
+    /** When enabled, decompose picking matrices for better precision with large values for mesh position and scling */
+    public get enableDistantPicking(): boolean {
+        return this._internalAbstractMeshDataInfo._enableDistantPicking;
+    }
+    public set enableDistantPicking(value: boolean) {
+        this._internalAbstractMeshDataInfo._enableDistantPicking = value;
+    }
+
     /** Gets or sets a boolean indicating that internal octree (if available) can be used to boost submeshes selection (true by default) */
     public useOctreeForRenderingSelection = true;
     /** Gets or sets a boolean indicating that internal octree (if available) can be used to boost submeshes picking (true by default) */
     public useOctreeForPicking = true;
     /** Gets or sets a boolean indicating that internal octree (if available) can be used to boost submeshes collision (true by default) */
     public useOctreeForCollisions = true;
-
     /**
      * Gets or sets the current layer mask (default is 0x0FFFFFFF)
      * @see https://doc.babylonjs.com/divingDeeper/cameras/layerMasksAndMultiCam
@@ -1395,25 +1406,15 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
         this._updateBoundingInfo();
     }
 
-    /** @hidden */
-    public _getPositionData(applySkeleton: boolean, applyMorph: boolean): Nullable<FloatArray> {
-        let data = this.getVerticesData(VertexBuffer.PositionKind);
-
-        if (this._internalAbstractMeshDataInfo._positions) {
-            this._internalAbstractMeshDataInfo._positions = null;
-        }
-
-        if (data && ((applySkeleton && this.skeleton) || (applyMorph && this.morphTargetManager))) {
-            data = Tools.Slice(data);
-            this._generatePointsArray();
-            if (this._positions) {
-                const pos = this._positions;
-                this._internalAbstractMeshDataInfo._positions = new Array<Vector3>(pos.length);
-                for (let i = 0; i < pos.length; i++) {
-                    this._internalAbstractMeshDataInfo._positions[i] = pos[i]?.clone() || new Vector3();
-                }
-            }
-        }
+    /**
+     * Get the position vertex data and optionally apply skeleton and morphing.
+     * @param applySkeleton defines whether to apply the skeleton
+     * @param applyMorph  defines whether to apply the morph target
+     * @param data defines the position data to apply the skeleton and morph to
+     * @returns the position data
+     */
+    public getPositionData(applySkeleton: boolean, applyMorph: boolean, data?: Nullable<FloatArray>): Nullable<FloatArray> {
+        data = data ?? this.getVerticesData(VertexBuffer.PositionKind);
 
         if (data && applyMorph && this.morphTargetManager) {
             let faceIndexCount = 0;
@@ -1439,6 +1440,7 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
                 }
             }
         }
+
         if (data && applySkeleton && this.skeleton) {
             var matricesIndicesData = this.getVerticesData(VertexBuffer.MatricesIndicesKind);
             var matricesWeightsData = this.getVerticesData(VertexBuffer.MatricesWeightsKind);
@@ -1491,14 +1493,36 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
     }
 
     /** @hidden */
-    public _updateBoundingInfo(): AbstractMesh {
-        const effectiveMesh = this._effectiveMesh;
-        if (this._boundingInfo) {
-            this._boundingInfo.update(effectiveMesh.worldMatrixFromCache);
-        } else {
-            this._boundingInfo = new BoundingInfo(this.position, this.position, effectiveMesh.worldMatrixFromCache);
+    public _getPositionData(applySkeleton: boolean, applyMorph: boolean): Nullable<FloatArray> {
+        let data = this.getVerticesData(VertexBuffer.PositionKind);
+
+        if (this._internalAbstractMeshDataInfo._positions) {
+            this._internalAbstractMeshDataInfo._positions = null;
         }
-        this._updateSubMeshesBoundingInfo(effectiveMesh.worldMatrixFromCache);
+
+        if (data && ((applySkeleton && this.skeleton) || (applyMorph && this.morphTargetManager))) {
+            data = Tools.Slice(data);
+            this._generatePointsArray();
+            if (this._positions) {
+                const pos = this._positions;
+                this._internalAbstractMeshDataInfo._positions = new Array<Vector3>(pos.length);
+                for (let i = 0; i < pos.length; i++) {
+                    this._internalAbstractMeshDataInfo._positions[i] = pos[i]?.clone() || new Vector3();
+                }
+            }
+        }
+
+        return this.getPositionData(applySkeleton, applyMorph, data);
+    }
+
+    /** @hidden */
+    public _updateBoundingInfo(): AbstractMesh {
+        if (this._boundingInfo) {
+            this._boundingInfo.update(this.worldMatrixFromCache);
+        } else {
+            this._boundingInfo = new BoundingInfo(this.position, this.position, this.worldMatrixFromCache);
+        }
+        this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache);
         return this;
     }
 
@@ -1524,11 +1548,6 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
         }
         // Bounding info
         this._boundingInfoIsDirty = true;
-    }
-
-    /** @hidden */
-    public get _effectiveMesh(): AbstractMesh {
-        return (this.skeleton && this.skeleton.overrideMesh) || this;
     }
 
     /**
@@ -1686,7 +1705,8 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
             subMesh.verticesStart,
             !!subMesh.getMaterial(),
             this,
-            this._shouldConvertRHS()
+            this._shouldConvertRHS(),
+            subMesh.getMaterial()?.fillMode === Constants.MATERIAL_TriangleStripDrawMode
         );
         return this;
     }
@@ -1798,7 +1818,8 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
                 material.fillMode == Constants.MATERIAL_TriangleStripDrawMode ||
                 material.fillMode == Constants.MATERIAL_TriangleFillMode ||
                 material.fillMode == Constants.MATERIAL_WireFrameFillMode ||
-                material.fillMode == Constants.MATERIAL_PointFillMode
+                material.fillMode == Constants.MATERIAL_PointFillMode ||
+                material.fillMode == Constants.MATERIAL_LineListDrawMode
             ) {
                 anySubmeshSupportIntersect = true;
                 break;
@@ -1839,7 +1860,7 @@ export class AbstractMesh extends TransformNode implements IDisposable, ICullabl
 
         if (intersectInfo) {
             // Get picked point
-            const world = worldToUse ?? (this.skeleton && this.skeleton.overrideMesh ? this.skeleton.overrideMesh.getWorldMatrix() : this.getWorldMatrix());
+            const world = worldToUse ?? this.getWorldMatrix();
             const worldOrigin = TmpVectors.Vector3[0];
             const direction = TmpVectors.Vector3[1];
             Vector3.TransformCoordinatesToRef(ray.origin, world, worldOrigin);

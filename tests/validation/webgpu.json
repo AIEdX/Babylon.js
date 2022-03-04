@@ -22,7 +22,7 @@
         {
             "title": "cube reflection with probe and mirrors",
             "renderCount": 20,
-            "playgroundId": "#X3V1NN#0"
+            "playgroundId": "#X3V1NN#7"
         },
         {
             "title": "sphere with custom shader to display wireframe using glow layer",
@@ -65,7 +65,7 @@
         },
         {
             "title": "simple sphere in 4 mirrors",
-            "playgroundId": "#58CFTW#0"
+            "playgroundId": "#58CFTW#4"
         },
         {
             "title": "procedural texture with node material",
@@ -100,7 +100,7 @@
         {
             "title": "custom handling of materials for render target pass",
             "renderCount": 30,
-            "playgroundId": "#FIVL25#17"
+            "playgroundId": "#FIVL25#20"
         },
         {
             "title": "dissolve effect with node material and glow layer",
@@ -141,7 +141,7 @@
         {
             "title": "particle system matrix like",
             "renderCount": 100,
-            "playgroundId": "#WL44T7"
+            "playgroundId": "#WL44T7#1"
         },
         {
             "title": "lens flare",
@@ -155,13 +155,13 @@
         {
             "title": "wgsl in shadermaterial",
             "renderCount": 30,
-            "playgroundId": "#8RU8Q3#79",
+            "playgroundId": "#8RU8Q3#117",
             "excludedEngines": ["webgl1", "webgl2"]
         },
         {
             "title": "terrain erosion",
             "renderCount": 15,
-            "playgroundId": "#C90R62#8",
+            "playgroundId": "#C90R62#11",
             "excludedEngines": ["webgl1", "webgl2"]
         },
         {

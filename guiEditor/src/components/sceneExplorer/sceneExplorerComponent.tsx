@@ -119,13 +119,13 @@ export class SceneExplorerComponent extends React.Component<ISceneExplorerCompon
                 data.found = true;
                 if (!goNext) {
                     if (data.previousOne) {
-                        this.props.globalState.onSelectionChangedObservable.notifyObservers(data.previousOne);
+                        this.props.globalState.select(data.previousOne);
                     }
                     return true;
                 }
             } else {
                 if (data.found) {
-                    this.props.globalState.onSelectionChangedObservable.notifyObservers(item);
+                    this.props.globalState.select(item);
                     return true;
                 }
                 data.previousOne = item;
@@ -142,9 +142,8 @@ export class SceneExplorerComponent extends React.Component<ISceneExplorerCompon
     }
 
     processKeys(keyEvent: React.KeyboardEvent<HTMLDivElement>) {
-        if (!this.state.selectedEntity) {
-            return;
-        }
+        // if typing inside a text box, don't process keys
+        if ((keyEvent.target as HTMLElement).localName === "input") return;
 
         const scene = this.state.scene;
         let search = false;
@@ -160,27 +159,37 @@ export class SceneExplorerComponent extends React.Component<ISceneExplorerCompon
                 break;
             case "Enter":
             case "ArrowRight":
-                var reservedDataStore = this.state.selectedEntity.reservedDataStore;
-                if (reservedDataStore && reservedDataStore.setExpandedState) {
-                    reservedDataStore.setExpandedState(true);
-                }
+                this.props.globalState.selectedControls.forEach(node => {
+                    var reservedDataStore = (node as any).reservedDataStore;
+                    if (reservedDataStore && reservedDataStore.setExpandedState) {
+                        reservedDataStore.setExpandedState(true);
+                    }
+                })
                 keyEvent.preventDefault();
+                this.forceUpdate();
                 return;
             case "ArrowLeft":
-                var reservedDataStore = this.state.selectedEntity.reservedDataStore;
-                if (reservedDataStore && reservedDataStore.setExpandedState) {
-                    reservedDataStore.setExpandedState(false);
-                }
+                this.props.globalState.selectedControls.forEach(node => {
+                    var reservedDataStore = (node as any).reservedDataStore;
+                    console.log(reservedDataStore)
+                    if (reservedDataStore && reservedDataStore.setExpandedState) {
+                        reservedDataStore.setExpandedState(false);
+                    }
+                })
                 keyEvent.preventDefault();
+                this.forceUpdate();
                 return;
-                break;
             case "Delete":
+            case "Backspace":
                 if (this.state.selectedEntity !== this.props.globalState.guiTexture.getChildren()[0]) {
                     this.state.selectedEntity.dispose();
-                    this.forceUpdate();
+                    this.props.globalState.selectedControls.forEach(node => {
+                        if (node !== this.props.globalState.guiTexture.getChildren()[0]) {
+                            node.dispose();
+                        }
+                        this.forceUpdate();
+                    })
                 }
-                break;
-            default:
                 break;
         }
 
@@ -190,10 +199,11 @@ export class SceneExplorerComponent extends React.Component<ISceneExplorerCompon
 
         keyEvent.preventDefault();
         if (scene) {
-            let data = {};
-            if (!this.findSiblings(null, scene.rootNodes, this.state.selectedEntity, goNext, data)) {
-                if (!this.findSiblings(null, scene.materials, this.state.selectedEntity, goNext, data)) {
-                    this.findSiblings(null, scene.textures, this.state.selectedEntity, goNext, data);
+            const selectedEntity = this.props.globalState.selectedControls[this.props.globalState.selectedControls.length-1];
+            const data = {};
+            if (!this.findSiblings(null, scene.rootNodes, selectedEntity, goNext, data)) {
+                if (!this.findSiblings(null, scene.materials, selectedEntity, goNext, data)) {
+                    this.findSiblings(null, scene.textures, selectedEntity, goNext, data);
                 }
             }
         }
@@ -212,6 +222,7 @@ export class SceneExplorerComponent extends React.Component<ISceneExplorerCompon
             <div
                 id="tree"
                 onDrop={(event) => {
+                    this.props.globalState.onDropObservable.notifyObservers();
                     this.props.globalState.onParentingChangeObservable.notifyObservers(null);
                 }}
                 onDragOver={(event) => {
@@ -219,17 +230,18 @@ export class SceneExplorerComponent extends React.Component<ISceneExplorerCompon
                 }}
                 onClick={(event) => {
                     if (!this.props.globalState.selectionLock) {
-                        this.props.globalState.onSelectionChangedObservable.notifyObservers(null);
+                        this.props.globalState.setSelection([]);
                     } else {
                         this.props.globalState.selectionLock = false;
                     }
                 }}
+                onContextMenu={ev => ev.preventDefault()}
             >
                 {guiElements && guiElements.length > 0 && (
                     <TreeItemComponent
                         globalState={this.props.globalState}
                         extensibilityGroups={this.props.extensibilityGroups}
-                        selectedEntity={this.state.selectedEntity}
+                        selectedEntities={this.props.globalState.selectedControls}
                         items={guiElements}
                         label="GUI"
                         offset={1}
@@ -259,6 +271,7 @@ export class SceneExplorerComponent extends React.Component<ISceneExplorerCompon
     render() {
         return (
             <div id="ge-sceneExplorer" tabIndex={0} onKeyDown={(keyEvent) => this.processKeys(keyEvent)}>
+                {this.props.children}
                 {this.renderContent()}
             </div>
         );
