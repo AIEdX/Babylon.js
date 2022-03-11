@@ -67,7 +67,7 @@ export class GraphCanvasComponent extends React.Component<IGraphCanvasComponentP
     private _candidatePort: Nullable<NodePort | FrameNodePort> = null;
     private _gridSize = 20;
     private _selectionBox: Nullable<HTMLDivElement> = null;
-    private _selectedFrame: Nullable<GraphFrame> = null;
+    private _selectedFrames: GraphFrame[] = [];
     private _frameCandidate: Nullable<HTMLDivElement> = null;
     private _frames: GraphFrame[] = [];
 
@@ -145,8 +145,8 @@ export class GraphCanvasComponent extends React.Component<IGraphCanvasComponentP
     public get selectedLink() {
         return this._selectedLink;
     }
-    public get selectedFrame() {
-        return this._selectedFrame;
+    public get selectedFrames() {
+        return this._selectedFrames;
     }
 
     public get selectedPort() {
@@ -176,39 +176,56 @@ export class GraphCanvasComponent extends React.Component<IGraphCanvasComponentP
     constructor(props: IGraphCanvasComponentProps) {
         super(props);
 
-        props.globalState.onSelectionChangedObservable.add((selection) => {
+        props.globalState.onSelectionChangedObservable.add((options) => {
+            const {selection, forceKeepSelection} = options || {};
             if (!selection) {
                 this._selectedNodes = [];
                 this._selectedLink = null;
-                this._selectedFrame = null;
+                this._selectedFrames = [];
                 this._selectedPort = null;
             } else {
                 if (selection instanceof NodeLink) {
                     this._selectedNodes = [];
-                    this._selectedFrame = null;
+                    this._selectedFrames = [];
                     this._selectedLink = selection;
                     this._selectedPort = null;
                 } else if (selection instanceof GraphFrame) {
-                    this._selectedNodes = [];
-                    this._selectedFrame = selection;
-                    this._selectedLink = null;
-                    this._selectedPort = null;
+                    if (selection.isCollapsed) {
+                        if (this._ctrlKeyIsPressed || forceKeepSelection) {
+                            if (this._selectedFrames.indexOf(selection) === -1) {
+                                this._selectedFrames.push(selection);
+                            }
+                        } else {
+                            this._selectedFrames = [selection];
+                            this._selectedNodes = [];
+                            this._selectedLink = null;
+                            this._selectedPort = null;
+                        }
+                    } else {
+                        this._selectedNodes = [];
+                        this._selectedFrames = [selection];
+                        this._selectedLink = null;
+                        this._selectedPort = null;
+                    }
                 } else if (selection instanceof GraphNode) {
-                    if (this._ctrlKeyIsPressed) {
+                    if (this._ctrlKeyIsPressed || forceKeepSelection) {
                         if (this._selectedNodes.indexOf(selection) === -1) {
                             this._selectedNodes.push(selection);
                         }
                     } else {
                         this._selectedNodes = [selection];
+                        this._selectedFrames = [];
+                        this._selectedLink = null;
+                        this._selectedPort = null;
                     }
                 } else if (selection instanceof NodePort) {
                     this._selectedNodes = [];
-                    this._selectedFrame = null;
+                    this._selectedFrames = [];
                     this._selectedLink = null;
                     this._selectedPort = selection;
                 } else {
                     this._selectedNodes = [];
-                    this._selectedFrame = null;
+                    this._selectedFrames = [];
                     this._selectedLink = null;
                     this._selectedPort = selection.port;
                 }
@@ -676,10 +693,10 @@ export class GraphCanvasComponent extends React.Component<IGraphCanvasComponentP
                             frame,
                             port,
                         };
-                        this.props.globalState.onSelectionChangedObservable.notifyObservers(data);
+                        this.props.globalState.onSelectionChangedObservable.notifyObservers({selection: data});
                     }
                 } else if (this._candidateLink.portA instanceof NodePort) {
-                    this.props.globalState.onSelectionChangedObservable.notifyObservers(this._candidateLink.portA);
+                    this.props.globalState.onSelectionChangedObservable.notifyObservers({selection: this._candidateLink.portA});
                 }
             }
             this._candidateLink.dispose();
@@ -699,7 +716,7 @@ export class GraphCanvasComponent extends React.Component<IGraphCanvasComponentP
             this._frameCandidate.parentElement!.removeChild(this._frameCandidate);
             this._frameCandidate = null;
 
-            this.props.globalState.onSelectionChangedObservable.notifyObservers(newFrame);
+            this.props.globalState.onSelectionChangedObservable.notifyObservers({selection: newFrame});
         }
     }
 
@@ -969,7 +986,7 @@ export class GraphCanvasComponent extends React.Component<IGraphCanvasComponentP
     addFrame(frameData: IFrameData) {
         const frame = GraphFrame.Parse(frameData, this, this.props.globalState.nodeMaterial.editorData.map);
         this._frames.push(frame);
-        this.globalState.onSelectionChangedObservable.notifyObservers(frame);
+        this.globalState.onSelectionChangedObservable.notifyObservers({selection: frame});
     }
 
     render() {
